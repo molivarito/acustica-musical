@@ -24,7 +24,7 @@ actividades > demo.
 | s09 | Escalas y temperamentos | lista | lista | lista | lista | lista |
 | s10 | Resonancia e impedancia | lista | lista | lista | lista | lista |
 | s11 | Cuerdas frotadas y cuerpo | lista | lista | lista | lista | lista |
-| s12 | Vientos y lutería | pendiente | pendiente | pendiente | pendiente | pendiente |
+| s12 | Vientos y lutería | lista | lista | lista | lista | lista |
 | s13 | Prueba 2 + la voz | pendiente | pendiente | pendiente | pendiente | pendiente |
 | s14 | La sala como instrumento | pendiente | pendiente | pendiente | pendiente | pendiente |
 | s15 | Presentaciones finales | pendiente | pendiente | n/a | pendiente | pendiente |
@@ -124,3 +124,6 @@ diseno/02 §6.)
   instrumentos frotados por correo, video de respaldo cámara lenta.
   [POR VERIFICAR] 240 fps de celular resuelve la cuerda; derechos del
   video de respaldo; grabación de nota lobo.
+- **s12**: kit de lutería (compra única: PVC Ø20, cortatubos, tapas,
+  lijas) + cortar brutos y calibrar un ciclo; leer coevaluaciones hito 2.
+  [POR VERIFICAR] diámetro interior real del PVC nominal 20 mm.

@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Demo — El tubo virtual: la columna de aire como resonador configurable (s12)</title>
+<style>
+  /* Estética editorial: fondo claro, serif para texto, sans para controles */
+  :root {
+    --tinta: #1a1a1a;
+    --acento: #7a2e2e;     /* rojo ladrillo sobrio */
+    --linea: #2e4a7a;      /* azul para modos y espectro */
+    --papel: #faf8f4;
+    --panel: #f0ece4;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0; padding: 1.2rem;
+    background: var(--papel); color: var(--tinta);
+    font-family: Georgia, 'Times New Roman', serif;
+    max-width: 940px; margin-inline: auto;
+  }
+  h1 { font-size: 1.35rem; margin: 0 0 .2rem; }
+  .sesion { font-family: Helvetica, Arial, sans-serif; font-size: .8rem;
+            letter-spacing: .06em; text-transform: uppercase; color: var(--acento); }
+  .bajada { font-style: italic; margin: .3rem 0 1rem; }
+  .panel {
+    background: var(--panel); border-radius: 6px; padding: .9rem 1rem;
+    font-family: Helvetica, Arial, sans-serif; font-size: .9rem;
+    display: flex; flex-wrap: wrap; gap: 1rem 2rem; align-items: flex-start;
+  }
+  .ctrl { display: flex; flex-direction: column; gap: .3rem; min-width: 220px; flex: 1; }
+  .ctrl label { font-weight: bold; }
+  .valor { font-variant-numeric: tabular-nums; }
+  input[type=range] { width: 100%; accent-color: var(--acento); }
+  button {
+    font-family: Helvetica, Arial, sans-serif; font-size: .95rem;
+    padding: .5rem 1rem; border: 1px solid var(--tinta); border-radius: 4px;
+    background: white; cursor: pointer;
+  }
+  button.primario { background: var(--acento); color: white; border-color: var(--acento); }
+  fieldset { border: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: .3rem; }
+  canvas { width: 100%; display: block; background: white;
+           border: 1px solid #ccc; border-radius: 4px; margin-top: 1rem; }
+  #lienzoTubo { height: 240px; }
+  #lienzoEspectro { height: 190px; }
+  .lectura {
+    font-family: Helvetica, Arial, sans-serif; font-size: 1rem; margin-top: .8rem;
+    background: var(--panel); border-radius: 6px; padding: .5rem .9rem;
+  }
+  .lectura b { color: var(--acento); }
+  .aviso { font-size: .8rem; color: #555; font-family: Helvetica, Arial, sans-serif; }
+  .observar { border-left: 4px solid var(--acento); padding: .2rem 0 .2rem 1rem; margin-top: 1.2rem; }
+  .observar h2 { font-size: 1rem; margin: .2rem 0; }
+  ol { margin: .4rem 0; padding-left: 1.2rem; }
+</style>
+</head>
+<body>
+<p class="sesion">Acústica Musical UC · Sesión 12</p>
+<h1>El tubo virtual: la columna de aire como resonador configurable</h1>
+<p class="bajada">Estire el tubo, tape el extremo y abra agujeros:
+prediga primero qué pasará con la nota y con el espectro, después
+compruébelo con los ojos y los oídos.</p>
+
+<div class="panel">
+  <div class="ctrl">
+    <label for="largo">Largo del tubo L: <span class="valor" id="largoVal">40,0 cm</span></label>
+    <input type="range" id="largo" min="150" max="1000" value="400">
+    <span class="aviso">v = 343 m/s (aire a 20 °C)</span>
+    <label for="gan">Ganancia: <span class="valor" id="ganVal">0,25</span></label>
+    <input type="range" id="gan" min="0" max="50" value="25">
+  </div>
+  <div class="ctrl" style="min-width:200px">
+    <label>Extremo derecho (el izquierdo es la embocadura, siempre abierto)</label>
+    <fieldset id="extremo">
+      <label><input type="radio" name="extremo" value="abierto" checked> abierto (flauta): f₁ = v/2L, todos los armónicos</label>
+      <label><input type="radio" name="extremo" value="cerrado"> cerrado (tubo tapado): f₁ = v/4L, solo impares</label>
+    </fieldset>
+  </div>
+  <div class="ctrl" style="min-width:200px">
+    <label>Agujeros laterales</label>
+    <fieldset>
+      <label><input type="checkbox" id="agu1"> agujero 1 (al 60 % del largo)</label>
+      <label><input type="checkbox" id="agu2"> agujero 2 (al 80 % del largo)</label>
+    </fieldset>
+    <span class="aviso" id="avisoAgujero">Aproximación: el tubo “termina”
+    en el primer agujero abierto (y queda abierto-abierto).</span>
+  </div>
+  <div class="ctrl" style="min-width:150px; flex:0">
+    <button id="btnPlay" class="primario">▶ Sonar</button>
+    <button id="btnStop">■ Detener</button>
+  </div>
+</div>
+
+<div class="lectura" id="lectura">f₁ = … Hz</div>
+
+<canvas id="lienzoTubo"></canvas>
+<canvas id="lienzoEspectro"></canvas>
+
+<div class="observar">
+  <h2>¿Qué observar?</h2>
+  <ol>
+    <li>Con el extremo abierto, <b>duplique el largo</b> (p. ej. de 25 a
+        50 cm). Prediga antes: ¿qué le pasa a f₁ y a la nota? ¿Se cumple
+        f₁ = v/2L?</li>
+    <li><b>Tape el extremo</b> sin cambiar el largo: ¿cuánto baja la
+        nota y qué desaparece del espectro? ¿A qué intervalo saltaría
+        este tubo al soplarlo más fuerte, comparado con el abierto?</li>
+    <li><b>Abra un agujero</b>: ¿a qué largo de tubo equivale? Si abre
+        los dos a la vez, ¿cuál manda y por qué?</li>
+  </ol>
+</div>
+
+<script>
+'use strict';
+// ---------------------------------------------------------------------------
+// Demo s12 — el tubo virtual. Un solo concepto: la columna de aire como
+// resonador configurable (largo, extremo, agujeros → modos y espectro).
+// Modelo de primera aproximación (el mismo de la guía del taller):
+//   tubo abierto-abierto:  f1 = v/(2L), armónicos 1, 2, 3, ...
+//   tubo cerrado-abierto:  f1 = v/(4L), armónicos 1, 3, 5, ...
+//   agujero abierto: el tubo "termina" en el primer agujero abierto
+//   (medido desde la embocadura) y queda abierto-abierto.
+// Sin corrección de extremo: la demo es el modelo ingenuo A PROPÓSITO
+// (la desviación sistemática se descubre en el taller, no aquí).
+// El profesor puede ajustar abajo V_SONIDO, posiciones de agujeros y
+// número máximo de parciales.
+// ---------------------------------------------------------------------------
+const V_SONIDO = 343;        // m/s, aire a 20 °C (notación de diseno/03)
+const POS_AGU1 = 0.60;       // posición del agujero 1 (fracción del largo)
+const POS_AGU2 = 0.80;       // posición del agujero 2 (fracción del largo)
+const F_TOPE   = 8000;       // no se sintetizan parciales sobre este límite (Hz)
+const MAX_PARCIALES = 24;
+
+let ctxAudio = null, ganancia = null, analizador = null, osc = null;
+let sonando = false;
+
+const $ = id => document.getElementById(id);
+
+// --- estado del tubo --------------------------------------------------------
+function largoTubo() { return $('largo').value / 1000; }   // slider en mm → m
+function ganActual() { return $('gan').value / 100; }      // 0 .. 0,5 máx.
+function extremoCerrado() {
+  return document.querySelector('input[name=extremo]:checked').value === 'cerrado';
+}
+// Devuelve la configuración efectiva: largo que vibra, condición del
+// extremo lejano y fracción efectiva (para dibujar la zona "muerta").
+function configEfectiva() {
+  const L = largoTubo();
+  if ($('agu1').checked) return { L: L * POS_AGU1, cerrado: false, frac: POS_AGU1, porAgujero: true };
+  if ($('agu2').checked) return { L: L * POS_AGU2, cerrado: false, frac: POS_AGU2, porAgujero: true };
+  return { L, cerrado: extremoCerrado(), frac: 1, porAgujero: false };
+}
+function f1De(cfg) { return V_SONIDO / ((cfg.cerrado ? 4 : 2) * cfg.L); }
+// Números de armónico presentes (1,2,3,... o 1,3,5,...) hasta F_TOPE
+function armonicosDe(cfg) {
+  const f1 = f1De(cfg), ns = [];
+  for (let n = 1; ns.length < MAX_PARCIALES && n * f1 <= F_TOPE; n++) {
+    if (!cfg.cerrado || n % 2 === 1) ns.push(n);
+  }
+  return ns.length ? ns : [1];
+}
+
+// --- nota más cercana (temperamento igual, La4 = 440 Hz) --------------------
+const NOMBRES = ['Do','Do♯','Re','Re♯','Mi','Fa','Fa♯','Sol','Sol♯','La','La♯','Si'];
+function notaMasCercana(f) {
+  const s = 12 * Math.log2(f / 440);          // semitonos desde La4
+  const n = Math.round(s);
+  const cents = Math.round((s - n) * 100);
+  const midi = 69 + n;
+  const nombre = NOMBRES[((midi % 12) + 12) % 12] + (Math.floor(midi / 12) - 1);
+  return nombre + (cents === 0 ? '' : (cents > 0 ? ' +' : ' −') + Math.abs(cents) + ' cents');
+}
+
+// --- síntesis: un oscilador con onda periódica a medida ---------------------
+// La receta espectral (todos los armónicos o solo impares, amplitud 1/n)
+// se mete en una PeriodicWave: cambiarla no produce clics.
+function ondaDe(cfg) {
+  const ns = armonicosDe(cfg);
+  const nMax = ns[ns.length - 1];
+  const re = new Float32Array(nMax + 1), im = new Float32Array(nMax + 1);
+  ns.forEach(n => { im[n] = 1 / n; });
+  return ctxAudio.createPeriodicWave(re, im, { disableNormalization: false });
+}
+function aplicaConfig() {
+  const cfg = configEfectiva();
+  if (osc) {
+    osc.setPeriodicWave(ondaDe(cfg));
+    // rampa breve para que el glissando del slider sea suave
+    osc.frequency.setTargetAtTime(f1De(cfg), ctxAudio.currentTime, 0.02);
+  }
+  refrescaLecturas();
+}
+async function iniciar() {
+  if (!ctxAudio) {   // el AudioContext se crea solo tras un clic (navegadores)
+    ctxAudio = new (window.AudioContext || window.webkitAudioContext)();
+    ganancia = ctxAudio.createGain();
+    analizador = ctxAudio.createAnalyser();
+    analizador.fftSize = 4096;
+    analizador.smoothingTimeConstant = 0.75;
+    ganancia.connect(analizador).connect(ctxAudio.destination);
+  }
+  await ctxAudio.resume();
+  ganancia.gain.value = ganActual();
+  if (!sonando) {
+    const cfg = configEfectiva();
+    osc = ctxAudio.createOscillator();
+    osc.setPeriodicWave(ondaDe(cfg));
+    osc.frequency.value = f1De(cfg);
+    osc.connect(ganancia);
+    osc.start();
+    sonando = true;
+  }
+}
+function detener() {
+  if (osc) { osc.stop(); osc.disconnect(); osc = null; }
+  sonando = false;
+}
+
+// --- lecturas numéricas ------------------------------------------------------
+function refrescaLecturas() {
+  const cfg = configEfectiva();
+  const f1 = f1De(cfg);
+  const cm = (largoTubo() * 100).toFixed(1).replace('.', ',');
+  $('largoVal').textContent = cm + ' cm';
+  $('ganVal').textContent = ganActual().toFixed(2).replace('.', ',');
+  const formula = cfg.cerrado ? 'v/4L' : 'v/2L';
+  const serie = cfg.cerrado ? 'impares (1, 3, 5, …)' : 'completos (1, 2, 3, …)';
+  const efect = cfg.porAgujero
+    ? ' — el tubo efectivo termina en el agujero abierto: L<sub>ef</sub> = ' +
+      (cfg.L * 100).toFixed(1).replace('.', ',') + ' cm, abierto-abierto'
+    : '';
+  $('lectura').innerHTML =
+    '<b>f₁ = ' + f1.toFixed(1).replace('.', ',') + ' Hz</b> (' + formula +
+    ') ≈ ' + notaMasCercana(f1) + ' · armónicos ' + serie + efect;
+}
+
+// --- dibujo del tubo y sus modos ---------------------------------------------
+const lienzoTubo = $('lienzoTubo');
+function dibujaTubo() {
+  const dpr = window.devicePixelRatio || 1;
+  const w = lienzoTubo.clientWidth, h = 240;
+  if (lienzoTubo.width !== w * dpr) { lienzoTubo.width = w * dpr; lienzoTubo.height = h * dpr; }
+  const g = lienzoTubo.getContext('2d');
+  g.setTransform(dpr, 0, 0, dpr, 0, 0);
+  g.clearRect(0, 0, w, h);
+
+  const cfg = configEfectiva();
+  const L = largoTubo();
+  // El tubo se dibuja a escala: el slider al máximo (100 cm) ocupa todo el ancho
+  const margen = 46, anchoMax = w - margen - 20;
+  const xIzq = margen, largoPx = anchoMax * (L / 1.0);
+  const yTubo = 34, altoTubo = 34;
+  const acento = getComputedStyle(document.body).getPropertyValue('--acento');
+  const azul = getComputedStyle(document.body).getPropertyValue('--linea');
+
+  // cuerpo del tubo
+  g.strokeStyle = '#444'; g.lineWidth = 2;
+  g.strokeRect(xIzq, yTubo, largoPx, altoTubo);
+  // embocadura (izquierda, siempre abierta): boca dibujada
+  g.fillStyle = '#fff';
+  g.fillRect(xIzq - 2, yTubo + 2, 4, altoTubo - 4);
+  g.font = '11px Helvetica, Arial, sans-serif'; g.fillStyle = '#555';
+  g.fillText('embocadura', xIzq - 20, yTubo - 14);
+  g.fillText('(abierta)', xIzq - 10, yTubo - 3);
+  // extremo derecho: tapa si corresponde
+  if (extremoCerrado()) {
+    g.fillStyle = acento;
+    g.fillRect(xIzq + largoPx - 3, yTubo, 6, altoTubo);
+    g.fillStyle = '#555'; g.fillText('cerrado', xIzq + largoPx - 20, yTubo - 3);
+  } else {
+    g.fillStyle = '#555'; g.fillText('abierto', xIzq + largoPx - 18, yTubo - 3);
+  }
+  // agujeros (círculos sobre la pared superior)
+  [[POS_AGU1, $('agu1').checked, '1'], [POS_AGU2, $('agu2').checked, '2']].forEach(([pos, abierto, rot]) => {
+    const x = xIzq + largoPx * pos;
+    g.beginPath(); g.arc(x, yTubo, 6, 0, 2 * Math.PI);
+    g.fillStyle = abierto ? '#fff' : '#444'; g.fill();
+    g.strokeStyle = '#444'; g.lineWidth = 1.5; g.stroke();
+    g.fillStyle = '#555'; g.fillText(rot, x - 3, yTubo - 10);
+  });
+  // zona "muerta" tras el primer agujero abierto
+  if (cfg.porAgujero) {
+    const xCorte = xIzq + largoPx * cfg.frac;
+    g.fillStyle = 'rgba(0,0,0,0.08)';
+    g.fillRect(xCorte, yTubo, xIzq + largoPx - xCorte, altoTubo);
+    g.strokeStyle = acento; g.setLineDash([4, 3]); g.lineWidth = 1.5;
+    g.beginPath(); g.moveTo(xCorte, yTubo - 6); g.lineTo(xCorte, yTubo + altoTubo + 6); g.stroke();
+    g.setLineDash([]);
+    g.fillStyle = '#555';
+    g.fillText('el tubo “termina” aquí', Math.min(xCorte + 4, w - 130), yTubo + altoTubo + 16);
+  }
+  // regla de largo
+  g.strokeStyle = '#999'; g.lineWidth = 1;
+  g.beginPath(); g.moveTo(xIzq, yTubo + altoTubo + 24); g.lineTo(xIzq + largoPx, yTubo + altoTubo + 24); g.stroke();
+  g.fillStyle = '#555';
+  g.fillText('L = ' + (L * 100).toFixed(1).replace('.', ',') + ' cm', xIzq + largoPx / 2 - 24, yTubo + altoTubo + 38);
+
+  // --- los tres primeros modos de la columna efectiva ---
+  // Envolvente de DESPLAZAMIENTO del aire: vientre en extremo abierto,
+  // nodo en extremo cerrado.
+  const ns = armonicosDe(cfg).slice(0, 3);
+  const f1 = f1De(cfg);
+  const xFin = xIzq + largoPx * cfg.frac;      // fin de la columna efectiva
+  const anchoEf = xFin - xIzq;
+  const yBase = 128, paso = 38, amp = 13;
+  g.fillStyle = '#555';
+  g.fillText('modos de la columna (desplazamiento del aire):', xIzq, yBase - 22);
+  ns.forEach((n, i) => {
+    const y0 = yBase + i * paso;
+    g.strokeStyle = '#ddd'; g.lineWidth = 1;
+    g.beginPath(); g.moveTo(xIzq, y0); g.lineTo(xFin, y0); g.stroke();
+    g.strokeStyle = i === 0 ? acento : azul; g.lineWidth = 1.6;
+    // dos ramas (+ y −) de la envolvente del modo n
+    [1, -1].forEach(signo => {
+      g.beginPath();
+      for (let k = 0; k <= 80; k++) {
+        const xi = k / 80;                       // 0 = embocadura, 1 = fin efectivo
+        // cerrado: cos(nπx/2) con n impar (vientre en 0, nodo en 1)
+        // abierto: cos(nπx)              (vientre en ambos extremos)
+        const env = cfg.cerrado ? Math.cos(n * Math.PI * xi / 2) : Math.cos(n * Math.PI * xi);
+        const px = xIzq + anchoEf * xi, py = y0 - signo * amp * env;
+        k ? g.lineTo(px, py) : g.moveTo(px, py);
+      }
+      g.stroke();
+    });
+    g.fillStyle = '#555';
+    // si el tubo llega al borde derecho, la etiqueta se mete dentro del dibujo
+    const xTxt = (xFin + 92 > w) ? xFin - 96 : xFin + 6;
+    g.fillText('n=' + n + ' → ' + (n * f1).toFixed(0) + ' Hz', xTxt, y0 + 4);
+  });
+}
+
+// --- espectro (AnalyserNode) --------------------------------------------------
+const lienzoEsp = $('lienzoEspectro');
+const F_VISTA = 4000;   // eje de frecuencia del espectro, en Hz
+function dibujaEspectro() {
+  const dpr = window.devicePixelRatio || 1;
+  const w = lienzoEsp.clientWidth, h = 190;
+  if (lienzoEsp.width !== w * dpr) { lienzoEsp.width = w * dpr; lienzoEsp.height = h * dpr; }
+  const g = lienzoEsp.getContext('2d');
+  g.setTransform(dpr, 0, 0, dpr, 0, 0);
+  g.clearRect(0, 0, w, h);
+
+  const margIzq = 40, margAba = 24, margArr = 8;
+  const anchoU = w - margIzq - 10, altoU = h - margArr - margAba;
+  // ejes y rejilla
+  g.strokeStyle = '#999'; g.lineWidth = 1;
+  g.strokeRect(margIzq, margArr, anchoU, altoU);
+  g.font = '11px Helvetica, Arial, sans-serif'; g.fillStyle = '#555';
+  for (let f = 0; f <= F_VISTA; f += 1000) {
+    const x = margIzq + anchoU * f / F_VISTA;
+    g.beginPath(); g.moveTo(x, margArr + altoU); g.lineTo(x, margArr + altoU + 4); g.stroke();
+    g.fillText(f + ' Hz', x - 14, h - 8);
+  }
+  for (let dB = 0; dB >= -80; dB -= 20) {
+    const y = margArr + altoU * (-dB / 80);
+    g.fillText(dB + ' dB', 2, y + 4);
+  }
+  g.fillText('espectro (dB relativos)', margIzq + 6, margArr + 14);
+
+  if (analizador) {
+    const datos = new Float32Array(analizador.frequencyBinCount);
+    analizador.getFloatFrequencyData(datos);
+    const hzPorBin = ctxAudio.sampleRate / analizador.fftSize;
+    g.strokeStyle = getComputedStyle(document.body).getPropertyValue('--linea');
+    g.lineWidth = 1.4;
+    g.beginPath();
+    const nBins = Math.min(datos.length, Math.floor(F_VISTA / hzPorBin));
+    for (let i = 0; i < nBins; i++) {
+      const x = margIzq + anchoU * (i * hzPorBin) / F_VISTA;
+      const dB = Math.max(-80, Math.min(0, datos[i]));
+      const y = margArr + altoU * (-dB / 80);
+      i ? g.lineTo(x, y) : g.moveTo(x, y);
+    }
+    g.stroke();
+  }
+  // marcas teóricas de los armónicos presentes (para leer "completos vs. impares")
+  const cfg = configEfectiva(), f1 = f1De(cfg);
+  const acento = getComputedStyle(document.body).getPropertyValue('--acento');
+  g.strokeStyle = acento; g.setLineDash([3, 3]); g.lineWidth = 1;
+  armonicosDe(cfg).forEach(n => {
+    const f = n * f1;
+    if (f > F_VISTA) return;
+    const x = margIzq + anchoU * f / F_VISTA;
+    g.beginPath(); g.moveTo(x, margArr); g.lineTo(x, margArr + altoU); g.stroke();
+  });
+  g.setLineDash([]);
+}
+
+function cuadro() { dibujaTubo(); dibujaEspectro(); requestAnimationFrame(cuadro); }
+requestAnimationFrame(cuadro);
+
+// --- controles -----------------------------------------------------------------
+$('btnPlay').addEventListener('click', iniciar);
+$('btnStop').addEventListener('click', detener);
+$('largo').addEventListener('input', aplicaConfig);
+$('gan').addEventListener('input', () => {
+  refrescaLecturas();
+  if (ganancia) ganancia.gain.value = ganActual();  // tope 0,5: protección auditiva
+});
+document.querySelectorAll('input[name=extremo]').forEach(r => r.addEventListener('change', aplicaConfig));
+$('agu1').addEventListener('change', aplicaConfig);
+$('agu2').addEventListener('change', aplicaConfig);
+refrescaLecturas();
+</script>
+</body>
+</html>
