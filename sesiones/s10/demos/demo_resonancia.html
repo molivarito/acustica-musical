@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Demo — Resonancia: el oscilador forzado (s10)</title>
+<style>
+  /* Estética editorial del curso: fondo claro, serif para texto, sans para controles */
+  :root {
+    --tinta: #1a1a1a;
+    --acento: #7a2e2e;     /* rojo ladrillo sobrio */
+    --linea: #2e4a7a;      /* azul para curvas */
+    --papel: #faf8f4;
+    --panel: #f0ece4;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0; padding: 1.2rem;
+    background: var(--papel); color: var(--tinta);
+    font-family: Georgia, 'Times New Roman', serif;
+    max-width: 900px; margin-inline: auto;
+  }
+  h1 { font-size: 1.35rem; margin: 0 0 .2rem; }
+  .sesion { font-family: Helvetica, Arial, sans-serif; font-size: .8rem;
+            letter-spacing: .06em; text-transform: uppercase; color: var(--acento); }
+  .bajada { font-style: italic; margin: .3rem 0 1rem; }
+  .panel {
+    background: var(--panel); border-radius: 6px; padding: .9rem 1rem;
+    font-family: Helvetica, Arial, sans-serif; font-size: .9rem;
+    display: flex; flex-wrap: wrap; gap: 1rem 2rem; align-items: flex-start;
+  }
+  .ctrl { display: flex; flex-direction: column; gap: .25rem; min-width: 230px; flex: 1; }
+  .ctrl label { font-weight: bold; }
+  .valor { font-variant-numeric: tabular-nums; }
+  .nota-ctrl { font-size: .8rem; color: #555; }
+  input[type=range] { width: 100%; accent-color: var(--acento); }
+  button {
+    font-family: Helvetica, Arial, sans-serif; font-size: .95rem;
+    padding: .5rem .9rem; border: 1px solid var(--tinta); border-radius: 4px;
+    background: white; cursor: pointer; margin-bottom: .3rem;
+  }
+  button.primario { background: var(--acento); color: white; border-color: var(--acento); }
+  canvas { width: 100%; display: block; background: white;
+           border: 1px solid #ccc; border-radius: 4px; margin-top: 1rem; }
+  #curva { height: 260px; }
+  #envolvente { height: 90px; }
+  .leyenda { font-family: Helvetica, Arial, sans-serif; font-size: .8rem; color: #555; margin: .2rem 0 0; }
+  .observar { border-left: 4px solid var(--acento); padding: .2rem 0 .2rem 1rem; margin-top: 1.2rem; }
+  .observar h2 { font-size: 1rem; margin: .2rem 0; }
+  ol { margin: .4rem 0; padding-left: 1.2rem; }
+  .fila-chk { font-family: Helvetica, Arial, sans-serif; font-size: .85rem; }
+</style>
+</head>
+<body>
+<p class="sesion">Acústica Musical UC · Sesión 10</p>
+<h1>Resonancia: forzar un sistema que ya tiene opinión</h1>
+<p class="bajada">Barra la frecuencia de excitación a través de la
+resonancia: oiga cómo la respuesta se infla al pasar por la frecuencia
+propia, y cómo el amortiguamiento cambia el pico y el transiente a la vez.</p>
+
+<div class="panel">
+  <div class="ctrl">
+    <label for="fexc">Frecuencia de excitación: <span class="valor oculta-num" id="fexcVal">440 Hz</span></label>
+    <input type="range" id="fexc" min="220" max="880" step="1" value="300">
+    <button id="btnBarrido">⇥ Barrido automático (35 s)</button>
+  </div>
+  <div class="ctrl">
+    <label for="amort">Amortiguamiento (roce del resonador)</label>
+    <input type="range" id="amort" min="0" max="100" value="45">
+    <span class="nota-ctrl oculta-num" id="amortVal">ancho del pico ≈ — Hz · el ping libre dura ≈ — ms</span>
+    <label for="gan" style="margin-top:.4rem">Ganancia: <span class="valor" id="ganVal">0,35</span></label>
+    <input type="range" id="gan" min="0" max="50" value="35">
+  </div>
+  <div class="ctrl" style="min-width:190px; flex:0">
+    <button id="btnPlay" class="primario">▶ Excitar (iniciar)</button>
+    <button id="btnStop">■ Detener</button>
+    <button id="btnGolpe">✊ Golpe (oscilación libre)</button>
+    <button id="btnBorrar">Borrar curva</button>
+    <span class="fila-chk"><label><input type="checkbox" id="chkSeca"> oír también la excitación sola</label></span>
+    <span class="fila-chk"><label><input type="checkbox" id="chkPres"> modo presentación (ocultar números)</label></span>
+  </div>
+</div>
+
+<canvas id="curva"></canvas>
+<p class="leyenda">Curva de respuesta: la traza se dibuja a medida que usted barre la excitación.</p>
+<canvas id="envolvente"></canvas>
+<p class="leyenda">Envolvente temporal de la respuesta (últimos 4 s): aquí se ven el transiente de ataque y el decaimiento.</p>
+
+<div class="observar">
+  <h2>¿Qué observar?</h2>
+  <ol>
+    <li><b>Prediga primero</b> y barra después: ¿en qué frecuencia se va a
+        inflar la respuesta? Al pasar por ella, ¿qué cambia — la altura que
+        oye, la sonoridad, o ambas?</li>
+    <li>Mueva el amortiguamiento y repita el barrido y el golpe: ¿qué le
+        pasa al <i>ancho</i> del pico y a la <i>duración</i> del ping libre?
+        ¿Pueden cambiar por separado?</li>
+    <li>Con poco amortiguamiento, barra rápido y luego lento cerca del
+        pico: ¿por qué al pasar rápido la curva "no alcanza" su altura
+        verdadera? (Pista: mire la envolvente — ¿cuánto tarda el resonador
+        en creer?)</li>
+  </ol>
+</div>
+
+<script>
+'use strict';
+// ---------------------------------------------------------------------------
+// Demo s10 — resonancia. Un solo concepto: la respuesta de un resonador
+// forzado es máxima cuando la excitación coincide con su frecuencia propia,
+// y el amortiguamiento fija A LA VEZ el ancho del pico y la duración del
+// transiente. El resonador es un filtro pasabanda de segundo orden (f0, Q);
+// la excitación es un seno de amplitud constante cuya frecuencia barre el
+// usuario. La curva de respuesta se mide en vivo (RMS de la salida) y se
+// dibuja punto a punto al barrer. El profesor puede ajustar abajo F0,
+// los límites del barrido y el rango de Q.
+// ---------------------------------------------------------------------------
+const F0 = 440;                 // frecuencia propia del resonador (La4)
+const F_MIN = 220, F_MAX = 880; // rango de excitación (una octava a cada lado)
+const Q_MIN = 4, Q_MAX = 100;   // rango del slider de amortiguamiento (Q alto = poco roce)
+const AMP_EXC = 0.22;           // amplitud fija de la excitación (antes del filtro)
+const BARRIDO_S = 35;           // duración del barrido automático
+const BIN_HZ = 4;               // resolución de la curva medida
+
+let ctxAudio = null, osc = null, filtro = null, analizador = null;
+let ganExc = null, ganSeca = null, ganMaster = null;
+let sonando = false;
+let barriendo = false, barridoT0 = 0;
+
+const $ = id => document.getElementById(id);
+const sliderF = $('fexc'), sliderA = $('amort'), sliderG = $('gan');
+
+// --- lecturas de los controles ---------------------------------------------
+function fExc() { return Number(sliderF.value); }
+// Slider de amortiguamiento: izquierda = poco roce (Q alto, pico angosto).
+// Mapeo logarítmico del Q para que el slider se sienta parejo.
+function qActual() {
+  const t = sliderA.value / 100;             // 0 = poco roce … 1 = mucho roce
+  return Q_MAX * Math.pow(Q_MIN / Q_MAX, t);
+}
+function ganActual() { return sliderG.value / 100; }  // tope 0,5
+
+function refrescaEtiquetas() {
+  $('fexcVal').textContent = fExc() + ' Hz';
+  const Q = qActual();
+  const anchoHz = F0 / Q;                       // ancho a media potencia
+  const tauMs = 1000 * Q / (Math.PI * F0);      // tiempo de decaimiento (a 1/e)
+  $('amortVal').textContent = 'ancho del pico ≈ ' + anchoHz.toFixed(1).replace('.', ',') +
+    ' Hz · el ping libre dura ≈ ' + tauMs.toFixed(0) + ' ms';
+  $('ganVal').textContent = ganActual().toFixed(2).replace('.', ',');
+}
+
+// --- grafo de audio ----------------------------------------------------------
+// osc (seno, f = excitación) → ganExc → filtro pasabanda (F0, Q) → analizador → master
+//                                   └──→ ganSeca (excitación "seca", opcional) ─┘
+function armaAudio() {
+  ctxAudio = new (window.AudioContext || window.webkitAudioContext)();
+  ganMaster = ctxAudio.createGain();
+  ganMaster.gain.value = ganActual();
+  ganMaster.connect(ctxAudio.destination);
+
+  filtro = ctxAudio.createBiquadFilter();
+  filtro.type = 'bandpass';
+  filtro.frequency.value = F0;
+  filtro.Q.value = qActual();
+
+  analizador = ctxAudio.createAnalyser();
+  analizador.fftSize = 2048;
+  filtro.connect(analizador);
+  analizador.connect(ganMaster);
+
+  ganExc = ctxAudio.createGain();
+  ganExc.gain.value = AMP_EXC;
+  ganExc.connect(filtro);
+
+  // camino "seco": para comparar la excitación constante con la respuesta
+  ganSeca = ctxAudio.createGain();
+  ganSeca.gain.value = 0;
+  ganExc.connect(ganSeca);
+  ganSeca.connect(ganMaster);
+}
+
+async function iniciar() {
+  if (!ctxAudio) armaAudio();
+  await ctxAudio.resume();
+  if (!sonando) {
+    osc = ctxAudio.createOscillator();
+    osc.type = 'sine';
+    osc.frequency.value = fExc();
+    osc.connect(ganExc);
+    osc.start();
+    sonando = true;
+  }
+}
+function detener() {
+  if (osc) { osc.stop(); osc.disconnect(); osc = null; }
+  sonando = false;
+  paraBarrido();
+}
+
+// Golpe: ráfaga de ruido de 3 ms inyectada al MISMO filtro → se oye la
+// oscilación libre del resonador (ping en f0) con su decaimiento.
+async function golpe() {
+  if (!ctxAudio) armaAudio();
+  await ctxAudio.resume();
+  const n = Math.round(ctxAudio.sampleRate * 0.003);
+  const buf = ctxAudio.createBuffer(1, n, ctxAudio.sampleRate);
+  const d = buf.getChannelData(0);
+  for (let i = 0; i < n; i++) d[i] = (Math.random() * 2 - 1) * (1 - i / n);
+  const src = ctxAudio.createBufferSource();
+  src.buffer = buf;
+  const g = ctxAudio.createGain();
+  // La respuesta impulsiva del pasabanda crece como f0/Q: se escala el
+  // empuje con Q para que el ping suene parejo con cualquier amortiguamiento
+  // (lo que cambia al oído es su DURACIÓN, que es el punto de la demo).
+  g.gain.value = 2.5 * qActual() / Q_MAX;
+  src.connect(g).connect(filtro);
+  src.start();
+}
+
+// --- actualización de parámetros en vivo -------------------------------------
+function aplicaFrecuencia() {
+  refrescaEtiquetas();
+  if (osc) osc.frequency.setTargetAtTime(fExc(), ctxAudio.currentTime, 0.02);
+}
+function aplicaAmortiguamiento() {
+  refrescaEtiquetas();
+  if (filtro) filtro.Q.setTargetAtTime(qActual(), ctxAudio.currentTime, 0.02);
+  borraCurva();   // la curva medida pertenece a UN amortiguamiento: se reinicia
+}
+
+// --- barrido automático -------------------------------------------------------
+function empiezaBarrido() {
+  if (barriendo) { paraBarrido(); return; }
+  barriendo = true;
+  barridoT0 = performance.now();
+  sliderF.value = F_MIN;
+  aplicaFrecuencia();
+  iniciar();
+  $('btnBarrido').textContent = '⇥ Barriendo… (clic para parar)';
+}
+function paraBarrido() {
+  barriendo = false;
+  $('btnBarrido').textContent = '⇥ Barrido automático (35 s)';
+}
+function pasoBarrido() {
+  if (!barriendo) return;
+  const t = (performance.now() - barridoT0) / 1000 / BARRIDO_S;
+  if (t >= 1) { paraBarrido(); return; }
+  sliderF.value = Math.round(F_MIN + (F_MAX - F_MIN) * t);
+  aplicaFrecuencia();
+}
+
+// --- medición de la respuesta -------------------------------------------------
+const nBins = Math.round((F_MAX - F_MIN) / BIN_HZ);
+let curvaMedida = new Array(nBins).fill(null);   // RMS máximo observado por bin
+const datos = new Float32Array(2048);
+let rmsActual = 0;
+const histEnv = new Array(240).fill(0);          // ~4 s de envolvente a 60 fps
+
+function mide() {
+  if (!analizador || !sonando && !ctxAudio) return;
+  if (analizador) {
+    analizador.getFloatTimeDomainData(datos);
+    let s = 0;
+    for (let i = 0; i < datos.length; i++) s += datos[i] * datos[i];
+    rmsActual = Math.sqrt(s / datos.length);
+  }
+  histEnv.push(rmsActual); histEnv.shift();
+  if (sonando) {
+    const bin = Math.min(nBins - 1, Math.max(0, Math.floor((fExc() - F_MIN) / BIN_HZ)));
+    if (curvaMedida[bin] === null || rmsActual > curvaMedida[bin]) curvaMedida[bin] = rmsActual;
+  }
+}
+function borraCurva() { curvaMedida = new Array(nBins).fill(null); }
+
+// --- dibujo --------------------------------------------------------------------
+// Normalización: en el pico, RMS ≈ AMP_EXC/√2; se dibuja a ~90 % de la altura.
+const RMS_MAX = AMP_EXC / Math.SQRT2 / 0.9;
+const cCurva = $('curva'), cEnv = $('envolvente');
+const modoPres = () => $('chkPres').checked;
+
+function preparaLienzo(cv, alto) {
+  const dpr = window.devicePixelRatio || 1;
+  const w = cv.clientWidth;
+  if (cv.width !== w * dpr) { cv.width = w * dpr; cv.height = alto * dpr; }
+  const g = cv.getContext('2d');
+  g.setTransform(dpr, 0, 0, dpr, 0, 0);
+  g.clearRect(0, 0, w, alto);
+  return [g, w];
+}
+
+function dibujaCurva() {
+  const alto = 260, margIzq = 46, margInf = 30, margSup = 12;
+  const [g, w] = preparaLienzo(cCurva, alto);
+  const x0 = margIzq, x1 = w - 10, y0 = alto - margInf, y1 = margSup;
+  const fAx = f => x0 + (x1 - x0) * (f - F_MIN) / (F_MAX - F_MIN);
+  const aAy = a => y0 - (y0 - y1) * Math.min(1, a / RMS_MAX);
+
+  // ejes
+  g.strokeStyle = '#999'; g.lineWidth = 1;
+  g.beginPath(); g.moveTo(x0, y1); g.lineTo(x0, y0); g.lineTo(x1, y0); g.stroke();
+  g.font = '11px Helvetica, Arial, sans-serif'; g.fillStyle = '#555';
+  g.fillText('amplitud de respuesta (relativa)', 4, 12);
+  g.fillText('frecuencia de excitación (Hz)', (x0 + x1) / 2 - 70, alto - 8);
+  for (let f = 220; f <= 880; f += 110) {
+    const x = fAx(f);
+    g.beginPath(); g.moveTo(x, y0); g.lineTo(x, y0 + 4); g.stroke();
+    if (!modoPres()) g.fillText(String(f), x - 11, y0 + 16);
+  }
+
+  // marcador de la frecuencia propia (oculto en modo presentación)
+  if (!modoPres()) {
+    g.strokeStyle = '#b09a6a'; g.setLineDash([5, 4]);
+    g.beginPath(); g.moveTo(fAx(F0), y0); g.lineTo(fAx(F0), y1); g.stroke();
+    g.setLineDash([]);
+    g.fillStyle = '#8a7440';
+    g.fillText('f₀ = 440 Hz (frecuencia propia)', fAx(F0) + 6, y1 + 12);
+  }
+
+  // curva medida (máximo observado por bin)
+  g.strokeStyle = getComputedStyle(document.body).getPropertyValue('--linea');
+  g.lineWidth = 1.8;
+  g.beginPath();
+  let enTrazo = false;
+  for (let i = 0; i < nBins; i++) {
+    if (curvaMedida[i] === null) { enTrazo = false; continue; }
+    const x = fAx(F_MIN + (i + 0.5) * BIN_HZ), y = aAy(curvaMedida[i]);
+    enTrazo ? g.lineTo(x, y) : g.moveTo(x, y);
+    enTrazo = true;
+  }
+  g.stroke();
+
+  // punto vivo: dónde está la excitación ahora y cuánto responde
+  const xAhora = fAx(fExc()), yAhora = aAy(rmsActual);
+  g.fillStyle = getComputedStyle(document.body).getPropertyValue('--acento');
+  g.beginPath(); g.arc(xAhora, yAhora, 5, 0, 2 * Math.PI); g.fill();
+  g.strokeStyle = g.fillStyle; g.lineWidth = 1;
+  g.beginPath(); g.moveTo(xAhora, y0); g.lineTo(xAhora, yAhora); g.stroke();
+}
+
+function dibujaEnv() {
+  const alto = 90, margIzq = 46;
+  const [g, w] = preparaLienzo(cEnv, alto);
+  const x0 = margIzq, x1 = w - 10, base = alto - 14;
+  g.strokeStyle = '#999'; g.lineWidth = 1;
+  g.beginPath(); g.moveTo(x0, base); g.lineTo(x1, base); g.stroke();
+  g.font = '11px Helvetica, Arial, sans-serif'; g.fillStyle = '#555';
+  g.fillText('ahora →', x1 - 46, base + 11);
+  g.fillText('amplitud', 4, 12);
+  g.strokeStyle = getComputedStyle(document.body).getPropertyValue('--linea');
+  g.lineWidth = 1.5;
+  g.beginPath();
+  for (let i = 0; i < histEnv.length; i++) {
+    const x = x0 + (x1 - x0) * i / (histEnv.length - 1);
+    const y = base - (base - 8) * Math.min(1, histEnv[i] / RMS_MAX);
+    i ? g.lineTo(x, y) : g.moveTo(x, y);
+  }
+  g.stroke();
+}
+
+function cuadro() {
+  pasoBarrido();
+  mide();
+  dibujaCurva();
+  dibujaEnv();
+  requestAnimationFrame(cuadro);
+}
+requestAnimationFrame(cuadro);
+
+// --- controles -------------------------------------------------------------
+$('btnPlay').addEventListener('click', iniciar);
+$('btnStop').addEventListener('click', detener);
+$('btnGolpe').addEventListener('click', golpe);
+$('btnBorrar').addEventListener('click', borraCurva);
+$('btnBarrido').addEventListener('click', empiezaBarrido);
+sliderF.addEventListener('input', () => { paraBarrido(); aplicaFrecuencia(); });
+sliderA.addEventListener('input', aplicaAmortiguamiento);
+sliderG.addEventListener('input', () => {
+  refrescaEtiquetas();
+  if (ganMaster) ganMaster.gain.value = ganActual();  // tope 0,5: protección auditiva
+});
+$('chkSeca').addEventListener('change', e => {
+  if (ganSeca) ganSeca.gain.value = e.target.checked ? 0.05 : 0;
+});
+$('chkPres').addEventListener('change', () => {
+  // modo presentación: se ocultan los números para la escucha del día
+  document.querySelectorAll('.oculta-num').forEach(el =>
+    el.style.visibility = modoPres() ? 'hidden' : 'visible');
+});
+refrescaEtiquetas();
+</script>
+</body>
+</html>

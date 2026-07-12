@@ -22,7 +22,7 @@ actividades > demo.
 | s07 | Prueba 1 + batidos | lista | lista | lista | lista | lista |
 | s08 | Banda crítica y consonancia | lista | lista | lista | lista | lista |
 | s09 | Escalas y temperamentos | lista | lista | lista | lista | lista |
-| s10 | Resonancia e impedancia | pendiente | pendiente | pendiente | pendiente | pendiente |
+| s10 | Resonancia e impedancia | lista | lista | lista | lista | lista |
 | s11 | Cuerdas frotadas y cuerpo | pendiente | pendiente | pendiente | pendiente | pendiente |
 | s12 | Vientos y lutería | pendiente | pendiente | pendiente | pendiente | pendiente |
 | s13 | Prueba 2 + la voz | pendiente | pendiente | pendiente | pendiente | pendiente |
@@ -116,3 +116,7 @@ diseno/02 §6.)
   pasada 2. Taller psicoacústico registra SIN nota (decisión de carga).
 - **s09**: imprimir guías (afinación por batidos, escala del objeto);
   guitarra levemente desafinada para demostración; hito 2 anunciado.
+- **s10**: botellas iguales por grupo + agua; pauta clínica impresa;
+  revisar coevaluaciones hito 2 (riesgo 4); corrección hito 2 (~2 h).
+  Nota: el agente de s10 fue cortado tras escribir todo; la verificación
+  final la hizo el orquestador (JS OK, 70+70, aviso s11 presente).
