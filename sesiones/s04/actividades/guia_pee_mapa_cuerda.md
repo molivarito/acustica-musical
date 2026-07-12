@@ -5,7 +5,8 @@ pulsación), OA1.2 (predecir qué parciales suenan y cuáles quedan mudos),
 OA4.1 (medir frecuencias en el espectrograma).
 **Grupo**: 4 integrantes con roles: **ejecuta** (pulsa y toca armónicos)
 · **mide** (opera espectrograma y afinador) · **registra** (llena esta
-hoja) · **vocero**. Roten "ejecuta" entre las fases 1 y 2.
+hoja) · **vocero**. Roten "ejecuta" a la mitad de la fase 1 (y de nuevo
+si llegan a la fase 2 opcional).
 **Materiales**: 1–2 instrumentos de cuerda pulsada del grupo, huincha o
 regla, cinta de papel, 2+ celulares (espectrograma y afinador), esta hoja.
 
@@ -28,9 +29,10 @@ en el punto; deja mudos los que tienen *nodo* ahí), anoten sin probar:
 
 ## 2. Experimento
 
-**Fase 1 — el punto de pulsación (12 min).** Pulsen firme en cada punto
-marcado, con el espectrograma grabando; capturen la pantalla justo tras
-el ataque. Anoten $f_1$ y el estado de los primeros parciales
+**Fase 1 — el punto de pulsación (~24 min: es la fase central, tómense
+el tiempo).** Pulsen firme en cada punto marcado, con el espectrograma
+grabando; capturen la pantalla justo tras el ataque y repitan las
+pulsadas dudosas. Anoten $f_1$ y el estado de los primeros parciales
 (F = fuerte, d = débil, 0 = ausente):
 
 | Punto | $f_1$ (Hz) | parcial 2 | parcial 3 | parcial 4 | parcial 5 |
@@ -39,24 +41,28 @@ el ataque. Anoten $f_1$ y el estado de los primeros parciales
 | $L/4$ | | | | | |
 | ~$L/10$ | | | | | |
 
-**Fase 2 — armónicos naturales (12 min).** Ahora el gesto inverso: dedo
-apoyado *suavemente* (sin llegar al traste) y pulsar fuerte con la otra
-mano. ANTES de cada uno, prediga la frecuencia que emergerá. Cuerda al
-aire: $f_1 =$ ______ Hz (afinador).
+**Fase 2 — armónicos naturales (OPCIONAL: solo grupos rápidos, con el
+tiempo que les sobre de la fase 1).** No es requisito para cerrar la
+guía: si su grupo no llega hasta aquí, pase directo a la sección 3. El
+gesto inverso: dedo apoyado *suavemente* (sin llegar al traste) y pulsar
+fuerte con la otra mano. ANTES de cada uno, prediga la frecuencia que
+emergerá. Partan por el traste 12 (el que siempre sale). Cuerda al aire:
+$f_1 =$ ______ Hz (afinador).
 
 | Dedo suave sobre… | Predicción (Hz) | Medido (Hz) | razón medido/$f_1$ |
 |---|---|---|---|
 | traste 12 ($L/2$) | | | |
-| traste 7 ($L/3$) *(opcional en escala corta)* | | | |
-| traste 5 ($L/4$) *(opcional)* | | | |
+| traste 7 ($L/3$) *(solo si sobra tiempo; difícil en escala corta)* | | | |
+| traste 5 ($L/4$) *(solo si sobra tiempo)* | | | |
 
 ## 3. Explicación y contraste (8 min, guiado por el cierre)
 
 - ¿La nota ($f_1$) cambió con el punto de pulsación? ¿Y la receta?
 - Pulsar en $L/2$ **borra** los parciales pares; el dedo suave en $L/2$
-  deja **solo** los pares. Completen: "Son gestos opuestos sobre el
-  mismo mapa, porque la púa __________________________ y el dedo
-  __________________________".
+  deja **solo** los pares (si no hicieron la fase 2, respondan con la
+  regla de la lectura y lo visto en s03). Completen: "Son gestos
+  opuestos sobre el mismo mapa, porque la púa __________________________
+  y el dedo __________________________".
 - Pregunta de proyección (una frase): ¿dónde pulsa (o qué cambia) un
   guitarrista que quiere un sonido más dulce, y por qué funciona?
   _______________________________________________________________

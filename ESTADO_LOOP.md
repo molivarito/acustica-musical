@@ -33,7 +33,7 @@ actividades > demo.
 
 | Control | Estado |
 |---|---|
-| revision-alineamiento al cerrar s05 | pendiente |
+| revision-alineamiento al cerrar s05 | **lista** — reporte en `diseno/revision_20260712.md`; 5 correcciones recomendadas antes de abrir s06 (P1–P5) |
 | revision-alineamiento al cerrar s10 | pendiente |
 | revision-alineamiento final (s15) | pendiente |
 | Compilación libro/LIBRO_CURSO.md (+PDF si hay pandoc) | pendiente |
@@ -68,6 +68,16 @@ actividades > demo.
   confirmar antes de reescribir en `diseno/`; la instrucción explícita
   de esta corrida ("complétalo primero", sin preguntas) la supersede.
   Solo se completó el esqueleto existente; 01 y 02 no se tocan.
+
+- **D9 (correcciones post-revisión s05)**: se reescribieron archivos de
+  sesiones ya cerradas por exigencia del reporte de alineamiento
+  (autorizado por las reglas del loop): s02 plan+guía retratos (taller a
+  2 sonidos por grupo); s02–s05 planes (ronda oral = 3′+2′+4×2,5′ con
+  cronómetro); s04 plan+2 guías (armónicos opcional, tarea b eliminada);
+  s05 plan+registro (experiencia I en parejas). Se creó `materiales/`
+  con planilla OA3, apps recomendadas, banco de estímulos consolidado, y
+  la pauta de feedback de ideas de proyecto en s04/actividades. Detalle
+  en la sección final de diseno/revision_20260712.md.
 
 ## Pendientes de producción acumulados
 
