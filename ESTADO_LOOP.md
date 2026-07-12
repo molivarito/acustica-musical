@@ -16,7 +16,7 @@ actividades > demo.
 | s01 | Del golpe al tono | lista | lista | lista | lista | lista |
 | s02 | Ondas y espectrograma | lista | lista | lista | lista | lista |
 | s03 | Modos de vibración | lista | lista | lista | lista | lista |
-| s04 | La receta del timbre | pendiente | pendiente | pendiente | pendiente | pendiente |
+| s04 | La receta del timbre | lista | lista | lista | lista | lista |
 | s05 | Altura percibida | pendiente | pendiente | pendiente | pendiente | pendiente |
 | s06 | Sonoridad y decibel | pendiente | pendiente | pendiente | pendiente | pendiente |
 | s07 | Prueba 1 + batidos | pendiente | pendiente | pendiente | pendiente | pendiente |
@@ -85,3 +85,7 @@ diseno/02 §6.)
   licencia; enunciado de proyecto impreso; pauta de feedback de medias
   hojas (la produce s04). [POR VERIFICAR] Fletcher & Rossing en
   biblioteca UC.
+- **s04**: comentar medias hojas de proyecto (~45 min profe); grabar e
+  invertir nota de guitarra; guitarra de respaldo, huinchas, cinta de
+  papel; probar espectrograma con guitarra; publicar demo tras la
+  sesión.

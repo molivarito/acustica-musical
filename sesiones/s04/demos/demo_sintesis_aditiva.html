@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Demo — Síntesis aditiva: el espectro como receta del timbre (s04)</title>
+<style>
+  /* Estética editorial: fondo claro, serif para texto, sans para controles */
+  :root {
+    --tinta: #1a1a1a;
+    --acento: #7a2e2e;     /* rojo ladrillo sobrio */
+    --linea: #2e4a7a;      /* azul para la forma de onda y las barras */
+    --papel: #faf8f4;
+    --panel: #f0ece4;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0; padding: 1.2rem;
+    background: var(--papel); color: var(--tinta);
+    font-family: Georgia, 'Times New Roman', serif;
+    max-width: 900px; margin-inline: auto;
+  }
+  h1 { font-size: 1.35rem; margin: 0 0 .2rem; }
+  .sesion { font-family: Helvetica, Arial, sans-serif; font-size: .8rem;
+            letter-spacing: .06em; text-transform: uppercase; color: var(--acento); }
+  .bajada { font-style: italic; margin: .3rem 0 1rem; }
+  .panel {
+    background: var(--panel); border-radius: 6px; padding: .9rem 1rem;
+    font-family: Helvetica, Arial, sans-serif; font-size: .9rem;
+    display: flex; flex-wrap: wrap; gap: 1rem 2rem; align-items: center;
+    margin-bottom: .8rem;
+  }
+  .ctrl { display: flex; flex-direction: column; gap: .25rem; min-width: 200px; flex: 1; }
+  .ctrl label { font-weight: bold; }
+  .valor { font-variant-numeric: tabular-nums; }
+  input[type=range] { width: 100%; accent-color: var(--acento); }
+  button {
+    font-family: Helvetica, Arial, sans-serif; font-size: .95rem;
+    padding: .5rem 1rem; border: 1px solid var(--tinta); border-radius: 4px;
+    background: white; cursor: pointer;
+  }
+  button.primario { background: var(--acento); color: white; border-color: var(--acento); }
+  button.preset { font-size: .85rem; padding: .35rem .7rem; }
+
+  /* El mezclador de parciales: 8 sliders verticales */
+  .mezclador {
+    background: var(--panel); border-radius: 6px; padding: .8rem .6rem;
+    font-family: Helvetica, Arial, sans-serif; font-size: .78rem;
+    display: flex; justify-content: space-around; text-align: center;
+    margin-bottom: .4rem;
+  }
+  .parcial { display: flex; flex-direction: column; align-items: center; gap: .3rem; }
+  .parcial b { font-size: .9rem; }
+  input[type=range].vert {
+    writing-mode: vertical-lr;      /* slider vertical (Chrome/Firefox modernos) */
+    direction: rtl;                 /* cero abajo, máximo arriba */
+    -webkit-appearance: slider-vertical;  /* Safari */
+    width: 1.3rem; height: 110px; accent-color: var(--linea);
+  }
+  .hz { color: #555; font-variant-numeric: tabular-nums; }
+
+  canvas { width: 100%; height: 150px; display: block; background: white;
+           border: 1px solid #ccc; border-radius: 4px; margin-top: .8rem; }
+  .leyenda { font-family: Helvetica, Arial, sans-serif; font-size: .8rem;
+             color: #555; margin: .15rem 0 0; }
+  .observar { border-left: 4px solid var(--acento); padding: .2rem 0 .2rem 1rem; margin-top: 1.2rem; }
+  .observar h2 { font-size: 1rem; margin: .2rem 0; }
+  ol { margin: .4rem 0; padding-left: 1.2rem; }
+</style>
+</head>
+<body>
+<p class="sesion">Acústica Musical UC · Sesión 04</p>
+<h1>Síntesis aditiva: el espectro como receta del timbre</h1>
+<p class="bajada">Construya un timbre sumando parciales armónicos: dosifique
+cada slider, compare los presets con lo que midió en su instrumento, y
+pruebe la misma receta sostenida y pulsada.</p>
+
+<div class="panel">
+  <div class="ctrl">
+    <label for="f1">Fundamental f₁: <span class="valor" id="f1Val">220 Hz</span></label>
+    <input type="range" id="f1" min="110" max="440" value="220" step="1">
+    <label for="gan">Ganancia: <span class="valor" id="ganVal">0,35</span></label>
+    <input type="range" id="gan" min="0" max="50" value="35">
+  </div>
+  <div class="ctrl" style="min-width:170px; flex:0">
+    <button id="btnPlay" class="primario">▶ Tono sostenido</button>
+    <button id="btnPulsar">⟿ Pulsar (con envolvente)</button>
+    <button id="btnStop">■ Detener</button>
+  </div>
+  <div class="ctrl" style="min-width:220px">
+    <label>Presets (recetas)</label>
+    <div style="display:flex; flex-wrap:wrap; gap:.4rem">
+      <button class="preset" data-preset="seno">Seno solo</button>
+      <button class="preset" data-preset="sierra">Diente de sierra suave</button>
+      <button class="preset" data-preset="medio">Pulsada al medio</button>
+      <button class="preset" data-preset="puente">Pulsada cerca del puente</button>
+    </div>
+  </div>
+</div>
+
+<!-- Mezclador: un slider de amplitud por parcial (se llena por JS) -->
+<div class="mezclador" id="mezclador"></div>
+
+<canvas id="lienzoOnda"></canvas>
+<p class="leyenda">Forma de onda resultante (dos períodos de f₁). Ejes: tiempo (ms) · presión (unidades arbitrarias).</p>
+<canvas id="lienzoEspectro"></canvas>
+<p class="leyenda">Espectro de la receta. Ejes: frecuencia de cada parcial (Hz) · amplitud relativa (0–1).</p>
+
+<div class="observar">
+  <h2>¿Qué observar?</h2>
+  <ol>
+    <li>Parta del preset "Seno solo" y suba los parciales de a uno:
+        ¿aparecen notas nuevas o cambia el <i>color</i> de la misma nota?
+        <b>Prediga antes</b> de mover cada slider.</li>
+    <li>Compare "Pulsada al medio" con "Pulsada cerca del puente": ¿cuál
+        coincide con lo que su grupo midió en el taller? ¿Qué tienen en
+        común (mírelo en el espectro) y en qué difieren?</li>
+    <li>Con la misma receta, compare el tono sostenido con "Pulsar":
+        ¿cuál suena más "a cuerda"? ¿Qué parte del timbre NO está escrita
+        en el espectro?</li>
+  </ol>
+</div>
+
+<script>
+'use strict';
+// ---------------------------------------------------------------------------
+// Demo s04 — síntesis aditiva. Un concepto: el espectro como receta del
+// timbre. Ocho osciladores sinusoidales en razones 1:2:...:8 con la
+// fundamental; cada slider fija la amplitud de un parcial. "Pulsar" aplica a
+// la misma receta una envolvente de pulsación (los parciales agudos decaen
+// antes, como en una cuerda real). El profesor puede ajustar abajo N_PARC,
+// los presets y las constantes de la envolvente.
+// ---------------------------------------------------------------------------
+const N_PARC = 8;          // número de parciales
+const TAU_1 = 1.2;         // s: decaimiento del parcial 1 al pulsar
+                           // (el parcial n decae con TAU_1/n: película realista)
+const ATAQUE_S = 0.005;    // s: ataque de la pulsación
+
+// Recetas predefinidas (amplitud relativa de cada parcial, 0..1).
+// "medio":  cuerda ideal pulsada en L/2  → solo impares, caída 1/n².
+// "puente": cuerda ideal pulsada en L/10 → sin(nπ/10)/n², normalizada.
+const PRESETS = {
+  seno:   [1, 0, 0, 0, 0, 0, 0, 0],
+  sierra: [1, 0.50, 0.33, 0.25, 0.20, 0.17, 0.14, 0.13],
+  medio:  [1, 0, 0.11, 0, 0.04, 0, 0.02, 0],
+  puente: [1, 0.48, 0.29, 0.19, 0.13, 0.09, 0.05, 0.03],
+};
+
+let ctxAudio = null;       // AudioContext: se crea solo tras un clic
+let master = null;         // ganancia general (tope 0,5)
+let oscs = [], gains = []; // un oscilador + una ganancia por parcial
+let sonando = false;       // ¿tono sostenido activo?
+
+const $ = id => document.getElementById(id);
+const sliderF1 = $('f1'), sliderGan = $('gan');
+
+// --- mezclador: crear los 8 sliders verticales ------------------------------
+const cols = [];
+for (let n = 1; n <= N_PARC; n++) {
+  const col = document.createElement('div');
+  col.className = 'parcial';
+  col.innerHTML = '<b>' + n + '</b>' +
+    '<input type="range" class="vert" min="0" max="100" value="' + (n === 1 ? 100 : 0) + '">' +
+    '<span class="valor">1,00</span><span class="hz"></span>';
+  $('mezclador').appendChild(col);
+  cols.push(col);
+}
+const slidersA = cols.map(c => c.querySelector('input'));
+
+function f1Actual()  { return Number(sliderF1.value); }
+function ganActual() { return sliderGan.value / 100; }          // 0 .. 0,5 máx.
+function amps()      { return slidersA.map(s => s.value / 100); }
+
+// Normalización anticlip: reparte la ganancia entre los parciales activos
+// sin renormalizar demasiado (así agregar un parcial SÍ se oye sumarse).
+function normActual() {
+  const suma = amps().reduce((a, b) => a + b, 0);
+  return ganActual() * 0.9 / Math.max(2.5, suma);
+}
+
+function refrescaEtiquetas() {
+  $('f1Val').textContent = f1Actual() + ' Hz';
+  $('ganVal').textContent = ganActual().toFixed(2).replace('.', ',');
+  const a = amps();
+  cols.forEach((c, i) => {
+    c.querySelector('.valor').textContent = a[i].toFixed(2).replace('.', ',');
+    c.querySelector('.hz').textContent = (i + 1) * f1Actual() + ' Hz';
+  });
+}
+
+// --- audio -------------------------------------------------------------------
+function preparaAudio() {
+  if (ctxAudio) return;
+  ctxAudio = new (window.AudioContext || window.webkitAudioContext)();
+  master = ctxAudio.createGain();
+  master.gain.value = 1;
+  master.connect(ctxAudio.destination);
+  for (let n = 1; n <= N_PARC; n++) {
+    const osc = ctxAudio.createOscillator();   // un seno por parcial
+    const g = ctxAudio.createGain();
+    osc.type = 'sine';
+    osc.frequency.value = n * f1Actual();
+    g.gain.value = 0;
+    osc.connect(g).connect(master);
+    osc.start();
+    oscs.push(osc); gains.push(g);
+  }
+}
+
+// Lleva las ganancias de los parciales a la receta actual (suave, sin clics)
+function aplicaReceta() {
+  if (!ctxAudio || !sonando) return;
+  const norm = normActual(), a = amps(), t = ctxAudio.currentTime;
+  gains.forEach((g, i) => g.gain.setTargetAtTime(a[i] * norm, t, 0.02));
+}
+function aplicaFrecuencias() {
+  if (!ctxAudio) return;
+  const f = f1Actual(), t = ctxAudio.currentTime;
+  oscs.forEach((o, i) => o.frequency.setTargetAtTime((i + 1) * f, t, 0.02));
+}
+
+async function iniciarSostenido() {
+  preparaAudio();
+  await ctxAudio.resume();
+  sonando = true;
+  aplicaFrecuencias();
+  aplicaReceta();
+}
+
+// "Pulsar": la MISMA receta con envolvente de pulsación — ataque casi
+// instantáneo y decaimiento exponencial, más rápido para los parciales
+// agudos (tau = TAU_1/n). Compara "receta" con "receta + película".
+async function pulsar() {
+  preparaAudio();
+  await ctxAudio.resume();
+  sonando = false;                      // la pulsación reemplaza al sostenido
+  aplicaFrecuencias();
+  const norm = normActual(), a = amps(), t = ctxAudio.currentTime;
+  gains.forEach((g, i) => {
+    g.gain.cancelScheduledValues(t);
+    g.gain.setValueAtTime(g.gain.value, t);   // parte del valor actual: sin clic
+    g.gain.linearRampToValueAtTime(a[i] * norm, t + ATAQUE_S);
+    g.gain.setTargetAtTime(0, t + ATAQUE_S, TAU_1 / (i + 1));
+  });
+}
+
+function detener() {
+  sonando = false;
+  if (!ctxAudio) return;
+  const t = ctxAudio.currentTime;
+  gains.forEach(g => { g.gain.cancelScheduledValues(t); g.gain.setTargetAtTime(0, t, 0.03); });
+}
+
+// --- visualización -----------------------------------------------------------
+// Ambos gráficos se dibujan desde los sliders (la receta ES la señal que
+// suena: suma determinista de senos), en un solo ciclo de animación.
+function preparaLienzo(cv, alto) {
+  const dpr = window.devicePixelRatio || 1;
+  const w = cv.clientWidth;
+  if (cv.width !== w * dpr) { cv.width = w * dpr; cv.height = alto * dpr; }
+  const g = cv.getContext('2d');
+  g.setTransform(dpr, 0, 0, dpr, 0, 0);
+  g.clearRect(0, 0, w, alto);
+  return [g, w];
+}
+
+const azul = () => getComputedStyle(document.body).getPropertyValue('--linea');
+
+function dibujaOnda() {
+  const h = 150, [g, w] = preparaLienzo($('lienzoOnda'), h);
+  const margen = 34, base = h / 2, a = amps(), f = f1Actual();
+  const suma = Math.max(1, a.reduce((x, y) => x + y, 0));  // escala vertical
+  const Tms = 1000 / f;                                    // período en ms
+
+  // ejes
+  g.strokeStyle = '#999'; g.lineWidth = 1;
+  g.beginPath(); g.moveTo(margen, base); g.lineTo(w - 8, base); g.stroke();
+  g.font = '11px Helvetica, Arial, sans-serif'; g.fillStyle = '#555';
+  g.fillText('presión (u.a.)', 4, 14);
+  for (let k = 0; k <= 4; k++) {                           // marcas cada T/2
+    const ms = k * Tms / 2;
+    const x = margen + (w - margen - 8) * k / 4;
+    g.beginPath(); g.moveTo(x, base - 3); g.lineTo(x, base + 3); g.stroke();
+    g.fillText(ms.toFixed(1).replace('.', ',') + ' ms', x - 14, h - 6);
+  }
+
+  // suma de senos: y(t) = Σ aₙ sen(2π n f₁ t), dos períodos de f₁
+  g.strokeStyle = azul(); g.lineWidth = 1.6;
+  g.beginPath();
+  const puntos = 600;
+  for (let i = 0; i <= puntos; i++) {
+    const t = i / puntos * 2 / f;                          // 0 .. 2T (s)
+    let y = 0;
+    for (let n = 1; n <= N_PARC; n++) y += a[n - 1] * Math.sin(2 * Math.PI * n * f * t);
+    const px = margen + (w - margen - 8) * i / puntos;
+    const py = base - y / suma * (base - 14);
+    i ? g.lineTo(px, py) : g.moveTo(px, py);
+  }
+  g.stroke();
+}
+
+function dibujaEspectro() {
+  const h = 150, [g, w] = preparaLienzo($('lienzoEspectro'), h);
+  const margen = 34, piso = h - 24, a = amps(), f = f1Actual();
+
+  // ejes
+  g.strokeStyle = '#999'; g.lineWidth = 1;
+  g.beginPath(); g.moveTo(margen, piso); g.lineTo(w - 8, piso); g.stroke();
+  g.font = '11px Helvetica, Arial, sans-serif'; g.fillStyle = '#555';
+  g.fillText('amplitud relativa', 4, 14);
+  [0, 0.5, 1].forEach(v => {
+    const y = piso - v * (piso - 22);
+    g.fillText(v.toFixed(1).replace('.', ','), margen - 26, y + 3);
+    g.beginPath(); g.moveTo(margen - 4, y); g.lineTo(margen, y); g.stroke();
+  });
+
+  // una barra por parcial, en su frecuencia n·f₁ (eje lineal en Hz)
+  const fMax = (N_PARC + 0.7) * f;
+  g.fillStyle = azul();
+  for (let n = 1; n <= N_PARC; n++) {
+    const x = margen + (w - margen - 12) * (n * f) / fMax;
+    const alto = a[n - 1] * (piso - 22);
+    g.fillRect(x - 4, piso - alto, 8, alto);
+    g.fillStyle = '#555';
+    g.fillText(String(n * f), x - 14, h - 8);              // rótulo en Hz
+    g.fillStyle = azul();
+  }
+}
+
+function animar() { dibujaOnda(); dibujaEspectro(); requestAnimationFrame(animar); }
+requestAnimationFrame(animar);
+
+// --- controles -----------------------------------------------------------------
+$('btnPlay').addEventListener('click', iniciarSostenido);
+$('btnPulsar').addEventListener('click', pulsar);
+$('btnStop').addEventListener('click', detener);
+sliderF1.addEventListener('input', () => { refrescaEtiquetas(); aplicaFrecuencias(); });
+sliderGan.addEventListener('input', () => { refrescaEtiquetas(); aplicaReceta(); });
+slidersA.forEach(s => s.addEventListener('input', () => { refrescaEtiquetas(); aplicaReceta(); }));
+document.querySelectorAll('button.preset').forEach(b =>
+  b.addEventListener('click', () => {
+    PRESETS[b.dataset.preset].forEach((v, i) => slidersA[i].value = Math.round(v * 100));
+    refrescaEtiquetas(); aplicaReceta();
+  }));
+refrescaEtiquetas();
+</script>
+</body>
+</html>
