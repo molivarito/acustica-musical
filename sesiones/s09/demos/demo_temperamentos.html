@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Demo — Temperamentos: afinar es elegir un compromiso (s09)</title>
+<style>
+  /* Estética editorial del curso: fondo claro, serif para texto, sans para controles */
+  :root {
+    --tinta: #1a1a1a;
+    --acento: #7a2e2e;     /* rojo ladrillo: nota superior / marcas */
+    --linea: #2e4a7a;      /* azul: nota base */
+    --verde: #3a6b35;      /* verde: tercera del acorde */
+    --papel: #faf8f4;
+    --panel: #f0ece4;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0; padding: 1.2rem;
+    background: var(--papel); color: var(--tinta);
+    font-family: Georgia, 'Times New Roman', serif;
+    max-width: 960px; margin-inline: auto;
+  }
+  h1 { font-size: 1.35rem; margin: 0 0 .2rem; }
+  .sesion { font-family: Helvetica, Arial, sans-serif; font-size: .8rem;
+            letter-spacing: .06em; text-transform: uppercase; color: var(--acento); }
+  .bajada { font-style: italic; margin: .3rem 0 1rem; }
+  .panel {
+    background: var(--panel); border-radius: 6px; padding: .9rem 1rem;
+    font-family: Helvetica, Arial, sans-serif; font-size: .9rem;
+    display: flex; flex-wrap: wrap; gap: .9rem 1.8rem; align-items: flex-start;
+  }
+  .ctrl { display: flex; flex-direction: column; gap: .3rem; min-width: 190px; flex: 1; }
+  .ctrl label { font-weight: bold; }
+  .valor { font-variant-numeric: tabular-nums; }
+  input[type=range] { width: 100%; accent-color: var(--acento); }
+  button {
+    font-family: Helvetica, Arial, sans-serif; font-size: .92rem;
+    padding: .45rem .9rem; border: 1px solid var(--tinta); border-radius: 4px;
+    background: white; cursor: pointer;
+  }
+  button.primario { background: var(--acento); color: white; border-color: var(--acento); }
+  button.activo { background: var(--linea); color: white; border-color: var(--linea); }
+  fieldset { border: none; padding: 0; margin: 0; display: flex; flex-wrap: wrap; gap: .5rem .9rem; }
+  canvas { width: 100%; height: 230px; display: block; background: white;
+           border: 1px solid #ccc; border-radius: 4px; margin-top: 1rem; }
+  #lectura {
+    font-family: Helvetica, Arial, sans-serif; font-size: .88rem; margin-top: .6rem;
+    background: white; border: 1px solid #ddd; border-radius: 4px; padding: .5rem .8rem;
+  }
+  #lectura table { border-collapse: collapse; width: 100%; }
+  #lectura td, #lectura th { padding: .15rem .5rem; text-align: left; border-bottom: 1px solid #eee; }
+  .observar { border-left: 4px solid var(--acento); padding: .2rem 0 .2rem 1rem; margin-top: 1.2rem; }
+  .observar h2 { font-size: 1rem; margin: .2rem 0; }
+  ol { margin: .4rem 0; padding-left: 1.2rem; }
+  /* Modo presentación: se ocultan todos los números y nombres delatores
+     (para usar la demo como estímulo de la escucha del día). */
+  .letra { display: none; font-weight: bold; }
+  body.oculto .numeros { visibility: hidden; }
+  body.oculto .nombre { display: none; }
+  body.oculto .letra { display: inline; }
+</style>
+</head>
+<body>
+<p class="sesion">Acústica Musical UC · Sesión 09</p>
+<h1>Temperamentos: afinar es elegir un compromiso</h1>
+<p class="bajada">Compare el mismo intervalo en tres afinaciones — y luego
+afine usted, de oído, usando los batidos como cronómetro.</p>
+
+<div class="panel">
+  <div class="ctrl" style="min-width:230px">
+    <label>Modo</label>
+    <fieldset id="modo">
+      <label><input type="radio" name="modo" value="comparar" checked> comparar afinaciones</label>
+      <label><input type="radio" name="modo" value="afinar"> afinar de oído</label>
+    </fieldset>
+    <label for="base">Nota base: <span class="valor numeros" id="baseVal">262 Hz</span></label>
+    <!-- posición 625 ≈ Do4 (261,6 Hz): ahí la quinta temperada late ~0,9 veces/s -->
+    <input type="range" id="base" min="0" max="1000" value="625">
+  </div>
+
+  <div class="ctrl">
+    <label>Intervalo</label>
+    <fieldset id="intervalo">
+      <button data-int="tercera">3.ª mayor</button>
+      <button data-int="quinta" class="activo">5.ª</button>
+      <button data-int="acorde">acorde mayor</button>
+    </fieldset>
+    <div id="grupoAfinacion">
+      <label>Afinación</label>
+      <fieldset id="afinacion">
+        <label><input type="radio" name="afinacion" value="justa" checked>
+          <span class="nombre">justa</span><span class="letra">A</span></label>
+        <label><input type="radio" name="afinacion" value="pitagorica">
+          <span class="nombre">pitagórica</span><span class="letra">B</span></label>
+        <label><input type="radio" name="afinacion" value="igual">
+          <span class="nombre">temperamento igual</span><span class="letra">C</span></label>
+      </fieldset>
+    </div>
+    <div id="grupoAjuste" style="display:none">
+      <label for="ajuste">Nota superior: <span class="valor" id="ajusteVal">700,0 cents</span></label>
+      <input type="range" id="ajuste" min="660" max="740" value="700" step="0.5">
+      <fieldset>
+        <button id="btnAzar">desafinar al azar</button>
+        <label><input type="checkbox" id="chkOcultarCents" checked> ocultar cents</label>
+      </fieldset>
+    </div>
+  </div>
+
+  <div class="ctrl" style="min-width:170px; flex:0">
+    <button id="btnPlay" class="primario">▶ Iniciar</button>
+    <button id="btnStop">■ Detener</button>
+    <label for="gan">Ganancia: <span class="valor" id="ganVal">0,30</span></label>
+    <input type="range" id="gan" min="0" max="50" value="30">
+    <label style="font-weight:normal"><input type="checkbox" id="chkOculto"> modo presentación<br>(ocultar números)</label>
+  </div>
+</div>
+
+<canvas id="lienzo"></canvas>
+<div id="lectura" class="numeros"></div>
+
+<div class="observar">
+  <h2>¿Qué observar?</h2>
+  <ol>
+    <li>La <b>quinta</b> en las tres afinaciones: dos suenan idénticas y una
+        "respira" lentamente. ¿Cuáles y por qué? Mire en el gráfico qué par de
+        parciales se está pisando — <b>prediga</b> el ritmo del batido antes
+        de leerlo.</li>
+    <li>La <b>3.ª mayor</b>: ¿cuál de las tres versiones bate más rápido?
+        ¿Cuál le suena "afinada" a usted — la lisa o la que ha oído toda la
+        vida en el piano?</li>
+    <li>En modo <b>afinar de oído</b> (cents ocultos): deje la quinta sin
+        batidos y recién entonces mire los cents. ¿Cayó en 702 (justa) o en
+        700 (temperada)? Ahora estréchela hasta contar ~1 batido por segundo
+        y vuelva a mirar.</li>
+  </ol>
+</div>
+
+<script>
+'use strict';
+// ---------------------------------------------------------------------------
+// Demo s09 — temperamentos y afinación por batidos. Un concepto: afinar es
+// elegir qué pares de parciales coinciden y cuáles baten.
+//   · Modo COMPARAR: el mismo intervalo/acorde en justa, pitagórica e igual.
+//   · Modo AFINAR: la nota superior se ajusta en cents (a ciegas si se
+//     ocultan) para anular o sembrar batidos, como un afinador de pianos.
+// El profesor puede cambiar abajo N_ARM (armónicos por nota), F_MIN/F_MAX
+// (rango de la nota base) y los rangos del deslizador de afinación.
+// ---------------------------------------------------------------------------
+const N_ARM = 6;                 // armónicos por nota (tonos complejos)
+const F_MIN = 110, F_MAX = 440;  // rango de la nota base, Hz (slider log)
+
+// Cents de cada intervalo según la afinación (valores exactos calculados
+// desde las razones: justa 5/4 y 3/2; pitagórica 81/64 y 3/2; igual 2^(n/12)).
+const CENTS = f => 1200 * Math.log2(f);
+const AFINACIONES = {
+  justa:      { tercera: CENTS(5 / 4),   quinta: CENTS(3 / 2), rot: { tercera: '5:4',   quinta: '3:2' } },
+  pitagorica: { tercera: CENTS(81 / 64), quinta: CENTS(3 / 2), rot: { tercera: '81:64', quinta: '3:2' } },
+  igual:      { tercera: 400,            quinta: 700,          rot: { tercera: '2^(4/12)', quinta: '2^(7/12)' } }
+};
+// Rango del deslizador del modo afinar, por intervalo (±40 cents del igual)
+const RANGO_AJUSTE = { tercera: [360, 440], quinta: [660, 740] };
+
+let ctxAudio = null, master = null;
+let bancos = [];                 // 3 bancos de osciladores (base, voz2, voz3)
+let sonando = false;
+
+const $ = id => document.getElementById(id);
+const fmt = (x, d = 1) => x.toFixed(d).replace('.', ',');
+
+// --- estado de la interfaz --------------------------------------------------
+let intervalo = 'quinta';        // 'tercera' | 'quinta' | 'acorde'
+function modoActual()  { return document.querySelector('input[name=modo]:checked').value; }
+function afinActual()  { return document.querySelector('input[name=afinacion]:checked').value; }
+function baseActual()  { const t = $('base').value / 1000; return F_MIN * Math.pow(F_MAX / F_MIN, t); }
+function ganActual()   { return $('gan').value / 100; }   // tope 0,5: protección auditiva
+
+// Notas que suenan ahora: [{f, color, nombre, cents}] — la base siempre primero
+function notasActuales() {
+  const f0 = baseActual();
+  const notas = [{ f: f0, color: 'var(--linea)', nombre: 'base', cents: 0 }];
+  if (modoActual() === 'afinar') {
+    const c = parseFloat($('ajuste').value);
+    notas.push({ f: f0 * Math.pow(2, c / 1200), color: 'var(--acento)',
+                 nombre: (intervalo === 'tercera' ? '3.ª mayor' : '5.ª'), cents: c });
+  } else {
+    const af = AFINACIONES[afinActual()];
+    if (intervalo === 'tercera' || intervalo === 'acorde')
+      notas.push({ f: f0 * Math.pow(2, af.tercera / 1200), color: 'var(--verde)',
+                   nombre: '3.ª mayor', cents: af.tercera });
+    if (intervalo === 'quinta' || intervalo === 'acorde')
+      notas.push({ f: f0 * Math.pow(2, af.quinta / 1200), color: 'var(--acento)',
+                   nombre: '5.ª', cents: af.quinta });
+  }
+  return notas;
+}
+
+// --- pares de parciales en colisión ------------------------------------------
+// Para cada par de notas busca el par de armónicos (m·fA vs n·fB) más cercano.
+// Con Δf ≈ 0 el par coincide (liso); Δf chico = batido contable; Δf grande
+// dentro de una banda crítica = aspereza (el vocabulario viene de s07–s08).
+function paresEnColision(notas) {
+  const pares = [];
+  for (let a = 0; a < notas.length; a++) for (let b = a + 1; b < notas.length; b++) {
+    let mejor = null;
+    for (let m = 1; m <= N_ARM; m++) for (let n = 1; n <= N_ARM; n++) {
+      const df = Math.abs(m * notas[a].f - n * notas[b].f);
+      if (!mejor || df < mejor.df)
+        mejor = { df, fmedia: (m * notas[a].f + n * notas[b].f) / 2, m, n, a, b };
+    }
+    if (mejor && mejor.df < 30) pares.push(mejor);   // solo pares que se pisan
+  }
+  return pares;
+}
+function describePar(p, notas) {
+  const quienes = notas[p.a].nombre + '×' + p.m + ' vs ' + notas[p.b].nombre + '×' + p.n;
+  if (p.df < 0.05) return quienes + ': coinciden — liso, sin batidos';
+  if (p.df <= 12)  return quienes + ': Δf = ' + fmt(p.df) + ' Hz → bate ~' + fmt(p.df) + ' veces/s';
+  return quienes + ': Δf = ' + fmt(p.df) + ' Hz → aspereza (demasiado rápido para contar)';
+}
+
+// --- audio -------------------------------------------------------------------
+// 3 bancos de N_ARM osciladores; los parámetros se actualizan al vuelo con
+// rampas cortas para evitar clics. AudioContext solo tras interacción.
+function creaAudio() {
+  ctxAudio = new (window.AudioContext || window.webkitAudioContext)();
+  master = ctxAudio.createGain();
+  master.gain.value = ganActual();
+  master.connect(ctxAudio.destination);
+  for (let v = 0; v < 3; v++) {
+    const gVoz = ctxAudio.createGain();
+    gVoz.gain.value = 0;
+    gVoz.connect(master);
+    const oscs = [];
+    for (let n = 1; n <= N_ARM; n++) {
+      const o = ctxAudio.createOscillator();
+      const g = ctxAudio.createGain();
+      g.gain.value = 0.22 / n;          // amplitudes 1/n: timbre tipo diente de sierra suave
+      o.connect(g).connect(gVoz);
+      o.start();
+      oscs.push(o);
+    }
+    bancos.push({ gVoz, oscs });
+  }
+}
+function actualizaAudio() {
+  if (!ctxAudio) return;
+  const t = ctxAudio.currentTime;
+  const notas = notasActuales();
+  bancos.forEach((banco, v) => {
+    const activa = sonando && v < notas.length;
+    banco.gVoz.gain.setTargetAtTime(activa ? 1 / notas.length : 0, t, 0.02);
+    if (v < notas.length)
+      banco.oscs.forEach((o, i) => o.frequency.setTargetAtTime(notas[v].f * (i + 1), t, 0.01));
+  });
+}
+async function iniciar() {
+  if (!ctxAudio) creaAudio();
+  await ctxAudio.resume();
+  sonando = true;
+  actualizaAudio();
+}
+function detener() {
+  sonando = false;
+  if (ctxAudio) {
+    bancos.forEach(b => b.gVoz.gain.setTargetAtTime(0, ctxAudio.currentTime, 0.02));
+    setTimeout(() => { if (!sonando && ctxAudio) ctxAudio.suspend(); }, 120);
+  }
+}
+
+// --- lectura numérica ---------------------------------------------------------
+function refrescaLectura() {
+  const notas = notasActuales();
+  const pares = paresEnColision(notas);
+  const ocultoCents = modoActual() === 'afinar' && $('chkOcultarCents').checked;
+  let html = '<table><tr><th>Nota</th><th>f (Hz)</th><th>Razón</th><th>Cents desde la base</th></tr>';
+  const af = AFINACIONES[afinActual()];
+  notas.forEach((nt, i) => {
+    let razon = '1:1';
+    if (i > 0) razon = (modoActual() === 'afinar') ? '—'
+      : af.rot[nt.nombre === '3.ª mayor' ? 'tercera' : 'quinta'];
+    html += '<tr><td style="color:' + nt.color + '">▮ ' + nt.nombre + '</td><td>'
+      + fmt(nt.f) + '</td><td>' + razon + '</td><td>'
+      + (i === 0 ? '0' : (ocultoCents ? '···' : fmt(nt.cents))) + '</td></tr>';
+  });
+  html += '</table>';
+  if (pares.length) {
+    html += '<p style="margin:.4rem 0 0"><b>Parciales que se pisan:</b> '
+      + pares.map(p => describePar(p, notas)).join(' · ') + '</p>';
+  } else {
+    html += '<p style="margin:.4rem 0 0"><b>Ningún par de parciales se pisa</b> (con '
+      + N_ARM + ' armónicos): el intervalo suena liso.</p>';
+  }
+  if (modoActual() === 'afinar' && !ocultoCents) {
+    const c = parseFloat($('ajuste').value);
+    const justa = intervalo === 'tercera' ? CENTS(5 / 4) : CENTS(3 / 2);
+    const igual = intervalo === 'tercera' ? 400 : 700;
+    html += '<p style="margin:.3rem 0 0">Desvío: <b>' + fmt(c - justa)
+      + ' cents</b> respecto de la justa (' + fmt(justa) + ') · <b>'
+      + fmt(c - igual) + ' cents</b> respecto del temperamento igual (' + igual + ').</p>';
+  }
+  $('lectura').innerHTML = html;
+}
+
+// --- visualización: peineta de parciales -------------------------------------
+const lienzo = $('lienzo');
+function dibuja() {
+  const dpr = window.devicePixelRatio || 1;
+  const w = lienzo.clientWidth, h = 230;
+  if (lienzo.width !== w * dpr) { lienzo.width = w * dpr; lienzo.height = h * dpr; }
+  const g = lienzo.getContext('2d');
+  g.setTransform(dpr, 0, 0, dpr, 0, 0);
+  g.clearRect(0, 0, w, h);
+
+  const notas = notasActuales();
+  const pares = paresEnColision(notas);
+  const oculto = document.body.classList.contains('oculto');
+  const margen = 40, piso = h - 28;
+  const fMax = Math.max(...notas.map(n => n.f)) * N_ARM * 1.06;
+  const x = f => margen + (w - margen - 10) * f / fMax;
+
+  // eje de frecuencia con rótulo y unidades
+  g.strokeStyle = '#999'; g.lineWidth = 1;
+  g.beginPath(); g.moveTo(margen, piso); g.lineTo(w - 8, piso); g.stroke();
+  g.font = '11px Helvetica, Arial, sans-serif'; g.fillStyle = '#555';
+  g.fillText('amplitud', 4, 14);
+  const paso = fMax > 1800 ? 500 : 250;
+  for (let f = 0; f <= fMax; f += paso) {
+    g.beginPath(); g.moveTo(x(f), piso - 3); g.lineTo(x(f), piso + 3); g.stroke();
+    if (!oculto) g.fillText(f + ' Hz', x(f) - 14, h - 8);
+  }
+  if (oculto) g.fillText('frecuencia →', w - 110, h - 8);
+
+  // parciales de cada nota (altura ∝ 1/n), con leve desfase horizontal por voz
+  // (Canvas no entiende var(--x): se resuelve el color desde el CSS)
+  notas.forEach((nt, v) => {
+    g.strokeStyle = nt.color.startsWith('var(')
+      ? getComputedStyle(document.documentElement).getPropertyValue(nt.color.slice(4, -1)).trim()
+      : nt.color;
+    g.lineWidth = 2;
+    for (let n = 1; n <= N_ARM; n++) {
+      const alto = (piso - 26) * (1 / n) * 0.95;
+      const px = x(nt.f * n) + (v - (notas.length - 1) / 2) * 1.6;
+      g.beginPath(); g.moveTo(px, piso); g.lineTo(px, piso - alto); g.stroke();
+    }
+  });
+
+  // marcas de los pares en colisión + pulso al ritmo del batido
+  const t = ctxAudio ? ctxAudio.currentTime : 0;
+  pares.forEach(p => {
+    const px = x(p.fmedia);
+    g.strokeStyle = '#444'; g.lineWidth = 1;
+    g.beginPath(); g.moveTo(px - 12, 26); g.lineTo(px - 12, 18);
+    g.lineTo(px + 12, 18); g.lineTo(px + 12, 26); g.stroke();
+    if (!oculto) {
+      g.fillStyle = '#444';
+      const txt = p.df < 0.05 ? 'coinciden' : 'Δf = ' + fmt(p.df) + ' Hz';
+      g.fillText(txt, px - 24, 12);
+    }
+    if (sonando && p.df > 0.05 && p.df <= 12) {   // pulso visible solo si es contable
+      const amp = 0.5 + 0.5 * Math.sin(2 * Math.PI * p.df * t);
+      g.fillStyle = 'rgba(122,46,46,' + (0.25 + 0.6 * amp) + ')';
+      g.beginPath(); g.arc(px, 34, 5 + 3 * amp, 0, 2 * Math.PI); g.fill();
+    }
+  });
+  requestAnimationFrame(dibuja);
+}
+requestAnimationFrame(dibuja);
+
+// --- controles -----------------------------------------------------------------
+function refrescaTodo() {
+  $('baseVal').textContent = fmt(baseActual(), 0) + ' Hz';
+  $('ganVal').textContent = fmt(ganActual(), 2);
+  const enAfinar = modoActual() === 'afinar';
+  $('grupoAfinacion').style.display = enAfinar ? 'none' : '';
+  $('grupoAjuste').style.display = enAfinar ? '' : 'none';
+  // el acorde solo existe en modo comparar
+  document.querySelector('[data-int=acorde]').disabled = enAfinar;
+  if (enAfinar && intervalo === 'acorde') seleccionaIntervalo('quinta');
+  const c = parseFloat($('ajuste').value);
+  $('ajusteVal').textContent = $('chkOcultarCents').checked ? '···· cents (ocultos)' : fmt(c) + ' cents';
+  refrescaLectura();
+  actualizaAudio();
+}
+function seleccionaIntervalo(nuevo) {
+  intervalo = nuevo;
+  document.querySelectorAll('#intervalo button').forEach(b =>
+    b.classList.toggle('activo', b.dataset.int === nuevo));
+  const [lo, hi] = RANGO_AJUSTE[nuevo === 'acorde' ? 'quinta' : nuevo];
+  $('ajuste').min = lo; $('ajuste').max = hi;
+  // al cambiar de intervalo, el ajuste parte en el temperamento igual
+  $('ajuste').value = (lo + hi) / 2;
+  refrescaTodo();
+}
+document.querySelectorAll('#intervalo button').forEach(b =>
+  b.addEventListener('click', () => seleccionaIntervalo(b.dataset.int)));
+document.querySelectorAll('input[name=modo]').forEach(r => r.addEventListener('change', refrescaTodo));
+document.querySelectorAll('input[name=afinacion]').forEach(r => r.addEventListener('change', refrescaTodo));
+$('base').addEventListener('input', refrescaTodo);
+$('ajuste').addEventListener('input', refrescaTodo);
+$('chkOcultarCents').addEventListener('change', refrescaTodo);
+$('btnAzar').addEventListener('click', () => {
+  // desafinación al azar: parte del ejercicio a ciegas del taller
+  const lo = +$('ajuste').min, hi = +$('ajuste').max;
+  $('ajuste').value = (lo + 4 + Math.random() * (hi - lo - 8)).toFixed(1);
+  refrescaTodo();
+});
+$('gan').addEventListener('input', () => {
+  $('ganVal').textContent = fmt(ganActual(), 2);
+  if (master) master.gain.setTargetAtTime(ganActual(), ctxAudio.currentTime, 0.02);
+});
+$('chkOculto').addEventListener('change', e => {
+  document.body.classList.toggle('oculto', e.target.checked);
+});
+$('btnPlay').addEventListener('click', iniciar);
+$('btnStop').addEventListener('click', detener);
+refrescaTodo();
+</script>
+</body>
+</html>

@@ -21,7 +21,7 @@ actividades > demo.
 | s06 | Sonoridad y decibel | lista | lista | lista | lista | lista |
 | s07 | Prueba 1 + batidos | lista | lista | lista | lista | lista |
 | s08 | Banda crítica y consonancia | lista | lista | lista | lista | lista |
-| s09 | Escalas y temperamentos | pendiente | pendiente | pendiente | pendiente | pendiente |
+| s09 | Escalas y temperamentos | lista | lista | lista | lista | lista |
 | s10 | Resonancia e impedancia | pendiente | pendiente | pendiente | pendiente | pendiente |
 | s11 | Cuerdas frotadas y cuerpo | pendiente | pendiente | pendiente | pendiente | pendiente |
 | s12 | Vientos y lutería | pendiente | pendiente | pendiente | pendiente | pendiente |
@@ -114,3 +114,5 @@ diseno/02 §6.)
 - **s08**: lámina de errores frecuentes de prueba 1; imprimir hojas
   "mapa del choque" y guías de radiografía espectral; planilla OA3
   pasada 2. Taller psicoacústico registra SIN nota (decisión de carga).
+- **s09**: imprimir guías (afinación por batidos, escala del objeto);
+  guitarra levemente desafinada para demostración; hito 2 anunciado.
