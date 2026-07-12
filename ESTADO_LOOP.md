@@ -17,7 +17,7 @@ actividades > demo.
 | s02 | Ondas y espectrograma | lista | lista | lista | lista | lista |
 | s03 | Modos de vibración | lista | lista | lista | lista | lista |
 | s04 | La receta del timbre | lista | lista | lista | lista | lista |
-| s05 | Altura percibida | pendiente | pendiente | pendiente | pendiente | pendiente |
+| s05 | Altura percibida | lista | lista | lista | lista | lista |
 | s06 | Sonoridad y decibel | pendiente | pendiente | pendiente | pendiente | pendiente |
 | s07 | Prueba 1 + batidos | pendiente | pendiente | pendiente | pendiente | pendiente |
 | s08 | Banda crítica y consonancia | pendiente | pendiente | pendiente | pendiente | pendiente |
@@ -89,3 +89,7 @@ diseno/02 §6.)
   invertir nota de guitarra; guitarra de respaldo, huinchas, cinta de
   papel; probar espectrograma con guitarra; publicar demo tras la
   sesión.
+- **s05**: demo opcional `demo_octava.html` NO producida (se reúsa la de
+  s04); fragmento de bajo para parlante chico + dos octavas de piano
+  (banco de estímulos); imprimir hojas de registro y lista de recepción
+  hito 1; probar demo en audífonos.

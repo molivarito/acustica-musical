@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Demo — Fundamental ausente: la altura es un patrón (s05)</title>
+<style>
+  /* Estética editorial: fondo claro, serif para texto, sans para controles */
+  :root {
+    --tinta: #1a1a1a;
+    --acento: #7a2e2e;     /* rojo ladrillo sobrio */
+    --linea: #2e4a7a;      /* azul para la forma de onda */
+    --virtual: #1f7a4d;    /* verde para la altura virtual (fundamental reconstruida) */
+    --papel: #faf8f4;
+    --panel: #f0ece4;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0; padding: 1.2rem;
+    background: var(--papel); color: var(--tinta);
+    font-family: Georgia, 'Times New Roman', serif;
+    max-width: 900px; margin-inline: auto;
+  }
+  h1 { font-size: 1.35rem; margin: 0 0 .2rem; }
+  .sesion { font-family: Helvetica, Arial, sans-serif; font-size: .8rem;
+            letter-spacing: .06em; text-transform: uppercase; color: var(--acento); }
+  .bajada { font-style: italic; margin: .3rem 0 1rem; }
+  .panel {
+    background: var(--panel); border-radius: 6px; padding: .9rem 1rem;
+    font-family: Helvetica, Arial, sans-serif; font-size: .9rem;
+    display: flex; flex-wrap: wrap; gap: 1rem 2rem; align-items: flex-start;
+  }
+  .ctrl { display: flex; flex-direction: column; gap: .3rem; min-width: 210px; flex: 1; }
+  .ctrl label { font-weight: bold; }
+  .valor { font-variant-numeric: tabular-nums; }
+  input[type=range] { width: 100%; accent-color: var(--acento); }
+  button {
+    font-family: Helvetica, Arial, sans-serif; font-size: .95rem;
+    padding: .5rem 1rem; border: 1px solid var(--tinta); border-radius: 4px;
+    background: white; cursor: pointer;
+  }
+  button.primario { background: var(--acento); color: white; border-color: var(--acento); }
+  button:disabled { opacity: .45; cursor: default; }
+  .parciales { display: flex; flex-wrap: wrap; gap: .35rem; }
+  .parciales button {
+    min-width: 3.4rem; padding: .35rem .3rem; font-size: .82rem; line-height: 1.15;
+    border-radius: 4px;
+  }
+  .parciales button.on  { background: var(--linea); color: white; border-color: var(--linea); }
+  .parciales button.off { background: white; color: #999; text-decoration: line-through; }
+  .parciales button small { display: block; font-size: .68rem; opacity: .85; }
+  canvas { width: 100%; display: block; background: white;
+           border: 1px solid #ccc; border-radius: 4px; margin-top: 1rem; }
+  .prediccion {
+    background: #fff; border: 1px dashed var(--acento); border-radius: 6px;
+    padding: .6rem .9rem; margin-top: 1rem;
+    font-family: Helvetica, Arial, sans-serif; font-size: .88rem;
+  }
+  .prediccion b { color: var(--acento); }
+  .prediccion .op { margin: .4rem .4rem 0 0; }
+  #predMsg { font-style: italic; margin-top: .4rem; min-height: 1.1em; }
+  .observar { border-left: 4px solid var(--acento); padding: .2rem 0 .2rem 1rem; margin-top: 1.2rem; }
+  .observar h2 { font-size: 1rem; margin: .2rem 0; }
+  ol { margin: .4rem 0; padding-left: 1.2rem; }
+  .leyenda { font-family: Helvetica, Arial, sans-serif; font-size: .78rem; color: #555;
+             margin-top: .4rem; display: flex; gap: 1.2rem; flex-wrap: wrap; }
+  .leyenda span::before { content: "■ "; }
+  .lg-onda::before   { color: var(--linea); }
+  .lg-espec::before  { color: var(--acento); }
+  .lg-virtual::before{ color: var(--virtual); }
+</style>
+</head>
+<body>
+<p class="sesion">Acústica Musical UC · Sesión 05</p>
+<h1>Fundamental ausente: la altura es un patrón</h1>
+<p class="bajada">Apague la fundamental (parcial 1) o vaya quitando los
+parciales graves con el filtro pasa-altos: ¿desaparece la nota, baja una
+octava… o el oído la reconstruye igual?</p>
+
+<div class="panel">
+  <div class="ctrl" style="min-width:240px">
+    <label for="f1">Fundamental f<sub>1</sub>: <span class="valor" id="f1Val">150 Hz</span></label>
+    <input type="range" id="f1" min="80" max="300" value="150">
+    <label style="margin-top:.4rem">Parciales (armónicos n·f<sub>1</sub>) — encienda/apague</label>
+    <div class="parciales" id="parciales"><!-- botones generados por JS --></div>
+  </div>
+  <div class="ctrl" style="min-width:220px">
+    <label for="corte">Filtro pasa-altos progresivo: <span class="valor" id="corteVal">deja pasar todo</span></label>
+    <input type="range" id="corte" min="0" max="8" value="0">
+    <span style="font-family:Helvetica,Arial,sans-serif;font-size:.8rem;color:#555">
+      Silencia los parciales graves de abajo hacia arriba (1, luego 2, 3…).</span>
+    <label for="gan" style="margin-top:.5rem">Ganancia: <span class="valor" id="ganVal">0,30</span></label>
+    <input type="range" id="gan" min="0" max="45" value="30">
+  </div>
+  <div class="ctrl" style="min-width:150px; flex:0">
+    <button id="btnPlay" class="primario">▶ Iniciar</button>
+    <button id="btnStop">■ Detener</button>
+    <button id="btnReset">Restablecer</button>
+  </div>
+</div>
+
+<div class="prediccion">
+  <b>Prediga antes de escuchar:</b> si apago la fundamental (parcial 1), la
+  altura de la nota…
+  <div>
+    <button class="op" data-pred="octava">baja una octava</button>
+    <button class="op" data-pred="desaparece">desaparece</button>
+    <button class="op" data-pred="igual">sigue igual</button>
+  </div>
+  <div id="predMsg">Elija su predicción, luego apague el parcial 1 y compruebe con el oído.</div>
+</div>
+
+<canvas id="ondaCanvas" height="150"></canvas>
+<div class="leyenda"><span class="lg-onda">forma de onda (el período no cambia = la altura no cambia)</span></div>
+
+<canvas id="especCanvas" height="200"></canvas>
+<div class="leyenda">
+  <span class="lg-espec">parciales presentes (amplitud vs. Hz)</span>
+  <span class="lg-virtual">altura percibida ≈ f<sub>1</sub> (aunque el parcial 1 esté apagado)</span>
+</div>
+
+<div class="observar">
+  <h2>¿Qué observar?</h2>
+  <ol>
+    <li><b>Prediga primero.</b> Con todos los parciales sonando, cante la
+        nota. Ahora apague el parcial 1 (la fundamental): ¿cambió la
+        <i>altura</i> que cantaría, o solo el <i>timbre</i>? Mire la forma
+        de onda: ¿cambió su período?</li>
+    <li>Suba el <b>filtro pasa-altos progresivo</b> quitando parciales
+        graves de a uno. ¿Hasta cuántos puede quitar antes de que la altura
+        por fin se rompa o salte? Ese umbral es suyo: compárelo con el de
+        su grupo.</li>
+    <li>La línea verde marca el f<sub>1</sub> del patrón: sigue ahí aunque
+        ese parcial no exista en el espectro. ¿Por qué el parlante chico
+        del celular "da" el bajo que no puede producir?</li>
+  </ol>
+</div>
+
+<script>
+'use strict';
+// ---------------------------------------------------------------------------
+// Demo s05 — Fundamental ausente. Un solo concepto: la altura de un tono
+// compuesto es el patrón periódico (el f1 del que todos son armónicos), no
+// una frecuencia que deba estar físicamente presente.
+//
+// Cada parcial n es un oscilador a n*f1 con su propia ganancia. Un parcial
+// "suena" si (a) su botón está encendido Y (b) su índice n supera el corte
+// del filtro pasa-altos. La forma de onda y el espectro se dibujan a partir
+// de las amplitudes efectivas (no del AnalyserNode) para que el período y
+// las líneas coincidan exactamente con lo que se oye y sean legibles en el
+// proyector. El profesor puede ajustar abajo el número de parciales y las
+// amplitudes.
+// ---------------------------------------------------------------------------
+const N_PARCIALES = 8;                 // cantidad de armónicos
+// Amplitud relativa del parcial n con caída 1/n, NORMALIZADA para que la
+// suma de todos los parciales sea 1. Así el pico de la onda compuesta nunca
+// supera la ganancia maestra: evitamos el recorte (clipping), que
+// distorsionaría y RE-generaría el grave arruinando justo el efecto a
+// demostrar (la fundamental debe estar de verdad ausente).
+const H8 = (() => { let s = 0; for (let k = 1; k <= N_PARCIALES; k++) s += 1 / k; return s; })();
+const AMP = n => (1 / n) / H8;
+const GAN_MAX = 0.45;                  // tope de ganancia maestra (protección auditiva)
+
+let ctxAudio = null, maestra = null;
+let osciladores = [];                  // {osc, gain} por parcial
+let sonando = false;
+
+const $ = id => document.getElementById(id);
+const sliderF1 = $('f1'), sliderCorte = $('corte'), sliderGan = $('gan');
+
+// Estado de encendido individual de cada parcial (índice 1..N)
+const encendido = new Array(N_PARCIALES + 1).fill(true);
+
+function f1Actual()    { return +sliderF1.value; }
+function corteActual() { return +sliderCorte.value; }   // silencia parciales 1..corte
+function ganActual()   { return Math.min(sliderGan.value / 100, GAN_MAX); } // 0..0,45
+
+// Un parcial es efectivamente audible si está encendido Y por encima del corte.
+function activo(n) { return encendido[n] && n > corteActual(); }
+
+// --- construcción de los botones de parciales -------------------------------
+const contParciales = $('parciales');
+for (let n = 1; n <= N_PARCIALES; n++) {
+  const b = document.createElement('button');
+  b.className = 'on';
+  b.dataset.n = n;
+  b.innerHTML = n + '<small>' + (n === 1 ? 'f₁' : n + '·f₁') + '</small>';
+  b.addEventListener('click', () => {
+    encendido[n] = !encendido[n];
+    refrescaBotones();
+    aplicaGanancias();
+  });
+  contParciales.appendChild(b);
+}
+
+function refrescaBotones() {
+  document.querySelectorAll('.parciales button').forEach(b => {
+    const n = +b.dataset.n;
+    const silenciadoPorCorte = n <= corteActual();
+    b.className = (encendido[n] && !silenciadoPorCorte) ? 'on' : 'off';
+    b.title = silenciadoPorCorte ? 'silenciado por el filtro pasa-altos' :
+              (encendido[n] ? 'sonando' : 'apagado');
+  });
+}
+
+// --- etiquetas --------------------------------------------------------------
+function refrescaEtiquetas() {
+  $('f1Val').textContent = f1Actual() + ' Hz';
+  const c = corteActual();
+  $('corteVal').textContent = c === 0 ? 'deja pasar todo'
+      : 'silencia hasta ' + c + '·f₁ (' + (c * f1Actual()) + ' Hz)';
+  $('ganVal').textContent = ganActual().toFixed(2).replace('.', ',');
+}
+
+// --- audio ------------------------------------------------------------------
+function aplicaGanancias() {
+  if (!ctxAudio) return;
+  const t = ctxAudio.currentTime;
+  for (let n = 1; n <= N_PARCIALES; n++) {
+    const g = osciladores[n - 1].gain.gain;
+    const objetivo = activo(n) ? AMP(n) : 0;
+    // rampa breve para evitar clics al conmutar
+    g.cancelScheduledValues(t);
+    g.setTargetAtTime(objetivo, t, 0.012);
+  }
+}
+function aplicaFrecuencias() {
+  if (!ctxAudio) return;
+  const f1 = f1Actual(), t = ctxAudio.currentTime;
+  for (let n = 1; n <= N_PARCIALES; n++)
+    osciladores[n - 1].osc.frequency.setTargetAtTime(n * f1, t, 0.01);
+}
+
+async function iniciar() {
+  if (!ctxAudio) {
+    ctxAudio = new (window.AudioContext || window.webkitAudioContext)();
+    maestra = ctxAudio.createGain();
+    maestra.connect(ctxAudio.destination);
+    for (let n = 1; n <= N_PARCIALES; n++) {
+      const osc = ctxAudio.createOscillator();
+      const gain = ctxAudio.createGain();
+      osc.type = 'sine';
+      osc.frequency.value = n * f1Actual();
+      gain.gain.value = 0;
+      osc.connect(gain).connect(maestra);
+      osc.start();
+      osciladores[n - 1] = { osc, gain };
+    }
+  }
+  await ctxAudio.resume();
+  maestra.gain.setTargetAtTime(ganActual(), ctxAudio.currentTime, 0.02);
+  sonando = true;
+  aplicaGanancias();
+  $('btnPlay').disabled = true; $('btnStop').disabled = false;
+}
+function detener() {
+  sonando = false;
+  if (maestra) maestra.gain.setTargetAtTime(0, ctxAudio.currentTime, 0.02);
+  $('btnPlay').disabled = false; $('btnStop').disabled = true;
+}
+
+// --- visualización ----------------------------------------------------------
+// Forma de onda: suma de los parciales activos sobre ~2 períodos de f1.
+function dibujaOnda() {
+  const cv = $('ondaCanvas'), dpr = window.devicePixelRatio || 1;
+  const w = cv.clientWidth, h = 150;
+  if (cv.width !== w * dpr) { cv.width = w * dpr; cv.height = h * dpr; }
+  const g = cv.getContext('2d'); g.setTransform(dpr, 0, 0, dpr, 0, 0);
+  g.clearRect(0, 0, w, h);
+  const margen = 40, base = h / 2, x0 = margen, x1 = w - 10;
+
+  // eje horizontal (tiempo) y etiqueta
+  g.strokeStyle = '#bbb'; g.lineWidth = 1;
+  g.beginPath(); g.moveTo(x0, base); g.lineTo(x1, base); g.stroke();
+  g.font = '11px Helvetica, Arial, sans-serif'; g.fillStyle = '#555';
+  g.fillText('amplitud', 4, 14);
+  g.fillText('tiempo (2 períodos de f₁ = 2/f₁)', x1 - 170, h - 6);
+
+  // amplitud máxima teórica para normalizar la altura del trazo
+  let ampMax = 0; for (let n = 1; n <= N_PARCIALES; n++) if (activo(n)) ampMax += AMP(n);
+  if (ampMax === 0) ampMax = 1;
+
+  const f1 = f1Actual(), Tven = 2 / f1;   // ventana = 2 períodos de f1
+  g.strokeStyle = getComputedStyle(document.body).getPropertyValue('--linea');
+  g.lineWidth = 1.6; g.beginPath();
+  for (let px = 0; px <= (x1 - x0); px++) {
+    const t = (px / (x1 - x0)) * Tven;
+    let y = 0;
+    for (let n = 1; n <= N_PARCIALES; n++)
+      if (activo(n)) y += AMP(n) * Math.sin(2 * Math.PI * n * f1 * t);
+    const yy = base - (y / ampMax) * (base - 12);
+    px ? g.lineTo(x0 + px, yy) : g.moveTo(x0 + px, yy);
+  }
+  g.stroke();
+
+  // marca del período 1/f1 (para leer que NO cambia al apagar f1)
+  const xP = x0 + (x1 - x0) * (1 / f1) / Tven;
+  g.strokeStyle = getComputedStyle(document.body).getPropertyValue('--virtual');
+  g.setLineDash([4, 3]); g.lineWidth = 1;
+  g.beginPath(); g.moveTo(xP, 12); g.lineTo(xP, h - 18); g.stroke();
+  g.setLineDash([]);
+  g.fillStyle = getComputedStyle(document.body).getPropertyValue('--virtual');
+  g.fillText('1 período = 1/f₁', xP + 4, 24);
+}
+
+// Espectro: barras en n*f1 con altura = amplitud efectiva; eje en Hz.
+function dibujaEspectro() {
+  const cv = $('especCanvas'), dpr = window.devicePixelRatio || 1;
+  const w = cv.clientWidth, h = 200;
+  if (cv.width !== w * dpr) { cv.width = w * dpr; cv.height = h * dpr; }
+  const g = cv.getContext('2d'); g.setTransform(dpr, 0, 0, dpr, 0, 0);
+  g.clearRect(0, 0, w, h);
+  const margen = 40, base = h - 26, x0 = margen, x1 = w - 12;
+  const f1 = f1Actual();
+  const fMax = (N_PARCIALES + 0.6) * 300;   // eje fijo hasta ~2600 Hz (f1 máx=300)
+  const xDe = f => x0 + (x1 - x0) * f / fMax;
+
+  // ejes
+  g.strokeStyle = '#bbb'; g.lineWidth = 1;
+  g.beginPath(); g.moveTo(x0, base); g.lineTo(x1, base); g.stroke();
+  g.beginPath(); g.moveTo(x0, 10); g.lineTo(x0, base); g.stroke();
+  g.font = '11px Helvetica, Arial, sans-serif'; g.fillStyle = '#555';
+  g.fillText('amplitud', 4, 14);
+  // marcas de frecuencia cada 500 Hz
+  for (let f = 0; f <= fMax; f += 500) {
+    const x = xDe(f);
+    g.strokeStyle = '#ddd'; g.beginPath(); g.moveTo(x, 10); g.lineTo(x, base); g.stroke();
+    g.fillStyle = '#555'; g.fillText(f + ' Hz', x - 12, h - 8);
+  }
+
+  // barra de la altura virtual (posición de f1, siempre visible)
+  const xV = xDe(f1);
+  g.strokeStyle = getComputedStyle(document.body).getPropertyValue('--virtual');
+  g.setLineDash([5, 3]); g.lineWidth = 1.5;
+  g.beginPath(); g.moveTo(xV, 14); g.lineTo(xV, base); g.stroke();
+  g.setLineDash([]);
+  g.fillStyle = getComputedStyle(document.body).getPropertyValue('--virtual');
+  g.fillText('altura ≈ ' + f1 + ' Hz', xV + 3, 24);
+
+  // barras de parciales activos
+  const acento = getComputedStyle(document.body).getPropertyValue('--acento');
+  for (let n = 1; n <= N_PARCIALES; n++) {
+    if (!activo(n)) continue;
+    const x = xDe(n * f1), alto = AMP(n) / AMP(1) * (base - 30);
+    g.fillStyle = acento;
+    g.fillRect(x - 3, base - alto, 6, alto);
+    g.fillStyle = '#555';
+    g.fillText(n + '·f₁', x - 9, base - alto - 4);
+  }
+}
+
+function bucle() {
+  refrescaEtiquetas();
+  dibujaOnda();
+  dibujaEspectro();
+  requestAnimationFrame(bucle);
+}
+requestAnimationFrame(bucle);
+
+// --- predicción -------------------------------------------------------------
+const textos = {
+  octava:     'Anotado: "baja una octava". Ahora apague el parcial 1 y escuche: ¿de verdad bajó?',
+  desaparece: 'Anotado: "desaparece". Ahora apague el parcial 1 y escuche: ¿se fue la nota… o solo el grave físico?',
+  igual:      'Anotado: "sigue igual". Ahora apague el parcial 1 y compruebe si el oído reconstruye el patrón.'
+};
+document.querySelectorAll('.prediccion .op').forEach(b => {
+  b.addEventListener('click', () => {
+    document.querySelectorAll('.prediccion .op').forEach(x => x.style.background = 'white');
+    b.style.background = 'var(--panel)';
+    $('predMsg').textContent = textos[b.dataset.pred];
+  });
+});
+
+// --- controles --------------------------------------------------------------
+$('btnPlay').addEventListener('click', iniciar);
+$('btnStop').addEventListener('click', detener);
+$('btnStop').disabled = true;
+$('btnReset').addEventListener('click', () => {
+  for (let n = 1; n <= N_PARCIALES; n++) encendido[n] = true;
+  sliderCorte.value = 0; sliderF1.value = 150;
+  refrescaBotones(); aplicaFrecuencias(); aplicaGanancias(); refrescaEtiquetas();
+});
+sliderF1.addEventListener('input', () => { refrescaEtiquetas(); aplicaFrecuencias(); });
+sliderCorte.addEventListener('input', () => { refrescaBotones(); refrescaEtiquetas(); aplicaGanancias(); });
+sliderGan.addEventListener('input', () => {
+  refrescaEtiquetas();
+  if (maestra && sonando) maestra.gain.setTargetAtTime(ganActual(), ctxAudio.currentTime, 0.02);
+});
+refrescaBotones(); refrescaEtiquetas();
+</script>
+</body>
+</html>
