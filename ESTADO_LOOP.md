@@ -23,7 +23,7 @@ actividades > demo.
 | s08 | Banda crítica y consonancia | lista | lista | lista | lista | lista |
 | s09 | Escalas y temperamentos | lista | lista | lista | lista | lista |
 | s10 | Resonancia e impedancia | lista | lista | lista | lista | lista |
-| s11 | Cuerdas frotadas y cuerpo | pendiente | pendiente | pendiente | pendiente | pendiente |
+| s11 | Cuerdas frotadas y cuerpo | lista | lista | lista | lista | lista |
 | s12 | Vientos y lutería | pendiente | pendiente | pendiente | pendiente | pendiente |
 | s13 | Prueba 2 + la voz | pendiente | pendiente | pendiente | pendiente | pendiente |
 | s14 | La sala como instrumento | pendiente | pendiente | pendiente | pendiente | pendiente |
@@ -120,3 +120,7 @@ diseno/02 §6.)
   revisar coevaluaciones hito 2 (riesgo 4); corrección hito 2 (~2 h).
   Nota: el agente de s10 fue cortado tras escribir todo; la verificación
   final la hizo el orquestador (JS OK, 70+70, aviso s11 presente).
+- **s11**: resina, sordina, lámina holografías C&G 6, confirmar
+  instrumentos frotados por correo, video de respaldo cámara lenta.
+  [POR VERIFICAR] 240 fps de celular resuelve la cuerda; derechos del
+  video de respaldo; grabación de nota lobo.

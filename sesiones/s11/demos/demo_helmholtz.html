@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Demo — La esquina de Helmholtz (s11)</title>
+<style>
+  /* Estética editorial del curso: fondo claro, serif para texto, sans para controles */
+  :root {
+    --tinta: #1a1a1a;
+    --acento: #7a2e2e;     /* rojo ladrillo: deslizamiento, esquina */
+    --linea: #2e4a7a;      /* azul: la cuerda, fase pegada */
+    --papel: #faf8f4;
+    --panel: #f0ece4;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0; padding: 1.2rem;
+    background: var(--papel); color: var(--tinta);
+    font-family: Georgia, 'Times New Roman', serif;
+    max-width: 900px; margin-inline: auto;
+  }
+  h1 { font-size: 1.35rem; margin: 0 0 .2rem; }
+  .sesion { font-family: Helvetica, Arial, sans-serif; font-size: .8rem;
+            letter-spacing: .06em; text-transform: uppercase; color: var(--acento); }
+  .bajada { font-style: italic; margin: .3rem 0 1rem; }
+  .panel {
+    background: var(--panel); border-radius: 6px; padding: .9rem 1rem;
+    font-family: Helvetica, Arial, sans-serif; font-size: .9rem;
+    display: flex; flex-wrap: wrap; gap: 1rem 2rem; align-items: center;
+  }
+  .ctrl { display: flex; flex-direction: column; gap: .25rem; min-width: 220px; flex: 1; }
+  .ctrl label { font-weight: bold; }
+  .valor { font-variant-numeric: tabular-nums; }
+  .nota-ctrl { font-size: .8rem; color: #555; }
+  input[type=range] { width: 100%; accent-color: var(--acento); }
+  button {
+    font-family: Helvetica, Arial, sans-serif; font-size: .95rem;
+    padding: .5rem 1rem; border: 1px solid var(--tinta); border-radius: 4px;
+    background: white; cursor: pointer;
+  }
+  button.primario { background: var(--acento); color: white; border-color: var(--acento); }
+  canvas { width: 100%; display: block; background: white;
+           border: 1px solid #ccc; border-radius: 4px; margin-top: 1rem; }
+  #lienzoCuerda { height: 230px; }
+  #lienzoVel { height: 170px; }
+  .observar { border-left: 4px solid var(--acento); padding: .2rem 0 .2rem 1rem; margin-top: 1.2rem; }
+  .observar h2 { font-size: 1rem; margin: .2rem 0; }
+  ol { margin: .4rem 0; padding-left: 1.2rem; }
+  .pie { font-family: Helvetica, Arial, sans-serif; font-size: .8rem; color: #555; margin-top: .5rem; }
+</style>
+</head>
+<body>
+<p class="sesion">Acústica Musical UC · Sesión 11</p>
+<h1>La esquina de Helmholtz: pegar, soltar y una nota estable</h1>
+<p class="bajada">Mire cómo el viaje de la esquina por la cuerda cronometra
+el ciclo pegar-soltar de la fricción — y escuche el diente de sierra que la
+cuerda le entrega al puente.</p>
+
+<div class="panel">
+  <div class="ctrl">
+    <label for="f1">Frecuencia de la cuerda f₁: <span class="valor" id="f1Val">196 Hz</span></label>
+    <input type="range" id="f1" min="0" max="1000" value="461">
+    <span class="nota-ctrl">Período T = 1/f₁: <span class="valor" id="tVal">5,1 ms</span> ·
+      animación en cámara lenta ×<span class="valor" id="camVal">470</span></span>
+  </div>
+  <div class="ctrl">
+    <label for="beta">Punto de frotado: <span class="valor" id="betaVal">12 %</span> de la cuerda desde el puente</label>
+    <input type="range" id="beta" min="5" max="30" value="12">
+    <span class="nota-ctrl">Del período: pegada <span class="valor" id="pegVal">88 %</span> ·
+      deslizando <span class="valor" id="desVal">12 %</span>
+      (a ×<span class="valor" id="velVal">7,3</span> la velocidad del arco, en contra)</span>
+  </div>
+  <div class="ctrl" style="min-width:160px; flex:0">
+    <label for="gan">Ganancia: <span class="valor" id="ganVal">0,30</span></label>
+    <input type="range" id="gan" min="0" max="50" value="30">
+    <button id="btnPlay" class="primario">▶ Sonar la cuerda</button>
+    <button id="btnStop">■ Detener</button>
+  </div>
+</div>
+
+<canvas id="lienzoCuerda"></canvas>
+<canvas id="lienzoVel"></canvas>
+<p class="pie">Arriba: la cuerda idealizada (desplazamiento exagerado); la
+línea segmentada es la envolvente que el ojo ve como mancha borrosa. Abajo:
+velocidad del punto frotado a lo largo de dos períodos — azul: pegada al arco;
+rojo: deslizando en contra. El sonido es un diente de sierra (la fuerza que la
+esquina imprime al puente en cada vuelta) filtrado según el punto de frotado.</p>
+
+<div class="observar">
+  <h2>¿Qué observar?</h2>
+  <ol>
+    <li>¿Cuántas vueltas completas da la esquina por cada episodio rojo de
+        deslizamiento? Si el soltar lo dispara el regreso de la esquina,
+        ¿quién fija entonces la frecuencia de la nota: el arco o la cuerda?</li>
+    <li>Acerque el punto de frotado al puente (baje el porcentaje): ¿qué le
+        pasa a la fracción del período que la cuerda pasa deslizando, a la
+        velocidad de ese deslizamiento y al <i>brillo</i> del sonido?</li>
+    <li>La cuerda va casi todo el ciclo pegada al arco (lenta, con él) y
+        desliza un instante (rápida, en contra). Si el arco empuja parejo
+        todo el tiempo, ¿de dónde sale el ritmo? Compare con el ticket de
+        salida de la sesión 10.</li>
+  </ol>
+</div>
+
+<script>
+'use strict';
+// ---------------------------------------------------------------------------
+// Demo s11 — la esquina de Helmholtz. Concepto único: la nota estable de una
+// cuerda frotada nace de un ciclo pegar-soltar SINCRONIZADO con el viaje de
+// la esquina por la cuerda (una vuelta de la esquina = un soltar).
+//
+// Modelo (Benade 1990, cap. 23; idealizado):
+//  - Forma instantánea: dos rectas unidas en una esquina que recorre la
+//    envolvente parabólica, una vuelta completa (puente→cejilla→puente) por
+//    período T = 1/f1.
+//  - En el punto de frotado (fracción BETA de la cuerda desde el puente), la
+//    cuerda está DESLIZANDO mientras la esquina viaja entre el arco y el
+//    puente (fracción BETA del período) y PEGADA el resto (1−BETA), con
+//    velocidad de deslizamiento (1−BETA)/BETA veces la del arco, en contra.
+//  - Fuerza sobre el puente: diente de sierra → el audio es un oscilador
+//    'sawtooth' en f1. El filtro pasa-bajos según BETA es CUALITATIVO:
+//    frotar cerca del puente afila la esquina y carga los parciales agudos
+//    (sul ponticello brillante, sul tasto opaco).
+// El profesor puede ajustar los límites y el mapeo del filtro aquí abajo.
+// ---------------------------------------------------------------------------
+const F_MIN = 98, F_MAX = 440;   // límites del slider de f1, en Hz (escala log)
+const T_VISUAL = 2.4;            // segundos que dura UN período en la animación
+const CORTE_MIN_X = 2.5, CORTE_MAX_HZ = 11000; // límites del filtro (× f1 y Hz)
+
+let ctxAudio = null, osc = null, filtro = null, ganancia = null;
+let sonando = false;
+
+const $ = id => document.getElementById(id);
+const sliderF1 = $('f1'), sliderBeta = $('beta'), sliderGan = $('gan');
+
+// Slider logarítmico de f1: posición 0..1000 → F_MIN..F_MAX
+function f1Actual() {
+  return F_MIN * Math.pow(F_MAX / F_MIN, sliderF1.value / 1000);
+}
+function betaActual() { return sliderBeta.value / 100; }   // 0,05 .. 0,30
+function ganActual() { return sliderGan.value / 100; }     // tope 0,5
+
+// Mapeo cualitativo punto de frotado → brillo (corte del pasa-bajos):
+// cerca del puente (beta chico) la esquina llega más afilada → más agudos.
+function corteActual() {
+  const f = f1Actual() * 1.2 / betaActual();
+  return Math.min(CORTE_MAX_HZ, Math.max(f1Actual() * CORTE_MIN_X, f));
+}
+
+function refrescaEtiquetas() {
+  const f = f1Actual(), b = betaActual();
+  $('f1Val').textContent = f.toFixed(0) + ' Hz';
+  $('tVal').textContent = (1000 / f).toFixed(1).replace('.', ',') + ' ms';
+  $('camVal').textContent = Math.round(T_VISUAL * f);
+  $('betaVal').textContent = Math.round(b * 100) + ' %';
+  $('pegVal').textContent = Math.round((1 - b) * 100) + ' %';
+  $('desVal').textContent = Math.round(b * 100) + ' %';
+  $('velVal').textContent = ((1 - b) / b).toFixed(1).replace('.', ',');
+  $('ganVal').textContent = ganActual().toFixed(2).replace('.', ',');
+}
+
+// --- audio: diente de sierra (fuerza en el puente) + pasa-bajos ------------
+async function iniciar() {
+  if (!ctxAudio) {
+    ctxAudio = new (window.AudioContext || window.webkitAudioContext)();
+    ganancia = ctxAudio.createGain();
+    filtro = ctxAudio.createBiquadFilter();
+    filtro.type = 'lowpass';
+    filtro.Q.value = 0.7;                       // sin resonancia agregada
+    filtro.connect(ganancia).connect(ctxAudio.destination);
+  }
+  await ctxAudio.resume();
+  if (!sonando) {
+    osc = ctxAudio.createOscillator();
+    osc.type = 'sawtooth';                      // espectro 1/n: BEN 23.5
+    osc.frequency.value = f1Actual();
+    osc.connect(filtro);
+    // ataque suave de 30 ms para no producir un chasquido al iniciar
+    ganancia.gain.setValueAtTime(0, ctxAudio.currentTime);
+    ganancia.gain.linearRampToValueAtTime(ganActual(), ctxAudio.currentTime + 0.03);
+    filtro.frequency.value = corteActual();
+    osc.start();
+    sonando = true;
+  }
+}
+function detener() {
+  if (sonando && osc) {
+    // caída de 30 ms y detención limpia
+    ganancia.gain.setTargetAtTime(0, ctxAudio.currentTime, 0.01);
+    osc.stop(ctxAudio.currentTime + 0.05);
+    osc = null;
+    sonando = false;
+  }
+}
+function actualizaAudio() {
+  if (sonando && osc) {
+    osc.frequency.setTargetAtTime(f1Actual(), ctxAudio.currentTime, 0.02);
+    filtro.frequency.setTargetAtTime(corteActual(), ctxAudio.currentTime, 0.02);
+    ganancia.gain.setTargetAtTime(ganActual(), ctxAudio.currentTime, 0.02);
+  }
+}
+
+// --- geometría del movimiento de Helmholtz ---------------------------------
+// fase p en [0,1): posición de la esquina en su vuelta puente→cejilla→puente.
+// Devuelve {xc: 0..1 (fracción de L), lado: +1 lóbulo superior / −1 inferior}.
+function esquina(p) {
+  const s = p * 2;                    // camino recorrido, en unidades de L
+  return s < 1 ? { xc: s, lado: 1 } : { xc: 2 - s, lado: -1 };
+}
+// Envolvente parabólica (desplazamiento máximo, normalizado a 1 en el centro)
+function envolvente(x) { return 4 * x * (1 - x); }
+// ¿Está deslizando el punto frotado? Sí mientras la esquina viaja entre el
+// arco y el puente (xc < beta), o sea una fracción BETA del período.
+function deslizando(p, beta) { return esquina(p).xc < beta; }
+
+// --- animación --------------------------------------------------------------
+let fase = 0, tAnterior = null;
+const colores = () => {
+  const cs = getComputedStyle(document.body);
+  return { linea: cs.getPropertyValue('--linea'), acento: cs.getPropertyValue('--acento') };
+};
+
+function preparaLienzo(cv, alto) {
+  const dpr = window.devicePixelRatio || 1;
+  const w = cv.clientWidth;
+  if (cv.width !== w * dpr || cv.height !== alto * dpr) {
+    cv.width = w * dpr; cv.height = alto * dpr;
+  }
+  const g = cv.getContext('2d');
+  g.setTransform(dpr, 0, 0, dpr, 0, 0);
+  g.clearRect(0, 0, w, alto);
+  return { g, w };
+}
+
+// Panel superior: la cuerda, la envolvente, la esquina y el arco
+function dibujaCuerda() {
+  const { g, w } = preparaLienzo($('lienzoCuerda'), 230);
+  const h = 230, margen = 46, base = h / 2, amp = 62;
+  const X = x => margen + (w - 2 * margen) * x;   // x en fracción de L → píxeles
+  const col = colores();
+  const beta = betaActual();
+  const desl = deslizando(fase, beta);
+
+  // envolvente (la "mancha" que ve el ojo)
+  g.strokeStyle = '#bbb'; g.setLineDash([4, 4]); g.lineWidth = 1;
+  [1, -1].forEach(s => {
+    g.beginPath();
+    for (let i = 0; i <= 60; i++) {
+      const x = i / 60, y = base - s * amp * envolvente(x);
+      i ? g.lineTo(X(x), y) : g.moveTo(X(x), y);
+    }
+    g.stroke();
+  });
+  g.setLineDash([]);
+
+  // apoyos y rótulos de ejes
+  g.font = '11px Helvetica, Arial, sans-serif'; g.fillStyle = '#555';
+  g.strokeStyle = '#999';
+  g.beginPath(); g.moveTo(X(0), base - amp - 12); g.lineTo(X(0), base + amp + 12); g.stroke();
+  g.beginPath(); g.moveTo(X(1), base - amp - 12); g.lineTo(X(1), base + amp + 12); g.stroke();
+  g.fillText('puente', X(0) - 18, base + amp + 26);
+  g.fillText('cejilla / dedo', X(1) - 34, base + amp + 26);
+  g.fillText('desplazamiento (exagerado)', 6, 14);
+  g.fillText('posición a lo largo de la cuerda →', w / 2 - 90, h - 6);
+
+  // la cuerda: dos rectas y la esquina
+  const e = esquina(fase);
+  const yc = base - e.lado * amp * envolvente(e.xc);
+  g.strokeStyle = col.linea; g.lineWidth = 2;
+  g.beginPath(); g.moveTo(X(0), base); g.lineTo(X(e.xc), yc); g.lineTo(X(1), base); g.stroke();
+
+  // la esquina
+  g.fillStyle = col.acento;
+  g.beginPath(); g.arc(X(e.xc), yc, 5, 0, 2 * Math.PI); g.fill();
+
+  // el arco: marca en el punto de frotado, color según estado
+  const xb = X(beta);
+  g.strokeStyle = desl ? col.acento : col.linea; g.lineWidth = 5;
+  g.beginPath(); g.moveTo(xb, base - amp - 8); g.lineTo(xb, base + 6); g.stroke();
+  g.lineWidth = 1; g.fillStyle = '#555';
+  g.fillText('arco', xb - 10, base - amp - 14);
+
+  // lámpara de estado
+  g.font = 'bold 13px Helvetica, Arial, sans-serif';
+  g.fillStyle = desl ? col.acento : col.linea;
+  g.fillText(desl ? 'DESLIZA (rápida, contra el arco)' : 'PEGADA (lenta, con el arco)',
+             w - 250, 20);
+}
+
+// Panel inferior: velocidad del punto frotado en dos períodos + cursor
+function dibujaVelocidad() {
+  const { g, w } = preparaLienzo($('lienzoVel'), 170);
+  const h = 170, mIzq = 46, mDer = 12, mArr = 16, mAba = 26;
+  const beta = betaActual();
+  const vDesl = (1 - beta) / beta;          // velocidad de deslizamiento (× v_arco)
+  const col = colores();
+
+  // escala vertical: cabe +1 (arco) arriba y −vDesl abajo
+  const yDe = v => {
+    const top = 1.25, fondo = -vDesl * 1.15;
+    return mArr + (h - mArr - mAba) * (top - v) / (top - fondo);
+  };
+  const xDe = p => mIzq + (w - mIzq - mDer) * p / 2;   // p en [0,2): dos períodos
+
+  // ejes y referencias
+  g.font = '11px Helvetica, Arial, sans-serif'; g.fillStyle = '#555';
+  g.strokeStyle = '#999'; g.lineWidth = 1;
+  g.beginPath(); g.moveTo(mIzq, yDe(0)); g.lineTo(w - mDer, yDe(0)); g.stroke(); // v = 0
+  g.setLineDash([4, 4]);
+  g.beginPath(); g.moveTo(mIzq, yDe(1)); g.lineTo(w - mDer, yDe(1)); g.stroke(); // v = arco
+  g.setLineDash([]);
+  g.fillText('v arco', 6, yDe(1) + 4);
+  g.fillText('0', 30, yDe(0) + 4);
+  g.fillText('velocidad del punto frotado (× v del arco)', 6, 12);
+  [0, 1, 2].forEach(p => {
+    const x = xDe(p);
+    g.beginPath(); g.moveTo(x, yDe(0) - 3); g.lineTo(x, yDe(0) + 3); g.stroke();
+    g.fillText(p + ' T', x - 8, h - 8);
+  });
+  g.fillText('tiempo (períodos) →', w / 2 - 50, h - 8);
+
+  // onda: pegada (v = +1, azul) y deslizando (v = −vDesl, rojo), 2 períodos.
+  // El episodio de deslizamiento ocurre alrededor de p = 0 (fase envolvente:
+  // mitad al final del período anterior, mitad al comienzo del siguiente).
+  const enDesl = p => deslizando(p % 1, beta);
+  const paso = 0.002;
+  let pPrev = 0;
+  for (let p = 0; p < 2; p += paso) {
+    const d = enDesl(p);
+    g.strokeStyle = d ? col.acento : col.linea;
+    g.lineWidth = 2;
+    const v = d ? -vDesl : 1;
+    g.beginPath(); g.moveTo(xDe(pPrev), yDe(v)); g.lineTo(xDe(p + paso), yDe(v)); g.stroke();
+    pPrev = p + paso;
+  }
+
+  // cursor sincronizado con la animación de arriba (recorre los 2 períodos)
+  const pCur = (fase + cicloPar) % 2;
+  g.strokeStyle = '#555';
+  g.beginPath(); g.moveTo(xDe(pCur), mArr); g.lineTo(xDe(pCur), h - mAba); g.stroke();
+}
+
+// avance de la fase: T_VISUAL segundos por período (cámara lenta)
+let cicloPar = 0;   // alterna 0/1 para que el cursor recorra los dos períodos
+function anima(t) {
+  if (tAnterior !== null) {
+    const nueva = fase + (t - tAnterior) / 1000 / T_VISUAL;
+    if (nueva >= 1) cicloPar = 1 - cicloPar;   // cambió de período
+    fase = nueva % 1;
+  }
+  tAnterior = t;
+  dibujaCuerda();
+  dibujaVelocidad();
+  requestAnimationFrame(anima);
+}
+requestAnimationFrame(anima);
+
+// --- controles ---------------------------------------------------------------
+$('btnPlay').addEventListener('click', iniciar);
+$('btnStop').addEventListener('click', detener);
+[sliderF1, sliderBeta, sliderGan].forEach(s =>
+  s.addEventListener('input', () => { refrescaEtiquetas(); actualizaAudio(); }));
+refrescaEtiquetas();
+</script>
+</body>
+</html>
