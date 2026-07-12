@@ -1,4 +1,4 @@
-# Banco de estímulos — grabaciones del profesor (s01–s05)
+# Banco de estímulos — grabaciones del profesor (s01–s06)
 
 **Qué es**: la lista única y consolidada de TODAS las grabaciones y
 estímulos de audio que los planes de s01–s05 declaran y que **solo el
@@ -24,6 +24,7 @@ nuevos que declaren esos planes.
 | 6 | Nota de guitarra normal + la misma invertida (reproducida al revés) | s04 — gancho "la nota al revés" (m2, 0–8′) | por grabar (grabar + invertir en cualquier editor de audio) | semana previa a s04 |
 | 7 | Línea de bajo con armónicos claros (para reproducir en parlante de celular) | s05 — escucha del día "el bajo del parlante chico" (m1, 5–20′) | por grabar | semana previa a s05 (probar ANTES en el parlante del celular) |
 | 8 | Dos octavas de piano, una grave y una aguda (limpias) | s05 — experiencia guiada II, octavas estiradas (m2, 25–48′) | por grabar o conseguir con licencia | semana previa a s05 |
+| 9 | Fragmento musical de mezcla completa con bajo prominente y brillo (para reproducir fuerte y luego muy suave: a bajo nivel deben "perderse" el bajo y el aire) | s06 — escucha del día "la mezcla que pierde el bajo" (m1, 8–23′) | por grabar o conseguir con licencia | semana previa a s06 (probar ANTES en el equipo de la sala a ambos niveles) |
 
 **Verificación al grabar** (vale para todos): reproducir el archivo en
 el equipo de la sala (o el parlante que corresponda) y mirar su

@@ -18,7 +18,7 @@ actividades > demo.
 | s03 | Modos de vibración | lista | lista | lista | lista | lista |
 | s04 | La receta del timbre | lista | lista | lista | lista | lista |
 | s05 | Altura percibida | lista | lista | lista | lista | lista |
-| s06 | Sonoridad y decibel | pendiente | pendiente | pendiente | pendiente | pendiente |
+| s06 | Sonoridad y decibel | lista | lista | lista | lista | lista |
 | s07 | Prueba 1 + batidos | pendiente | pendiente | pendiente | pendiente | pendiente |
 | s08 | Banda crítica y consonancia | pendiente | pendiente | pendiente | pendiente | pendiente |
 | s09 | Escalas y temperamentos | pendiente | pendiente | pendiente | pendiente | pendiente |
@@ -103,3 +103,7 @@ diseno/02 §6.)
   s04); fragmento de bajo para parlante chico + dos octavas de piano
   (banco de estímulos); imprimir hojas de registro y lista de recepción
   hito 1; probar demo en audífonos.
+- **s06**: estímulo #9 del banco; verificar interfaz+mic+software E1;
+  app SPL del profesor; corregir hito 1 (~3 h); redactar prueba 1.
+  [POR VERIFICAR] norma chilena DS 594 (exposición a ruido) y
+  atenuación de protectores de músico.

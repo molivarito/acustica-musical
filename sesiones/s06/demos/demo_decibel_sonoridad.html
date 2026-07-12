@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Demo — Dibuje su curva isofónica (s06)</title>
+<style>
+  /* Estética editorial: fondo claro, serif para texto, sans para controles */
+  :root {
+    --tinta: #1a1a1a;
+    --acento: #7a2e2e;     /* rojo ladrillo sobrio */
+    --linea: #2e4a7a;      /* azul para la curva del usuario */
+    --papel: #faf8f4;
+    --panel: #f0ece4;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0; padding: 1.2rem;
+    background: var(--papel); color: var(--tinta);
+    font-family: Georgia, 'Times New Roman', serif;
+    max-width: 900px; margin-inline: auto;
+  }
+  h1 { font-size: 1.35rem; margin: 0 0 .2rem; }
+  .sesion { font-family: Helvetica, Arial, sans-serif; font-size: .8rem;
+            letter-spacing: .06em; text-transform: uppercase; color: var(--acento); }
+  .bajada { font-style: italic; margin: .3rem 0 1rem; }
+  .panel {
+    background: var(--panel); border-radius: 6px; padding: .9rem 1rem;
+    font-family: Helvetica, Arial, sans-serif; font-size: .9rem;
+    display: flex; flex-wrap: wrap; gap: 1rem 2rem; align-items: flex-start;
+  }
+  .ctrl { display: flex; flex-direction: column; gap: .25rem; min-width: 220px; flex: 1; }
+  .ctrl label { font-weight: bold; }
+  .valor { font-variant-numeric: tabular-nums; }
+  input[type=range] { width: 100%; accent-color: var(--acento); }
+  button {
+    font-family: Helvetica, Arial, sans-serif; font-size: .95rem;
+    padding: .5rem 1rem; border: 1px solid var(--tinta); border-radius: 4px;
+    background: white; cursor: pointer;
+  }
+  button.primario { background: var(--acento); color: white; border-color: var(--acento); }
+  fieldset { border: none; padding: 0; margin: 0; display: flex; flex-wrap: wrap; gap: .5rem .8rem; }
+  canvas { width: 100%; height: 280px; display: block; background: white;
+           border: 1px solid #ccc; border-radius: 4px; margin-top: 1rem; }
+  .sonando {
+    font-family: Helvetica, Arial, sans-serif; font-size: .95rem; font-weight: bold;
+    padding: .3rem .6rem; border-radius: 4px; background: white; border: 1px solid #ccc;
+    min-width: 12rem; text-align: center;
+  }
+  .aviso { border-left: 4px solid var(--acento); background: #fdf3f3;
+           padding: .5rem .8rem; margin-top: 1rem; font-size: .92rem; }
+  .observar { border-left: 4px solid var(--acento); padding: .2rem 0 .2rem 1rem; margin-top: 1.2rem; }
+  .observar h2 { font-size: 1rem; margin: .2rem 0; }
+  ol { margin: .4rem 0; padding-left: 1.2rem; }
+</style>
+</head>
+<body>
+<p class="sesion">Acústica Musical UC · Sesión 06</p>
+<h1>Dibuje su curva isofónica</h1>
+<p class="bajada">Con audífonos: iguale de oído la sonoridad de cada tono de
+prueba con la referencia de 1000 Hz, marque el punto, y observe la curva
+que su propio oído dibuja.</p>
+
+<div class="panel">
+  <div class="ctrl" style="min-width:260px">
+    <label>Frecuencia del tono de prueba (Hz)</label>
+    <fieldset id="frecs">
+      <label><input type="radio" name="frec" value="125" checked> 125</label>
+      <label><input type="radio" name="frec" value="250"> 250</label>
+      <label><input type="radio" name="frec" value="2000"> 2000</label>
+      <label><input type="radio" name="frec" value="4000"> 4000</label>
+      <label><input type="radio" name="frec" value="8000"> 8000</label>
+    </fieldset>
+    <label for="nivel">Nivel del tono de prueba:
+      <span class="valor" id="nivelVal">−30 dB (rel.)</span></label>
+    <input type="range" id="nivel" min="-60" max="0" value="-30" step="1">
+  </div>
+  <div class="ctrl" style="min-width:200px">
+    <label for="ref">Nivel de la referencia (1000 Hz):
+      <span class="valor" id="refVal">−30 dB (rel.)</span></label>
+    <input type="range" id="ref" min="-50" max="-10" value="-30" step="1">
+    <span style="font-size:.8rem">Fíjelo cómodo al empezar y no lo mueva
+    durante su medición.</span>
+    <div class="sonando" id="sonando">■ silencio</div>
+  </div>
+  <div class="ctrl" style="min-width:170px; flex:0">
+    <button id="btnPlay" class="primario">▶ Alternar ref./prueba</button>
+    <button id="btnStop">■ Detener</button>
+    <button id="btnMarca">Marcar punto (igual de fuerte)</button>
+    <button id="btnBorra">Borrar mi curva</button>
+  </div>
+</div>
+
+<canvas id="lienzo"></canvas>
+
+<div class="aviso"><b>Advertencia de calibración:</b> sin un micrófono
+calibrado, estos decibeles son <b>relativos</b> al máximo de la demo —
+no son dB SPL. La <b>forma</b> de su curva sí es comparable con la de
+otros; los valores absolutos, no. (Y dependen del volumen que usted
+fijó en el notebook: por eso no se toca a mitad de medición.)</div>
+
+<div class="observar">
+  <h2>¿Qué observar?</h2>
+  <ol>
+    <li><b>Prediga</b> por escrito antes de sonar nada: para igualar la
+        sonoridad de la referencia, ¿el tono de 125 Hz necesitará más,
+        igual o menos nivel? Después mida los 5 puntos.</li>
+    <li>¿Qué forma tiene su curva? ¿Dónde su oído pidió más nivel — y
+        coincide la forma (no los valores) con la de sus compañeros?</li>
+    <li>Baje la referencia 15 dB y repita 125 Hz y 4000 Hz: ¿la curva
+        conserva la forma o se acentúa en los extremos?</li>
+  </ol>
+</div>
+
+<script>
+'use strict';
+// ---------------------------------------------------------------------------
+// Demo s06 — curva isofónica propia. Un solo concepto: igual nivel físico
+// no es igual sonoridad; el usuario iguala de oído tonos de distinta
+// frecuencia contra una referencia de 1000 Hz y la demo grafica SU curva.
+// Audio: dos osciladores permanentes (referencia y prueba) cuyas ganancias
+// se alternan con rampas cortas (sin clics). Ganancia maestra ≤ 0,5.
+// El profesor puede ajustar abajo FRECS, niveles límite y tiempos.
+// ---------------------------------------------------------------------------
+const F_REF = 1000;                 // frecuencia de la referencia, Hz
+const DUR_FASE = 0.9;               // duración de cada fase ref/prueba, s
+const RAMPA = 0.03;                 // rampa de conmutación, s (evita clics)
+const GAN_MAESTRA = 0.5;            // tope de seguridad auditiva
+
+let ctxAudio = null, oscRef = null, oscPrueba = null;
+let ganRef = null, ganPrueba = null, ganMaestra = null;
+let sonando = false, fase = 'ref', timerId = null;
+
+const $ = id => document.getElementById(id);
+const marcas = {};                  // {frecuencia: nivel dB igualado}
+
+function nivelPrueba() { return parseInt($('nivel').value, 10); }   // dB rel.
+function nivelRef()    { return parseInt($('ref').value, 10); }     // dB rel.
+function frecPrueba()  { return parseInt(document.querySelector('input[name=frec]:checked').value, 10); }
+const dB2gan = dB => Math.pow(10, dB / 20);   // dB relativos → factor de ganancia
+
+function refrescaEtiquetas() {
+  $('nivelVal').textContent = nivelPrueba().toString().replace('-', '−') + ' dB (rel.)';
+  $('refVal').textContent   = nivelRef().toString().replace('-', '−') + ' dB (rel.)';
+}
+
+// --- audio -----------------------------------------------------------------
+function iniciar() {
+  if (!ctxAudio) {
+    // El AudioContext se crea solo tras la interacción del usuario
+    ctxAudio = new (window.AudioContext || window.webkitAudioContext)();
+    ganMaestra = ctxAudio.createGain();
+    ganMaestra.gain.value = GAN_MAESTRA;
+    ganMaestra.connect(ctxAudio.destination);
+    oscRef = ctxAudio.createOscillator();
+    oscRef.frequency.value = F_REF;
+    ganRef = ctxAudio.createGain(); ganRef.gain.value = 0;
+    oscRef.connect(ganRef).connect(ganMaestra);
+    oscRef.start();
+    oscPrueba = ctxAudio.createOscillator();
+    ganPrueba = ctxAudio.createGain(); ganPrueba.gain.value = 0;
+    oscPrueba.connect(ganPrueba).connect(ganMaestra);
+    oscPrueba.start();
+  }
+  ctxAudio.resume();
+  if (!sonando) {
+    sonando = true;
+    fase = 'prueba';                 // conmuta() la invierte de inmediato
+    conmuta();
+    timerId = setInterval(conmuta, DUR_FASE * 1000);
+  }
+}
+
+// Alterna qué oscilador suena, con rampas cortas para no producir clics
+function conmuta() {
+  const t = ctxAudio.currentTime;
+  oscPrueba.frequency.setValueAtTime(frecPrueba(), t);
+  if (fase === 'ref') {              // ahora le toca a la prueba
+    fase = 'prueba';
+    ganRef.gain.cancelScheduledValues(t);
+    ganRef.gain.setTargetAtTime(0, t, RAMPA / 3);
+    ganPrueba.gain.cancelScheduledValues(t);
+    ganPrueba.gain.setTargetAtTime(dB2gan(nivelPrueba()), t, RAMPA / 3);
+    $('sonando').textContent = '♪ suena: PRUEBA (' + frecPrueba() + ' Hz)';
+    $('sonando').style.color = getComputedStyle(document.body).getPropertyValue('--linea');
+  } else {                           // ahora le toca a la referencia
+    fase = 'ref';
+    ganPrueba.gain.cancelScheduledValues(t);
+    ganPrueba.gain.setTargetAtTime(0, t, RAMPA / 3);
+    ganRef.gain.cancelScheduledValues(t);
+    ganRef.gain.setTargetAtTime(dB2gan(nivelRef()), t, RAMPA / 3);
+    $('sonando').textContent = '♪ suena: REFERENCIA (1000 Hz)';
+    $('sonando').style.color = getComputedStyle(document.body).getPropertyValue('--acento');
+  }
+}
+
+function detener() {
+  sonando = false;
+  if (timerId) { clearInterval(timerId); timerId = null; }
+  if (ctxAudio) {
+    const t = ctxAudio.currentTime;
+    ganRef.gain.setTargetAtTime(0, t, RAMPA / 3);
+    ganPrueba.gain.setTargetAtTime(0, t, RAMPA / 3);
+  }
+  $('sonando').textContent = '■ silencio';
+  $('sonando').style.color = 'inherit';
+}
+
+// Si el usuario mueve el nivel mientras suena la prueba, se aplica al vuelo
+$('nivel').addEventListener('input', () => {
+  refrescaEtiquetas();
+  if (sonando && fase === 'prueba')
+    ganPrueba.gain.setTargetAtTime(dB2gan(nivelPrueba()), ctxAudio.currentTime, 0.01);
+});
+$('ref').addEventListener('input', () => {
+  refrescaEtiquetas();
+  if (sonando && fase === 'ref')
+    ganRef.gain.setTargetAtTime(dB2gan(nivelRef()), ctxAudio.currentTime, 0.01);
+});
+
+// --- gráfico: ejes Hz (log) / dB relativos ----------------------------------
+const lienzo = $('lienzo');
+const FRECS_EJE = [125, 250, 500, 1000, 2000, 4000, 8000];
+const FX_MIN = 100, FX_MAX = 10000, DB_MIN = -60, DB_MAX = 0;
+
+function xDe(f, m, w)  { return m + (w - m - 12) * Math.log(f / FX_MIN) / Math.log(FX_MAX / FX_MIN); }
+function yDe(dB, h)    { return 18 + (h - 46 - 18) * (DB_MAX - dB) / (DB_MAX - DB_MIN); }
+
+function dibuja() {
+  const dpr = window.devicePixelRatio || 1;
+  const w = lienzo.clientWidth, h = 280, m = 46;
+  if (lienzo.width !== w * dpr) { lienzo.width = w * dpr; lienzo.height = h * dpr; }
+  const g = lienzo.getContext('2d');
+  g.setTransform(dpr, 0, 0, dpr, 0, 0);
+  g.clearRect(0, 0, w, h);
+  g.font = '11px Helvetica, Arial, sans-serif';
+
+  // rejilla y ejes rotulados
+  g.strokeStyle = '#ddd'; g.fillStyle = '#555'; g.lineWidth = 1;
+  for (let dB = DB_MIN; dB <= DB_MAX; dB += 10) {
+    const y = yDe(dB, h);
+    g.beginPath(); g.moveTo(m, y); g.lineTo(w - 12, y); g.stroke();
+    g.fillText((dB === 0 ? '0' : '−' + (-dB)), 8, y + 4);
+  }
+  for (const f of FRECS_EJE) {
+    const x = xDe(f, m, w);
+    g.beginPath(); g.moveTo(x, yDe(DB_MAX, h)); g.lineTo(x, yDe(DB_MIN, h)); g.stroke();
+    g.fillText(f >= 1000 ? (f / 1000) + 'k' : f, x - 10, h - 28);
+  }
+  g.fillText('nivel (dB rel.)', 8, 12);
+  g.fillText('frecuencia (Hz)', w / 2 - 40, h - 8);
+
+  // referencia: punto abierto en 1000 Hz al nivel de referencia
+  const acento = getComputedStyle(document.body).getPropertyValue('--acento');
+  const azul = getComputedStyle(document.body).getPropertyValue('--linea');
+  g.strokeStyle = acento; g.lineWidth = 2;
+  g.beginPath(); g.arc(xDe(F_REF, m, w), yDe(nivelRef(), h), 6, 0, 2 * Math.PI); g.stroke();
+  g.fillStyle = acento;
+  g.fillText('ref. 1000 Hz', xDe(F_REF, m, w) + 9, yDe(nivelRef(), h) - 8);
+
+  // curva del usuario: puntos marcados unidos en orden de frecuencia
+  const puntos = Object.keys(marcas).map(Number).sort((a, b) => a - b);
+  g.strokeStyle = azul; g.fillStyle = azul; g.lineWidth = 1.5;
+  // la referencia forma parte de la curva (por definición se iguala consigo misma)
+  const curva = puntos.map(f => [f, marcas[f]]);
+  curva.push([F_REF, nivelRef()]);
+  curva.sort((a, b) => a[0] - b[0]);
+  if (curva.length > 1) {
+    g.beginPath();
+    curva.forEach(([f, dB], i) => {
+      const x = xDe(f, m, w), y = yDe(dB, h);
+      i ? g.lineTo(x, y) : g.moveTo(x, y);
+    });
+    g.stroke();
+  }
+  for (const f of puntos) {
+    g.beginPath(); g.arc(xDe(f, m, w), yDe(marcas[f], h), 4.5, 0, 2 * Math.PI); g.fill();
+  }
+
+  // cruceta: posición actual del tono de prueba (aún sin marcar)
+  const xa = xDe(frecPrueba(), m, w), ya = yDe(nivelPrueba(), h);
+  g.strokeStyle = '#999';
+  g.beginPath(); g.moveTo(xa - 7, ya); g.lineTo(xa + 7, ya); g.stroke();
+  g.beginPath(); g.moveTo(xa, ya - 7); g.lineTo(xa, ya + 7); g.stroke();
+
+  requestAnimationFrame(dibuja);
+}
+requestAnimationFrame(dibuja);
+
+// --- marcar y borrar puntos --------------------------------------------------
+$('btnMarca').addEventListener('click', () => { marcas[frecPrueba()] = nivelPrueba(); });
+$('btnBorra').addEventListener('click', () => { for (const k in marcas) delete marcas[k]; });
+
+// --- controles ----------------------------------------------------------------
+$('btnPlay').addEventListener('click', iniciar);
+$('btnStop').addEventListener('click', detener);
+document.querySelectorAll('input[name=frec]').forEach(r =>
+  r.addEventListener('change', () => {
+    // al cambiar la frecuencia, aplica de inmediato si la prueba está sonando
+    if (sonando && fase === 'prueba' && ctxAudio)
+      oscPrueba.frequency.setValueAtTime(frecPrueba(), ctxAudio.currentTime);
+  }));
+refrescaEtiquetas();
+</script>
+</body>
+</html>
