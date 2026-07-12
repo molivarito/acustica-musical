@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Demo — Modos de una cuerda (s03)</title>
+<style>
+  /* Estética editorial: fondo claro, serif para texto, sans para controles */
+  :root {
+    --tinta: #1a1a1a;
+    --acento: #7a2e2e;     /* rojo ladrillo sobrio */
+    --linea: #2e4a7a;      /* azul para las formas modales */
+    --papel: #faf8f4;
+    --panel: #f0ece4;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0; padding: 1.2rem;
+    background: var(--papel); color: var(--tinta);
+    font-family: Georgia, 'Times New Roman', serif;
+    max-width: 900px; margin-inline: auto;
+  }
+  h1 { font-size: 1.35rem; margin: 0 0 .2rem; }
+  .sesion { font-family: Helvetica, Arial, sans-serif; font-size: .8rem;
+            letter-spacing: .06em; text-transform: uppercase; color: var(--acento); }
+  .bajada { font-style: italic; margin: .3rem 0 1rem; }
+  .panel {
+    background: var(--panel); border-radius: 6px; padding: .9rem 1rem;
+    font-family: Helvetica, Arial, sans-serif; font-size: .9rem;
+    display: flex; flex-wrap: wrap; gap: 1rem 2rem; align-items: flex-start;
+  }
+  .ctrl { display: flex; flex-direction: column; gap: .25rem; min-width: 200px; flex: 1; }
+  .ctrl label { font-weight: bold; }
+  .valor { font-variant-numeric: tabular-nums; }
+  input[type=range] { width: 100%; accent-color: var(--acento); }
+  button {
+    font-family: Helvetica, Arial, sans-serif; font-size: .95rem;
+    padding: .5rem 1rem; border: 1px solid var(--tinta); border-radius: 4px;
+    background: white; cursor: pointer;
+  }
+  button.primario { background: var(--acento); color: white; border-color: var(--acento); }
+  button.activo { background: var(--linea); color: white; border-color: var(--linea); }
+  .escuchar { display: flex; flex-wrap: wrap; gap: .4rem; align-items: center; }
+  .escuchar button { padding: .35rem .7rem; font-size: .85rem; }
+  .presets button { padding: .3rem .6rem; font-size: .8rem; }
+  /* tabla de modos: slider de amplitud + datos de cada modo */
+  table.modos {
+    width: 100%; border-collapse: collapse; margin-top: 1rem;
+    font-family: Helvetica, Arial, sans-serif; font-size: .85rem;
+  }
+  table.modos td, table.modos th { padding: .25rem .5rem; border-bottom: 1px solid #ddd; }
+  table.modos th { text-align: left; font-size: .78rem; text-transform: uppercase;
+                   letter-spacing: .04em; color: #555; }
+  table.modos input[type=range] { width: 110px; vertical-align: middle; }
+  canvas { width: 100%; display: block; background: white;
+           border: 1px solid #ccc; border-radius: 4px; margin-top: 1rem; }
+  .leyenda { font-family: Helvetica, Arial, sans-serif; font-size: .78rem; color: #555;
+             margin-top: .25rem; }
+  .observar { border-left: 4px solid var(--acento); padding: .2rem 0 .2rem 1rem; margin-top: 1.2rem; }
+  .observar h2 { font-size: 1rem; margin: .2rem 0; }
+  ol { margin: .4rem 0; padding-left: 1.2rem; }
+</style>
+</head>
+<body>
+<p class="sesion">Acústica Musical UC · Sesión 03</p>
+<h1>Modos de una cuerda: la familia de razones enteras</h1>
+<p class="bajada">Encienda los modos uno a uno, escuche a qué intervalo
+suena cada uno, y arme el sonido de la cuerda sumándolos.</p>
+
+<div class="panel">
+  <div class="ctrl">
+    <label for="f1">Fundamental f₁: <span class="valor" id="f1Val">110 Hz</span></label>
+    <input type="range" id="f1" min="55" max="220" value="110" step="1">
+    <span class="leyenda">Los demás modos van solos: f₍ₙ₎ = n · f₁</span>
+    <label for="gan" style="margin-top:.4rem">Ganancia: <span class="valor" id="ganVal">0,35</span></label>
+    <input type="range" id="gan" min="0" max="50" value="35">
+  </div>
+  <div class="ctrl" style="min-width:260px">
+    <label>¿Qué se escucha?</label>
+    <div class="escuchar" id="escuchar">
+      <button data-solo="0" class="activo">suma</button>
+      <button data-solo="1">modo 1</button><button data-solo="2">modo 2</button>
+      <button data-solo="3">modo 3</button><button data-solo="4">modo 4</button>
+      <button data-solo="5">modo 5</button><button data-solo="6">modo 6</button>
+    </div>
+    <label style="margin-top:.4rem">Recetas rápidas (amplitudes)</label>
+    <div class="presets escuchar">
+      <button id="preFund">solo el 1</button>
+      <button id="preUnoN">1/n (tipo cuerda)</button>
+      <button id="preIguales">todos iguales</button>
+    </div>
+  </div>
+  <div class="ctrl" style="min-width:130px; flex:0">
+    <button id="btnPlay" class="primario">▶ Iniciar</button>
+    <button id="btnStop">■ Detener</button>
+  </div>
+</div>
+
+<table class="modos">
+  <thead><tr><th>modo n</th><th>amplitud</th><th>frecuencia (Hz)</th><th>intervalo respecto del modo 1</th></tr></thead>
+  <tbody id="filas"></tbody>
+</table>
+
+<canvas id="lienzoModos" height="360"></canvas>
+<p class="leyenda">Formas de los seis primeros modos (eje horizontal:
+posición a lo largo de la cuerda, 0–L; eje vertical: desplazamiento,
+exagerado). Los puntos rojos son los <b>nodos</b>: lugares que no se
+mueven. La animación va en cámara lenta: las frecuencias reales son las
+de la tabla.</p>
+
+<canvas id="lienzoSuma" height="170"></canvas>
+<p class="leyenda">La cuerda "real": suma de los seis modos con las
+amplitudes elegidas (misma cámara lenta).</p>
+
+<div class="observar">
+  <h2>¿Qué observar?</h2>
+  <ol>
+    <li><b>Prediga antes de apretar</b>: ¿a qué intervalo musical sonará
+        el modo 2 respecto del modo 1? ¿Y el 3 respecto del 2? Después
+        escúchelos con los botones y contraste.</li>
+    <li>Mire los nodos del dibujo: si apoyara un dedo justo en la
+        <b>mitad</b> de una cuerda real, ¿cuáles de los seis modos
+        sobrevivirían? Imítelo aquí: baje a cero las amplitudes de los
+        modos que el dedo mataría y escuche qué queda.</li>
+    <li>Compare la receta "solo el 1" con la receta "1/n": ¿cuál suena
+        más a cuerda de verdad? ¿Qué le aportan al timbre los modos
+        agudos, si la <i>nota</i> sigue siendo la misma?</li>
+  </ol>
+</div>
+
+<script>
+'use strict';
+// ---------------------------------------------------------------------------
+// Demo s03 — modos de una cuerda. Un solo concepto: la cuerda tiene una
+// familia de modos con frecuencias en razones enteras (f_n = n·f1); cada
+// modo tiene su forma (y sus nodos) y el sonido de la cuerda es su suma.
+// Audio: 6 osciladores sinusoidales fijos (uno por modo) con una ganancia
+// por modo (amplitud del slider) y una ganancia maestra (tope 0,5).
+// El profesor puede cambiar abajo N_MODOS, el rango de f1 y la velocidad
+// de la animación (CAMARA_LENTA) sin tocar nada más.
+// ---------------------------------------------------------------------------
+const N_MODOS = 6;
+const CAMARA_LENTA = 0.55;   // "frecuencia visual" del modo 1 en Hz (animación)
+const G_MODO = 0.14;         // ganancia base por modo (6 modos a tope < 1)
+
+// nombres de los intervalos de la serie armónica respecto del modo 1
+const INTERVALOS = ['unísono (la nota misma)', 'octava', 'octava + quinta',
+  '2 octavas', '2 octavas + tercera mayor (aprox.)', '2 octavas + quinta'];
+
+let ctxAudio = null, ganMaestra = null;
+let oscs = [], gansModo = [];
+let sonando = false;
+let solo = 0;                 // 0 = suma; 1..6 = solo ese modo
+
+const $ = id => document.getElementById(id);
+const amps = new Array(N_MODOS).fill(0);   // amplitudes 0..1 (sliders)
+amps[0] = 1;                               // parte con la fundamental sola
+
+// --- construcción de la tabla de modos (slider + datos por fila) -----------
+const filas = $('filas');
+for (let n = 1; n <= N_MODOS; n++) {
+  const tr = document.createElement('tr');
+  tr.innerHTML = '<td><b>' + n + '</b></td>' +
+    '<td><input type="range" min="0" max="100" value="' + (n === 1 ? 100 : 0) +
+    '" id="amp' + n + '"> <span class="valor" id="ampVal' + n + '">' +
+    (n === 1 ? '1,00' : '0,00') + '</span></td>' +
+    '<td class="valor" id="f' + n + 'Val"></td>' +
+    '<td>' + INTERVALOS[n - 1] + '</td>';
+  filas.appendChild(tr);
+}
+
+function f1Actual()  { return Number($('f1').value); }
+function ganActual() { return $('gan').value / 100; }   // 0 .. 0,5 máximo
+
+// --- refresco de etiquetas y del audio --------------------------------------
+function refresca() {
+  const f1 = f1Actual();
+  $('f1Val').textContent = f1 + ' Hz';
+  $('ganVal').textContent = ganActual().toFixed(2).replace('.', ',');
+  for (let n = 1; n <= N_MODOS; n++) {
+    amps[n - 1] = $('amp' + n).value / 100;
+    $('ampVal' + n).textContent = amps[n - 1].toFixed(2).replace('.', ',');
+    $('f' + n + 'Val').textContent = (n * f1) + ' Hz';
+  }
+  if (ctxAudio && sonando) aplicaAudio();
+}
+
+// ganancia efectiva del modo n según sliders y el selector suma/solo
+function ganDe(n) {
+  if (solo === 0) return amps[n - 1] * G_MODO;
+  return (n === solo) ? 0.30 : 0;   // un modo solo, algo más presente
+}
+function aplicaAudio() {
+  const t = ctxAudio.currentTime;
+  ganMaestra.gain.setTargetAtTime(ganActual(), t, 0.02);
+  for (let n = 1; n <= N_MODOS; n++) {
+    oscs[n - 1].frequency.setTargetAtTime(n * f1Actual(), t, 0.02);
+    gansModo[n - 1].gain.setTargetAtTime(ganDe(n), t, 0.02); // rampas: sin clics
+  }
+}
+
+// --- audio: crear el grafo solo tras la interacción del usuario -------------
+async function iniciar() {
+  if (!ctxAudio) {
+    ctxAudio = new (window.AudioContext || window.webkitAudioContext)();
+    ganMaestra = ctxAudio.createGain();
+    ganMaestra.connect(ctxAudio.destination);
+    for (let n = 1; n <= N_MODOS; n++) {
+      const o = ctxAudio.createOscillator();
+      const g = ctxAudio.createGain();
+      o.type = 'sine';
+      o.frequency.value = n * f1Actual();
+      g.gain.value = 0;
+      o.connect(g).connect(ganMaestra);
+      o.start();
+      oscs.push(o); gansModo.push(g);
+    }
+  }
+  await ctxAudio.resume();
+  sonando = true;
+  aplicaAudio();
+}
+function detener() {
+  sonando = false;
+  if (ctxAudio) {
+    const t = ctxAudio.currentTime;
+    gansModo.forEach(g => g.gain.setTargetAtTime(0, t, 0.02));
+    setTimeout(() => { if (!sonando && ctxAudio) ctxAudio.suspend(); }, 120);
+  }
+}
+
+// --- selector suma / modo solo ----------------------------------------------
+document.querySelectorAll('#escuchar button').forEach(b =>
+  b.addEventListener('click', () => {
+    solo = Number(b.dataset.solo);
+    document.querySelectorAll('#escuchar button').forEach(x =>
+      x.classList.toggle('activo', x === b));
+    if (ctxAudio && sonando) aplicaAudio();
+  }));
+
+// --- recetas rápidas de amplitudes -------------------------------------------
+function receta(fn) {
+  for (let n = 1; n <= N_MODOS; n++) $('amp' + n).value = Math.round(fn(n) * 100);
+  refresca();
+}
+$('preFund').addEventListener('click',   () => receta(n => n === 1 ? 1 : 0));
+$('preUnoN').addEventListener('click',   () => receta(n => 1 / n));
+$('preIguales').addEventListener('click',() => receta(() => 0.6));
+
+// --- visualización -----------------------------------------------------------
+// Cada modo n se dibuja como onda estacionaria: y(x,t) = A·sin(nπx/L)·cos(ω_vis t)
+// con ω_vis proporcional a n (cámara lenta que conserva las proporciones).
+const lzModos = $('lienzoModos'), lzSuma = $('lienzoSuma');
+const azul = getComputedStyle(document.body).getPropertyValue('--linea');
+const rojo = getComputedStyle(document.body).getPropertyValue('--acento');
+
+function preparaCanvas(cv, alto) {
+  const dpr = window.devicePixelRatio || 1;
+  const w = cv.clientWidth;
+  if (cv.width !== w * dpr || cv.height !== alto * dpr) {
+    cv.width = w * dpr; cv.height = alto * dpr;
+  }
+  const g = cv.getContext('2d');
+  g.setTransform(dpr, 0, 0, dpr, 0, 0);
+  g.clearRect(0, 0, w, alto);
+  return [g, w];
+}
+function ejeCuerda(g, x0, x1, y, rotulo) {
+  g.strokeStyle = '#bbb'; g.lineWidth = 1;
+  g.beginPath(); g.moveTo(x0, y); g.lineTo(x1, y); g.stroke();
+  g.font = '11px Helvetica, Arial, sans-serif'; g.fillStyle = '#555';
+  g.fillText('0', x0 - 4, y + 14); g.fillText('L', x1 - 4, y + 14);
+  if (rotulo) g.fillText(rotulo, x0, y - 26);
+}
+
+function dibuja(ms) {
+  const t = ms / 1000;
+  const fase = n => Math.cos(2 * Math.PI * CAMARA_LENTA * n * t);
+
+  // panel 1: los seis modos apilados
+  const ALTO1 = 360;
+  const [g1, w1] = preparaCanvas(lzModos, ALTO1);
+  const x0 = 46, x1 = w1 - 16;
+  const paso = ALTO1 / N_MODOS, media = paso * 0.38;
+  for (let n = 1; n <= N_MODOS; n++) {
+    const yc = paso * (n - 0.5);
+    ejeCuerda(g1, x0, x1, yc, null);
+    g1.fillStyle = '#555';
+    g1.fillText('n = ' + n, 6, yc + 4);
+    // forma modal (amplitud del slider; trazo tenue si está en cero)
+    const A = amps[n - 1];
+    g1.strokeStyle = azul; g1.lineWidth = A > 0 ? 1.8 : 0.7;
+    g1.globalAlpha = A > 0 ? 1 : 0.45;
+    g1.beginPath();
+    for (let i = 0; i <= 120; i++) {
+      const u = i / 120;
+      const y = yc - Math.sin(n * Math.PI * u) * fase(n) * media * (A > 0 ? A : 0.25);
+      const x = x0 + (x1 - x0) * u;
+      i ? g1.lineTo(x, y) : g1.moveTo(x, y);
+    }
+    g1.stroke();
+    g1.globalAlpha = 1;
+    // nodos interiores: puntos quietos en x = k·L/n
+    g1.fillStyle = rojo;
+    for (let k = 1; k < n; k++) {
+      const x = x0 + (x1 - x0) * k / n;
+      g1.beginPath(); g1.arc(x, yc, 3, 0, 2 * Math.PI); g1.fill();
+    }
+  }
+
+  // panel 2: la suma de los modos
+  const ALTO2 = 170;
+  const [g2, w2] = preparaCanvas(lzSuma, ALTO2);
+  const yc2 = ALTO2 / 2, media2 = ALTO2 * 0.36;
+  ejeCuerda(g2, x0, w2 - 16, yc2, 'suma de los 6 modos');
+  const norm = Math.max(1, amps.reduce((s, a) => s + a, 0)); // que no se salga del cuadro
+  g2.strokeStyle = azul; g2.lineWidth = 2;
+  g2.beginPath();
+  for (let i = 0; i <= 160; i++) {
+    const u = i / 160;
+    let y = 0;
+    for (let n = 1; n <= N_MODOS; n++)
+      y += amps[n - 1] * Math.sin(n * Math.PI * u) * fase(n);
+    const px = x0 + (w2 - 16 - x0) * u;
+    const py = yc2 - y / norm * media2;
+    i ? g2.lineTo(px, py) : g2.moveTo(px, py);
+  }
+  g2.stroke();
+
+  requestAnimationFrame(dibuja);
+}
+requestAnimationFrame(dibuja);
+
+// --- controles ----------------------------------------------------------------
+$('btnPlay').addEventListener('click', iniciar);
+$('btnStop').addEventListener('click', detener);
+$('f1').addEventListener('input', refresca);
+$('gan').addEventListener('input', refresca);
+for (let n = 1; n <= N_MODOS; n++) $('amp' + n).addEventListener('input', refresca);
+refresca();
+</script>
+</body>
+</html>

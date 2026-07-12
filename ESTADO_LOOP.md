@@ -15,7 +15,7 @@ actividades > demo.
 |---|---|---|---|---|---|---|
 | s01 | Del golpe al tono | lista | lista | lista | lista | lista |
 | s02 | Ondas y espectrograma | lista | lista | lista | lista | lista |
-| s03 | Modos de vibración | pendiente | pendiente | pendiente | pendiente | pendiente |
+| s03 | Modos de vibración | lista | lista | lista | lista | lista |
 | s04 | La receta del timbre | pendiente | pendiente | pendiente | pendiente | pendiente |
 | s05 | Altura percibida | pendiente | pendiente | pendiente | pendiente | pendiente |
 | s06 | Sonoridad y decibel | pendiente | pendiente | pendiente | pendiente | pendiente |
@@ -80,3 +80,8 @@ diseno/02 §6.)
 - **s02**: grabaciones para el banco de estímulos (flauta con ataque
   soploso, trueno); planilla de rúbrica OA3 con nómina y sorteo; lista
   de apps de espectrograma recomendadas; recopilar tickets de s01.
+- **s03**: 5 kits de objetos metálicos + vaso "oficial"; guitarra o
+  monocordio (plan B); grabaciones de timbal/tom; imágenes Chladni con
+  licencia; enunciado de proyecto impreso; pauta de feedback de medias
+  hojas (la produce s04). [POR VERIFICAR] Fletcher & Rossing en
+  biblioteca UC.
