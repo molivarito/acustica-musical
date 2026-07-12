@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Demo — Forma de onda y espectro en vivo (s02)</title>
+<style>
+  /* Estética editorial del curso: fondo claro, serif para texto, sans para controles */
+  :root {
+    --tinta: #1a1a1a;
+    --acento: #7a2e2e;     /* rojo ladrillo sobrio */
+    --linea: #2e4a7a;      /* azul para las curvas */
+    --papel: #faf8f4;
+    --panel: #f0ece4;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0; padding: 1.2rem;
+    background: var(--papel); color: var(--tinta);
+    font-family: Georgia, 'Times New Roman', serif;
+    max-width: 900px; margin-inline: auto;
+  }
+  h1 { font-size: 1.35rem; margin: 0 0 .2rem; }
+  .sesion { font-family: Helvetica, Arial, sans-serif; font-size: .8rem;
+            letter-spacing: .06em; text-transform: uppercase; color: var(--acento); }
+  .bajada { font-style: italic; margin: .3rem 0 1rem; }
+  .panel {
+    background: var(--panel); border-radius: 6px; padding: .9rem 1rem;
+    font-family: Helvetica, Arial, sans-serif; font-size: .9rem;
+    display: flex; flex-wrap: wrap; gap: 1rem 2rem; align-items: flex-start;
+  }
+  .ctrl { display: flex; flex-direction: column; gap: .25rem; min-width: 200px; flex: 1; }
+  .ctrl label { font-weight: bold; }
+  .valor { font-variant-numeric: tabular-nums; }
+  input[type=range] { width: 100%; accent-color: var(--acento); }
+  button {
+    font-family: Helvetica, Arial, sans-serif; font-size: .95rem;
+    padding: .5rem 1rem; border: 1px solid var(--tinta); border-radius: 4px;
+    background: white; cursor: pointer;
+  }
+  button.primario { background: var(--acento); color: white; border-color: var(--acento); }
+  button[disabled] { opacity: .45; cursor: default; }
+  fieldset { border: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: .2rem; }
+  canvas { width: 100%; height: 180px; display: block; background: white;
+           border: 1px solid #ccc; border-radius: 4px; margin-top: 1rem; }
+  .rotulo { font-family: Helvetica, Arial, sans-serif; font-size: .8rem;
+            color: #555; margin: .8rem 0 -0.8rem; }
+  #estado { font-family: Helvetica, Arial, sans-serif; font-size: .85rem;
+            margin-top: .6rem; color: var(--acento); min-height: 1.2em; }
+  .observar { border-left: 4px solid var(--acento); padding: .2rem 0 .2rem 1rem; margin-top: 1.2rem; }
+  .observar h2 { font-size: 1rem; margin: .2rem 0; }
+  ol { margin: .4rem 0; padding-left: 1.2rem; }
+</style>
+</head>
+<body>
+<p class="sesion">Acústica Musical UC · Sesión 02</p>
+<h1>Forma de onda y espectro: dos vistas del mismo sonido</h1>
+<p class="bajada">Cante, silbee o hable al micrófono y compare el sonido
+como historia (presión vs. tiempo) y como receta (nivel vs. frecuencia).</p>
+
+<div class="panel">
+  <div class="ctrl" style="min-width:170px; flex:0">
+    <label>Fuente del sonido</label>
+    <button id="btnMic" class="primario">▶ Micrófono</button>
+    <button id="btnOsc">▶ Fuente interna</button>
+    <button id="btnStop">■ Detener</button>
+    <button id="btnFreeze">❄ Congelar imagen</button>
+  </div>
+  <div class="ctrl">
+    <label for="frec">Frecuencia (fuente interna): <span class="valor" id="frecVal">440 Hz</span></label>
+    <input type="range" id="frec" min="0" max="1000" value="529">
+    <label>Timbre (fuente interna)</label>
+    <fieldset id="timbre">
+      <label><input type="radio" name="timbre" value="seno" checked> senoidal (tono puro)</label>
+      <label><input type="radio" name="timbre" value="sierra"> sierra (rico en parciales)</label>
+      <label><input type="radio" name="timbre" value="ruido"> ruido ("sss")</label>
+    </fieldset>
+  </div>
+  <div class="ctrl" style="min-width:180px">
+    <label for="gan">Ganancia (fuente interna): <span class="valor" id="ganVal">0,30</span></label>
+    <input type="range" id="gan" min="0" max="50" value="30">
+    <span style="font-size:.8rem; color:#555">El micrófono no se reproduce
+    por los parlantes (evita el acople); suena lo que usted haga sonar.</span>
+  </div>
+</div>
+<div id="estado"></div>
+
+<p class="rotulo">Forma de onda — presión (amplitud relativa) vs. tiempo (ms)</p>
+<canvas id="cOnda"></canvas>
+<p class="rotulo">Espectro — nivel (dB relativos, 0 = máximo) vs. frecuencia (Hz)</p>
+<canvas id="cEspectro"></canvas>
+
+<div class="observar">
+  <h2>¿Qué observar?</h2>
+  <ol>
+    <li>Cante una vocal en una nota fija y <b>prediga antes</b>: ¿cuántos
+        picos (parciales) va a mostrar el espectro? ¿Puede distinguir esos
+        parciales mirando solo la forma de onda?</li>
+    <li>Silbido y vocal en la misma nota: ¿en cuál de las dos vistas se
+        distinguen mejor, y qué diferencia exactamente?</li>
+    <li>Con la fuente interna, pase de senoidal a sierra sin cambiar la
+        frecuencia: ¿qué cambia en cada vista, y qué cambia en lo que oye?
+        ¿Y el ruido: por qué no tiene picos?</li>
+  </ol>
+</div>
+
+<script>
+'use strict';
+// ---------------------------------------------------------------------------
+// Demo s02 — forma de onda y espectro simultáneos. Un solo concepto: el mismo
+// sonido admite dos representaciones (tiempo y frecuencia) que revelan cosas
+// distintas. Fuente principal: micrófono en vivo (getUserMedia). Si el
+// navegador niega el permiso, la demo ofrece automáticamente la fuente
+// interna (oscilador o ruido) — caso límite obligatorio del plan de s02.
+// El micrófono NUNCA se conecta a los parlantes (evita realimentación).
+// Parámetros que el profesor puede ajustar aquí:
+const F_MIN = 80, F_MAX = 2000;   // límites del slider de frecuencia (Hz, escala log)
+const FFT_ONDA = 2048;            // muestras de la ventana de forma de onda
+const FFT_ESPECTRO = 4096;        // tamaño de FFT del espectro
+const F_VISTA_MAX = 8000;         // techo del eje de frecuencia dibujado (Hz)
+const DB_MIN = -100, DB_MAX = 0;  // rango del eje de nivel (dB relativos)
+
+let ctxAudio = null;
+let analOnda = null, analEspectro = null;   // dos analizadores sobre la misma señal
+let ganancia = null;                        // solo para la fuente interna
+let fuente = null;                          // nodo actual (mic u oscilador/ruido)
+let streamMic = null;                       // stream del micrófono, para cerrarlo
+let tipoFuente = 'ninguna';                 // 'mic' | 'osc' | 'ninguna'
+let congelado = false;
+
+const $ = id => document.getElementById(id);
+
+// Slider logarítmico: posición 0..1000 → F_MIN..F_MAX (posición 529 ≈ 440 Hz)
+function frecActual() {
+  return F_MIN * Math.pow(F_MAX / F_MIN, $('frec').value / 1000);
+}
+function ganActual() { return $('gan').value / 100; }   // tope 0,5: protección auditiva
+function timbreActual() { return document.querySelector('input[name=timbre]:checked').value; }
+
+function refrescaEtiquetas() {
+  $('frecVal').textContent = frecActual().toFixed(0) + ' Hz';
+  $('ganVal').textContent = ganActual().toFixed(2).replace('.', ',');
+}
+function avisa(msj) { $('estado').textContent = msj; }
+
+// --- infraestructura común --------------------------------------------------
+function preparaContexto() {
+  if (ctxAudio) return;
+  ctxAudio = new (window.AudioContext || window.webkitAudioContext)();
+  analOnda = ctxAudio.createAnalyser();
+  analOnda.fftSize = FFT_ONDA;
+  analEspectro = ctxAudio.createAnalyser();
+  analEspectro.fftSize = FFT_ESPECTRO;
+  analEspectro.smoothingTimeConstant = 0.8;   // espectro estable a la vista
+  ganancia = ctxAudio.createGain();
+  ganancia.connect(ctxAudio.destination);     // SOLO la fuente interna pasa por aquí
+}
+
+// Desconecta y apaga la fuente vigente (mic o interna)
+function apagaFuente() {
+  if (fuente) { try { fuente.disconnect(); fuente.stop && fuente.stop(); } catch (e) {} }
+  fuente = null;
+  if (streamMic) { streamMic.getTracks().forEach(t => t.stop()); streamMic = null; }
+  tipoFuente = 'ninguna';
+}
+
+// --- fuente 1: micrófono en vivo ---------------------------------------------
+async function iniciaMic() {
+  preparaContexto();
+  await ctxAudio.resume();
+  apagaFuente();
+  try {
+    streamMic = await navigator.mediaDevices.getUserMedia({ audio: {
+      echoCancellation: false, noiseSuppression: false, autoGainControl: false } });
+  } catch (err) {
+    // Caso límite: permiso negado o sin micrófono → ofrecer la fuente interna
+    avisa('No hay acceso al micrófono (' + err.name + '). ' +
+          'Se activó la fuente interna: explore con el oscilador.');
+    iniciaOsc();
+    return;
+  }
+  fuente = ctxAudio.createMediaStreamSource(streamMic);
+  fuente.connect(analOnda);
+  fuente.connect(analEspectro);
+  // Ojo: el micrófono NO se conecta a "ganancia" ni a los parlantes.
+  tipoFuente = 'mic';
+  congelado = false;
+  avisa('Micrófono activo: lo que suene en la sala aparece en ambas vistas.');
+}
+
+// --- fuente 2: interna (oscilador o ruido) -----------------------------------
+let bufRuido = null;
+function preparaRuido() {
+  if (bufRuido) return;
+  const sr = ctxAudio.sampleRate, n = sr * 2;          // 2 s de ruido blanco en bucle
+  bufRuido = ctxAudio.createBuffer(1, n, sr);
+  const d = bufRuido.getChannelData(0);
+  for (let i = 0; i < n; i++) d[i] = Math.random() * 2 - 1;
+}
+async function iniciaOsc() {
+  preparaContexto();
+  await ctxAudio.resume();
+  apagaFuente();
+  ganancia.gain.value = ganActual();
+  if (timbreActual() === 'ruido') {
+    preparaRuido();
+    const src = ctxAudio.createBufferSource();
+    src.buffer = bufRuido; src.loop = true;
+    fuente = src;
+  } else {
+    const osc = ctxAudio.createOscillator();
+    osc.type = (timbreActual() === 'sierra') ? 'sawtooth' : 'sine';
+    osc.frequency.value = frecActual();
+    fuente = osc;
+  }
+  fuente.connect(analOnda);
+  fuente.connect(analEspectro);
+  fuente.connect(ganancia);                  // la fuente interna SÍ suena
+  fuente.start();
+  tipoFuente = 'osc';
+  congelado = false;
+  avisa('Fuente interna sonando. Cambie timbre y frecuencia y mire ambas vistas.');
+}
+
+function detener() {
+  apagaFuente();
+  if (ctxAudio) ctxAudio.suspend();
+  avisa('Detenido.');
+}
+
+// Cambios de controles con la fuente interna sonando: reiniciarla al vuelo
+$('frec').addEventListener('input', () => {
+  refrescaEtiquetas();
+  if (tipoFuente === 'osc' && fuente && fuente.frequency)
+    fuente.frequency.value = frecActual();
+});
+document.querySelectorAll('input[name=timbre]').forEach(r =>
+  r.addEventListener('change', () => { if (tipoFuente === 'osc') iniciaOsc(); }));
+$('gan').addEventListener('input', () => {
+  refrescaEtiquetas();
+  if (ganancia) ganancia.gain.value = ganActual();
+});
+
+$('btnMic').addEventListener('click', iniciaMic);
+$('btnOsc').addEventListener('click', iniciaOsc);
+$('btnStop').addEventListener('click', detener);
+$('btnFreeze').addEventListener('click', () => {
+  congelado = !congelado;
+  $('btnFreeze').textContent = congelado ? '▶ Descongelar' : '❄ Congelar imagen';
+});
+
+// --- dibujo -------------------------------------------------------------------
+// Prepara un canvas nítido en pantallas retina; devuelve contexto y tamaño CSS.
+function lienzo(c) {
+  const dpr = window.devicePixelRatio || 1;
+  const w = c.clientWidth, h = 180;
+  if (c.width !== w * dpr) { c.width = w * dpr; c.height = h * dpr; }
+  const g = c.getContext('2d');
+  g.setTransform(dpr, 0, 0, dpr, 0, 0);
+  return { g, w, h };
+}
+const AZUL = getComputedStyle(document.documentElement).getPropertyValue('--linea');
+
+const datosOnda = new Float32Array(FFT_ONDA);
+function dibujaOnda() {
+  const { g, w, h } = lienzo($('cOnda'));
+  if (!congelado) g.clearRect(0, 0, w, h); else return;
+  const margen = 40, base = h / 2, anchoUtil = w - margen - 8;
+
+  // Se dibuja media ventana (nVisibles muestras): deja margen para que el
+  // disparo desplace el inicio sin salirse del buffer. El eje de tiempo se
+  // rotula con la duración REALMENTE visible (≈ 21 ms a 48 kHz).
+  const sr = ctxAudio ? ctxAudio.sampleRate : 48000;
+  const nVisibles = FFT_ONDA / 2;
+  const durVisMs = nVisibles / sr * 1000;             // duración visible en ms
+  g.strokeStyle = '#999'; g.lineWidth = 1;
+  g.beginPath(); g.moveTo(margen, base); g.lineTo(w - 8, base); g.stroke();
+  g.font = '11px Helvetica, Arial, sans-serif'; g.fillStyle = '#555';
+  g.fillText('amplitud', 4, 14);
+  for (let ms = 0; ms <= durVisMs; ms += 5) {
+    const x = margen + anchoUtil * ms / durVisMs;
+    g.beginPath(); g.moveTo(x, base - 3); g.lineTo(x, base + 3); g.stroke();
+    g.fillText(ms.toFixed(0) + ' ms', x - 10, h - 6);
+  }
+  if (!analOnda) return;
+  analOnda.getFloatTimeDomainData(datosOnda);
+
+  // disparo simple (como un osciloscopio): parte en un cruce por cero
+  // ascendente para que las señales periódicas se vean quietas
+  let ini = 0;
+  for (let i = 1; i < FFT_ONDA / 2; i++) {
+    if (datosOnda[i - 1] <= 0 && datosOnda[i] > 0) { ini = i; break; }
+  }
+  g.strokeStyle = AZUL; g.lineWidth = 1.5;
+  g.beginPath();
+  for (let i = 0; i < nVisibles; i++) {
+    const x = margen + anchoUtil * i / nVisibles;
+    const y = base - datosOnda[ini + i] * base * 0.9;
+    i ? g.lineTo(x, y) : g.moveTo(x, y);
+  }
+  g.stroke();
+}
+
+let datosEspectro = null;
+function dibujaEspectro() {
+  const { g, w, h } = lienzo($('cEspectro'));
+  if (!congelado) g.clearRect(0, 0, w, h); else return;
+  const margen = 40, anchoUtil = w - margen - 8, altoUtil = h - 26;
+
+  // ejes: frecuencia (0..F_VISTA_MAX, lineal) y nivel en dB relativos
+  g.font = '11px Helvetica, Arial, sans-serif'; g.fillStyle = '#555';
+  g.strokeStyle = '#999'; g.lineWidth = 1;
+  g.beginPath(); g.moveTo(margen, 6); g.lineTo(margen, 6 + altoUtil);
+  g.lineTo(w - 8, 6 + altoUtil); g.stroke();
+  for (let f = 0; f <= F_VISTA_MAX; f += 1000) {
+    const x = margen + anchoUtil * f / F_VISTA_MAX;
+    g.beginPath(); g.moveTo(x, 6 + altoUtil); g.lineTo(x, 9 + altoUtil); g.stroke();
+    g.fillText(f === 0 ? '0' : (f / 1000) + 'k', x - 8, h - 6);
+  }
+  g.fillText('Hz', w - 22, h - 6);
+  for (let db = DB_MAX; db >= DB_MIN; db -= 30) {
+    const y = 6 + altoUtil * (DB_MAX - db) / (DB_MAX - DB_MIN);
+    g.fillText(db + ' dB', 2, y + 4);
+  }
+  if (!analEspectro || !ctxAudio) return;
+  if (!datosEspectro) datosEspectro = new Float32Array(analEspectro.frequencyBinCount);
+  analEspectro.getFloatFrequencyData(datosEspectro);
+
+  const hzPorBin = ctxAudio.sampleRate / analEspectro.fftSize;
+  const nBins = Math.min(datosEspectro.length, Math.ceil(F_VISTA_MAX / hzPorBin));
+  g.strokeStyle = AZUL; g.lineWidth = 1.5;
+  g.beginPath();
+  for (let i = 0; i < nBins; i++) {
+    const x = margen + anchoUtil * (i * hzPorBin) / F_VISTA_MAX;
+    const db = Math.max(DB_MIN, Math.min(DB_MAX, datosEspectro[i]));
+    const y = 6 + altoUtil * (DB_MAX - db) / (DB_MAX - DB_MIN);
+    i ? g.lineTo(x, y) : g.moveTo(x, y);
+  }
+  g.stroke();
+}
+
+function cuadro() {
+  dibujaOnda();
+  dibujaEspectro();
+  requestAnimationFrame(cuadro);
+}
+requestAnimationFrame(cuadro);
+refrescaEtiquetas();
+</script>
+</body>
+</html>

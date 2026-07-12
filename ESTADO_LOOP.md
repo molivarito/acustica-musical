@@ -14,7 +14,7 @@ actividades > demo.
 | Sesión | Tema (corto) | plan | apuntes | demo | actividades | capítulo |
 |---|---|---|---|---|---|---|
 | s01 | Del golpe al tono | lista | lista | lista | lista | lista |
-| s02 | Ondas y espectrograma | pendiente | pendiente | pendiente | pendiente | pendiente |
+| s02 | Ondas y espectrograma | lista | lista | lista | lista | lista |
 | s03 | Modos de vibración | pendiente | pendiente | pendiente | pendiente | pendiente |
 | s04 | La receta del timbre | pendiente | pendiente | pendiente | pendiente | pendiente |
 | s05 | Altura percibida | pendiente | pendiente | pendiente | pendiente | pendiente |
@@ -77,3 +77,6 @@ diseno/02 §6.)
 - **s01**: estímulo de audio de la línea base (grabación propia:
   guitarra con batido) — inicia el banco de estímulos; 5 reglas para los
   kits; rúbrica OA3 impresa; lista del curso con carreras.
+- **s02**: grabaciones para el banco de estímulos (flauta con ataque
+  soploso, trueno); planilla de rúbrica OA3 con nómina y sorteo; lista
+  de apps de espectrograma recomendadas; recopilar tickets de s01.
