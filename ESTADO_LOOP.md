@@ -13,7 +13,7 @@ actividades > demo.
 
 | Sesión | Tema (corto) | plan | apuntes | demo | actividades | capítulo |
 |---|---|---|---|---|---|---|
-| s01 | Del golpe al tono | pendiente | pendiente | pendiente | pendiente | pendiente |
+| s01 | Del golpe al tono | lista | lista | lista | lista | lista |
 | s02 | Ondas y espectrograma | pendiente | pendiente | pendiente | pendiente | pendiente |
 | s03 | Modos de vibración | pendiente | pendiente | pendiente | pendiente | pendiente |
 | s04 | La receta del timbre | pendiente | pendiente | pendiente | pendiente | pendiente |
@@ -73,3 +73,7 @@ actividades > demo.
 
 (Se llena a medida que los planes declaren pendientes; ver también
 diseno/02 §6.)
+
+- **s01**: estímulo de audio de la línea base (grabación propia:
+  guitarra con batido) — inicia el banco de estímulos; 5 reglas para los
+  kits; rúbrica OA3 impresa; lista del curso con carreras.

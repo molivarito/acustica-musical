@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Demo — Tren de pulsos: del ritmo al tono (s01)</title>
+<style>
+  /* Estética editorial: fondo claro, serif para texto, sans para controles */
+  :root {
+    --tinta: #1a1a1a;
+    --acento: #7a2e2e;     /* rojo ladrillo sobrio */
+    --linea: #2e4a7a;      /* azul para la forma de onda */
+    --papel: #faf8f4;
+    --panel: #f0ece4;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0; padding: 1.2rem;
+    background: var(--papel); color: var(--tinta);
+    font-family: Georgia, 'Times New Roman', serif;
+    max-width: 900px; margin-inline: auto;
+  }
+  h1 { font-size: 1.35rem; margin: 0 0 .2rem; }
+  .sesion { font-family: Helvetica, Arial, sans-serif; font-size: .8rem;
+            letter-spacing: .06em; text-transform: uppercase; color: var(--acento); }
+  .bajada { font-style: italic; margin: .3rem 0 1rem; }
+  .panel {
+    background: var(--panel); border-radius: 6px; padding: .9rem 1rem;
+    font-family: Helvetica, Arial, sans-serif; font-size: .9rem;
+    display: flex; flex-wrap: wrap; gap: 1rem 2rem; align-items: center;
+  }
+  .ctrl { display: flex; flex-direction: column; gap: .25rem; min-width: 220px; flex: 1; }
+  .ctrl label { font-weight: bold; }
+  .valor { font-variant-numeric: tabular-nums; }
+  input[type=range] { width: 100%; accent-color: var(--acento); }
+  button {
+    font-family: Helvetica, Arial, sans-serif; font-size: .95rem;
+    padding: .5rem 1rem; border: 1px solid var(--tinta); border-radius: 4px;
+    background: white; cursor: pointer;
+  }
+  button.primario { background: var(--acento); color: white; border-color: var(--acento); }
+  fieldset { border: none; padding: 0; margin: 0; display: flex; gap: .8rem; }
+  canvas { width: 100%; height: 180px; display: block; background: white;
+           border: 1px solid #ccc; border-radius: 4px; margin-top: 1rem; }
+  .observar { border-left: 4px solid var(--acento); padding: .2rem 0 .2rem 1rem; margin-top: 1.2rem; }
+  .observar h2 { font-size: 1rem; margin: .2rem 0; }
+  ol { margin: .4rem 0; padding-left: 1.2rem; }
+  #anotaciones { font-family: Helvetica, Arial, sans-serif; font-size: .85rem; margin-top: .6rem; }
+  #anotaciones span { display: inline-block; background: var(--panel); border-radius: 3px;
+                      padding: .15rem .5rem; margin: .15rem .3rem 0 0; }
+</style>
+</head>
+<body>
+<p class="sesion">Acústica Musical UC · Sesión 01</p>
+<h1>Tren de pulsos: del ritmo al tono</h1>
+<p class="bajada">Suba lentamente la tasa de repetición y encuentre la zona
+donde su oído deja de contar golpes y empieza a oír una nota.</p>
+
+<div class="panel">
+  <div class="ctrl">
+    <label for="tasa">Tasa de repetición: <span class="valor" id="tasaVal">4,0 pulsos/s (Hz)</span></label>
+    <input type="range" id="tasa" min="0" max="1000" value="301">
+    <span>Período T = 1/f: <span class="valor" id="periodoVal">250 ms</span></span>
+  </div>
+  <div class="ctrl" style="min-width:180px">
+    <label>Timbre del pulso</label>
+    <fieldset id="timbre">
+      <label><input type="radio" name="timbre" value="seco" checked> seco (clic)</label>
+      <label><input type="radio" name="timbre" value="blando"> blando (golpe sordo)</label>
+    </fieldset>
+    <label for="gan">Ganancia: <span class="valor" id="ganVal">0,35</span></label>
+    <input type="range" id="gan" min="0" max="50" value="35">
+  </div>
+  <div class="ctrl" style="min-width:160px; flex:0">
+    <button id="btnPlay" class="primario">▶ Iniciar</button>
+    <button id="btnStop">■ Detener</button>
+    <button id="btnMarca">Anotar este valor</button>
+  </div>
+</div>
+
+<canvas id="lienzo"></canvas>
+<div id="anotaciones"><b>Valores anotados:</b> <i>(ninguno aún)</i></div>
+
+<div class="observar">
+  <h2>¿Qué observar?</h2>
+  <ol>
+    <li>¿En qué zona de tasas (pulsos por segundo) deja usted de oír golpes
+        separados y empieza a oír una altura? Anótela con el botón — primero
+        <b>prediga</b> el valor por escrito, después mida.</li>
+    <li>¿Cambia esa zona si el pulso es seco o blando? ¿Y entre compañeros
+        del grupo, con el mismo sonido?</li>
+    <li>Sobre la zona de transición: si duplica la tasa (p. ej. de 40 a
+        80 Hz), ¿qué le pasa a la <i>nota</i> que oye?</li>
+  </ol>
+</div>
+
+<script>
+'use strict';
+// ---------------------------------------------------------------------------
+// Demo s01 — tren de pulsos. Un solo concepto: la transición ritmo→tono.
+// El sonido se genera programando pulsos breves con un planificador de
+// adelanto (lookahead) sobre la Web Audio API. El profesor puede ajustar
+// abajo los límites del slider y las duraciones de los pulsos.
+// ---------------------------------------------------------------------------
+const F_MIN = 1, F_MAX = 100;      // límites del slider, en Hz (escala log)
+const LOOKAHEAD_MS = 25;           // cada cuánto corre el planificador
+const HORIZONTE_S = 0.12;          // cuánto futuro deja programado
+
+let ctxAudio = null;               // AudioContext: se crea solo tras un clic
+let ganancia = null;
+let sonando = false;
+let proximoPulso = 0;              // instante (en tiempo de audio) del próximo pulso
+let timerId = null;
+
+const $ = id => document.getElementById(id);
+const sliderTasa = $('tasa'), sliderGan = $('gan');
+
+// Slider logarítmico: posición 0..1000 → frecuencia F_MIN..F_MAX
+function tasaActual() {
+  const t = sliderTasa.value / 1000;
+  return F_MIN * Math.pow(F_MAX / F_MIN, t);
+}
+function ganActual() { return sliderGan.value / 100; }  // 0 .. 0.5 máx.
+function timbreActual() { return document.querySelector('input[name=timbre]:checked').value; }
+
+function refrescaEtiquetas() {
+  const f = tasaActual();
+  $('tasaVal').textContent = f.toFixed(1).replace('.', ',') + ' pulsos/s (Hz)';
+  const T = 1000 / f;
+  $('periodoVal').textContent = (T >= 100 ? T.toFixed(0) : T.toFixed(1)).replace('.', ',') + ' ms';
+  $('ganVal').textContent = ganActual().toFixed(2).replace('.', ',');
+}
+
+// --- síntesis de un pulso -------------------------------------------------
+// "seco": ráfaga de ruido de 1,5 ms (ancho de banda amplio, ataque duro).
+// "blando": seno de 160 Hz con caída de ~18 ms (golpe sordo, grave).
+let bufSeco = null;
+function preparaBuffers() {
+  const sr = ctxAudio.sampleRate;
+  const n = Math.round(sr * 0.0015);
+  bufSeco = ctxAudio.createBuffer(1, n, sr);
+  const d = bufSeco.getChannelData(0);
+  for (let i = 0; i < n; i++) d[i] = (Math.random() * 2 - 1) * (1 - i / n);
+}
+function programaPulso(t) {
+  if (timbreActual() === 'seco') {
+    const src = ctxAudio.createBufferSource();
+    src.buffer = bufSeco;
+    src.connect(ganancia);
+    src.start(t);
+  } else {
+    const osc = ctxAudio.createOscillator();
+    const env = ctxAudio.createGain();
+    osc.frequency.value = 160;
+    env.gain.setValueAtTime(1, t);
+    env.gain.exponentialRampToValueAtTime(0.001, t + 0.018);
+    osc.connect(env).connect(ganancia);
+    osc.start(t); osc.stop(t + 0.02);
+  }
+}
+
+// --- planificador ----------------------------------------------------------
+function planifica() {
+  const horizonte = ctxAudio.currentTime + HORIZONTE_S;
+  while (proximoPulso < horizonte) {
+    programaPulso(proximoPulso);
+    proximoPulso += 1 / tasaActual();   // lee la tasa en cada pulso: el slider responde al vuelo
+  }
+}
+
+async function iniciar() {
+  if (!ctxAudio) {
+    ctxAudio = new (window.AudioContext || window.webkitAudioContext)();
+    ganancia = ctxAudio.createGain();
+    ganancia.connect(ctxAudio.destination);
+    preparaBuffers();
+  }
+  await ctxAudio.resume();
+  ganancia.gain.value = ganActual();
+  if (!sonando) {
+    sonando = true;
+    proximoPulso = ctxAudio.currentTime + 0.05;
+    timerId = setInterval(planifica, LOOKAHEAD_MS);
+  }
+}
+function detener() {
+  sonando = false;
+  if (timerId) { clearInterval(timerId); timerId = null; }
+  if (ctxAudio) ctxAudio.suspend();
+}
+
+// --- visualización: tren de pulsos en una ventana de 1 s -------------------
+const lienzo = $('lienzo');
+function dibuja(ahora) {
+  const dpr = window.devicePixelRatio || 1;
+  const w = lienzo.clientWidth, h = 180;
+  if (lienzo.width !== w * dpr) { lienzo.width = w * dpr; lienzo.height = h * dpr; }
+  const g = lienzo.getContext('2d');
+  g.setTransform(dpr, 0, 0, dpr, 0, 0);
+  g.clearRect(0, 0, w, h);
+
+  // ejes: tiempo (1 s) y amplitud
+  const margen = 34, base = h / 2;
+  g.strokeStyle = '#999'; g.lineWidth = 1;
+  g.beginPath(); g.moveTo(margen, base); g.lineTo(w - 8, base); g.stroke();
+  g.font = '11px Helvetica, Arial, sans-serif'; g.fillStyle = '#555';
+  g.fillText('amplitud', 4, 14);
+  for (let ms = 0; ms <= 1000; ms += 250) {
+    const x = margen + (w - margen - 8) * ms / 1000;
+    g.beginPath(); g.moveTo(x, base - 3); g.lineTo(x, base + 3); g.stroke();
+    g.fillText(ms + ' ms', x - 12, h - 6);
+  }
+
+  // pulsos del período actual dentro de la ventana de 1 s
+  const f = tasaActual(), T = 1 / f, blando = timbreActual() === 'blando';
+  g.strokeStyle = getComputedStyle(document.body).getPropertyValue('--linea');
+  g.lineWidth = 1.5;
+  for (let t = 0; t < 1; t += T) {
+    const x = margen + (w - margen - 8) * t;
+    if (blando) {
+      // golpe sordo: senoide corta amortiguada
+      g.beginPath();
+      for (let i = 0; i <= 30; i++) {
+        const dt = i / 30 * 0.02;
+        const y = base - Math.sin(2 * Math.PI * 160 * dt) * Math.exp(-dt / 0.006) * base * 0.8;
+        const px = x + (w - margen - 8) * dt;
+        i ? g.lineTo(px, y) : g.moveTo(px, y);
+      }
+      g.stroke();
+    } else {
+      g.beginPath(); g.moveTo(x, base - base * 0.8); g.lineTo(x, base + base * 0.5); g.stroke();
+    }
+  }
+
+  // cursor de reproducción (aproximado, solo orientativo)
+  if (sonando && ctxAudio) {
+    const fase = (ctxAudio.currentTime % 1);
+    const x = margen + (w - margen - 8) * fase;
+    g.strokeStyle = getComputedStyle(document.body).getPropertyValue('--acento');
+    g.beginPath(); g.moveTo(x, 10); g.lineTo(x, h - 20); g.stroke();
+  }
+  requestAnimationFrame(dibuja);
+}
+requestAnimationFrame(dibuja);
+
+// --- anotaciones del taller -------------------------------------------------
+const marcas = [];
+$('btnMarca').addEventListener('click', () => {
+  marcas.push(tasaActual().toFixed(1).replace('.', ',') + ' Hz (' + timbreActual() + ')');
+  $('anotaciones').innerHTML = '<b>Valores anotados:</b> ' +
+    marcas.map(m => '<span>' + m + '</span>').join('');
+});
+
+// --- controles ---------------------------------------------------------------
+$('btnPlay').addEventListener('click', iniciar);
+$('btnStop').addEventListener('click', detener);
+sliderTasa.addEventListener('input', refrescaEtiquetas);
+sliderGan.addEventListener('input', () => {
+  refrescaEtiquetas();
+  if (ganancia) ganancia.gain.value = ganActual();  // tope 0,5: protección auditiva
+});
+document.querySelectorAll('input[name=timbre]').forEach(r =>
+  r.addEventListener('change', refrescaEtiquetas));
+refrescaEtiquetas();
+</script>
+</body>
+</html>
