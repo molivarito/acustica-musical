@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Demo — La voz por dentro: fuente y filtro (s13)</title>
+<style>
+  /* Estética editorial del curso: fondo claro, serif para texto, sans para controles */
+  :root {
+    --tinta: #1a1a1a;
+    --acento: #7a2e2e;     /* rojo ladrillo sobrio: filtro/formantes */
+    --linea: #2e4a7a;      /* azul: espectro (la señal que suena) */
+    --papel: #faf8f4;
+    --panel: #f0ece4;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0; padding: 1.2rem;
+    background: var(--papel); color: var(--tinta);
+    font-family: Georgia, 'Times New Roman', serif;
+    max-width: 900px; margin-inline: auto;
+  }
+  h1 { font-size: 1.35rem; margin: 0 0 .2rem; }
+  .sesion { font-family: Helvetica, Arial, sans-serif; font-size: .8rem;
+            letter-spacing: .06em; text-transform: uppercase; color: var(--acento); }
+  .bajada { font-style: italic; margin: .3rem 0 1rem; }
+  .panel {
+    background: var(--panel); border-radius: 6px; padding: .9rem 1rem;
+    font-family: Helvetica, Arial, sans-serif; font-size: .9rem;
+    display: flex; flex-wrap: wrap; gap: 1rem 2rem; align-items: flex-start;
+  }
+  .ctrl { display: flex; flex-direction: column; gap: .25rem; min-width: 220px; flex: 1; }
+  .ctrl label { font-weight: bold; }
+  .valor { font-variant-numeric: tabular-nums; }
+  input[type=range] { width: 100%; accent-color: var(--acento); }
+  button {
+    font-family: Helvetica, Arial, sans-serif; font-size: .95rem;
+    padding: .5rem 1rem; border: 1px solid var(--tinta); border-radius: 4px;
+    background: white; cursor: pointer;
+  }
+  button.primario { background: var(--acento); color: white; border-color: var(--acento); }
+  button.preset { padding: .35rem .7rem; font-size: 1rem; }
+  fieldset { border: none; padding: 0; margin: 0; display: flex; gap: .8rem; flex-wrap: wrap; }
+  .presets { display: flex; gap: .4rem; flex-wrap: wrap; align-items: center; }
+  .nota { font-size: .78rem; color: #555; font-family: Helvetica, Arial, sans-serif; }
+  canvas { width: 100%; height: 230px; display: block; background: white;
+           border: 1px solid #ccc; border-radius: 4px; margin-top: 1rem; }
+  .observar { border-left: 4px solid var(--acento); padding: .2rem 0 .2rem 1rem; margin-top: 1.2rem; }
+  .observar h2 { font-size: 1rem; margin: .2rem 0; }
+  ol { margin: .4rem 0; padding-left: 1.2rem; }
+</style>
+</head>
+<body>
+<p class="sesion">Acústica Musical UC · Sesión 13</p>
+<h1>La voz por dentro: fuente y filtro</h1>
+<p class="bajada">Mueva la altura de la fuente (f₀) y los dos formantes del
+filtro (F1, F2) por separado, y compruebe que la nota y la vocal son
+perillas independientes.</p>
+
+<div class="panel">
+  <div class="ctrl">
+    <label for="f0">Altura de la fuente f₀: <span class="valor" id="f0Val">140 Hz</span></label>
+    <input type="range" id="f0" min="0" max="1000" value="270">
+    <label style="margin-top:.4rem">Fuente</label>
+    <fieldset id="fuente">
+      <label><input type="radio" name="fuente" value="tono" checked> tono glotal (periódico)</label>
+      <label><input type="radio" name="fuente" value="soplo"> soplo (susurro)</label>
+    </fieldset>
+  </div>
+  <div class="ctrl">
+    <label for="f1">Formante 1 (F1): <span class="valor" id="f1Val">750 Hz</span></label>
+    <input type="range" id="f1" min="200" max="1000" value="750">
+    <label for="f2">Formante 2 (F2): <span class="valor" id="f2Val">1300 Hz</span></label>
+    <input type="range" id="f2" min="600" max="3000" value="1300">
+    <div class="presets">
+      <span><b>Vocales:</b></span>
+      <button class="preset" data-v="a">/a/</button>
+      <button class="preset" data-v="e">/e/</button>
+      <button class="preset" data-v="i">/i/</button>
+      <button class="preset" data-v="o">/o/</button>
+      <button class="preset" data-v="u">/u/</button>
+    </div>
+    <span class="nota">Valores típicos aproximados de las vocales del
+    español (voz adulta); los valores finos varían entre hablantes.</span>
+  </div>
+  <div class="ctrl" style="min-width:160px; flex:0">
+    <button id="btnPlay" class="primario">▶ Iniciar</button>
+    <button id="btnStop">■ Detener</button>
+    <label for="gan" style="margin-top:.4rem">Ganancia: <span class="valor" id="ganVal">0,30</span></label>
+    <input type="range" id="gan" min="0" max="50" value="30">
+  </div>
+</div>
+
+<canvas id="lienzo"></canvas>
+
+<div class="observar">
+  <h2>¿Qué observar?</h2>
+  <ol>
+    <li>Fije f₀ y recorra las vocales con los botones: ¿cambia la altura
+        que oye? ¿Qué se movió en el gráfico — las líneas del espectro o
+        la envolvente roja?</li>
+    <li>Fije una vocal y deslice f₀: ¿qué cambia y qué queda quieto ahora?
+        ¿Quién dibuja la envolvente y quién la "rellena"?</li>
+    <li>Cambie la fuente a <b>soplo (susurro)</b>: ¿se sigue reconociendo la
+        vocal sin altura? Luego, con tono glotal, suba f₀ sobre ~600 Hz:
+        ¿puede seguir distinguiendo /e/ de /i/? ¿Por qué? (Mire cuántos
+        armónicos quedan bajo la envolvente.)</li>
+  </ol>
+</div>
+
+<script>
+'use strict';
+// ---------------------------------------------------------------------------
+// Demo s13 — fuente y filtro. Un solo concepto: en la voz, la fuente (los
+// pliegues, f0 = altura) y el filtro (el tracto, formantes F1/F2 = vocal)
+// son independientes.
+//
+// Síntesis: una fuente rica (sierra = "zumbido glotal"; o ruido = susurro)
+// pasa por dos filtros pasa-banda EN PARALELO (los dos primeros formantes)
+// más un camino grave fijo que le da "cuerpo". Es el esquema clásico de
+// síntesis de formantes en paralelo, reducido a 2 formantes: suficiente
+// para que las 5 vocales del español se distingan.
+//
+// El profesor puede ajustar abajo: PRESETS (valores F1/F2 de cada vocal,
+// típicos aproximados — los valores finos por hablante quedan
+// [POR VERIFICAR]), los Q de los formantes y los límites de f0.
+// ---------------------------------------------------------------------------
+const F0_MIN = 80, F0_MAX = 880;         // rango de f0 en Hz (slider logarítmico);
+                                         // el tope agudo permite el experimento "soprano"
+const PRESETS = {                        // [F1, F2] en Hz — típicos aproximados
+  a: [750, 1300],
+  e: [450, 1950],
+  i: [300, 2350],
+  o: [450, 900],
+  u: [330, 700]
+};
+const Q1 = 7, Q2 = 10;                   // selectividad de cada formante
+const F_MAX_GRAF = 4000;                 // techo del gráfico, Hz
+
+let ctxAudio = null;
+let master = null, analizador = null;
+let bp1 = null, bp2 = null, lpCuerpo = null;   // filtro: 2 formantes + cuerpo grave
+let g1 = null, g2 = null, gCuerpo = null;
+let entradaFiltro = null;                // nodo donde se conecta la fuente activa
+let fuenteNodo = null;                   // oscilador o ruido en curso
+let sonando = false;
+let bufRuido = null;
+
+const $ = id => document.getElementById(id);
+const sf0 = $('f0'), sf1 = $('f1'), sf2 = $('f2'), sgan = $('gan');
+
+// Slider logarítmico de f0: posición 0..1000 → F0_MIN..F0_MAX
+function f0Actual() {
+  return F0_MIN * Math.pow(F0_MAX / F0_MIN, sf0.value / 1000);
+}
+function ganActual() { return sgan.value / 100; }   // 0 .. 0,5 máx. (protección auditiva)
+function fuenteActual() { return document.querySelector('input[name=fuente]:checked').value; }
+
+function refrescaEtiquetas() {
+  $('f0Val').textContent = f0Actual().toFixed(0) + ' Hz';
+  $('f1Val').textContent = sf1.value + ' Hz';
+  $('f2Val').textContent = sf2.value + ' Hz';
+  $('ganVal').textContent = ganActual().toFixed(2).replace('.', ',');
+}
+
+// --- grafo de audio ---------------------------------------------------------
+function preparaGrafo() {
+  const sr = ctxAudio.sampleRate;
+
+  // ruido blanco de 2 s en bucle (fuente "soplo")
+  const n = sr * 2;
+  bufRuido = ctxAudio.createBuffer(1, n, sr);
+  const d = bufRuido.getChannelData(0);
+  for (let i = 0; i < n; i++) d[i] = Math.random() * 2 - 1;
+
+  // entrada común del filtro
+  entradaFiltro = ctxAudio.createGain();
+  entradaFiltro.gain.value = 1;
+
+  // formante 1 y 2: pasa-banda en paralelo con su ganancia
+  bp1 = ctxAudio.createBiquadFilter(); bp1.type = 'bandpass'; bp1.Q.value = Q1;
+  bp2 = ctxAudio.createBiquadFilter(); bp2.type = 'bandpass'; bp2.Q.value = Q2;
+  g1 = ctxAudio.createGain(); g1.gain.value = 1.0;
+  g2 = ctxAudio.createGain(); g2.gain.value = 0.8;
+
+  // camino grave fijo: le devuelve "cuerpo" a la fundamental
+  lpCuerpo = ctxAudio.createBiquadFilter(); lpCuerpo.type = 'lowpass';
+  lpCuerpo.frequency.value = 250; lpCuerpo.Q.value = 0.5;
+  gCuerpo = ctxAudio.createGain(); gCuerpo.gain.value = 0.25;
+
+  master = ctxAudio.createGain(); master.gain.value = ganActual();
+  analizador = ctxAudio.createAnalyser();
+  analizador.fftSize = 4096; analizador.smoothingTimeConstant = 0.75;
+
+  entradaFiltro.connect(bp1).connect(g1).connect(master);
+  entradaFiltro.connect(bp2).connect(g2).connect(master);
+  entradaFiltro.connect(lpCuerpo).connect(gCuerpo).connect(master);
+  master.connect(analizador).connect(ctxAudio.destination);
+
+  aplicaFormantes(true);
+}
+
+// crea y conecta la fuente elegida (detiene la anterior si la hay)
+function enciendeFuente() {
+  if (fuenteNodo) { try { fuenteNodo.stop(); } catch (e) {} fuenteNodo.disconnect(); }
+  if (fuenteActual() === 'tono') {
+    // "zumbido glotal": sierra (serie armónica completa, amplitudes 1/n)
+    const osc = ctxAudio.createOscillator();
+    osc.type = 'sawtooth';
+    osc.frequency.value = f0Actual();
+    const g = ctxAudio.createGain(); g.gain.value = 0.55;   // compensación de nivel
+    osc.connect(g).connect(entradaFiltro);
+    osc.start();
+    fuenteNodo = osc; fuenteNodo._gPre = g;
+  } else {
+    // susurro: ruido por el MISMO filtro — el filtro sin la fuente periódica
+    const src = ctxAudio.createBufferSource();
+    src.buffer = bufRuido; src.loop = true;
+    const g = ctxAudio.createGain(); g.gain.value = 0.7;
+    src.connect(g).connect(entradaFiltro);
+    src.start();
+    fuenteNodo = src; fuenteNodo._gPre = g;
+  }
+}
+
+// lleva los filtros a los sliders (suave, sin clics)
+function aplicaFormantes(inmediato) {
+  if (!ctxAudio) return;
+  const t = ctxAudio.currentTime, tau = inmediato ? 0.001 : 0.03;
+  bp1.frequency.setTargetAtTime(+sf1.value, t, tau);
+  bp2.frequency.setTargetAtTime(+sf2.value, t, tau);
+}
+function aplicaF0() {
+  if (ctxAudio && fuenteNodo && fuenteNodo.frequency)
+    fuenteNodo.frequency.setTargetAtTime(f0Actual(), ctxAudio.currentTime, 0.03);
+}
+
+async function iniciar() {
+  if (!ctxAudio) {
+    // el AudioContext se crea solo tras la interacción del usuario (regla de los navegadores)
+    ctxAudio = new (window.AudioContext || window.webkitAudioContext)();
+    preparaGrafo();
+  }
+  await ctxAudio.resume();
+  master.gain.value = ganActual();
+  if (!sonando) { enciendeFuente(); sonando = true; }
+}
+function detener() {
+  if (fuenteNodo) { try { fuenteNodo.stop(); } catch (e) {} fuenteNodo.disconnect(); fuenteNodo = null; }
+  sonando = false;
+  if (ctxAudio) ctxAudio.suspend();
+}
+
+// --- visualización: espectro + envolvente del filtro ------------------------
+const lienzo = $('lienzo');
+const nResp = 256;
+const frecResp = new Float32Array(nResp);
+const mag1 = new Float32Array(nResp), mag2 = new Float32Array(nResp),
+      magL = new Float32Array(nResp), fase = new Float32Array(nResp);
+for (let i = 0; i < nResp; i++) frecResp[i] = 20 + (F_MAX_GRAF - 20) * i / (nResp - 1);
+
+function dibuja() {
+  const dpr = window.devicePixelRatio || 1;
+  const w = lienzo.clientWidth, h = 230;
+  if (lienzo.width !== w * dpr) { lienzo.width = w * dpr; lienzo.height = h * dpr; }
+  const g = lienzo.getContext('2d');
+  g.setTransform(dpr, 0, 0, dpr, 0, 0);
+  g.clearRect(0, 0, w, h);
+
+  const mIzq = 40, mDer = 10, mArr = 12, mAba = 26;
+  const anc = w - mIzq - mDer, alt = h - mArr - mAba;
+  const xDeFrec = f => mIzq + anc * f / F_MAX_GRAF;
+
+  // ejes y grilla
+  g.font = '11px Helvetica, Arial, sans-serif';
+  g.strokeStyle = '#ddd'; g.fillStyle = '#555'; g.lineWidth = 1;
+  for (let f = 0; f <= F_MAX_GRAF; f += 500) {
+    const x = xDeFrec(f);
+    g.beginPath(); g.moveTo(x, mArr); g.lineTo(x, mArr + alt); g.stroke();
+    g.fillText(f, x - (f ? 12 : 2), h - 8);
+  }
+  g.fillText('frecuencia (Hz)', w - 105, h - 8);
+  g.save(); g.translate(12, mArr + alt / 2); g.rotate(-Math.PI / 2);
+  g.fillText('nivel (dB rel.)', -32, 0); g.restore();
+  g.strokeStyle = '#999';
+  g.strokeRect(mIzq, mArr, anc, alt);
+
+  if (analizador) {
+    // espectro de lo que SUENA (azul): AnalyserNode, eje lineal en Hz
+    const nBins = analizador.frequencyBinCount;
+    const datos = new Uint8Array(nBins);
+    analizador.getByteFrequencyData(datos);
+    const hzPorBin = ctxAudio.sampleRate / analizador.fftSize;
+    g.strokeStyle = getComputedStyle(document.body).getPropertyValue('--linea');
+    g.lineWidth = 1.2;
+    g.beginPath();
+    let primero = true;
+    for (let i = 0; i < nBins; i++) {
+      const f = i * hzPorBin;
+      if (f > F_MAX_GRAF) break;
+      const y = mArr + alt * (1 - datos[i] / 255);
+      primero ? g.moveTo(xDeFrec(f), y) : g.lineTo(xDeFrec(f), y);
+      primero = false;
+    }
+    g.stroke();
+
+    // envolvente del filtro (rojo, punteado): respuesta combinada de los
+    // dos formantes + cuerpo, calculada con getFrequencyResponse
+    bp1.getFrequencyResponse(frecResp, mag1, fase);
+    bp2.getFrequencyResponse(frecResp, mag2, fase);
+    lpCuerpo.getFrequencyResponse(frecResp, magL, fase);
+    g.strokeStyle = getComputedStyle(document.body).getPropertyValue('--acento');
+    g.setLineDash([5, 4]); g.lineWidth = 1.6;
+    g.beginPath();
+    let maxM = 0;
+    const comb = new Array(nResp);
+    for (let i = 0; i < nResp; i++) {
+      comb[i] = mag1[i] * 1.0 + mag2[i] * 0.8 + magL[i] * 0.25;
+      if (comb[i] > maxM) maxM = comb[i];
+    }
+    for (let i = 0; i < nResp; i++) {
+      const y = mArr + alt * (1 - 0.9 * comb[i] / maxM);
+      i ? g.lineTo(xDeFrec(frecResp[i]), y) : g.moveTo(xDeFrec(frecResp[i]), y);
+    }
+    g.stroke(); g.setLineDash([]);
+
+    // marcadores F1, F2 y f0
+    g.fillStyle = getComputedStyle(document.body).getPropertyValue('--acento');
+    [[+sf1.value, 'F1'], [+sf2.value, 'F2']].forEach(([f, rot]) => {
+      g.fillText(rot, xDeFrec(f) - 7, mArr + 12);
+    });
+    if (fuenteActual() === 'tono') {
+      const xf0 = xDeFrec(f0Actual());
+      g.fillStyle = '#555';
+      g.beginPath();
+      g.moveTo(xf0, mArr + alt); g.lineTo(xf0 - 5, mArr + alt + 8); g.lineTo(xf0 + 5, mArr + alt + 8);
+      g.closePath(); g.fill();
+      g.fillText('f₀', xf0 + 6, mArr + alt + 8);
+    }
+  }
+  requestAnimationFrame(dibuja);
+}
+requestAnimationFrame(dibuja);
+
+// --- controles ---------------------------------------------------------------
+$('btnPlay').addEventListener('click', iniciar);
+$('btnStop').addEventListener('click', detener);
+sf0.addEventListener('input', () => { refrescaEtiquetas(); aplicaF0(); });
+sf1.addEventListener('input', () => { refrescaEtiquetas(); aplicaFormantes(false); });
+sf2.addEventListener('input', () => { refrescaEtiquetas(); aplicaFormantes(false); });
+sgan.addEventListener('input', () => {
+  refrescaEtiquetas();
+  if (master) master.gain.value = ganActual();   // tope 0,5: protección auditiva
+});
+document.querySelectorAll('input[name=fuente]').forEach(r =>
+  r.addEventListener('change', () => { if (sonando) enciendeFuente(); }));
+document.querySelectorAll('button.preset').forEach(b =>
+  b.addEventListener('click', () => {
+    const [F1, F2] = PRESETS[b.dataset.v];
+    sf1.value = F1; sf2.value = F2;
+    refrescaEtiquetas(); aplicaFormantes(false);
+  }));
+refrescaEtiquetas();
+</script>
+</body>
+</html>
