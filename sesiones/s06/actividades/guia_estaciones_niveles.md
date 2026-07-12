@@ -7,7 +7,9 @@ medición), debut en el curso.
 los roles **rotan al cambiar de estación** (el registrador saliente
 pasa a ejecutar, etc.). El registrador de turno llena la **planilla del
 grupo** (última página): es el insumo del mini-informe — sin planilla
-no hay informe.
+no hay informe. Al **dorso de la planilla** va impreso el formulario
+de 4 casillas del mini-informe (se llena en el cierre, desde el
+minuto 60).
 **Materiales por grupo**: ≥2 celulares con app SPL (misma app en ambos
 si se puede), 1 celular emisor de tonos, esta guía, lápiz. E1 usa el
 equipo común (interfaz + micrófono + notebook).
@@ -106,11 +108,13 @@ mitad del tiempo — norma chilena **[POR VERIFICAR: DS 594]**):
 | E4 | (respuestas 1–4 al margen) | | — |
 | E5 | | | |
 
-## Pauta del mini-informe SPL (redacción en aula, 7 min, media página)
+## Pauta del mini-informe SPL (formulario en aula, desde el minuto 60)
 
-Con la planilla completa, el grupo redacta y entrega **media página**
-con exactamente cuatro puntos (OA4.2; es, junto con las hojas
-isofónicas del módulo 1, el taller de la semana):
+Con la planilla completa, el grupo llena y entrega el **formulario de
+4 casillas rotuladas** impreso **al dorso de esta planilla** — una
+casilla por punto, **sin prosa**: frases telegráficas o datos directos
+(OA4.2; es, junto con las hojas isofónicas del módulo 1, el taller de
+la semana):
 
 1. **Pregunta elegida**: una de las cinco estaciones, en una frase.
 2. **El dato**: valor(es) con unidad y condiciones completas.
@@ -119,7 +123,7 @@ isofónicas del módulo 1, el taller de la semana):
 4. **Límite**: qué NO se puede afirmar con esta medición y por qué
    (calibración, AGC, app, posición).
 
-*Rúbrica rápida*: **logrado** = los 4 puntos, regla bien usada,
+*Rúbrica rápida*: **logrado** = las 4 casillas, regla bien usada,
 condiciones completas · **parcial** = dato correcto pero interpretación
 o condiciones cojas · **incipiente** = número sin condiciones o regla
 mal aplicada.

@@ -1,7 +1,7 @@
 # Banco de estímulos — grabaciones del profesor (s01–s07)
 
 **Qué es**: la lista única y consolidada de TODAS las grabaciones y
-estímulos de audio que los planes de s01–s05 declaran y que **solo el
+estímulos de audio que los planes de s01–s07 declaran y que **solo el
 profesor puede producir** (pendiente 7 de `diseno/02_metodologia.md`
 §6: banco de ~15 estímulos para el semestre). Hasta la revisión de
 alineamiento del 2026-07-12 estas grabaciones vivían dispersas en 5
@@ -9,10 +9,16 @@ planes; aquí tienen dueño (el profesor) y fecha.
 
 **Recomendación operativa**: agendar UNA sesión de grabación antes de
 s01 y despachar de una vez todo lo que no dependa de conseguir
-instrumentos ajenos (ítems 1–2 y 5–7 salen con guitarra + flauta +
-vaso en una tarde). El resto, a más tardar la semana previa a su
-sesión. Al abrir s06–s15 esta lista se extiende con los estímulos
-nuevos que declaren esos planes.
+instrumentos ajenos (ítems 1–2, 5–7 **y 10–12** salen con guitarra +
+flauta + vaso + la demo de síntesis de s04 en una tarde). El resto, a
+más tardar la semana previa a su sesión. Los ítems **#10–#12 (Prueba
+1) se mueven a esta sesión pre-s01** porque no dependen de nada del
+semestre (vaso, síntesis con la demo de s04, reedición del ítem #5 +
+flauta) y así se desinfla el pico docente de las semanas s06–s07
+(revisión de alineamiento 2026-07-12, P4): en la semana de s07 quedan
+solo las figuras (~1 h con los archivos ya hechos) y la prueba en el
+equipo de sala. Al abrir s08–s15 esta lista se extiende con los
+estímulos nuevos que declaren esos planes.
 
 | # | Estímulo | Sesión donde se usa (bloque) | Estado | Plazo sugerido |
 |---|---|---|---|---|
@@ -25,9 +31,9 @@ nuevos que declaren esos planes.
 | 7 | Línea de bajo con armónicos claros (para reproducir en parlante de celular) | s05 — escucha del día "el bajo del parlante chico" (m1, 5–20′) | por grabar | semana previa a s05 (probar ANTES en el parlante del celular) |
 | 8 | Dos octavas de piano, una grave y una aguda (limpias) | s05 — experiencia guiada II, octavas estiradas (m2, 25–48′) | por grabar o conseguir con licencia | semana previa a s05 |
 | 9 | Fragmento musical de mezcla completa con bajo prominente y brillo (para reproducir fuerte y luego muy suave: a bajo nivel deben "perderse" el bajo y el aire) | s06 — escucha del día "la mezcla que pierde el bajo" (m1, 8–23′) | por grabar o conseguir con licencia | semana previa a s06 (probar ANTES en el equipo de la sala a ambos niveles) |
-| 10 | **Vaso golpeado ×2 (Prueba 1, estímulo 1)**: el MISMO vaso sobre superficie blanda, golpeado igual (misma baqueta/lápiz, mismo punto del borde) dos veces: (1) libre, dejándolo sonar hasta extinguirse (~2 s); (2) con un dedo apoyado suavemente en el borde — debe oírse claramente más opaco y con decaimiento mucho más corto. Silencio de ~1,5 s entre golpes; un solo archivo | s07 — Prueba 1, Parte A (escucha escrita OA3; se reproduce en el min 10, dos veces) | por grabar | semana previa a s07; verificar en el espectrograma que en (2) desaparecen/decaen antes las líneas agudas, y PROBAR en el equipo de la sala |
-| 11 | **Tono complejo con y sin fundamental (Prueba 1, estímulo 2)**: sonido sintetizado (con la demo de síntesis aditiva de s04 o un editor), f₁ = 200 Hz con 6 armónicos (200–1200 Hz) de amplitudes decrecientes, ~3 s; luego silencio de ~1,5 s y la MISMA síntesis con el parcial de 200 Hz eliminado del todo. La altura percibida NO debe cambiar; el timbre se adelgaza. Un solo archivo, misma sonoridad aproximada en ambas versiones | s07 — Prueba 1, Parte B.2 (OA2.1; se reproduce en el min 25, dos veces) | por sintetizar | semana previa a s07; verificar con espectro que la versión 2 no tiene NADA de energía en 200 Hz, y probar en el equipo de la sala (que el parlante no "reponga" el fundamental por distorsión: escuchar a nivel moderado) |
-| 12 | **Par vaso + flauta (Prueba 1, estímulo 3 y fuente de la Figura 1)**: un golpe de vaso (puede reeditarse el ítem 5) seguido, tras ~1 s, de una nota de flauta sostenida ~3 s en La4 = 440 Hz con parciales claros. Del archivo definitivo se genera el espectrograma impreso (Fig. 1: 0–4000 Hz lineal, 0–6 s); el orden vaso→flauta del audio debe coincidir con la figura | s07 — Prueba 1, Parte B.1 (OA4.1, OA1.1; se reproduce en el min 25, dos veces) | por grabar/editar | semana previa a s07; generar la Fig. 1 desde ESTE archivo y verificar que las líneas del vaso se vean no equiespaciadas y las de la flauta equiespaciadas con f₁ legible ≈ 440 Hz |
+| 10 | **Vaso golpeado ×2 (Prueba 1, estímulo 1)**: el MISMO vaso sobre superficie blanda, golpeado igual (misma baqueta/lápiz, mismo punto del borde) dos veces: (1) libre, dejándolo sonar hasta extinguirse (~2 s); (2) con un dedo apoyado suavemente en el borde — debe oírse claramente más opaco y con decaimiento mucho más corto. Silencio de ~1,5 s entre golpes; un solo archivo | s07 — Prueba 1, Parte A (escucha escrita OA3; se reproduce en el min 10, dos veces) | por grabar | **pre-s01 (sesión de grabación, junto con ítems 1–2 y 5–7)** — no depende de nada del semestre (P4, revisión 2026-07-12); verificar en el espectrograma que en (2) desaparecen/decaen antes las líneas agudas; PROBAR en el equipo de la sala la semana previa a s07 |
+| 11 | **Tono complejo con y sin fundamental (Prueba 1, estímulo 2)**: sonido sintetizado (con la demo de síntesis aditiva de s04 o un editor), f₁ = 200 Hz con 6 armónicos (200–1200 Hz) de amplitudes decrecientes, ~3 s; luego silencio de ~1,5 s y la MISMA síntesis con el parcial de 200 Hz eliminado del todo. La altura percibida NO debe cambiar; el timbre se adelgaza. Un solo archivo, misma sonoridad aproximada en ambas versiones | s07 — Prueba 1, Parte B.2 (OA2.2; se reproduce en el min 25, dos veces) | por sintetizar | **pre-s01 (sesión de grabación)** — se sintetiza con la demo de s04 o un editor, no depende de nada del semestre (P4, revisión 2026-07-12); verificar con espectro que la versión 2 no tiene NADA de energía en 200 Hz; probar en el equipo de la sala la semana previa a s07 (que el parlante no "reponga" el fundamental por distorsión: escuchar a nivel moderado) |
+| 12 | **Par vaso + flauta (Prueba 1, estímulo 3 y fuente de la Figura 1)**: un golpe de vaso (puede reeditarse el ítem 5) seguido, tras ~1 s, de una nota de flauta sostenida ~3 s en La4 = 440 Hz con parciales claros. Del archivo definitivo se genera el espectrograma impreso (Fig. 1: 0–4000 Hz lineal, 0–6 s); el orden vaso→flauta del audio debe coincidir con la figura | s07 — Prueba 1, Parte B.1 (OA4.1, OA1.1; se reproduce en el min 25, dos veces) | por grabar/editar | **pre-s01 (sesión de grabación)** — reedición del ítem #5 + flauta, no depende de nada del semestre (P4, revisión 2026-07-12); la Fig. 1 se genera desde ESTE archivo (puede quedar para la semana de s07, ~1 h con el audio ya hecho) y debe verificarse que las líneas del vaso se vean no equiespaciadas y las de la flauta equiespaciadas con f₁ legible ≈ 440 Hz |
 
 **Verificación al grabar** (vale para todos): reproducir el archivo en
 el equipo de la sala (o el parlante que corresponda) y mirar su

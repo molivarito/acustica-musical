@@ -34,7 +34,7 @@ actividades > demo.
 | Control | Estado |
 |---|---|
 | revision-alineamiento al cerrar s05 | **lista** — reporte en `diseno/revision_20260712.md`; 5 correcciones recomendadas antes de abrir s06 (P1–P5) |
-| revision-alineamiento al cerrar s10 | pendiente |
+| revision-alineamiento al cerrar s10 | **lista** — reporte en `diseno/revision_20260712_s10.md`; 5 correcciones recomendadas antes de abrir s11 (P1–P5: cierres de s06 m2 y s08 m1, rotulación OA2.2 en Prueba 1, plazos del banco #10–#12, hoja isofónica) |
 | revision-alineamiento final (s15) | pendiente |
 | Compilación libro/LIBRO_CURSO.md (+PDF si hay pandoc) | pendiente |
 | RESUMEN_PARA_PATO.md | pendiente |

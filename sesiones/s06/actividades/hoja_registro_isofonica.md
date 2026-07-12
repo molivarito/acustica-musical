@@ -4,6 +4,9 @@
 (leer y producir una curva de sonoridad). **Individual** (una hoja por
 estudiante), trabajando por turnos en el notebook del grupo
 (~5 min por persona) con **audífonos**.
+**Roles mientras rotan los turnos** (como en el plan): uno mide con
+audífonos, otro registra la puesta en común del grupo y los otros dos
+resuelven el ítem de proyección de la sección 3.
 **Materiales**: notebook con `demo_decibel_sonoridad.html`, audífonos
 personales, esta hoja.
 
@@ -26,10 +29,15 @@ Con audífonos puestos y la ganancia de la demo en su valor por defecto:
 2. Para cada frecuencia de prueba: alterne referencia↔prueba, mueva el
    nivel del tono de prueba hasta que ambos suenen **igual de
    fuertes**, y presione "Marcar punto". La demo dibuja su curva.
+   **Mínimo irrenunciable ★: 125, 1000 (referencia) y 4000 Hz** —
+   tómelos con calma (subir, pasarse, volver: 1,5–2 min por
+   frecuencia está bien). **250, 2000 y 8000 Hz son opcionales**,
+   solo si le sobra tiempo: la forma de la curva se obtiene igual con
+   3 puntos bien tomados, y valen más que 5 apurados.
 3. Copie sus valores a la tabla (el nivel es RELATIVO, en dB de la
    demo — sin calibración no son dB SPL; la forma es lo que vale):
 
-| Frecuencia (Hz) | 125 | 250 | 1000 (ref.) | 2000 | 4000 | 8000 |
+| Frecuencia (Hz) | ★ 125 | 250 | ★ 1000 (ref.) | 2000 | ★ 4000 | 8000 |
 |---|---|---|---|---|---|---|
 | Nivel igualado (dB rel.) | | | (fijo) | | | |
 

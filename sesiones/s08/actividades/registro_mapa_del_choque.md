@@ -61,7 +61,10 @@ semitonos? ______________________
 
 ## Cierre en aula
 
-Al pasar el vocero, cada integrante aporta su F3 en semitonos a la
-recta del pizarrón (el "mapa del curso"). Entregue esta hoja al salir
+**Último ítem del taller (antes de la síntesis)**: consoliden los 4
+F3 del grupo (en semitonos) en la **tira de frontera F3** del grupo —
+un punto por integrante, con nombre chico al lado. Solo el **vocero**
+pega la tira en la recta del pizarrón (el "mapa del curso"): 5 tiras,
+no 20 pegadas. Entregue esta hoja al salir
 del módulo: se archiva sin nota. El taller evaluado de esta semana es
 la radiografía espectral del módulo 2.

@@ -24,20 +24,21 @@ estudiante: mantiene el criterio parejo y es más rápido.
 | B.1b | OA4.1 | OA1.1 | 2 | aplicación |
 | B.1c | OA4.1 | — | 2 | aplicación |
 | B.1d | OA1.1 | OA4.1 | 2 | aplicación |
-| B.2a | OA2.1 | — | 2 | básico |
-| B.2b | OA2.1 | — | 4 | aplicación |
+| B.2a | OA2.2 | — | 2 | básico |
+| B.2b | OA2.2 | — | 4 | aplicación |
 | B.3a | OA1.1 | — | 2 | aplicación |
 | B.3b | OA1.1 | OA1.2 | 2 | aplicación |
 | C.1a–b | OA1.2 | — | 4 | aplicación |
 | C.1c | OA1.2 | — | 2 | aplicación |
 | C.2a–b | OA1.2 | — | 4 | aplicación |
-| C.2c | OA2.1 | — | 2 | aplicación |
+| C.2c | OA2.2 | — | 2 | aplicación |
 | C.3a–d | OA4.2 | — | 8 | **básico** (contenido s06: solo leer un nivel, +10/+3, isofónica) |
 | D.1 | OA2.1 | — | 3 | básico |
 | D.2 | OA4.1 | — | 3 | básico |
 | D.3 | OA2.1 | OA4.1 | 4 | aplicación |
 
-Cobertura: OA3.1 = 16 · OA1.1 ≈ 8 · OA1.2 = 10 · OA2.1 ≈ 13 ·
+Cobertura: OA3.1 = 16 · OA1.1 ≈ 8 · OA1.2 = 10 · OA2.1 ≈ 7 ·
+OA2.2 = 8 (fundamental ausente, enseñada a fondo en s05: B.2 y C.2c) ·
 OA4.1 ≈ 9 · OA4.2 = 8. Lo de s06 (OA4.2) entra SOLO con ítems básicos,
 como exige la regla de dimensionamiento.
 

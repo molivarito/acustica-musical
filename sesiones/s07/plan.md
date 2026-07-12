@@ -1,7 +1,10 @@
 # Sesión 07 — Prueba 1 (módulo 1) + audición liviana: batidos (módulo 2)
 
 **Objetivos que cubre**: la **Prueba 1** evalúa OA1.1, OA1.2, OA2.1,
-OA4.1 y OA4.2 (contenido de s01–s06; lo de s06 solo con ítems básicos,
+OA2.2 (fundamental ausente, enseñada a fondo en s05 — ítems B.2 y
+C.2c: explicar por escrito el fenómeno ya vivido ES evaluable como
+OA2.2), OA4.1 y OA4.2 (contenido de s01–s06; lo de s06 solo con ítems
+básicos,
 regla de dimensionamiento de metodología §4 e instrucciones 6b) e
 incluye una **escucha escrita corta evaluada con la rúbrica OA3**
 (cuenta en la nota de la prueba, metodología §4). El módulo 2 **siembra
@@ -85,11 +88,15 @@ estímulos). Duración diseñada ≤60′ dentro de 70′: 7′ de instalación 
   del par vaso/flauta (Fig. 1), espectros de la misma nota de guitarra
   pulsada en dos puntos (Fig. 2), curvas isofónicas simplificadas
   (Fig. 3). El profesor las genera esta semana desde las grabaciones
-  del banco (#10–#12) con el software del curso y las imprime en la
-  hoja aparte (1 por estudiante). [Detalle en `prueba1.md`.]
-- **Estímulos de audio de la prueba**: grabar los ítems #10, #11 y #12
-  del banco (`materiales/banco_estimulos.md`, filas agregadas por esta
-  sesión) y PROBARLOS en el equipo de la sala.
+  del banco (#10–#12, **ya producidas en la sesión de grabación
+  pre-s01** — revisión de alineamiento 2026-07-12, P4) con el software
+  del curso y las imprime en la hoja aparte (1 por estudiante): ~1 h
+  con los archivos ya hechos. [Detalle en `prueba1.md`.]
+- **Estímulos de audio de la prueba**: los ítems #10, #11 y #12 del
+  banco (`materiales/banco_estimulos.md`, filas agregadas por esta
+  sesión) **se graban/sintetizan en la sesión pre-s01** (no dependen
+  de nada del semestre; P4 de la revisión 2026-07-12); esta semana
+  solo PROBARLOS en el equipo de la sala.
 - **Impresión**: 22 cuadernillos + 22 hojas de figuras.
 - **Corrección**: pico declarado ≈5 h esta semana (20 × ~15 min).
 - **Demo**: `demo_batidos.html` ya producida con esta sesión (se

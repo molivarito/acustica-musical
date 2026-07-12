@@ -1,6 +1,7 @@
 # Prueba 1 — Acústica Musical UC
 
-**Sesión 07, módulo 1.** Evalúa OA1.1, OA1.2, OA2.1, OA4.1, OA4.2 y
+**Sesión 07, módulo 1.** Evalúa OA1.1, OA1.2, OA2.1, OA2.2
+(fundamental ausente: ítems B.2 y C.2c), OA4.1, OA4.2 y
 OA3.1 (escucha escrita), sobre el contenido de las sesiones 01–06.
 Este archivo es el **cuadernillo del estudiante** (imprimir 22 copias)
 más, al final, la especificación de la hoja de figuras. La pauta de
