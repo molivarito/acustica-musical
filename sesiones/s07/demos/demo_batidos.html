@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Demo — Batidos: dos tonos casi iguales (s07)</title>
+<style>
+  /* Estética editorial del curso: fondo claro, serif para texto, sans para controles */
+  :root {
+    --tinta: #1a1a1a;
+    --acento: #7a2e2e;     /* rojo ladrillo: envolvente y acentos */
+    --linea: #2e4a7a;      /* azul: la onda suma */
+    --papel: #faf8f4;
+    --panel: #f0ece4;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0; padding: 1.2rem;
+    background: var(--papel); color: var(--tinta);
+    font-family: Georgia, 'Times New Roman', serif;
+    max-width: 900px; margin-inline: auto;
+  }
+  h1 { font-size: 1.35rem; margin: 0 0 .2rem; }
+  .sesion { font-family: Helvetica, Arial, sans-serif; font-size: .8rem;
+            letter-spacing: .06em; text-transform: uppercase; color: var(--acento); }
+  .bajada { font-style: italic; margin: .3rem 0 1rem; }
+  .panel {
+    background: var(--panel); border-radius: 6px; padding: .9rem 1rem;
+    font-family: Helvetica, Arial, sans-serif; font-size: .9rem;
+    display: flex; flex-wrap: wrap; gap: 1rem 2rem; align-items: center;
+  }
+  .ctrl { display: flex; flex-direction: column; gap: .25rem; min-width: 230px; flex: 1; }
+  .ctrl label { font-weight: bold; }
+  .valor { font-variant-numeric: tabular-nums; }
+  input[type=range] { width: 100%; accent-color: var(--acento); }
+  button {
+    font-family: Helvetica, Arial, sans-serif; font-size: .95rem;
+    padding: .5rem 1rem; border: 1px solid var(--tinta); border-radius: 4px;
+    background: white; cursor: pointer;
+  }
+  button.primario { background: var(--acento); color: white; border-color: var(--acento); }
+  .marcador {
+    font-family: Helvetica, Arial, sans-serif; text-align: center;
+    background: white; border: 1px solid #ccc; border-radius: 6px;
+    padding: .5rem 1rem; margin-top: 1rem;
+  }
+  .marcador .grande { font-size: 1.6rem; font-weight: bold; color: var(--acento);
+                      font-variant-numeric: tabular-nums; }
+  canvas { width: 100%; height: 200px; display: block; background: white;
+           border: 1px solid #ccc; border-radius: 4px; margin-top: 1rem; }
+  .observar { border-left: 4px solid var(--acento); padding: .2rem 0 .2rem 1rem; margin-top: 1.2rem; }
+  .observar h2 { font-size: 1rem; margin: .2rem 0; }
+  ol { margin: .4rem 0; padding-left: 1.2rem; }
+  .afinacion { font-family: Helvetica, Arial, sans-serif; font-size: .85rem; }
+</style>
+</head>
+<body>
+<p class="sesion">Acústica Musical UC · Sesión 07 (se reutiliza en s08)</p>
+<h1>Batidos: dos tonos casi iguales</h1>
+<p class="bajada">Deslice f₂ alrededor de f₁ = 440 Hz, cuente las
+ondulaciones por segundo y compárelas con la diferencia de frecuencias.</p>
+
+<div class="panel">
+  <div class="ctrl">
+    <label>Tono 1 (fijo): <span class="valor">f₁ = 440,0 Hz</span></label>
+    <label for="f2">Tono 2: <span class="valor" id="f2Val">f₂ = 443,0 Hz</span></label>
+    <input type="range" id="f2" min="4100" max="4700" value="4430">
+    <span style="font-size:.8rem">(rango 410–470 Hz, paso 0,1 Hz)</span>
+  </div>
+  <div class="ctrl" style="min-width:200px">
+    <label for="gan">Ganancia: <span class="valor" id="ganVal">0,35</span></label>
+    <input type="range" id="gan" min="0" max="50" value="35">
+    <div class="afinacion">
+      <label><input type="checkbox" id="ocultar"> modo afinación
+        (ocultar números)</label><br>
+      <button id="btnAzar" style="margin-top:.3rem; font-size:.85rem">
+        Desafinar al azar</button>
+    </div>
+  </div>
+  <div class="ctrl" style="min-width:150px; flex:0">
+    <button id="btnPlay" class="primario">▶ Iniciar</button>
+    <button id="btnStop">■ Detener</button>
+  </div>
+</div>
+
+<div class="marcador">
+  <span style="font-size:.85rem">frecuencia de batido&nbsp;
+    f<sub>b</sub> = |f₂ − f₁| =</span>
+  <span class="grande" id="fbVal">3,0 batidos/s</span>
+  <span class="valor" id="tbVal">(uno cada 0,33 s)</span>
+</div>
+
+<canvas id="lienzo"></canvas>
+
+<div class="observar">
+  <h2>¿Qué observar?</h2>
+  <ol>
+    <li>Ponga f₂ = 443 Hz y <b>cuente</b> las ondulaciones por segundo
+        antes de mirar el marcador. ¿Coincide su conteo con
+        |f₂ − f₁|? Pruebe con 442 y con 437 Hz.</li>
+    <li>Acerque f₂ lentamente a 440 Hz: ¿qué le pasa al batido justo
+        antes de detenerse? ¿Cómo usaría eso para afinar dos
+        instrumentos al unísono sin mirar ningún número?</li>
+    <li>Aleje f₂ más de 15–20 Hz de f₁: ¿puede seguir contando los
+        batidos? ¿Qué oye ahora — una ondulación, una aspereza, dos
+        notas? (Esta pregunta es la puerta de la sesión 08.)</li>
+  </ol>
+</div>
+
+<script>
+'use strict';
+// ---------------------------------------------------------------------------
+// Demo s07 (reutilizada en s08) — batidos de primer orden.
+// Un solo concepto: dos tonos casi iguales producen UNA nota cuya sonoridad
+// ondula a f_b = |f2 − f1| por segundo.
+// Sonido: dos OscillatorNode sinusoidales por ganancias fijas hacia una
+// ganancia maestra (tope 0,5). Visual: la onda suma con su envolvente, en una
+// ventana de 1 s que avanza en fase con el audio real (se integra la
+// diferencia de fase acumulada, así el dibujo "late" al ritmo que se oye).
+// El profesor puede cambiar abajo F1 y los límites del slider de f2.
+// ---------------------------------------------------------------------------
+const F1 = 440;                    // frecuencia fija del tono 1, en Hz
+const VENTANA_S = 1.0;             // ancho de la ventana dibujada, en s
+
+let ctxAudio = null;               // AudioContext: se crea solo tras un clic
+let osc1 = null, osc2 = null;      // los dos osciladores
+let ganMaestra = null;
+let sonando = false;
+
+// Seguimiento de la fase relativa entre ambos tonos (en radianes):
+// faseDif crece a razón de 2π·(f2−f1) rad/s mientras suena.
+let faseDif = 0;
+let tUltimo = 0;                   // instante (tiempo de audio) de la última integración
+let f2Actual = 443;
+
+const $ = id => document.getElementById(id);
+const sliderF2 = $('f2'), sliderGan = $('gan');
+
+function f2DeSlider() { return sliderF2.value / 10; }   // décimas de Hz
+function ganActual() { return sliderGan.value / 100; }  // 0 .. 0,5 máx.
+function modoOculto() { return $('ocultar').checked; }
+
+function coma(x, dec) { return x.toFixed(dec).replace('.', ','); }
+
+// Integra la fase acumulada hasta "ahora" con la f2 vigente.
+// Llamar SIEMPRE antes de cambiar f2 (si no, el dibujo salta de fase).
+function integraFase() {
+  if (!ctxAudio || !sonando) return;
+  // los osciladores parten 30 ms en el futuro: no integrar antes de t0
+  const ahora = Math.max(ctxAudio.currentTime, tUltimo);
+  faseDif += 2 * Math.PI * (f2Actual - F1) * (ahora - tUltimo);
+  faseDif %= 4 * Math.PI;          // período de la envolvente |cos(faseDif/2)|
+  tUltimo = ahora;
+}
+
+function refrescaEtiquetas() {
+  const f2 = f2Actual, fb = Math.abs(f2 - F1);
+  const oculto = modoOculto();
+  $('f2Val').textContent = oculto ? 'f₂ = ??? Hz' : 'f₂ = ' + coma(f2, 1) + ' Hz';
+  $('ganVal').textContent = coma(ganActual(), 2);
+  if (oculto) {
+    $('fbVal').textContent = '???';
+    $('tbVal').textContent = '(afine con el oído)';
+  } else {
+    $('fbVal').textContent = coma(fb, 1) + ' batidos/s';
+    $('tbVal').textContent = fb > 0.05 ? '(uno cada ' + coma(1 / fb, 2) + ' s)'
+                                       : '(unísono: el batido se detuvo)';
+  }
+}
+
+// --- audio -----------------------------------------------------------------
+async function iniciar() {
+  if (!ctxAudio) {
+    ctxAudio = new (window.AudioContext || window.webkitAudioContext)();
+    ganMaestra = ctxAudio.createGain();
+    ganMaestra.connect(ctxAudio.destination);
+  }
+  await ctxAudio.resume();
+  ganMaestra.gain.value = ganActual();
+  if (!sonando) {
+    // cada oscilador aporta 0,5 de la ganancia maestra (suma pico = 1,0
+    // antes de la maestra; con maestra ≤0,5 el total queda acotado)
+    osc1 = ctxAudio.createOscillator();
+    osc2 = ctxAudio.createOscillator();
+    const g1 = ctxAudio.createGain(), g2 = ctxAudio.createGain();
+    g1.gain.value = 0.5; g2.gain.value = 0.5;
+    osc1.frequency.value = F1;
+    osc2.frequency.value = f2Actual;
+    osc1.connect(g1).connect(ganMaestra);
+    osc2.connect(g2).connect(ganMaestra);
+    const t0 = ctxAudio.currentTime + 0.03;
+    osc1.start(t0); osc2.start(t0);
+    // ambos parten en fase: el batido comienza en un máximo
+    faseDif = 0; tUltimo = t0;
+    sonando = true;
+  }
+}
+function detener() {
+  if (sonando) {
+    integraFase();
+    osc1.stop(); osc2.stop();
+    osc1 = osc2 = null;
+    sonando = false;
+  }
+  if (ctxAudio) ctxAudio.suspend();
+}
+
+function cambiaF2(nueva) {
+  integraFase();                 // congela la fase acumulada con la f2 vieja
+  f2Actual = nueva;
+  if (sonando) {
+    // cambio suave para evitar clics
+    osc2.frequency.setTargetAtTime(nueva, ctxAudio.currentTime, 0.01);
+  }
+  refrescaEtiquetas();
+}
+
+// --- visualización: onda suma + envolvente en ventana de 1 s ---------------
+// La suma de dos senos de igual amplitud tiene envolvente |cos(faseDif/2)|.
+// Se dibuja la envolvente (acento) y la banda que ocupa la onda rápida
+// (azul, rellena: a 440 Hz los ciclos individuales no se resuelven en
+// pantalla y el relleno es el retrato honesto).
+const lienzo = $('lienzo');
+function dibuja() {
+  const dpr = window.devicePixelRatio || 1;
+  const w = lienzo.clientWidth, h = 200;
+  if (lienzo.width !== w * dpr) { lienzo.width = w * dpr; lienzo.height = h * dpr; }
+  const g = lienzo.getContext('2d');
+  g.setTransform(dpr, 0, 0, dpr, 0, 0);
+  g.clearRect(0, 0, w, h);
+
+  integraFase();   // avanza la fase al instante presente
+
+  const margen = 40, base = h / 2, anchoUtil = w - margen - 10;
+  // ejes
+  g.strokeStyle = '#999'; g.lineWidth = 1;
+  g.beginPath(); g.moveTo(margen, base); g.lineTo(w - 10, base); g.stroke();
+  g.font = '11px Helvetica, Arial, sans-serif'; g.fillStyle = '#555';
+  g.fillText('amplitud', 4, 14);
+  for (let ms = 0; ms <= 1000; ms += 250) {
+    const x = margen + anchoUtil * ms / 1000;
+    g.beginPath(); g.moveTo(x, base - 3); g.lineTo(x, base + 3); g.stroke();
+    g.fillText(ms + ' ms', x - 12, h - 6);
+  }
+  g.fillText('→ tiempo (la ventana parte en “ahora”)', margen + 4, 14);
+
+  const dOmega = 2 * Math.PI * (f2Actual - F1);  // rad/s de deriva de fase
+  const alto = base * 0.82;
+  const N = Math.max(300, anchoUtil);            // una muestra por pixel
+
+  // banda de la onda rápida (rellena entre ±envolvente)
+  g.fillStyle = 'rgba(46, 74, 122, 0.25)';       // azul translúcido
+  g.beginPath();
+  for (let i = 0; i <= N; i++) {
+    const tau = i / N * VENTANA_S;
+    const A = Math.abs(Math.cos((faseDif + dOmega * tau) / 2));
+    const x = margen + anchoUtil * i / N;
+    i ? g.lineTo(x, base - A * alto) : g.moveTo(x, base - A * alto);
+  }
+  for (let i = N; i >= 0; i--) {
+    const tau = i / N * VENTANA_S;
+    const A = Math.abs(Math.cos((faseDif + dOmega * tau) / 2));
+    g.lineTo(margen + anchoUtil * i / N, base + A * alto);
+  }
+  g.closePath(); g.fill();
+
+  // envolvente superior e inferior (el "guau-guau" que se oye)
+  g.strokeStyle = getComputedStyle(document.body).getPropertyValue('--acento');
+  g.lineWidth = 2;
+  for (const signo of [1, -1]) {
+    g.beginPath();
+    for (let i = 0; i <= N; i++) {
+      const tau = i / N * VENTANA_S;
+      const A = Math.abs(Math.cos((faseDif + dOmega * tau) / 2));
+      const x = margen + anchoUtil * i / N;
+      const y = base - signo * A * alto;
+      i ? g.lineTo(x, y) : g.moveTo(x, y);
+    }
+    g.stroke();
+  }
+
+  // etiqueta de lectura: la sonoridad "ahora" es el borde izquierdo
+  if (sonando) {
+    g.fillStyle = getComputedStyle(document.body).getPropertyValue('--acento');
+    const A0 = Math.abs(Math.cos(faseDif / 2));
+    g.beginPath(); g.arc(margen, base - A0 * alto, 4, 0, 2 * Math.PI); g.fill();
+  }
+  requestAnimationFrame(dibuja);
+}
+requestAnimationFrame(dibuja);
+
+// --- controles ---------------------------------------------------------------
+$('btnPlay').addEventListener('click', iniciar);
+$('btnStop').addEventListener('click', detener);
+sliderF2.addEventListener('input', () => cambiaF2(f2DeSlider()));
+sliderGan.addEventListener('input', () => {
+  refrescaEtiquetas();
+  if (ganMaestra) ganMaestra.gain.value = ganActual();  // tope 0,5: protección auditiva
+});
+$('ocultar').addEventListener('change', refrescaEtiquetas);
+
+// Modo afinación: desafina f2 al azar (±3 a ±12 Hz de f1, nunca 0) para el
+// juego de afinar de oído; conviene activar antes "ocultar números".
+$('btnAzar').addEventListener('click', () => {
+  const magnitud = 3 + Math.random() * 9;           // 3 .. 12 Hz
+  const signo = Math.random() < 0.5 ? -1 : 1;
+  const nueva = Math.round((F1 + signo * magnitud) * 10) / 10;
+  sliderF2.value = Math.round(nueva * 10);
+  cambiaF2(nueva);
+});
+
+refrescaEtiquetas();
+</script>
+</body>
+</html>

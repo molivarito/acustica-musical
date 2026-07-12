@@ -19,7 +19,7 @@ actividades > demo.
 | s04 | La receta del timbre | lista | lista | lista | lista | lista |
 | s05 | Altura percibida | lista | lista | lista | lista | lista |
 | s06 | Sonoridad y decibel | lista | lista | lista | lista | lista |
-| s07 | Prueba 1 + batidos | pendiente | pendiente | pendiente | pendiente | pendiente |
+| s07 | Prueba 1 + batidos | lista | lista | lista | lista | lista |
 | s08 | Banda crítica y consonancia | pendiente | pendiente | pendiente | pendiente | pendiente |
 | s09 | Escalas y temperamentos | pendiente | pendiente | pendiente | pendiente | pendiente |
 | s10 | Resonancia e impedancia | pendiente | pendiente | pendiente | pendiente | pendiente |
@@ -107,3 +107,7 @@ diseno/02 §6.)
   app SPL del profesor; corregir hito 1 (~3 h); redactar prueba 1.
   [POR VERIFICAR] norma chilena DS 594 (exposición a ruido) y
   atenuación de protectores de músico.
+- **s07**: generar e imprimir 3 figuras desde grabaciones #10–#12 del
+  banco; probar estímulos de la prueba en el equipo de sala; imprimir
+  22 cuadernillos; pico de corrección ≈5 h; devolución de prueba 1
+  comprometida para s08.
