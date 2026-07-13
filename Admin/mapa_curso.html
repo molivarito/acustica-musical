@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Mapa del curso — Acústica Musical UC</title>
+<style>
+  /* Misma familia estética de las demos del curso: editorial, fondo claro */
+  :root {
+    --tinta: #1a1a1a;
+    --acento: #7a2e2e;      /* rojo ladrillo */
+    --azul: #2e4a7a;
+    --papel: #faf8f4;
+    --panel: #f0ece4;
+    --bloqueA: #dde7f0;     /* física */
+    --bloqueB: #e9e0ee;     /* percepción */
+    --bloqueC: #e4eddd;     /* instrumentos */
+    --bloqueD: #f3e6d5;     /* salas y cierre */
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0; padding: 1.4rem;
+    background: var(--papel); color: var(--tinta);
+    font-family: Georgia, 'Times New Roman', serif;
+    max-width: 1400px; margin-inline: auto;
+  }
+  h1 { font-size: 1.5rem; margin: 0 0 .15rem; }
+  .kicker { font-family: Helvetica, Arial, sans-serif; font-size: .8rem;
+            letter-spacing: .06em; text-transform: uppercase; color: var(--acento); }
+  .bajada { font-style: italic; margin: .3rem 0 1rem; color: #444; }
+
+  /* ------- controles ------- */
+  .controles {
+    background: var(--panel); border-radius: 8px; padding: .8rem 1rem;
+    font-family: Helvetica, Arial, sans-serif; font-size: .85rem;
+    display: flex; flex-wrap: wrap; gap: .8rem 1.6rem; align-items: center;
+    position: sticky; top: 0; z-index: 5; box-shadow: 0 2px 6px rgba(0,0,0,.06);
+  }
+  .controles b { margin-right: .3rem; }
+  .chips { display: flex; flex-wrap: wrap; gap: .3rem; }
+  .chip {
+    border: 1px solid #bbb; border-radius: 12px; padding: .12rem .55rem;
+    cursor: pointer; background: white; user-select: none; font-size: .8rem;
+  }
+  .chip:hover { border-color: var(--acento); }
+  .chip.on { background: var(--acento); color: white; border-color: var(--acento); }
+  input[type=search] {
+    font: inherit; padding: .3rem .6rem; border: 1px solid #bbb;
+    border-radius: 6px; min-width: 200px; background: white;
+  }
+  .limpiar { border: none; background: none; color: var(--azul);
+             cursor: pointer; text-decoration: underline; font: inherit; }
+
+  /* ------- franja de evaluación ------- */
+  .franja {
+    display: grid; grid-template-columns: repeat(15, 1fr); gap: 3px;
+    margin: 1rem 0 .3rem; font-family: Helvetica, Arial, sans-serif;
+  }
+  .franja a {
+    display: block; text-align: center; font-size: .68rem; padding: .35rem .15rem;
+    border-radius: 4px; color: var(--tinta); text-decoration: none;
+    border: 1px solid rgba(0,0,0,.08); line-height: 1.25;
+  }
+  .franja a:hover { outline: 2px solid var(--acento); }
+  .franja .hito { font-weight: bold; }
+  .leyenda { font-family: Helvetica, Arial, sans-serif; font-size: .75rem;
+             color: #555; margin-bottom: 1rem; }
+  .leyenda span { display: inline-block; width: .85em; height: .85em;
+                  border-radius: 2px; vertical-align: -.08em; margin: 0 .25em 0 .8em;
+                  border: 1px solid rgba(0,0,0,.15); }
+
+  /* ------- tabla ------- */
+  .envoltorio { overflow-x: auto; }
+  table { border-collapse: collapse; width: 100%; font-size: .88rem; }
+  th {
+    font-family: Helvetica, Arial, sans-serif; font-size: .75rem;
+    text-transform: uppercase; letter-spacing: .05em; text-align: left;
+    padding: .5rem .6rem; border-bottom: 2px solid var(--tinta);
+    background: var(--papel); position: sticky; top: 0;
+  }
+  td { padding: .6rem .6rem; border-bottom: 1px solid #ddd; vertical-align: top; }
+  tr.sesion { transition: opacity .15s; }
+  tr.sesion.apagada { opacity: .25; }
+  td.num { white-space: nowrap; }
+  .snum { font-family: Helvetica, Arial, sans-serif; font-weight: bold;
+          font-size: 1.05rem; }
+  .tema { font-weight: bold; }
+  .tema a { color: var(--tinta); }
+  .modulos { font-size: .78rem; color: #555; font-style: italic; }
+  .oa {
+    display: inline-block; font-family: Helvetica, Arial, sans-serif;
+    font-size: .72rem; background: white; border: 1px solid #bbb;
+    border-radius: 10px; padding: .05rem .45rem; margin: .1rem .15rem .1rem 0;
+    white-space: nowrap; cursor: help;
+  }
+  .oa.marcado { background: var(--acento); color: white; border-color: var(--acento); }
+  ul.acts { margin: 0; padding-left: 1rem; }
+  ul.acts li { margin-bottom: .15rem; }
+  a { color: var(--azul); }
+  .insignia {
+    display: inline-block; font-family: Helvetica, Arial, sans-serif;
+    font-size: .7rem; font-weight: bold; border-radius: 3px;
+    padding: .1rem .4rem; margin: .1rem .2rem .1rem 0; color: white;
+    background: var(--acento); white-space: nowrap;
+  }
+  .insignia.suave { background: var(--azul); }
+  .sin { color: #999; font-style: italic; }
+  .pie { margin-top: 1.4rem; font-size: .8rem; color: #555;
+         font-family: Helvetica, Arial, sans-serif; }
+  @media (max-width: 800px) {
+    .franja { grid-template-columns: repeat(5, 1fr); }
+  }
+</style>
+</head>
+<body>
+<p class="kicker">Acústica Musical UC · Admin</p>
+<h1>Mapa del curso — las 15 sesiones de una mirada</h1>
+<p class="bajada">Filtre por objetivo de aprendizaje o busque por texto; cada
+celda enlaza al archivo real del repositorio. La escucha del día (ronda oral,
+rúbrica OA3) corre transversal de s02 a s14 y no se repite en la tabla.</p>
+
+<div class="controles">
+  <div><b>Filtrar por OA:</b>
+    <span class="chips" id="chipsOA"></span>
+  </div>
+  <div><b>Buscar:</b> <input type="search" id="busca" placeholder="tema, actividad, hito…"></div>
+  <button class="limpiar" id="limpiar">limpiar filtros</button>
+</div>
+
+<div class="franja" id="franja"></div>
+<p class="leyenda">Bloques:
+  <span style="background:var(--bloqueA)"></span> A · el sonido como objeto físico (s01–s04)
+  <span style="background:var(--bloqueB)"></span> B · el sonido percibido (s05–s09)
+  <span style="background:var(--bloqueC)"></span> C · los instrumentos como sistemas (s10–s13)
+  <span style="background:var(--bloqueD)"></span> D · la sala y la síntesis final (s14–s15).
+  En <b>negrita</b>, sesiones con nota de hito o prueba.</p>
+
+<div class="envoltorio">
+<table id="tabla">
+  <thead>
+    <tr>
+      <th>Sesión</th>
+      <th>Objetivos (OA)</th>
+      <th>Evaluación e hitos</th>
+      <th>Actividades de la sesión</th>
+      <th>Demo interactiva</th>
+      <th>Apuntes</th>
+      <th>Lectura previa (libro)</th>
+    </tr>
+  </thead>
+  <tbody id="cuerpo"></tbody>
+</table>
+</div>
+
+<p class="pie">Fuentes de esta página: <a href="../diseno/03_estructura_curso.md">diseno/03 (mapa y notación)</a> ·
+<a href="../diseno/01_objetivos_aprendizaje.md">diseno/01 (objetivos)</a> ·
+<a href="../diseno/02_metodologia.md">diseno/02 (metodología y rúbrica)</a> ·
+<a href="../libro/LIBRO_CURSO.pdf">libro completo (PDF)</a> ·
+<a href="../materiales/banco_estimulos.md">banco de estímulos</a> ·
+<a href="../materiales/planilla_rubrica_oa3.md">planilla rúbrica OA3</a> ·
+<a href="../ESTADO_LOOP.md">estado de producción</a>.
+Generada el 2026-07-13 desde los planes de sesión; si una sesión cambia, regenerar o editar aquí.</p>
+
+<script>
+'use strict';
+// ---------------------------------------------------------------------------
+// Datos del curso. Cada sesión: número, bloque, tema, OA, evaluación,
+// actividades [etiqueta, ruta], demo, apuntes, capítulo. Rutas relativas a
+// Admin/. Para actualizar una sesión basta editar su objeto.
+// ---------------------------------------------------------------------------
+const DESC_OA = {
+  'OA1.1':'Analizar modos y parciales; relacionar forma de vibrar y espectro',
+  'OA1.2':'Predecir semicuantitativamente el efecto de cambiar un parámetro',
+  'OA1.3':'Mecanismos de excitación y familias de instrumentos',
+  'OA1.4':'Comportamiento del sonido en salas',
+  'OA2.1':'Pares físico–perceptuales (frecuencia/altura, intensidad/sonoridad, espectro/timbre)',
+  'OA2.2':'Fenómenos psicoacústicos clásicos, demostrados y explicados',
+  'OA2.3':'Fundamento perceptual de consonancia, escalas y temperamentos',
+  'OA3.1':'Describir técnicamente lo oído y formular hipótesis',
+  'OA3.2':'Conectar sensación, mecanismo y medición',
+  'OA4.1':'Analizar sonido real: forma de onda, espectro, espectrograma',
+  'OA4.2':'Medir niveles; interpretar dB y curvas de sonoridad',
+  'OA4.3':'Medir tiempo de reverberación de salas reales',
+  'OA5.1':'Diseñar el proyecto anticipando el resultado sonoro',
+  'OA5.2':'Construir y caracterizar combinando escucha y medición',
+  'OA5.3':'Explicar acústicamente el comportamiento obtenido',
+};
+
+const S = [
+ {n:1, b:'A', tema:'Escuchar como científico: del golpe al tono',
+  mod:'m1 audición (inaugural) · m2 experimental',
+  oa:['OA3.1','OA1.1','OA2.1'],
+  ev:[['Línea base de escucha (sin nota)','suave'],['Formación de 5 grupos','suave']],
+  acts:[['Acta de grupo + línea base','../sesiones/s01/actividades/acta_grupo_y_linea_base.md'],
+        ['PEE: la regla en la mesa','../sesiones/s01/actividades/guia_pee_regla.md'],
+        ['PEE: zona gris ritmo–tono','../sesiones/s01/actividades/guia_pee_zona_gris.md']],
+  demo:['demo_tren_pulsos','../sesiones/s01/demos/demo_tren_pulsos.html'],
+  ap:'../sesiones/s01/apuntes/apunte_s01_del_golpe_al_tono.md',
+  cap:['cap. 1 — Del golpe al tono','../libro/cap01_del_golpe_al_tono.md']},
+
+ {n:2, b:'A', tema:'Ondas y representación: forma de onda, espectro y espectrograma',
+  mod:'m1 experimental · m2 experimental',
+  oa:['OA4.1','OA1.1'],
+  ev:[['Primera ronda OA3 con nota','suave']],
+  acts:[['PEE: retratos de sonido','../sesiones/s02/actividades/guia_pee_retratos_de_sonido.md'],
+        ['PEE: el microscopio (apps)','../sesiones/s02/actividades/guia_pee_microscopio.md']],
+  demo:['demo_forma_onda_espectro','../sesiones/s02/demos/demo_forma_onda_espectro.html'],
+  ap:'../sesiones/s02/apuntes/apunte_s02_ondas_y_representacion.md',
+  cap:['cap. 2 — Ondas y espectrograma','../libro/cap02_ondas_y_espectrograma.md']},
+
+ {n:3, b:'A', tema:'Modos de vibración: por qué cada objeto suena como suena',
+  mod:'m1 experimental · m2 demo + lanzamiento',
+  oa:['OA1.1','OA1.2','OA5.1'],
+  ev:[['LANZAMIENTO DEL PROYECTO','fuerte']],
+  acts:[['PEE: la sartén','../sesiones/s03/actividades/guia_pee_sarten.md'],
+        ['Enunciado del proyecto','../sesiones/s03/actividades/enunciado_proyecto.md']],
+  demo:['demo_modos_cuerda','../sesiones/s03/demos/demo_modos_cuerda.html'],
+  ap:'../sesiones/s03/apuntes/apunte_s03_modos_de_vibracion.md',
+  cap:['cap. 3 — Modos de vibración','../libro/cap03_modos_de_vibracion.md']},
+
+ {n:4, b:'A', tema:'La receta del timbre: cuerda pulsada, punto de excitación, síntesis aditiva',
+  mod:'m1 experimental · m2 experimental',
+  oa:['OA1.1','OA1.2','OA2.1'],
+  ev:[['Instrumentos de estudiantes #1 (pulsadas)','suave'],['Se publica pauta hito 1','suave']],
+  acts:[['PEE: mapa de la cuerda','../sesiones/s04/actividades/guia_pee_mapa_cuerda.md'],
+        ['PEE: estirar, acortar, engordar','../sesiones/s04/actividades/guia_pee_estirar_acortar.md'],
+        ['Pauta hito 1 (diseño)','../sesiones/s04/actividades/pauta_hito1_diseno.md'],
+        ['Pauta feedback ideas','../sesiones/s04/actividades/pauta_feedback_ideas_proyecto.md']],
+  demo:['demo_sintesis_aditiva','../sesiones/s04/demos/demo_sintesis_aditiva.html'],
+  ap:'../sesiones/s04/apuntes/apunte_s04_la_receta_del_timbre.md',
+  cap:['cap. 4 — La receta del timbre','../libro/cap04_la_receta_del_timbre.md']},
+
+ {n:5, b:'B', tema:'La altura percibida: fundamental ausente y el oído en una pasada',
+  mod:'m1 audición · m2 audición',
+  oa:['OA2.1','OA2.2'],
+  ev:[['HITO 1: diseño con predicción (8%)','fuerte'],['Punto de control metodológico','suave']],
+  acts:[['Registro: el bajo que no está','../sesiones/s05/actividades/registro_el_bajo_que_no_esta.md'],
+        ['Registro: el oído y la octava','../sesiones/s05/actividades/registro_el_oido_y_la_octava.md']],
+  demo:['demo_fundamental_ausente','../sesiones/s05/demos/demo_fundamental_ausente.html'],
+  ap:'../sesiones/s05/apuntes/apunte_s05_la_altura_percibida.md',
+  cap:['cap. 5 — La altura percibida','../libro/cap05_la_altura_percibida.md']},
+
+ {n:6, b:'B', tema:'Sonoridad y decibel: intensidad, niveles, isofónicas',
+  mod:'m1 audición/experimental · m2 medición (estaciones)',
+  oa:['OA2.1','OA4.2'],
+  ev:[['Mini-informe SPL (taller)','suave'],['Devolución hito 1','suave']],
+  acts:[['Hoja: mi curva isofónica','../sesiones/s06/actividades/hoja_registro_isofonica.md'],
+        ['Estaciones de medición de niveles','../sesiones/s06/actividades/guia_estaciones_niveles.md']],
+  demo:['demo_decibel_sonoridad','../sesiones/s06/demos/demo_decibel_sonoridad.html'],
+  ap:'../sesiones/s06/apuntes/apunte_s06_sonoridad_y_decibel.md',
+  cap:['cap. 6 — Sonoridad y decibel','../libro/cap06_sonoridad_y_decibel.md']},
+
+ {n:7, b:'B', tema:'Prueba 1 + audición liviana: batidos',
+  mod:'m1 prueba · m2 audición liviana',
+  oa:['OA2.2'],
+  evalua:['OA1.1','OA1.2','OA2.1','OA4.1','OA4.2'],
+  ev:[['PRUEBA 1 (12,5%)','fuerte']],
+  acts:[['Prueba 1 (cuadernillo)','../sesiones/s07/actividades/prueba1.md'],
+        ['Prueba 1 — pauta de corrección','../sesiones/s07/actividades/prueba1_pauta.md']],
+  demo:['demo_batidos','../sesiones/s07/demos/demo_batidos.html'],
+  ap:'../sesiones/s07/apuntes/apunte_s07_batidos.md',
+  cap:['cap. 7 — Batidos (y mapa de estudio)','../libro/cap07_batidos.md']},
+
+ {n:8, b:'B', tema:'Psicoacústica de la superposición: banda crítica, rugosidad y consonancia',
+  mod:'m1 audición · m2 experimental',
+  oa:['OA2.2','OA2.3','OA5.2'],
+  ev:[['Comienza serie de medición del objeto (s08–s12)','suave'],['Devolución prueba 1','suave']],
+  acts:[['Registro: mapa del choque','../sesiones/s08/actividades/registro_mapa_del_choque.md'],
+        ['PEE: radiografía espectral del objeto','../sesiones/s08/actividades/guia_pee_radiografia_espectral.md']],
+  demo:['demo_banda_critica','../sesiones/s08/demos/demo_banda_critica.html'],
+  ap:'../sesiones/s08/apuntes/apunte_s08_banda_critica_y_consonancia.md',
+  cap:['cap. 8 — Banda crítica y consonancia','../libro/cap08_banda_critica_y_consonancia.md']},
+
+ {n:9, b:'B', tema:'Escalas y temperamentos: afinar de oído',
+  mod:'m1 experimental · m2 experimental',
+  oa:['OA2.3','OA1.2','OA5.2'],
+  ev:[['Taller de afinación por batidos (evaluado)','suave'],['Se anuncia hito 2','suave']],
+  acts:[['PEE: afinar por batidos','../sesiones/s09/actividades/guia_pee_afinar_por_batidos.md'],
+        ['Medición: ¿en qué escala vive mi objeto?','../sesiones/s09/actividades/guia_medicion_escala_objeto.md']],
+  demo:['demo_temperamentos','../sesiones/s09/demos/demo_temperamentos.html'],
+  ap:'../sesiones/s09/apuntes/apunte_s09_escalas_y_temperamentos.md',
+  cap:['cap. 9 — Escalas y temperamentos','../libro/cap09_escalas_y_temperamentos.md']},
+
+ {n:10, b:'C', tema:'Resonancia, impedancia y acoplamiento: el puente hacia los instrumentos',
+  mod:'m1 experimental · m2 discusión de proyecto',
+  oa:['OA1.2','OA1.3','OA5.2','OA3.2'],
+  ev:[['HITO 2: avance del proyecto (8%)','fuerte'],['Clínicas de proyecto entre pares','suave'],['Aviso instrumentos frotados (s11)','suave']],
+  acts:[['PEE: resonancia con botellas','../sesiones/s10/actividades/guia_pee_resonancia_botellas.md'],
+        ['Pauta de clínica entre pares','../sesiones/s10/actividades/pauta_clinica_pares.md'],
+        ['Pauta hito 2 (avance)','../sesiones/s10/actividades/pauta_hito2_avance.md']],
+  demo:['demo_resonancia','../sesiones/s10/demos/demo_resonancia.html'],
+  ap:'../sesiones/s10/apuntes/apunte_s10_resonancia_e_impedancia.md',
+  cap:['cap. 10 — Resonancia e impedancia','../libro/cap10_resonancia_e_impedancia.md']},
+
+ {n:11, b:'C', tema:'Cuerdas frotadas y el cuerpo del instrumento: stick-slip y Helmholtz',
+  mod:'m1 experimental · m2 experimental',
+  oa:['OA1.3','OA1.1','OA1.2'],
+  ev:[['Instrumentos de estudiantes #2 (frotadas)','suave']],
+  acts:[['PEE: punto de frotado','../sesiones/s11/actividades/guia_pee_punto_de_frotado.md'],
+        ['Medición: acoplamiento del objeto','../sesiones/s11/actividades/guia_acoplamiento_objeto.md']],
+  demo:['demo_helmholtz','../sesiones/s11/demos/demo_helmholtz.html'],
+  ap:'../sesiones/s11/apuntes/apunte_s11_cuerdas_frotadas_y_cuerpo.md',
+  cap:['cap. 11 — Cuerdas frotadas y cuerpo','../libro/cap11_cuerdas_frotadas_y_cuerpo.md']},
+
+ {n:12, b:'C', tema:'Vientos y lutería: columnas de aire, agujeros, regímenes (sesión-taller)',
+  mod:'sesión-taller completa de lutería (formato 9, 140′)',
+  oa:['OA1.2','OA1.3','OA5.2'],
+  ev:[['Construcción de tubos PVC (taller evaluado)','suave'],['Cierre serie del objeto + bitácoras','suave'],['Se anuncia prueba 2','suave']],
+  acts:[['PEE: construcción del tubo','../sesiones/s12/actividades/guia_pee_construccion_tubo.md'],
+        ['Pauta revisión de bitácoras','../sesiones/s12/actividades/pauta_revision_bitacoras.md']],
+  demo:['demo_tubo_agujeros','../sesiones/s12/demos/demo_tubo_agujeros.html'],
+  ap:'../sesiones/s12/apuntes/apunte_s12_vientos_y_luteria.md',
+  cap:['cap. 12 — Vientos y lutería','../libro/cap12_vientos_y_luteria.md']},
+
+ {n:13, b:'C', tema:'Prueba 2 + la voz cantada: fuente-filtro y formantes',
+  mod:'m1 prueba · m2 audición liviana',
+  oa:['OA1.3'],
+  evalua:['OA1.2','OA1.3','OA2.2','OA2.3'],
+  ev:[['PRUEBA 2 (12,5%)','fuerte']],
+  acts:[['Prueba 2 (cuadernillo)','../sesiones/s13/actividades/prueba2.md'],
+        ['Prueba 2 — pauta de corrección','../sesiones/s13/actividades/prueba2_pauta.md']],
+  demo:['demo_formantes_voz','../sesiones/s13/demos/demo_formantes_voz.html'],
+  ap:'../sesiones/s13/apuntes/apunte_s13_la_voz.md',
+  cap:['cap. 13 — La voz','../libro/cap13_la_voz.md']},
+
+ {n:14, b:'D', tema:'La sala como instrumento: reverberación, modos de sala, medición de T60',
+  mod:'m1 en aula · m2 salida de medición (formato 8)',
+  oa:['OA1.4','OA4.3','OA3.2'],
+  ev:[['Salida de medición T60 en salas UC','fuerte'],['Informe comparativo (último taller)','suave'],['Se publica pauta hito 3','suave'],['Devolución prueba 2','suave']],
+  acts:[['Guía salida de medición T60','../sesiones/s14/actividades/guia_salida_medicion_t60.md'],
+        ['Rutas de medición (plantilla)','../sesiones/s14/actividades/rutas_salida_medicion.md'],
+        ['Pauta hito 3 (presentación final)','../sesiones/s14/actividades/pauta_hito3_presentacion_final.md']],
+  demo:['demo_modos_sala','../sesiones/s14/demos/demo_modos_sala.html'],
+  ap:'../sesiones/s14/apuntes/apunte_s14_la_sala_como_instrumento.md',
+  cap:['cap. 14 — La sala como instrumento','../libro/cap14_la_sala_como_instrumento.md']},
+
+ {n:15, b:'D', tema:'Presentaciones finales del proyecto: explicar es la prueba',
+  mod:'ambos módulos: 5 presentaciones × ~25′ + cierre del curso',
+  oa:['OA5.3','OA3.2'],
+  ev:[['PRESENTACIÓN FINAL + INFORME (14%)','fuerte'],['Coevaluación final','suave'],['Devolución líneas base de s01','suave']],
+  acts:[['Hoja de escucha de presentaciones','../sesiones/s15/actividades/hoja_escucha_presentaciones.md'],
+        ['Coevaluación final','../sesiones/s15/actividades/hoja_coevaluacion_final.md'],
+        ['Guion del profesor','../sesiones/s15/actividades/guion_profesor_s15.md']],
+  demo:null,
+  ap:'../sesiones/s15/apuntes/apunte_s15_como_defender_un_proyecto_acustico.md',
+  cap:['cap. 15 — Explicar es la prueba','../libro/cap15_explicar_es_la_prueba.md']},
+];
+
+const COLOR_BLOQUE = {A:'var(--bloqueA)', B:'var(--bloqueB)', C:'var(--bloqueC)', D:'var(--bloqueD)'};
+const $ = id => document.getElementById(id);
+
+// ------- franja superior: el semestre en 15 casillas -------
+const franja = $('franja');
+S.forEach(s => {
+  const a = document.createElement('a');
+  a.href = '#s' + s.n;
+  a.style.background = COLOR_BLOQUE[s.b];
+  const hito = s.ev.some(e => e[1] === 'fuerte');
+  if (hito) a.classList.add('hito');
+  const linea2 = s.ev.find(e => e[1]==='fuerte')?.[0] || s.tema.split(':')[0];
+  a.innerHTML = 's' + String(s.n).padStart(2,'0') + '<br>' +
+                (linea2.length > 30 ? linea2.slice(0,28) + '…' : linea2);
+  franja.appendChild(a);
+});
+
+// ------- chips de filtro por OA -------
+const todosOA = Object.keys(DESC_OA);
+const activos = new Set();
+const chips = $('chipsOA');
+todosOA.forEach(oa => {
+  const c = document.createElement('span');
+  c.className = 'chip'; c.textContent = oa; c.title = DESC_OA[oa];
+  c.onclick = () => { c.classList.toggle('on');
+                      activos.has(oa) ? activos.delete(oa) : activos.add(oa);
+                      aplica(); };
+  chips.appendChild(c);
+});
+
+// ------- cuerpo de la tabla -------
+const cuerpo = $('cuerpo');
+S.forEach(s => {
+  const tr = document.createElement('tr');
+  tr.className = 'sesion'; tr.id = 's' + s.n;
+  tr.dataset.oa = s.oa.concat(s.evalua || []).join(' ');
+
+  const oaHTML = s.oa.map(o =>
+      `<span class="oa" data-oa="${o}" title="${DESC_OA[o]}">${o}</span>`).join('') +
+    (s.evalua ? '<br><small>evalúa:</small> ' + s.evalua.map(o =>
+      `<span class="oa" data-oa="${o}" title="${DESC_OA[o]}">${o}</span>`).join('') : '');
+
+  const evHTML = s.ev.map(e =>
+      `<span class="insignia ${e[1]==='suave'?'suave':''}">${e[0]}</span>`).join(' ');
+
+  const actsHTML = '<ul class="acts">' + s.acts.map(a =>
+      `<li><a href="${a[1]}">${a[0]}</a></li>`).join('') + '</ul>';
+
+  tr.innerHTML = `
+    <td class="num" style="background:${COLOR_BLOQUE[s.b]}">
+      <span class="snum">s${String(s.n).padStart(2,'0')}</span><br>
+      <span class="tema"><a href="../sesiones/s${String(s.n).padStart(2,'0')}/plan.md">${s.tema}</a></span><br>
+      <span class="modulos">${s.mod} · <a href="../sesiones/s${String(s.n).padStart(2,'0')}/plan.md">plan completo</a></span>
+    </td>
+    <td>${oaHTML}</td>
+    <td>${evHTML}</td>
+    <td>${actsHTML}</td>
+    <td>${s.demo ? `<a href="${s.demo[1]}">${s.demo[0]}</a>` : '<span class="sin">sin demo (por diseño)</span>'}</td>
+    <td><a href="${s.ap}">apunte s${String(s.n).padStart(2,'0')}</a></td>
+    <td><a href="${s.cap[1]}">${s.cap[0]}</a></td>`;
+  cuerpo.appendChild(tr);
+});
+
+// ------- filtros: OA activos (Y lógico) + búsqueda de texto -------
+function aplica() {
+  const q = $('busca').value.trim().toLowerCase();
+  document.querySelectorAll('tr.sesion').forEach(tr => {
+    const oas = tr.dataset.oa.split(' ');
+    const pasaOA = [...activos].every(o => oas.includes(o));
+    const pasaTxt = !q || tr.textContent.toLowerCase().includes(q);
+    tr.classList.toggle('apagada', !(pasaOA && pasaTxt));
+  });
+  // resalta los chips OA dentro de las filas
+  document.querySelectorAll('.oa').forEach(el =>
+    el.classList.toggle('marcado', activos.has(el.dataset.oa)));
+}
+$('busca').addEventListener('input', aplica);
+$('limpiar').onclick = () => {
+  activos.clear(); $('busca').value = '';
+  document.querySelectorAll('.chip').forEach(c => c.classList.remove('on'));
+  aplica();
+};
+</script>
+</body>
+</html>
