@@ -47,6 +47,12 @@ formación matemática y musical.
 - Las demos interactivas HTML siguen `.claude/rules/formato-demos.md`.
 - Los planes de sesión se generan con la skill `/plan-sesion` y se guardan
   en `sesiones/sXX/plan.md`.
+- Los `.md` del proyecto tienen gemelos `.html` GENERADOS (vistas
+  formateadas para humanos; el mapa `Admin/mapa_curso.html` enlaza a
+  ellas). Tras crear o editar cualquier `.md`, ejecutar
+  `python3 Admin/md2html.py` desde la raíz para regenerarlos. Nunca
+  editar un `.html` gemelo a mano (se pisa al regenerar); los únicos
+  HTML editables son las demos, el mapa y `Admin/estilo_md_header.html`.
 
 ## Fases del proyecto
 1. Objetivos de aprendizaje (diseno/01) — discutir en plan mode.

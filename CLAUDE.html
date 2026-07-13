@@ -275,6 +275,14 @@ esperar confirmación.</li>
 <li>Los planes de sesión se generan con la skill
 <code>/plan-sesion</code> y se guardan en
 <code>sesiones/sXX/plan.md</code>.</li>
+<li>Los <code>.md</code> del proyecto tienen gemelos <code>.html</code>
+GENERADOS (vistas formateadas para humanos; el mapa
+<code>Admin/mapa_curso.html</code> enlaza a ellas). Tras crear o editar
+cualquier <code>.md</code>, ejecutar
+<code>python3 Admin/md2html.py</code> desde la raíz para regenerarlos.
+Nunca editar un <code>.html</code> gemelo a mano (se pisa al regenerar);
+los únicos HTML editables son las demos, el mapa y
+<code>Admin/estilo_md_header.html</code>.</li>
 </ul>
 <h2 id="fases-del-proyecto">Fases del proyecto</h2>
 <ol type="1">
