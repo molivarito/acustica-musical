@@ -29,6 +29,26 @@
             letter-spacing: .06em; text-transform: uppercase; color: var(--acento); }
   .bajada { font-style: italic; margin: .3rem 0 1rem; color: #444; }
 
+  /* ------- objetivos de aprendizaje ------- */
+  details.oadef {
+    background: white; border: 1px solid #ddd; border-radius: 8px;
+    padding: .6rem 1rem; margin-bottom: 1rem;
+  }
+  details.oadef summary {
+    cursor: pointer; font-family: Helvetica, Arial, sans-serif;
+    font-weight: bold; font-size: .95rem; color: var(--acento);
+  }
+  .oagrid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: .8rem; margin-top: .8rem; }
+  .oacard { background: var(--panel); border-radius: 6px; padding: .7rem .9rem; }
+  .oacard h3 { margin: 0 0 .25rem; font-size: .95rem; }
+  .oacard .enunciado { font-style: italic; font-size: .85rem; margin: 0 0 .5rem; color: #333; }
+  .oacard ul { margin: 0; padding-left: 0; list-style: none; font-size: .82rem; }
+  .oacard li { margin-bottom: .35rem; }
+  .oacard .oa { vertical-align: baseline; }
+  .oanota { font-size: .78rem; color: #555; margin: .6rem 0 0;
+            font-family: Helvetica, Arial, sans-serif; }
+
   /* ------- controles ------- */
   .controles {
     background: var(--panel); border-radius: 8px; padding: .8rem 1rem;
@@ -118,6 +138,58 @@
 <p class="bajada">Filtre por objetivo de aprendizaje o busque por texto; cada
 celda enlaza al archivo real del repositorio. La escucha del día (ronda oral,
 rúbrica OA3) corre transversal de s02 a s14 y no se repite en la tabla.</p>
+
+<details class="oadef" open id="defsOA">
+  <summary>Los objetivos de aprendizaje del curso, en detalle (diseno/01, versión aprobada 2026-07-12)</summary>
+  <div class="oagrid">
+    <div class="oacard">
+      <h3>OA1 — Modelar la producción y propagación del sonido musical</h3>
+      <p class="enunciado">Explicar y predecir el comportamiento acústico de fuentes sonoras musicales y de espacios, usando modelos físicos simples (cuerda, tubo, membrana, modos, resonancia).</p>
+      <ul>
+        <li><span class="oa" data-oa="OA1.1">OA1.1</span> Analizar un sonido o un objeto vibrante identificando sus modos y parciales, y relacionar la forma de vibrar con el espectro que se oye.</li>
+        <li><span class="oa" data-oa="OA1.2">OA1.2</span> Predecir semicuantitativamente (proporciones y aritmética) el efecto de cambiar un parámetro de un sistema vibrante — longitud, tensión, masa, taladro, temperatura — sobre afinación y timbre, y contrastar la predicción con el resultado sonoro real.</li>
+        <li><span class="oa" data-oa="OA1.3">OA1.3</span> Explicar los mecanismos de excitación (impulsiva, frotada, soplada, cantada) y diferenciar las familias de instrumentos por su mecanismo y régimen de oscilación.</li>
+        <li><span class="oa" data-oa="OA1.4">OA1.4</span> Explicar el comportamiento del sonido en salas (reflexión, absorción, reverberación, modos) y anticipar cualitativamente cómo una sala condiciona la ejecución y la escucha.</li>
+      </ul>
+    </div>
+    <div class="oacard">
+      <h3>OA2 — Relacionar el sonido físico con la percepción auditiva</h3>
+      <p class="enunciado">Explicar cómo el sistema auditivo transforma la señal acústica en sensación (altura, sonoridad, timbre, consonancia) y demostrar los fenómenos perceptuales que fundan la práctica musical.</p>
+      <ul>
+        <li><span class="oa" data-oa="OA2.1">OA2.1</span> Relacionar cada par físico–perceptual (frecuencia/altura, intensidad/sonoridad, espectro/timbre) explicando por qué la relación no es lineal ni unívoca, con ejemplos audibles.</li>
+        <li><span class="oa" data-oa="OA2.2">OA2.2</span> Demostrar y explicar fenómenos psicoacústicos clásicos (batidos, banda crítica, fundamental ausente, enmascaramiento, tonos de combinación) ejecutando las experiencias con demos y con instrumentos.</li>
+        <li><span class="oa" data-oa="OA2.3">OA2.3</span> Explicar el fundamento perceptual de la consonancia, las escalas y los temperamentos, y demostrar audiblemente sus diferencias.</li>
+      </ul>
+    </div>
+    <div class="oacard">
+      <h3>OA3 — Escuchar como científico (transversal)</h3>
+      <p class="enunciado">Diagnosticar auditivamente fenómenos acústicos: describir técnicamente lo que se oye, formular hipótesis sobre su causa física y proponer cómo verificarlas.</p>
+      <ul>
+        <li><span class="oa" data-oa="OA3.1">OA3.1</span> Ante un estímulo sonoro (instrumento, sala o grabación), describir lo oído con vocabulario técnico preciso y formular hipótesis acústicas plausibles sobre su causa.</li>
+        <li><span class="oa" data-oa="OA3.2">OA3.2</span> Conectar, para un mismo fenómeno, las tres capas: la sensación auditiva, el mecanismo físico que la produce y la medición que confirma o refuta la hipótesis.</li>
+      </ul>
+    </div>
+    <div class="oacard">
+      <h3>OA4 — Medir y analizar sonido real</h3>
+      <p class="enunciado">Capturar, medir y analizar sonido con herramientas accesibles (celular, computador, micrófono) e interpretar los resultados para responder preguntas acústicas.</p>
+      <ul>
+        <li><span class="oa" data-oa="OA4.1">OA4.1</span> Analizar sonidos reales con grabación y análisis espectral (forma de onda, espectro, espectrograma), leyendo correctamente ejes, unidades y limitaciones de la herramienta.</li>
+        <li><span class="oa" data-oa="OA4.2">OA4.2</span> Medir niveles sonoros e interpretar el decibel y las curvas de sonoridad en contextos musicales reales.</li>
+        <li><span class="oa" data-oa="OA4.3">OA4.3</span> Medir el tiempo de reverberación de una sala real y usar el resultado para caracterizarla y compararla con otras.</li>
+      </ul>
+    </div>
+    <div class="oacard">
+      <h3>OA5 — Crear y explicar: el proyecto (integrador)</h3>
+      <p class="enunciado">Construir o modificar un instrumento musical o instalación sonora y explicar acústicamente su comportamiento — funcione o no como se esperaba.</p>
+      <ul>
+        <li><span class="oa" data-oa="OA5.1">OA5.1</span> Diseñar la construcción o modificación aplicando modelos del curso para anticipar explícitamente el resultado sonoro esperado.</li>
+        <li><span class="oa" data-oa="OA5.2">OA5.2</span> Construir/implementar el diseño y caracterizar el resultado combinando escucha analítica y mediciones.</li>
+        <li><span class="oa" data-oa="OA5.3">OA5.3</span> Explicar acústicamente el comportamiento obtenido — incluidas las desviaciones respecto de lo predicho — integrando modelo, medición y escucha.</li>
+      </ul>
+    </div>
+  </div>
+  <p class="oanota">Un clic en cualquier código (p. ej. <b>OA2.2</b>) activa el filtro correspondiente en la tabla de abajo. Enunciados completos, con contraste 2019 y respaldo bibliográfico, en <a href="../diseno/01_objetivos_aprendizaje.md">diseno/01</a>.</p>
+</details>
 
 <div class="controles">
   <div><b>Filtrar por OA:</b>
@@ -367,13 +439,21 @@ S.forEach(s => {
 const todosOA = Object.keys(DESC_OA);
 const activos = new Set();
 const chips = $('chipsOA');
+const chipDe = {};                       // código OA → elemento chip del filtro
 todosOA.forEach(oa => {
   const c = document.createElement('span');
   c.className = 'chip'; c.textContent = oa; c.title = DESC_OA[oa];
   c.onclick = () => { c.classList.toggle('on');
                       activos.has(oa) ? activos.delete(oa) : activos.add(oa);
                       aplica(); };
+  chipDe[oa] = c;
   chips.appendChild(c);
+});
+
+// Los códigos OA de la sección de definiciones también activan el filtro
+$('defsOA').addEventListener('click', ev => {
+  const oa = ev.target.dataset && ev.target.dataset.oa;
+  if (oa && chipDe[oa]) chipDe[oa].click();
 });
 
 // ------- cuerpo de la tabla -------
