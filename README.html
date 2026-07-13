@@ -202,6 +202,11 @@
   pre code { background:none; padding:0; }
   hr { border:none; border-top:1px solid #ccc; margin:2rem 0; }
   img { max-width:100%; }
+  figure { margin:1.6rem auto; text-align:center; }
+  figure img { max-width:min(100%, 680px); }
+  figcaption { font-family:Helvetica,Arial,sans-serif; font-size:.82rem;
+               color:#555; margin-top:.5rem; text-align:left;
+               max-width:640px; margin-inline:auto; line-height:1.4; }
   li { margin-bottom:.25rem; }
   math { font-size:1.05em; }
   @media print { body { background:white; max-width:none; } }
@@ -231,6 +236,12 @@ banco de estímulos.</li>
 <li><code>Admin/</code> — mapa navegable del curso
 (<code>mapa_curso.html</code>), programa del curso, y la infraestructura
 de vistas HTML (ver abajo).</li>
+<li><code>figuras/</code> — figuras de apuntes y libro: SVG
+<strong>generados por scripts</strong> (<code>gen_sXX.py</code> +
+<code>estilo_figuras.py</code>; editar el script y volver a correrlo, no
+el SVG). <code>figuras/libros/</code> guarda las pocas figuras
+reproducidas desde la bibliografía, citadas en su leyenda y registradas
+en <code>figuras/libros/EXTRACCIONES.md</code>.</li>
 <li><code>ESTADO_LOOP.md</code> / <code>RESUMEN_PARA_PATO.md</code> —
 estado y balance de la producción autónoma de las fases 3–4.</li>
 </ul>
@@ -244,6 +255,9 @@ enlaces internos apuntan a esos <code>.html</code>.</p>
 <li>Regenerar después de editar cualquier <code>.md</code>:
 <code>python3 Admin/md2html.py</code> (desde la raíz; requiere
 pandoc).</li>
+<li>Recompilar el libro (MD+PDF) tras editar capítulos o figuras:
+<code>python3 Admin/compilar_libro.py</code> (requiere pandoc, xelatex y
+rsvg-convert para las figuras SVG).</li>
 <li>El estilo compartido vive en
 <code>Admin/estilo_md_header.html</code> (queda embebido: cada HTML es
 autocontenido).</li>

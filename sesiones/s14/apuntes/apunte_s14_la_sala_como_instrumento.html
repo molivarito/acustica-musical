@@ -202,6 +202,11 @@
   pre code { background:none; padding:0; }
   hr { border:none; border-top:1px solid #ccc; margin:2rem 0; }
   img { max-width:100%; }
+  figure { margin:1.6rem auto; text-align:center; }
+  figure img { max-width:min(100%, 680px); }
+  figcaption { font-family:Helvetica,Arial,sans-serif; font-size:.82rem;
+               color:#555; margin-top:.5rem; text-align:left;
+               max-width:640px; margin-inline:auto; line-height:1.4; }
   li { margin-bottom:.25rem; }
   math { font-size:1.05em; }
   @media print { body { background:white; max-width:none; } }
@@ -270,7 +275,18 @@ frente que llega</strong> — el directo — y funde las reflexiones
 tempranas con él, en vez de oírlas como ecos separados. Es el
 <strong>efecto precedencia</strong> (BEN 12.2). Queda como cultura
 general del curso: sin él, cada sala sería una cámara de ecos
-inhabitable.</p>
+inhabitable. La figura 1 ordena a los tres personajes.</p>
+<figure>
+<img src="../../../figuras/s14_respuesta_impulsiva.svg"
+alt="Figura 1. Lo que llega al oído tras un impulso en una sala (esquemático): primero el sonido directo, luego unas pocas reflexiones tempranas — que el efecto precedencia funde con el directo — y después la cola reverberante, densa y decayendo exponencialmente. La pendiente de esa cola es la que el T_{60} convierte en número." />
+<figcaption aria-hidden="true"><strong>Figura 1.</strong> Lo que llega
+al oído tras un impulso en una sala (esquemático): primero el sonido
+directo, luego unas pocas reflexiones tempranas — que el efecto
+precedencia funde con el directo — y después la cola reverberante, densa
+y decayendo exponencialmente. La pendiente de esa cola es la que el
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>T</mi><mn>60</mn></msub><annotation encoding="application/x-tex">T_{60}</annotation></semantics></math>
+convierte en número.</figcaption>
+</figure>
 <h2 id="cuánto-dura-una-sala-el-tiempo-de-reverberación">¿Cuánto dura
 una sala? El tiempo de reverberación</h2>
 <p>Detenga la fuente y la sala sigue sonando: la energía atrapada sigue
@@ -337,7 +353,20 @@ Hz, y los siguientes en ~171 y ~257 Hz: plena zona de la voz. Cuando su
 nota cae cerca de una de esas frecuencias, la sala entera resuena con
 usted — es la curva de resonancia de s10, con la sala como resonador y
 su voz como excitador. Entre modo y modo, en cambio, la sala responde
-poco: por eso <em>algunas</em> notas engordan y otras no.</p>
+poco: por eso <em>algunas</em> notas engordan y otras no (figura 2).</p>
+<figure>
+<img src="../../../figuras/s14_modos_sala.svg"
+alt="Figura 2. Modos axiales del aire entre dos paredes paralelas separadas L = 2 m (la ducha): f = v\,n/2L \approx 86, 171 y 257 Hz. En una pared rígida el aire no puede moverse y la presión es máxima — al revés que en el extremo abierto de un tubo de s12. Cuando la nota cantada cae cerca de una de estas frecuencias, la sala resuena con usted." />
+<figcaption aria-hidden="true"><strong>Figura 2.</strong> Modos axiales
+del aire entre dos paredes paralelas separadas
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>L</mi><mo>=</mo><mn>2</mn></mrow><annotation encoding="application/x-tex">L = 2</annotation></semantics></math>
+m (la ducha):
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>f</mi><mo>=</mo><mi>v</mi><mspace width="0.167em"></mspace><mi>n</mi><mi>/</mi><mn>2</mn><mi>L</mi><mo>≈</mo><mn>86</mn></mrow><annotation encoding="application/x-tex">f = v\,n/2L \approx 86</annotation></semantics></math>,
+171 y 257 Hz. En una pared rígida el aire no puede moverse y la presión
+es máxima — al revés que en el extremo abierto de un tubo de s12. Cuando
+la nota cantada cae cerca de una de estas frecuencias, la sala resuena
+con usted.</figcaption>
+</figure>
 <p>¿Y por qué la catedral no hace esto? Sí lo hace — pero sus modos
 empiezan tan abajo y se apilan tan densamente que en la zona musical hay
 cientos por cada semitono: ya no se oyen frecuencias favoritas sino una
@@ -367,7 +396,23 @@ con impulsos distintos sin decirlo. El número que obtenga con un celular
 no es de laboratorio, pero para <em>comparar</em> la capilla con el hall
 — que es lo que pide OA4.3 — es perfectamente competente, igual que en
 s06: las comparaciones con el mismo aparato valen más que los valores
-absolutos.</p>
+absolutos. La figura 3 muestra la medición completa, con su trampa
+incluida.</p>
+<figure>
+<img src="../../../figuras/s14_caida_t60.svg"
+alt="Figura 3. La medición del T_{60} (números del ejemplo del recuadro: sala de clases, T_{60} \approx 1{,}1 s). Desde que la fuente calla, el nivel cae en línea recta en dB, y el T_{60} es el tiempo en bajar 60 dB — la millonésima parte de la intensidad. En una medición real la cola se funde con el ruido de fondo antes de completar la caída: se lee la pendiente inicial y se extrapola, anotándolo." />
+<figcaption aria-hidden="true"><strong>Figura 3.</strong> La medición
+del
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>T</mi><mn>60</mn></msub><annotation encoding="application/x-tex">T_{60}</annotation></semantics></math>
+(números del ejemplo del recuadro: sala de clases,
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>T</mi><mn>60</mn></msub><mo>≈</mo><mn>1</mn><mo>,</mo><mn>1</mn></mrow><annotation encoding="application/x-tex">T_{60} \approx 1{,}1</annotation></semantics></math>
+s). Desde que la fuente calla, el nivel cae en línea recta en dB, y el
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>T</mi><mn>60</mn></msub><annotation encoding="application/x-tex">T_{60}</annotation></semantics></math>
+es el tiempo en bajar 60 dB — la millonésima parte de la intensidad. En
+una medición real la cola se funde con el ruido de fondo antes de
+completar la caída: se lee la pendiente inicial y se extrapola,
+anotándolo.</figcaption>
+</figure>
 <h2 id="síntesis">Síntesis</h2>
 <ul>
 <li>La sala es un instrumento más: refleja y absorbe según sus

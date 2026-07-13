@@ -202,6 +202,11 @@
   pre code { background:none; padding:0; }
   hr { border:none; border-top:1px solid #ccc; margin:2rem 0; }
   img { max-width:100%; }
+  figure { margin:1.6rem auto; text-align:center; }
+  figure img { max-width:min(100%, 680px); }
+  figcaption { font-family:Helvetica,Arial,sans-serif; font-size:.82rem;
+               color:#555; margin-top:.5rem; text-align:left;
+               max-width:640px; margin-inline:auto; line-height:1.4; }
   li { margin-bottom:.25rem; }
   math { font-size:1.05em; }
   @media print { body { background:white; max-width:none; } }
@@ -263,8 +268,19 @@ a la fuente (Benade 1990, secs. 19.1–19.2). Fuente y filtro quedan así
 — la altura — se decide en la laringe; el patrón de formantes — la
 vocal, buena parte del timbre — se decide en la boca. Por eso, y solo
 por eso, usted puede cantar cualquier vocal en cualquier nota: el modelo
-<strong>fuente-filtro</strong>, la pieza central de la acústica de la
-voz.</p>
+<strong>fuente-filtro</strong> (figura 1), la pieza central de la
+acústica de la voz.</p>
+<figure>
+<img src="../../../figuras/s13_fuente_filtro.svg"
+alt="Figura 1. El modelo fuente-filtro en tres pasos (esquemático; vocal /a/ con f_0 = 200 Hz). La fuente pone el peine de armónicos — la altura; el tracto pone la envolvente de formantes — la vocal; el sonido radiado es el producto de ambos: los armónicos que caen cerca de un formante sobresalen." />
+<figcaption aria-hidden="true"><strong>Figura 1.</strong> El modelo
+fuente-filtro en tres pasos (esquemático; vocal /a/ con
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>f</mi><mn>0</mn></msub><mo>=</mo><mn>200</mn></mrow><annotation encoding="application/x-tex">f_0 = 200</annotation></semantics></math>
+Hz). La fuente pone el peine de armónicos — la altura; el tracto pone la
+envolvente de formantes — la vocal; el sonido radiado es el producto de
+ambos: los armónicos que caen cerca de un formante
+sobresalen.</figcaption>
+</figure>
 <h2 id="la-vocal-es-un-lugar-en-el-mapa-de-formantes">La vocal es un
 lugar en el mapa de formantes</h2>
 <p>En el espectrograma proyectado, la sesión lo mostró en vivo: al
@@ -313,11 +329,24 @@ en los valores finos; los rangos son estándar]</strong>:</p>
 </table>
 <p>No le pedimos memorizar la tabla: le pedimos la idea — F1 baja cuando
 la boca se cierra, F2 sube cuando la lengua avanza, y cada vocal es una
-<strong>esquina de ese mapa</strong>. La demo de la sesión
+<strong>esquina de ese mapa</strong> (figura 2). La demo de la sesión
 (<code>demo_formantes_voz.html</code>) tiene el mapa en dos perillas:
 mueva F1 y F2 y la vocal cambia sin que la altura se inmute; mueva
 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>f</mi><mn>0</mn></msub><annotation encoding="application/x-tex">f_0</annotation></semantics></math>
 y pasa lo contrario.</p>
+<figure>
+<img src="../../../figuras/s13_mapa_vocales.svg"
+alt="Figura 2. El mapa de las vocales en el plano F_1–F_2, con los valores típicos aproximados de la tabla (voz adulta; las zonas reales varían entre hablantes y las elipses son solo orientativas). Las dos reglas del mapa: abrir la boca sube F_1; adelantar la lengua sube F_2." />
+<figcaption aria-hidden="true"><strong>Figura 2.</strong> El mapa de las
+vocales en el plano
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>F</mi><mn>1</mn></msub><annotation encoding="application/x-tex">F_1</annotation></semantics></math>–<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>F</mi><mn>2</mn></msub><annotation encoding="application/x-tex">F_2</annotation></semantics></math>,
+con los valores típicos aproximados de la tabla (voz adulta; las zonas
+reales varían entre hablantes y las elipses son solo orientativas). Las
+dos reglas del mapa: abrir la boca sube
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>F</mi><mn>1</mn></msub><annotation encoding="application/x-tex">F_1</annotation></semantics></math>;
+adelantar la lengua sube
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>F</mi><mn>2</mn></msub><annotation encoding="application/x-tex">F_2</annotation></semantics></math>.</figcaption>
+</figure>
 <h2 id="el-susurro-el-filtro-sin-la-fuente">El susurro: el filtro sin la
 fuente</h2>
 <p>La demostración más limpia de la independencia la hizo el curso en

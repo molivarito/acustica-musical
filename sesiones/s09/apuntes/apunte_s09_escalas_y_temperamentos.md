@@ -42,10 +42,12 @@ multiplicarse 7 veces por 2. Pero
 $$\left(\tfrac{3}{2}\right)^{12} \approx 129{,}75
 \qquad \text{mientras que} \qquad 2^{7} = 128.$$
 
-Las dos escaleras no llegan al mismo piso. El sobrante — esa razón de
-129,75 a 128 — se llama **coma pitagórica**, y es la grieta estructural
-de todo sistema de 12 notas: **es aritméticamente imposible que las 12
-quintas sean justas y las octavas también**. La respuesta al ticket es
+Las dos escaleras no llegan al mismo piso (figura 1). El sobrante — esa
+razón de 129,75 a 128 — se llama **coma pitagórica**, y es la grieta
+estructural de todo sistema de 12 notas: **es aritméticamente imposible
+que las 12 quintas sean justas y las octavas también**.
+
+![**Figura 1.** Dos escaleras que no cierran: apilar doce quintas justas (×3/2, en cents $12\times702 = 8424$) llega más arriba que siete octavas ($7\times1200 = 8400$). La diferencia — la **coma pitagórica**, ≈ 23,5 cents, un cuarto de semitono — es la razón por la que ningún sistema de 12 notas puede tener todas las quintas justas y las octavas puras a la vez.](../../../figuras/s09_coma_pitagorica.svg) La respuesta al ticket es
 no; algo hay que sacrificar. Las distintas maneras de elegir el
 sacrificio son, precisamente, los **temperamentos**.
 
@@ -122,13 +124,15 @@ llevan tres siglos moliendo; el oído occidental está tan acostumbrado
 que en el gancho de la sesión buena parte del curso votó por la
 tercera temperada como "la afinada".
 
-Los sistemas históricos eligieron otros repartos. La **afinación
-pitagórica** (quintas justas, hasta que una — la "quinta del lobo" —
-absorbe toda la coma) tiene terceras aún más anchas: 81:64 ≈ 408
-cents. La **entonación justa** construye terceras perfectas 5:4, pero
-el precio es que algunas quintas y algunos transportes quedan
+Los sistemas históricos eligieron otros repartos (figura 2). La
+**afinación pitagórica** (quintas justas, hasta que una — la "quinta
+del lobo" — absorbe toda la coma) tiene terceras aún más anchas: 81:64
+≈ 408 cents. La **entonación justa** construye terceras perfectas 5:4,
+pero el precio es que algunas quintas y algunos transportes quedan
 inutilizables: sirve para un coro que ajusta en tiempo real, no para
-un teclado de afinación fija. Y los **temperamentos circulantes** del
+un teclado de afinación fija.
+
+![**Figura 2.** Qué sacrifica cada temperamento, en cents respecto del intervalo justo. La entonación justa deja quinta y tercera perfectas (0 cents), pero solo en la tonalidad para la que se construyó. La pitagórica conserva la quinta justa a costa de una tercera muy ancha (+22 cents). El temperamento igual reparte el compromiso: estrecha cada quinta apenas 2 cents (un batido lento) pero ensancha cada tercera mayor 14 cents (una vibración áspera).](../../../figuras/s09_desviaciones.svg) Y los **temperamentos circulantes** del
 barroco — Werckmeister es el ejemplo clásico — reparten la coma en
 partes *desiguales*: todas las tonalidades funcionan, pero cada una
 queda con proporciones levemente distintas, con su "color"

@@ -74,6 +74,8 @@ sonido empieza a doler (Benade 1990, secs. 13.1 y 13.8; ROS cap. 6 —
 valores típicos aproximados; los de nuestras salas los mediremos
 nosotros).
 
+![**Figura 1.** La escala de niveles de presión sonora con hitos musicales, del umbral de audición al umbral del dolor. Los valores son típicos y redondeados. A la derecha, la gramática del decibel: +10 dB multiplican por diez la intensidad (y suenan como el doble), +3 dB la duplican (cambio chico).](../figuras/s06_escala_decibel.svg)
+
 > **Recuadro opcional (la fórmula, para quien la quiera).**
 > $L_p = 20\log_{10}(p/p_0)$, o $10\log_{10}(I/I_0)$ en intensidades.
 > La intensidad va como el cuadrado de la presión: por eso ×10 en

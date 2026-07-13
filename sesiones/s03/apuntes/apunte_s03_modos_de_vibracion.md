@@ -69,6 +69,8 @@ sus frecuencias guardan una relación asombrosamente simple:
 
 $$f_n = n \, f_1 \qquad n = 1, 2, 3, \dots$$
 
+![**Figura 1.** Las cuatro primeras formas modales de una cuerda fija en ambos extremos. Cada modo es una forma de vibrar de toda la cuerda; los puntos negros (●) son los **nodos**, lugares que no se mueven. El modo $n$ tiene $n$ barrigas y su frecuencia es $n\,f_1$. Apoyar un dedo sobre un nodo deja sobrevivir ese modo; apoyarlo sobre una barriga lo apaga.](../../../figuras/s03_modos_cuerda.svg)
+
 El modo de dos barrigas vibra exactamente al doble del modo fundamental;
 el de tres, al triple. Puede verlo y oírlo, modo por modo y sumados, en
 la demo de la sesión (`demo_modos_cuerda.html`), y lo oyó en la guitarra:
@@ -93,6 +95,8 @@ objeto golpeado en dos o tres dimensiones. Y anticipa la percepción:
 los parciales armónicos se funden en *una* nota nítida; los inarmónicos
 se resisten, y por eso la sartén "no afina" (por qué el oído premia las
 razones enteras es tema de la sesión 5).
+
+![**Figura 2.** Dos espectros esquemáticos. A la izquierda, una cuerda: sus parciales caen en razones enteras $1:2:3:4\dots$ (armónicos), y el oído los funde en una nota afinable. A la derecha, una membrana o placa: sus parciales caen en razones no enteras (aquí $1:1{,}59:2{,}14\dots$, las de una membrana circular ideal), es decir **inarmónicos**, y por eso la percusión de superficie tiene altura difusa. Alturas de las líneas cualitativas.](../../../figuras/s03_armonico_vs_inarmonico.svg)
 
 > **Recuadro opcional (para quienes vienen de ingeniería).** La relación
 > $f_n = n f_1$ de la cuerda ideal se deriva de exigir nodos en ambos
@@ -138,6 +142,8 @@ brillante y complejo en el ataque, cada vez más simple y opaco hacia la
 cola (Benade 1990, cap. 4). El oído usa esa película completa para
 reconocer "vaso", "sartén" o "campana". Cuando en el proyecto grabe su
 instrumento, no mire solo *qué* parciales tiene: mire *cómo decaen*.
+
+![**Figura 3.** Amplitud de tres parciales de un objeto golpeado en función del tiempo. En general los parciales agudos pierden energía más rápido que los graves, así que la mezcla —y con ella el timbre— cambia mientras el sonido se apaga: brillante en el ataque, cada vez más simple hacia la cola. Curvas esquemáticas.](../../../figuras/s03_decaimiento_multimodo.svg)
 
 ## El proyecto quedó lanzado
 

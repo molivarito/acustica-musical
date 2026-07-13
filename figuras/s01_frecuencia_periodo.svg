@@ -1,0 +1,466 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+  "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns:xlink="http://www.w3.org/1999/xlink" width="435.331016pt" height="239.064156pt" viewBox="0 0 435.331016 239.064156" xmlns="http://www.w3.org/2000/svg" version="1.1">
+ <metadata>
+  <rdf:RDF xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+   <cc:Work>
+    <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+    <dc:date>2026-07-13T09:20:39.810398</dc:date>
+    <dc:format>image/svg+xml</dc:format>
+    <dc:creator>
+     <cc:Agent>
+      <dc:title>Matplotlib v3.10.3, https://matplotlib.org/</dc:title>
+     </cc:Agent>
+    </dc:creator>
+   </cc:Work>
+  </rdf:RDF>
+ </metadata>
+ <defs>
+  <style type="text/css">*{stroke-linejoin: round; stroke-linecap: butt}</style>
+ </defs>
+ <g id="figure_1">
+  <g id="patch_1">
+   <path d="M 0 239.064156 
+L 435.331016 239.064156 
+L 435.331016 0 
+L 0 0 
+z
+" style="fill: #ffffff"/>
+  </g>
+  <g id="axes_1">
+   <g id="patch_2">
+    <path d="M 40.411016 203.904 
+L 431.011016 203.904 
+L 431.011016 4.32 
+L 40.411016 4.32 
+z
+" style="fill: #ffffff"/>
+   </g>
+   <g id="matplotlib.axis_1">
+    <g id="xtick_1">
+     <g id="line2d_1">
+      <defs>
+       <path id="me19d81d968" d="M 0 0 
+L 0 3.5 
+" style="stroke: #1a1a1a; stroke-width: 0.8"/>
+      </defs>
+      <g>
+       <use xlink:href="#me19d81d968" x="58.165561" y="203.904" style="fill: #1a1a1a; stroke: #1a1a1a; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_1">
+      <text style="font-size: 9.5px; font-family: 'DejaVu Serif', serif; text-anchor: middle; fill: #1a1a1a" x="58.165561" y="218.122516" transform="rotate(-0 58.165561 218.122516)">0</text>
+     </g>
+    </g>
+    <g id="xtick_2">
+     <g id="line2d_2">
+      <g>
+       <use xlink:href="#me19d81d968" x="102.551925" y="203.904" style="fill: #1a1a1a; stroke: #1a1a1a; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_2">
+      <text style="font-size: 9.5px; font-family: 'DejaVu Serif', serif; text-anchor: middle; fill: #1a1a1a" x="102.551925" y="218.122516" transform="rotate(-0 102.551925 218.122516)">2</text>
+     </g>
+    </g>
+    <g id="xtick_3">
+     <g id="line2d_3">
+      <g>
+       <use xlink:href="#me19d81d968" x="146.938288" y="203.904" style="fill: #1a1a1a; stroke: #1a1a1a; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_3">
+      <text style="font-size: 9.5px; font-family: 'DejaVu Serif', serif; text-anchor: middle; fill: #1a1a1a" x="146.938288" y="218.122516" transform="rotate(-0 146.938288 218.122516)">4</text>
+     </g>
+    </g>
+    <g id="xtick_4">
+     <g id="line2d_4">
+      <g>
+       <use xlink:href="#me19d81d968" x="191.324652" y="203.904" style="fill: #1a1a1a; stroke: #1a1a1a; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_4">
+      <text style="font-size: 9.5px; font-family: 'DejaVu Serif', serif; text-anchor: middle; fill: #1a1a1a" x="191.324652" y="218.122516" transform="rotate(-0 191.324652 218.122516)">6</text>
+     </g>
+    </g>
+    <g id="xtick_5">
+     <g id="line2d_5">
+      <g>
+       <use xlink:href="#me19d81d968" x="235.711016" y="203.904" style="fill: #1a1a1a; stroke: #1a1a1a; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_5">
+      <text style="font-size: 9.5px; font-family: 'DejaVu Serif', serif; text-anchor: middle; fill: #1a1a1a" x="235.711016" y="218.122516" transform="rotate(-0 235.711016 218.122516)">8</text>
+     </g>
+    </g>
+    <g id="xtick_6">
+     <g id="line2d_6">
+      <g>
+       <use xlink:href="#me19d81d968" x="280.097379" y="203.904" style="fill: #1a1a1a; stroke: #1a1a1a; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_6">
+      <text style="font-size: 9.5px; font-family: 'DejaVu Serif', serif; text-anchor: middle; fill: #1a1a1a" x="280.097379" y="218.122516" transform="rotate(-0 280.097379 218.122516)">10</text>
+     </g>
+    </g>
+    <g id="xtick_7">
+     <g id="line2d_7">
+      <g>
+       <use xlink:href="#me19d81d968" x="324.483743" y="203.904" style="fill: #1a1a1a; stroke: #1a1a1a; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_7">
+      <text style="font-size: 9.5px; font-family: 'DejaVu Serif', serif; text-anchor: middle; fill: #1a1a1a" x="324.483743" y="218.122516" transform="rotate(-0 324.483743 218.122516)">12</text>
+     </g>
+    </g>
+    <g id="xtick_8">
+     <g id="line2d_8">
+      <g>
+       <use xlink:href="#me19d81d968" x="368.870107" y="203.904" style="fill: #1a1a1a; stroke: #1a1a1a; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_8">
+      <text style="font-size: 9.5px; font-family: 'DejaVu Serif', serif; text-anchor: middle; fill: #1a1a1a" x="368.870107" y="218.122516" transform="rotate(-0 368.870107 218.122516)">14</text>
+     </g>
+    </g>
+    <g id="xtick_9">
+     <g id="line2d_9">
+      <g>
+       <use xlink:href="#me19d81d968" x="413.25647" y="203.904" style="fill: #1a1a1a; stroke: #1a1a1a; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_9">
+      <text style="font-size: 9.5px; font-family: 'DejaVu Serif', serif; text-anchor: middle; fill: #1a1a1a" x="413.25647" y="218.122516" transform="rotate(-0 413.25647 218.122516)">16</text>
+     </g>
+    </g>
+    <g id="text_10">
+     <text style="font-size: 11px; font-family: 'DejaVu Serif', serif; text-anchor: middle; fill: #1a1a1a" x="235.711016" y="232.4565" transform="rotate(-0 235.711016 232.4565)">tiempo (ms)</text>
+    </g>
+   </g>
+   <g id="matplotlib.axis_2">
+    <g id="ytick_1">
+     <g id="line2d_10">
+      <defs>
+       <path id="m972076d70f" d="M 0 0 
+L -3.5 0 
+" style="stroke: #1a1a1a; stroke-width: 0.8"/>
+      </defs>
+      <g>
+       <use xlink:href="#m972076d70f" x="40.411016" y="180.224542" style="fill: #1a1a1a; stroke: #1a1a1a; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_11">
+      <text style="font-size: 9.5px; font-family: 'DejaVu Serif', serif; text-anchor: end; fill: #1a1a1a" x="33.411016" y="183.8338" transform="rotate(-0 33.411016 183.8338)">−1</text>
+     </g>
+    </g>
+    <g id="ytick_2">
+     <g id="line2d_11">
+      <g>
+       <use xlink:href="#m972076d70f" x="40.411016" y="112.568949" style="fill: #1a1a1a; stroke: #1a1a1a; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_12">
+      <text style="font-size: 9.5px; font-family: 'DejaVu Serif', serif; text-anchor: end; fill: #1a1a1a" x="33.411016" y="116.178207" transform="rotate(-0 33.411016 116.178207)">0</text>
+     </g>
+    </g>
+    <g id="ytick_3">
+     <g id="line2d_12">
+      <g>
+       <use xlink:href="#m972076d70f" x="40.411016" y="44.913356" style="fill: #1a1a1a; stroke: #1a1a1a; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_13">
+      <text style="font-size: 9.5px; font-family: 'DejaVu Serif', serif; text-anchor: end; fill: #1a1a1a" x="33.411016" y="48.522614" transform="rotate(-0 33.411016 48.522614)">1</text>
+     </g>
+    </g>
+    <g id="text_14">
+     <text style="font-size: 11px; font-family: 'DejaVu Serif', serif; text-anchor: middle; fill: #1a1a1a" x="13.118281" y="104.112" transform="rotate(-90 13.118281 104.112)">presión (u.a.)</text>
+    </g>
+   </g>
+   <g id="line2d_13">
+    <path d="M 58.165561 112.568949 
+L 64.027492 90.522895 
+L 67.224909 79.366137 
+L 69.889423 70.883431 
+L 72.198669 64.291422 
+L 74.152646 59.353224 
+L 75.928988 55.427219 
+L 77.527697 52.386643 
+L 78.948771 50.096953 
+L 80.369845 48.211526 
+L 81.613285 46.903059 
+L 82.856725 45.919971 
+L 83.92253 45.340037 
+L 84.988336 45.004874 
+L 86.054142 44.915703 
+L 87.119947 45.072848 
+L 88.185753 45.475738 
+L 89.251559 46.122905 
+L 90.317364 47.011994 
+L 91.560804 48.350658 
+L 92.804244 50.007529 
+L 94.225318 52.280135 
+L 95.824027 55.30232 
+L 97.422735 58.793453 
+L 99.199078 63.187594 
+L 101.153055 68.595804 
+L 103.4623 75.675012 
+L 106.126814 84.617757 
+L 109.324231 96.168339 
+L 114.653259 116.415886 
+L 119.804653 135.677438 
+L 122.824436 146.160129 
+L 125.311316 154.069977 
+L 127.620561 160.682311 
+L 129.574538 165.639911 
+L 131.350881 169.585098 
+L 132.949589 172.644029 
+L 134.548298 175.211014 
+L 135.969372 177.0627 
+L 137.212812 178.340914 
+L 138.456252 179.293222 
+L 139.522058 179.846472 
+L 140.587863 180.154772 
+L 141.653669 180.217002 
+L 142.719474 180.032934 
+L 143.78528 179.603239 
+L 144.851086 178.929481 
+L 145.916891 178.014113 
+L 147.160331 176.64531 
+L 148.403771 174.959004 
+L 149.824845 172.653806 
+L 151.423554 169.596543 
+L 153.199896 165.653098 
+L 155.153873 160.697259 
+L 157.285485 154.621951 
+L 159.59473 147.35287 
+L 162.436879 137.605075 
+L 165.989564 124.541699 
+L 177.002889 83.403284 
+L 179.845037 73.998321 
+L 182.154283 67.080339 
+L 184.285894 61.381337 
+L 186.239871 56.809694 
+L 188.016214 53.244036 
+L 189.614922 50.54675 
+L 191.035996 48.574945 
+L 192.279436 47.188947 
+L 193.522876 46.126912 
+L 194.588682 45.478478 
+L 195.654487 45.074311 
+L 196.720293 44.915883 
+L 197.786099 45.003771 
+L 198.851904 45.337655 
+L 199.91771 45.91632 
+L 200.983516 46.737657 
+L 202.226955 47.998558 
+L 203.470395 49.579411 
+L 204.891469 51.767757 
+L 206.490178 54.69914 
+L 208.088886 58.10441 
+L 209.865229 62.409794 
+L 211.819206 67.729486 
+L 214.128452 74.717814 
+L 216.792966 83.576091 
+L 219.990383 95.056681 
+L 224.964142 113.908573 
+L 230.470805 134.594897 
+L 233.668222 145.753231 
+L 236.332736 154.237716 
+L 238.641981 160.831576 
+L 240.595958 165.77154 
+L 242.372301 169.699292 
+L 243.971009 172.741537 
+L 245.392083 175.032779 
+L 246.813158 176.91981 
+L 248.056598 178.229717 
+L 249.300037 179.21427 
+L 250.365843 179.795474 
+L 251.431649 180.131915 
+L 252.497454 180.222369 
+L 253.56326 180.066506 
+L 254.629066 179.664893 
+L 255.694871 179.018993 
+L 256.760677 178.131157 
+L 258.004117 176.793929 
+L 259.247557 175.138461 
+L 260.668631 172.86741 
+L 262.267339 169.846899 
+L 263.866048 166.357347 
+L 265.64239 161.964838 
+L 267.596367 156.558253 
+L 269.905613 149.48071 
+L 272.570127 140.539506 
+L 275.767544 128.99019 
+L 281.096572 108.743243 
+L 286.247966 89.480448 
+L 289.267749 78.99623 
+L 291.754628 71.084718 
+L 294.063874 64.47054 
+L 296.017851 59.511179 
+L 297.794194 55.56425 
+L 299.392902 52.503653 
+L 300.99161 49.934921 
+L 302.412685 48.081627 
+L 303.656125 46.801971 
+L 304.899564 45.848196 
+L 305.96537 45.293675 
+L 307.031176 44.984095 
+L 308.096981 44.920582 
+L 309.162787 45.103368 
+L 310.228593 45.531787 
+L 311.294398 46.20428 
+L 312.360204 47.118397 
+L 313.603644 48.485766 
+L 314.847084 50.170672 
+L 316.268158 52.47432 
+L 317.866866 55.529916 
+L 319.643209 59.471619 
+L 321.597186 64.425696 
+L 323.728797 70.499291 
+L 326.038043 77.76679 
+L 328.880191 87.513069 
+L 332.432877 100.57527 
+L 343.446201 141.715425 
+L 346.28835 151.122104 
+L 348.597595 158.041816 
+L 350.729207 163.742654 
+L 352.683184 168.316158 
+L 354.459526 171.883637 
+L 356.058235 174.58265 
+L 357.479309 176.55605 
+L 358.722749 177.94348 
+L 359.966189 179.006974 
+L 361.031994 179.656675 
+L 362.0978 180.062118 
+L 363.163606 180.221828 
+L 364.229411 180.135223 
+L 365.295217 179.802617 
+L 366.361022 179.225224 
+L 367.426828 178.405143 
+L 368.670268 177.145685 
+L 369.913708 175.566245 
+L 371.334782 173.379465 
+L 372.93349 170.449772 
+L 374.532199 167.046101 
+L 376.308542 162.742372 
+L 378.262519 157.424334 
+L 380.571764 150.437708 
+L 383.236278 141.581019 
+L 386.433695 130.101757 
+L 391.407455 111.250586 
+L 397.091751 89.920747 
+L 400.289168 78.811773 
+L 402.776048 70.916938 
+L 405.085294 64.321227 
+L 407.039271 59.379497 
+L 408.815613 55.450001 
+L 410.414322 52.406085 
+L 411.835396 50.113292 
+L 413.25647 48.224656 
+L 413.25647 48.224656 
+" clip-path="url(#ped5281e44c)" style="fill: none; stroke: #7a2e2e; stroke-width: 1.8; stroke-linecap: square"/>
+   </g>
+   <g id="line2d_14">
+    <path d="M 40.411016 112.568949 
+L 431.011016 112.568949 
+" clip-path="url(#ped5281e44c)" style="fill: none; stroke: #8a8a8a; stroke-width: 0.8; stroke-linecap: square"/>
+   </g>
+   <g id="line2d_15">
+    <path d="M 85.907038 44.913356 
+L 85.907038 32.735349 
+" clip-path="url(#ped5281e44c)" style="fill: none; stroke-dasharray: 0.7,1.155; stroke-dashoffset: 0; stroke: #1a1a1a; stroke-width: 0.7"/>
+   </g>
+   <g id="line2d_16">
+    <path d="M 196.872947 44.913356 
+L 196.872947 32.735349 
+" clip-path="url(#ped5281e44c)" style="fill: none; stroke-dasharray: 0.7,1.155; stroke-dashoffset: 0; stroke: #1a1a1a; stroke-width: 0.7"/>
+   </g>
+   <g id="patch_3">
+    <path d="M 40.411016 203.904 
+L 40.411016 4.32 
+" style="fill: none; stroke: #1a1a1a; stroke-width: 0.9; stroke-linejoin: miter; stroke-linecap: square"/>
+   </g>
+   <g id="patch_4">
+    <path d="M 40.411016 203.904 
+L 431.011016 203.904 
+" style="fill: none; stroke: #1a1a1a; stroke-width: 0.9; stroke-linejoin: miter; stroke-linecap: square"/>
+   </g>
+   <g id="patch_5">
+    <path d="M 89.250048 32.735349 
+Q 141.391414 32.735349 193.532781 32.735349 
+" style="fill: none; stroke: #1a1a1a; stroke-width: 1.2; stroke-linecap: round"/>
+    <path d="M 93.650048 34.935349 
+L 89.250048 32.735349 
+L 93.650048 30.535349 
+" style="fill: none; stroke: #1a1a1a; stroke-width: 1.2; stroke-linecap: round"/>
+    <path d="M 189.132781 30.535349 
+L 193.532781 32.735349 
+L 189.132781 34.935349 
+" style="fill: none; stroke: #1a1a1a; stroke-width: 1.2; stroke-linecap: round"/>
+   </g>
+   <g id="text_15">
+    <!-- período $T$ -->
+    <g style="fill: #1a1a1a" transform="translate(114.934993 22.306678)">
+     <text>
+      <tspan x="0" y="-0.203125" style="font-size: 11px; font-family: 'DejaVu Serif'; fill: #1a1a1a">p</tspan>
+      <tspan x="7.041504" y="-0.203125" style="font-size: 11px; font-family: 'DejaVu Serif'; fill: #1a1a1a">e</tspan>
+      <tspan x="13.55127" y="-0.203125" style="font-size: 11px; font-family: 'DejaVu Serif'; fill: #1a1a1a">r</tspan>
+      <tspan x="18.80957" y="-0.203125" style="font-size: 11px; font-family: 'DejaVu Serif'; fill: #1a1a1a">í</tspan>
+      <tspan x="22.327637" y="-0.203125" style="font-size: 11px; font-family: 'DejaVu Serif'; fill: #1a1a1a">o</tspan>
+      <tspan x="28.950195" y="-0.203125" style="font-size: 11px; font-family: 'DejaVu Serif'; fill: #1a1a1a">d</tspan>
+      <tspan x="35.991699" y="-0.203125" style="font-size: 11px; font-family: 'DejaVu Serif'; fill: #1a1a1a">o</tspan>
+      <tspan x="42.614258" y="-0.203125" style="font-size: 11px; font-family: 'DejaVu Serif'; fill: #1a1a1a"> </tspan>
+      <tspan x="46.11084" y="-0.203125" style="font-style: oblique; font-size: 11px; font-family: 'DejaVu Sans'; fill: #1a1a1a">T</tspan>
+     </text>
+    </g>
+   </g>
+   <g id="text_16">
+    <!-- $T = \dfrac{1}{f}$   ·   aquí $f = 200$ Hz $\Rightarrow$ $T = 5$ ms -->
+    <g transform="translate(227.164016 189.20064)">
+     <text>
+      <tspan x="0" y="-0.742188" style="font-style: oblique; font-size: 10.5px; font-family: 'DejaVu Sans'">T</tspan>
+      <tspan x="20.302979" y="5.921875" style="font-style: oblique; font-size: 10.5px; font-family: 'DejaVu Sans'">f</tspan>
+      <tspan x="77.099121" y="-0.742188" style="font-style: oblique; font-size: 10.5px; font-family: 'DejaVu Sans'">f</tspan>
+      <tspan x="151.316895" y="-0.742188" style="font-style: oblique; font-size: 10.5px; font-family: 'DejaVu Sans'">T</tspan>
+      <tspan x="8.459473" y="-0.742188" style="font-size: 10.5px; font-family: 'DejaVu Sans'">=</tspan>
+      <tspan x="19.302979" y="-5.34375" style="font-size: 10.5px; font-family: 'DejaVu Sans'">1</tspan>
+      <tspan x="82.841309" y="-0.742188" style="font-size: 10.5px; font-family: 'DejaVu Sans'">=</tspan>
+      <tspan x="93.684814" y="-0.742188" style="font-size: 10.5px; font-family: 'DejaVu Sans'">2</tspan>
+      <tspan x="100.365234" y="-0.742188" style="font-size: 10.5px; font-family: 'DejaVu Sans'">0</tspan>
+      <tspan x="107.045654" y="-0.742188" style="font-size: 10.5px; font-family: 'DejaVu Sans'">0</tspan>
+      <tspan x="137.135742" y="-0.742188" style="font-size: 10.5px; font-family: 'DejaVu Sans'">⇒</tspan>
+      <tspan x="159.776367" y="-0.742188" style="font-size: 10.5px; font-family: 'DejaVu Sans'">=</tspan>
+      <tspan x="170.619873" y="-0.742188" style="font-size: 10.5px; font-family: 'DejaVu Sans'">5</tspan>
+      <tspan x="27.295898" y="-0.742188" style="font-size: 10.5px; font-family: 'DejaVu Serif'"> </tspan>
+      <tspan x="30.633545" y="-0.742188" style="font-size: 10.5px; font-family: 'DejaVu Serif'"> </tspan>
+      <tspan x="33.971191" y="-0.742188" style="font-size: 10.5px; font-family: 'DejaVu Serif'"> </tspan>
+      <tspan x="37.308838" y="-0.742188" style="font-size: 10.5px; font-family: 'DejaVu Serif'">·</tspan>
+      <tspan x="40.646484" y="-0.742188" style="font-size: 10.5px; font-family: 'DejaVu Serif'"> </tspan>
+      <tspan x="43.984131" y="-0.742188" style="font-size: 10.5px; font-family: 'DejaVu Serif'"> </tspan>
+      <tspan x="47.321777" y="-0.742188" style="font-size: 10.5px; font-family: 'DejaVu Serif'"> </tspan>
+      <tspan x="50.659424" y="-0.742188" style="font-size: 10.5px; font-family: 'DejaVu Serif'">a</tspan>
+      <tspan x="56.919434" y="-0.742188" style="font-size: 10.5px; font-family: 'DejaVu Serif'">q</tspan>
+      <tspan x="63.640869" y="-0.742188" style="font-size: 10.5px; font-family: 'DejaVu Serif'">u</tspan>
+      <tspan x="70.40332" y="-0.742188" style="font-size: 10.5px; font-family: 'DejaVu Serif'">í</tspan>
+      <tspan x="73.761475" y="-0.742188" style="font-size: 10.5px; font-family: 'DejaVu Serif'"> </tspan>
+      <tspan x="113.726074" y="-0.742188" style="font-size: 10.5px; font-family: 'DejaVu Serif'"> </tspan>
+      <tspan x="117.063721" y="-0.742188" style="font-size: 10.5px; font-family: 'DejaVu Serif'">H</tspan>
+      <tspan x="126.220459" y="-0.742188" style="font-size: 10.5px; font-family: 'DejaVu Serif'">z</tspan>
+      <tspan x="131.752441" y="-0.742188" style="font-size: 10.5px; font-family: 'DejaVu Serif'"> </tspan>
+      <tspan x="147.979248" y="-0.742188" style="font-size: 10.5px; font-family: 'DejaVu Serif'"> </tspan>
+      <tspan x="177.300293" y="-0.742188" style="font-size: 10.5px; font-family: 'DejaVu Serif'"> </tspan>
+      <tspan x="180.637939" y="-0.742188" style="font-size: 10.5px; font-family: 'DejaVu Serif'">m</tspan>
+      <tspan x="190.594482" y="-0.742188" style="font-size: 10.5px; font-family: 'DejaVu Serif'">s</tspan>
+     </text>
+     <rect x="19.302979" y="-3.71875" width="6.68042" height="0.65625"/>
+    </g>
+   </g>
+  </g>
+ </g>
+ <defs>
+  <clipPath id="ped5281e44c">
+   <rect x="40.411016" y="4.32" width="390.6" height="199.584"/>
+  </clipPath>
+ </defs>
+</svg>

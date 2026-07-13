@@ -202,6 +202,11 @@
   pre code { background:none; padding:0; }
   hr { border:none; border-top:1px solid #ccc; margin:2rem 0; }
   img { max-width:100%; }
+  figure { margin:1.6rem auto; text-align:center; }
+  figure img { max-width:min(100%, 680px); }
+  figcaption { font-family:Helvetica,Arial,sans-serif; font-size:.82rem;
+               color:#555; margin-top:.5rem; text-align:left;
+               max-width:640px; margin-inline:auto; line-height:1.4; }
   li { margin-bottom:.25rem; }
   math { font-size:1.05em; }
   @media print { body { background:white; max-width:none; } }
@@ -272,7 +277,21 @@ es el tiempo que tarda el nivel en caer <strong>60 decibeles</strong>
 una vez detenida la fuente. Los 60 dB no son capricho: con la regla de
 s06 (cada 10 dB es un factor 10 de intensidad) son seis pisos de ×10 —
 la energía cayó a la millonésima parte, más o menos el viaje de un
-fortissimo hasta perderse en el ruido de fondo.</p>
+fortissimo hasta perderse en el ruido de fondo. La figura 1 lo
+dibuja.</p>
+<figure>
+<img src="../figuras/s14_caida_t60.svg"
+alt="Figura 1. El T_{60} en una gráfica (esquemática): cuando la fuente calla, el nivel cae en línea recta en dB, y el T_{60} es el tiempo en bajar 60 dB — seis pisos de ×10. En una medición real la cola se funde con el ruido de fondo antes de completar la caída: se lee la pendiente inicial y se extrapola. Exactamente lo que haremos en la salida." />
+<figcaption aria-hidden="true"><strong>Figura 1.</strong> El
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>T</mi><mn>60</mn></msub><annotation encoding="application/x-tex">T_{60}</annotation></semantics></math>
+en una gráfica (esquemática): cuando la fuente calla, el nivel cae en
+línea recta en dB, y el
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>T</mi><mn>60</mn></msub><annotation encoding="application/x-tex">T_{60}</annotation></semantics></math>
+es el tiempo en bajar 60 dB — seis pisos de ×10. En una medición real la
+cola se funde con el ruido de fondo antes de completar la caída: se lee
+la pendiente inicial y se extrapola. Exactamente lo que haremos en la
+salida.</figcaption>
+</figure>
 <p>Wallace Sabine, el fundador de este oficio, midió hacia 1900 decenas
 de salas de Harvard con un tubo de órgano, un cronómetro y paciencia de
 monje, y encontró una regularidad que sigue siendo la primera fórmula de
@@ -328,6 +347,19 @@ respuesta se empareja, y lo que queda como firma de la sala es la cola.
 Regla general para llevarse: <strong>sala chica = modos ralos y
 audibles; sala grande = modos densos y reverberación al
 mando.</strong></p>
+<figure>
+<img src="../figuras/s14_modos_sala.svg"
+alt="Figura 2. Los tres primeros modos axiales entre dos paredes separadas L = 2 m: f = v\,n/2L \approx 86, 171 y 257 Hz. En la pared rígida el aire no puede moverse y la presión es máxima — al revés que en el extremo abierto de los tubos de s12. Pocos modos, bien separados, en plena zona de la voz: por eso la ducha tiene favoritas." />
+<figcaption aria-hidden="true"><strong>Figura 2.</strong> Los tres
+primeros modos axiales entre dos paredes separadas
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>L</mi><mo>=</mo><mn>2</mn></mrow><annotation encoding="application/x-tex">L = 2</annotation></semantics></math>
+m:
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>f</mi><mo>=</mo><mi>v</mi><mspace width="0.167em"></mspace><mi>n</mi><mi>/</mi><mn>2</mn><mi>L</mi><mo>≈</mo><mn>86</mn></mrow><annotation encoding="application/x-tex">f = v\,n/2L \approx 86</annotation></semantics></math>,
+171 y 257 Hz. En la pared rígida el aire no puede moverse y la presión
+es máxima — al revés que en el extremo abierto de los tubos de s12.
+Pocos modos, bien separados, en plena zona de la voz: por eso la ducha
+tiene favoritas.</figcaption>
+</figure>
 <h2 id="ponerle-número-a-una-sala-lo-que-haremos">Ponerle número a una
 sala (lo que haremos)</h2>
 <p>El método profesional para medir

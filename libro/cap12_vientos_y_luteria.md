@@ -80,7 +80,9 @@ tubo con puerta y puerta acomoda media onda; un tubo con puerta y pared
 solo acomoda un cuarto — de ahí el 4 — y únicamente los patrones
 impares calzan con una punta de cada tipo (el desarrollo completo, en
 español, está en Roederer 1997, secs. 4.4–4.6; con ejercicios, en
-Rossing et al. 2002, cap. 12).
+Rossing et al. 2002, cap. 12). La figura 1 dibuja ambos menús de modos.
+
+![**Figura 1.** Amplitud de la onda estacionaria de presión de los tres primeros modos de un tubo abierto–abierto y de uno cerrado–abierto. La "puerta" (extremo abierto) impone un nodo de presión; la "pared" (tapa), un máximo. La velocidad del aire (punteada, primera fila) es complementaria: máxima donde la presión tiene nodo. Entre puerta y pared cabe solo un cuarto de onda: de ahí el $4L$ y la serie impar.](../figuras/s12_modos_tubos.svg)
 
 Dos fórmulas de una línea, y con ellas se predice la nota de cualquier
 tubo simple con pura aritmética. Compruébelo antes de venir: ¿qué largo
@@ -114,9 +116,11 @@ Falta el detalle que convierte un tubo en un instrumento: los
 donde hay agujero abierto la presión ya casi no puede acumularse — el
 tubo, en primera aproximación, "termina" ahí. Destapar agujeros de
 abajo hacia arriba equivale entonces a acortar el tubo por etapas:
-una escala completa fabricada con un solo tubo y ocho dedos. En la
-sesión lo verá medido en vivo, espectrograma mediante, sobre una
+una escala completa fabricada con un solo tubo y ocho dedos (figura 2).
+En la sesión lo verá medido en vivo, espectrograma mediante, sobre una
 flauta real.
+
+![**Figura 2.** Un agujero abierto es una fuga de presión: para la onda, el tubo termina aproximadamente donde está el primer agujero destapado (esquemático). El largo efectivo $L_{ef}$ es menor que $L$ y la nota sube.](../figuras/s12_agujero_tubo.svg)
 
 La historia fina — que el agujero no corta del todo, que la *red* de
 agujeros abiertos se comporta como un filtro con una **frecuencia de

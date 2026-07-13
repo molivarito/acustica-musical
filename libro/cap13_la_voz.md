@@ -175,6 +175,8 @@ cantando? Las tres tienen la misma respuesta de fondo: fuente y filtro
 son socios independientes — y esa independencia tiene consecuencias
 que se oyen.
 
+![**Figura 1.** El modelo fuente-filtro en tres pasos (esquemático; una /a/ con $f_0 = 200$ Hz): el zumbido glotal pone el peine de armónicos, el tracto pone la envolvente de formantes, y lo radiado es el producto de ambos. La sesión hará este experimento en vivo, con su voz y el espectrograma proyectado.](../figuras/s13_fuente_filtro.svg)
+
 ## Preguntas que la sesión va a responder
 
 1. Cuando usted canta una vocal, ¿qué afina la "cuerda" y qué afina el

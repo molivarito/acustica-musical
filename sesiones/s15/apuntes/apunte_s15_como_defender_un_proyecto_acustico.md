@@ -46,6 +46,8 @@ proporciones ("la fundamental salió un 12 % más grave de lo predicho;
 el modelo asumía el tubo abierto en ambos extremos, pero el soporte
 tapa parcialmente uno: eso alarga el tubo efectivo y baja $f_1$").
 
+![**Figura 1.** La columna vertebral de toda defensa: seis estaciones, en este orden. Las dos últimas — la desviación y su explicación con mecanismo — son donde la dimensión R1 de la rúbrica se decide.](../../../figuras/s15_cadena_defensa.svg)
+
 Note que la cadena obliga a las tres capas del curso: el oído (el
 fenómeno descrito), el mecanismo (modelo y explicación) y la medición
 (el número que arbitra). Esa integración es exactamente OA3.2, y es lo

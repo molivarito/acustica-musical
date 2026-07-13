@@ -202,6 +202,11 @@
   pre code { background:none; padding:0; }
   hr { border:none; border-top:1px solid #ccc; margin:2rem 0; }
   img { max-width:100%; }
+  figure { margin:1.6rem auto; text-align:center; }
+  figure img { max-width:min(100%, 680px); }
+  figcaption { font-family:Helvetica,Arial,sans-serif; font-size:.82rem;
+               color:#555; margin-top:.5rem; text-align:left;
+               max-width:640px; margin-inline:auto; line-height:1.4; }
   li { margin-bottom:.25rem; }
   math { font-size:1.05em; }
   @media print { body { background:white; max-width:none; } }
@@ -348,6 +353,19 @@ regla exacta y limpia que se deduce del párrafo anterior:</p>
 <p>Un batido por segundo por cada hertz de diferencia. En la sesión no
 le pediremos creerla: la va a <em>contar</em>, con sus propios oídos,
 contra los números en pantalla.</p>
+<figure>
+<img src="../figuras/s07_batido_forma_onda.svg"
+alt="Figura 1. Suma de dos tonos cercanos: una onda rápida (a la frecuencia promedio) encerrada por una envolvente lenta (rojo) que sube y baja f_b = |f_2 - f_1| veces por segundo — refuerzo, silencio, refuerzo. Se dibuja con f_1 = 40 Hz y f_2 = 43 Hz para que el ciclo sea visible." />
+<figcaption aria-hidden="true"><strong>Figura 1.</strong> Suma de dos
+tonos cercanos: una onda rápida (a la frecuencia promedio) encerrada por
+una envolvente lenta (rojo) que sube y baja
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>f</mi><mi>b</mi></msub><mo>=</mo><mo stretchy="false" form="prefix">|</mo><msub><mi>f</mi><mn>2</mn></msub><mo>−</mo><msub><mi>f</mi><mn>1</mn></msub><mo stretchy="false" form="prefix">|</mo></mrow><annotation encoding="application/x-tex">f_b = |f_2 - f_1|</annotation></semantics></math>
+veces por segundo — refuerzo, silencio, refuerzo. Se dibuja con
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>f</mi><mn>1</mn></msub><mo>=</mo><mn>40</mn></mrow><annotation encoding="application/x-tex">f_1 = 40</annotation></semantics></math>
+Hz y
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>f</mi><mn>2</mn></msub><mo>=</mo><mn>43</mn></mrow><annotation encoding="application/x-tex">f_2 = 43</annotation></semantics></math>
+Hz para que el ciclo sea visible.</figcaption>
+</figure>
 <p>Dos preguntas quedan deliberadamente abiertas, porque son suyas. La
 primera: si el batido delata diferencias de frecuencia que ningún oído
 distingue como dos alturas, ¿qué herramienta práctica acaba de ganar un

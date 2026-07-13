@@ -94,6 +94,8 @@ sacude con fuerza un *lugar* distinto de ella. Los agudos, cerca de la
 entrada; los graves, en el fondo. Es, en el fondo, un analizador que
 reparte las frecuencias en un mapa según el sitio que excitan.
 
+![**Figura 1.** El camino del sonido por el oído, en bloques: **externo** (pabellón y canal) capta y colorea; **medio** (tímpano y tres huesecillos) adapta la vibración del aire al líquido; **interno** (cóclea) la analiza. Abajo, la **membrana basilar** desenrollada: cada frecuencia sacude con fuerza un lugar distinto —agudos a la entrada, graves al fondo—, un análisis por lugar. Esquema muy simplificado, sin escala anatómica.](../figuras/s05_oido_esquema.svg)
+
 Guarde ese detalle —frecuencia repartida por lugar, de manera *gruesa*, sin
 distinguir finamente dos frecuencias vecinas—, porque es la semilla de uno
 de los fenómenos más musicales del curso, los batidos y la banda crítica,
@@ -117,6 +119,8 @@ eje de la altura no es una regla lineal apoyada sobre el eje de la
 frecuencia: la altura se organiza por *razones* (el doble, la mitad, tres
 medios) y no por diferencias. Es una idea que va a fundar las escalas y los
 temperamentos más adelante (s09).
+
+![**Figura 2.** Sobre un eje de frecuencia logarítmico, los La sucesivos (110, 220, 440, 880, 1760 Hz) quedan equiespaciados: cada octava es duplicar $f$. El salto $220\to440$ (+220 Hz) y el $440\to880$ (+440 Hz) son el mismo paso perceptual —una octava— aunque abarquen distinta cantidad de hertz. La altura corre por razones, no por diferencias.](../figuras/s05_octava_log.svg)
 
 Y todavía un pliegue más, que la sesión apenas va a dejar asomar como
 curiosidad: puede que la octava que su oído siente "perfecta" no esté

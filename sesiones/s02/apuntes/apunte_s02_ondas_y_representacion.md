@@ -75,6 +75,8 @@ color o intensidad** (más oscuro o más encendido = más fuerte). Cada
 columna vertical del espectrograma es un espectro instantáneo; leídas
 de izquierda a derecha, cuentan la película completa.
 
+![**Figura 1.** Una misma señal (un tono con cuatro parciales, como una vocal cantada) vista en sus tres representaciones. La *forma de onda* la cuenta como historia (presión vs. tiempo); el *espectro*, como receta de ingredientes (nivel vs. frecuencia: la peineta de parciales); el *espectrograma* junta ambas (tiempo–frecuencia–color) y muestra los parciales como líneas horizontales, con el breve "golpe" inicial como una columna vertical. Ninguna es la verdadera: cada una responde lo que la otra esconde.](../../../figuras/s02_tres_retratos.svg)
+
 En el espectrograma, el silbido con glissando es una línea delgada que
 sube; la vocal cantada, una familia de líneas horizontales paralelas
 (sus parciales); la "sss", una banda difusa y alta; el golpe, una
@@ -138,6 +140,8 @@ de onda** $\lambda$, y las tres cantidades quedan atadas por la relación
 más reutilizada del semestre:
 
 $$v = \lambda f$$
+
+![**Figura 2.** Lo que viaja por el aire es una perturbación de presión: cada porción de aire se comprime y se enrarece y vuelve casi a su lugar (arriba, densidad de moléculas; el aire no viaja en bloque). La curva de presión vs. posición (abajo) fija la **longitud de onda** $\lambda$ como la distancia entre dos compresiones sucesivas. Con la rapidez $v \approx 343$ m/s, las tres cantidades quedan atadas por $v = \lambda f$.](../../../figuras/s02_propagacion_lambda.svg)
 
 Con ella y proporciones: el La4 (440 Hz) mide en el aire
 $343/440 \approx 0{,}78$ m; el límite grave audible (20 Hz), unos 17 m —

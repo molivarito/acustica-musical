@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+  "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns:xlink="http://www.w3.org/1999/xlink" width="421.56pt" height="184.614203pt" viewBox="0 0 421.56 184.614203" xmlns="http://www.w3.org/2000/svg" version="1.1">
+ <metadata>
+  <rdf:RDF xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+   <cc:Work>
+    <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+    <dc:date>2026-07-13T09:26:49.967422</dc:date>
+    <dc:format>image/svg+xml</dc:format>
+    <dc:creator>
+     <cc:Agent>
+      <dc:title>Matplotlib v3.10.3, https://matplotlib.org/</dc:title>
+     </cc:Agent>
+    </dc:creator>
+   </cc:Work>
+  </rdf:RDF>
+ </metadata>
+ <defs>
+  <style type="text/css">*{stroke-linejoin: round; stroke-linecap: butt}</style>
+ </defs>
+ <g id="figure_1">
+  <g id="patch_1">
+   <path d="M 0 184.614203 
+L 421.56 184.614203 
+L 421.56 0 
+L 0 0 
+z
+" style="fill: #ffffff"/>
+  </g>
+  <g id="axes_1">
+   <g id="patch_2">
+    <path d="M 25.341382 135.844368 
+L 92.159345 135.844368 
+Q 96.663927 135.844368 96.663927 130.169921 
+L 96.663927 64.91378 
+Q 96.663927 59.239333 92.159345 59.239333 
+L 25.341382 59.239333 
+Q 20.8368 59.239333 20.8368 64.91378 
+L 20.8368 130.169921 
+Q 20.8368 135.844368 25.341382 135.844368 
+z
+" clip-path="url(#p1b9a117cbd)" style="fill: #f0ece4; stroke: #2e4a7a; stroke-width: 1.4; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_3">
+    <path d="M 126.694473 135.844368 
+L 193.512436 135.844368 
+Q 198.017018 135.844368 198.017018 130.169921 
+L 198.017018 64.91378 
+Q 198.017018 59.239333 193.512436 59.239333 
+L 126.694473 59.239333 
+Q 122.189891 59.239333 122.189891 64.91378 
+L 122.189891 130.169921 
+Q 122.189891 135.844368 126.694473 135.844368 
+z
+" clip-path="url(#p1b9a117cbd)" style="fill: #f0ece4; stroke: #7a2e2e; stroke-width: 1.4; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_4">
+    <path d="M 228.047564 135.844368 
+L 294.865527 135.844368 
+Q 299.370109 135.844368 299.370109 130.169921 
+L 299.370109 64.91378 
+Q 299.370109 59.239333 294.865527 59.239333 
+L 228.047564 59.239333 
+Q 223.542982 59.239333 223.542982 64.91378 
+L 223.542982 130.169921 
+Q 223.542982 135.844368 228.047564 135.844368 
+z
+" clip-path="url(#p1b9a117cbd)" style="fill: #f0ece4; stroke: #2e4a7a; stroke-width: 1.4; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_5">
+    <path d="M 329.400655 135.844368 
+L 396.218618 135.844368 
+Q 400.7232 135.844368 400.7232 130.169921 
+L 400.7232 64.91378 
+Q 400.7232 59.239333 396.218618 59.239333 
+L 329.400655 59.239333 
+Q 324.896073 59.239333 324.896073 64.91378 
+L 324.896073 130.169921 
+Q 324.896073 135.844368 329.400655 135.844368 
+z
+" clip-path="url(#p1b9a117cbd)" style="fill: #f0ece4; stroke: #1a1a1a; stroke-width: 1.4; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_6">
+    <path d="M 96.409518 97.54185 
+Q 109.424928 97.54185 120.651483 97.54185 
+" clip-path="url(#p1b9a117cbd)" style="fill: none; stroke: #1a1a1a; stroke-width: 1.6; stroke-linecap: round"/>
+    <path d="M 114.251483 94.34185 
+L 120.651483 97.54185 
+L 114.251483 100.74185 
+z
+" clip-path="url(#p1b9a117cbd)" style="fill: #1a1a1a; stroke: #1a1a1a; stroke-width: 1.6; stroke-linecap: round"/>
+   </g>
+   <g id="patch_7">
+    <path d="M 197.762609 97.54185 
+Q 210.778019 97.54185 222.004574 97.54185 
+" clip-path="url(#p1b9a117cbd)" style="fill: none; stroke: #1a1a1a; stroke-width: 1.6; stroke-linecap: round"/>
+    <path d="M 215.604574 94.34185 
+L 222.004574 97.54185 
+L 215.604574 100.74185 
+z
+" clip-path="url(#p1b9a117cbd)" style="fill: #1a1a1a; stroke: #1a1a1a; stroke-width: 1.6; stroke-linecap: round"/>
+   </g>
+   <g id="patch_8">
+    <path d="M 299.1157 97.54185 
+Q 312.13111 97.54185 323.357665 97.54185 
+" clip-path="url(#p1b9a117cbd)" style="fill: none; stroke: #1a1a1a; stroke-width: 1.6; stroke-linecap: round"/>
+    <path d="M 316.957665 94.34185 
+L 323.357665 97.54185 
+L 316.957665 100.74185 
+z
+" clip-path="url(#p1b9a117cbd)" style="fill: #1a1a1a; stroke: #1a1a1a; stroke-width: 1.6; stroke-linecap: round"/>
+   </g>
+   <g id="text_1">
+    <text style="font-weight: 700; font-size: 10.5px; font-family: 'DejaVu Serif', serif; text-anchor: middle; fill: #2e4a7a" x="58.750364" y="84.834465" transform="rotate(-0 58.750364 84.834465)">CUERDA</text>
+   </g>
+   <g id="text_2">
+    <text style="font-size: 8px; font-family: 'DejaVu Serif', serif; fill: #1a1a1a" transform="translate(26.395364 104.977218)">alta impedancia</text>
+    <text style="font-size: 8px; font-family: 'DejaVu Serif', serif; fill: #1a1a1a" transform="translate(31.939114 113.935468)">(vibra fuerte,</text>
+    <text style="font-size: 8px; font-family: 'DejaVu Serif', serif; fill: #1a1a1a" transform="translate(23.722239 122.893718)">mueve poco aire)</text>
+   </g>
+   <g id="text_3">
+    <text style="font-weight: 700; font-size: 10.5px; font-family: 'DejaVu Serif', serif; text-anchor: middle; fill: #7a2e2e" x="160.103455" y="84.834465" transform="rotate(-0 160.103455 84.834465)">PUENTE</text>
+   </g>
+   <g id="text_4">
+    <text style="font-size: 8px; font-family: 'DejaVu Serif', serif; fill: #1a1a1a" transform="translate(130.710955 109.456343)">transformador</text>
+    <text style="font-size: 8px; font-family: 'DejaVu Serif', serif; fill: #1a1a1a" transform="translate(130.477205 118.414593)">de impedancia</text>
+   </g>
+   <g id="text_5">
+    <text style="font-weight: 700; font-size: 10.5px; font-family: 'DejaVu Serif', serif; text-anchor: middle; fill: #2e4a7a" x="261.456545" y="84.834465" transform="rotate(-0 261.456545 84.834465)">TAPA / CAJA</text>
+   </g>
+   <g id="text_6">
+    <text style="font-size: 8px; font-family: 'DejaVu Serif', serif; fill: #1a1a1a" transform="translate(228.187795 109.399468)">baja impedancia</text>
+    <text style="font-size: 8px; font-family: 'DejaVu Serif', serif; fill: #1a1a1a" transform="translate(220.89092 118.471468)">(mueve mucho aire)</text>
+   </g>
+   <g id="text_7">
+    <text style="font-weight: 700; font-size: 10.5px; font-family: 'DejaVu Serif', serif; text-anchor: middle; fill: #1a1a1a" x="362.809636" y="84.834465" transform="rotate(-0 362.809636 84.834465)">AIRE</text>
+   </g>
+   <g id="text_8">
+    <text style="font-size: 8px; font-family: 'DejaVu Serif', serif; fill: #1a1a1a" transform="translate(349.524636 109.456343)">sonido</text>
+    <text style="font-size: 8px; font-family: 'DejaVu Serif', serif; fill: #1a1a1a" transform="translate(347.319011 118.414593)">radiado</text>
+   </g>
+   <g id="text_9">
+    <text style="font-style: italic; font-size: 9px; font-family: 'DejaVu Serif', serif; text-anchor: middle; fill: #1a1a1a" x="212.656909" y="40.79738" transform="rotate(-0 212.656909 40.79738)">energía de la vibración</text>
+   </g>
+   <g id="text_10">
+    <text style="font-size: 8.5px; font-family: 'DejaVu Serif', serif; fill: #7a2e2e" transform="translate(55.254175 158.425438)">La caja no agrega energía: convierte la vibración de la cuerda en sonido.</text>
+    <text style="font-size: 8.5px; font-family: 'DejaVu Serif', serif; fill: #7a2e2e" transform="translate(121.335698 168.472438)">Sonar más fuerte se paga durando menos.</text>
+   </g>
+   <g id="text_11">
+    <text style="font-weight: 700; font-size: 11.5px; font-family: 'DejaVu Serif', serif; text-anchor: middle" x="210.78" y="13.518203" transform="rotate(-0 210.78 13.518203)">Acoplamiento: cómo la energía de la cuerda llega al aire</text>
+   </g>
+  </g>
+ </g>
+ <defs>
+  <clipPath id="p1b9a117cbd">
+   <rect x="4.32" y="19.518203" width="412.92" height="160.776"/>
+  </clipPath>
+ </defs>
+</svg>

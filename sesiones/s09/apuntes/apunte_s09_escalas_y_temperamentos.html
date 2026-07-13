@@ -202,6 +202,11 @@
   pre code { background:none; padding:0; }
   hr { border:none; border-top:1px solid #ccc; margin:2rem 0; }
   img { max-width:100%; }
+  figure { margin:1.6rem auto; text-align:center; }
+  figure img { max-width:min(100%, 680px); }
+  figcaption { font-family:Helvetica,Arial,sans-serif; font-size:.82rem;
+               color:#555; margin-top:.5rem; text-align:left;
+               max-width:640px; margin-inline:auto; line-height:1.4; }
   li { margin-bottom:.25rem; }
   math { font-size:1.05em; }
   @media print { body { background:white; max-width:none; } }
@@ -246,10 +251,13 @@ frecuencia se multiplicó 12 veces por 3/2; si las octavas mandan, debió
 multiplicarse 7 veces por 2. Pero</p>
 <p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mrow><mo stretchy="true" form="prefix">(</mo><mstyle displaystyle="false"><mfrac><mn>3</mn><mn>2</mn></mfrac></mstyle><mo stretchy="true" form="postfix">)</mo></mrow><mn>12</mn></msup><mo>≈</mo><mn>129</mn><mo>,</mo><mn>75</mn><mspace width="2.0em"></mspace><mtext mathvariant="normal">mientras que</mtext><mspace width="2.0em"></mspace><msup><mn>2</mn><mn>7</mn></msup><mo>=</mo><mn>128</mn><mi>.</mi></mrow><annotation encoding="application/x-tex">\left(\tfrac{3}{2}\right)^{12} \approx 129{,}75
 \qquad \text{mientras que} \qquad 2^{7} = 128.</annotation></semantics></math></p>
-<p>Las dos escaleras no llegan al mismo piso. El sobrante — esa razón de
-129,75 a 128 — se llama <strong>coma pitagórica</strong>, y es la grieta
-estructural de todo sistema de 12 notas: <strong>es aritméticamente
-imposible que las 12 quintas sean justas y las octavas también</strong>.
+<p>Las dos escaleras no llegan al mismo piso (figura 1). El sobrante —
+esa razón de 129,75 a 128 — se llama <strong>coma pitagórica</strong>, y
+es la grieta estructural de todo sistema de 12 notas: <strong>es
+aritméticamente imposible que las 12 quintas sean justas y las octavas
+también</strong>.</p>
+<p><img src="../../../figuras/s09_coma_pitagorica.svg"
+alt="Figura 1. Dos escaleras que no cierran: apilar doce quintas justas (×3/2, en cents 12\times702 = 8424) llega más arriba que siete octavas (7\times1200 = 8400). La diferencia — la coma pitagórica, ≈ 23,5 cents, un cuarto de semitono — es la razón por la que ningún sistema de 12 notas puede tener todas las quintas justas y las octavas puras a la vez." />
 La respuesta al ticket es no; algo hay que sacrificar. Las distintas
 maneras de elegir el sacrificio son, precisamente, los
 <strong>temperamentos</strong>.</p>
@@ -336,20 +344,22 @@ segundo</strong> en el registro central: no un vaivén, una vibración
 oído occidental está tan acostumbrado que en el gancho de la sesión
 buena parte del curso votó por la tercera temperada como “la
 afinada”.</p>
-<p>Los sistemas históricos eligieron otros repartos. La
+<p>Los sistemas históricos eligieron otros repartos (figura 2). La
 <strong>afinación pitagórica</strong> (quintas justas, hasta que una —
 la “quinta del lobo” — absorbe toda la coma) tiene terceras aún más
 anchas: 81:64 ≈ 408 cents. La <strong>entonación justa</strong>
 construye terceras perfectas 5:4, pero el precio es que algunas quintas
 y algunos transportes quedan inutilizables: sirve para un coro que
-ajusta en tiempo real, no para un teclado de afinación fija. Y los
-<strong>temperamentos circulantes</strong> del barroco — Werckmeister es
-el ejemplo clásico — reparten la coma en partes <em>desiguales</em>:
-todas las tonalidades funcionan, pero cada una queda con proporciones
-levemente distintas, con su “color” característico (Benade 1990,
-sec. 16.3–16.4). Cuando un texto de la época habla del carácter de Mi
-bemol mayor, no es pura poesía: en ese teclado, las tonalidades medían
-distinto.</p>
+ajusta en tiempo real, no para un teclado de afinación fija.</p>
+<p><img src="../../../figuras/s09_desviaciones.svg"
+alt="Figura 2. Qué sacrifica cada temperamento, en cents respecto del intervalo justo. La entonación justa deja quinta y tercera perfectas (0 cents), pero solo en la tonalidad para la que se construyó. La pitagórica conserva la quinta justa a costa de una tercera muy ancha (+22 cents). El temperamento igual reparte el compromiso: estrecha cada quinta apenas 2 cents (un batido lento) pero ensancha cada tercera mayor 14 cents (una vibración áspera)." />
+Y los <strong>temperamentos circulantes</strong> del barroco —
+Werckmeister es el ejemplo clásico — reparten la coma en partes
+<em>desiguales</em>: todas las tonalidades funcionan, pero cada una
+queda con proporciones levemente distintas, con su “color”
+característico (Benade 1990, sec. 16.3–16.4). Cuando un texto de la
+época habla del carácter de Mi bemol mayor, no es pura poesía: en ese
+teclado, las tonalidades medían distinto.</p>
 <p>Una última convención que conviene desnaturalizar: el propio
 <strong>La4 = 440 Hz</strong> es un acuerdo histórico, no una constante
 física — el estándar de altura ha variado ampliamente entre épocas y

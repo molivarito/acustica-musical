@@ -31,6 +31,8 @@ una de las relaciones más limpias de todo el curso: no es aproximada,
 no depende del instrumento ni del oyente, y se verifica contando con
 los dedos.
 
+![**Figura 1.** Suma de dos tonos cercanos: una sola onda rápida (a la frecuencia promedio) encerrada por una envolvente lenta (rojo) que sube y baja $f_b = |f_2 - f_1|$ veces por segundo. Se usan $f_1 = 40$ Hz y $f_2 = 43$ Hz para que el ciclo sea visible; la regla es la misma a cualquier altura.](../../../figuras/s07_batido_forma_onda.svg)
+
 ## ¿Por qué dos tonos casi iguales laten?
 
 No hace falta trigonometría para entenderlo; basta la imagen de dos
@@ -51,7 +53,10 @@ ocurre exactamente una vez por segundo. Con 3 Hz de diferencia, la
 segunda onda "adelanta" tres ciclos por segundo y el patrón se repite
 tres veces: tres batidos. De ahí la regla $f_b = |f_2 - f_1|$. La
 envolvente que dibuja la demo — esa curva que encierra a la onda y
-sube y baja lentamente — es el retrato de este juego de fases.
+sube y baja lentamente — es el retrato de este juego de fases
+(figura 2).
+
+![**Figura 2.** El mecanismo del batido. A la izquierda, dos ondas *en fase*: sus empujones se suman y la resultante tiene el doble de amplitud. A la derecha, *en contrafase*: cuando una empuja la otra succiona y la suma casi se anula. Dos tonos de frecuencias distintas pasan lentamente de una situación a la otra, y ese vaivén es el batido.](../../../figuras/s07_fases_batido.svg)
 
 > **Recuadro opcional (para quienes quieran la cuenta exacta).** La
 > suma de dos sinusoides de igual amplitud se puede reescribir como

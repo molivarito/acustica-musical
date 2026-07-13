@@ -202,6 +202,11 @@
   pre code { background:none; padding:0; }
   hr { border:none; border-top:1px solid #ccc; margin:2rem 0; }
   img { max-width:100%; }
+  figure { margin:1.6rem auto; text-align:center; }
+  figure img { max-width:min(100%, 680px); }
+  figcaption { font-family:Helvetica,Arial,sans-serif; font-size:.82rem;
+               color:#555; margin-top:.5rem; text-align:left;
+               max-width:640px; margin-inline:auto; line-height:1.4; }
   li { margin-bottom:.25rem; }
   math { font-size:1.05em; }
   @media print { body { background:white; max-width:none; } }
@@ -229,6 +234,16 @@ usted deja de oír <em>muchos golpes</em> y empieza a oír <em>una
 nota</em>. Ese tránsito — de la secuencia de eventos al tono sostenido —
 es la puerta de entrada del curso, y es un experimento que usted mismo
 hizo en la sesión.</p>
+<figure>
+<img src="../../../figuras/s01_pulsos_ritmo_tono.svg"
+alt="Figura 1. Un mismo pulso repetido a tres tasas crecientes sobre el mismo eje de tiempo. A 10 pulsos/s el oído cuenta golpes separados (ritmo); hacia ~28 pulsos/s entra en una zona ambigua; a 120 pulsos/s los golpes se funden en un tono con altura. La frontera ritmo–tono es una zona, no un umbral nítido." />
+<figcaption aria-hidden="true"><strong>Figura 1.</strong> Un mismo pulso
+repetido a tres tasas crecientes sobre el mismo eje de tiempo. A 10
+pulsos/s el oído cuenta golpes separados (ritmo); hacia ~28 pulsos/s
+entra en una zona ambigua; a 120 pulsos/s los golpes se funden en un
+tono con altura. La frontera ritmo–tono es una <em>zona</em>, no un
+umbral nítido.</figcaption>
+</figure>
 <p>La observación central es esta: <strong>un tono es una vibración que
 se repite lo bastante rápido como para que el oído renuncie a contar los
 eventos y los funda en una sola sensación con altura.</strong> Benade
@@ -252,6 +267,22 @@ cuánto dura una repetición, en segundos.</li>
 <p>Si algo se repite 100 veces por segundo, cada repetición dura un
 centésimo de segundo:</p>
 <p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>T</mi><mo>=</mo><mfrac><mn>1</mn><mi>f</mi></mfrac></mrow><annotation encoding="application/x-tex">T = \frac{1}{f}</annotation></semantics></math></p>
+<figure>
+<img src="../../../figuras/s01_frecuencia_periodo.svg"
+alt="Figura 2. Frecuencia y período son el mismo dato mirado de dos maneras: sobre una oscilación periódica, T es la duración de un ciclo (de cresta a cresta) y f = 1/T cuenta cuántos ciclos caben en un segundo. Aquí f = 200 Hz \Rightarrow T = 5 ms." />
+<figcaption aria-hidden="true"><strong>Figura 2.</strong> Frecuencia y
+período son el mismo dato mirado de dos maneras: sobre una oscilación
+periódica,
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>T</mi><annotation encoding="application/x-tex">T</annotation></semantics></math>
+es la duración de un ciclo (de cresta a cresta) y
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>f</mi><mo>=</mo><mn>1</mn><mi>/</mi><mi>T</mi></mrow><annotation encoding="application/x-tex">f = 1/T</annotation></semantics></math>
+cuenta cuántos ciclos caben en un segundo. Aquí
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>f</mi><mo>=</mo><mn>200</mn></mrow><annotation encoding="application/x-tex">f = 200</annotation></semantics></math>
+Hz
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mo>⇒</mo><annotation encoding="application/x-tex">\Rightarrow</annotation></semantics></math>
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>T</mi><mo>=</mo><mn>5</mn></mrow><annotation encoding="application/x-tex">T = 5</annotation></semantics></math>
+ms.</figcaption>
+</figure>
 <p>Esa es toda la matemática de esta sesión, y no es poca: con ella
 usted ya puede razonar en proporciones. ¿La cuerda vibra el doble de
 rápido? Entonces cada ciclo dura la mitad. Ese estilo de razonamiento —

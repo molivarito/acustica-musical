@@ -42,7 +42,9 @@ justas, la frecuencia final es la inicial multiplicada 12 veces por
 haga ambas cuentas antes de seguir leyendo. En serio: son dos teclas.
 
 ¿Ya? $(3/2)^{12} \approx 129{,}75$. Y $2^7 = 128$. **No da lo mismo.**
-Las doce quintas se pasan de largo. El excedente parece pequeño —
+Las doce quintas se pasan de largo (figura 1).
+
+![**Figura 1.** Dos escaleras que no cierran: apilar doce quintas justas (×3/2) llega más arriba que siete octavas (×2). Medida en cents, la diferencia — la **coma pitagórica**, ≈ 23,5 cents, un cuarto de semitono — es el excedente que ningún teclado de 12 notas puede hacer desaparecer sin sacrificar algo.](../figuras/s09_coma_pitagorica.svg) El excedente parece pequeño —
 129,75 contra 128, un 1,4 % — pero en afinación un 1,4 % es un mundo:
 es la **coma pitagórica**, y es la razón estructural por la que la
 respuesta a su ticket es **no**. En un teclado de 12 notas con octavas

@@ -202,6 +202,11 @@
   pre code { background:none; padding:0; }
   hr { border:none; border-top:1px solid #ccc; margin:2rem 0; }
   img { max-width:100%; }
+  figure { margin:1.6rem auto; text-align:center; }
+  figure img { max-width:min(100%, 680px); }
+  figcaption { font-family:Helvetica,Arial,sans-serif; font-size:.82rem;
+               color:#555; margin-top:.5rem; text-align:left;
+               max-width:640px; margin-inline:auto; line-height:1.4; }
   li { margin-bottom:.25rem; }
   math { font-size:1.05em; }
   @media print { body { background:white; max-width:none; } }
@@ -270,7 +275,20 @@ extremo cerrado la exige máxima (el aire rebota). Un tubo
 cerrado-abierto tiene una condición distinta en cada punta, y solo un
 cuarto de onda cabe entre ambas; de ahí el
 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>4</mn><mi>L</mi></mrow><annotation encoding="application/x-tex">4L</annotation></semantics></math>,
-y de ahí que solo los patrones impares calcen.</p>
+y de ahí que solo los patrones impares calcen (figura 1).</p>
+<figure>
+<img src="../../../figuras/s12_modos_tubos.svg"
+alt="Figura 1. Amplitud de la onda estacionaria de presión de los tres primeros modos de un tubo abierto–abierto (izquierda) y cerrado–abierto (derecha). En el extremo abierto la presión no puede acumularse (nodo); en la tapa es máxima. La velocidad del aire (punteada, primera fila) es exactamente complementaria: máxima donde la presión tiene nodo. Entre puerta y pared cabe solo un cuarto de onda: por eso el tubo tapado baja a f_1 = v/4L y conserva solo los armónicos impares." />
+<figcaption aria-hidden="true"><strong>Figura 1.</strong> Amplitud de la
+onda estacionaria de presión de los tres primeros modos de un tubo
+abierto–abierto (izquierda) y cerrado–abierto (derecha). En el extremo
+abierto la presión no puede acumularse (nodo); en la tapa es máxima. La
+velocidad del aire (punteada, primera fila) es exactamente
+complementaria: máxima donde la presión tiene nodo. Entre puerta y pared
+cabe solo un cuarto de onda: por eso el tubo tapado baja a
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>f</mi><mn>1</mn></msub><mo>=</mo><mi>v</mi><mi>/</mi><mn>4</mn><mi>L</mi></mrow><annotation encoding="application/x-tex">f_1 = v/4L</annotation></semantics></math>
+y conserva solo los armónicos impares.</figcaption>
+</figure>
 <p>Estas dos fórmulas son toda la lutería de la sesión. Con
 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>v</mi><mo>=</mo><mn>343</mn></mrow><annotation encoding="application/x-tex">v = 343</annotation></semantics></math>
 m/s, un La4 de 440 Hz pide un tubo tapado de
@@ -307,7 +325,20 @@ Destapar agujeros de abajo hacia arriba equivale a ir acortando el tubo
 vimos sobre la flauta real: cada agujero destapado subió la nota a
 saltos, y dos digitaciones distintas pudieron fabricar casi la misma
 nota (horquillas), porque hay más de una manera de construir el mismo
-“largo efectivo”.</p>
+“largo efectivo” (figura 2).</p>
+<figure>
+<img src="../../../figuras/s12_agujero_tubo.svg"
+alt="Figura 2. Un agujero abierto es una fuga de presión: para la onda, el tubo termina aproximadamente donde está el primer agujero destapado (esquemático, tubo abierto–abierto). El largo efectivo L_{ef} es menor que L y la nota sube — destapar agujeros de abajo hacia arriba es ir acortando el tubo." />
+<figcaption aria-hidden="true"><strong>Figura 2.</strong> Un agujero
+abierto es una fuga de presión: para la onda, el tubo termina
+aproximadamente donde está el primer agujero destapado (esquemático,
+tubo abierto–abierto). El largo efectivo
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>L</mi><mrow><mi>e</mi><mi>f</mi></mrow></msub><annotation encoding="application/x-tex">L_{ef}</annotation></semantics></math>
+es menor que
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>L</mi><annotation encoding="application/x-tex">L</annotation></semantics></math>
+y la nota sube — destapar agujeros de abajo hacia arriba es ir acortando
+el tubo.</figcaption>
+</figure>
 <p>La versión fina de esta historia — que un agujero abierto no corta el
 tubo del todo, y que la <em>red</em> de agujeros abiertos deja pasar los
 agudos por encima de una <strong>frecuencia de corte</strong>
@@ -332,8 +363,24 @@ con el
 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>L</mi><annotation encoding="application/x-tex">L</annotation></semantics></math>
 de la huincha da entonces una frecuencia un poco más alta que la real:
 por eso lo medido quedó abajo de lo predicho. Es la <strong>corrección
-de extremo</strong>, y es la razón de que la lutería real afine como
-usted afinó: cortando de menos a más, midiendo cada vez.</p>
+de extremo</strong> (figura 3), y es la razón de que la lutería real
+afine como usted afinó: cortando de menos a más, midiendo cada vez.</p>
+<figure>
+<img src="../../../figuras/s12_correccion_extremo.svg"
+alt="Figura 3. La corrección de extremo (esquemática, con \Delta L exagerado): la columna que vibra sobresale del tubo y el nodo de presión queda afuera. El largo efectivo es L_{ef} = L + \Delta L, con \Delta L \approx 0{,}6 veces el radio interior, y por eso la nota medida sale más grave que la calculada con el L de la huincha." />
+<figcaption aria-hidden="true"><strong>Figura 3.</strong> La corrección
+de extremo (esquemática, con
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="normal">Δ</mi><mi>L</mi></mrow><annotation encoding="application/x-tex">\Delta L</annotation></semantics></math>
+exagerado): la columna que vibra sobresale del tubo y el nodo de presión
+queda afuera. El largo efectivo es
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>L</mi><mrow><mi>e</mi><mi>f</mi></mrow></msub><mo>=</mo><mi>L</mi><mo>+</mo><mi mathvariant="normal">Δ</mi><mi>L</mi></mrow><annotation encoding="application/x-tex">L_{ef} = L + \Delta L</annotation></semantics></math>,
+con
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="normal">Δ</mi><mi>L</mi><mo>≈</mo><mn>0</mn><mo>,</mo><mn>6</mn></mrow><annotation encoding="application/x-tex">\Delta L \approx 0{,}6</annotation></semantics></math>
+veces el radio interior, y por eso la nota medida sale más grave que la
+calculada con el
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>L</mi><annotation encoding="application/x-tex">L</annotation></semantics></math>
+de la huincha.</figcaption>
+</figure>
 <blockquote>
 <p><strong>Recuadro opcional (el número fino).</strong> Para un tubo
 cilíndrico sin pestaña, la columna sobresale del extremo abierto

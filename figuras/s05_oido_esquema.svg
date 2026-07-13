@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+  "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns:xlink="http://www.w3.org/1999/xlink" width="477.36pt" height="197.136pt" viewBox="0 0 477.36 197.136" xmlns="http://www.w3.org/2000/svg" version="1.1">
+ <metadata>
+  <rdf:RDF xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+   <cc:Work>
+    <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+    <dc:date>2026-07-13T09:23:59.705035</dc:date>
+    <dc:format>image/svg+xml</dc:format>
+    <dc:creator>
+     <cc:Agent>
+      <dc:title>Matplotlib v3.10.3, https://matplotlib.org/</dc:title>
+     </cc:Agent>
+    </dc:creator>
+   </cc:Work>
+  </rdf:RDF>
+ </metadata>
+ <defs>
+  <style type="text/css">*{stroke-linejoin: round; stroke-linecap: butt}</style>
+ </defs>
+ <g id="figure_1">
+  <g id="patch_1">
+   <path d="M 0 197.136 
+L 477.36 197.136 
+L 477.36 0 
+L 0 0 
+z
+" style="fill: #ffffff"/>
+  </g>
+  <g id="axes_1">
+   <g clip-path="url(#pe0dcb3bdec)">
+    <image xlink:href="data:image/png;base64,
+iVBORw0KGgoAAAANSUhEUgAAAoUAAAAzCAYAAADhJXKVAAACWklEQVR4nO3WS7KbMBAF0CsvJfvJ/rOa6A0wRl9wZZpzJlCglloYU7fk1+8/6ZSklOOYNOfn9VzHc/zd2G6+MtRmuP4Pte39qbfr8njpVd7H4byU9zHJq9SkuT7uuJT+/Bhbj7aG611tudq6xtRuvt1WPj/Buf3PeW3O521v69p77ZiH2rPf+fr+J9iu81S7ud/dm/ZcPtcf53lY87n3YeVhzeWc29+oLNfp/hKbvts93z/b8rzn7rzcrNn2Wm72Oz6lobb0/fdzrF/Mq6f+mU3zDbVPa3z7Lq7GTnMvxt7Vlanw4f8z1de+9ot3cflZn2rqc9+r/b6/S3c15/dv2fdmf7ue+5pNz+/v+vZZ36wzzjmuudzvsN5cu7h/zvPFumOvbe1xafhWZzVu3O/YU53/Q21Pwxx9v3V+t0q73q6PevNu1LnX7tnX7nj13fZch/7mY7ffz/OqX9SPPZ/Pcx5zHNs5m9rPM6nDPuvQRz/mWvdv8x7V88d5T7z+E70CAMB/TygEAEAoBABAKAQAIEIhAAARCgEAiFAIAECEQgAAIhQCABChEACACIUAAEQoBAAgQiEAABEKAQCIUAgAQIRCAAAiFAIAEKEQAIAIhQAARCgEACBCIQAAEQoBAIhQCABAhEIAACIUAgAQoRAAgAiFAABEKAQAIEIhAAARCgEAiFAIAECEQgAAIhQCABChEACACIUAAEQoBAAgQiEAABEKAQCIUAgAQIRCAAAiFAIAEKEQAIAIhQAARCgEACBCIQAAEQoBAIhQCABAhEIAACIUAgAQoRAAgCQ//VZMWSe85rYAAAAASUVORK5CYII=" id="image31b2c3ed3b" transform="scale(1 -1) translate(0 -33.381818)" x="18.3816" y="-135.872182" width="422.181818" height="33.381818"/>
+   </g>
+   <g id="patch_2">
+    <path d="M 23.0688 99.51048 
+L 135.5616 99.51048 
+Q 141.18624 99.51048 141.18624 93.8556 
+L 141.18624 32.5944 
+Q 141.18624 26.93952 135.5616 26.93952 
+L 23.0688 26.93952 
+Q 17.44416 26.93952 17.44416 32.5944 
+L 17.44416 93.8556 
+Q 17.44416 99.51048 23.0688 99.51048 
+z
+" clip-path="url(#pe0dcb3bdec)" style="fill: #f0ece4; stroke: #1a1a1a; stroke-width: 1.1; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_3">
+    <path d="M 173.0592 99.51048 
+L 285.552 99.51048 
+Q 291.17664 99.51048 291.17664 93.8556 
+L 291.17664 32.5944 
+Q 291.17664 26.93952 285.552 26.93952 
+L 173.0592 26.93952 
+Q 167.43456 26.93952 167.43456 32.5944 
+L 167.43456 93.8556 
+Q 167.43456 99.51048 173.0592 99.51048 
+z
+" clip-path="url(#pe0dcb3bdec)" style="fill: #f0ece4; stroke: #1a1a1a; stroke-width: 1.1; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_4">
+    <path d="M 323.0496 99.51048 
+L 435.5424 99.51048 
+Q 441.16704 99.51048 441.16704 93.8556 
+L 441.16704 32.5944 
+Q 441.16704 26.93952 435.5424 26.93952 
+L 323.0496 26.93952 
+Q 317.42496 26.93952 317.42496 32.5944 
+L 317.42496 93.8556 
+Q 317.42496 99.51048 323.0496 99.51048 
+z
+" clip-path="url(#pe0dcb3bdec)" style="fill: #f0ece4; stroke: #1a1a1a; stroke-width: 1.1; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_5">
+    <path d="M 142.250244 63.225 
+Q 154.311467 63.225 165.03105 63.225 
+" clip-path="url(#pe0dcb3bdec)" style="fill: none; stroke: #1a1a1a; stroke-width: 1.2; stroke-linecap: round"/>
+    <path d="M 159.43105 60.425 
+L 165.03105 63.225 
+L 159.43105 66.025 
+z
+" clip-path="url(#pe0dcb3bdec)" style="fill: #1a1a1a; stroke: #1a1a1a; stroke-width: 1.2; stroke-linecap: round"/>
+   </g>
+   <g id="patch_6">
+    <path d="M 292.240644 63.225 
+Q 304.301867 63.225 315.02145 63.225 
+" clip-path="url(#pe0dcb3bdec)" style="fill: none; stroke: #1a1a1a; stroke-width: 1.2; stroke-linecap: round"/>
+    <path d="M 309.42145 60.425 
+L 315.02145 63.225 
+L 309.42145 66.025 
+z
+" clip-path="url(#pe0dcb3bdec)" style="fill: #1a1a1a; stroke: #1a1a1a; stroke-width: 1.2; stroke-linecap: round"/>
+   </g>
+   <g id="patch_7">
+    <path d="M 18.3816 169.254 
+L 440.2296 169.254 
+L 440.2296 136.2672 
+L 18.3816 136.2672 
+L 18.3816 169.254 
+z
+" clip-path="url(#pe0dcb3bdec)" style="fill: none; stroke: #1a1a1a; stroke-linejoin: miter"/>
+   </g>
+   <g id="text_1">
+    <text style="font-weight: 700; font-size: 10.5px; font-family: 'DejaVu Serif', serif; text-anchor: middle; fill: #1a1a1a" x="79.3152" y="47.272744" transform="rotate(-0 79.3152 47.272744)">Oído externo</text>
+   </g>
+   <g id="text_2">
+    <text style="font-size: 8.5px; font-family: 'DejaVu Serif', serif; fill: #1a1a1a" transform="translate(44.162388 70.285339)">pabellón y canal</text>
+    <text style="font-size: 8.5px; font-family: 'DejaVu Serif', serif; fill: #1a1a1a" transform="translate(43.081958 79.924339)">(capta y colorea)</text>
+   </g>
+   <g id="text_3">
+    <text style="font-weight: 700; font-size: 10.5px; font-family: 'DejaVu Serif', serif; text-anchor: middle; fill: #1a1a1a" x="229.3056" y="47.272744" transform="rotate(-0 229.3056 47.272744)">Oído medio</text>
+   </g>
+   <g id="text_4">
+    <text style="font-size: 8.5px; font-family: 'DejaVu Serif', serif; fill: #1a1a1a" transform="translate(177.456264 70.202198)">tímpano + 3 huesecillos</text>
+    <text style="font-size: 8.5px; font-family: 'DejaVu Serif', serif; fill: #1a1a1a" transform="translate(183.070248 80.128339)">(adapta aire→líquido)</text>
+   </g>
+   <g id="text_5">
+    <text style="font-weight: 700; font-size: 10.5px; font-family: 'DejaVu Serif', serif; text-anchor: middle; fill: #1a1a1a" x="379.296" y="47.272744" transform="rotate(-0 379.296 47.272744)">Oído interno</text>
+   </g>
+   <g id="text_6">
+    <text style="font-size: 8.5px; font-family: 'DejaVu Serif', serif; fill: #1a1a1a" transform="translate(364.136781 70.236198)">cóclea:</text>
+    <text style="font-size: 8.5px; font-family: 'DejaVu Serif', serif; fill: #1a1a1a" transform="translate(340.092406 79.754339)">membrana basilar</text>
+   </g>
+   <g id="text_7">
+    <text style="font-style: italic; font-size: 9px; font-family: 'DejaVu Serif', serif; text-anchor: start" x="4.32" y="65.708438" transform="rotate(-0 4.32 65.708438)">sonido</text>
+   </g>
+   <g id="text_8">
+    <text style="font-style: italic; font-size: 9.5px; font-family: 'DejaVu Serif', serif; text-anchor: start; fill: #1a1a1a" x="23.0688" y="124.4862" transform="rotate(-0 23.0688 124.4862)">Membrana basilar (analizador por lugar):</text>
+   </g>
+   <g id="text_9">
+    <text style="font-size: 8.5px; font-family: 'DejaVu Serif', serif; text-anchor: start; fill: #1a1a1a" x="27.756" y="179.62128" transform="rotate(-0 27.756 179.62128)">entrada — agudos (rígida, estrecha)</text>
+   </g>
+   <g id="text_10">
+    <text style="font-size: 8.5px; font-family: 'DejaVu Serif', serif; text-anchor: end; fill: #1a1a1a" x="430.8552" y="179.62128" transform="rotate(-0 430.8552 179.62128)">fondo — graves (blanda, ancha)</text>
+   </g>
+  </g>
+ </g>
+ <defs>
+  <clipPath id="pe0dcb3bdec">
+   <rect x="4.32" y="4.32" width="468.72" height="188.496"/>
+  </clipPath>
+ </defs>
+</svg>

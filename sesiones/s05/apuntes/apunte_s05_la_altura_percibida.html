@@ -202,6 +202,11 @@
   pre code { background:none; padding:0; }
   hr { border:none; border-top:1px solid #ccc; margin:2rem 0; }
   img { max-width:100%; }
+  figure { margin:1.6rem auto; text-align:center; }
+  figure img { max-width:min(100%, 680px); }
+  figcaption { font-family:Helvetica,Arial,sans-serif; font-size:.82rem;
+               color:#555; margin-top:.5rem; text-align:left;
+               max-width:640px; margin-inline:auto; line-height:1.4; }
   li { margin-bottom:.25rem; }
   math { font-size:1.05em; }
   @media print { body { background:white; max-width:none; } }
@@ -258,6 +263,21 @@ aunque nadie la esté tocando. A este fenómeno se lo llama
 <strong>fundamental ausente</strong> o <strong>altura virtual</strong>,
 y es el corazón de esta sesión (Benade 1990, cap. 5, secs. 5.6–5.7;
 Roederer 1997, sec. 2.7).</p>
+<figure>
+<img src="../../../figuras/s05_fundamental_ausente.svg"
+alt="Figura 1. El tono completo (arriba) y el mismo tono con la fundamental apagada (abajo). Al quitar f_1 del espectro (derecha), la forma de onda cambia de aspecto pero conserva exactamente el mismo período T = 1/f_1 (izquierda): por eso el oído le sigue asignando la misma altura. La altura vive en la periodicidad del patrón, no en que f_1 esté físicamente presente." />
+<figcaption aria-hidden="true"><strong>Figura 1.</strong> El tono
+completo (arriba) y el mismo tono con la fundamental apagada (abajo). Al
+quitar
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>f</mi><mn>1</mn></msub><annotation encoding="application/x-tex">f_1</annotation></semantics></math>
+del espectro (derecha), la forma de onda cambia de aspecto pero
+<strong>conserva exactamente el mismo período</strong>
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>T</mi><mo>=</mo><mn>1</mn><mi>/</mi><msub><mi>f</mi><mn>1</mn></msub></mrow><annotation encoding="application/x-tex">T = 1/f_1</annotation></semantics></math>
+(izquierda): por eso el oído le sigue asignando la misma altura. La
+altura vive en la periodicidad del patrón, no en que
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>f</mi><mn>1</mn></msub><annotation encoding="application/x-tex">f_1</annotation></semantics></math>
+esté físicamente presente.</figcaption>
+</figure>
 <p>La clave está en el patrón, no en las piezas. Una serie
 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>400</mn><mo>,</mo><mn>600</mn><mo>,</mo><mn>800</mn><mo>,</mo><mn>1000</mn></mrow><annotation encoding="application/x-tex">400, 600, 800,
 1000</annotation></semantics></math> Hz tiene un “aire de familia”
@@ -346,6 +366,19 @@ cada frecuencia depositada en su sitio. Es un análisis <em>grueso</em>
 —no separa dos frecuencias muy cercanas, y eso tendrá enormes
 consecuencias musicales cuando estudiemos batidos y banda crítica—, pero
 es la primera clasificación que el cerebro recibe del mundo sonoro.</p>
+<figure>
+<img src="../../../figuras/s05_oido_esquema.svg"
+alt="Figura 2. El camino del sonido por el oído, en bloques: el oído externo (pabellón y canal) capta y colorea; el oído medio (tímpano y tres huesecillos) adapta la vibración del aire al líquido; el oído interno (cóclea) la analiza. Abajo, la membrana basilar desenrollada funciona como un analizador por lugar: los agudos excitan la zona de la entrada (rígida y estrecha), los graves el fondo (blando y ancho). Esquema muy simplificado, sin escala anatómica." />
+<figcaption aria-hidden="true"><strong>Figura 2.</strong> El camino del
+sonido por el oído, en bloques: el <strong>oído externo</strong>
+(pabellón y canal) capta y colorea; el <strong>oído medio</strong>
+(tímpano y tres huesecillos) adapta la vibración del aire al líquido; el
+<strong>oído interno</strong> (cóclea) la analiza. Abajo, la
+<strong>membrana basilar</strong> desenrollada funciona como un
+analizador por lugar: los agudos excitan la zona de la entrada (rígida y
+estrecha), los graves el fondo (blando y ancho). Esquema muy
+simplificado, sin escala anatómica.</figcaption>
+</figure>
 <p>Note que aquí reaparecen las dos pistas de la altura. El
 <em>lugar</em> excitado en la membrana es una; el <em>ritmo</em> del
 patrón —la periodicidad que permite la fundamental ausente— es la otra.
@@ -365,6 +398,21 @@ y otro La—, tan emparentados que en casi todas las culturas llevan el
 mismo nombre. Esa relación privilegiada que produce duplicar la
 frecuencia es la <strong>octava</strong>:</p>
 <p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mtext mathvariant="normal">octava</mtext><mspace width="0.278em"></mspace><mo>⇔</mo><mspace width="0.278em"></mspace><mi>f</mi><mo>→</mo><mn>2</mn><mi>f</mi><mspace width="1.0em"></mspace><mo stretchy="false" form="prefix">(</mo><mrow><mtext mathvariant="normal">razón </mtext><mspace width="0.333em"></mspace></mrow><mn>2</mn><mo>:</mo><mn>1</mn><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">\text{octava} \;\Longleftrightarrow\; f \to 2f \quad (\text{razón } 2:1)</annotation></semantics></math></p>
+<figure>
+<img src="../../../figuras/s05_octava_log.svg"
+alt="Figura 3. La altura se organiza por razones de frecuencia, no por diferencias. Sobre un eje de frecuencia logarítmico, los La sucesivos (110, 220, 440, 880, 1760 Hz) quedan equiespaciados: cada octava es duplicar f. El salto 220\to440 (+220 Hz) y el salto 440\to880 (+440 Hz) suenan como el mismo paso —una octava— aunque cubran distinta cantidad de hertz." />
+<figcaption aria-hidden="true"><strong>Figura 3.</strong> La altura se
+organiza por <em>razones</em> de frecuencia, no por diferencias. Sobre
+un eje de frecuencia logarítmico, los La sucesivos (110, 220, 440, 880,
+1760 Hz) quedan <strong>equiespaciados</strong>: cada octava es duplicar
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>f</mi><annotation encoding="application/x-tex">f</annotation></semantics></math>.
+El salto
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>220</mn><mo>→</mo><mn>440</mn></mrow><annotation encoding="application/x-tex">220\to440</annotation></semantics></math>
+(+220 Hz) y el salto
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>440</mn><mo>→</mo><mn>880</mn></mrow><annotation encoding="application/x-tex">440\to880</annotation></semantics></math>
+(+440 Hz) suenan como el mismo paso —una octava— aunque cubran distinta
+cantidad de hertz.</figcaption>
+</figure>
 <p>La octava es la primera evidencia dura de que el eje de la altura no
 es una regla lineal tendida sobre el eje de la frecuencia. Duplicar de
 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mn>220</mn><annotation encoding="application/x-tex">220</annotation></semantics></math>

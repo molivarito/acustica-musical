@@ -49,7 +49,9 @@ Un resonador muy amortiguado (la bandeja de lata bien sujeta, un
 columpio con frenos) tiene un pico bajo y ancho: responde "más o menos"
 a muchas frecuencias vecinas. Un resonador poco amortiguado (una copa
 de cristal) tiene un pico alto y angosto: responde muchísimo, pero solo
-si usted le acierta casi exactamente a $f_0$. Benade (1990, sec. 10.7)
+si usted le acierta casi exactamente a $f_0$ (figura 1).
+
+![**Figura 1.** La curva de respuesta de un resonador (esquema): amplitud frente a la frecuencia de excitación, con un pico centrado en la frecuencia propia $f_0$. El amortiguamiento decide el ancho: mucho roce da un pico bajo y ancho (responde a muchas frecuencias); poco roce da un pico alto y angosto (responde solo si se le acierta casi exacto). El mismo parámetro fija, inseparablemente, la duración del transiente de ataque.](../../../figuras/s10_curva_resonancia.svg) Benade (1990, sec. 10.7)
 midió esto en una bandeja de lata; la versión doméstica la conoce
 cualquier músico: ese objeto de la sala que zumba solo cuando la
 orquesta toca UNA nota concreta es un resonador de pico angosto al que
@@ -96,7 +98,9 @@ actúa como un **transformador**: convierte la vibración
 fuerte-y-chica de la cuerda en la vibración suave-y-grande que el aire
 sí acepta (C&G cap. 5, pp. 183–202). A esto lo llamamos
 **acoplamiento**: qué tan bien fluye la energía de un sistema vibrante
-a otro.
+a otro (figura 2).
+
+![**Figura 2.** La cadena de acoplamiento de un instrumento de cuerda. La cuerda tiene alta impedancia (vibra fuerte pero mueve poco aire); el puente actúa como transformador de impedancia hacia la tapa o caja, que tiene baja impedancia y mueve mucho aire; y de ahí el sonido se radia. La caja no agrega energía: convierte más rápido la que ya tenía la cuerda, y por eso sonar más fuerte se paga durando menos.](../../../figuras/s10_acoplamiento.svg)
 
 Y aquí está la moraleja que el gancho hizo audible: la caja **no
 agrega energía** — usted le dio a la cuerda toda la que habrá, en el
@@ -114,7 +118,10 @@ El taller tomó el caso estrella: la botella soplada, el **resonador de
 Helmholtz** (ROS cap. 4). Aunque no lo parezca, la botella es un
 masa-resorte de aire: el aire del cuello es la **masa** que sube y
 baja como tapón, y el aire del cuerpo es el **resorte** que se comprime
-y la devuelve. Como todo masa-resorte, tiene UNA $f_0$ grave y nítida.
+y la devuelve. Como todo masa-resorte, tiene UNA $f_0$ grave y nítida
+(figura 3).
+
+![**Figura 3.** El resonador de Helmholtz. Al soplar rasante sobre la boca, quien vibra es el aire: la masa de aire del cuello (rojo) sube y baja como un tapón sobre el resorte que forma el aire comprimible del cuerpo (azul). De ahí una sola frecuencia propia $f_0$, grave y bien definida; achicar el volumen $V$ (agregando agua) endurece el resorte y sube la nota.](../../../figuras/s10_helmholtz.svg)
 
 Las dos predicciones del taller tenían trampa cruzada, y las
 mediciones del curso la confirmaron:

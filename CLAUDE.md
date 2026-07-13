@@ -53,6 +53,13 @@ formación matemática y musical.
   `python3 Admin/md2html.py` desde la raíz para regenerarlos. Nunca
   editar un `.html` gemelo a mano (se pisa al regenerar); los únicos
   HTML editables son las demos, el mapa y `Admin/estilo_md_header.html`.
+- Las figuras de apuntes/libro son SVG generados por `figuras/gen_sXX.py`
+  (con `figuras/estilo_figuras.py`): para cambiar una figura, editar y
+  re-ejecutar su script, nunca el SVG. Tras editar capítulos o figuras,
+  recompilar el libro con `python3 Admin/compilar_libro.py`.
+  Reproducciones desde la bibliografía: solo datos medidos
+  irreemplazables, con cita completa en la leyenda y registro en
+  `figuras/libros/EXTRACCIONES.md`.
 
 ## Fases del proyecto
 1. Objetivos de aprendizaje (diseno/01) — discutir en plan mode.

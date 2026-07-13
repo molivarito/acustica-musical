@@ -202,6 +202,11 @@
   pre code { background:none; padding:0; }
   hr { border:none; border-top:1px solid #ccc; margin:2rem 0; }
   img { max-width:100%; }
+  figure { margin:1.6rem auto; text-align:center; }
+  figure img { max-width:min(100%, 680px); }
+  figcaption { font-family:Helvetica,Arial,sans-serif; font-size:.82rem;
+               color:#555; margin-top:.5rem; text-align:left;
+               max-width:640px; margin-inline:auto; line-height:1.4; }
   li { margin-bottom:.25rem; }
   math { font-size:1.05em; }
   @media print { body { background:white; max-width:none; } }
@@ -239,6 +244,20 @@ frecuencias.</strong> Un batido por segundo por cada hertz de
 diferencia. Es una de las relaciones más limpias de todo el curso: no es
 aproximada, no depende del instrumento ni del oyente, y se verifica
 contando con los dedos.</p>
+<figure>
+<img src="../../../figuras/s07_batido_forma_onda.svg"
+alt="Figura 1. Suma de dos tonos cercanos: una sola onda rápida (a la frecuencia promedio) encerrada por una envolvente lenta (rojo) que sube y baja f_b = |f_2 - f_1| veces por segundo. Se usan f_1 = 40 Hz y f_2 = 43 Hz para que el ciclo sea visible; la regla es la misma a cualquier altura." />
+<figcaption aria-hidden="true"><strong>Figura 1.</strong> Suma de dos
+tonos cercanos: una sola onda rápida (a la frecuencia promedio)
+encerrada por una envolvente lenta (rojo) que sube y baja
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>f</mi><mi>b</mi></msub><mo>=</mo><mo stretchy="false" form="prefix">|</mo><msub><mi>f</mi><mn>2</mn></msub><mo>−</mo><msub><mi>f</mi><mn>1</mn></msub><mo stretchy="false" form="prefix">|</mo></mrow><annotation encoding="application/x-tex">f_b = |f_2 - f_1|</annotation></semantics></math>
+veces por segundo. Se usan
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>f</mi><mn>1</mn></msub><mo>=</mo><mn>40</mn></mrow><annotation encoding="application/x-tex">f_1 = 40</annotation></semantics></math>
+Hz y
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>f</mi><mn>2</mn></msub><mo>=</mo><mn>43</mn></mrow><annotation encoding="application/x-tex">f_2 = 43</annotation></semantics></math>
+Hz para que el ciclo sea visible; la regla es la misma a cualquier
+altura.</figcaption>
+</figure>
 <h2 id="por-qué-dos-tonos-casi-iguales-laten">¿Por qué dos tonos casi
 iguales laten?</h2>
 <p>No hace falta trigonometría para entenderlo; basta la imagen de dos
@@ -262,7 +281,18 @@ segunda onda “adelanta” tres ciclos por segundo y el patrón se repite
 tres veces: tres batidos. De ahí la regla
 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>f</mi><mi>b</mi></msub><mo>=</mo><mo stretchy="false" form="prefix">|</mo><msub><mi>f</mi><mn>2</mn></msub><mo>−</mo><msub><mi>f</mi><mn>1</mn></msub><mo stretchy="false" form="prefix">|</mo></mrow><annotation encoding="application/x-tex">f_b = |f_2 - f_1|</annotation></semantics></math>.
 La envolvente que dibuja la demo — esa curva que encierra a la onda y
-sube y baja lentamente — es el retrato de este juego de fases.</p>
+sube y baja lentamente — es el retrato de este juego de fases (figura
+2).</p>
+<figure>
+<img src="../../../figuras/s07_fases_batido.svg"
+alt="Figura 2. El mecanismo del batido. A la izquierda, dos ondas en fase: sus empujones se suman y la resultante tiene el doble de amplitud. A la derecha, en contrafase: cuando una empuja la otra succiona y la suma casi se anula. Dos tonos de frecuencias distintas pasan lentamente de una situación a la otra, y ese vaivén es el batido." />
+<figcaption aria-hidden="true"><strong>Figura 2.</strong> El mecanismo
+del batido. A la izquierda, dos ondas <em>en fase</em>: sus empujones se
+suman y la resultante tiene el doble de amplitud. A la derecha, <em>en
+contrafase</em>: cuando una empuja la otra succiona y la suma casi se
+anula. Dos tonos de frecuencias distintas pasan lentamente de una
+situación a la otra, y ese vaivén es el batido.</figcaption>
+</figure>
 <blockquote>
 <p><strong>Recuadro opcional (para quienes quieran la cuenta
 exacta).</strong> La suma de dos sinusoides de igual amplitud se puede

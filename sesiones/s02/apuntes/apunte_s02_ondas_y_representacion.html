@@ -202,6 +202,11 @@
   pre code { background:none; padding:0; }
   hr { border:none; border-top:1px solid #ccc; margin:2rem 0; }
   img { max-width:100%; }
+  figure { margin:1.6rem auto; text-align:center; }
+  figure img { max-width:min(100%, 680px); }
+  figcaption { font-family:Helvetica,Arial,sans-serif; font-size:.82rem;
+               color:#555; margin-top:.5rem; text-align:left;
+               max-width:640px; margin-inline:auto; line-height:1.4; }
   li { margin-bottom:.25rem; }
   math { font-size:1.05em; }
   @media print { body { background:white; max-width:none; } }
@@ -281,6 +286,19 @@ nivel codificado como color o intensidad</strong> (más oscuro o más
 encendido = más fuerte). Cada columna vertical del espectrograma es un
 espectro instantáneo; leídas de izquierda a derecha, cuentan la película
 completa.</p>
+<figure>
+<img src="../../../figuras/s02_tres_retratos.svg"
+alt="Figura 1. Una misma señal (un tono con cuatro parciales, como una vocal cantada) vista en sus tres representaciones. La forma de onda la cuenta como historia (presión vs. tiempo); el espectro, como receta de ingredientes (nivel vs. frecuencia: la peineta de parciales); el espectrograma junta ambas (tiempo–frecuencia–color) y muestra los parciales como líneas horizontales, con el breve “golpe” inicial como una columna vertical. Ninguna es la verdadera: cada una responde lo que la otra esconde." />
+<figcaption aria-hidden="true"><strong>Figura 1.</strong> Una misma
+señal (un tono con cuatro parciales, como una vocal cantada) vista en
+sus tres representaciones. La <em>forma de onda</em> la cuenta como
+historia (presión vs. tiempo); el <em>espectro</em>, como receta de
+ingredientes (nivel vs. frecuencia: la peineta de parciales); el
+<em>espectrograma</em> junta ambas (tiempo–frecuencia–color) y muestra
+los parciales como líneas horizontales, con el breve “golpe” inicial
+como una columna vertical. Ninguna es la verdadera: cada una responde lo
+que la otra esconde.</figcaption>
+</figure>
 <p>En el espectrograma, el silbido con glissando es una línea delgada
 que sube; la vocal cantada, una familia de líneas horizontales paralelas
 (sus parciales); la “sss”, una banda difusa y alta; el golpe, una
@@ -347,6 +365,20 @@ la <strong>longitud de onda</strong>
 y las tres cantidades quedan atadas por la relación más reutilizada del
 semestre:</p>
 <p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>v</mi><mo>=</mo><mi>λ</mi><mi>f</mi></mrow><annotation encoding="application/x-tex">v = \lambda f</annotation></semantics></math></p>
+<figure>
+<img src="../../../figuras/s02_propagacion_lambda.svg"
+alt="Figura 2. Lo que viaja por el aire es una perturbación de presión: cada porción de aire se comprime y se enrarece y vuelve casi a su lugar (arriba, densidad de moléculas; el aire no viaja en bloque). La curva de presión vs. posición (abajo) fija la longitud de onda \lambda como la distancia entre dos compresiones sucesivas. Con la rapidez v \approx 343 m/s, las tres cantidades quedan atadas por v = \lambda f." />
+<figcaption aria-hidden="true"><strong>Figura 2.</strong> Lo que viaja
+por el aire es una perturbación de presión: cada porción de aire se
+comprime y se enrarece y vuelve casi a su lugar (arriba, densidad de
+moléculas; el aire no viaja en bloque). La curva de presión vs. posición
+(abajo) fija la <strong>longitud de onda</strong>
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>λ</mi><annotation encoding="application/x-tex">\lambda</annotation></semantics></math>
+como la distancia entre dos compresiones sucesivas. Con la rapidez
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>v</mi><mo>≈</mo><mn>343</mn></mrow><annotation encoding="application/x-tex">v \approx 343</annotation></semantics></math>
+m/s, las tres cantidades quedan atadas por
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>v</mi><mo>=</mo><mi>λ</mi><mi>f</mi></mrow><annotation encoding="application/x-tex">v = \lambda f</annotation></semantics></math>.</figcaption>
+</figure>
 <p>Con ella y proporciones: el La4 (440 Hz) mide en el aire
 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>343</mn><mi>/</mi><mn>440</mn><mo>≈</mo><mn>0</mn><mo>,</mo><mn>78</mn></mrow><annotation encoding="application/x-tex">343/440 \approx 0{,}78</annotation></semantics></math>
 m; el límite grave audible (20 Hz), unos 17 m — del porte de la sala —;

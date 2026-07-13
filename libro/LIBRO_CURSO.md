@@ -5,8 +5,7 @@ Patricio de la Cuadra · Pontificia Universidad Católica de Chile
 Instituto de Música / Departamento de Ingeniería Eléctrica
 
 Compilado del material de lectura previa de las 15 sesiones del curso.
-Versión de trabajo generada el 2026-07-13. Cada capítulo se lee antes de
-la sesión correspondiente (≤1 hora).
+Cada capítulo se lee antes de la sesión correspondiente (≤1 hora).
 
 ---
 
@@ -168,6 +167,8 @@ su compañero de banco (Benade 1990, cap. 2, hace de esta transición la
 puerta de entrada a toda la acústica musical; este curso le copia la
 puerta).
 
+![**Figura 1.** Un mismo pulso repetido a tres tasas crecientes, sobre el mismo eje de tiempo. Abajo (10 pulsos/s) se oyen golpes separados; en el medio (~28 pulsos/s) la sensación es ambigua; arriba (120 pulsos/s) los golpes se funden en un tono. La transición ritmo→tono es una zona, no una frontera nítida.](../figuras/s01_pulsos_ritmo_tono.svg)
+
 La moraleja, en cambio, sí se puede adelantar, porque es la idea
 fundacional del semestre: **un tono es una vibración que se repite tan
 seguido que el oído renuncia a contar y entrega, a cambio, una sensación
@@ -185,6 +186,8 @@ y se mide en hertz (Hz). El **período**, $T$, mide la duración de una
 repetición, en segundos. Uno es el recíproco del otro:
 
 $$T = \frac{1}{f}$$
+
+![**Figura 2.** Frecuencia y período, el mismo dato de dos maneras: sobre una oscilación que se repite, $T$ mide cuánto dura un ciclo y $f = 1/T$ cuántos ciclos ocurren por segundo. En el ejemplo, $f = 200$ Hz equivale a $T = 5$ ms.](../figuras/s01_frecuencia_periodo.svg)
 
 Si una cuerda vibra a 100 Hz, cada vaivén dura 1/100 de segundo. Si
 vibra al doble, cada vaivén dura la mitad. Este razonamiento por
@@ -503,6 +506,8 @@ apaga o sobrevive? ¿Y si apoya el dedo donde ese modo se mueve al
 máximo? Piense qué haría el dedo con la energía del movimiento. La
 respuesta convierte un dedo en una herramienta de edición de espectros.
 
+![**Figura 2.** Los modos de un objeto golpeado no mueren juntos: en general los agudos se apagan antes que los graves. Como la mezcla de parciales cambia con el tiempo, el timbre de un golpe es una película —brillante al principio, más simple hacia la cola—, no una foto. Curvas esquemáticas.](../figuras/s03_decaimiento_multimodo.svg)
+
 Segundo: los modos no mueren juntos. Cada uno pierde su energía a su
 propio ritmo, así que la mezcla cambia mientras el sonido se apaga — el
 timbre de un golpe es una película, no una foto (Benade 1990, cap. 4:
@@ -526,6 +531,8 @@ barrigas resulta ser *exactamente el doble* de la fundamental; la de
 tres, *exactamente el triple*:
 
 $$f_n = n \, f_1 \qquad n = 1, 2, 3, \dots$$
+
+![**Figura 1.** Las cuatro primeras formas de vibrar de una cuerda fija en ambos extremos: una barriga, dos, tres, cuatro. Los puntos negros (●) marcan los **nodos**, que no se mueven. Lo extraordinario no son las formas sino las frecuencias: el modo de $n$ barrigas vibra a $n$ veces la frecuencia del fundamental.](../figuras/s03_modos_cuerda.svg)
 
 Números enteros. La cuerda es el objeto cuya familia de frecuencias cae
 en razones perfectas 1 : 2 : 3 : 4… — y el oído humano, por razones que
@@ -894,6 +901,8 @@ sacude con fuerza un *lugar* distinto de ella. Los agudos, cerca de la
 entrada; los graves, en el fondo. Es, en el fondo, un analizador que
 reparte las frecuencias en un mapa según el sitio que excitan.
 
+![**Figura 1.** El camino del sonido por el oído, en bloques: **externo** (pabellón y canal) capta y colorea; **medio** (tímpano y tres huesecillos) adapta la vibración del aire al líquido; **interno** (cóclea) la analiza. Abajo, la **membrana basilar** desenrollada: cada frecuencia sacude con fuerza un lugar distinto —agudos a la entrada, graves al fondo—, un análisis por lugar. Esquema muy simplificado, sin escala anatómica.](../figuras/s05_oido_esquema.svg)
+
 Guarde ese detalle —frecuencia repartida por lugar, de manera *gruesa*, sin
 distinguir finamente dos frecuencias vecinas—, porque es la semilla de uno
 de los fenómenos más musicales del curso, los batidos y la banda crítica,
@@ -917,6 +926,8 @@ eje de la altura no es una regla lineal apoyada sobre el eje de la
 frecuencia: la altura se organiza por *razones* (el doble, la mitad, tres
 medios) y no por diferencias. Es una idea que va a fundar las escalas y los
 temperamentos más adelante (s09).
+
+![**Figura 2.** Sobre un eje de frecuencia logarítmico, los La sucesivos (110, 220, 440, 880, 1760 Hz) quedan equiespaciados: cada octava es duplicar $f$. El salto $220\to440$ (+220 Hz) y el $440\to880$ (+440 Hz) son el mismo paso perceptual —una octava— aunque abarquen distinta cantidad de hertz. La altura corre por razones, no por diferencias.](../figuras/s05_octava_log.svg)
 
 Y todavía un pliegue más, que la sesión apenas va a dejar asomar como
 curiosidad: puede que la octava que su oído siente "perfecta" no esté
@@ -1033,6 +1044,8 @@ en fortissimo vive cerca de los 95–100, y alrededor de 120 dB SPL el
 sonido empieza a doler (Benade 1990, secs. 13.1 y 13.8; ROS cap. 6 —
 valores típicos aproximados; los de nuestras salas los mediremos
 nosotros).
+
+![**Figura 1.** La escala de niveles de presión sonora con hitos musicales, del umbral de audición al umbral del dolor. Los valores son típicos y redondeados. A la derecha, la gramática del decibel: +10 dB multiplican por diez la intensidad (y suenan como el doble), +3 dB la duplican (cambio chico).](../figuras/s06_escala_decibel.svg)
 
 > **Recuadro opcional (la fórmula, para quien la quiera).**
 > $L_p = 20\log_{10}(p/p_0)$, o $10\log_{10}(I/I_0)$ en intensidades.
@@ -1281,6 +1294,8 @@ $$f_b = |f_2 - f_1|$$
 Un batido por segundo por cada hertz de diferencia. En la sesión no le
 pediremos creerla: la va a *contar*, con sus propios oídos, contra los
 números en pantalla.
+
+![**Figura 1.** Suma de dos tonos cercanos: una onda rápida (a la frecuencia promedio) encerrada por una envolvente lenta (rojo) que sube y baja $f_b = |f_2 - f_1|$ veces por segundo — refuerzo, silencio, refuerzo. Se dibuja con $f_1 = 40$ Hz y $f_2 = 43$ Hz para que el ciclo sea visible.](../figuras/s07_batido_forma_onda.svg)
 
 Dos preguntas quedan deliberadamente abiertas, porque son suyas. La
 primera: si el batido delata diferencias de frecuencia que ningún oído
@@ -1539,7 +1554,9 @@ justas, la frecuencia final es la inicial multiplicada 12 veces por
 haga ambas cuentas antes de seguir leyendo. En serio: son dos teclas.
 
 ¿Ya? $(3/2)^{12} \approx 129{,}75$. Y $2^7 = 128$. **No da lo mismo.**
-Las doce quintas se pasan de largo. El excedente parece pequeño —
+Las doce quintas se pasan de largo (figura 1).
+
+![**Figura 1.** Dos escaleras que no cierran: apilar doce quintas justas (×3/2) llega más arriba que siete octavas (×2). Medida en cents, la diferencia — la **coma pitagórica**, ≈ 23,5 cents, un cuarto de semitono — es el excedente que ningún teclado de 12 notas puede hacer desaparecer sin sacrificar algo.](../figuras/s09_coma_pitagorica.svg) El excedente parece pequeño —
 129,75 contra 128, un 1,4 % — pero en afinación un 1,4 % es un mundo:
 es la **coma pitagórica**, y es la razón estructural por la que la
 respuesta a su ticket es **no**. En un teclado de 12 notas con octavas
@@ -1749,7 +1766,9 @@ por ninguna. Benade midió esto con una humilde bandeja de lata (Benade
 objeto — un vaso en la repisa, una moldura del auto — que zumba
 únicamente cuando pasa por él UNA nota concreta de la música. Ahora
 sabe qué es: un resonador de pico angosto al que alguien, por fin, le
-acertó.
+acertó (figura 1).
+
+![**Figura 1.** La curva de respuesta de un resonador (esquema): cuánto responde frente a la frecuencia con que se lo fuerza, con un pico en su frecuencia propia $f_0$. Poco amortiguamiento da un pico alto y angosto (la copa de cristal, que exige su nota exacta); mucho amortiguamiento da un pico bajo y ancho (responde algo a muchas frecuencias vecinas).](../figuras/s10_curva_resonancia.svg)
 
 Hay un segundo personaje, menos famoso y musicalmente decisivo: el
 **transiente de ataque**. Un resonador no responde de inmediato. Como
@@ -2024,6 +2043,8 @@ igual desde cualquier ángulo? Ninguna de estas preguntas necesita
 fórmulas — necesitan el vocabulario de s03 (modos, líneas nodales) y de
 s10 (resonancia, impedancia, acoplamiento), que usted ya tiene.
 
+![**Figura 1.** La cadena que hace audible a la cuerda (la misma figura del apunte de la sesión 10): la cuerda vibra fuerte pero mueve poco aire; el puente transforma la impedancia; la tapa y la caja sí empujan aire y radian. Las preguntas del párrafo anterior son, todas, preguntas sobre qué hace cada eslabón — y se responden midiendo.](../figuras/s10_acoplamiento.svg)
+
 Hay, por último, un personaje legendario que aparece cuando esta cadena
 funciona *demasiado* bien: la **nota lobo**, una nota puntual que en
 algunos cellos y violines se niega a sonar pareja y "aúlla" a tirones.
@@ -2145,7 +2166,9 @@ tubo con puerta y puerta acomoda media onda; un tubo con puerta y pared
 solo acomoda un cuarto — de ahí el 4 — y únicamente los patrones
 impares calzan con una punta de cada tipo (el desarrollo completo, en
 español, está en Roederer 1997, secs. 4.4–4.6; con ejercicios, en
-Rossing et al. 2002, cap. 12).
+Rossing et al. 2002, cap. 12). La figura 1 dibuja ambos menús de modos.
+
+![**Figura 1.** Amplitud de la onda estacionaria de presión de los tres primeros modos de un tubo abierto–abierto y de uno cerrado–abierto. La "puerta" (extremo abierto) impone un nodo de presión; la "pared" (tapa), un máximo. La velocidad del aire (punteada, primera fila) es complementaria: máxima donde la presión tiene nodo. Entre puerta y pared cabe solo un cuarto de onda: de ahí el $4L$ y la serie impar.](../figuras/s12_modos_tubos.svg)
 
 Dos fórmulas de una línea, y con ellas se predice la nota de cualquier
 tubo simple con pura aritmética. Compruébelo antes de venir: ¿qué largo
@@ -2179,9 +2202,11 @@ Falta el detalle que convierte un tubo en un instrumento: los
 donde hay agujero abierto la presión ya casi no puede acumularse — el
 tubo, en primera aproximación, "termina" ahí. Destapar agujeros de
 abajo hacia arriba equivale entonces a acortar el tubo por etapas:
-una escala completa fabricada con un solo tubo y ocho dedos. En la
-sesión lo verá medido en vivo, espectrograma mediante, sobre una
+una escala completa fabricada con un solo tubo y ocho dedos (figura 2).
+En la sesión lo verá medido en vivo, espectrograma mediante, sobre una
 flauta real.
+
+![**Figura 2.** Un agujero abierto es una fuga de presión: para la onda, el tubo termina aproximadamente donde está el primer agujero destapado (esquemático). El largo efectivo $L_{ef}$ es menor que $L$ y la nota sube.](../figuras/s12_agujero_tubo.svg)
 
 La historia fina — que el agujero no corta del todo, que la *red* de
 agujeros abiertos se comporta como un filtro con una **frecuencia de
@@ -2425,6 +2450,8 @@ cantando? Las tres tienen la misma respuesta de fondo: fuente y filtro
 son socios independientes — y esa independencia tiene consecuencias
 que se oyen.
 
+![**Figura 1.** El modelo fuente-filtro en tres pasos (esquemático; una /a/ con $f_0 = 200$ Hz): el zumbido glotal pone el peine de armónicos, el tracto pone la envolvente de formantes, y lo radiado es el producto de ambos. La sesión hará este experimento en vivo, con su voz y el espectrograma proyectado.](../figuras/s13_fuente_filtro.svg)
+
 ## Preguntas que la sesión va a responder
 
 1. Cuando usted canta una vocal, ¿qué afina la "cuerda" y qué afina el
@@ -2530,7 +2557,9 @@ que anotamos $T_{60}$, es el tiempo que tarda el nivel en caer
 capricho: con la regla de s06 (cada 10 dB es un factor 10 de
 intensidad) son seis pisos de ×10 — la energía cayó a la millonésima
 parte, más o menos el viaje de un fortissimo hasta perderse en el
-ruido de fondo.
+ruido de fondo. La figura 1 lo dibuja.
+
+![**Figura 1.** El $T_{60}$ en una gráfica (esquemática): cuando la fuente calla, el nivel cae en línea recta en dB, y el $T_{60}$ es el tiempo en bajar 60 dB — seis pisos de ×10. En una medición real la cola se funde con el ruido de fondo antes de completar la caída: se lee la pendiente inicial y se extrapola. Exactamente lo que haremos en la salida.](../figuras/s14_caida_t60.svg)
 
 Wallace Sabine, el fundador de este oficio, midió hacia 1900 decenas
 de salas de Harvard con un tubo de órgano, un cronómetro y paciencia
@@ -2592,6 +2621,8 @@ multitudes de ellos por semitono: ninguno destaca, la respuesta se
 empareja, y lo que queda como firma de la sala es la cola. Regla
 general para llevarse: **sala chica = modos ralos y audibles; sala
 grande = modos densos y reverberación al mando.**
+
+![**Figura 2.** Los tres primeros modos axiales entre dos paredes separadas $L = 2$ m: $f = v\,n/2L \approx 86$, 171 y 257 Hz. En la pared rígida el aire no puede moverse y la presión es máxima — al revés que en el extremo abierto de los tubos de s12. Pocos modos, bien separados, en plena zona de la voz: por eso la ducha tiene favoritas.](../figuras/s14_modos_sala.svg)
 
 ## Ponerle número a una sala (lo que haremos)
 
@@ -2820,7 +2851,8 @@ feliz — de la manera de estar en el mundo sonoro.
 # Bibliografía del curso
 
 Las cuatro fuentes que respaldan este libro, en su jerarquía de uso.
-Cada capítulo cita al cierre las secciones específicas que lo respaldan.
+Cada capítulo cita al cierre las secciones específicas que lo respaldan;
+las figuras reproducidas desde las fuentes lo indican en su leyenda.
 
 - **Campbell, M. & Greated, C. (1987).** *The Musician's Guide to
   Acoustics*. Oxford: Oxford University Press (reimpresión 2001).

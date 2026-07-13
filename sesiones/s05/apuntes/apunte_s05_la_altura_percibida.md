@@ -43,6 +43,8 @@ la altura de ese $f_1$ aunque nadie la esté tocando. A este fenómeno se lo
 llama **fundamental ausente** o **altura virtual**, y es el corazón de
 esta sesión (Benade 1990, cap. 5, secs. 5.6–5.7; Roederer 1997, sec. 2.7).
 
+![**Figura 1.** El tono completo (arriba) y el mismo tono con la fundamental apagada (abajo). Al quitar $f_1$ del espectro (derecha), la forma de onda cambia de aspecto pero **conserva exactamente el mismo período** $T = 1/f_1$ (izquierda): por eso el oído le sigue asignando la misma altura. La altura vive en la periodicidad del patrón, no en que $f_1$ esté físicamente presente.](../../../figuras/s05_fundamental_ausente.svg)
+
 La clave está en el patrón, no en las piezas. Una serie $400, 600, 800,
 1000$ Hz tiene un "aire de familia" inconfundible: son los armónicos
 $2, 3, 4, 5$ de $200$ Hz. El período de esa mezcla —el tiempo que tarda el
@@ -110,6 +112,8 @@ mapa espacial, con cada frecuencia depositada en su sitio. Es un análisis
 consecuencias musicales cuando estudiemos batidos y banda crítica—, pero
 es la primera clasificación que el cerebro recibe del mundo sonoro.
 
+![**Figura 2.** El camino del sonido por el oído, en bloques: el **oído externo** (pabellón y canal) capta y colorea; el **oído medio** (tímpano y tres huesecillos) adapta la vibración del aire al líquido; el **oído interno** (cóclea) la analiza. Abajo, la **membrana basilar** desenrollada funciona como un analizador por lugar: los agudos excitan la zona de la entrada (rígida y estrecha), los graves el fondo (blando y ancho). Esquema muy simplificado, sin escala anatómica.](../../../figuras/s05_oido_esquema.svg)
+
 Note que aquí reaparecen las dos pistas de la altura. El *lugar* excitado
 en la membrana es una; el *ritmo* del patrón —la periodicidad que permite
 la fundamental ausente— es la otra. El oído usa ambas, y no siempre están
@@ -127,6 +131,8 @@ llevan el mismo nombre. Esa relación privilegiada que produce duplicar la
 frecuencia es la **octava**:
 
 $$\text{octava} \;\Longleftrightarrow\; f \to 2f \quad (\text{razón } 2:1)$$
+
+![**Figura 3.** La altura se organiza por *razones* de frecuencia, no por diferencias. Sobre un eje de frecuencia logarítmico, los La sucesivos (110, 220, 440, 880, 1760 Hz) quedan **equiespaciados**: cada octava es duplicar $f$. El salto $220\to440$ (+220 Hz) y el salto $440\to880$ (+440 Hz) suenan como el mismo paso —una octava— aunque cubran distinta cantidad de hertz.](../../../figuras/s05_octava_log.svg)
 
 La octava es la primera evidencia dura de que el eje de la altura no es una
 regla lineal tendida sobre el eje de la frecuencia. Duplicar de $220$ a

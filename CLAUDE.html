@@ -202,6 +202,11 @@
   pre code { background:none; padding:0; }
   hr { border:none; border-top:1px solid #ccc; margin:2rem 0; }
   img { max-width:100%; }
+  figure { margin:1.6rem auto; text-align:center; }
+  figure img { max-width:min(100%, 680px); }
+  figcaption { font-family:Helvetica,Arial,sans-serif; font-size:.82rem;
+               color:#555; margin-top:.5rem; text-align:left;
+               max-width:640px; margin-inline:auto; line-height:1.4; }
   li { margin-bottom:.25rem; }
   math { font-size:1.05em; }
   @media print { body { background:white; max-width:none; } }
@@ -283,6 +288,14 @@ cualquier <code>.md</code>, ejecutar
 Nunca editar un <code>.html</code> gemelo a mano (se pisa al regenerar);
 los únicos HTML editables son las demos, el mapa y
 <code>Admin/estilo_md_header.html</code>.</li>
+<li>Las figuras de apuntes/libro son SVG generados por
+<code>figuras/gen_sXX.py</code> (con
+<code>figuras/estilo_figuras.py</code>): para cambiar una figura, editar
+y re-ejecutar su script, nunca el SVG. Tras editar capítulos o figuras,
+recompilar el libro con <code>python3 Admin/compilar_libro.py</code>.
+Reproducciones desde la bibliografía: solo datos medidos
+irreemplazables, con cita completa en la leyenda y registro en
+<code>figuras/libros/EXTRACCIONES.md</code>.</li>
 </ul>
 <h2 id="fases-del-proyecto">Fases del proyecto</h2>
 <ol type="1">

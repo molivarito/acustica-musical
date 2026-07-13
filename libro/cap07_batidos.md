@@ -145,6 +145,8 @@ Un batido por segundo por cada hertz de diferencia. En la sesión no le
 pediremos creerla: la va a *contar*, con sus propios oídos, contra los
 números en pantalla.
 
+![**Figura 1.** Suma de dos tonos cercanos: una onda rápida (a la frecuencia promedio) encerrada por una envolvente lenta (rojo) que sube y baja $f_b = |f_2 - f_1|$ veces por segundo — refuerzo, silencio, refuerzo. Se dibuja con $f_1 = 40$ Hz y $f_2 = 43$ Hz para que el ciclo sea visible.](../figuras/s07_batido_forma_onda.svg)
+
 Dos preguntas quedan deliberadamente abiertas, porque son suyas. La
 primera: si el batido delata diferencias de frecuencia que ningún oído
 distingue como dos alturas, ¿qué herramienta práctica acaba de ganar

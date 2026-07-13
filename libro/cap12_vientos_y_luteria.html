@@ -203,6 +203,11 @@ medida</title>
   pre code { background:none; padding:0; }
   hr { border:none; border-top:1px solid #ccc; margin:2rem 0; }
   img { max-width:100%; }
+  figure { margin:1.6rem auto; text-align:center; }
+  figure img { max-width:min(100%, 680px); }
+  figcaption { font-family:Helvetica,Arial,sans-serif; font-size:.82rem;
+               color:#555; margin-top:.5rem; text-align:left;
+               max-width:640px; margin-inline:auto; line-height:1.4; }
   li { margin-bottom:.25rem; }
   math { font-size:1.05em; }
   @media print { body { background:white; max-width:none; } }
@@ -287,7 +292,21 @@ rebota y ahí es máxima. Un tubo con puerta y puerta acomoda media onda;
 un tubo con puerta y pared solo acomoda un cuarto — de ahí el 4 — y
 únicamente los patrones impares calzan con una punta de cada tipo (el
 desarrollo completo, en español, está en Roederer 1997, secs. 4.4–4.6;
-con ejercicios, en Rossing et al. 2002, cap. 12).</p>
+con ejercicios, en Rossing et al. 2002, cap. 12). La figura 1 dibuja
+ambos menús de modos.</p>
+<figure>
+<img src="../figuras/s12_modos_tubos.svg"
+alt="Figura 1. Amplitud de la onda estacionaria de presión de los tres primeros modos de un tubo abierto–abierto y de uno cerrado–abierto. La “puerta” (extremo abierto) impone un nodo de presión; la “pared” (tapa), un máximo. La velocidad del aire (punteada, primera fila) es complementaria: máxima donde la presión tiene nodo. Entre puerta y pared cabe solo un cuarto de onda: de ahí el 4L y la serie impar." />
+<figcaption aria-hidden="true"><strong>Figura 1.</strong> Amplitud de la
+onda estacionaria de presión de los tres primeros modos de un tubo
+abierto–abierto y de uno cerrado–abierto. La “puerta” (extremo abierto)
+impone un nodo de presión; la “pared” (tapa), un máximo. La velocidad
+del aire (punteada, primera fila) es complementaria: máxima donde la
+presión tiene nodo. Entre puerta y pared cabe solo un cuarto de onda: de
+ahí el
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>4</mn><mi>L</mi></mrow><annotation encoding="application/x-tex">4L</annotation></semantics></math>
+y la serie impar.</figcaption>
+</figure>
 <p>Dos fórmulas de una línea, y con ellas se predice la nota de
 cualquier tubo simple con pura aritmética. Compruébelo antes de venir:
 ¿qué largo necesita un tubo tapado para dar el La del afinador, 440 Hz?
@@ -319,9 +338,21 @@ solo tubo</h2>
 para la onda, donde hay agujero abierto la presión ya casi no puede
 acumularse — el tubo, en primera aproximación, “termina” ahí. Destapar
 agujeros de abajo hacia arriba equivale entonces a acortar el tubo por
-etapas: una escala completa fabricada con un solo tubo y ocho dedos. En
-la sesión lo verá medido en vivo, espectrograma mediante, sobre una
-flauta real.</p>
+etapas: una escala completa fabricada con un solo tubo y ocho dedos
+(figura 2). En la sesión lo verá medido en vivo, espectrograma mediante,
+sobre una flauta real.</p>
+<figure>
+<img src="../figuras/s12_agujero_tubo.svg"
+alt="Figura 2. Un agujero abierto es una fuga de presión: para la onda, el tubo termina aproximadamente donde está el primer agujero destapado (esquemático). El largo efectivo L_{ef} es menor que L y la nota sube." />
+<figcaption aria-hidden="true"><strong>Figura 2.</strong> Un agujero
+abierto es una fuga de presión: para la onda, el tubo termina
+aproximadamente donde está el primer agujero destapado (esquemático). El
+largo efectivo
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>L</mi><mrow><mi>e</mi><mi>f</mi></mrow></msub><annotation encoding="application/x-tex">L_{ef}</annotation></semantics></math>
+es menor que
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>L</mi><annotation encoding="application/x-tex">L</annotation></semantics></math>
+y la nota sube.</figcaption>
+</figure>
 <p>La historia fina — que el agujero no corta del todo, que la
 <em>red</em> de agujeros abiertos se comporta como un filtro con una
 <strong>frecuencia de corte</strong> que firma el timbre de cada madera

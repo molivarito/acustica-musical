@@ -203,6 +203,11 @@ suena</title>
   pre code { background:none; padding:0; }
   hr { border:none; border-top:1px solid #ccc; margin:2rem 0; }
   img { max-width:100%; }
+  figure { margin:1.6rem auto; text-align:center; }
+  figure img { max-width:min(100%, 680px); }
+  figcaption { font-family:Helvetica,Arial,sans-serif; font-size:.82rem;
+               color:#555; margin-top:.5rem; text-align:left;
+               max-width:640px; margin-inline:auto; line-height:1.4; }
   li { margin-bottom:.25rem; }
   math { font-size:1.05em; }
   @media print { body { background:white; max-width:none; } }
@@ -277,6 +282,21 @@ formas fáciles de dibujar — una barriga, dos barrigas, tres barrigas,
 siempre con nodos en los dos extremos fijos — y sus frecuencias guardan
 una relación asombrosamente simple:</p>
 <p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>f</mi><mi>n</mi></msub><mo>=</mo><mi>n</mi><mspace width="0.167em"></mspace><msub><mi>f</mi><mn>1</mn></msub><mspace width="2.0em"></mspace><mi>n</mi><mo>=</mo><mn>1</mn><mo>,</mo><mn>2</mn><mo>,</mo><mn>3</mn><mo>,</mo><mi>…</mi></mrow><annotation encoding="application/x-tex">f_n = n \, f_1 \qquad n = 1, 2, 3, \dots</annotation></semantics></math></p>
+<figure>
+<img src="../../../figuras/s03_modos_cuerda.svg"
+alt="Figura 1. Las cuatro primeras formas modales de una cuerda fija en ambos extremos. Cada modo es una forma de vibrar de toda la cuerda; los puntos negros (●) son los nodos, lugares que no se mueven. El modo n tiene n barrigas y su frecuencia es n\,f_1. Apoyar un dedo sobre un nodo deja sobrevivir ese modo; apoyarlo sobre una barriga lo apaga." />
+<figcaption aria-hidden="true"><strong>Figura 1.</strong> Las cuatro
+primeras formas modales de una cuerda fija en ambos extremos. Cada modo
+es una forma de vibrar de toda la cuerda; los puntos negros (●) son los
+<strong>nodos</strong>, lugares que no se mueven. El modo
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>n</mi><annotation encoding="application/x-tex">n</annotation></semantics></math>
+tiene
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>n</mi><annotation encoding="application/x-tex">n</annotation></semantics></math>
+barrigas y su frecuencia es
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>n</mi><mspace width="0.167em"></mspace><msub><mi>f</mi><mn>1</mn></msub></mrow><annotation encoding="application/x-tex">n\,f_1</annotation></semantics></math>.
+Apoyar un dedo sobre un nodo deja sobrevivir ese modo; apoyarlo sobre
+una barriga lo apaga.</figcaption>
+</figure>
 <p>El modo de dos barrigas vibra exactamente al doble del modo
 fundamental; el de tres, al triple. Puede verlo y oírlo, modo por modo y
 sumados, en la demo de la sesión (<code>demo_modos_cuerda.html</code>),
@@ -304,6 +324,20 @@ anticipa la percepción: los parciales armónicos se funden en
 <em>una</em> nota nítida; los inarmónicos se resisten, y por eso la
 sartén “no afina” (por qué el oído premia las razones enteras es tema de
 la sesión 5).</p>
+<figure>
+<img src="../../../figuras/s03_armonico_vs_inarmonico.svg"
+alt="Figura 2. Dos espectros esquemáticos. A la izquierda, una cuerda: sus parciales caen en razones enteras 1:2:3:4\dots (armónicos), y el oído los funde en una nota afinable. A la derecha, una membrana o placa: sus parciales caen en razones no enteras (aquí 1:1{,}59:2{,}14\dots, las de una membrana circular ideal), es decir inarmónicos, y por eso la percusión de superficie tiene altura difusa. Alturas de las líneas cualitativas." />
+<figcaption aria-hidden="true"><strong>Figura 2.</strong> Dos espectros
+esquemáticos. A la izquierda, una cuerda: sus parciales caen en razones
+enteras
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>1</mn><mo>:</mo><mn>2</mn><mo>:</mo><mn>3</mn><mo>:</mo><mn>4</mn><mi>…</mi></mrow><annotation encoding="application/x-tex">1:2:3:4\dots</annotation></semantics></math>
+(armónicos), y el oído los funde en una nota afinable. A la derecha, una
+membrana o placa: sus parciales caen en razones no enteras (aquí
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>1</mn><mo>:</mo><mn>1</mn><mo>,</mo><mn>59</mn><mo>:</mo><mn>2</mn><mo>,</mo><mn>14</mn><mi>…</mi></mrow><annotation encoding="application/x-tex">1:1{,}59:2{,}14\dots</annotation></semantics></math>,
+las de una membrana circular ideal), es decir
+<strong>inarmónicos</strong>, y por eso la percusión de superficie tiene
+altura difusa. Alturas de las líneas cualitativas.</figcaption>
+</figure>
 <blockquote>
 <p><strong>Recuadro opcional (para quienes vienen de
 ingeniería).</strong> La relación
@@ -358,6 +392,16 @@ hacia la cola (Benade 1990, cap. 4). El oído usa esa película completa
 para reconocer “vaso”, “sartén” o “campana”. Cuando en el proyecto grabe
 su instrumento, no mire solo <em>qué</em> parciales tiene: mire <em>cómo
 decaen</em>.</p>
+<figure>
+<img src="../../../figuras/s03_decaimiento_multimodo.svg"
+alt="Figura 3. Amplitud de tres parciales de un objeto golpeado en función del tiempo. En general los parciales agudos pierden energía más rápido que los graves, así que la mezcla —y con ella el timbre— cambia mientras el sonido se apaga: brillante en el ataque, cada vez más simple hacia la cola. Curvas esquemáticas." />
+<figcaption aria-hidden="true"><strong>Figura 3.</strong> Amplitud de
+tres parciales de un objeto golpeado en función del tiempo. En general
+los parciales agudos pierden energía más rápido que los graves, así que
+la mezcla —y con ella el timbre— cambia mientras el sonido se apaga:
+brillante en el ataque, cada vez más simple hacia la cola. Curvas
+esquemáticas.</figcaption>
+</figure>
 <h2 id="el-proyecto-quedó-lanzado">El proyecto quedó lanzado</h2>
 <p>Desde hoy usted y su grupo tienen un encargo que atraviesa el
 semestre: construir o modificar un instrumento o instalación sonora y —

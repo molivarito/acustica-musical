@@ -202,6 +202,11 @@
   pre code { background:none; padding:0; }
   hr { border:none; border-top:1px solid #ccc; margin:2rem 0; }
   img { max-width:100%; }
+  figure { margin:1.6rem auto; text-align:center; }
+  figure img { max-width:min(100%, 680px); }
+  figcaption { font-family:Helvetica,Arial,sans-serif; font-size:.82rem;
+               color:#555; margin-top:.5rem; text-align:left;
+               max-width:640px; margin-inline:auto; line-height:1.4; }
   li { margin-bottom:.25rem; }
   math { font-size:1.05em; }
   @media print { body { background:white; max-width:none; } }
@@ -270,6 +275,16 @@ sec. 13.8). Entre medio caben, en rangos aproximados, un susurro (~30
 dB), una conversación (~60 dB), y una orquesta o una banda en fortissimo
 (~95–110 dB) (ROS cap. 6; valores típicos, no medidos en nuestras salas
 — los de nuestras salas los está midiendo usted).</p>
+<figure>
+<img src="../../../figuras/s06_escala_decibel.svg"
+alt="Figura 1. La escala de niveles de presión sonora con hitos musicales, del umbral de audición al umbral del dolor. Los valores son típicos y redondeados (no medidos en nuestras salas). A la derecha, la gramática del decibel: +10 dB multiplican por diez la intensidad (y suenan como el doble), +3 dB la duplican (cambio chico)." />
+<figcaption aria-hidden="true"><strong>Figura 1.</strong> La escala de
+niveles de presión sonora con hitos musicales, del umbral de audición al
+umbral del dolor. Los valores son típicos y redondeados (no medidos en
+nuestras salas). A la derecha, la gramática del decibel: +10 dB
+multiplican por diez la intensidad (y suenan como el doble), +3 dB la
+duplican (cambio chico).</figcaption>
+</figure>
 <blockquote>
 <p><strong>Recuadro opcional (para quienes quieren la fórmula).</strong>
 El nivel se define como
@@ -295,7 +310,10 @@ sec. 13.2), de modo que duplicar las fuentes duplica la
 <em>energía</em>, no la amplitud. Y como +3 dB está lejos del +10 dB del
 “doble de fuerte”, la consecuencia musical es fuerte: <strong>se
 necesitan unas diez fuentes iguales para que algo suene el doble de
-fuerte, y unas cien para el cuádruple</strong> (Benade 1990, sec. 13.5).
+fuerte, y unas cien para el cuádruple</strong> (Benade 1990, sec. 13.5)
+(figura 2).</p>
+<p><img src="../../../figuras/s06_suma_fuentes.svg"
+alt="Figura 2. El nivel crece como 10\log_{10}N al sumar N fuentes iguales: duplicarlas agrega solo +3 dB (un cambio chico), y hacen falta diez para el doble de sonoridad (+10 dB) y cien para el cuádruple (+20 dB)." />
 Por eso duplicar los violines de una orquesta engorda el sonido mucho
 más de lo que lo agranda, y por eso el crescendo de verdad se hace
 tocando más fuerte, no sumando atriles.</p>
@@ -310,7 +328,17 @@ tono de 1000 Hz. Su forma general — que usted reprodujo a su manera en
 la demo — dice que somos relativamente sordos a los graves (y a los muy
 agudos), y que esa sordera <strong>se agrava a niveles bajos</strong>
 (Benade 1990, secs. 13.3–13.4; C&amp;G cap. 3, sección
-<em>Loudness</em>; ROE sec. 3.4).</p>
+<em>Loudness</em>; ROE sec. 3.4) (figura 3).</p>
+<figure>
+<img src="../../../figuras/s06_isofonicas_esquema.svg"
+alt="Figura 3. Curvas de igual sonoridad (esquema cualitativo, según las curvas normalizadas). Cada curva marca cuántos dB SPL hacen falta en cada frecuencia para igualar la sonoridad de un tono de 1000 Hz. Cuanto más bajo el nivel (curva de 20 fon), más empinada es la subida hacia los graves: por eso una mezcla suave “pierde” el bajo primero." />
+<figcaption aria-hidden="true"><strong>Figura 3.</strong> Curvas de
+igual sonoridad (esquema cualitativo, según las curvas normalizadas).
+Cada curva marca cuántos dB SPL hacen falta en cada frecuencia para
+igualar la sonoridad de un tono de 1000 Hz. Cuanto más bajo el nivel
+(curva de 20 fon), más empinada es la subida hacia los graves: por eso
+una mezcla suave “pierde” el bajo primero.</figcaption>
+</figure>
 <p>Eso resuelve la escucha del día: al bajar el volumen, todos los
 componentes bajan los mismos dB, pero los graves caen más rápido hacia
 el umbral que el registro medio. La mezcla no perdió el bajo: <strong>su

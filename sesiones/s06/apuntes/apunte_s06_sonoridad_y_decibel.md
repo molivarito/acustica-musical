@@ -60,6 +60,8 @@ orquesta o una banda en fortissimo (~95–110 dB) (ROS cap. 6; valores
 típicos, no medidos en nuestras salas — los de nuestras salas los está
 midiendo usted).
 
+![**Figura 1.** La escala de niveles de presión sonora con hitos musicales, del umbral de audición al umbral del dolor. Los valores son típicos y redondeados (no medidos en nuestras salas). A la derecha, la gramática del decibel: +10 dB multiplican por diez la intensidad (y suenan como el doble), +3 dB la duplican (cambio chico).](../../../figuras/s06_escala_decibel.svg)
+
 > **Recuadro opcional (para quienes quieren la fórmula).** El nivel se
 > define como $L_p = 20\log_{10}(p/p_0)$ con $p_0 = 20\ \mu$Pa, o
 > equivalentemente $10\log_{10}(I/I_0)$ sobre intensidades. De ahí que
@@ -79,7 +81,9 @@ modo que duplicar las fuentes duplica la *energía*, no la amplitud. Y
 como +3 dB está lejos del +10 dB del "doble de fuerte", la consecuencia
 musical es fuerte: **se necesitan unas diez fuentes iguales para que
 algo suene el doble de fuerte, y unas cien para el cuádruple** (Benade
-1990, sec. 13.5). Por eso duplicar los violines de una orquesta engorda
+1990, sec. 13.5) (figura 2).
+
+![**Figura 2.** El nivel crece como $10\log_{10}N$ al sumar $N$ fuentes iguales: duplicarlas agrega solo +3 dB (un cambio chico), y hacen falta diez para el doble de sonoridad (+10 dB) y cien para el cuádruple (+20 dB).](../../../figuras/s06_suma_fuentes.svg) Por eso duplicar los violines de una orquesta engorda
 el sonido mucho más de lo que lo agranda, y por eso el crescendo de
 verdad se hace tocando más fuerte, no sumando atriles.
 
@@ -93,7 +97,9 @@ frecuencia, para igualar la sonoridad de un tono de 1000 Hz. Su forma
 general — que usted reprodujo a su manera en la demo — dice que somos
 relativamente sordos a los graves (y a los muy agudos), y que esa
 sordera **se agrava a niveles bajos** (Benade 1990, secs. 13.3–13.4;
-C&G cap. 3, sección *Loudness*; ROE sec. 3.4).
+C&G cap. 3, sección *Loudness*; ROE sec. 3.4) (figura 3).
+
+![**Figura 3.** Curvas de igual sonoridad (esquema cualitativo, según las curvas normalizadas). Cada curva marca cuántos dB SPL hacen falta en cada frecuencia para igualar la sonoridad de un tono de 1000 Hz. Cuanto más bajo el nivel (curva de 20 fon), más empinada es la subida hacia los graves: por eso una mezcla suave "pierde" el bajo primero.](../../../figuras/s06_isofonicas_esquema.svg)
 
 Eso resuelve la escucha del día: al bajar el volumen, todos los
 componentes bajan los mismos dB, pero los graves caen más rápido hacia

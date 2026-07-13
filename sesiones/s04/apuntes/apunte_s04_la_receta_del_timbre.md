@@ -54,6 +54,8 @@ general, pulsar en un punto a $1/n$ del largo silencia el modo $n$ y sus
 múltiplos. Los guitarristas ejecutan esta física cada vez que mueven la
 mano derecha: *sul tasto* y *sul ponticello* son ajustes de receta.
 
+![**Figura 1.** La receta de la misma cuerda según dónde se pulse (amplitud del modo $n$ proporcional a $|\sin(n\pi x_0/L)|/n^2$). Arriba, pulsada en $L/2$: todos los parciales pares tienen un nodo ahí y nacen mudos —queda solo la serie impar, el sonido hueco—. Abajo, pulsada cerca del puente ($L/10$): se enciende un poco de todos los modos, receta pareja y rica en agudos, sonido brillante. La nota (las frecuencias) es la misma en ambos casos; cambia el reparto de energía.](../../../figuras/s04_punto_pulsacion.svg)
+
 Los **armónicos naturales** del taller son la tercera cara de la misma
 moneda: el dedo apoyado *suavemente* sobre el traste 12 ($L/2$) apaga
 todo lo que se mueve ahí y deja sonar únicamente los modos con nodo en
@@ -90,6 +92,8 @@ con osciladores lo que había medido con la guitarra: el par
 físico–perceptual **espectro↔timbre** en acción (OA2.1; ROE secs.
 4.8–4.10; C&G cap. 3).
 
+![**Figura 2.** Síntesis aditiva: partiendo de un seno puro (el parcial 1) y sumando armónicos impares (1+3, 1+3+5+7), la onda se transforma y se acerca a una forma "hueca", pero **sigue siendo una sola nota** en $f_1$: el oído no oye parciales sueltos, oye un solo tono cuyo color cambia. Es la receta "solo impares" —la misma que produce la cuerda pulsada en $L/2$— cocinada al revés.](../../../figuras/s04_sintesis_aditiva.svg)
+
 Una advertencia que la sesión dejó plantada: la relación espectro↔timbre
 es real pero **no es unívoca** — y la prueba la dio el gancho del módulo
 2.
@@ -103,6 +107,8 @@ la inversión destruye no es la receta: es la **envolvente**, la forma en
 que el sonido se despliega en el tiempo — el ataque abrupto de la
 pulsación, el decaimiento suave de la resonancia. Invertida, la nota
 *crece* hacia un golpe final: otro instrumento.
+
+![**Figura 3.** La envolvente —cómo crece y decae la amplitud en el tiempo— de una nota pulsada (izquierda: ataque abrupto, decaimiento lento) y de esa misma nota reproducida al revés (derecha: crece hacia un golpe final). El espectro promedio es idéntico en ambas, pero el oído reconoce instrumentos distintos: **el timbre es la receta más su película**.](../../../figuras/s04_envolvente.svg)
 
 La moraleja es la segunda mitad de la definición de timbre: **el timbre
 es la receta más su película**. Ya lo sabía desde s03 — cada modo decae
