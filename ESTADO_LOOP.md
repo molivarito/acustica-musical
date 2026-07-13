@@ -26,7 +26,7 @@ actividades > demo.
 | s11 | Cuerdas frotadas y cuerpo | lista | lista | lista | lista | lista |
 | s12 | Vientos y lutería | lista | lista | lista | lista | lista |
 | s13 | Prueba 2 + la voz | lista | lista | lista | lista | lista |
-| s14 | La sala como instrumento | pendiente | pendiente | pendiente | pendiente | pendiente |
+| s14 | La sala como instrumento | lista | lista | lista | lista | lista |
 | s15 | Presentaciones finales | pendiente | pendiente | n/a | pendiente | pendiente |
 
 ## Controles de calidad
@@ -131,3 +131,8 @@ diseno/02 §6.)
   sintetizar estímulos #13–#14, grabar #15; imprimir cuadernillos;
   pico corrección ≈5 h. [POR VERIFICAR] tracto ~17 cm; F1/F2 finos de
   vocales españolas.
+- **s14**: estímulo #16 (frase seca/reverberante); confirmar acceso y
+  horarios de los espacios de las rutas de medición (plantilla editable:
+  espacios concretos los fija el profesor); globos para impulso;
+  lámina de errores de prueba 2. Nota: agente cortado tras escribir todo;
+  verificación final del orquestador (JS OK, 70+70, hito 3 y rutas OK).

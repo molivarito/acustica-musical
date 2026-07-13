@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Demo — Modos de sala: las notas favoritas de una pieza (s14)</title>
+<style>
+  /* Estética editorial: fondo claro, serif para texto, sans para controles */
+  :root {
+    --tinta: #1a1a1a;
+    --acento: #7a2e2e;     /* rojo ladrillo: eje ANCHO y cursor del tono */
+    --linea: #2e4a7a;      /* azul: eje LARGO y curva de respuesta */
+    --terciario: #4a7a4a;  /* verde sobrio: eje ALTO */
+    --papel: #faf8f4;
+    --panel: #f0ece4;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0; padding: 1.2rem;
+    background: var(--papel); color: var(--tinta);
+    font-family: Georgia, 'Times New Roman', serif;
+    max-width: 940px; margin-inline: auto;
+  }
+  h1 { font-size: 1.35rem; margin: 0 0 .2rem; }
+  .sesion { font-family: Helvetica, Arial, sans-serif; font-size: .8rem;
+            letter-spacing: .06em; text-transform: uppercase; color: var(--acento); }
+  .bajada { font-style: italic; margin: .3rem 0 1rem; }
+  .panel {
+    background: var(--panel); border-radius: 6px; padding: .9rem 1rem;
+    font-family: Helvetica, Arial, sans-serif; font-size: .9rem;
+    display: flex; flex-wrap: wrap; gap: .8rem 1.6rem; align-items: flex-start;
+    margin-bottom: .6rem;
+  }
+  .ctrl { display: flex; flex-direction: column; gap: .2rem; min-width: 200px; flex: 1; }
+  .ctrl label { font-weight: bold; }
+  .valor { font-variant-numeric: tabular-nums; }
+  input[type=range] { width: 100%; accent-color: var(--acento); }
+  button {
+    font-family: Helvetica, Arial, sans-serif; font-size: .9rem;
+    padding: .45rem .9rem; border: 1px solid var(--tinta); border-radius: 4px;
+    background: white; cursor: pointer;
+  }
+  button.primario { background: var(--acento); color: white; border-color: var(--acento); }
+  button.chico { font-size: .8rem; padding: .3rem .6rem; }
+  select {
+    font-family: Helvetica, Arial, sans-serif; font-size: .9rem;
+    padding: .3rem; border: 1px solid #999; border-radius: 4px; background: white;
+  }
+  .fila-botones { display: flex; gap: .5rem; flex-wrap: wrap; align-items: center; }
+  canvas { width: 100%; display: block; background: white;
+           border: 1px solid #ccc; border-radius: 4px; margin-top: .8rem; }
+  .leyenda { font-family: Helvetica, Arial, sans-serif; font-size: .8rem; color: #444;
+             margin: .3rem 0 0; }
+  .leyenda b { padding: 0 .25rem; }
+  .observar { border-left: 4px solid var(--acento); padding: .2rem 0 .2rem 1rem; margin-top: 1.2rem; }
+  .observar h2 { font-size: 1rem; margin: .2rem 0; }
+  ol { margin: .4rem 0; padding-left: 1.2rem; }
+</style>
+</head>
+<body>
+<p class="sesion">Acústica Musical UC · Sesión 14</p>
+<h1>Modos de sala: las notas favoritas de una pieza</h1>
+<p class="bajada">Dibuje una sala con los deslizadores, barra el tono lentamente
+y encuentre de oído las frecuencias donde la sala "engorda" — sus modos.</p>
+
+<div class="panel">
+  <div class="ctrl">
+    <label for="dimL">Largo L: <span class="valor" id="dimLVal">8,0 m</span></label>
+    <input type="range" id="dimL" min="15" max="300" value="80">
+    <label for="dimW">Ancho W: <span class="valor" id="dimWVal">7,0 m</span></label>
+    <input type="range" id="dimW" min="10" max="200" value="70">
+    <label for="dimH">Alto H: <span class="valor" id="dimHVal">3,0 m</span></label>
+    <input type="range" id="dimH" min="20" max="150" value="30">
+    <div class="fila-botones" style="margin-top:.3rem">
+      <span>Salas típicas:</span>
+      <button class="chico" data-preset="ducha">ducha</button>
+      <button class="chico" data-preset="sala">sala de clases</button>
+      <button class="chico" data-preset="catedral">catedral</button>
+    </div>
+  </div>
+  <div class="ctrl">
+    <label for="tono">Tono de prueba: <span class="valor" id="tonoVal">100,0 Hz</span></label>
+    <input type="range" id="tono" min="0" max="1000" value="500">
+    <span>Refuerzo de la sala: <span class="valor" id="refVal">0,0 dB</span></span>
+    <label for="gan">Ganancia: <span class="valor" id="ganVal">0,35</span></label>
+    <input type="range" id="gan" min="0" max="50" value="35">
+    <div class="fila-botones" style="margin-top:.3rem">
+      <button id="btnPlay" class="primario">▶ Iniciar tono</button>
+      <button id="btnStop">■ Detener</button>
+    </div>
+  </div>
+  <div class="ctrl" style="min-width:220px; flex:0.8">
+    <label>Modo para mirar por dentro</label>
+    <div class="fila-botones">
+      <select id="modoEje">
+        <option value="L" selected>eje largo (L)</option>
+        <option value="W">eje ancho (W)</option>
+        <option value="H">eje alto (H)</option>
+      </select>
+      <select id="modoN">
+        <option value="1" selected>n = 1</option>
+        <option value="2">n = 2</option>
+        <option value="3">n = 3</option>
+        <option value="4">n = 4</option>
+      </select>
+    </div>
+    <span>Frecuencia del modo: <span class="valor" id="modoFVal">21,4 Hz</span></span>
+    <button class="chico" id="btnIrModo" style="margin-top:.3rem">llevar el tono a este modo</button>
+  </div>
+</div>
+
+<canvas id="cvResp" height="210"></canvas>
+<p class="leyenda">Respuesta de la sala entre 20 y 400 Hz (eje log). Rayas verticales:
+modos axiales — <b style="color:#2e4a7a">eje largo</b> ·
+<b style="color:#7a2e2e">eje ancho</b> · <b style="color:#4a7a4a">eje alto</b>.
+La curva es la suma de sus resonancias (como las curvas de la sesión 10);
+el cursor grueso es el tono que suena.</p>
+
+<canvas id="cvModo" height="230"></canvas>
+<p class="leyenda" id="leyModo">Patrón de presión del modo elegido, visto en planta
+(L × W): rojo = presión oscilando fuerte (+), azul = fuerte (−), blanco = línea
+nodal (ahí ese modo no se oye).</p>
+
+<div class="observar">
+  <h2>¿Qué observar?</h2>
+  <ol>
+    <li><b>Prediga antes de barrer</b>: en la sala de clases, ¿los refuerzos
+        estarán juntos o separados? Barra el tono lentamente de grave a agudo
+        y anote a oído dónde "engorda" — compare con las rayas del gráfico.</li>
+    <li>Pase al preset <b>ducha</b>: ¿qué pasó con la separación entre modos y
+        en qué zona de frecuencias quedaron? ¿Qué tiene eso que ver con que la
+        ducha "afine" la voz?</li>
+    <li>Pase al preset <b>catedral</b>: ¿puede todavía distinguir refuerzos
+        individuales de oído? Si los modos ya no destacan, ¿qué firma le queda
+        entonces a una sala grande (piense en el T₆₀)?</li>
+  </ol>
+</div>
+
+<script>
+'use strict';
+// ---------------------------------------------------------------------------
+// Demo s14 — modos axiales de una sala rectangular. Concepto único: la sala
+// tiene frecuencias preferidas (modos) como cualquier resonador del curso.
+//
+// Física: para cada par de paredes enfrentadas separadas d, los modos
+// axiales están en f = v·n/(2d). La "respuesta" que se dibuja y que refuerza
+// el tono es una suma de resonancias simples (lorentzianas) centradas en
+// cada modo — una caricatura pedagógica de la curva real, suficiente para
+// oír y ver el fenómeno. El profesor puede ajustar abajo V_SONIDO, F_MIN,
+// F_MAX, el ancho de resonancia (ANCHO_REL) y el peso de cada modo (AMP_N).
+// ---------------------------------------------------------------------------
+const V_SONIDO = 343;          // velocidad del sonido (m/s, 20 °C)
+const F_MIN = 20, F_MAX = 400; // rango del tono de prueba (Hz, escala log)
+const ANCHO_REL = 0.02;        // semiancho de cada resonancia ≈ 2 % de f (Q≈25)
+const AMP_N = n => 5 / n;      // peso del modo n (los graves dominan)
+const COLOR_EJE = { L: '#2e4a7a', W: '#7a2e2e', H: '#4a7a4a' };
+
+let ctxAudio = null, osc = null, ganancia = null, sonando = false;
+
+const $ = id => document.getElementById(id);
+// Los sliders de dimensiones van en decímetros (enteros) → metros /10.
+const dims = () => ({ L: $('dimL').value / 10, W: $('dimW').value / 10, H: $('dimH').value / 10 });
+// Slider de tono logarítmico: 0..1000 → F_MIN..F_MAX.
+const tonoActual = () => F_MIN * Math.pow(F_MAX / F_MIN, $('tono').value / 1000);
+const ganActual = () => $('gan').value / 100;   // 0 .. 0,5 máximo
+
+const coma = (x, d) => x.toFixed(d).replace('.', ',');
+
+// --- modos axiales ----------------------------------------------------------
+// Lista de {f, eje, n} con f ≤ F_MAX, para las tres dimensiones.
+function listaModos() {
+  const d = dims(), out = [];
+  for (const eje of ['L', 'W', 'H']) {
+    for (let n = 1; n <= 40; n++) {
+      const f = V_SONIDO * n / (2 * d[eje]);
+      if (f > F_MAX) break;
+      if (f >= F_MIN * 0.8) out.push({ f, eje, n });
+    }
+  }
+  return out;
+}
+
+// Respuesta relativa de la sala en f: 1 (sin ayuda) + suma de resonancias.
+function respuesta(f, modos) {
+  let r = 1;
+  for (const m of modos) {
+    const hw = Math.max(1.2, m.f * ANCHO_REL);       // semiancho en Hz
+    const d = (f - m.f) / hw;
+    r += AMP_N(m.n) / (1 + d * d);
+  }
+  return r;
+}
+// La respuesta se lleva a ganancia audible: lejos de un modo suena tenue,
+// sobre un modo suena pleno (contraste ≈ 16 dB, protegido por el tope 0,5).
+const factorAudible = r => Math.min(1, Math.max(0.15, r / 6));
+
+// --- audio -------------------------------------------------------------------
+function aplicaGanancia() {
+  if (!ganancia || !ctxAudio) return;
+  const g = ganActual() * factorAudible(respuesta(tonoActual(), listaModos()));
+  ganancia.gain.setTargetAtTime(g, ctxAudio.currentTime, 0.03); // sin "zipper"
+}
+async function iniciar() {
+  if (!ctxAudio) {   // el AudioContext se crea SOLO tras interacción del usuario
+    ctxAudio = new (window.AudioContext || window.webkitAudioContext)();
+    ganancia = ctxAudio.createGain();
+    ganancia.gain.value = 0;
+    ganancia.connect(ctxAudio.destination);
+    osc = ctxAudio.createOscillator();
+    osc.type = 'sine';
+    osc.frequency.value = tonoActual();
+    osc.connect(ganancia);
+    osc.start();
+  }
+  await ctxAudio.resume();
+  sonando = true;
+  aplicaGanancia();
+}
+function detener() {
+  sonando = false;
+  if (ganancia && ctxAudio) ganancia.gain.setTargetAtTime(0, ctxAudio.currentTime, 0.03);
+  if (ctxAudio) setTimeout(() => { if (!sonando && ctxAudio) ctxAudio.suspend(); }, 150);
+}
+
+// --- etiquetas ----------------------------------------------------------------
+function modoElegido() {
+  const eje = $('modoEje').value, n = +$('modoN').value;
+  return { eje, n, f: V_SONIDO * n / (2 * dims()[eje]) };
+}
+function refresca() {
+  const d = dims(), f = tonoActual(), modos = listaModos();
+  $('dimLVal').textContent = coma(d.L, 1) + ' m';
+  $('dimWVal').textContent = coma(d.W, 1) + ' m';
+  $('dimHVal').textContent = coma(d.H, 1) + ' m';
+  $('tonoVal').textContent = coma(f, 1) + ' Hz';
+  $('ganVal').textContent = coma(ganActual(), 2);
+  const db = 20 * Math.log10(factorAudible(respuesta(f, modos)) / 0.15);
+  $('refVal').textContent = '+' + coma(db, 1) + ' dB';
+  $('modoFVal').textContent = coma(modoElegido().f, 1) + ' Hz';
+  if (sonando && osc) {
+    osc.frequency.setTargetAtTime(f, ctxAudio.currentTime, 0.02);
+    aplicaGanancia();
+  }
+  dibujaResp();
+  dibujaModo();
+}
+
+// --- gráfico 1: respuesta de la sala (eje log 20–400 Hz) ----------------------
+const cvR = $('cvResp');
+function xDeF(f, x0, x1) { // posición horizontal de una frecuencia (escala log)
+  return x0 + (x1 - x0) * Math.log(f / F_MIN) / Math.log(F_MAX / F_MIN);
+}
+function preparaCanvas(cv, alto) {
+  const dpr = window.devicePixelRatio || 1, w = cv.clientWidth;
+  if (cv.width !== w * dpr || cv.height !== alto * dpr) { cv.width = w * dpr; cv.height = alto * dpr; }
+  const g = cv.getContext('2d');
+  g.setTransform(dpr, 0, 0, dpr, 0, 0);
+  g.clearRect(0, 0, w, alto);
+  return [g, w];
+}
+function dibujaResp() {
+  const alto = 210, [g, w] = preparaCanvas(cvR, alto);
+  const x0 = 44, x1 = w - 12, y0 = alto - 28, y1 = 14;
+  const modos = listaModos();
+  const DBMAX = 18; // techo del eje vertical, en dB
+  const yDeDb = db => y0 - (y0 - y1) * Math.min(db, DBMAX) / DBMAX;
+
+  // ejes
+  g.strokeStyle = '#999'; g.fillStyle = '#555'; g.lineWidth = 1;
+  g.font = '11px Helvetica, Arial, sans-serif';
+  g.strokeRect(x0, y1, x1 - x0, y0 - y1);
+  for (const ft of [20, 30, 50, 80, 100, 150, 200, 300, 400]) {
+    const x = xDeF(ft, x0, x1);
+    g.beginPath(); g.moveTo(x, y0); g.lineTo(x, y0 + 4); g.stroke();
+    g.fillText(ft, x - 8, y0 + 16);
+  }
+  g.fillText('frecuencia (Hz)', (x0 + x1) / 2 - 40, alto - 4);
+  for (const db of [0, 6, 12, 18]) {
+    const y = yDeDb(db);
+    g.beginPath(); g.moveTo(x0 - 4, y); g.lineTo(x0, y); g.stroke();
+    g.fillText(db, x0 - 26, y + 4);
+  }
+  g.save(); g.translate(12, (y0 + y1) / 2 + 34); g.rotate(-Math.PI / 2);
+  g.fillText('refuerzo (dB)', 0, 0); g.restore();
+
+  // rayas de los modos, coloreadas por eje
+  for (const m of modos) {
+    const x = xDeF(m.f, x0, x1);
+    g.strokeStyle = COLOR_EJE[m.eje]; g.globalAlpha = 0.55; g.lineWidth = 1.2;
+    g.beginPath(); g.moveTo(x, y0); g.lineTo(x, y1 + 8); g.stroke();
+    g.globalAlpha = 1;
+  }
+
+  // curva de respuesta (en dB sobre el piso audible)
+  g.strokeStyle = getComputedStyle(document.body).getPropertyValue('--linea');
+  g.lineWidth = 1.8; g.beginPath();
+  const NP = 480;
+  for (let i = 0; i <= NP; i++) {
+    const f = F_MIN * Math.pow(F_MAX / F_MIN, i / NP);
+    const db = 20 * Math.log10(factorAudible(respuesta(f, modos)) / 0.15);
+    const x = xDeF(f, x0, x1), y = yDeDb(db);
+    i ? g.lineTo(x, y) : g.moveTo(x, y);
+  }
+  g.stroke();
+
+  // cursor del tono actual
+  const xc = xDeF(tonoActual(), x0, x1);
+  g.strokeStyle = getComputedStyle(document.body).getPropertyValue('--acento');
+  g.lineWidth = 2.5;
+  g.beginPath(); g.moveTo(xc, y0); g.lineTo(xc, y1); g.stroke();
+}
+
+// --- gráfico 2: patrón de presión del modo elegido ----------------------------
+const cvM = $('cvModo');
+function dibujaModo() {
+  const alto = 230, [g, w] = preparaCanvas(cvM, alto);
+  const { eje, n } = modoElegido(), d = dims();
+  // vista: planta (L×W) para modos de L o W; corte vertical (L×H) para el alto
+  const planta = (eje !== 'H');
+  const dimX = d.L, dimY = planta ? d.W : d.H;
+  $('leyModo').textContent = 'Patrón de presión del modo elegido (' +
+    (planta ? 'planta L × W' : 'corte vertical L × H') +
+    '): rojo = presión oscilando fuerte (+), azul = fuerte (−), blanco = línea nodal (ahí ese modo no se oye).';
+
+  // rectángulo de la sala a escala, centrado
+  const margen = 40, maxW = w - 2 * margen, maxH = alto - 2 * margen;
+  const esc = Math.min(maxW / dimX, maxH / dimY);
+  const rw = dimX * esc, rh = dimY * esc;
+  const rx = (w - rw) / 2, ry = (alto - rh) / 2;
+
+  // presión: cos(nπu) con u a lo largo del eje del modo
+  const aLoLargoDeX = (eje === 'L');
+  const pasos = 160;
+  for (let i = 0; i < pasos; i++) {
+    const u = (i + 0.5) / pasos;
+    const p = Math.cos(n * Math.PI * u);                 // presión relativa −1..+1
+    const t = Math.abs(p);
+    // rojo para +, azul para −, blanco en el nodo
+    const base = p >= 0 ? [190, 70, 60] : [60, 90, 170];
+    const col = base.map(c => Math.round(255 - (255 - c) * t));
+    g.fillStyle = 'rgb(' + col.join(',') + ')';
+    if (aLoLargoDeX) g.fillRect(rx + rw * i / pasos, ry, rw / pasos + 1, rh);
+    else if (eje === 'W') g.fillRect(rx, ry + rh * i / pasos, rw, rh / pasos + 1);
+    else g.fillRect(rx, ry + rh * (1 - (i + 1) / pasos), rw, rh / pasos + 1); // alto: u crece hacia arriba
+  }
+
+  // líneas nodales (discontinuas) en u = (2k−1)/(2n)
+  g.strokeStyle = '#333'; g.setLineDash([5, 4]); g.lineWidth = 1;
+  for (let k = 1; k <= n; k++) {
+    const u = (2 * k - 1) / (2 * n);
+    g.beginPath();
+    if (aLoLargoDeX) { const x = rx + rw * u; g.moveTo(x, ry); g.lineTo(x, ry + rh); }
+    else if (eje === 'W') { const y = ry + rh * u; g.moveTo(rx, y); g.lineTo(rx + rw, y); }
+    else { const y = ry + rh * (1 - u); g.moveTo(rx, y); g.lineTo(rx + rw, y); }
+    g.stroke();
+  }
+  g.setLineDash([]);
+
+  // borde y cotas
+  g.strokeStyle = '#333'; g.lineWidth = 1.5; g.strokeRect(rx, ry, rw, rh);
+  g.fillStyle = '#333'; g.font = '11px Helvetica, Arial, sans-serif';
+  g.fillText('L = ' + coma(d.L, 1) + ' m', rx + rw / 2 - 26, ry + rh + 16);
+  g.save(); g.translate(rx - 8, ry + rh / 2 + 24); g.rotate(-Math.PI / 2);
+  g.fillText((planta ? 'W = ' + coma(d.W, 1) : 'H = ' + coma(d.H, 1)) + ' m', 0, 0);
+  g.restore();
+  g.fillText('modo axial eje ' + (eje === 'L' ? 'largo' : eje === 'W' ? 'ancho' : 'alto') +
+             ', n = ' + n + '  →  f = ' + coma(modoElegido().f, 1) + ' Hz', rx, ry - 8);
+}
+
+// --- presets de salas ----------------------------------------------------------
+const PRESETS = {                       // [L, W, H] en metros
+  ducha:    [2.0, 1.5, 2.2],
+  sala:     [8.0, 7.0, 3.0],
+  catedral: [30.0, 20.0, 15.0],
+};
+document.querySelectorAll('[data-preset]').forEach(b =>
+  b.addEventListener('click', () => {
+    const [L, W, H] = PRESETS[b.dataset.preset];
+    $('dimL').value = L * 10; $('dimW').value = W * 10; $('dimH').value = H * 10;
+    refresca();
+  }));
+
+// --- controles -------------------------------------------------------------------
+$('btnPlay').addEventListener('click', iniciar);
+$('btnStop').addEventListener('click', detener);
+$('btnIrModo').addEventListener('click', () => {
+  // lleva el slider de tono a la frecuencia del modo elegido (acotada al rango)
+  const f = Math.min(F_MAX, Math.max(F_MIN, modoElegido().f));
+  $('tono').value = Math.round(1000 * Math.log(f / F_MIN) / Math.log(F_MAX / F_MIN));
+  refresca();
+});
+for (const id of ['dimL', 'dimW', 'dimH', 'tono', 'gan'])
+  $(id).addEventListener('input', refresca);
+for (const id of ['modoEje', 'modoN'])
+  $(id).addEventListener('change', refresca);
+window.addEventListener('resize', refresca);
+refresca();
+</script>
+</body>
+</html>
