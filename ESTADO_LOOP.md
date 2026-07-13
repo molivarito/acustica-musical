@@ -27,7 +27,7 @@ actividades > demo.
 | s12 | Vientos y lutería | lista | lista | lista | lista | lista |
 | s13 | Prueba 2 + la voz | lista | lista | lista | lista | lista |
 | s14 | La sala como instrumento | lista | lista | lista | lista | lista |
-| s15 | Presentaciones finales | pendiente | pendiente | n/a | pendiente | pendiente |
+| s15 | Presentaciones finales | lista | lista | n/a | lista | lista |
 
 ## Controles de calidad
 
@@ -136,3 +136,6 @@ diseno/02 §6.)
   espacios concretos los fija el profesor); globos para impulso;
   lámina de errores de prueba 2. Nota: agente cortado tras escribir todo;
   verificación final del orquestador (JS OK, 70+70, hito 3 y rutas OK).
+- **s15**: sobres nominados con líneas base de s01; recibir/cargar 5
+  presentaciones la víspera; cronómetro; definir encuesta del curso
+  [decisión del profesor] y plazo de publicación de notas.
