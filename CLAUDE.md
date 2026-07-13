@@ -56,7 +56,9 @@ formación matemática y musical.
 5. Revisión de alineamiento constructivo (skill `revision-alineamiento`).
 
 ## Estado del proyecto
-- Fase actual: 3 — Estructura del curso: mapa de las 15 sesiones (diseno/03).
-  Fase 1 completada: objetivos aprobados en diseno/01_objetivos_aprendizaje.md
-  el 2026-07-12. Fase 2 completada: metodología aprobada en
-  diseno/02_metodologia.md el 2026-07-12. (Actualizar manualmente.)
+- Fase actual: 5 — pendiente revisión del profesor sobre lo producido.
+  Fase 1 completada (objetivos, 2026-07-12). Fase 2 completada
+  (metodología, 2026-07-12). Fases 3–4 completadas en loop autónomo
+  (2026-07-13): diseno/03 + 15 sesiones + libro; ver RESUMEN_PARA_PATO.md
+  y ESTADO_LOOP.md. Tres revisiones de alineamiento aplicadas
+  (diseno/revision_*.md). (Actualizar manualmente.)

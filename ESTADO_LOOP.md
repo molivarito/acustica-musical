@@ -36,8 +36,8 @@ actividades > demo.
 | revision-alineamiento al cerrar s05 | **lista** — reporte en `diseno/revision_20260712.md`; 5 correcciones recomendadas antes de abrir s06 (P1–P5) |
 | revision-alineamiento al cerrar s10 | **lista** — reporte en `diseno/revision_20260712_s10.md`; 5 correcciones recomendadas antes de abrir s11 (P1–P5: cierres de s06 m2 y s08 m1, rotulación OA2.2 en Prueba 1, plazos del banco #10–#12, hoja isofónica) |
 | revision-alineamiento final (s15) | **hecha** — reporte en diseno/revision_20260713.md; 5 problemas menores corregidos (P1–P5, 6 archivos) |
-| Compilación libro/LIBRO_CURSO.md (+PDF si hay pandoc) | pendiente |
-| RESUMEN_PARA_PATO.md | pendiente |
+| Compilación libro/LIBRO_CURSO.md (+PDF si hay pandoc) | **hecha** — MD (15 caps + índice + bibliografía) y PDF vía pandoc/xelatex |
+| RESUMEN_PARA_PATO.md | **hecho** — en la raíz del proyecto |
 
 ## Registro de decisiones tomadas sin consultar
 
