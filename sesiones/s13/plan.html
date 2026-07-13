@@ -1,0 +1,630 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="es" xml:lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>Sesión 13 — Prueba 2 (módulo 1) + la voz cantada: fuente-filtro
+y formantes (módulo 2, audición liviana)</title>
+  <style>
+    /* Default styles provided by pandoc.
+    ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+    */
+    html {
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    svg {
+      height: auto;
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      border: none;
+      border-top: 1px solid #1a1a1a;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+  </style>
+  <style>
+  /* Estilo compartido para los .md del curso convertidos a HTML
+     (misma familia editorial de las demos y del mapa del curso) */
+  :root { --tinta:#1a1a1a; --acento:#7a2e2e; --azul:#2e4a7a;
+          --papel:#faf8f4; --panel:#f0ece4; }
+  body { margin:0 auto; padding:2rem 1.4rem 4rem; max-width:820px;
+         background:var(--papel); color:var(--tinta);
+         font-family:Georgia,'Times New Roman',serif; line-height:1.55;
+         font-size:1.02rem; }
+  h1,h2,h3,h4 { font-family:Georgia,serif; line-height:1.25; }
+  h1 { font-size:1.6rem; border-bottom:2px solid var(--tinta);
+       padding-bottom:.3rem; }
+  h2 { font-size:1.25rem; margin-top:2rem; color:var(--acento); }
+  h3 { font-size:1.05rem; margin-top:1.5rem; }
+  a { color:var(--azul); }
+  blockquote { border-left:4px solid var(--acento); margin:1rem 0;
+               padding:.2rem 1rem; background:var(--panel);
+               border-radius:0 6px 6px 0; }
+  table { border-collapse:collapse; margin:1rem 0; font-size:.92rem;
+          display:block; overflow-x:auto; }
+  th { font-family:Helvetica,Arial,sans-serif; font-size:.78rem;
+       text-transform:uppercase; letter-spacing:.04em; text-align:left;
+       border-bottom:2px solid var(--tinta); padding:.45rem .6rem;
+       background:var(--papel); }
+  td { padding:.45rem .6rem; border-bottom:1px solid #ddd;
+       vertical-align:top; }
+  code { font-family:Menlo,Consolas,monospace; font-size:.86em;
+         background:var(--panel); padding:.08em .35em; border-radius:3px; }
+  pre { background:var(--panel); padding:.8rem 1rem; border-radius:6px;
+        overflow-x:auto; }
+  pre code { background:none; padding:0; }
+  hr { border:none; border-top:1px solid #ccc; margin:2rem 0; }
+  img { max-width:100%; }
+  li { margin-bottom:.25rem; }
+  math { font-size:1.05em; }
+  @media print { body { background:white; max-width:none; } }
+  </style>
+</head>
+<body>
+<h1
+id="sesión-13-prueba-2-módulo-1-la-voz-cantada-fuente-filtro-y-formantes-módulo-2-audición-liviana">Sesión
+13 — Prueba 2 (módulo 1) + la voz cantada: fuente-filtro y formantes
+(módulo 2, audición liviana)</h1>
+<p><strong>Objetivos que cubre</strong>: la <strong>Prueba 2</strong>
+evalúa OA1.2 (resonancia, impedancia, acoplamiento, proporciones de
+tubos y resonadores), OA1.3 (mecanismos de excitación y regímenes de
+oscilación: frotado y soplado), OA2.2 (batidos, banda crítica,
+rugosidad), OA2.3 (escalas, temperamentos y cents), sobre el contenido
+de las sesiones 08–12 — <strong>lo de s12 solo con ítems
+básicos</strong> (tubo abierto/cerrado,
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>v</mi><mi>/</mi><mn>2</mn><mi>L</mi></mrow><annotation encoding="application/x-tex">v/2L</annotation></semantics></math>–<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>v</mi><mi>/</mi><mn>4</mn><mi>L</mi></mrow><annotation encoding="application/x-tex">v/4L</annotation></semantics></math>,
+registros; regla 6b y compromiso explícito del anuncio de s12) — e
+incluye una <strong>escucha escrita corta evaluada con la rúbrica
+OA3.1</strong> (cuenta en la nota de la prueba, metodología §4). El
+módulo 2 cubre <strong>OA1.3 (excitación cantada)</strong> en audición
+liviana, sin nota: es el único espacio de la voz en el curso (decisión
+D2 de diseno/03) y cierra la trilogía de válvulas del bloque C (fricción
+s11, chorro s12, pliegues s13). <strong>Requisitos previos</strong>:
+s08–s12 completos. El <strong>ticket de salida de s12</strong> (“cuando
+usted canta una vocal, ¿qué es lo que afina — la ‘cuerda’ o el ‘tubo’?”)
+se cobra en el gancho del módulo 2. Lectura previa:
+<code>libro/cap13_la_voz.md</code> — mitad mapa de estudio para la
+Prueba 2 (se consume estudiando y EN la prueba misma), mitad fuente y
+filtro (se consume en la mini-lección del módulo 2, principio 6). Los
+estudiantes no traen nada especial (anunciado en s12): solo lápiz;
+celulares y audífonos guardados durante la prueba. <strong>Posición en
+la progresión</strong>: cierra el bloque C (los instrumentos como
+sistemas) cosechando s08–s12 en la Prueba 2 y completando el mapa de
+mecanismos con la voz — el instrumento que no hubo que traer porque
+viene puesto. s14 abre el bloque D con el tercer socio del sonido
+musical (la sala: salida de medición) y s15 son las presentaciones
+finales. El ticket de hoy siembra exactamente esa transición.
+<strong>Reglas aplicadas y decisiones de carga (declaradas)</strong>:
+sesión con prueba → la prueba ocupa TODO el módulo 1 y el módulo 2 es de
+<strong>audición liviana</strong> (metodología §3); <strong>esta semana
+NO hay escucha del día</strong> (la escucha escrita de la prueba la
+reemplaza; la ronda oral OA3 se retoma en s14, precedente de s07)
+<strong>ni taller evaluado</strong> (la prueba es la evaluación de la
+semana). Decisiones: (1) el <strong>módulo 2 es plenario y sin guía
+impresa ni registro recogido</strong>: el curso sale agotado de la
+prueba; el material es la propia voz (profesor y curso) y la demo. (2)
+La Prueba 2 usa <strong>3 estímulos de audio y solo 2 figuras</strong>
+(la Prueba 1 usó 3): acota la producción de material en la semana pico
+de corrección; los 3 estímulos se sintetizan/graban sin depender de
+terceros (#13–#15 del banco). (3) Regla 6b cumplida ítem por ítem: lo de
+s12 entra en B.3 y C.1 como básico (nada de corrección de extremo,
+frecuencia de corte ni mito del material — quedaron fuera por compromiso
+público del cierre de s12); s11 entra en D.1 y D.3 con aplicación
+moderada. (4) El <strong>formante del cantante y las sopranos</strong>
+entran como curiosidad cualitativa (BEN 19.4–19.5): cultura general, NO
+entran en prueba alguna. (5) <strong>Sin estímulo nuevo del banco para
+el módulo 2</strong>: la voz en vivo y la demo generan todo. (6)
+<strong>Fusibles declarados</strong>: m1 — el calendario de audio es
+intocable; si la instalación se atrasa, el tiempo sale de la holgura
+interna del cuadernillo (7′), no del audio. m2 — si el curso llega muy
+agotado, el bloque de curiosidades (52–62′) se comprime a 5′ y se alarga
+el juego de vocales con la demo; síntesis, ticket y anuncios NO se
+sacrifican.</p>
+<h2
+id="módulo-1-prueba-2-escuchar-leer-predecir-formato-evaluación-sin-variante-de-anatomía">Módulo
+1 — Prueba 2: “escuchar, leer, predecir” (formato: evaluación; sin
+variante de anatomía)</h2>
+<table>
+<colgroup>
+<col style="width: 20%" />
+<col style="width: 20%" />
+<col style="width: 20%" />
+<col style="width: 20%" />
+<col style="width: 20%" />
+</colgroup>
+<thead>
+<tr>
+<th>Tiempo</th>
+<th>Bloque</th>
+<th>Actividad del estudiante</th>
+<th>Rol del profesor</th>
+<th>Materiales</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0–7′</td>
+<td>Instalación y reglas de la prueba</td>
+<td>Se sienta en puesto individual (columnas separadas, preparadas antes
+si la sala lo permite); guarda celular, apuntes y audífonos en la
+mochila; recibe el cuadernillo (boca abajo) y la hoja de figuras;
+escucha las reglas</td>
+<td>Reparte cuadernillos; escribe en el pizarrón el <strong>calendario
+de audio</strong> (min 10: Estímulo 1 · min 25: Estímulos 2 y 3 · min
+40: pasada de repaso) y las reglas: cada estímulo suena <strong>2
+veces</strong> con ~45 s de pausa; no se necesita calculadora
+(aritmética de proporciones y sumas de cents); preguntas solo de forma,
+a mano alzada</td>
+<td>Cuadernillos impresos (20 + 2 de reserva); hoja de figuras aparte;
+pizarrón con calendario; equipo de sala probado ANTES con los 3 archivos
+(#13–#15)</td>
+</tr>
+<tr>
+<td>7–67′</td>
+<td><strong>Desarrollo de la Prueba 2</strong> (diseñada para ≤60′;
+partes A–D de <code>actividades/prueba2.md</code>)</td>
+<td>Responde a su ritmo las partes B (casos sonoros y figura de
+resonancia), C (predicción con proporciones y cents) y D (mecanismos y
+vocabulario); en el <strong>min 10</strong> atiende la reproducción del
+Estímulo 1 y responde la <strong>Parte A (escucha escrita
+OA3.1)</strong>; en el <strong>min 25</strong> atiende los Estímulos 2 y
+3 (Parte B); en el <strong>min 40</strong> puede revisar con la pasada
+de repaso</td>
+<td>Reproduce los estímulos EXACTAMENTE según el calendario (2 veces
+c/u, cronómetro a la vista); entre reproducciones circula en silencio;
+<strong>rezagados</strong>: quien llega antes del min 25 alcanza todo
+(el repaso del min 40 le repone el Estímulo 1); quien llega después del
+min 25 rinde igual y el caso se resuelve según reglamento de la unidad
+académica (no se detiene la prueba ni se repite audio fuera de
+calendario)</td>
+<td>3 estímulos (banco #13, #14, #15) en el equipo de sala; cronómetro
+proyectado; calendario en pizarrón</td>
+</tr>
+<tr>
+<td>67–70′</td>
+<td>Entrega y transición</td>
+<td>Entrega cuadernillo Y hoja de figuras (se cuentan al recibir); sale
+a pausa</td>
+<td>Recoge por filas, cuenta 20 cuadernillos; anuncia: “el módulo 2 es
+liviano y el instrumento ya lo traen puesto: vuelvan descansados”</td>
+<td>—</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Logística de la prueba (resumen operativo)</strong>: idéntica
+a la Prueba 1 — puestos separados; celulares y audífonos guardados (los
+estímulos suenan por el equipo de sala, igual para todos); audio SOLO en
+los 3 momentos del calendario público (equidad + manejo acotado de
+rezagados); el profesor prueba los 3 archivos en el equipo de la sala
+antes de la clase (regla del banco de estímulos). Duración diseñada ≤60′
+dentro de 70′: 7′ instalación + 60′ desarrollo + 3′ entrega. Presupuesto
+interno del cuadernillo: A 10′ + B 15′ + C 20′ + D 8′ = 53′ + 7′ de
+revisión/holgura.</p>
+<h2
+id="módulo-2-el-instrumento-que-llevamos-puesto-variante-audición-aligerada-sin-ronda-sin-taller-evaluado-sin-nota">Módulo
+2 — El instrumento que llevamos puesto (variante: audición, aligerada —
+sin ronda, sin taller evaluado, sin nota)</h2>
+<table>
+<colgroup>
+<col style="width: 20%" />
+<col style="width: 20%" />
+<col style="width: 20%" />
+<col style="width: 20%" />
+<col style="width: 20%" />
+</colgroup>
+<thead>
+<tr>
+<th>Tiempo</th>
+<th>Bloque</th>
+<th>Actividad del estudiante</th>
+<th>Rol del profesor</th>
+<th>Materiales</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0–8′</td>
+<td>Gancho sonoro: <strong>se cobra el ticket de s12</strong> (OA1.3,
+OA3 informal)</td>
+<td>Escucha al profesor cantar (a) la MISMA nota con /a/, /e/, /i/ — y
+vota a mano alzada: ¿cambió la altura?; luego (b) la MISMA vocal /a/ en
+tres notas distintas: ¿cambió la vocal?; contrasta con lo que escribió
+en su ticket de s12 (el profesor lee 2–3 anónimos); conclusión
+provisoria a mano alzada: ¿qué afina la “cuerda” y qué afina el
+“tubo”?</td>
+<td>Canta (no hace falta cantar bonito: hace falta sostener); lee
+tickets de s12; deja la respuesta ARMADA pero no cerrada: “aquí hay dos
+perillas y parecen independientes — la sesión es averiguar qué es cada
+una”; anticipa la honestidad de D2: “la voz merece un curso; tiene 70
+minutos”</td>
+<td>Tickets de s12 recopilados; pizarrón</td>
+</tr>
+<tr>
+<td>8–22′</td>
+<td>Experiencia guiada I: la voz al espectrograma (OA1.3, OA4.1
+transversal)</td>
+<td><strong>Predice a mano alzada ANTES</strong> de cada paso: (1) el
+profesor canta /a/ sostenida al espectrograma proyectado: se ven las
+líneas armónicas (la fuente periódica) y, sobre ellas, <strong>bandas
+oscuras</strong> donde los armónicos salen reforzados; (2) misma nota,
+cambia a /i/: ¿se mueven las líneas o las bandas? (las bandas; las
+líneas quedan); (3) misma vocal, sube la nota: ¿qué se mueve ahora? (las
+líneas; las bandas quedan); (4) predicción estrella: “si TODOS
+susurramos /a–e–i–o–u/ — sin cuerdas vibrando — ¿la app verá algo? ¿se
+distinguirán las vocales?”; el curso susurra en bloque hacia el
+micrófono y verifica: <strong>bandas sin líneas</strong> — el filtro
+sobrevive sin la fuente</td>
+<td>Opera la app de espectrograma del curso proyectada (celular o
+notebook + micrófono); canta los pasos 1–3; dirige el susurro colectivo
+(bajo riesgo social: susurrar no es cantar); nombra lo visto SIN teoría
+todavía: “esas bandas tienen nombre y son de ustedes: cada vocal es un
+patrón de bandas”</td>
+<td>App de espectrograma del curso proyectada; micrófono/celular del
+profesor</td>
+</tr>
+<tr>
+<td>22–36′</td>
+<td>Mini-lección liviana: fuente y filtro (OA1.3) — consume la lectura
+previa (mitad voz de cap13)</td>
+<td>Rehace con el profesor el modelo del capítulo, votando en cada paso:
+(a) los <strong>pliegues vocales</strong> son la tercera válvula del
+curso — aire continuo de los pulmones, cortado en soplidos periódicos
+(como la fricción de s11 y el chorro de s12); votación: “¿quién le pone
+el metrónomo a esta válvula: el tracto (el tubo) o los propios
+pliegues?” — respuesta sorpresa: <strong>los pliegues solos</strong>
+(tensión y masa, como una cuerda): por eso la altura NO depende de la
+forma de la boca; (b) el <strong>tracto vocal</strong> es un tubo corto
+y configurable cuyas resonancias — los <strong>formantes</strong> —
+refuerzan unas zonas del espectro glotal: la vocal ES ese patrón de
+refuerzos (F1, F2…); (c) cierre del modelo
+<strong>fuente-filtro</strong>: fuente (pliegues) fija la altura; filtro
+(tracto) fija la vocal; son independientes — la respuesta completa al
+ticket de s12</td>
+<td>Presenta el modelo con el dibujo de tres cajas
+(pulmones→pliegues→tracto) en el pizarrón; contrasta explícitamente con
+s11–s12: “en el violín y la flauta el resonador ESCLAVIZA a la válvula;
+en la voz la válvula se auto-gobierna y el resonador solo filtra — por
+eso usted puede cantar cualquier vocal en cualquier nota” (BEN
+19.2–19.3); deja la notación mínima:
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>f</mi><mn>0</mn></msub><annotation encoding="application/x-tex">f_0</annotation></semantics></math>
+= frecuencia de los pliegues (altura); F1, F2 = formantes (vocal)</td>
+<td>Pizarrón; capítulo 13 como referencia</td>
+</tr>
+<tr>
+<td>36–52′</td>
+<td>Experiencia guiada II: la demo — dos perillas independientes
+(OA1.3)</td>
+<td>Con <code>demo_formantes_voz.html</code> proyectada: (1) f₀ fija, el
+profesor recorre los presets /a/ /e/ /i/ /o/ /u/: el curso confirma que
+la altura no se mueve mientras la vocal cambia; (2) vocal fija, f₀ sube
+y baja: la vocal sobrevive; (3) <strong>juego</strong>: el profesor fija
+F1/F2 con los valores ocultos y el curso VOTA qué vocal es (3–4 rondas);
+(4) fuente conmutada a “soplo”: el susurro sintético — la vocal se
+reconoce sin altura (el experimento del bloque I, ahora por dentro); (5)
+puente a las curiosidades: f₀ sube a ~880 Hz: ¿alguien distingue /e/ de
+/i/ ahí arriba?</td>
+<td>Opera la demo con audio de sala; en cada ronda del juego pide UNA
+razón por voto (“¿qué banda lo delató?”); conecta el paso 4 con el
+susurro real del bloque I; al llegar al paso 5 NO explica: deja la
+pregunta abierta para el bloque siguiente</td>
+<td><code>demo_formantes_voz.html</code> proyectada con audio de
+sala</td>
+</tr>
+<tr>
+<td>52–62′</td>
+<td>Curiosidades del canto: el cantante y la orquesta; las sopranos
+(OA1.3, cualitativo — NO entra en prueba)</td>
+<td>Escucha dos historias con evidencia: (1) <strong>el formante del
+cantante</strong>: cómo una voz entrenada atraviesa una orquesta
+completa sin micrófono — el canto lírico agrupa resonancias en una zona
+(~2,5–3 kHz) donde la orquesta ya decayó (BEN 19.4, cualitativo); (2)
+<strong>las sopranos agudas</strong>: con
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>f</mi><mn>0</mn></msub><annotation encoding="application/x-tex">f_0</annotation></semantics></math>
+altísima los armónicos quedan tan separados que ya no “dibujan” la
+envolvente de formantes — las vocales se confunden, y las sopranos
+ajustan la boca para llevar un formante hasta un armónico (BEN 19.5); el
+curso lo acaba de VER en el paso 5 de la demo; discusión relámpago (2′):
+“¿por qué los compositores ponen las palabras importantes en el registro
+medio de la soprano?”</td>
+<td>Cuenta ambas historias apoyándose en la demo (la pantalla del paso 5
+sigue proyectada); declara el estatus: cultura general, no entra en
+prueba; si hay cantantes líricos en el curso, les cede 1′ de
+testimonio</td>
+<td>Demo proyectada; pizarrón</td>
+</tr>
+<tr>
+<td>62–70′</td>
+<td>Síntesis, ticket hacia s14 y anuncios</td>
+<td>Anota la síntesis (3 líneas: los pliegues son la válvula que se
+auto-gobierna — fijan
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>f</mi><mn>0</mn></msub><annotation encoding="application/x-tex">f_0</annotation></semantics></math>/altura;
+el tracto es el filtro — sus formantes fijan la vocal; fuente y filtro
+son independientes: por eso el susurro tiene vocal sin altura); escribe
+su <strong>ticket de salida hacia s14</strong>: “hemos afinado la fuente
+y el filtro: queda el tercer socio — la sala. ¿Por qué la MISMA voz
+suena tan distinta en la ducha, en esta sala y en una catedral?”</td>
+<td>Recoge tickets; <strong>anuncia s14</strong>: salida de medición de
+salas UC (el módulo 2 completo es fuera del aula, ruta por grupos; traer
+celular CARGADO con las apps del curso; la puesta en común cierra dentro
+de la propia salida) y <strong>devolución de la Prueba 2 en la
+puerta</strong> al entrar a s14; <strong>anuncia s15</strong>:
+presentaciones finales + informe (hito 3) en ambos módulos — la pauta se
+publica en s14; recomienda ir cerrando la bitácora del proyecto</td>
+<td>Tickets; pizarrón</td>
+</tr>
+</tbody>
+</table>
+<h2 id="verificación-de-aprendizaje">Verificación de aprendizaje</h2>
+<ul>
+<li><strong>Prueba 2</strong> (instrumento central de la semana, 12,5 %
+del curso): partes A–D corregidas con la pauta cerrada
+(<code>actividades/prueba2_pauta.md</code>), ~13–15 min por estudiante,
+pico declarado ≈5 h (metodología §4). La Parte A alimenta además el
+seguimiento de OA3 (comparable con la línea base de s01, la ronda oral y
+la Parte A de la Prueba 1).</li>
+<li><strong>Módulo 2 (sin nota, por diseño)</strong>: verificación
+informal — las predicciones del susurro contrastadas en vivo (bloque
+8–22′); el curso adivina las vocales de la demo por sus bandas (36–52′,
+≥3 rondas correctas es señal de que el concepto formante quedó); los
+tickets hacia s14 registran la pregunta de la sala.</li>
+<li><strong>Cadena de tickets</strong>: ticket s12 cobrado en el gancho
+del m2 (respuesta: ambos e independientes — pliegues = altura, tracto =
+vocal); ticket s13 → gancho/escucha de s14 (la sala como tercer
+socio).</li>
+<li><strong>Cierre de la trilogía de válvulas (OA1.3)</strong>: fricción
+(s11), chorro (s12), pliegues (s13) — con la distinción fina de quién
+gobierna a quién, que es exactamente lo que D.1 y D.3 de la prueba
+evalúan por escrito para las dos primeras.</li>
+</ul>
+<h2 id="aritmética-de-tiempos-declarada-regla-6b">Aritmética de tiempos
+declarada (regla 6b)</h2>
+<ul>
+<li><strong>Módulo 1</strong>: 7′ + 60′ + 3′ = 70′ ✓. Prueba diseñada
+para ≤60′ (presupuesto interno: A 10′ + B 15′ + C 20′ + D 8′ = 53′ + 7′
+de holgura). Calendario de audio fijo (min 10 / 25 / 40) idéntico al
+protocolo validado en s07.</li>
+<li><strong>Módulo 2</strong>: 8 + 14 + 14 + 16 + 10 + 8 = 70′ ✓. Todo
+plenario con demo/app proyectada: no aplica cálculo por persona (no hay
+fases individuales con material limitado); las votaciones a mano alzada
+y el susurro colectivo incluyen a los 20 sin cuello logístico.</li>
+<li><strong>Carga del profesor en la sesión</strong>: reproducir 3
+estímulos según calendario + cantar/susurrar los ejemplos del m2 (su
+propia voz, sin ensayo con terceros) + operar app y demo. Fuera de aula
+esta semana: corrección de la Prueba 2 ≈5 h (pico declarado en
+metodología §4) + generación de las 2 figuras (~1 h) + prueba de los 3
+estímulos en el equipo de sala; los estímulos mismos pueden producirse
+en cualquier momento previo (no dependen de nada del semestre, ver banco
+#13–#15).</li>
+</ul>
+<h2 id="pendientes-de-producción">Pendientes de producción</h2>
+<ul>
+<li><strong>Demo</strong> (skill /demo-interactiva):
+<code>demo_formantes_voz.html</code> — fuente glotal sintética con
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>f</mi><mn>0</mn></msub><annotation encoding="application/x-tex">f_0</annotation></semantics></math>
+deslizable + filtro de 2 formantes (F1/F2) deslizables + presets /a/ /e/
+/i/ /o/ /u/ + fuente conmutable tono/soplo (susurro); espectro con la
+envolvente de formantes visible. Concepto único: fuente y filtro son
+independientes. Única demo de la sesión.</li>
+<li><strong>Prueba 2 completa</strong>: cuadernillo
+<code>actividades/prueba2.md</code> (imprimir
+<ol start="22" type="1">
+<li><ul>
+<li>pauta <code>actividades/prueba2_pauta.md</code> + hoja de figuras (2
+figuras, especificadas al final del cuadernillo; generar e imprimir
+22).</li>
+</ul></li>
+</ol></li>
+<li><strong>Estímulos de audio</strong> (#13, #14, #15 — filas agregadas
+a <code>materiales/banco_estimulos.md</code>): #13 quinta justa vs
+quinta estrechada (sintetizar), #14 barrido de unísono a tercera
+(sintetizar), #15 flauta que salta de registro (grabar con la flauta del
+profesor, 5 min). Ninguno depende del semestre: pueden adelantarse;
+probar los 3 en el equipo de sala la semana previa.</li>
+<li><strong>Apuntes</strong>:
+<code>sesiones/s13/apuntes/apunte_s13_la_voz.md</code> (breve: la sesión
+solo introduce la voz).</li>
+<li><strong>Capítulo (lectura previa)</strong>:
+<code>libro/cap13_la_voz.md</code> — mitad mapa de estudio de la Prueba
+2 (sin resolver ítems), mitad fuente-filtro (sin revelar el resultado
+del susurro ni el enredo de las sopranos).</li>
+<li><strong>Trabajo previo del profesor (esta semana)</strong>: imprimir
+22 cuadernillos + 22 hojas de figuras; generar Figura 1 (curvas de
+respuesta: captura de la demo de s10 con dos amortiguamientos, o
+redibujo) y Figura 2 (espectros tubo abierto/tapado: captura de la demo
+de s12, o redibujo); probar app de espectrograma + micrófono en el
+proyector para el m2; NO hay planilla OA3 esta semana (la ronda vuelve
+en s14); revisar que el equipo de sala reproduzca el batido de #13 sin
+distorsión (escuchar a nivel moderado).</li>
+</ul>
+<h2 id="riesgos-y-plan-b">Riesgos y plan B</h2>
+<ul>
+<li><strong>Falla el audio de sala durante la prueba</strong> → los 3
+estímulos están también en el celular del profesor: se reproducen
+caminando por la sala (validado desde s05). Si aun así falla: E1 se
+reemplaza en vivo (dos flautas — o dos tubos del taller de s12 — al
+unísono: primero afinadas, luego una destemplada levemente: mismo
+diagnóstico de batido; la pauta trae la variante); E3 se reemplaza en
+vivo con la flauta del profesor (el salto de registro es reproducible a
+voluntad, es la escucha de s12); E2 se reemplaza con la demo de banda
+crítica de s08 en el notebook del profesor (barrido en vivo). El
+calendario de momentos se respeta igual.</li>
+<li><strong>Un estudiante llega muy tarde (después del min 25)</strong>
+→ rinde con el tiempo restante y la pasada del min 40; si no alcanza la
+Parte A completa, procedimiento recuperativo de la unidad académica
+(regla anunciada al repartir, no se improvisa).</li>
+<li><strong>Nadie quiere cantar en el m2</strong> → el diseño ya lo
+prevé: canta el profesor; el curso solo susurra (susurrar en bloque es
+de riesgo social casi nulo) y vota. Si hay cantantes dispuestos, mejor —
+pero ningún bloque depende de ellos.</li>
+<li><strong>El espectrograma en vivo no se ve bien proyectado</strong>
+(micrófono lejos, sala ruidosa) → acercar el celular del profesor a su
+propia boca (los pasos 1–3 no necesitan al curso); para el susurro
+colectivo, pedir a los 4–5 más cercanos al micrófono; plan B total: la
+demo en modo “soplo” muestra el mismo contraste bandas-sin-líneas de
+forma sintética.</li>
+<li><strong>La demo no corre en el equipo de la sala</strong> → el
+bloque 36–52′ se rehace con la voz del profesor sobre el espectrograma
+(cantar la misma nota con vocales distintas ES el experimento 1; el
+juego de adivinar vocales se hace susurrando en vez de con sliders); se
+pierde la perilla continua de f₀, no el concepto.</li>
+<li><strong>El curso sale demasiado agotado de la prueba</strong> →
+fusible declarado: el bloque 52–62′ se comprime a 5′ (solo la historia
+de la soprano, que la demo ya dejó a la vista) y el juego de vocales se
+alarga (es el bloque más lúdico); síntesis, ticket y anuncios de s14–s15
+son intocables.</li>
+<li><strong>El batido de #13 no se oye en el equipo de sala</strong>
+(parlantes que comprimen) → detectarlo en la prueba previa del equipo
+(regla del banco); plan B: subir la desafinación de la versión 2 a ~15
+cents (batido ≈ 6/s, más robusto) regenerando el archivo — la pauta
+acepta cualquier conteo coherente con el archivo definitivo.</li>
+</ul>
+</body>
+</html>

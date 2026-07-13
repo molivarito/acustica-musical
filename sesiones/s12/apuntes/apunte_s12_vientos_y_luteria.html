@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="es" xml:lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>Vientos y lutería: la columna de aire a la medida</title>
+  <style>
+    /* Default styles provided by pandoc.
+    ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+    */
+    html {
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    svg {
+      height: auto;
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      border: none;
+      border-top: 1px solid #1a1a1a;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+  </style>
+  <style>
+  /* Estilo compartido para los .md del curso convertidos a HTML
+     (misma familia editorial de las demos y del mapa del curso) */
+  :root { --tinta:#1a1a1a; --acento:#7a2e2e; --azul:#2e4a7a;
+          --papel:#faf8f4; --panel:#f0ece4; }
+  body { margin:0 auto; padding:2rem 1.4rem 4rem; max-width:820px;
+         background:var(--papel); color:var(--tinta);
+         font-family:Georgia,'Times New Roman',serif; line-height:1.55;
+         font-size:1.02rem; }
+  h1,h2,h3,h4 { font-family:Georgia,serif; line-height:1.25; }
+  h1 { font-size:1.6rem; border-bottom:2px solid var(--tinta);
+       padding-bottom:.3rem; }
+  h2 { font-size:1.25rem; margin-top:2rem; color:var(--acento); }
+  h3 { font-size:1.05rem; margin-top:1.5rem; }
+  a { color:var(--azul); }
+  blockquote { border-left:4px solid var(--acento); margin:1rem 0;
+               padding:.2rem 1rem; background:var(--panel);
+               border-radius:0 6px 6px 0; }
+  table { border-collapse:collapse; margin:1rem 0; font-size:.92rem;
+          display:block; overflow-x:auto; }
+  th { font-family:Helvetica,Arial,sans-serif; font-size:.78rem;
+       text-transform:uppercase; letter-spacing:.04em; text-align:left;
+       border-bottom:2px solid var(--tinta); padding:.45rem .6rem;
+       background:var(--papel); }
+  td { padding:.45rem .6rem; border-bottom:1px solid #ddd;
+       vertical-align:top; }
+  code { font-family:Menlo,Consolas,monospace; font-size:.86em;
+         background:var(--panel); padding:.08em .35em; border-radius:3px; }
+  pre { background:var(--panel); padding:.8rem 1rem; border-radius:6px;
+        overflow-x:auto; }
+  pre code { background:none; padding:0; }
+  hr { border:none; border-top:1px solid #ccc; margin:2rem 0; }
+  img { max-width:100%; }
+  li { margin-bottom:.25rem; }
+  math { font-size:1.05em; }
+  @media print { body { background:white; max-width:none; } }
+  </style>
+</head>
+<body>
+<h1 id="vientos-y-lutería-la-columna-de-aire-a-la-medida">Vientos y
+lutería: la columna de aire a la medida</h1>
+<p><strong>Sesión 12</strong> · Curso Acústica Musical UC
+<strong>Objetivos que cubre</strong>: OA1.2 (predecir la nota de un tubo
+por su longitud y explicar la desviación), OA1.3 (la excitación soplada
+como oscilación auto-sostenida; tubos abiertos y cerrados y sus
+registros), OA5.2 (el ciclo construir–medir–explicar, vivido en el
+taller).</p>
+<h2 id="qué-hace-de-válvula-en-una-flauta">¿Qué hace de válvula en una
+flauta?</h2>
+<p>El ticket de la semana pasada quedó cobrado. En la cuerda frotada
+había una válvula visible: la fricción, que agarra y suelta, con la
+cuerda de metrónomo. En la flauta no hay nada que pegue ni suelte — y
+sin embargo la nota es estable, así que <em>algo</em> tiene que estar
+entregando energía en ciclos sincronizados. La respuesta es elegante: la
+válvula es <strong>el propio chorro de aire</strong>.</p>
+<p>Cuando usted sopla una flauta (o un tubo del taller, o una botella),
+el chorro fino que sale de sus labios cruza un espacio abierto y va a
+dar contra un borde afilado: el <strong>bisel</strong>. Un chorro contra
+un borde es un sistema indeciso: puede pasar por dentro del tubo o por
+fuera, y cualquier corriente lateral mínima lo desvía. Ahora bien, el
+aire del tubo no está quieto: si la columna está oscilando, por la
+embocadura entra y sale un vaivén de aire. Ese vaivén empuja al chorro
+alternadamente hacia adentro y hacia afuera del bisel — y cada vez que
+el chorro entra, empuja la oscilación de la columna justo a tiempo. El
+chorro alimenta a la columna y la columna conmuta al chorro: es
+exactamente el <strong>régimen de oscilación</strong> de s10 y s11, con
+el aire haciendo de válvula y la columna de metrónomo (Benade 1990, cap.
+20, sec. 20.2, desarrolla el concepto de régimen; C&amp;G, cap. 8,
+pp. 259–302, lo aplica a las maderas y flautas).</p>
+<p>Por eso soplar más fuerte no sube la nota de a poco: la afinación no
+la decide el soplo sino la columna, igual que en s11 no la decidía el
+arco sino la cuerda. El soplo elige, a lo más, <em>cuál</em> modo de la
+columna manda — y a eso vamos.</p>
+<h2 id="por-qué-un-tubo-tiene-nota-y-cómo-se-calcula">¿Por qué un tubo
+tiene nota, y cómo se calcula?</h2>
+<p>La columna de aire encerrada en un tubo es un sistema con
+<strong>modos</strong>, como la cuerda de s03: hay formas de oscilar que
+le salen naturales, con sus frecuencias características. Para un tubo
+<strong>abierto en ambos extremos</strong> (como la flauta, donde la
+embocadura abierta cuenta como extremo abierto), el modo más grave
+tiene</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>f</mi><mn>1</mn></msub><mo>=</mo><mfrac><mi>v</mi><mrow><mn>2</mn><mi>L</mi></mrow></mfrac></mrow><annotation encoding="application/x-tex">f_1 = \frac{v}{2L}</annotation></semantics></math></p>
+<p>con
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>v</mi><mo>≈</mo><mn>343</mn></mrow><annotation encoding="application/x-tex">v \approx 343</annotation></semantics></math>
+m/s (a 20 °C) y
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>L</mi><annotation encoding="application/x-tex">L</annotation></semantics></math>
+el largo del tubo. Y los modos siguientes caen en
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>2</mn><msub><mi>f</mi><mn>1</mn></msub><mo>,</mo><mn>3</mn><msub><mi>f</mi><mn>1</mn></msub><mo>,</mo><mn>4</mn><msub><mi>f</mi><mn>1</mn></msub><mo>,</mo><mi>…</mi></mrow><annotation encoding="application/x-tex">2f_1, 3f_1, 4f_1, \dots</annotation></semantics></math>:
+la serie armónica completa. Un tubo <strong>cerrado en un extremo y
+abierto en el otro</strong> (el tubo tapado del taller; el clarinete,
+cerrado por la caña) hace algo distinto en los dos frentes:</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>f</mi><mn>1</mn></msub><mo>=</mo><mfrac><mi>v</mi><mrow><mn>4</mn><mi>L</mi></mrow></mfrac></mrow><annotation encoding="application/x-tex">f_1 = \frac{v}{4L}</annotation></semantics></math></p>
+<p>— una octava más grave que el mismo tubo abierto — y sus modos caen
+solo en
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>3</mn><msub><mi>f</mi><mn>1</mn></msub><mo>,</mo><mn>5</mn><msub><mi>f</mi><mn>1</mn></msub><mo>,</mo><mn>7</mn><msub><mi>f</mi><mn>1</mn></msub><mo>,</mo><mi>…</mi></mrow><annotation encoding="application/x-tex">3f_1, 5f_1, 7f_1, \dots</annotation></semantics></math>:
+<strong>los armónicos impares</strong>. La intuición sin fórmula: el
+extremo abierto exige que la presión no se acumule (el aire escapa), el
+extremo cerrado la exige máxima (el aire rebota). Un tubo
+cerrado-abierto tiene una condición distinta en cada punta, y solo un
+cuarto de onda cabe entre ambas; de ahí el
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>4</mn><mi>L</mi></mrow><annotation encoding="application/x-tex">4L</annotation></semantics></math>,
+y de ahí que solo los patrones impares calcen.</p>
+<p>Estas dos fórmulas son toda la lutería de la sesión. Con
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>v</mi><mo>=</mo><mn>343</mn></mrow><annotation encoding="application/x-tex">v = 343</annotation></semantics></math>
+m/s, un La4 de 440 Hz pide un tubo tapado de
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>L</mi><mo>=</mo><mn>343</mn><mi>/</mi><mo stretchy="false" form="prefix">(</mo><mn>4</mn><mo>×</mo><mn>440</mn><mo stretchy="false" form="postfix">)</mo><mo>≈</mo><mn>0</mn><mo>,</mo><mn>195</mn></mrow><annotation encoding="application/x-tex">L = 343/(4 \times 440) \approx
+0{,}195</annotation></semantics></math> m: diecinueve centímetros y
+medio. Proporciones puras: el doble de largo, una octava abajo; la
+mitad, una octava arriba.</p>
+<h2 id="la-docena-del-clarinete-y-la-octava-de-la-flauta">La docena del
+clarinete y la octava de la flauta</h2>
+<p>El menú de modos explica el fenómeno de la escucha del día. Al soplar
+más fuerte, el chorro deja de sostener el modo grave y engancha el
+siguiente disponible. En la flauta (abierta), el siguiente es
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>2</mn><msub><mi>f</mi><mn>1</mn></msub></mrow><annotation encoding="application/x-tex">2f_1</annotation></semantics></math>:
+la nota <strong>salta la octava</strong>. En el tubo tapado del taller —
+y en el clarinete — el siguiente modo disponible no es
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>2</mn><msub><mi>f</mi><mn>1</mn></msub></mrow><annotation encoding="application/x-tex">2f_1</annotation></semantics></math>
+(no existe: es par) sino
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>3</mn><msub><mi>f</mi><mn>1</mn></msub></mrow><annotation encoding="application/x-tex">3f_1</annotation></semantics></math>:
+el salto es una octava más una quinta, la <strong>docena</strong>
+(12.ª). Mismo gesto, intervalos distintos, y la diferencia la fija la
+física de los extremos del tubo (ROS, cap. 12, dedica el capítulo a esta
+comparación; ROE, secs. 4.4–4.6, da el desarrollo de columnas de aire en
+español).</p>
+<p>El salto de registro no es un defecto: es el mecanismo con que los
+vientos multiplican sus notas. Una flauta con seis agujeros daría solo
+siete notas; con el segundo registro, la misma digitación vale dos
+veces.</p>
+<h2 id="agujeros-cortar-el-tubo-sin-cortarlo">Agujeros: cortar el tubo
+sin cortarlo</h2>
+<p>Un agujero lateral abierto es una fuga de presión: para la onda, el
+tubo “termina” aproximadamente donde está el primer agujero abierto.
+Destapar agujeros de abajo hacia arriba equivale a ir acortando el tubo
+— una escala fabricada con un solo tubo y ocho dedos. En la sesión lo
+vimos sobre la flauta real: cada agujero destapado subió la nota a
+saltos, y dos digitaciones distintas pudieron fabricar casi la misma
+nota (horquillas), porque hay más de una manera de construir el mismo
+“largo efectivo”.</p>
+<p>La versión fina de esta historia — que un agujero abierto no corta el
+tubo del todo, y que la <em>red</em> de agujeros abiertos deja pasar los
+agudos por encima de una <strong>frecuencia de corte</strong>
+característica que firma el timbre de cada madera — es el sello de
+Benade (1990, cap. 21, secs. 21.1 y 21.4; cap. 22, sec. 22.4). En este
+curso queda como mención: nos basta con la primera aproximación, que es
+la que usted usó para construir.</p>
+<h2 id="por-qué-todos-los-tubos-salieron-bajos">¿Por qué todos los tubos
+salieron bajos?</h2>
+<p>El resultado más instructivo del taller fue un “error” colectivo: los
+cinco grupos cortaron su tubo al largo calculado, y las cinco notas
+midieron <strong>bajas</strong>, todas, en un orden parecido de decenas
+de cents. Un error aleatorio se reparte para ambos lados; uno
+sistemático apunta a que el modelo olvida algo.</p>
+<p>Lo que olvida es que el extremo abierto de un tubo no es una frontera
+exacta. La columna de aire que vibra no termina en el borde del PVC:
+<strong>sobresale una puntita</strong> hacia afuera, porque el aire
+inmediatamente exterior también se mueve con ella. La columna efectiva
+es un poco más larga que el tubo, y
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>f</mi><mn>1</mn></msub><mo>=</mo><mi>v</mi><mi>/</mi><mn>4</mn><mi>L</mi></mrow><annotation encoding="application/x-tex">f_1 = v/4L</annotation></semantics></math>
+con el
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>L</mi><annotation encoding="application/x-tex">L</annotation></semantics></math>
+de la huincha da entonces una frecuencia un poco más alta que la real:
+por eso lo medido quedó abajo de lo predicho. Es la <strong>corrección
+de extremo</strong>, y es la razón de que la lutería real afine como
+usted afinó: cortando de menos a más, midiendo cada vez.</p>
+<blockquote>
+<p><strong>Recuadro opcional (el número fino).</strong> Para un tubo
+cilíndrico sin pestaña, la columna sobresale del extremo abierto
+aproximadamente
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>0</mn><mo>,</mo><mn>6</mn><mo>×</mo></mrow><annotation encoding="application/x-tex">0{,}6 \times</annotation></semantics></math>
+el <strong>radio</strong> interior del tubo (dato estándar de acústica
+de tubos; ver ROS, cap. 4, y C&amp;G, cap. 5). Para el PVC del taller
+(radio interior ≈ 8–10 mm <strong>[POR VERIFICAR** según el tubo
+comprado**]</strong>) son unos 5–6 mm de columna extra: en un tubo de 20
+cm, un 3 % — que en cents (recuerde s09: 1 semitono ≈ 6 % ≈ 100 cents)
+es del orden de 50 cents. Compare con la desviación que midió su grupo.
+En la embocadura soplada la corrección real es mayor y depende del
+soplo: por eso la tratamos como cualitativa.</p>
+</blockquote>
+<h2 id="los-vientos-se-afinan-calientes">Los vientos se afinan
+calientes</h2>
+<p>El gancho del módulo 2 dejó otra predicción fallida productiva: casi
+todos esperaban que la flauta calentada bajara (“el metal dilata, el
+tubo se alarga”). Subió. La clave es que lo que vibra no es el tubo sino
+el <strong>aire de adentro</strong>, y la velocidad del sonido en el
+aire crece con la temperatura:</p>
+<blockquote>
+<p><strong>Recuadro:
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>v</mi><annotation encoding="application/x-tex">v</annotation></semantics></math>
+depende de la temperatura.</strong> En aire,
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>v</mi><mo>≈</mo><mn>331</mn><mo>+</mo><mn>0</mn><mo>,</mo><mn>6</mn><mspace width="0.167em"></mspace><mi>T</mi></mrow><annotation encoding="application/x-tex">v \approx
+331 + 0{,}6\,T</annotation></semantics></math> m/s, con
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>T</mi><annotation encoding="application/x-tex">T</annotation></semantics></math>
+en °C (dato estándar; C&amp;G, cap. 1 y cap. 5). A 20 °C: ≈ 343 m/s.
+Cada grado suma ≈ 0,6 m/s, es decir ≈ 0,17 % en
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>f</mi><mn>1</mn></msub><annotation encoding="application/x-tex">f_1</annotation></semantics></math>
+— unos 3 cents por °C. El aliento del ejecutante puede subir la columna
+varios grados: decenas de cents, lo que el afinador mostró.</p>
+</blockquote>
+<p>La dilatación del metal existe, pero es un efecto cientos de veces
+más chico. Por eso los vientos llegan “bajos” con el instrumento frío,
+suben mientras se calientan, y la orquesta afina cuando ya soplaron un
+rato (C&amp;G, cap. 5, trae el ejemplo numérico de la flauta). Las
+cuerdas, para su desgracia, van para el otro lado — pero ese contraste
+ya lo razonó usted en la guía.</p>
+<h2 id="y-el-material-el-debate-del-pvc">¿Y el material? El debate del
+PVC</h2>
+<p>El cierre dejó una pregunta incómoda y útil: los tubos del curso son
+PVC de ferretería y afinaron igual que cualquier tubo “noble” del mismo
+largo. Si lo que vibra es la columna de aire, y las paredes solo la
+contienen, ¿cuánto importa de qué está hecho el tubo? Benade (1990, cap.
+22, sec. 22.7) hizo la pregunta en serio — con mediciones — y su
+respuesta escandaliza a medio mundo musical: para paredes lisas, rígidas
+y sin fugas, la geometría interior domina y el material casi no toca al
+sonido. El “casi” (rugosidad, bordes de agujeros, fugas, respuesta del
+ejecutante que <em>siente</em> distinto un instrumento pesado) es donde
+el debate sigue vivo. Queda como cultura general del curso — y como
+advertencia científica: antes de atribuir un timbre al material, hay que
+descartar todo lo que cambia junto con él.</p>
+<h2 id="síntesis">Síntesis</h2>
+<ul>
+<li>En los vientos, la válvula es el propio chorro sobre el bisel, y la
+columna de aire le pone el metrónomo: mismo régimen de oscilación que la
+cuerda frotada, sin nada que pegue ni suelte.</li>
+<li>Tubo abierto-abierto:
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>f</mi><mn>1</mn></msub><mo>=</mo><mi>v</mi><mi>/</mi><mn>2</mn><mi>L</mi></mrow><annotation encoding="application/x-tex">f_1 = v/2L</annotation></semantics></math>,
+serie armónica completa, salta la octava. Tubo cerrado-abierto:
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>f</mi><mn>1</mn></msub><mo>=</mo><mi>v</mi><mi>/</mi><mn>4</mn><mi>L</mi></mrow><annotation encoding="application/x-tex">f_1 = v/4L</annotation></semantics></math>,
+solo armónicos impares, salta la docena.</li>
+<li>Un agujero abierto acorta el tubo efectivo (la red de agujeros y su
+frecuencia de corte quedan de mención).</li>
+<li>La columna sobresale del tubo: lo construido mide sistemáticamente
+bajo respecto del cálculo ingenuo, y por eso se afina cortando de menos
+a más.</li>
+<li><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>v</mi><annotation encoding="application/x-tex">v</annotation></semantics></math>
+crece con la temperatura (≈ 0,6 m/s por °C): los vientos se afinan
+calientes.</li>
+</ul>
+<h2 id="hacia-la-sesión-13">Hacia la sesión 13</h2>
+<p>Su ticket de salida quedó apuntando al instrumento que usted lleva
+puesto: al cantar una vocal hay una “cuerda” (los pliegues vocales) y un
+“tubo” (la garganta y la boca). ¿Qué afina usted cuando canta más agudo
+— la cuerda, el tubo, o cada uno por su lado? La sesión 13 abre con la
+<strong>Prueba 2</strong> (temario s08–s12; lo de hoy entra solo con
+ítems básicos) y dedica el módulo 2, liviano, a esa pregunta: la voz
+como fuente y filtro.</p>
+<h2 id="referencias-y-lectura-complementaria">Referencias y lectura
+complementaria</h2>
+<ul>
+<li>Campbell, M. &amp; Greated, C. (1987). <em>The Musician’s Guide to
+Acoustics</em>. Oxford UP — cap. 8, pp. 259–302 (maderas y flautas, con
+mediciones propias en flautas); cap. 5, pp. 183–202 (ondas en tubos;
+afinación vs. temperatura).</li>
+<li>Benade, A. H. (1990). <em>Fundamentals of Musical Acoustics</em>,
+2.ª ed. Dover — cap. 20, sec. 20.2 (regímenes de oscilación); cap. 21,
+secs. 21.1, 21.4 y 21.5 (curvas de resonancia, agujeros, registros);
+cap. 22, secs. 22.5 (familia de flautas) y 22.7 (el material de las
+paredes).</li>
+<li>Rossing, T. D., Moore, F. R. &amp; Wheeler, P. A. (2002). <em>The
+Science of Sound</em>, 3.ª ed. — cap. 12 (maderas: registros, la 12.ª
+del clarinete vs. la 8.ª de la flauta, tubos cónicos y cilíndricos);
+cap. 4 (tubos y resonancia, para ejercicios).</li>
+<li>Roederer, J. G. (1997). <em>Acústica y Psicoacústica de la
+Música</em>. Ricordi — secs. 4.4–4.6 (columnas de aire e instrumentos de
+viento). Lectura alternativa en español.</li>
+</ul>
+</body>
+</html>

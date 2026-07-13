@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="es" xml:lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>Programa anterior del curso (2019) — ANTECEDENTE, NO
+PLANTILLA</title>
+  <style>
+    /* Default styles provided by pandoc.
+    ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+    */
+    html {
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    svg {
+      height: auto;
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      border: none;
+      border-top: 1px solid #1a1a1a;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+  </style>
+  <style>
+  /* Estilo compartido para los .md del curso convertidos a HTML
+     (misma familia editorial de las demos y del mapa del curso) */
+  :root { --tinta:#1a1a1a; --acento:#7a2e2e; --azul:#2e4a7a;
+          --papel:#faf8f4; --panel:#f0ece4; }
+  body { margin:0 auto; padding:2rem 1.4rem 4rem; max-width:820px;
+         background:var(--papel); color:var(--tinta);
+         font-family:Georgia,'Times New Roman',serif; line-height:1.55;
+         font-size:1.02rem; }
+  h1,h2,h3,h4 { font-family:Georgia,serif; line-height:1.25; }
+  h1 { font-size:1.6rem; border-bottom:2px solid var(--tinta);
+       padding-bottom:.3rem; }
+  h2 { font-size:1.25rem; margin-top:2rem; color:var(--acento); }
+  h3 { font-size:1.05rem; margin-top:1.5rem; }
+  a { color:var(--azul); }
+  blockquote { border-left:4px solid var(--acento); margin:1rem 0;
+               padding:.2rem 1rem; background:var(--panel);
+               border-radius:0 6px 6px 0; }
+  table { border-collapse:collapse; margin:1rem 0; font-size:.92rem;
+          display:block; overflow-x:auto; }
+  th { font-family:Helvetica,Arial,sans-serif; font-size:.78rem;
+       text-transform:uppercase; letter-spacing:.04em; text-align:left;
+       border-bottom:2px solid var(--tinta); padding:.45rem .6rem;
+       background:var(--papel); }
+  td { padding:.45rem .6rem; border-bottom:1px solid #ddd;
+       vertical-align:top; }
+  code { font-family:Menlo,Consolas,monospace; font-size:.86em;
+         background:var(--panel); padding:.08em .35em; border-radius:3px; }
+  pre { background:var(--panel); padding:.8rem 1rem; border-radius:6px;
+        overflow-x:auto; }
+  pre code { background:none; padding:0; }
+  hr { border:none; border-top:1px solid #ccc; margin:2rem 0; }
+  img { max-width:100%; }
+  li { margin-bottom:.25rem; }
+  math { font-size:1.05em; }
+  @media print { body { background:white; max-width:none; } }
+  </style>
+</head>
+<body>
+<h1
+id="programa-anterior-del-curso-2019-antecedente-no-plantilla">Programa
+anterior del curso (2019) — ANTECEDENTE, NO PLANTILLA</h1>
+<blockquote>
+<p><strong>Rol de este documento</strong>: el profesor dictó este curso
+hasta 2019 con este programa (MUC860, Instituto de Música UC). El curso
+nuevo NO debe basarse en él: es un antecedente para conocer el punto de
+partida, qué se cubría y cómo se evaluaba. Al diseñar el curso nuevo,
+usarlo para (a) detectar qué conservar porque funcionaba, (b)
+identificar qué el profesor quiere mejorar, y (c) contrastar
+críticamente las decisiones nuevas contra las antiguas. No copiar su
+estructura por defecto.</p>
+</blockquote>
+<hr />
+<h2 id="ficha-original">Ficha original</h2>
+<ul>
+<li><strong>Curso</strong>: Acústica Musical — <strong>Código</strong>:
+MUC860-1</li>
+<li><strong>Profesor</strong>: Patricio de la Cuadra —
+<strong>Ayudante</strong>: Pablo (León) Bustamante</li>
+<li><strong>Carácter</strong>: OPR — <strong>Créditos</strong>: 10 —
+<strong>Requisitos</strong>: Ninguno</li>
+<li><strong>Duración</strong>: 2° semestre — <strong>Módulos</strong>:
+2</li>
+</ul>
+<h2 id="i.-descripción">I. Descripción</h2>
+<p>Este curso aborda los principales aspectos de la producción sonora de
+instrumentos musicales, tanto en su descripción cualitativa como física.
+En él se abordan conceptos básicos de acústica, ondas y vibraciones
+para, gradualmente, construir una descripción detallada del
+funcionamiento de varios instrumentos musicales. Adicionalmente se
+estudian aspectos de propagación de sonidos en ambientes cerrados como
+salas de concierto o auditorios.</p>
+<h2 id="ii.-objetivos-2019">II. Objetivos (2019)</h2>
+<p>Al terminar este curso el alumno debe ser capaz de:</p>
+<ol type="1">
+<li>Describir mecanismos de producción sonora y propagación de
+perturbaciones acústicas.</li>
+<li>Explicar los conceptos fundamentales del diseño y operación comunes
+a todos los instrumentos musicales acústicos.</li>
+<li>Diferenciar mecanismos de producción sonora de instrumentos
+musicales de diferentes familias.</li>
+<li>Juzgar la importancia de la materialidad y ejecutabilidad
+(playability) en el diseño de instrumentos acústicos.</li>
+<li>Identificar características y clasificar espacios sonoros para
+diferentes usos acústicos.</li>
+</ol>
+<h2 id="iii.-contenidos-2019">III. Contenidos (2019)</h2>
+<p><strong>A. Conceptos básicos</strong>: representación gráfica y
+funciones (posición, velocidad, aceleración); ondas; resonancia;
+sinusoides y movimiento armónico simple; espectro; sistemas forzados y
+amortiguados.</p>
+<p><strong>B. Elementos generales de acústica musical</strong>: creación
+y transmisión de sonidos musicales; sistema auditivo humano; anatomía de
+una nota musical (altura, intensidad, timbre); tocando afinado
+(consonancia, escalas); impedancia.</p>
+<p><strong>C. Acústica de instrumentos musicales</strong>: cuerdas
+frotadas y pulsadas, resonadores; bronces (válvulas controladas por
+presión; embocadura, propagación y campana); vientos de caña simple y
+doble, chorros de aire (flautas, órganos); percusión (barras, membranas,
+placas); voz humana (producción sonora, voz cantada).</p>
+<p><strong>D. Acústica de salas</strong>: propagación, absorción y
+reverberación; acondicionamiento asistido de salas; salas pequeñas.</p>
+<h2 id="iv.-metodología-2019">IV. Metodología (2019)</h2>
+<ul>
+<li>Clases expositivas con participación activa de los estudiantes.</li>
+<li>Revisión de material audiovisual con ejemplos y demostraciones
+prácticas.</li>
+<li>Trabajo práctico a lo largo del semestre aplicando los conocimientos
+y la investigación realizada en el curso.</li>
+</ul>
+<h2 id="v.-evaluación-2019">V. Evaluación (2019)</h2>
+<ul>
+<li>2 pruebas de comprensión teórica (30%)</li>
+<li>Talleres (30%)</li>
+<li>1 proyecto personal con 2 entregas: parcial y presentación final
+(30%)</li>
+<li>Participación en clase (10%)</li>
+<li>Asistencia mínima exigida: 85%.</li>
+</ul>
+<h2 id="vi.-cronograma-2019-14-semanas-efectivas">VI. Cronograma 2019
+(14 semanas efectivas)</h2>
+<table>
+<colgroup>
+<col style="width: 33%" />
+<col style="width: 33%" />
+<col style="width: 33%" />
+</colgroup>
+<thead>
+<tr>
+<th>Fecha</th>
+<th>Temas</th>
+<th>Proyecto</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Ago 12</td>
+<td>Ondas, resonancia</td>
+<td>Taller 1</td>
+</tr>
+<tr>
+<td>Ago 19</td>
+<td>Sinusoides, espectro, teoría musical</td>
+<td></td>
+</tr>
+<tr>
+<td>Ago 26</td>
+<td>Presentación enunciado proyectos / Altura y timbre</td>
+<td>Entrega 1</td>
+</tr>
+<tr>
+<td>Sep 2</td>
+<td>Intensidad, sistema auditivo, consonancia</td>
+<td>Taller 2</td>
+</tr>
+<tr>
+<td>Sep 9</td>
+<td>Impedancia, instrumentos de viento</td>
+<td></td>
+</tr>
+<tr>
+<td>Sep 16</td>
+<td>Feriado</td>
+<td></td>
+</tr>
+<tr>
+<td>Sep 23</td>
+<td>Prueba 1</td>
+<td></td>
+</tr>
+<tr>
+<td>Sep 30</td>
+<td>Voz humana</td>
+<td>Taller 3</td>
+</tr>
+<tr>
+<td>Oct 7</td>
+<td>Acústica de salas</td>
+<td></td>
+</tr>
+<tr>
+<td>Oct 14</td>
+<td>Feriado</td>
+<td></td>
+</tr>
+<tr>
+<td>Oct 21</td>
+<td>Presentación marco teórico proyectos</td>
+<td>Entrega 2</td>
+</tr>
+<tr>
+<td>Oct 28</td>
+<td>Cuerdas</td>
+<td></td>
+</tr>
+<tr>
+<td>Nov 4</td>
+<td>Prueba 2</td>
+<td></td>
+</tr>
+<tr>
+<td>Nov 11</td>
+<td>Entrega final proyecto</td>
+<td>Entrega final</td>
+</tr>
+</tbody>
+</table>
+<h2 id="vii.-bibliografía-2019">VII. Bibliografía (2019)</h2>
+<ol type="1">
+<li>Rossing, Moore &amp; Wheeler, <em>The Science of Sound</em>, Addison
+Wesley, 2002.</li>
+<li>Campbell &amp; Greated, <em>The Musician’s Guide to Acoustics</em>,
+OUP, 2001.</li>
+<li>Benade, <em>Fundamentals of Musical Acoustics</em>, Dover,
+1990.</li>
+<li>Fletcher &amp; Rossing, <em>The Physics of Musical Instruments</em>,
+Springer, 1998.</li>
+<li>Long, <em>Architectural Acoustics</em>, Elsevier, 2006.</li>
+<li>Pierce, <em>Los sonidos de la música</em>, Prensa Científica,
+1985.</li>
+<li>Fischetti, <em>Initiation à l’acoustique. Cours et
+exercices</em>.</li>
+</ol>
+<hr />
+<h2
+id="observaciones-para-el-rediseño-detectadas-al-incorporar-este-documento">Observaciones
+para el rediseño (detectadas al incorporar este documento)</h2>
+<ul>
+<li>Solo ~12 sesiones efectivas de contenido en 2019 (feriados +
+pruebas); el curso nuevo planifica 15 sesiones completas: hay espacio
+real para profundizar o agregar lo que antes no cabía.</li>
+<li>La metodología 2019 era esencialmente expositiva con demostraciones;
+el rediseño busca aprendizaje activo estructurado — este es el cambio
+central.</li>
+<li>El cronograma 2019 tiene un orden discutible (cuerdas al final,
+después de salas); el rediseño debe justificar su progresión.</li>
+<li>Los objetivos 2019 son razonables pero puramente descriptivos
+(“describir”, “explicar”, “identificar”); no hay objetivos de hacer,
+medir, experimentar ni crear.</li>
+</ul>
+</body>
+</html>

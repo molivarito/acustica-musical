@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="es" xml:lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>Capítulo 10 — Resonancia, impedancia y acoplamiento</title>
+  <style>
+    /* Default styles provided by pandoc.
+    ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+    */
+    html {
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    svg {
+      height: auto;
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      border: none;
+      border-top: 1px solid #1a1a1a;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+  </style>
+  <style>
+  /* Estilo compartido para los .md del curso convertidos a HTML
+     (misma familia editorial de las demos y del mapa del curso) */
+  :root { --tinta:#1a1a1a; --acento:#7a2e2e; --azul:#2e4a7a;
+          --papel:#faf8f4; --panel:#f0ece4; }
+  body { margin:0 auto; padding:2rem 1.4rem 4rem; max-width:820px;
+         background:var(--papel); color:var(--tinta);
+         font-family:Georgia,'Times New Roman',serif; line-height:1.55;
+         font-size:1.02rem; }
+  h1,h2,h3,h4 { font-family:Georgia,serif; line-height:1.25; }
+  h1 { font-size:1.6rem; border-bottom:2px solid var(--tinta);
+       padding-bottom:.3rem; }
+  h2 { font-size:1.25rem; margin-top:2rem; color:var(--acento); }
+  h3 { font-size:1.05rem; margin-top:1.5rem; }
+  a { color:var(--azul); }
+  blockquote { border-left:4px solid var(--acento); margin:1rem 0;
+               padding:.2rem 1rem; background:var(--panel);
+               border-radius:0 6px 6px 0; }
+  table { border-collapse:collapse; margin:1rem 0; font-size:.92rem;
+          display:block; overflow-x:auto; }
+  th { font-family:Helvetica,Arial,sans-serif; font-size:.78rem;
+       text-transform:uppercase; letter-spacing:.04em; text-align:left;
+       border-bottom:2px solid var(--tinta); padding:.45rem .6rem;
+       background:var(--papel); }
+  td { padding:.45rem .6rem; border-bottom:1px solid #ddd;
+       vertical-align:top; }
+  code { font-family:Menlo,Consolas,monospace; font-size:.86em;
+         background:var(--panel); padding:.08em .35em; border-radius:3px; }
+  pre { background:var(--panel); padding:.8rem 1rem; border-radius:6px;
+        overflow-x:auto; }
+  pre code { background:none; padding:0; }
+  hr { border:none; border-top:1px solid #ccc; margin:2rem 0; }
+  img { max-width:100%; }
+  li { margin-bottom:.25rem; }
+  math { font-size:1.05em; }
+  @media print { body { background:white; max-width:none; } }
+  </style>
+</head>
+<body>
+<h1 id="capítulo-10-resonancia-impedancia-y-acoplamiento">Capítulo 10 —
+Resonancia, impedancia y acoplamiento</h1>
+<p><em>Lectura previa a la sesión 10. Objetivos: OA1.2, OA1.3
+(panorama), OA3.2 y OA5.2 (hito 2 y clínica de proyecto).</em></p>
+<h2 id="el-empujón-que-llega-a-tiempo">El empujón que llega a
+tiempo</h2>
+<p>Todo el mundo ha empujado un columpio, y por eso todo el mundo sabe
+ya — aunque no lo haya puesto en palabras — la idea central de este
+capítulo.</p>
+<p>Un columpio tiene su vaivén propio: suéltelo desde un costado y
+oscilará a un ritmo que no eligió usted ni elige el niño — lo eligen el
+largo de las cadenas y la gravedad. Ese ritmo es su <strong>frecuencia
+propia</strong>, que anotaremos
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>f</mi><mn>0</mn></msub><annotation encoding="application/x-tex">f_0</annotation></semantics></math>,
+y es el pariente directo de las frecuencias características que usted ya
+conoce desde la sesión 3: es lo que hace el sistema cuando lo dejan en
+paz. A eso lo llamamos oscilación <strong>libre</strong>, y su destino
+es siempre el mismo: decaer, porque el roce cobra su parte en cada
+ciclo.</p>
+<p>Pero usted no deja el columpio en paz: lo empuja. Y aquí está el
+experimento que le pido hacer mentalmente (o en la plaza más cercana,
+que es mejor). Intente empujar el columpio al doble de su ritmo, o a la
+mitad. Es frustrante: la mitad de sus empujones llegan cuando el
+columpio viene de vuelta, lo frenan en lugar de ayudarlo, y el resultado
+neto es un bamboleo mediocre. Ahora empuje a SU ritmo, el del columpio.
+Cada empujón — aunque sea suave — llega exactamente cuando el columpio
+se aleja de usted. Todos suman. Con dos dedos, un adulto lleva a un niño
+a alturas que asustan a la abuela.</p>
+<p>Eso es la <strong>resonancia</strong>: cuando un sistema es forzado
+desde afuera, su respuesta es máxima si la frecuencia de la excitación
+coincide con su frecuencia propia. No hay magia ni “simpatía”
+misteriosa: hay empujones que se acumulan en vez de cancelarse (Benade
+1990, sec. 10.1, empieza exactamente aquí).</p>
+<p>En la sesión 9 usted dejó escrita una pregunta: ¿qué determina que un
+sistema “prefiera” vibrar en sus frecuencias y no en las que yo le
+impongo? Ya tiene la mitad de la respuesta. La otra mitad — que el
+sistema en verdad NO se niega a vibrar a otras frecuencias, solo
+responde poco y de mala gana — la va a oír en la primera media hora de
+la sesión.</p>
+<h2 id="el-retrato-de-un-resonador-la-curva-de-respuesta">El retrato de
+un resonador: la curva de respuesta</h2>
+<p>Imagine ahora que hacemos el experimento del columpio con método:
+forzamos al sistema a cada frecuencia posible, siempre con la misma
+fuerza, y anotamos cuánto responde. El gráfico resultante — amplitud de
+respuesta contra frecuencia de excitación — es la <strong>curva de
+respuesta</strong>, y es el retrato más útil que la acústica sabe hacer
+de un objeto. Lejos de
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>f</mi><mn>0</mn></msub><annotation encoding="application/x-tex">f_0</annotation></semantics></math>,
+la curva es baja. En
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>f</mi><mn>0</mn></msub><annotation encoding="application/x-tex">f_0</annotation></semantics></math>,
+hay un pico. En la sesión va a ver (y oír) esa curva dibujarse en tiempo
+real, con una demo en que usted barre la frecuencia de excitación y
+escucha a la respuesta inflarse al pasar por la resonancia.</p>
+<p>La pregunta interesante es qué tan <strong>ancho</strong> es el pico,
+y la respuesta la tiene el <strong>amortiguamiento</strong> — el roce
+que disipa la energía de la vibración. Poco roce: pico alto y angosto;
+el sistema responde muchísimo, pero solo si usted le acierta casi exacto
+(piense en una copa de cristal, que exige SU nota). Mucho roce: pico
+bajo y ancho; el sistema responde algo a muchas frecuencias vecinas, sin
+entusiasmarse por ninguna. Benade midió esto con una humilde bandeja de
+lata (Benade 1990, sec. 10.7), y usted conoce el fenómeno de la vida
+real: ese objeto — un vaso en la repisa, una moldura del auto — que
+zumba únicamente cuando pasa por él UNA nota concreta de la música.
+Ahora sabe qué es: un resonador de pico angosto al que alguien, por fin,
+le acertó.</p>
+<p>Hay un segundo personaje, menos famoso y musicalmente decisivo: el
+<strong>transiente de ataque</strong>. Un resonador no responde de
+inmediato. Como el columpio, necesita acumular empujones antes de
+alcanzar su amplitud de régimen, y ese arranque toma tiempo (Benade
+1990, sec. 10.2). Aquí va una pista para la demo, formulada como
+pregunta: ¿qué esperaría usted — que el resonador de pico angosto
+arranque más rápido o más lento que el de pico ancho? Piénselo con el
+columpio: acumular una oscilación gigante con empujones suaves, ¿es cosa
+de dos empujones o de muchos? En la sesión, el mismo slider que le
+cambia el ancho al pico le va a cambiar la duración al arranque, y esa
+coincidencia no es casualidad: son dos caras de la misma moneda.</p>
+<h2 id="un-misterio-con-elástico">Un misterio con elástico</h2>
+<p>Ahora, el problema que de verdad abre la segunda mitad del semestre.
+Consiga un elástico grueso, estírelo entre los dedos y púlselo. Vibra —
+se ve perfectamente — y sin embargo casi no se oye. Guarde esa
+observación, porque es escandalosa: en la sesión 3 usted aprendió que el
+sonido ES vibración, ¿y aquí hay vibración sin sonido?</p>
+<p>El diagnóstico tiene nombre técnico, y conviene conocerlo de entrada:
+<strong>impedancia</strong>, la resistencia de un sistema a ser puesto
+en movimiento. La cuerda delgada es, para el aire, un mal socio: vibra
+con mucha fuerza pero corta el aire sin empujarlo, como un cuchillo que
+rema. La energía está ahí, atrapada, sin camino de salida hacia el aire.
+Para liberarla hace falta un intermediario que hable los dos idiomas —
+algo que la cuerda pueda mover y que a su vez mueva mucho aire —, y a la
+calidad de esa conexión la llamamos <strong>acoplamiento</strong>
+(C&amp;G cap. 5, pp. 183–202, es el capítulo puente que este capítulo
+sigue).</p>
+<p>Todos los instrumentos de cuerda que usted conoce cargan con este
+problema, y todos lo resuelven igual: la cuerda no trabaja sola. Apoya
+su vibración, a través del <strong>puente</strong>, en una tapa o caja
+que sí sabe empujar aire. En la sesión, el experimento del elástico
+sigue con una caja de cartón, y trae una pregunta con trampa que no le
+voy a responder aquí — solo se la dejo armada: si la caja hace sonar al
+elástico más fuerte, pero nadie le agregó energía (usted lo pulsó igual
+de fuerte), <strong>algo tiene que ceder a cambio. ¿Qué?</strong>
+Recuerde la sesión 6: sonar más fuerte es transferir energía más rápido.
+Escriba su predicción antes de venir.</p>
+<h2 id="la-botella-un-resonador-de-bolsillo">La botella: un resonador de
+bolsillo</h2>
+<p>El taller de la sesión se hace con el resonador más barato y más
+noble que existe: una botella. Sople rasante sobre la boca de una
+botella vacía y obtendrá una nota grave, sorprendentemente pura y
+estable.</p>
+<p>¿Qué vibra ahí? No conteste rápido. No es el vidrio (eso es lo que
+suena cuando la GOLPEA, y ya sabe desde la sesión 3 que eso es otro
+asunto). Cuando usted sopla, lo que oscila es el <strong>aire
+mismo</strong>: el aire del cuello sube y baja en bloque, como un tapón,
+y el aire del cuerpo de la botella se comprime y expande empujándolo de
+vuelta, como un resorte. Una masa, un resorte: el sistema más simple del
+curso, con una sola
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>f</mi><mn>0</mn></msub><annotation encoding="application/x-tex">f_0</annotation></semantics></math>,
+bien definida y — esto es lo valioso — <strong>medible con el afinador
+de su celular</strong>. Este resonador tiene apellido propio (Helmholtz,
+el mismo que volverá a aparecer en s11) y un capítulo de ejercicios en
+ROS cap. 4.</p>
+<p>El taller le va a pedir dos predicciones por escrito antes de soplar
+nada, y se las adelanto para que llegue con opinión formada — discútalas
+con alguien, mejor si no estudia lo mismo que usted:</p>
+<ol type="1">
+<li>Si le agrego agua a la botella hasta la mitad y
+<strong>soplo</strong>, la nota ¿sube o baja respecto de la botella
+vacía? ¿Cuánto, a ojo — un tono, una quinta, una octava?</li>
+<li>Si en vez de soplar la <strong>golpeo</strong> con una cuchara, el
+agua ¿sube o baja la nota?</li>
+</ol>
+<p>Si le tinca que las dos respuestas son la misma, o que son distintas,
+en ambos casos le conviene poder decir <em>por qué</em>. La pista está
+en el párrafo anterior: pregúntese, en cada caso, <strong>quién recibe
+la energía</strong>.</p>
+<h2 id="el-mapa-de-lo-que-viene">El mapa de lo que viene</h2>
+<p>Este capítulo es el puente hacia la última parte del curso: los
+instrumentos como sistemas. Con las herramientas de hoy — resonancia,
+curva de respuesta, impedancia, acoplamiento — las familias de
+instrumentos se ordenan por una sola pregunta: ¿<strong>cómo le llega la
+energía</strong> al sistema vibrante?</p>
+<p>A veces llega de una vez: golpear, pulsar (eso ya lo estudiamos en
+las sesiones 3 y 4 — el sonido nace fuerte y decae, oscilación libre). Y
+a veces llega de forma continua: el arco que frota (sesión 11), el soplo
+(sesión 12), el aire de los pulmones a través de las cuerdas vocales
+(sesión 13). Los sonidos sostenidos de la música — los que pueden
+crecer, mantenerse, cantar — viven todos en esta segunda familia, y
+esconden una pregunta preciosa que Benade convirtió en el corazón de su
+libro (Benade 1990, sec. 20.2): si la energía llega pareja, sin ritmo —
+un soplo constante, un arrastre continuo —, ¿de dónde sale la NOTA, ese
+vaivén exquisitamente periódico? ¿Quién le pone el ritmo? La sesión
+apenas siembra esa idea; las dos siguientes la cosechan.</p>
+<h2 id="la-clínica-su-proyecto-pasa-al-pizarrón">La clínica: su proyecto
+pasa al pizarrón</h2>
+<p>La sesión 10 es también el <strong>hito 2</strong> de su proyecto (8
+%): al inicio de la clase su grupo entrega el compilado (radiografía
+espectral de s08, mapa de escala de s09, bitácora al día, estado
+respecto de lo prometido en el hito 1) y cada integrante su coevaluación
+en sobre cerrado — la pauta publicada tiene el detalle. En el segundo
+módulo, su grupo presentará ese avance a otro grupo y recibirá su
+avance, con una pauta de retroalimentación estructurada: dos fortalezas,
+dos dudas, una sugerencia <strong>medible</strong>. Traiga el objeto: un
+proyecto que suena se discute mejor que un proyecto contado. Y llegue
+con esta pregunta ya pensada para su propio objeto, porque es la que la
+clínica le va a hacer: ¿dónde están sus resonancias, y quién es su
+“caja”?</p>
+<h2 id="preguntas-que-la-sesión-va-a-responder">Preguntas que la sesión
+va a responder</h2>
+<ol type="1">
+<li>¿Qué determina que un sistema responda mucho a una frecuencia y poco
+a las demás? ¿Y qué fija el ancho de esa “zona de entusiasmo”?</li>
+<li>El resonador de pico angosto, ¿arranca más rápido o más lento que el
+de pico ancho? ¿Qué tiene que ver eso con el ataque de un
+instrumento?</li>
+<li>El elástico sobre la caja suena más fuerte sin energía extra: ¿qué
+cede a cambio?</li>
+<li>La botella con agua hasta la mitad: ¿sube o baja la nota al soplar?
+¿Y al golpear? ¿Por qué habrían de ser respuestas distintas?</li>
+<li>Si el soplo es parejo y continuo, ¿de dónde sale una nota periódica
+y estable?</li>
+</ol>
+<h2 id="referencias-del-capítulo">Referencias del capítulo</h2>
+<ul>
+<li>Benade (1990), cap. 10 (secs. 10.1–10.8 y EEQ 10.9) — péndulo
+forzado, transiente inicial, amortiguamiento, la bandeja de lata y las
+implicancias musicales; sec. 20.2 — regímenes de oscilación (solo
+sembrada aquí).</li>
+<li>Campbell &amp; Greated (1987), cap. 5, pp. 183–202 — resonancia,
+impedancia y acoplamiento: el capítulo puente hacia los
+instrumentos.</li>
+<li>Rossing, Moore &amp; Wheeler (2002), cap. 4 (secs. 4.1–4.11) —
+resonancia, impedancia, resonador de Helmholtz y autoexcitación, con
+ejercicios; cap. 2 — sistemas vibrantes y amortiguamiento.</li>
+<li>Roederer (1997), cap. 4, sec. 4.3 — espectros y resonancia. En
+español.</li>
+</ul>
+</body>
+</html>

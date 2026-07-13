@@ -1,0 +1,511 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="es" xml:lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>Programa del curso — Acústica Musical</title>
+  <style>
+    /* Default styles provided by pandoc.
+    ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+    */
+    html {
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    svg {
+      height: auto;
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      border: none;
+      border-top: 1px solid #1a1a1a;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+  </style>
+  <style>
+  /* Estilo compartido para los .md del curso convertidos a HTML
+     (misma familia editorial de las demos y del mapa del curso) */
+  :root { --tinta:#1a1a1a; --acento:#7a2e2e; --azul:#2e4a7a;
+          --papel:#faf8f4; --panel:#f0ece4; }
+  body { margin:0 auto; padding:2rem 1.4rem 4rem; max-width:820px;
+         background:var(--papel); color:var(--tinta);
+         font-family:Georgia,'Times New Roman',serif; line-height:1.55;
+         font-size:1.02rem; }
+  h1,h2,h3,h4 { font-family:Georgia,serif; line-height:1.25; }
+  h1 { font-size:1.6rem; border-bottom:2px solid var(--tinta);
+       padding-bottom:.3rem; }
+  h2 { font-size:1.25rem; margin-top:2rem; color:var(--acento); }
+  h3 { font-size:1.05rem; margin-top:1.5rem; }
+  a { color:var(--azul); }
+  blockquote { border-left:4px solid var(--acento); margin:1rem 0;
+               padding:.2rem 1rem; background:var(--panel);
+               border-radius:0 6px 6px 0; }
+  table { border-collapse:collapse; margin:1rem 0; font-size:.92rem;
+          display:block; overflow-x:auto; }
+  th { font-family:Helvetica,Arial,sans-serif; font-size:.78rem;
+       text-transform:uppercase; letter-spacing:.04em; text-align:left;
+       border-bottom:2px solid var(--tinta); padding:.45rem .6rem;
+       background:var(--papel); }
+  td { padding:.45rem .6rem; border-bottom:1px solid #ddd;
+       vertical-align:top; }
+  code { font-family:Menlo,Consolas,monospace; font-size:.86em;
+         background:var(--panel); padding:.08em .35em; border-radius:3px; }
+  pre { background:var(--panel); padding:.8rem 1rem; border-radius:6px;
+        overflow-x:auto; }
+  pre code { background:none; padding:0; }
+  hr { border:none; border-top:1px solid #ccc; margin:2rem 0; }
+  img { max-width:100%; }
+  li { margin-bottom:.25rem; }
+  math { font-size:1.05em; }
+  @media print { body { background:white; max-width:none; } }
+  </style>
+</head>
+<body>
+<h1 id="programa-del-curso-acústica-musical">Programa del curso —
+Acústica Musical</h1>
+<blockquote>
+<p>Borrador generado el 2026-07-13 a partir del diseño aprobado
+(diseno/01–03). Sigue la estructura del programa 2019 (MUC860). Los
+campos administrativos del semestre están marcados
+<strong>[COMPLETAR]</strong>; el resto refleja decisiones ya tomadas y
+aprobadas.</p>
+</blockquote>
+<hr />
+<h2 id="ficha">Ficha</h2>
+<ul>
+<li><strong>Curso</strong>: Acústica Musical — <strong>Código</strong>:
+MUC860 <strong>[COMPLETAR sección]</strong></li>
+<li><strong>Profesor</strong>: Patricio de la Cuadra (Instituto de
+Música / Departamento de Ingeniería Eléctrica) —
+<strong>Ayudante</strong>: <strong>[COMPLETAR si se confirma; el curso
+funciona sin ayudante]</strong></li>
+<li><strong>Carácter</strong>: OPR — <strong>Créditos</strong>: 10 —
+<strong>Requisitos</strong>: Ninguno</li>
+<li><strong>Duración</strong>: un semestre, 15 sesiones —
+<strong>Módulos</strong>: 2 semanales de 70 min — <strong>Cupo</strong>:
+20 estudiantes</li>
+<li><strong>Horario y sala</strong>: <strong>[COMPLETAR]</strong> (se
+requiere sala reconfigurable con proyector y audio)</li>
+</ul>
+<h2 id="i.-descripción">I. Descripción</h2>
+<p>¿Por qué una cuerda afina distinto al apretarla? ¿Por qué el parlante
+del celular “da” un bajo que físicamente no emite? ¿Por qué la misma voz
+suena tan distinta en la ducha y en una catedral? Este curso estudia la
+física del sonido musical — vibración, modos, resonancia, instrumentos y
+salas — junto con la percepción auditiva que la convierte en música, y
+lo hace con un método: <strong>escuchar como científico</strong>. En
+cada sesión los estudiantes predicen por escrito lo que va a sonar, lo
+hacen sonar, lo miden con herramientas accesibles (celular, computador,
+micrófono) y explican las discrepancias. Al terminar, el estudiante no
+podrá oír un instrumento, una sala o una grabación de la misma manera
+que antes: sabrá describir técnicamente lo que oye, proponer el
+mecanismo físico que lo causa y diseñar la medición que lo
+comprueba.</p>
+<p>El curso está dirigido a estudiantes de música, ingeniería y otras
+carreras, sin requisitos: la matemática empleada es aritmética y
+proporciones, y no se asume lectura musical fluida. A lo largo del
+semestre, cada grupo construye o modifica un instrumento musical (o
+instalación sonora) y explica acústicamente su comportamiento; la
+calidad de la explicación pesa más que el éxito sonoro.</p>
+<h2 id="ii.-objetivos-de-aprendizaje">II. Objetivos de aprendizaje</h2>
+<p>Al terminar este curso el o la estudiante será capaz de:</p>
+<ol type="1">
+<li><strong>OA1 — Modelar la producción y propagación del sonido
+musical</strong>: explicar y predecir el comportamiento acústico de
+fuentes sonoras musicales y de espacios, usando modelos físicos simples
+(cuerda, tubo, membrana, modos, resonancia). <em>(OA1.1 modos y
+espectro; OA1.2 predicción semicuantitativa de parámetros; OA1.3
+mecanismos de excitación y familias; OA1.4 salas.)</em></li>
+<li><strong>OA2 — Relacionar el sonido físico con la percepción
+auditiva</strong>: explicar cómo el sistema auditivo transforma la señal
+acústica en sensación (altura, sonoridad, timbre, consonancia) y
+demostrar los fenómenos perceptuales que fundan la práctica musical.
+<em>(OA2.1 pares físico–perceptuales; OA2.2 fenómenos psicoacústicos;
+OA2.3 consonancia, escalas y temperamentos.)</em></li>
+<li><strong>OA3 — Escuchar como científico</strong> (transversal):
+diagnosticar auditivamente fenómenos acústicos — describir técnicamente
+lo oído, formular hipótesis sobre su causa física y proponer cómo
+verificarlas. Se practica y evalúa en todas las sesiones.</li>
+<li><strong>OA4 — Medir y analizar sonido real</strong>: capturar, medir
+y analizar sonido con herramientas accesibles e interpretar los
+resultados. <em>(OA4.1 análisis espectral; OA4.2 niveles y decibel;
+OA4.3 tiempo de reverberación de salas reales.)</em></li>
+<li><strong>OA5 — Crear y explicar (proyecto integrador)</strong>:
+construir o modificar un instrumento musical o instalación sonora y
+explicar acústicamente su comportamiento — funcione o no como se
+esperaba.</li>
+</ol>
+<p>El detalle completo de los resultados de aprendizaje específicos y su
+mapeo sesión a sesión está en <code>Admin/mapa_curso.html</code> y
+<code>diseno/01</code>.</p>
+<h2 id="iii.-contenidos">III. Contenidos</h2>
+<p><strong>A. El sonido como objeto físico</strong> (sesiones 1–4): del
+sonido impulsivo al tono; frecuencia y período; forma de onda, espectro
+y espectrograma; propagación y velocidad del sonido
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>v</mi><mo>=</mo><mi>λ</mi><mi>f</mi></mrow><annotation encoding="application/x-tex">v = \lambda f</annotation></semantics></math>);
+modos de vibración en cuerdas, barras, placas y membranas; parciales y
+armónicos; la “receta” del timbre: punto de excitación, síntesis
+aditiva, envolvente.</p>
+<p><strong>B. El sonido percibido</strong> (sesiones 5–9): altura
+percibida y fundamental ausente; el sistema auditivo; sonoridad, decibel
+y curvas isofónicas; salud auditiva en contextos musicales; batidos,
+banda crítica y rugosidad; fundamento perceptual de la consonancia;
+escalas, temperamentos y cents; afinación por conteo de batidos.</p>
+<p><strong>C. Los instrumentos como sistemas</strong> (sesiones 10–13):
+oscilación libre y forzada, resonancia, impedancia y acoplamiento;
+mecanismos de excitación y regímenes de oscilación; cuerdas frotadas
+(stick-slip, movimiento de Helmholtz) y el cuerpo del instrumento;
+columnas de aire, maderas y flautas, agujeros y registros (con taller de
+lutería); la voz cantada: modelo fuente-filtro y formantes.</p>
+<p><strong>D. La sala y la síntesis final</strong> (sesiones 14–15):
+reflexión, absorción y reverberación; tiempo de reverberación y su
+medición en salas reales; modos de sala; presentación y defensa del
+proyecto.</p>
+<h2 id="iv.-metodología">IV. Metodología</h2>
+<p>Aprendizaje activo estructurado (detalle en
+<code>diseno/02</code>):</p>
+<ul>
+<li><strong>Primero suena, después se explica</strong>: cada módulo abre
+con sonido real; la exposición nunca supera 15 min continuos.</li>
+<li><strong>Ciclo predicción → experimento → explicación (PEE)</strong>:
+toda actividad experimental exige predicción escrita antes de sonar y
+cierra contrastando predicción y resultado.</li>
+<li><strong>Escucha del día</strong>: cada sesión abre con un
+diagnóstico auditivo oral evaluado con rúbrica pública (OA3).</li>
+<li><strong>Trabajo en 5 grupos estables de 4</strong> con roles
+rotativos, kits caseros de experimentación, demos interactivas con
+audio, estaciones de medición con celular y micrófono, una salida de
+medición de salas UC y una sesión-taller de lutería (construcción de
+tubos sonoros).</li>
+<li><strong>Lectura previa breve (≤1 h)</strong>: capítulo del libro del
+curso antes de cada sesión; la clase la usa visiblemente en los primeros
+minutos.</li>
+<li><strong>Proyecto semestral en grupos</strong>: construir o modificar
+un instrumento; los talleres de medición de la segunda mitad del
+semestre se hacen sobre el objeto de cada grupo, de modo que el avance
+del proyecto se construye dentro de las clases.</li>
+</ul>
+<h2 id="v.-evaluación">V. Evaluación</h2>
+<table>
+<colgroup>
+<col style="width: 33%" />
+<col style="width: 33%" />
+<col style="width: 33%" />
+</colgroup>
+<thead>
+<tr>
+<th>Instrumento</th>
+<th>%</th>
+<th>Detalle</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Pruebas (2)</td>
+<td>25</td>
+<td>Con audio y casos sonoros; s07 y s13 (12,5 % c/u). Incluyen una
+escucha argumentada escrita.</td>
+</tr>
+<tr>
+<td>Talleres</td>
+<td>25</td>
+<td>Cerrados y evaluados en clase, por grupo; cuentan las mejores 8 de
+~10 guías.</td>
+</tr>
+<tr>
+<td>Proyecto</td>
+<td>30</td>
+<td>Hito 1: diseño con predicción (8 %, s05) · Hito 2: avance con
+evidencia (8 %, s10) · Presentación final + informe ≤6 págs (14 %, s15).
+Bitácora con roles firmados; coevaluación intra-grupo ajusta la nota
+individual hasta ±0,5; preguntas individuales en la defensa. La calidad
+de la explicación acústica pesa más que el éxito sonoro.</td>
+</tr>
+<tr>
+<td>Escucha argumentada (OA3)</td>
+<td>20</td>
+<td>Ronda oral con rúbrica pública (~3 pasadas por estudiante; cuentan
+las mejores 2) + escucha escrita en cada prueba.</td>
+</tr>
+</tbody>
+</table>
+<p>Sin nota de participación (su función la cumplen la ronda oral y los
+talleres presenciales). Asistencia: la evaluación es mayoritariamente
+presencial en clase; los talleres toleran hasta ~2 ausencias (mejores 8
+de ~10). Exigencia de asistencia mínima formal: <strong>[COMPLETAR según
+normativa vigente; en 2019 era 85 %]</strong>.</p>
+<h2 id="vi.-cronograma-15-sesiones">VI. Cronograma (15 sesiones)</h2>
+<table>
+<colgroup>
+<col style="width: 33%" />
+<col style="width: 33%" />
+<col style="width: 33%" />
+</colgroup>
+<thead>
+<tr>
+<th>Semana</th>
+<th>Tema</th>
+<th>Proyecto / evaluación</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Escuchar como científico: del golpe al tono</td>
+<td>Formación de grupos; línea base de escucha (sin nota)</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Ondas: forma de onda, espectro y espectrograma</td>
+<td>Parte la ronda oral evaluada (OA3)</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Modos de vibración (cuerdas, placas, membranas)</td>
+<td><strong>Lanzamiento del proyecto</strong></td>
+</tr>
+<tr>
+<td>4</td>
+<td>La receta del timbre: cuerda pulsada y síntesis aditiva</td>
+<td>Traer instrumentos de cuerda pulsada</td>
+</tr>
+<tr>
+<td>5</td>
+<td>La altura percibida: fundamental ausente y el oído</td>
+<td><strong>Hito 1: diseño con predicción (8 %)</strong></td>
+</tr>
+<tr>
+<td>6</td>
+<td>Sonoridad y decibel; estaciones de medición de niveles</td>
+<td>Mini-informe SPL</td>
+</tr>
+<tr>
+<td>7</td>
+<td><strong>Prueba 1</strong> + batidos (audición liviana)</td>
+<td><strong>Prueba 1 (12,5 %)</strong></td>
+</tr>
+<tr>
+<td>8</td>
+<td>Banda crítica, rugosidad y consonancia</td>
+<td>Parten los talleres de medición sobre el objeto del proyecto</td>
+</tr>
+<tr>
+<td>9</td>
+<td>Escalas y temperamentos: afinar de oído</td>
+<td>Medición: la escala del objeto</td>
+</tr>
+<tr>
+<td>10</td>
+<td>Resonancia, impedancia y acoplamiento</td>
+<td><strong>Hito 2: avance (8 %)</strong> + clínicas de proyecto</td>
+</tr>
+<tr>
+<td>11</td>
+<td>Cuerdas frotadas y el cuerpo del instrumento</td>
+<td>Traer instrumentos de cuerda frotada</td>
+</tr>
+<tr>
+<td>12</td>
+<td>Vientos y lutería (sesión-taller completa)</td>
+<td>Construcción de tubos; cierre de mediciones del objeto</td>
+</tr>
+<tr>
+<td>13</td>
+<td><strong>Prueba 2</strong> + la voz cantada (audición liviana)</td>
+<td><strong>Prueba 2 (12,5 %)</strong></td>
+</tr>
+<tr>
+<td>14</td>
+<td>La sala como instrumento; salida de medición de T60</td>
+<td>Informe de salas (último taller); se publica pauta final</td>
+</tr>
+<tr>
+<td>15</td>
+<td>Presentaciones finales</td>
+<td><strong>Presentación + informe (14 %)</strong>; coevaluación;
+cierre</td>
+</tr>
+</tbody>
+</table>
+<p>Las fechas exactas dependen del calendario académico del semestre
+<strong>[COMPLETAR]</strong>; si un feriado elimina una sesión, el
+diseño prioriza mantener s05/s07/s10/s13/s15 en su secuencia
+relativa.</p>
+<h2 id="vii.-bibliografía">VII. Bibliografía</h2>
+<p><strong>De referencia del curso</strong> (todas las lecturas
+obligatorias son capítulos del libro propio del curso, entregado a los
+estudiantes; estas fuentes lo respaldan y se citan como lectura
+complementaria):</p>
+<ol type="1">
+<li>Campbell, M. &amp; Greated, C., <em>The Musician’s Guide to
+Acoustics</em>, Oxford University Press, 1987 (reimpr. 2001). — Texto
+principal de consulta.</li>
+<li>Benade, A. H., <em>Fundamentals of Musical Acoustics</em>, 2.ª
+ed. rev., Dover, 1990. — Intuición física y experimentos.</li>
+<li>Roederer, J. G., <em>Acústica y Psicoacústica de la Música</em>,
+Ricordi,
+<ol start="1997" type="1">
+<li>— Percepción y psicoacústica; alternativa en español.</li>
+</ol></li>
+<li>Rossing, T. D., Moore, F. R. &amp; Wheeler, P. A., <em>The Science
+of Sound</em>, 3.ª ed., Addison-Wesley, 2002. — Ejercicios y
+problemas.</li>
+</ol>
+<p><strong>Avanzada opcional (proyecto)</strong>: Fletcher, N. H. &amp;
+Rossing, T. D., <em>The Physics of Musical Instruments</em>, 2.ª ed.,
+Springer, 1998 <strong>[POR VERIFICAR disponibilidad en biblioteca
+UC]</strong>.</p>
+<hr />
+<p><em>Materiales del curso: libro de lecturas
+(<code>libro/LIBRO_CURSO.pdf</code>), demos interactivas y guías de
+trabajo por sesión (<code>sesiones/</code>), mapa navegable del curso
+(<code>Admin/mapa_curso.html</code>).</em></p>
+</body>
+</html>

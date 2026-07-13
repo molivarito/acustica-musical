@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="es" xml:lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>Ondas y representación: dibujar el sonido</title>
+  <style>
+    /* Default styles provided by pandoc.
+    ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+    */
+    html {
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    svg {
+      height: auto;
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      border: none;
+      border-top: 1px solid #1a1a1a;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+  </style>
+  <style>
+  /* Estilo compartido para los .md del curso convertidos a HTML
+     (misma familia editorial de las demos y del mapa del curso) */
+  :root { --tinta:#1a1a1a; --acento:#7a2e2e; --azul:#2e4a7a;
+          --papel:#faf8f4; --panel:#f0ece4; }
+  body { margin:0 auto; padding:2rem 1.4rem 4rem; max-width:820px;
+         background:var(--papel); color:var(--tinta);
+         font-family:Georgia,'Times New Roman',serif; line-height:1.55;
+         font-size:1.02rem; }
+  h1,h2,h3,h4 { font-family:Georgia,serif; line-height:1.25; }
+  h1 { font-size:1.6rem; border-bottom:2px solid var(--tinta);
+       padding-bottom:.3rem; }
+  h2 { font-size:1.25rem; margin-top:2rem; color:var(--acento); }
+  h3 { font-size:1.05rem; margin-top:1.5rem; }
+  a { color:var(--azul); }
+  blockquote { border-left:4px solid var(--acento); margin:1rem 0;
+               padding:.2rem 1rem; background:var(--panel);
+               border-radius:0 6px 6px 0; }
+  table { border-collapse:collapse; margin:1rem 0; font-size:.92rem;
+          display:block; overflow-x:auto; }
+  th { font-family:Helvetica,Arial,sans-serif; font-size:.78rem;
+       text-transform:uppercase; letter-spacing:.04em; text-align:left;
+       border-bottom:2px solid var(--tinta); padding:.45rem .6rem;
+       background:var(--papel); }
+  td { padding:.45rem .6rem; border-bottom:1px solid #ddd;
+       vertical-align:top; }
+  code { font-family:Menlo,Consolas,monospace; font-size:.86em;
+         background:var(--panel); padding:.08em .35em; border-radius:3px; }
+  pre { background:var(--panel); padding:.8rem 1rem; border-radius:6px;
+        overflow-x:auto; }
+  pre code { background:none; padding:0; }
+  hr { border:none; border-top:1px solid #ccc; margin:2rem 0; }
+  img { max-width:100%; }
+  li { margin-bottom:.25rem; }
+  math { font-size:1.05em; }
+  @media print { body { background:white; max-width:none; } }
+  </style>
+</head>
+<body>
+<h1 id="ondas-y-representación-dibujar-el-sonido">Ondas y
+representación: dibujar el sonido</h1>
+<p><strong>Sesión 02</strong> · Curso Acústica Musical UC
+<strong>Objetivos que cubre</strong>: OA4.1 (leer forma de onda,
+espectro y espectrograma con sus ejes, unidades y limitaciones), OA1.1
+(relacionar la vibración con el espectro; propagación y
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>v</mi><mo>=</mo><mi>λ</mi><mi>f</mi></mrow><annotation encoding="application/x-tex">v = \lambda f</annotation></semantics></math>),
+OA3.1 (vocabulario para la escucha argumentada).</p>
+<h2 id="cómo-se-dibuja-un-golpe">¿Cómo se dibuja un golpe?</h2>
+<p>En el ticket de salida de la sesión pasada usted dejó una predicción:
+cómo se <em>vería</em> un pulso si pudiéramos dibujarlo. La mayoría de
+las respuestas del curso — es lo habitual — dibujó algo parecido a lo
+que se ve en las películas: una montañita, un zigzag, “ondas”
+concéntricas como las de una piedra en el agua. La sesión partió por ahí
+porque la pregunta es más seria de lo que parece: <strong>el sonido no
+se ve</strong>, y todo lo que este curso va a “mirar” de aquí en
+adelante son traducciones — gráficos que convierten presión de aire en
+imagen. Quien no sabe leer los ejes de esas traducciones está mirando
+decoración.</p>
+<p>La primera traducción es la <strong>forma de onda</strong>: un
+gráfico con el <strong>tiempo en el eje horizontal</strong> (en segundos
+o milisegundos) y en el vertical la <strong>presión sonora</strong> —
+cuánto se aparta el aire de su presión de reposo en cada instante, hacia
+la compresión (arriba) o hacia el enrarecimiento (abajo). Es el sonido
+visto como historia: qué pasó primero, qué pasó después. Un golpe seco
+aparece como una sacudida breve que se apaga; la nota de flauta, como
+una oscilación pareja que se repite página tras página. Benade (1990,
+cap. 3, secs. 3.1–3.3) introduce esta representación con un aparato
+mecánico — la aguja que raya una tira de papel en movimiento, el
+antecesor del osciloscopio — y vale la pena retener esa imagen: la forma
+de onda es lo que dejaría dibujado su tímpano si arrastrara un
+lápiz.</p>
+<p>Lo que la sesión mostró en vivo, con el micrófono conectado a la
+demo, es que la forma de onda dice mucho y esconde mucho. El golpe y el
+silbido se distinguen a simple vista (una sacudida contra un vaivén
+regular). Pero la vocal “aaa” y la “ooo” cantadas en la misma nota se
+ven desconcertantemente parecidas: dos ondulaciones periódicas con el
+mismo período. Lo que las diferencia — el timbre — está <em>dentro</em>
+de la forma del vaivén, y ahí el ojo no llega.</p>
+<h2 id="qué-muestra-el-espectro-que-el-tiempo-esconde">¿Qué muestra el
+espectro que el tiempo esconde?</h2>
+<p>La segunda traducción cambia la pregunta. En vez de “¿qué pasa en
+cada instante?”, el <strong>espectro</strong> pregunta: “¿de qué
+frecuencias está hecho este sonido, y con cuánta fuerza está presente
+cada una?”. El eje horizontal ahora es la <strong>frecuencia</strong>
+(Hz); el vertical, el nivel de cada componente (en la práctica,
+decibeles relativos — la sesión 06 hará justicia al decibel; por ahora
+basta leerlo como “más arriba = componente más fuerte”).</p>
+<p>En el espectro, el silbido es casi un solo pico angosto: una
+frecuencia y poco más. La vocal cantada es una peineta de picos
+regularmente espaciados — los <strong>parciales</strong> del sonido, que
+en la voz están en razones enteras con el más grave. La “sss” es una
+nube ancha sin picos definidos: energía repartida en muchas frecuencias
+a la vez, sin periodicidad, y por eso sin altura cantable. Y el golpe
+seco reparte su energía en una franja amplia que se extingue enseguida.
+Las dos vistas son el mismo sonido: <strong>la forma de onda es el
+sonido como historia; el espectro, como receta de ingredientes.</strong>
+Ninguna es “la verdadera”; cada una responde preguntas que la otra no
+puede.</p>
+<p>Este vocabulario ya es exigible en la escucha del día: “oigo un
+sonido con parciales fuertes en la zona aguda” es una descripción
+(dimensión D1 de la rúbrica); “suena brillante” es el punto de partida
+que hay que aprender a traducir.</p>
+<h2 id="y-si-queremos-las-dos-cosas-a-la-vez-el-espectrograma">¿Y si
+queremos las dos cosas a la vez? El espectrograma</h2>
+<p>La música cambia en el tiempo — esa es casi su definición — y el
+espectro de la sección anterior es una foto sin fecha. La tercera
+traducción, el <strong>espectrograma</strong>, junta ambas vistas:
+<strong>tiempo en el eje horizontal, frecuencia en el vertical, y el
+nivel codificado como color o intensidad</strong> (más oscuro o más
+encendido = más fuerte). Cada columna vertical del espectrograma es un
+espectro instantáneo; leídas de izquierda a derecha, cuentan la película
+completa.</p>
+<p>En el espectrograma, el silbido con glissando es una línea delgada
+que sube; la vocal cantada, una familia de líneas horizontales paralelas
+(sus parciales); la “sss”, una banda difusa y alta; el golpe, una
+columna vertical delgada: todo el rango de frecuencias, casi ningún
+tiempo. Esta herramienta será el <strong>microscopio del curso</strong>:
+la usaremos para mirar instrumentos, salas y su proyecto de aquí a la
+sesión 15. Por eso la sesión insistió en un chequeo mínimo antes de
+creer nada: identificar en su app cuál eje es tiempo, cuál es frecuencia
+y qué significa el color. Espectrograma sin ejes leídos no es
+evidencia.</p>
+<h2 id="por-qué-su-app-no-muestra-nada-sobre-22-000-hz">¿Por qué su app
+no muestra nada sobre 22 000 Hz?</h2>
+<p>Al explorar los límites de las apps apareció un techo: casi todas las
+pantallas se cortan cerca de los 22 000 Hz (a veces 20 000, a veces 24
+000). Ese techo no es una propiedad del sonido ni de su oído: es una
+propiedad <strong>de la herramienta</strong>, y entenderlo requiere la
+única noción de audio digital que este curso necesita.</p>
+<p>El celular no guarda la presión del aire en forma continua: la
+<strong>mide muchas veces por segundo</strong> y guarda la lista de
+valores. Cada medición es una <em>muestra</em>, y la tasa típica es de
+44 100 o 48 000 muestras por segundo. Una regla fundamental del muestreo
+dice que con
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>f</mi><mi>s</mi></msub><annotation encoding="application/x-tex">f_s</annotation></semantics></math>
+muestras por segundo solo se puede representar fielmente el contenido
+<strong>por debajo de
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>f</mi><mi>s</mi></msub><mi>/</mi><mn>2</mn></mrow><annotation encoding="application/x-tex">f_s/2</annotation></semantics></math></strong>:
+con 44 100 muestras/s, nada sobre 22 050 Hz. De ahí el techo de su app.
+Las frecuencias que llegan al micrófono por encima de ese límite no
+desaparecen limpiamente: pueden colarse disfrazadas de frecuencias más
+bajas (el fenómeno se llama <em>aliasing</em>), y por eso los equipos
+filtran lo muy agudo antes de muestrear (Rossing et al. 2002, cap. 21,
+secciones de muestreo y aliasing).</p>
+<blockquote>
+<p><strong>Recuadro opcional (límites del microscopio).</strong> Hay un
+segundo límite, más sutil: el espectrograma se calcula analizando la
+señal por ventanas de tiempo. Ventana larga → frecuencias finamente
+resueltas pero eventos emborronados en el tiempo; ventana corta → lo
+contrario. Por eso dos golpes muy seguidos pueden verse como uno, y por
+eso el ajuste “tamaño de ventana/FFT” de las apps cambia el dibujo sin
+que cambie el sonido. No hay ajuste “correcto”: hay ajustes apropiados
+para preguntas distintas. Este tratamiento es deliberadamente
+instrumental; el detalle cuantitativo (teorema del muestreo) excede el
+curso y puede consultarse en Rossing et al. (2002, cap. 21).</p>
+</blockquote>
+<h2 id="qué-es-lo-que-viaja-y-a-qué-velocidad">¿Qué es lo que viaja (y a
+qué velocidad)?</h2>
+<p>Queda el otro asunto de la sesión: entre la fuente y el oído, ¿qué se
+mueve? No el aire en bloque — nadie siente viento al escuchar — sino una
+<strong>perturbación de presión</strong> que se pasa de mano en mano:
+cada porción de aire empuja a la siguiente y vuelve casi a su lugar. Lo
+que viaja es el empujón, no el material, como la ola del estadio viaja
+sin que nadie cambie de asiento.</p>
+<p>Ese empujón avanza en el aire a
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>v</mi><mo>≈</mo><mn>343</mn></mrow><annotation encoding="application/x-tex">v \approx 343</annotation></semantics></math>
+m/s a 20 °C (la velocidad crece levemente con la temperatura; el valor
+redondo del curso es ese). El trueno del módulo 2 lo volvió aritmética:
+3 segundos de retraso ≈ 1 kilómetro de distancia.</p>
+<p>Si la fuente vibra periódicamente con frecuencia
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>f</mi><annotation encoding="application/x-tex">f</annotation></semantics></math>,
+cada nuevo empujón sale cuando el anterior ya avanzó un trecho fijo: la
+distancia entre crestas sucesivas viajando por el aire. Esa distancia es
+la <strong>longitud de onda</strong>
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>λ</mi><annotation encoding="application/x-tex">\lambda</annotation></semantics></math>,
+y las tres cantidades quedan atadas por la relación más reutilizada del
+semestre:</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>v</mi><mo>=</mo><mi>λ</mi><mi>f</mi></mrow><annotation encoding="application/x-tex">v = \lambda f</annotation></semantics></math></p>
+<p>Con ella y proporciones: el La4 (440 Hz) mide en el aire
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>343</mn><mi>/</mi><mn>440</mn><mo>≈</mo><mn>0</mn><mo>,</mo><mn>78</mn></mrow><annotation encoding="application/x-tex">343/440 \approx 0{,}78</annotation></semantics></math>
+m; el límite grave audible (20 Hz), unos 17 m — del porte de la sala —;
+el agudo (20 000 Hz), unos 17 mm. Que los sonidos musicales midan entre
+centímetros y metros, justo la escala de los instrumentos y de las
+salas, no es coincidencia: es el tema de casi todo lo que sigue
+(Campbell &amp; Greated 1987, cap. 1; Roederer 1997, cap. 3, para el
+detalle de ondas y energía).</p>
+<h2 id="síntesis">Síntesis</h2>
+<ul>
+<li>Forma de onda (presión vs. tiempo), espectro (nivel vs. frecuencia)
+y espectrograma (tiempo–frecuencia–color) son tres traducciones del
+mismo sonido; cada una revela lo que otra esconde. Leer sus ejes y
+unidades es requisito antes de sacar conclusiones.</li>
+<li>El espectrograma es el microscopio del curso, y tiene límites de
+fábrica: techo en
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>f</mi><mi>s</mi></msub><mi>/</mi><mn>2</mn></mrow><annotation encoding="application/x-tex">f_s/2</annotation></semantics></math>
+(muestreo) y compromiso entre resolución temporal y frecuencial
+(ventana). Conocer los límites es parte de saber medir (OA4.1).</li>
+<li>El sonido se propaga como perturbación de presión, a
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>v</mi><mo>≈</mo><mn>343</mn></mrow><annotation encoding="application/x-tex">v \approx 343</annotation></semantics></math>
+m/s en aire a 20 °C, y
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>v</mi><mo>=</mo><mi>λ</mi><mi>f</mi></mrow><annotation encoding="application/x-tex">v = \lambda f</annotation></semantics></math>
+conecta la rapidez, el tamaño espacial y la frecuencia de una onda. Los
+sonidos musicales miden entre centímetros y metros.</li>
+</ul>
+<h2 id="hacia-la-sesión-03">Hacia la sesión 03</h2>
+<p>Su ticket de salida quedó apostado: el vaso golpeado, ¿una línea o
+varias en el espectrograma? La sesión 03 lo golpea de verdad: los
+objetos no vibran de cualquier manera sino en un repertorio de formas
+propias — sus <em>modos</em> — y el espectro es la huella digital de ese
+repertorio. Con esa idea se lanza, además, el proyecto del curso.</p>
+<h2 id="referencias-y-lectura-complementaria">Referencias y lectura
+complementaria</h2>
+<ul>
+<li>Benade, A. H. (1990). <em>Fundamentals of Musical Acoustics</em>,
+2.ª ed. Dover — cap. 3 (“Simple Relations of Sounds and Motions”), secs.
+3.1–3.3 (representar el movimiento; strip chart y osciloscopio) y los
+experimentos de la sec. 3.5 (EEQ).</li>
+<li>Campbell, M. &amp; Greated, C. (1987). <em>The Musician’s Guide to
+Acoustics</em>. Oxford UP — cap. 1, pp. 5–38 (transmisión del sonido:
+ondas, velocidad, presión).</li>
+<li>Roederer, J. G. (1997). <em>Acústica y Psicoacústica de la
+Música</em>. Ricordi — cap. 3, pp. 79–119 (ondas sonoras, velocidad y
+longitud de onda, superposición). Lectura alternativa en español.</li>
+<li>Rossing, T. D., Moore, F. R. &amp; Wheeler, P. A. (2002). <em>The
+Science of Sound</em>, 3.ª ed. — cap. 3 (ondas, ejercicios de
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>v</mi><mo>=</mo><mi>λ</mi><mi>f</mi></mrow><annotation encoding="application/x-tex">v = \lambda f</annotation></semantics></math>)
+y cap. 21 (muestreo y aliasing; las secciones de hardware están datadas,
+las de fundamentos siguen vigentes).</li>
+</ul>
+</body>
+</html>

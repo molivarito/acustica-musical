@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="es" xml:lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>La altura percibida</title>
+  <style>
+    /* Default styles provided by pandoc.
+    ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+    */
+    html {
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    svg {
+      height: auto;
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      border: none;
+      border-top: 1px solid #1a1a1a;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+  </style>
+  <style>
+  /* Estilo compartido para los .md del curso convertidos a HTML
+     (misma familia editorial de las demos y del mapa del curso) */
+  :root { --tinta:#1a1a1a; --acento:#7a2e2e; --azul:#2e4a7a;
+          --papel:#faf8f4; --panel:#f0ece4; }
+  body { margin:0 auto; padding:2rem 1.4rem 4rem; max-width:820px;
+         background:var(--papel); color:var(--tinta);
+         font-family:Georgia,'Times New Roman',serif; line-height:1.55;
+         font-size:1.02rem; }
+  h1,h2,h3,h4 { font-family:Georgia,serif; line-height:1.25; }
+  h1 { font-size:1.6rem; border-bottom:2px solid var(--tinta);
+       padding-bottom:.3rem; }
+  h2 { font-size:1.25rem; margin-top:2rem; color:var(--acento); }
+  h3 { font-size:1.05rem; margin-top:1.5rem; }
+  a { color:var(--azul); }
+  blockquote { border-left:4px solid var(--acento); margin:1rem 0;
+               padding:.2rem 1rem; background:var(--panel);
+               border-radius:0 6px 6px 0; }
+  table { border-collapse:collapse; margin:1rem 0; font-size:.92rem;
+          display:block; overflow-x:auto; }
+  th { font-family:Helvetica,Arial,sans-serif; font-size:.78rem;
+       text-transform:uppercase; letter-spacing:.04em; text-align:left;
+       border-bottom:2px solid var(--tinta); padding:.45rem .6rem;
+       background:var(--papel); }
+  td { padding:.45rem .6rem; border-bottom:1px solid #ddd;
+       vertical-align:top; }
+  code { font-family:Menlo,Consolas,monospace; font-size:.86em;
+         background:var(--panel); padding:.08em .35em; border-radius:3px; }
+  pre { background:var(--panel); padding:.8rem 1rem; border-radius:6px;
+        overflow-x:auto; }
+  pre code { background:none; padding:0; }
+  hr { border:none; border-top:1px solid #ccc; margin:2rem 0; }
+  img { max-width:100%; }
+  li { margin-bottom:.25rem; }
+  math { font-size:1.05em; }
+  @media print { body { background:white; max-width:none; } }
+  </style>
+</head>
+<body>
+<h1 id="la-altura-percibida">La altura percibida</h1>
+<p><strong>Sesión 05</strong> · Curso Acústica Musical UC
+<strong>Objetivos que cubre</strong>: OA2.1 (el par frecuencia↔︎altura no
+es lineal ni unívoco; octava como duplicación), OA2.2 (demostrar y
+explicar la fundamental ausente / altura virtual). OA3.1 transversal en
+la escucha del día.</p>
+<h2
+id="dónde-está-el-bajo-que-sale-de-un-parlante-que-no-puede-darlo">¿Dónde
+está el bajo que sale de un parlante que no puede darlo?</h2>
+<p>Ponga una canción con una línea de bajo marcada en el parlante
+diminuto de su teléfono, sin audífonos, sin nada conectado. El bajo está
+ahí: usted lo oye, lo podría cantar, lo podría transcribir. Y sin
+embargo ese parlante —un disco de pocos milímetros— es físicamente
+incapaz de mover el aire lo bastante lento y lo bastante fuerte como
+para radiar un Mi de 41 Hz o un La de 55 Hz. La frecuencia grave, la que
+le pone nombre a la nota del bajo, sencillamente <em>no está saliendo
+del aparato</em>. ¿De dónde viene, entonces, el bajo que usted oye?</p>
+<p>Esta no es una curiosidad de mala calidad de audio. Es una de las
+demostraciones más limpias de una idea que reorganiza todo lo que vimos
+hasta aquí: <strong>la altura de un sonido no es una frecuencia que esté
+presente, sino un patrón que el oído reconstruye.</strong> En la sesión
+4 usted aprendió que un tono compuesto es una fila de parciales en
+razones enteras
+—<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>f</mi><mn>1</mn></msub><mo>,</mo><mn>2</mn><msub><mi>f</mi><mn>1</mn></msub><mo>,</mo><mn>3</mn><msub><mi>f</mi><mn>1</mn></msub><mo>,</mo><mi>…</mi></mrow><annotation encoding="application/x-tex">f_1, 2f_1, 3f_1, \dots</annotation></semantics></math>—
+y que el espectro es la receta del timbre. Hoy vamos a descubrir que la
+<em>nota</em> de ese tono —su altura— tampoco vive donde uno
+esperaría.</p>
+<h2 id="la-apuesta-que-dejó-firmada-apagar-la-fundamental">La apuesta
+que dejó firmada: apagar la fundamental</h2>
+<p>Al salir de la sesión 4 usted escribió una predicción sobre la demo
+de síntesis aditiva: si apago del todo el parcial 1 —la fundamental
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>f</mi><mn>1</mn></msub><annotation encoding="application/x-tex">f_1</annotation></semantics></math>—
+dejando sonar
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>2</mn><msub><mi>f</mi><mn>1</mn></msub><mo>,</mo><mn>3</mn><msub><mi>f</mi><mn>1</mn></msub><mo>,</mo><mn>4</mn><msub><mi>f</mi><mn>1</mn></msub><mo>,</mo><mi>…</mi></mrow><annotation encoding="application/x-tex">2f_1, 3f_1, 4f_1, \dots</annotation></semantics></math>,
+¿la nota baja una octava, desaparece o sigue igual? Hoy se cobra la
+apuesta en vivo.</p>
+<p>El resultado sorprende a casi todos: la nota <strong>sigue sonando en
+la misma altura</strong>. Cambia el timbre —queda más delgada, más
+nasal—, pero la altura, eso que usted cantaría, no se mueve. Puede
+apagar también el segundo parcial, y a veces el tercero, y la altura
+aguanta. El oído, enfrentado a una fila de frecuencias en razones
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>2</mn><mo>:</mo><mn>3</mn><mo>:</mo><mn>4</mn><mo>:</mo><mn>5</mn></mrow><annotation encoding="application/x-tex">2:3:4:5</annotation></semantics></math>,
+“entiende” que esos números son los múltiplos de un
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>f</mi><mn>1</mn></msub><annotation encoding="application/x-tex">f_1</annotation></semantics></math>
+que <em>debería</em> estar ahí, y le entrega a usted la altura de ese
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>f</mi><mn>1</mn></msub><annotation encoding="application/x-tex">f_1</annotation></semantics></math>
+aunque nadie la esté tocando. A este fenómeno se lo llama
+<strong>fundamental ausente</strong> o <strong>altura virtual</strong>,
+y es el corazón de esta sesión (Benade 1990, cap. 5, secs. 5.6–5.7;
+Roederer 1997, sec. 2.7).</p>
+<p>La clave está en el patrón, no en las piezas. Una serie
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>400</mn><mo>,</mo><mn>600</mn><mo>,</mo><mn>800</mn><mo>,</mo><mn>1000</mn></mrow><annotation encoding="application/x-tex">400, 600, 800,
+1000</annotation></semantics></math> Hz tiene un “aire de familia”
+inconfundible: son los armónicos
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>2</mn><mo>,</mo><mn>3</mn><mo>,</mo><mn>4</mn><mo>,</mo><mn>5</mn></mrow><annotation encoding="application/x-tex">2, 3, 4, 5</annotation></semantics></math>
+de
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mn>200</mn><annotation encoding="application/x-tex">200</annotation></semantics></math>
+Hz. El período de esa mezcla —el tiempo que tarda el conjunto en
+repetirse idéntico— es justamente
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>1</mn><mi>/</mi><mn>200</mn></mrow><annotation encoding="application/x-tex">1/200</annotation></semantics></math>
+de segundo. El oído es un experto en detectar esa periodicidad común, y
+le asigna la altura de
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mn>200</mn><annotation encoding="application/x-tex">200</annotation></semantics></math>
+Hz aunque los
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mn>200</mn><annotation encoding="application/x-tex">200</annotation></semantics></math>
+Hz no estén en la mezcla. Por eso el parlante de su teléfono “da” el
+bajo: no puede radiar los
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mn>55</mn><annotation encoding="application/x-tex">55</annotation></semantics></math>
+Hz de la nota, pero sí radia sus armónicos
+—<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>110</mn><mo>,</mo><mn>165</mn><mo>,</mo><mn>220</mn><mi>…</mi></mrow><annotation encoding="application/x-tex">110, 165, 220\dots</annotation></semantics></math>—,
+y con esa pista le basta a su oído para reconstruir el bajo entero.</p>
+<blockquote>
+<p><strong>Recuadro opcional (para quienes vienen de
+ingeniería).</strong> Hay dos familias de explicaciones para la altura
+virtual, y conviene no confundirlas con una sola. Una es
+<em>espectral/de patrón</em>: un procesador central busca el
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>f</mi><mn>1</mn></msub><annotation encoding="application/x-tex">f_1</annotation></semantics></math>
+cuyos armónicos mejor calzan con las frecuencias presentes
+(reconocimiento de plantilla). Otra es <em>temporal/de
+periodicidad</em>: el oído mide directamente el período de repetición de
+la forma de onda compuesta. Ambas predicen
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mn>200</mn><annotation encoding="application/x-tex">200</annotation></semantics></math>
+Hz para el ejemplo de arriba, y experimentalmente ambas capturan parte
+de la verdad; la discusión sigue viva. Para este curso basta la
+consecuencia robusta: la altura sigue al patrón, no a una línea
+individual del espectro (Rossing et al. 2002, cap. 7, teorías de lugar
+vs. periodicidad; Roederer 1997, sec. 2.9).</p>
+</blockquote>
+<h2 id="hasta-dónde-aguanta-el-patrón">Hasta dónde aguanta el
+patrón</h2>
+<p>En la experiencia guiada usted no solo va a apagar
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>f</mi><mn>1</mn></msub><annotation encoding="application/x-tex">f_1</annotation></semantics></math>:
+va a usar un <strong>filtro pasa-altos progresivo</strong> que quita los
+parciales de abajo hacia arriba —primero
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>f</mi><mn>1</mn></msub><annotation encoding="application/x-tex">f_1</annotation></semantics></math>,
+después
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>f</mi><mn>2</mn></msub><annotation encoding="application/x-tex">f_2</annotation></semantics></math>,
+después
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>f</mi><mn>3</mn></msub><annotation encoding="application/x-tex">f_3</annotation></semantics></math>—
+y va a anotar en qué punto la altura por fin “se rompe” o salta. La
+respuesta es personal, y esa es la gracia de registrarla: no todos
+reconstruimos el patrón con la misma tozudez. Mientras sobrevivan unos
+pocos armónicos vecinos —sobre todo los de la región media, entre el
+tercero y el sexto—, el patrón se mantiene legible y la altura no se
+mueve. Cuando solo quedan parciales muy agudos y espaciados, el oído
+pierde el hilo y la altura salta o se vuelve ambigua.</p>
+<p>Que el umbral varíe entre personas no es un defecto del experimento:
+es la misma lección de la sesión 1, ahora con más resolución. La
+frecuencia es del sonido; la altura ocurre en un oído concreto, el
+suyo.</p>
+<h2 id="el-oído-en-una-pasada-honesta">El oído en una pasada
+honesta</h2>
+<p>¿Con qué máquina hace el oído todo esto? Vale la pena recorrerla una
+vez, sin fascinarse con la anatomía fina —tomaremos solo lo que
+necesitamos para entender la banda crítica en la sesión 8.</p>
+<p>El sonido entra por el <strong>oído externo</strong>: el pabellón y
+el canal auditivo lo captan y, de paso, lo colorean un poco (el canal
+resuena en una región que nos vuelve especialmente sensibles a las
+frecuencias del habla). Llega al <strong>oído medio</strong>, donde el
+tímpano vibra y tres huesecillos —el sistema mecánico más pequeño del
+cuerpo— transmiten y adaptan esa vibración desde el aire hacia el
+líquido del oído interno, compensando la enorme diferencia de “dureza”
+entre ambos medios. Y llega al <strong>oído interno</strong>, a la
+<strong>cóclea</strong>, un conducto enrollado lleno de líquido donde
+ocurre lo esencial para nosotros.</p>
+<p>Dentro de la cóclea corre la <strong>membrana basilar</strong>, y su
+propiedad decisiva es que no vibra igual en toda su extensión: es más
+rígida y estrecha cerca de la entrada, y más blanda y ancha en el fondo.
+Por eso cada frecuencia hace vibrar con máxima amplitud un
+<em>lugar</em> distinto de la membrana: los sonidos
+<strong>agudos</strong> excitan la zona de la entrada; los
+<strong>graves</strong>, la del fondo. La membrana basilar funciona,
+así, como un <strong>analizador de frecuencia por lugar</strong>:
+descompone la mezcla que le llega en una especie de mapa espacial, con
+cada frecuencia depositada en su sitio. Es un análisis <em>grueso</em>
+—no separa dos frecuencias muy cercanas, y eso tendrá enormes
+consecuencias musicales cuando estudiemos batidos y banda crítica—, pero
+es la primera clasificación que el cerebro recibe del mundo sonoro.</p>
+<p>Note que aquí reaparecen las dos pistas de la altura. El
+<em>lugar</em> excitado en la membrana es una; el <em>ritmo</em> del
+patrón —la periodicidad que permite la fundamental ausente— es la otra.
+El oído usa ambas, y no siempre están de acuerdo. Que la altura se pueda
+reconstruir sin la frecuencia física presente es, justamente, la mejor
+prueba de que el oído no es un simple medidor de frecuencias.</p>
+<h2 id="por-qué-duplicar-la-frecuencia-no-es-el-doble-de-agudo">Por qué
+duplicar la frecuencia no es “el doble de agudo”</h2>
+<p>Termine con un experimento sencillo y desconcertante. Escuche un tono
+de
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mn>220</mn><annotation encoding="application/x-tex">220</annotation></semantics></math>
+Hz y luego uno de
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mn>440</mn><annotation encoding="application/x-tex">440</annotation></semantics></math>
+Hz. El segundo tiene <em>exactamente</em> el doble de frecuencia. ¿Suena
+“el doble de agudo”? No: suena <em>la misma nota, más arriba</em> —un La
+y otro La—, tan emparentados que en casi todas las culturas llevan el
+mismo nombre. Esa relación privilegiada que produce duplicar la
+frecuencia es la <strong>octava</strong>:</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mtext mathvariant="normal">octava</mtext><mspace width="0.278em"></mspace><mo>⇔</mo><mspace width="0.278em"></mspace><mi>f</mi><mo>→</mo><mn>2</mn><mi>f</mi><mspace width="1.0em"></mspace><mo stretchy="false" form="prefix">(</mo><mrow><mtext mathvariant="normal">razón </mtext><mspace width="0.333em"></mspace></mrow><mn>2</mn><mo>:</mo><mn>1</mn><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">\text{octava} \;\Longleftrightarrow\; f \to 2f \quad (\text{razón } 2:1)</annotation></semantics></math></p>
+<p>La octava es la primera evidencia dura de que el eje de la altura no
+es una regla lineal tendida sobre el eje de la frecuencia. Duplicar de
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mn>220</mn><annotation encoding="application/x-tex">220</annotation></semantics></math>
+a
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mn>440</mn><annotation encoding="application/x-tex">440</annotation></semantics></math>
+Hz y duplicar de
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mn>440</mn><annotation encoding="application/x-tex">440</annotation></semantics></math>
+a
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mn>880</mn><annotation encoding="application/x-tex">880</annotation></semantics></math>
+Hz son “el mismo paso” para el oído —una octava cada uno—, aunque el
+segundo salto cubra el doble de hertz que el primero. La altura se
+organiza por <em>razones</em> de frecuencia, no por diferencias: esa
+será la base de las escalas y los temperamentos (s09).</p>
+<p>Y una última curiosidad honesta, para dejarla anotada sin resolverla
+hoy: cuando un afinador de pianos ajusta las octavas, no las deja
+exactamente en
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>2</mn><mo>:</mo><mn>1</mn></mrow><annotation encoding="application/x-tex">2:1</annotation></semantics></math>,
+sino un poquito <strong>más anchas</strong>. Y si a usted le pedimos
+emparejar de oído la octava de un tono, es probable que la ponga también
+algo por encima del doble exacto. Son las llamadas <strong>octavas
+estiradas</strong>: la octava que el oído siente “perfecta” está
+levemente por sobre la duplicación física. Las razones —parte
+percepción, parte la rigidez real de las cuerdas del piano— las
+retomaremos en la sesión 9. Por ahora, la regla operativa del curso
+sigue firme: octava = duplicación de la frecuencia.</p>
+<h2 id="síntesis">Síntesis</h2>
+<ul>
+<li>La <strong>altura</strong> de un tono compuesto es el patrón
+periódico que el oído reconstruye, no una frecuencia que tenga que estar
+presente. Por eso el parlante chico del celular “da” el bajo: radia los
+armónicos y el oído repone la fundamental.</li>
+<li><strong>Fundamental ausente / altura virtual</strong>: apagar
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>f</mi><mn>1</mn></msub><annotation encoding="application/x-tex">f_1</annotation></semantics></math>
+(y a veces
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>f</mi><mn>2</mn></msub><annotation encoding="application/x-tex">f_2</annotation></semantics></math>,
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>f</mi><mn>3</mn></msub><annotation encoding="application/x-tex">f_3</annotation></semantics></math>)
+cambia el timbre pero no la altura, mientras sobreviva el patrón de
+armónicos vecinos. El umbral de ruptura varía entre oyentes.</li>
+<li>El <strong>oído</strong> capta (externo), adapta y transmite (medio)
+y analiza (interno): la <strong>membrana basilar</strong> separa
+frecuencias por <em>lugar</em> —agudo cerca de la entrada, grave al
+fondo—, un análisis grueso que la sesión 8 necesitará para la banda
+crítica.</li>
+<li><strong>Altura ≠ frecuencia</strong> punto a punto: la octava es
+duplicación
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>2</mn><mo>:</mo><mn>1</mn></mrow><annotation encoding="application/x-tex">2:1</annotation></semantics></math>),
+y el eje de la altura se organiza por razones. Las octavas estiradas son
+la primera señal de que incluso el
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>2</mn><mo>:</mo><mn>1</mn></mrow><annotation encoding="application/x-tex">2:1</annotation></semantics></math>
+tiene matices (s09).</li>
+</ul>
+<h2 id="hacia-la-sesión-06">Hacia la sesión 06</h2>
+<p>Quedó una pregunta escrita en su ticket de salida: dos sonidos de la
+misma frecuencia, ¿pueden oírse a distinto volumen?, y un grave y un
+agudo con la misma energía física, ¿suenan igual de fuertes? Si la
+altura ya nos enseñó que la percepción no copia la física, la
+<strong>sonoridad</strong> —qué tan fuerte oímos— nos lo va a mostrar
+con números: el decibel, las curvas isofónicas y por qué el oído es un
+instrumento de medición muy sesgado. Y por primera vez vamos a
+<em>medir</em> nosotros esos niveles con el celular.</p>
+<h2 id="referencias-y-lectura-complementaria">Referencias y lectura
+complementaria</h2>
+<ul>
+<li>Benade, A. H. (1990). <em>Fundamentals of Musical Acoustics</em>,
+2.ª ed. Dover — cap. 5 (“Pitch”), en particular secs. 5.4–5.7 (cuerda
+pulsada, razones enteras, reconocimiento de patrones, supresión de
+parciales) y EEQ 5.9.</li>
+<li>Roederer, J. G. (1997). <em>Acústica y Psicoacústica de la
+Música</em>. Ricordi — cap. 2, secs. 2.7 (seguimiento de la
+fundamental), 2.8 (codificación auditiva periférica) y 2.9 (altura
+subjetiva). Fuente principal en español.</li>
+<li>Campbell, M. &amp; Greated, C. (1987). <em>The Musician’s Guide to
+Acoustics</em>. Oxford UP — cap. 2, pp. 39–68 (el oído externo, medio e
+interno); cap. 3 (sección “Pitch”), pp. 69 y ss.</li>
+<li>Rossing, T. D., Moore, F. R. &amp; Wheeler, P. A. (2002). <em>The
+Science of Sound</em>, 3.ª ed. — cap. 7, secs. 7.1–7.9 (altura virtual,
+JND, teorías de lugar y periodicidad); cap. 5 (el oído), para quien
+quiera el detalle fisiológico y ejercicios.</li>
+</ul>
+</body>
+</html>

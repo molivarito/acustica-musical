@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="es" xml:lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>Capítulo 8 — El borde del batido (banda crítica y
+consonancia)</title>
+  <style>
+    /* Default styles provided by pandoc.
+    ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+    */
+    html {
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    svg {
+      height: auto;
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      border: none;
+      border-top: 1px solid #1a1a1a;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+  </style>
+  <style>
+  /* Estilo compartido para los .md del curso convertidos a HTML
+     (misma familia editorial de las demos y del mapa del curso) */
+  :root { --tinta:#1a1a1a; --acento:#7a2e2e; --azul:#2e4a7a;
+          --papel:#faf8f4; --panel:#f0ece4; }
+  body { margin:0 auto; padding:2rem 1.4rem 4rem; max-width:820px;
+         background:var(--papel); color:var(--tinta);
+         font-family:Georgia,'Times New Roman',serif; line-height:1.55;
+         font-size:1.02rem; }
+  h1,h2,h3,h4 { font-family:Georgia,serif; line-height:1.25; }
+  h1 { font-size:1.6rem; border-bottom:2px solid var(--tinta);
+       padding-bottom:.3rem; }
+  h2 { font-size:1.25rem; margin-top:2rem; color:var(--acento); }
+  h3 { font-size:1.05rem; margin-top:1.5rem; }
+  a { color:var(--azul); }
+  blockquote { border-left:4px solid var(--acento); margin:1rem 0;
+               padding:.2rem 1rem; background:var(--panel);
+               border-radius:0 6px 6px 0; }
+  table { border-collapse:collapse; margin:1rem 0; font-size:.92rem;
+          display:block; overflow-x:auto; }
+  th { font-family:Helvetica,Arial,sans-serif; font-size:.78rem;
+       text-transform:uppercase; letter-spacing:.04em; text-align:left;
+       border-bottom:2px solid var(--tinta); padding:.45rem .6rem;
+       background:var(--papel); }
+  td { padding:.45rem .6rem; border-bottom:1px solid #ddd;
+       vertical-align:top; }
+  code { font-family:Menlo,Consolas,monospace; font-size:.86em;
+         background:var(--panel); padding:.08em .35em; border-radius:3px; }
+  pre { background:var(--panel); padding:.8rem 1rem; border-radius:6px;
+        overflow-x:auto; }
+  pre code { background:none; padding:0; }
+  hr { border:none; border-top:1px solid #ccc; margin:2rem 0; }
+  img { max-width:100%; }
+  li { margin-bottom:.25rem; }
+  math { font-size:1.05em; }
+  @media print { body { background:white; max-width:none; } }
+  </style>
+</head>
+<body>
+<h1
+id="capítulo-8-el-borde-del-batido-banda-crítica-y-consonancia">Capítulo
+8 — El borde del batido (banda crítica y consonancia)</h1>
+<p><em>Lectura previa a la sesión 08. Objetivos: OA2.2 (batidos, banda
+crítica, tonos de combinación), OA2.3 (fundamento perceptual de la
+consonancia), OA5.2 (arranca la serie de mediciones sobre su objeto).
+Para la sesión necesita traer: audífonos y EL OBJETO de su
+proyecto.</em></p>
+<h2 id="lo-que-usted-ya-oyó-y-todavía-no-tiene-nombre">Lo que usted ya
+oyó y todavía no tiene nombre</h2>
+<p>Al final de la sesión pasada, saliendo de la prueba, el profesor hizo
+algo levemente cruel: tomó los dos tonos que usted acababa de aprender a
+contar — el batido limpio de 2, 3, 4 ondulaciones por segundo — y siguió
+separándolos. 5 hertz. 10. 20. 30. Y le pidió anotar, sin explicarle
+nada, qué oía y dónde dejaba de poder contar.</p>
+<p>Su ticket de salida quedó escrito con lo que su oído le dijo. Este
+capítulo existe para que ese apunte suyo se convierta en una de las
+ideas más útiles de toda la psicoacústica — una que explica desde por
+qué dos flautas desafinadas “muelen” hasta por qué casi todas las
+culturas musicales tienen algo parecido a la octava y la quinta.</p>
+<p>Conviene decir desde ya lo que el fenómeno tiene de extraño. Si usted
+graba ese par de tonos que se separan y mira el espectrograma con la app
+del curso, verá dos líneas nítidas, perfectamente distinguibles, desde
+el primer hertz de diferencia. Para el micrófono nunca hubo misterio:
+son dos tonos. Para su oído, en cambio, durante un buen tramo hubo
+<em>uno</em> — primero ondulante, después áspero — y solo más allá de
+cierta separación aparecieron <em>dos</em>. La pregunta del capítulo es
+exactamente esa: <strong>¿qué hay en el oído que fusiona lo que el aire
+mantiene separado — y hasta dónde?</strong></p>
+<h2 id="un-teclado-dentro-del-caracol">Un teclado dentro del
+caracol</h2>
+<p>La pieza clave ya la tiene, de la sesión 05: la <strong>membrana
+basilar</strong>, la cinta que recorre la cóclea y donde cada frecuencia
+empuja con máxima fuerza un lugar distinto — los graves al fondo, los
+agudos a la entrada. Un tono puro dibuja sobre esa cinta una montañita
+de vibración centrada en “su” lugar.</p>
+<p>Ahora ponga dos tonos. Si sus frecuencias están lejos, cada uno
+levanta su montañita y no se molestan: dos lugares, dos alturas, dos
+notas. Pero si las frecuencias están cerca, las dos montañitas caen una
+encima de la otra: una misma vecindad de células sensoriales recibe las
+dos ondas <em>sumadas</em>, con sus refuerzos y sus cancelaciones — es
+decir, recibe el batido. El oído no reporta “dos notas” porque, en el
+lugar donde mira, genuinamente hay <em>una</em> vibración que sube y
+baja.</p>
+<p>De esa imagen sale, sin ninguna ecuación, todo el recorrido que usted
+anotó en su ticket: con diferencias chicas, una nota que ondula; al
+crecer la diferencia, la ondulación se hace demasiado rápida para
+contarla y se vuelve <strong>rugosidad</strong>, una aspereza granulada;
+más separación, y las dos montañitas empiezan a asomar por separado — se
+oyen dos alturas, aunque el conjunto todavía roce; y con separación
+suficiente, cada tono queda en su territorio y el par suena liso.</p>
+<p>Ese ancho de “territorio” — la separación mínima para que dos tonos
+dejen de pisarse dentro del oído — se llama <strong>banda
+crítica</strong>, y es el número estrella de este capítulo. En la sesión
+no se lo vamos a dar: <strong>lo va a medir usted</strong>, con
+audífonos, marcando sus propias fronteras (¿hasta dónde puedo contar?,
+¿desde dónde oigo dos notas?, ¿desde dónde queda liso?). Le adelantamos
+solo el marco: en el rango medio del registro musical el orden de
+magnitud es <strong>un tercio de octava</strong> — del orden de una
+tercera menor (Roederer 1997, sec. 2.4). Dónde caen <em>sus</em>
+fronteras, y cuánto se parecen a las de su pareja de medición, es asunto
+entre usted y su cóclea.</p>
+<h2 id="de-la-aspereza-a-la-música-la-pregunta-de-la-consonancia">De la
+aspereza a la música: la pregunta de la consonancia</h2>
+<p>Hasta aquí, tonos puros de laboratorio. La sesión 08 se pone musical
+en el segundo módulo con una pregunta que parece de otra materia: ¿por
+qué la octava y la quinta suenan “lisas”, estables, casi como una sola
+nota más rica — y el tritono suena tenso, áspero, “quiere resolver”?
+Usted ya conoce el ranking; lo trae de su vida musical entera. Lo que el
+curso le va a pedir es algo más incómodo: decidir <strong>cuánto de ese
+ranking es física, cuánto es oído y cuánto es costumbre</strong>.</p>
+<p>La herramienta para atacarlo es la banda crítica más algo que usted
+domina desde la sesión 04: las notas musicales reales son <strong>tonos
+complejos</strong> — una fundamental con su familia de parciales
+armónicos
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>f</mi><mi>n</mi></msub><mo>=</mo><mi>n</mi><msub><mi>f</mi><mn>1</mn></msub></mrow><annotation encoding="application/x-tex">f_n = n f_1</annotation></semantics></math>).
+Cuando suenan dos notas juntas, no chocan dos tonos: chocan <strong>dos
+familias completas</strong>. Y cada par de parciales vecinos repite en
+miniatura el experimento del primer módulo: si caen dentro de una banda
+crítica, rozan; si coinciden exactamente, o quedan bien separados, no
+aportan aspereza.</p>
+<p>Haga la cuenta con la octava, razón 2:1 — digamos fundamentales de
+220 y 440 Hz. La nota aguda trae parciales en 440, 880, 1320…; la grave,
+en 220, 440, 660, 880, 1100, 1320… Cada parcial de la aguda aterriza
+<em>exactamente</em> sobre uno de la grave. No queda ningún par rozando:
+el intervalo es transparente. Con la quinta justa, razón 3:2, las
+coincidencias son más espaciadas pero el esquive es bueno. ¿Y con
+razones complicadas, como las del tritono? Ahí los parciales caen donde
+caen — y la pregunta de cuántos pares quedan rozando dentro de una banda
+crítica ya no tiene una respuesta bonita.</p>
+<p>Esta idea — la consonancia sensorial como <em>ausencia de rugosidad
+entre parciales</em> — viene de Helmholtz en el siglo XIX y fue afinada
+y verificada experimentalmente por la psicoacústica del siglo XX
+(Roederer 1997, sec. 5.2; Campbell &amp; Greated 1987, cap. 4). En la
+sesión la vamos a poner a prueba con un experimento que este capítulo no
+le va a arruinar. Solo la pregunta, para que la traiga pensada: si la
+aspereza del tritono viniera del intervalo “en sí”, ¿qué debería pasar
+al tocar ese mismo tritono con <strong>tonos puros</strong>, sin ningún
+parcial? Escriba su predicción antes de venir. En serio.</p>
+<p>Una segunda pregunta, del mismo calibre, también viaja mejor pensada
+de antemano: la misma quinta, tocada una octava más grave, ¿suena igual
+de lisa, más lisa o más turbia? Pista: revise, en el recorrido del
+primer módulo, qué le pasa al ancho de la banda crítica <em>medido en
+intervalo musical</em> cuando se baja al registro grave — y pregúntese a
+un pianista, si tiene uno cerca, en qué parte del teclado evita los
+acordes apretados.</p>
+<h2 id="dos-advertencias-honestas">Dos advertencias honestas</h2>
+<p><strong>Primera</strong>: en la sesión va a oír, como curiosidad, los
+<strong>tonos de combinación</strong>: con dos tonos puros bien fuertes
+se alcanza a oír un tercer tono, grave, que no aparece en el
+espectrograma — no está en el aire; lo fabrica la mecánica del propio
+oído (Benade 1990, sec. 14.1). No hay teoría que estudiar: es un
+recordatorio espectacular de que no todo lo que se oye está en la
+señal.</p>
+<p><strong>Segunda</strong>, y más importante: todo lo que este capítulo
+explica es la consonancia <strong>sensorial</strong> — cuánto roza un
+par de notas sostenidas, en el vacío de todo contexto. La consonancia
+<strong>musical</strong> es otra capa: qué intervalos una práctica
+considera estables, cuáles piden resolución, qué es tensión y qué es
+reposo. Eso depende del estilo, de la época, del entrenamiento y de la
+cultura — la cuarta justa, lisa como pocas para la cóclea, funciona como
+disonancia en buena parte del contrapunto (Roederer 1997, sec. 5.2). La
+física pone el piso; no escribe la gramática. Desconfíe de quien le diga
+que la armonía occidental “está en la naturaleza” — y también de quien
+le diga que la cóclea no tiene nada que ver.</p>
+<h2 id="su-objeto-entra-a-pabellón">Su objeto entra a pabellón</h2>
+<p>El segundo módulo estrena, además, la serie de talleres que acompaña
+a su proyecto hasta la sesión 12: <strong>las mediciones semanales sobre
+su propio objeto</strong>. La primera es una radiografía: espectro y
+espectrograma del objeto sonando en su gesto típico, una tabla con sus
+parciales medidos en hertz, y el veredicto que el hito 1 dejó prometido
+— ¿armónico o inarmónico? Esa tabla, con sus condiciones anotadas (qué
+app, qué celular, a qué distancia, qué gesto), es la línea base contra
+la cual el <strong>hito 2 (s10)</strong> va a mostrar qué cambió y por
+qué. Traiga el objeto aunque esté a medio construir: un objeto que suena
+mal también tiene espectro, y explicarlo vale nota.</p>
+<h2 id="preguntas-que-la-sesión-va-a-responder">Preguntas que la sesión
+va a responder</h2>
+<ol type="1">
+<li>Al separar dos tonos desde el unísono, ¿qué etapas se oyen y en qué
+orden? ¿Dónde caen <em>sus</em> fronteras — y coinciden con las de su
+compañero?</li>
+<li>¿Por qué el oído fusiona y hace rozar lo que el micrófono ve como
+dos líneas limpias? ¿Qué ancho tiene esa zona de interferencia?</li>
+<li>¿Por qué la octava y la quinta suenan lisas con notas reales — y qué
+debería pasarle al tritono si se toca con tonos puros?</li>
+<li>¿La misma quinta suena igual de lisa en el registro grave que en el
+medio?</li>
+<li>¿Qué es exactamente lo que la banda crítica explica de la
+consonancia — y qué es lo que no explica?</li>
+</ol>
+<h2 id="referencias-del-capítulo">Referencias del capítulo</h2>
+<ul>
+<li>Roederer (1997), cap. 2, sec. 2.4 (dentro de pp. 24–78) — batidos,
+rugosidad y banda crítica; cap. 5, secs. 5.1–5.2 (dentro de pp. 180–211)
+— superposición de tonos complejos, consonancia sensorial y sus límites.
+Fuente principal, en español.</li>
+<li>Benade (1990), cap. 14, secs. 14.1 y 14.3 — tonos de combinación
+(componentes heterodinos) y por qué los espectros armónicos son
+especiales.</li>
+<li>Campbell &amp; Greated (1987), cap. 4 (pp. 165–182) — consonancia y
+disonancia; el capítulo sigue hacia escalas y temperamentos, que es
+exactamente donde va la sesión 09.</li>
+<li>Rossing, Moore &amp; Wheeler (2002), cap. 8, secs. 8.5–8.15 —
+ejercicios sobre tonos de combinación y consonancia (opcional).</li>
+</ul>
+</body>
+</html>

@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="es" xml:lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>Capítulo 11 — Cuerdas frotadas y el cuerpo del
+instrumento</title>
+  <style>
+    /* Default styles provided by pandoc.
+    ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+    */
+    html {
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    svg {
+      height: auto;
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      border: none;
+      border-top: 1px solid #1a1a1a;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+  </style>
+  <style>
+  /* Estilo compartido para los .md del curso convertidos a HTML
+     (misma familia editorial de las demos y del mapa del curso) */
+  :root { --tinta:#1a1a1a; --acento:#7a2e2e; --azul:#2e4a7a;
+          --papel:#faf8f4; --panel:#f0ece4; }
+  body { margin:0 auto; padding:2rem 1.4rem 4rem; max-width:820px;
+         background:var(--papel); color:var(--tinta);
+         font-family:Georgia,'Times New Roman',serif; line-height:1.55;
+         font-size:1.02rem; }
+  h1,h2,h3,h4 { font-family:Georgia,serif; line-height:1.25; }
+  h1 { font-size:1.6rem; border-bottom:2px solid var(--tinta);
+       padding-bottom:.3rem; }
+  h2 { font-size:1.25rem; margin-top:2rem; color:var(--acento); }
+  h3 { font-size:1.05rem; margin-top:1.5rem; }
+  a { color:var(--azul); }
+  blockquote { border-left:4px solid var(--acento); margin:1rem 0;
+               padding:.2rem 1rem; background:var(--panel);
+               border-radius:0 6px 6px 0; }
+  table { border-collapse:collapse; margin:1rem 0; font-size:.92rem;
+          display:block; overflow-x:auto; }
+  th { font-family:Helvetica,Arial,sans-serif; font-size:.78rem;
+       text-transform:uppercase; letter-spacing:.04em; text-align:left;
+       border-bottom:2px solid var(--tinta); padding:.45rem .6rem;
+       background:var(--papel); }
+  td { padding:.45rem .6rem; border-bottom:1px solid #ddd;
+       vertical-align:top; }
+  code { font-family:Menlo,Consolas,monospace; font-size:.86em;
+         background:var(--panel); padding:.08em .35em; border-radius:3px; }
+  pre { background:var(--panel); padding:.8rem 1rem; border-radius:6px;
+        overflow-x:auto; }
+  pre code { background:none; padding:0; }
+  hr { border:none; border-top:1px solid #ccc; margin:2rem 0; }
+  img { max-width:100%; }
+  li { margin-bottom:.25rem; }
+  math { font-size:1.05em; }
+  @media print { body { background:white; max-width:none; } }
+  </style>
+</head>
+<body>
+<h1
+id="capítulo-11-cuerdas-frotadas-y-el-cuerpo-del-instrumento">Capítulo
+11 — Cuerdas frotadas y el cuerpo del instrumento</h1>
+<p><em>Lectura previa a la sesión 11. Objetivos: OA1.3 (principal),
+OA1.1, OA1.2.</em></p>
+<h2 id="la-pregunta-que-quedó-abierta">La pregunta que quedó
+abierta</h2>
+<p>Su ticket de salida de la sesión 10 dejó planteado un problema que,
+bien mirado, es escandaloso. Todo lo que el curso ha hecho sonar hasta
+ahora funciona a golpes: se entrega energía una vez — un nudillo, una
+púa, una cuchara — y el sonido decae mientras el objeto gasta esa dote
+en mover el aire y en roce interno. El arco es otra cosa: entrega
+energía en forma <em>continua</em>, mientras dure la arcada. Y la
+experiencia dice que empujar algo en forma continua produce chirridos,
+no música: la puerta vieja, el freno de la bicicleta, el plumavit contra
+el vidrio, la tiza que se traba en la pizarra. ¿Por qué una cuerda
+frotada no suena así? ¿Quién convierte un empujón parejo en una nota
+afinada y estable?</p>
+<p>Adelantemos la forma de la respuesta, porque organiza las tres
+sesiones que vienen: para sostener una nota se necesitan tres piezas —
+una fuente continua de energía, una <strong>válvula</strong> que la
+entregue en porciones rítmicas, y un <strong>resonador</strong> que le
+imponga el ritmo a la válvula. Este capítulo arma esa tríada para la
+cuerda frotada. En la sesión 12 la volveremos a armar para un tubo, con
+una válvula que no se parece en nada a esta.</p>
+<h2 id="todo-lo-que-se-frota-chirría">Todo lo que se frota chirría</h2>
+<p>Empiece por rehabilitar al chirrido. Cuando dos superficies se
+frotan, casi nunca deslizan parejo: se <strong>agarran</strong>, se
+deforman acumulando tensión como un resorte que se carga, y cuando la
+fuerza acumulada supera lo que el agarre aguanta, se
+<strong>sueltan</strong> de golpe, deslizan un trecho y vuelven a
+agarrarse. La física distingue las dos fricciones en juego: la de agarre
+(estática) es más fuerte que la de deslizamiento (cinética). De esa
+asimetría nace el ciclo de <em>pegar y soltar</em> — el nombre técnico
+en inglés, <strong>stick-slip</strong>, es tan gráfico que se usa en
+todos los idiomas.</p>
+<p>Los cuerdistas conocen esta física con las manos: la
+<strong>resina</strong> que se pasa por las cerdas del arco no está ahí
+para “que suene más”, sino para exagerar la asimetría — agarre feroz,
+deslizamiento fácil. Un arco sin resina apenas engancha la cuerda; un
+arco resinado la captura, la arrastra y la suelta miles de veces por
+segundo.</p>
+<p>En la puerta y en el freno, ese ciclo se repite a un ritmo
+caprichoso, que cambia con la presión, la velocidad y la humedad: por
+eso el chirrido es ruido. La pregunta correcta del capítulo no es,
+entonces, por qué el arco chirría — siempre chirría — sino <strong>por
+qué el chirrido de una cuerda frotada sale ordenado</strong>.</p>
+<h2 id="el-chirrido-con-metrónomo">El chirrido con metrónomo</h2>
+<p>La diferencia entre la puerta y el violín es que la bisagra no tiene
+opinión y la cuerda sí. Una cuerda tensa es el resonador más afinado que
+el curso conoce (sesiones 3 y 4): déjela vibrar y lo hará en sus
+frecuencias propias, con su
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>f</mi><mn>1</mn></msub><annotation encoding="application/x-tex">f_1</annotation></semantics></math>
+fijada por longitud, tensión y masa.</p>
+<p>Ahora júntela con la válvula. Cada vez que la cuerda se suelta del
+arco, la sacudida no se queda en el punto de contacto: viaja por la
+cuerda, se refleja en los extremos y <strong>vuelve</strong>, un tiempo
+después que no depende del arco en absoluto — depende del largo y la
+tensión de la cuerda, exactamente el período de su
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>f</mi><mn>1</mn></msub><annotation encoding="application/x-tex">f_1</annotation></semantics></math>.
+Y cuando la sacudida vuelve al punto de contacto, sacude a la cuerda del
+agarre: <strong>dispara el siguiente soltar</strong>.</p>
+<p>Mire lo que acaba de pasar: la fricción, que suelta cuando “se le
+antoja” en la puerta, aquí suelta cuando la cuerda se lo ordena. El
+ciclo pegar-soltar queda esclavizado al viaje de ida y vuelta de la onda
+por la cuerda — al calendario del resonador. Benade llama a esta
+situación <strong>régimen de oscilación</strong> (Benade 1990, cap. 23,
+secs. 23.1–23.2), y es el concepto que gobierna todo el bloque de
+instrumentos del curso: la fuente de energía es tonta; el resonador la
+disciplina. La nota de un violín es, literalmente, un chirrido con
+metrónomo — y el metrónomo es la cuerda.</p>
+<p>Dos consecuencias se pueden anticipar desde el sillón, y la sesión
+las someterá a prueba con un instrumento real. Primera: si la afinación
+la pone la cuerda, apretar más el arco o moverlo más rápido <em>no
+debería</em> subir la nota — debería cambiar otra cosa. ¿Cuál, y hasta
+dónde, antes de que la nota se rompa? Segunda: como la fricción vuelve a
+inyectar energía en cada ciclo, el sonido frotado no tiene por qué
+decaer. Ahí está la diferencia profunda con la cuerda pulsada de la
+sesión 4: la pulsada recibe su dote al inicio y la gasta; la frotada
+cobra sueldo cada período. Por eso el violín puede crecer en medio de
+una nota larga y la guitarra solo puede resignarse a que se apague.</p>
+<h2 id="lo-que-helmholtz-vio">Lo que Helmholtz vio</h2>
+<p>¿Y cómo se <em>ve</em> una cuerda haciendo todo esto? Si usted
+imagina una curva suave que ondula — la silueta de las fotos de larga
+exposición — está en buena compañía: casi todo el mundo la imagina así,
+y las ilustraciones ayudan al error. En la década de 1860, Hermann von
+Helmholtz apuntó a la cuerda de un violín un instrumento óptico de su
+invención que le permitía seguir el movimiento de un punto de la cuerda
+en cámara lentísima, y lo que encontró no era una curva suave. Era algo
+más extraño, más anguloso y más elegante — una forma que explica de una
+sola vez el ciclo pegar-soltar, el timbre del violín y varias
+instrucciones que los profesores de cuerda dan sin saber por qué
+funcionan (Benade 1990, sec. 23.4; C&amp;G cap. 6, pp. 203–232).</p>
+<p>No le vamos a dibujar aquí lo que Helmholtz vio: la sesión lo muestra
+animado, y luego intentaremos sorprenderlo en la cuerda real con la
+cámara lenta de un celular. Llegue con su propia hipótesis: si la cuerda
+va pegada al arco casi todo el ciclo y desliza solo un instante, ¿qué
+forma puede tener? Como pista, piense en la fuerza que la cuerda ejerce
+sobre el puente: ¿pareja, ondulada, o con algún tipo de sobresalto
+periódico?</p>
+<p>Los violinistas, además, no frotan en cualquier parte: <em>sul
+ponticello</em> (junto al puente) y <em>sul tasto</em> (sobre el
+diapasón) son indicaciones que aparecen en las partituras y producen
+timbres tan distintos que parecen instrumentos diferentes. ¿Qué cambia
+en el espectro en cada caso — y qué NO cambia? Eso se mide el jueves,
+con espectrograma, y conviene llegar con la predicción escrita.</p>
+<h2 id="la-cuerda-sola-no-suena">La cuerda sola no suena</h2>
+<p>Queda un eslabón, y es el que usted ya casi tiene armado desde la
+sesión 10. Recuerde el elástico pulsado en el aire: casi inaudible. Una
+cuerda de un milímetro de espesor es, para el aire, una aguja: al
+moverse, el aire la esquiva en lugar de comprimirse. En el lenguaje de
+la sesión 10, la impedancia de la cuerda y la del aire están brutalmente
+desparejadas; sin un transformador de por medio, la energía se queda en
+la cuerda.</p>
+<p>El transformador del violín es una cadena: <strong>cuerda → puente →
+tapa → aire</strong>. Cada eslabón hace preguntas que la sesión va a
+contestar midiendo. ¿Qué pasa si le agregamos masa al puente con algo
+tan indigno como una pinza de ropa? ¿La tapa vibra entera, como la
+membrana de un parlante, o por zonas — y cómo se le fotografían los
+modos a una caja de madera? (Campbell &amp; Greated lo hicieron con
+holografía; las imágenes, en el cap. 6, pp. 203–232, se proyectan en la
+sesión.) ¿Para qué están las <strong>efes</strong>, y qué cambia si se
+tapan? ¿Un instrumento suena igual desde cualquier ángulo? Ninguna de
+estas preguntas necesita fórmulas — necesitan el vocabulario de s03
+(modos, líneas nodales) y de s10 (resonancia, impedancia, acoplamiento),
+que usted ya tiene.</p>
+<p>Hay, por último, un personaje legendario que aparece cuando esta
+cadena funciona <em>demasiado</em> bien: la <strong>nota lobo</strong>,
+una nota puntual que en algunos cellos y violines se niega a sonar
+pareja y “aúlla” a tirones. Benade le dedica la sección 25.4; en el
+curso es una curiosidad de cierre, pero le adelantamos el chisme: es el
+acoplamiento de la sesión 10 llevado al exceso, dos resonadores
+peleándose el régimen.</p>
+<h2 id="preguntas-que-la-sesión-va-a-responder">Preguntas que la sesión
+va a responder</h2>
+<ol type="1">
+<li>¿Por qué la misma cuerda, con el mismo arco, puede dar una nota
+estable, un graznido sin altura o un silbido aflautado? ¿Qué controla el
+ejecutante para elegir entre los tres?</li>
+<li>Si aprieto más el arco, ¿la nota sube, baja o cambia de otra manera?
+¿Y si froto más cerca del puente — qué gana y qué arriesga el <em>sul
+ponticello</em>?</li>
+<li>¿Qué forma tiene de verdad una cuerda frotada, y puede la cámara
+lenta de un celular común revelarla?</li>
+<li>¿Por qué una cuerda tensa entre dos paredes de concreto sería casi
+inaudible, y qué hace exactamente la caja del violín — regala energía,
+la transforma, o la gasta más rápido?</li>
+<li>¿Qué parte de un instrumento real hace el trabajo de radiar, y cómo
+lo averiguaría usted con un paño, una mesa y un celular — incluso para
+el objeto de su proyecto?</li>
+</ol>
+<h2 id="referencias-del-capítulo">Referencias del capítulo</h2>
+<ul>
+<li>Benade (1990), cap. 23, secs. 23.1–23.5 — mecanismo de excitación,
+régimen de oscilación y fuerza sobre el puente; la fuente
+principal.</li>
+<li>Benade (1990), cap. 24, secs. 24.1–24.2 (cuerpo y puente) y 24.4
+(ajuste de placas); sec. 25.4 (nota lobo, curiosidad).</li>
+<li>Campbell &amp; Greated (1987), cap. 6, pp. 203–232 — el violín:
+arco, movimiento de Helmholtz y holografías de los modos del
+cuerpo.</li>
+<li>Roederer (1997), Apéndice I — el mecanismo de frotamiento en versión
+cuantitativa, opcional y en español.</li>
+<li>Rossing, Moore &amp; Wheeler (2002), cap. 10, secs. 10.1–10.9 —
+ejercicios sobre cuerdas frotadas y cuerpo del instrumento.</li>
+</ul>
+</body>
+</html>

@@ -188,7 +188,7 @@ rúbrica OA3) corre transversal de s02 a s14 y no se repite en la tabla.</p>
       </ul>
     </div>
   </div>
-  <p class="oanota">Un clic en cualquier código (p. ej. <b>OA2.2</b>) activa el filtro correspondiente en la tabla de abajo. Enunciados completos, con contraste 2019 y respaldo bibliográfico, en <a href="../diseno/01_objetivos_aprendizaje.md">diseno/01</a>.</p>
+  <p class="oanota">Un clic en cualquier código (p. ej. <b>OA2.2</b>) activa el filtro correspondiente en la tabla de abajo. Enunciados completos, con contraste 2019 y respaldo bibliográfico, en <a href="../diseno/01_objetivos_aprendizaje.html">diseno/01</a>.</p>
 </details>
 
 <div class="controles">
@@ -224,14 +224,17 @@ rúbrica OA3) corre transversal de s02 a s14 y no se repite en la tabla.</p>
 </table>
 </div>
 
-<p class="pie">Fuentes de esta página: <a href="../diseno/03_estructura_curso.md">diseno/03 (mapa y notación)</a> ·
-<a href="../diseno/01_objetivos_aprendizaje.md">diseno/01 (objetivos)</a> ·
-<a href="../diseno/02_metodologia.md">diseno/02 (metodología y rúbrica)</a> ·
+<p class="pie">Fuentes de esta página: <a href="../diseno/03_estructura_curso.html">diseno/03 (mapa y notación)</a> ·
+<a href="../diseno/01_objetivos_aprendizaje.html">diseno/01 (objetivos)</a> ·
+<a href="../diseno/02_metodologia.html">diseno/02 (metodología y rúbrica)</a> ·
+<a href="programa_curso.html">programa del curso</a> ·
 <a href="../libro/LIBRO_CURSO.pdf">libro completo (PDF)</a> ·
-<a href="../materiales/banco_estimulos.md">banco de estímulos</a> ·
-<a href="../materiales/planilla_rubrica_oa3.md">planilla rúbrica OA3</a> ·
-<a href="../ESTADO_LOOP.md">estado de producción</a>.
-Generada el 2026-07-13 desde los planes de sesión; si una sesión cambia, regenerar o editar aquí.</p>
+<a href="../materiales/banco_estimulos.html">banco de estímulos</a> ·
+<a href="../materiales/planilla_rubrica_oa3.html">planilla rúbrica OA3</a> ·
+<a href="../ESTADO_LOOP.html">estado de producción</a>.
+Generada el 2026-07-13 desde los planes de sesión; si una sesión cambia, regenerar o editar aquí.
+Los documentos enlazan a versiones HTML formateadas: tras editar cualquier <code>.md</code>, correr
+<code>python3 Admin/md2html.py</code> para regenerarlas.</p>
 
 <script>
 'use strict';
@@ -420,6 +423,9 @@ const S = [
 
 const COLOR_BLOQUE = {A:'var(--bloqueA)', B:'var(--bloqueB)', C:'var(--bloqueC)', D:'var(--bloqueD)'};
 const $ = id => document.getElementById(id);
+// Los .md tienen gemelo .html formateado (generado por Admin/md2html.py);
+// la tabla enlaza al .html. Si un link se rompe, regenerar con el script.
+const H = ruta => ruta.replace(/\.md$/, '.html');
 
 // ------- franja superior: el semestre en 15 casillas -------
 const franja = $('franja');
@@ -472,20 +478,21 @@ S.forEach(s => {
       `<span class="insignia ${e[1]==='suave'?'suave':''}">${e[0]}</span>`).join(' ');
 
   const actsHTML = '<ul class="acts">' + s.acts.map(a =>
-      `<li><a href="${a[1]}">${a[0]}</a></li>`).join('') + '</ul>';
+      `<li><a href="${H(a[1])}">${a[0]}</a></li>`).join('') + '</ul>';
 
+  const plan = `../sesiones/s${String(s.n).padStart(2,'0')}/plan.html`;
   tr.innerHTML = `
     <td class="num" style="background:${COLOR_BLOQUE[s.b]}">
       <span class="snum">s${String(s.n).padStart(2,'0')}</span><br>
-      <span class="tema"><a href="../sesiones/s${String(s.n).padStart(2,'0')}/plan.md">${s.tema}</a></span><br>
-      <span class="modulos">${s.mod} · <a href="../sesiones/s${String(s.n).padStart(2,'0')}/plan.md">plan completo</a></span>
+      <span class="tema"><a href="${plan}">${s.tema}</a></span><br>
+      <span class="modulos">${s.mod} · <a href="${plan}">plan completo</a></span>
     </td>
     <td>${oaHTML}</td>
     <td>${evHTML}</td>
     <td>${actsHTML}</td>
     <td>${s.demo ? `<a href="${s.demo[1]}">${s.demo[0]}</a>` : '<span class="sin">sin demo (por diseño)</span>'}</td>
-    <td><a href="${s.ap}">apunte s${String(s.n).padStart(2,'0')}</a></td>
-    <td><a href="${s.cap[1]}">${s.cap[0]}</a></td>`;
+    <td><a href="${H(s.ap)}">apunte s${String(s.n).padStart(2,'0')}</a></td>
+    <td><a href="${H(s.cap[1])}">${s.cap[0]}</a></td>`;
   cuerpo.appendChild(tr);
 });
 

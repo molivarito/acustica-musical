@@ -1,0 +1,591 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="es" xml:lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>Sesión 06 — Sonoridad y decibel: intensidad, niveles,
+isofónicas; medir lo fuerte</title>
+  <style>
+    /* Default styles provided by pandoc.
+    ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+    */
+    html {
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    svg {
+      height: auto;
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      border: none;
+      border-top: 1px solid #1a1a1a;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+  </style>
+  <style>
+  /* Estilo compartido para los .md del curso convertidos a HTML
+     (misma familia editorial de las demos y del mapa del curso) */
+  :root { --tinta:#1a1a1a; --acento:#7a2e2e; --azul:#2e4a7a;
+          --papel:#faf8f4; --panel:#f0ece4; }
+  body { margin:0 auto; padding:2rem 1.4rem 4rem; max-width:820px;
+         background:var(--papel); color:var(--tinta);
+         font-family:Georgia,'Times New Roman',serif; line-height:1.55;
+         font-size:1.02rem; }
+  h1,h2,h3,h4 { font-family:Georgia,serif; line-height:1.25; }
+  h1 { font-size:1.6rem; border-bottom:2px solid var(--tinta);
+       padding-bottom:.3rem; }
+  h2 { font-size:1.25rem; margin-top:2rem; color:var(--acento); }
+  h3 { font-size:1.05rem; margin-top:1.5rem; }
+  a { color:var(--azul); }
+  blockquote { border-left:4px solid var(--acento); margin:1rem 0;
+               padding:.2rem 1rem; background:var(--panel);
+               border-radius:0 6px 6px 0; }
+  table { border-collapse:collapse; margin:1rem 0; font-size:.92rem;
+          display:block; overflow-x:auto; }
+  th { font-family:Helvetica,Arial,sans-serif; font-size:.78rem;
+       text-transform:uppercase; letter-spacing:.04em; text-align:left;
+       border-bottom:2px solid var(--tinta); padding:.45rem .6rem;
+       background:var(--papel); }
+  td { padding:.45rem .6rem; border-bottom:1px solid #ddd;
+       vertical-align:top; }
+  code { font-family:Menlo,Consolas,monospace; font-size:.86em;
+         background:var(--panel); padding:.08em .35em; border-radius:3px; }
+  pre { background:var(--panel); padding:.8rem 1rem; border-radius:6px;
+        overflow-x:auto; }
+  pre code { background:none; padding:0; }
+  hr { border:none; border-top:1px solid #ccc; margin:2rem 0; }
+  img { max-width:100%; }
+  li { margin-bottom:.25rem; }
+  math { font-size:1.05em; }
+  @media print { body { background:white; max-width:none; } }
+  </style>
+</head>
+<body>
+<h1
+id="sesión-06-sonoridad-y-decibel-intensidad-niveles-isofónicas-medir-lo-fuerte">Sesión
+06 — Sonoridad y decibel: intensidad, niveles, isofónicas; medir lo
+fuerte</h1>
+<p><strong>Objetivos que cubre</strong>: OA4.2 (principal: medir niveles
+sonoros e interpretar el decibel y las curvas de sonoridad en contextos
+musicales reales — incluye salud auditiva del músico, según diseno/01,
+riesgo aceptado 5, sin crear objetivo nuevo), OA2.1 (el par
+intensidad↔︎sonoridad no es lineal ni unívoco: depende del nivel y de la
+frecuencia). OA3.1 corre transversal en la escucha del día (con nota).
+OA5.1 avanza administrativamente: <strong>devolución del hito 1
+corregido</strong> (compromiso heredado de s05). <strong>Requisitos
+previos</strong>: s02 (ondas, presión,
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>v</mi><mo>=</mo><mi>λ</mi><mi>f</mi></mrow><annotation encoding="application/x-tex">v=\lambda f</annotation></semantics></math>),
+s05 (primera no-linealidad percepción↔︎física: la altura) y su
+<strong>ticket de salida</strong> respondido (“dos sonidos de la misma
+frecuencia, ¿pueden oírse a distinto volumen?; un grave y un agudo con
+la misma energía física, ¿suenan igual de fuertes?”), que el profesor
+trae recopilado. Los estudiantes traen: (a) audífonos personales; (b)
+celular con <strong>app de medición SPL instalada</strong> (lista en
+<code>materiales/apps_recomendadas.md</code>, anunciada en s05); (c)
+leída la <strong>lectura previa</strong>
+<code>libro/cap06_sonoridad_y_decibel.md</code> (o la tarea de escucha
+≤30 min si el punto de control de s05 activó el plan B).
+<strong>Posición en la progresión</strong>: segunda estación del bloque
+B (el sonido percibido). s05 mostró que la altura no copia la
+frecuencia; s06 muestra que la sonoridad no copia la intensidad — y
+agrega la tercera pata del curso: <strong>medirlo</strong> (OA4). Deja
+instaladas las estaciones de medición (formato 5), que reaparecen sobre
+el objeto del proyecto en s08–s12, el dB que s14 necesita para salas, y
+el vocabulario de niveles para la salud auditiva. s07 (prueba 1) evalúa
+lo de s06 <strong>solo con ítems básicos</strong> (regla de
+dimensionamiento: lo de la semana inmediatamente anterior no entra con
+transferencia). <strong>Reglas aplicadas</strong>: escucha del día (15′,
+con nota; estímulo 3′ + escritura 2′ + ronda de 4 sorteados × 2,5′ con
+cronómetro visible) en el primer bloque del módulo 1; módulo 2 abre con
+gancho sonoro breve sin ronda; la lectura previa se consume visiblemente
+en la mini-lección del módulo 1 y en la estación E4 (principio 6); el
+mini-informe SPL se completa (formulario de 4 casillas) y entrega EN
+aula (principio 5). <strong>Debutan las estaciones de medición
+formales</strong> (formato 5): cuello logístico = 1 interfaz + 1
+micrófono; la rotación está dimensionada abajo.</p>
+<h2 id="módulo-1-cuánto-es-el-doble-de-fuerte-variante-audición">Módulo
+1 — ¿Cuánto es “el doble de fuerte”? (variante: audición)</h2>
+<table>
+<colgroup>
+<col style="width: 20%" />
+<col style="width: 20%" />
+<col style="width: 20%" />
+<col style="width: 20%" />
+<col style="width: 20%" />
+</colgroup>
+<thead>
+<tr>
+<th>Tiempo</th>
+<th>Bloque</th>
+<th>Actividad del estudiante</th>
+<th>Rol del profesor</th>
+<th>Materiales</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0–8′</td>
+<td><strong>Devolución del hito 1 corregido (OA5.1)</strong></td>
+<td>Recibe la entrega corregida de su grupo; lee la observación
+principal con sus compañeros; anota en la bitácora del grupo <strong>1
+línea de compromiso</strong>: qué corrección incorporarán al diseño
+antes del hito 2 (s10)</td>
+<td>Devuelve las 5 entregas con pauta marcada; comenta al curso (2′) los
+2 aciertos y las 2 debilidades más repetidas (sin nombrar grupos);
+instruye qué hacer con la corrección: se responde por escrito en la
+bitácora y se cobra en el hito 2</td>
+<td>5 entregas corregidas con pauta; pizarrón</td>
+</tr>
+<tr>
+<td>8–23′</td>
+<td><strong>Escucha del día (OA3.1, con nota)</strong>: la mezcla que
+pierde el bajo</td>
+<td>Escucha el mismo fragmento musical dos veces: a nivel de sala
+realista y luego muy suave (estímulo 3′); todos anotan diagnóstico en 3
+líneas (describir → hipotetizar → verificar) (2′): ¿qué cambió
+<em>además</em> del volumen?; <strong>4 sorteados</strong> exponen
+(<strong>2,5′ c/u, cronómetro visible</strong>)</td>
+<td>Reproduce el fragmento fuerte y luego muy suave dentro de los 3′;
+evalúa con la planilla OA3 exigiendo separar “suena más despacio”
+(obvio) de “desaparecieron el bajo y el brillo” (el dato); NO explica
+todavía — anuncia que la sesión termina de resolverlo</td>
+<td>Fragmento de mezcla completa con bajo prominente (banco de estímulos
+#9); audio de sala; planilla de rúbrica con sorteo; cronómetro
+visible</td>
+</tr>
+<tr>
+<td>23–41′</td>
+<td><strong>Cobro del ticket de s05 + mini-lección: el decibel con
+aritmética mínima (OA2.1, OA4.2)</strong> — consume lectura previa</td>
+<td>Vota a mano alzada su ticket de s05 (misma frecuencia ↔︎ distinto
+volumen: sí; misma energía grave/agudo ↔︎ igual de fuerte: se resuelve
+hoy); sigue la construcción del dB; responde votaciones: “¿+10 dB es
+sumar poco o multiplicar por 10?”, “dos parlantes iguales, ¿+3, +6 o +10
+dB?”, “¿cuántas guitarras iguales para oír <em>el doble</em> de
+fuerte?”</td>
+<td>Instala con proporciones (estilo BEN 13): la intensidad útil al oído
+abarca un factor ~10¹²; el dB comprime ese rango; <strong>+10 dB = ×10
+en intensidad ≈ el doble de sonoridad; +3 dB = ×2 en intensidad, un
+cambio chico</strong>; define
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>L</mi><mi>p</mi></msub><annotation encoding="application/x-tex">L_p</annotation></semantics></math>
+en dB SPL re 20 µPa (notación de diseno/03); presenta las
+<strong>isofónicas</strong> (fones) cualitativamente y con ellas
+resuelve la escucha del día (a bajo nivel el oído pierde graves y
+agudos); nombra la <strong>ponderación A</strong> (“la curva que las
+apps imitan”) sin teoría de filtros</td>
+<td>Pizarrón; <code>demo_decibel_sonoridad.html</code> como apoyo
+visual; tickets de s05 recopilados</td>
+</tr>
+<tr>
+<td>41–63′</td>
+<td><strong>Experiencia guiada: mi curva isofónica (OA2.1,
+OA4.2)</strong> — formato 3</td>
+<td>PREDICE por escrito en su hoja (2′, antes de tocar la demo): “para
+sonar igual de fuerte que 1000 Hz, el tono de 125 Hz necesitará ¿más,
+igual o menos nivel?”; luego, por turnos con audífonos, cada integrante
+iguala la sonoridad contra la referencia de 1000 Hz en la demo —
+<strong>mínimo irrenunciable ★: 125, 1000 (referencia) y 4000 Hz; 250,
+2000 y 8000 Hz son opcionales para quien alcance</strong> (la forma de
+la curva se obtiene igual con 3 puntos bien tomados) — y <strong>copia
+SU curva</strong> a su hoja de registro. Aritmética declarada: fase de
+22′ − 2′ de predicción = 20′ ÷ 4 integrantes = <strong>~5′ por
+persona</strong> (≥2′: cumple); mientras uno mide, otro registra la
+puesta en común del grupo y los otros dos resuelven el ítem de
+proyección de la hoja</td>
+<td>Rota por los grupos (~4′ c/u); verifica al pasar que la predicción
+esté escrita antes de escuchar; provoca: “¿su curva es la de su
+compañero?, ¿a qué nivel de referencia está midiendo — y cambiaría con
+otro nivel?”; recuerda la advertencia de la demo: sin calibración los dB
+son relativos, lo que vale es la FORMA</td>
+<td>5 notebooks con <code>demo_decibel_sonoridad.html</code>; audífonos
+personales; hoja de registro “mi curva isofónica” (1 por
+estudiante)</td>
+</tr>
+<tr>
+<td>63–70′</td>
+<td>Puesta en común y síntesis (OA2.1)</td>
+<td>Un vocero por grupo describe la forma de la curva del grupo (¿dónde
+pidió más nivel?); todos anotan la moraleja: <strong>igual nivel físico
+≠ igual sonoridad; el oído es más sordo a los graves, y más cuanto más
+bajo el nivel</strong></td>
+<td>Superpone las formas de los 5 grupos en el pizarrón sobre ejes
+Hz/dB; cierra conectando con la escucha del día (por eso la mezcla suave
+“perdió” el bajo) y deja el puente: en el módulo 2, esto se mide en la
+sala</td>
+<td>Pizarrón; hojas de registro (se recogen al final del módulo 2 junto
+con el mini-informe)</td>
+</tr>
+</tbody>
+</table>
+<h2
+id="módulo-2-medir-lo-fuerte-variante-medición-debut-del-formato-5">Módulo
+2 — Medir lo fuerte (variante: medición — debut del formato 5)</h2>
+<table>
+<colgroup>
+<col style="width: 20%" />
+<col style="width: 20%" />
+<col style="width: 20%" />
+<col style="width: 20%" />
+<col style="width: 20%" />
+</colgroup>
+<thead>
+<tr>
+<th>Tiempo</th>
+<th>Bloque</th>
+<th>Actividad del estudiante</th>
+<th>Rol del profesor</th>
+<th>Materiales</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0–8′</td>
+<td>Gancho sonoro: ¿cuatro palmas son cuatro veces más fuerte?</td>
+<td>Escucha 1 persona aplaudiendo sostenido y luego 4 a la vez, con la
+app SPL proyectada midiendo; vota ANTES a mano alzada: ¿el medidor
+subirá ~3, ~6 o ~12 dB?; anota su predicción</td>
+<td>Coordina a 4 voluntarios aplaudiendo parejo; muestra la lectura sin
+comentarla (“el número queda en suspenso hasta la estación E3, donde lo
+van a medir ustedes con fuentes controladas”)</td>
+<td>Celular con app SPL proyectado (o lectura en voz alta); 4
+voluntarios</td>
+</tr>
+<tr>
+<td>8–15′</td>
+<td>Pregunta de medición + logística de estaciones (OA4.2)</td>
+<td>Recibe la guía y su ruta de rotación (grupo 1 parte en E1, grupo 2
+en E2, …); reparte los 4 roles (ejecuta/mide/registra/vocero), que
+<strong>rotan al cambiar de estación</strong>; pregunta dudas de
+procedimiento ahora (no durante la rotación)</td>
+<td>Presenta la pregunta de la semana (“¿qué tan fuerte es nuestro mundo
+musical, y cómo se mide con juicio?”) y las 5 estaciones en 1 lámina;
+explica la regla <strong>7′ de trabajo + 1′ de rotación</strong> con
+cronómetro proyectado; designa E1 como estación silenciosa (el resto no
+grita al lado del micrófono)</td>
+<td>Guía de estaciones (1 por grupo); lámina con el mapa de estaciones;
+cronómetro proyectado</td>
+</tr>
+<tr>
+<td>15–55′</td>
+<td><strong>Estaciones de medición de niveles (OA4.2) — 5 grupos × 5
+estaciones × (7′+1′)</strong></td>
+<td><strong>E1 (micrófono/interfaz + notebook)</strong>: mide la voz
+hablada/cantada de un integrante a 30 cm y a 3 m; compara la lectura
+fina con la app del celular puesta al lado (¿cuánto difieren?).
+<strong>E2 (celulares, mapa)</strong>: levanta el mapa de niveles de 4
+puntos de la sala con fuente fija (¿dónde se ensaya más protegido?).
+<strong>E3 (celulares, suma)</strong>: mide 1 celular sonando un tono,
+luego 2 idénticos juntos, y contrasta con su predicción del gancho (¿+3
+dB?). <strong>E4 (papel, cálculo)</strong>: resuelve con las reglas
++10/+3 los 4 ítems de aritmética de dB de la guía (estilo ROS cap. 6).
+<strong>E5 (papel + app, dosis)</strong>: estima con la tabla de la guía
+cuánto tiempo de ensayo “gasta” el oído a distintos niveles y qué hacer
+al respecto (salud auditiva del músico)</td>
+<td>Ancla cerca de E1 (la estación con equipamiento delicado y cuello
+único) y desde ahí vigila el cronómetro y la rotación; en cada pasada
+provoca en E3 (“¿por qué NO da +6?”) y en E5 (“¿cuántos dB le baja un
+protector — y cuánto tiempo le compra?”)</td>
+<td>E1: interfaz + micrófono + notebook con software de medición; E2–E3:
+≥2 celulares con app SPL por grupo + 1 celular emisor de tono; E4–E5:
+guía impresa, calculadora del celular; planilla de datos por grupo</td>
+</tr>
+<tr>
+<td>55–60′</td>
+<td>Puesta en común: los datos de todos (OA4.2) — comprimida a 5′ (el
+fusible que s08 usa)</td>
+<td>El vocero de cada grupo aporta a la planilla proyectada su dato
+clave (E1: diferencia app↔︎micrófono; E3: cuánto dio la suma; E2: punto
+más ruidoso), sin comentario extendido</td>
+<td>Tabula en la planilla proyectada; <strong>cobra el gancho</strong>:
+¿dieron las palmas y los celulares ~+3 dB por duplicar la fuente?
+conecta con BEN 13: por eso duplicar la orquesta no duplica lo fuerte;
+remata: las comparaciones relativas con el mismo aparato son confiables,
+los absolutos sin calibrar no</td>
+<td>Planilla proyectada; pizarrón</td>
+</tr>
+<tr>
+<td>60–70′</td>
+<td><strong>Mini-informe SPL (cierre en aula, formulario) + ticket de
+salida + anuncios</strong></td>
+<td>El grupo completa el <strong>formulario de 4 casillas
+rotuladas</strong> (pregunta / dato / interpretación / límite — los
+mismos 4 puntos de la pauta, sin prosa) impreso <strong>al dorso de la
+planilla</strong> que el registrador fue llenando en las estaciones; lo
+entrega al salir junto con las hojas isofónicas del m1; escribe su
+ticket hacia s07 <strong>mientras el profesor anuncia</strong> (actos
+compatibles, como en s09 y s10): “dos flautas tocan la MISMA nota y una
+queda apenas desafinada: ¿qué se oye? ¿y si la desafinación crece?”</td>
+<td>Recoge planillas con el formulario al dorso (rúbrica rápida: es el
+taller de la semana) y tickets; <strong>anuncia la PRUEBA 1 en
+s07</strong> (módulo 1 completo; entra s01–s06, lo de s06 solo básico;
+con audio) y que el módulo 2 de s07 será audición liviana donde el
+ticket de hoy se responde con los oídos</td>
+<td>Formulario de 4 casillas al dorso de la planilla (pauta al pie de la
+guía); tickets de salida</td>
+</tr>
+</tbody>
+</table>
+<h2 id="verificación-de-aprendizaje">Verificación de aprendizaje</h2>
+<ul>
+<li><strong>Ronda oral OA3 con nota</strong>: 4 registros en planilla;
+el estímulo exige distinguir descripción (“bajó el volumen”) de
+observación fina (“desapareció el bajo”) y proponer verificación (medir
+el espectro a ambos niveles) — dimensiones D1, D2, D3.</li>
+<li><strong>Hoja de registro “mi curva isofónica”</strong> (individual,
+m1): predicción escrita antes de escuchar; los puntos ★ obligatorios
+igualados (los opcionales si alcanzó) y curva copiada; el ítem de
+proyección respondido. Se recoge con el mini-informe.</li>
+<li><strong>Mini-informe SPL por grupo</strong> (formulario de 4
+casillas al dorso de la planilla, cierre en aula, OA4.2): rúbrica rápida
+logrado/parcial/incipiente. Criterios: dato con unidad, condiciones
+anotadas (app, celular, distancia), interpretación que usa correctamente
++10/+3 dB, y un límite de la medición declarado (calibración/AGC).
+Cuenta, junto con la hoja isofónica, como el taller de la semana (25
+%).</li>
+<li><strong>Gancho cobrado</strong>: la sala converge a “duplicar
+fuentes ≈ +3 dB, y el doble de fuerte necesita ≈ +10 dB (unas diez
+fuentes)”.</li>
+<li><strong>Devolución del hito 1</strong>: 5 bitácoras con línea de
+compromiso escrita (se cobra en el hito 2, s10).</li>
+<li><strong>Ticket de salida</strong> hacia s07: siembra los batidos
+(módulo 2 de s07).</li>
+</ul>
+<h2 id="aritmética-de-taller-declarada-regla-6b">Aritmética de taller
+declarada (regla 6b)</h2>
+<ul>
+<li><strong>Escucha del día</strong>: 3′ + 2′ + 4×2,5′ = 15′ ✓.</li>
+<li><strong>Experiencia isofónica (m1)</strong>: 22′ = 2′ predicción +
+20′ medición; 1 notebook/grupo ÷ 4 integrantes = ~5′/persona (protocolo
+★ de 3 frecuencias obligatorias ≈ 1,5–2′ por igualación, ritmo de
+novato,
+<ul>
+<li>cambio de audífonos; 250, 2000 y 8000 Hz opcionales para rápidos) ✓
+≥2′.</li>
+</ul></li>
+<li><strong>Estaciones (m2)</strong>: 5 estaciones × (7′+1′) = 40′ ✓;
+dentro de cada estación, roles rotativos → cada integrante ejecuta o
+mide en ≥2 estaciones. E1 usa la única interfaz: por eso es estación
+fija con el profesor anclado al lado.</li>
+<li><strong>Mini-informe</strong>: formulario de 4 casillas (sin prosa)
+al dorso de la planilla, en 10′ desde los 60′ (puesta en común
+comprimida de 8′ a 5′, el fusible que s08 usa); viable SOLO porque la
+planilla del registrador se llenó durante la rotación (la pauta lo
+exige). El ticket se escribe mientras el profesor anuncia (actos
+compatibles, como en s09 y s10).</li>
+</ul>
+<h2 id="pendientes-de-producción">Pendientes de producción</h2>
+<ul>
+<li><strong>Demo</strong> (skill /demo-interactiva):
+<code>demo_decibel_sonoridad.html</code> — tono de prueba de frecuencia
+seleccionable vs. referencia de 1000 Hz; el usuario iguala sonoridades y
+la demo dibuja SU curva isofónica en ejes Hz/dB; advertencia visible de
+dB relativos sin calibración. [Única demo nueva de la sesión.]</li>
+<li><strong>Apuntes</strong>:
+<code>sesiones/s06/apuntes/apunte_s06_sonoridad_y_decibel.md</code>.</li>
+<li><strong>Capítulo (lectura previa)</strong>:
+<code>libro/cap06_sonoridad_y_decibel.md</code>.</li>
+<li><strong>Actividades</strong>: hoja de registro “mi curva isofónica”
++ guía de estaciones de medición de niveles (incluye ítems E4/E5 y pauta
+del mini-informe) — en <code>sesiones/s06/actividades/</code>.</li>
+<li><strong>Trabajo previo del profesor (esta semana)</strong>:
+grabar/elegir el fragmento de mezcla completa con bajo prominente y
+PROBARLO en el equipo de la sala a los dos niveles (banco de estímulos
+#9); verificar interfaz + micrófono + software de medición en el
+notebook de E1 y fijar su configuración (misma ganancia toda la sesión);
+instalar y probar la app SPL elegida en su propio celular (la misma para
+proyectar el gancho); imprimir guías, hojas isofónicas, pauta OA3 y
+entregas corregidas del hito 1; <strong>corregir el hito 1 (pico
+declarado ≈3 h, metodología §4)</strong>; sonómetro de referencia para
+E1 si existe <strong>[POR VERIFICAR — pendiente global 9 de metodología
+§6]</strong>.</li>
+<li><strong>Prueba 1 (para s07)</strong>: redactarla esta semana; lo de
+s06 entra solo con ítems básicos (leer un nivel, aplicar +10/+3, leer
+una isofónica).</li>
+</ul>
+<h2 id="riesgos-y-plan-b">Riesgos y plan B</h2>
+<ul>
+<li><strong>La escucha del día no “pierde” el bajo en la sala</strong>
+(equipo con poca excursión de nivel o fragmento mal elegido) → probar
+ANTES con el espectrograma del celular; plan B: reproducir el fragmento
+suave en el parlante del celular del profesor (ya validado en s05 que la
+sala lo oye) y fuerte en el equipo de sala.</li>
+<li><strong>El nivel de referencia de la demo queda demasiado bajo o
+alto en algún notebook</strong> (volumen del sistema distinto por grupo)
+→ la guía fija el procedimiento de ajuste inicial (referencia cómoda, ni
+susurro ni molestia) y recuerda que la curva es RELATIVA: la forma no
+depende del volumen exacto del notebook, aunque sí algo del nivel (si
+hay tiempo, un grupo rápido repite 2 puntos con referencia más suave y
+lo reporta como dato).</li>
+<li><strong>La interfaz de E1 falla</strong> (driver, cable, software) →
+E1 degrada a “app del celular del profesor como referencia común”: se
+pierde la medición fina pero no la comparación app↔︎referencia; el cuello
+está aceptado en metodología §7 (riesgo 6).</li>
+<li><strong>Estaciones desincronizadas</strong> (un grupo se atrasa y
+tapona la rotación) → el cronómetro proyectado manda: al minuto de
+rotación se cambia con lo que haya; la guía marca en cada estación el
+“mínimo irrenunciable” (1 dato anotado con condiciones) y el resto como
+opcional.</li>
+<li><strong>Apps SPL con lecturas absurdamente dispares</strong> (±10 dB
+entre celulares) → es dato, no fracaso: la puesta en común lo tematiza
+(calibración, AGC, micrófonos distintos) y el mini-informe tiene el
+campo “límite de la medición” justamente para eso.</li>
+<li><strong>La devolución del hito 1 se alarga</strong> (grupos que
+quieren discutir su nota) → regla anunciada: hoy solo se lee y se anota
+el compromiso; las apelaciones se resuelven por correo u horario de
+consulta, no en aula.</li>
+<li><strong>El punto de control de s05 activó el plan B de
+lectura</strong> → la lectura previa de s06 se reemplaza por tarea de
+escucha ≤30 min (explorar la demo isofónica en casa con audífonos y
+traer 1 punto medido); la mini-lección del m1 consume esa exploración en
+vez del capítulo.</li>
+</ul>
+</body>
+</html>

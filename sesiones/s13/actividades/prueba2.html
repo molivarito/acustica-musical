@@ -1,0 +1,553 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="es" xml:lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>Prueba 2 — Acústica Musical UC</title>
+  <style>
+    /* Default styles provided by pandoc.
+    ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+    */
+    html {
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    svg {
+      height: auto;
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      border: none;
+      border-top: 1px solid #1a1a1a;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+  </style>
+  <style>
+  /* Estilo compartido para los .md del curso convertidos a HTML
+     (misma familia editorial de las demos y del mapa del curso) */
+  :root { --tinta:#1a1a1a; --acento:#7a2e2e; --azul:#2e4a7a;
+          --papel:#faf8f4; --panel:#f0ece4; }
+  body { margin:0 auto; padding:2rem 1.4rem 4rem; max-width:820px;
+         background:var(--papel); color:var(--tinta);
+         font-family:Georgia,'Times New Roman',serif; line-height:1.55;
+         font-size:1.02rem; }
+  h1,h2,h3,h4 { font-family:Georgia,serif; line-height:1.25; }
+  h1 { font-size:1.6rem; border-bottom:2px solid var(--tinta);
+       padding-bottom:.3rem; }
+  h2 { font-size:1.25rem; margin-top:2rem; color:var(--acento); }
+  h3 { font-size:1.05rem; margin-top:1.5rem; }
+  a { color:var(--azul); }
+  blockquote { border-left:4px solid var(--acento); margin:1rem 0;
+               padding:.2rem 1rem; background:var(--panel);
+               border-radius:0 6px 6px 0; }
+  table { border-collapse:collapse; margin:1rem 0; font-size:.92rem;
+          display:block; overflow-x:auto; }
+  th { font-family:Helvetica,Arial,sans-serif; font-size:.78rem;
+       text-transform:uppercase; letter-spacing:.04em; text-align:left;
+       border-bottom:2px solid var(--tinta); padding:.45rem .6rem;
+       background:var(--papel); }
+  td { padding:.45rem .6rem; border-bottom:1px solid #ddd;
+       vertical-align:top; }
+  code { font-family:Menlo,Consolas,monospace; font-size:.86em;
+         background:var(--panel); padding:.08em .35em; border-radius:3px; }
+  pre { background:var(--panel); padding:.8rem 1rem; border-radius:6px;
+        overflow-x:auto; }
+  pre code { background:none; padding:0; }
+  hr { border:none; border-top:1px solid #ccc; margin:2rem 0; }
+  img { max-width:100%; }
+  li { margin-bottom:.25rem; }
+  math { font-size:1.05em; }
+  @media print { body { background:white; max-width:none; } }
+  </style>
+</head>
+<body>
+<h1 id="prueba-2-acústica-musical-uc">Prueba 2 — Acústica Musical
+UC</h1>
+<p><strong>Sesión 13, módulo 1.</strong> Evalúa OA1.2 (resonancia,
+impedancia, acoplamiento, proporciones), OA1.3 (mecanismos de excitación
+y regímenes de oscilación), OA2.2 (batidos, banda crítica, rugosidad),
+OA2.3 (escalas, temperamentos y cents) y OA3.1 (escucha escrita), sobre
+el contenido de las sesiones 08–12. <strong>Lo de s12 entra solo en
+versión básica</strong> (tubo abierto/cerrado,
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>v</mi><mi>/</mi><mn>2</mn><mi>L</mi></mrow><annotation encoding="application/x-tex">v/2L</annotation></semantics></math>–<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>v</mi><mi>/</mi><mn>4</mn><mi>L</mi></mrow><annotation encoding="application/x-tex">v/4L</annotation></semantics></math>,
+registros), según lo anunciado en s12. Este archivo es el
+<strong>cuadernillo del estudiante</strong> (imprimir 22 copias) más, al
+final, la especificación de la hoja de figuras. La pauta de corrección
+con puntajes y mapeo ítem→OA está en <code>prueba2_pauta.md</code>.</p>
+<hr />
+<p><strong>Nombre:</strong> ________________________________
+<strong>Fecha:</strong> ____________</p>
+<p><strong>Puntaje total: 64 puntos · Tiempo: 60 minutos · Nota 4,0 con
+38,4 puntos (exigencia 60 %).</strong></p>
+<p><strong>Instrucciones</strong></p>
+<ol type="1">
+<li>Responda en los espacios de este cuadernillo, con letra legible.
+Respuestas cortas y precisas valen más que respuestas largas.</li>
+<li>Recibirá además una <strong>hoja de figuras</strong> (Figuras 1 y
+2). Entréguela junto con el cuadernillo.</li>
+<li>La prueba <strong>suena</strong>: hay 3 estímulos de audio que se
+reproducen por el equipo de la sala según el calendario del pizarrón
+(minuto 10: Estímulo 1; minuto 25: Estímulos 2 y 3; minuto 40: pasada de
+repaso de los tres). Cada estímulo suena <strong>dos veces</strong> en
+su momento, más una vez en el repaso. Mientras suena el audio, solo se
+escucha.</li>
+<li>No se necesita calculadora: toda la aritmética es de proporciones y
+sumas de cents. No se permite celular, audífonos ni apuntes.</li>
+<li>Las preguntas de desarrollo piden <strong>una o dos frases</strong>:
+se evalúa la idea correcta, no la extensión.</li>
+</ol>
+<hr />
+<h2 id="parte-a-escucha-escrita-16-puntos-10-minutos">Parte A — Escucha
+escrita (16 puntos, ~10 minutos)</h2>
+<p><strong>Estímulo 1</strong> (minuto 10, dos reproducciones).
+Escuchará <strong>el mismo par de notas sostenidas — el mismo intervalo,
+tocado por las mismas fuentes — dos veces seguidas, en dos condiciones
+distintas</strong>. Su tarea es diagnosticar la diferencia como lo
+hacemos cada semana en la escucha del día. Se evalúa con la rúbrica del
+curso (las cuatro dimensiones, incluida la distinción entre lo que usted
+<em>oye</em> y lo que usted <em>interpreta</em>).</p>
+<p><strong>A.1 — Describa</strong> lo que oyó, con vocabulario técnico,
+separando dimensiones (altura, sonoridad, timbre, evolución temporal):
+¿qué cambió entre la primera y la segunda versión, y qué se mantuvo?</p>
+<hr />
+<hr />
+<hr />
+<hr />
+<p><strong>A.2 — Hipótesis</strong>: proponga un mecanismo físico que
+produzca exactamente eso que describió (cadena causa–efecto: “cambió X,
+y eso hace que Y, por eso se oye Z”).</p>
+<hr />
+<hr />
+<hr />
+<hr />
+<p><strong>A.3 — Verificación</strong>: proponga una medición concreta,
+factible con los medios del curso (celular, app, notebook), que
+confirmaría o refutaría su hipótesis. Indique <strong>qué esperaría ver
+(u oír, contando)</strong> si su hipótesis es correcta.</p>
+<hr />
+<hr />
+<hr />
+<h2 id="parte-b-casos-sonoros-y-figura-18-puntos-15-minutos">Parte B —
+Casos sonoros y figura (18 puntos, ~15 minutos)</h2>
+<h3 id="b.1-la-curva-de-respuesta-8-puntos">B.1 — La curva de respuesta
+(8 puntos)</h3>
+<p>La <strong>Figura 1</strong> muestra las curvas de respuesta de dos
+resonadores, <strong>R1 y R2</strong>, medidas excitando cada uno con un
+tono de frecuencia variable y anotando cuánto responde. Ambos tienen su
+máximo en la misma frecuencia propia,
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>f</mi><mn>0</mn></msub><mo>=</mo><mn>200</mn></mrow><annotation encoding="application/x-tex">f_0 = 200</annotation></semantics></math>
+Hz.</p>
+<ol type="a">
+<li>(2 pts) Identifique los ejes de la figura: ¿qué magnitud (y unidad,
+si corresponde) hay en el eje horizontal y cuál en el vertical?</li>
+</ol>
+<p>Horizontal: ____________________ Vertical: ____________________</p>
+<ol start="2" type="a">
+<li>(2 pts) Uno de los dos resonadores es “tipo copa de cristal” (muy
+poco amortiguado) y el otro “tipo bandeja sujeta con la mano” (muy
+amortiguado). ¿Cuál es cuál? Dé <strong>un rasgo observable en la
+figura</strong> que fundamente su respuesta.</li>
+</ol>
+<hr />
+<hr />
+<ol start="3" type="a">
+<li>(2 pts) Se excita a ambos resonadores con un tono parejo de
+<strong>190 Hz</strong> (10 Hz bajo
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>f</mi><mn>0</mn></msub><annotation encoding="application/x-tex">f_0</annotation></semantics></math>).
+¿Cuál de los dos responde con <strong>más</strong> amplitud? Léalo de la
+figura e indique cómo.</li>
+</ol>
+<hr />
+<hr />
+<ol start="4" type="a">
+<li>(2 pts) Se corta bruscamente la excitación. ¿Cuál de los dos sigue
+sonando (“ping”) por más tiempo? Justifique con la regla del curso que
+conecta el ancho del pico con el transiente y el decaimiento.</li>
+</ol>
+<hr />
+<hr />
+<h3 id="b.2-el-barrido-6-puntos">B.2 — El barrido (6 puntos)</h3>
+<p><strong>Estímulo 2</strong> (minuto 25, dos reproducciones).
+Escuchará <strong>dos tonos puros</strong>: uno queda fijo y el otro
+<strong>sube lentamente</strong> desde el unísono hasta separarse
+alrededor de una tercera (~20 segundos).</p>
+<ol type="a">
+<li>(2 pts) Describa, <strong>en orden</strong>, las etapas que se oyen
+durante el barrido (qué se oye al principio, qué va apareciendo, cómo
+termina).</li>
+</ol>
+<hr />
+<hr />
+<hr />
+<ol start="2" type="a">
+<li>(4 pts) Al final del barrido los dos tonos suenan <strong>lisos y
+separados</strong>, aunque siguen sonando juntos. Explique por qué la
+aspereza desaparece cuando la separación crece, usando lo que el curso
+sabe del oído interno (membrana basilar, banda crítica). (Cadena
+causa–efecto de 2–3 frases.)</li>
+</ol>
+<hr />
+<hr />
+<hr />
+<h3 id="b.3-el-salto-4-puntos">B.3 — El salto (4 puntos)</h3>
+<p><strong>Estímulo 3</strong> (minuto 25, dos reproducciones).
+Escuchará una <strong>flauta</strong> que sostiene una nota grave y,
+<strong>sin cambiar la digitación</strong>, aumenta gradualmente la
+fuerza del soplo hasta que la nota salta.</p>
+<ol type="a">
+<li>(2 pts) ¿Qué intervalo saltó la nota? ¿El cambio fue gradual
+(glissando) o de golpe? Sea preciso.</li>
+</ol>
+<hr />
+<ol start="2" type="a">
+<li>(2 pts) Explique por qué soplar más fuerte <strong>no</strong> sube
+la altura “de a poco”: ¿entre qué opciones puede elegir la nota, y quién
+las fija? (Use la idea de modos de la columna y régimen de
+oscilación.)</li>
+</ol>
+<hr />
+<hr />
+<h2 id="parte-c-predecir-con-proporciones-20-puntos-20-minutos">Parte C
+— Predecir con proporciones (20 puntos, ~20 minutos)</h2>
+<h3 id="c.1-el-tubo-del-taller-6-puntos">C.1 — El tubo del taller (6
+puntos)</h3>
+<p>Un tubo de PVC como los del taller de lutería mide <strong>34,3
+cm</strong>. Tome
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>v</mi><mo>≈</mo><mn>343</mn></mrow><annotation encoding="application/x-tex">v \approx 343</annotation></semantics></math>
+m/s para el sonido en el aire.</p>
+<ol type="a">
+<li>(2 pts) Con <strong>ambos extremos abiertos</strong>, ¿cuál es su
+frecuencia fundamental? Indique la proporción que usó.</li>
+</ol>
+<p><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>f</mi><mn>1</mn></msub><mo>≈</mo></mrow><annotation encoding="application/x-tex">f_1 \approx</annotation></semantics></math>
+____________ porque ______________________________</p>
+<ol start="2" type="a">
+<li>(2 pts) Se <strong>tapa un extremo</strong>. ¿Cuál es ahora la
+fundamental, y qué relación musical tiene con la nota anterior?</li>
+</ol>
+<p><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>f</mi><mn>1</mn></msub><mo>≈</mo></mrow><annotation encoding="application/x-tex">f_1 \approx</annotation></semantics></math>
+____________ relación: ___________________________</p>
+<ol start="3" type="a">
+<li>(2 pts) La <strong>Figura 2</strong> muestra los espectros de ese
+mismo tubo sonando en sus dos configuraciones (X e Y, en algún orden).
+¿Cuál de los dos espectros es el <strong>tubo tapado</strong>? Explique
+cómo se decide mirando qué parciales están y cuáles faltan.</li>
+</ol>
+<hr />
+<hr />
+<h3 id="c.2-la-cuenta-que-no-cierra-6-puntos">C.2 — La cuenta que no
+cierra (6 puntos)</h3>
+<p>Recuerde: una quinta justa (3:2) mide <strong>~702 cents</strong>;
+una octava, <strong>1200 cents</strong>; un semitono del temperamento
+igual, <strong>100 cents</strong>.</p>
+<ol type="a">
+<li>(2 pts) Apile <strong>12 quintas justas</strong> y compare con
+<strong>7 octavas</strong> (en cents: es una multiplicación y una
+resta). ¿Cuánto sobra, cómo se llama ese sobrante, y de qué tamaño
+musical aproximado es?</li>
+</ol>
+<hr />
+<hr />
+<ol start="2" type="a">
+<li>(2 pts) El temperamento igual reparte ese sobrante <strong>en partes
+iguales</strong> entre las 12 quintas. ¿Cuánto se estrecha cada quinta?
+¿Por qué ese sacrificio resulta casi imperceptible al oído?</li>
+</ol>
+<hr />
+<hr />
+<ol start="3" type="a">
+<li>(2 pts) La tercera mayor del temperamento igual mide <strong>400
+cents</strong>; la tercera justa (5:4), <strong>~386 cents</strong>.
+Comparando este sacrificio con el de las quintas: ¿cuál de los dos
+intervalos temperados “late” más rápido y se oye más áspero? Justifique
+con los tamaños en cents.</li>
+</ol>
+<hr />
+<hr />
+<h3 id="c.3-la-botella-y-la-caja-8-puntos">C.3 — La botella y la caja (8
+puntos)</h3>
+<ol type="a">
+<li>(2 pts) Una botella <strong>soplada</strong> en el gollete da una
+nota. Se le agrega agua y se vuelve a soplar. ¿La nota sube o baja? ¿Por
+qué? (¿Qué es lo que vibra, y qué le cambió el agua?)</li>
+</ol>
+<hr />
+<hr />
+<ol start="2" type="a">
+<li>(2 pts) La misma botella, ahora <strong>golpeada</strong> con una
+cuchara, también da una nota. Con más agua, esa nota ¿sube o baja? ¿Por
+qué la respuesta puede ser distinta a la de (a)?</li>
+</ol>
+<hr />
+<hr />
+<ol start="3" type="a">
+<li>(2 pts) Un elástico estirado y pulsado <strong>en el aire</strong>
+casi no se oye, aunque se ve vibrar. Apoyado sobre una <strong>caja de
+cartón</strong>, suena claramente. Explique qué cambia, usando las ideas
+de impedancia y acoplamiento (¿por qué el elástico solo “no convence” al
+aire?).</li>
+</ol>
+<hr />
+<hr />
+<ol start="4" type="a">
+<li>(2 pts) Sobre la caja, el elástico suena <strong>más
+fuerte</strong>. ¿Su vibración dura <strong>más o menos</strong> tiempo
+que en el aire? Explique con el argumento de energía del curso (¿la caja
+agrega energía?).</li>
+</ol>
+<hr />
+<hr />
+<h2 id="parte-d-mecanismos-y-vocabulario-10-puntos-8-minutos">Parte D —
+Mecanismos y vocabulario (10 puntos, ~8 minutos)</h2>
+<h3 id="d.1-el-mapa-de-las-válvulas-4-puntos">D.1 — El mapa de las
+válvulas (4 puntos)</h3>
+<p>Complete la tabla (0,5 pts por casilla). En la primera columna
+indique si la energía llega <strong>de una vez</strong> o en forma
+<strong>continua</strong>; en la segunda, <strong>qué hace de
+válvula</strong> — qué corta la energía en porciones periódicas — o
+escriba “no hay” si la oscilación es libre.</p>
+<table>
+<thead>
+<tr>
+<th>Instrumento</th>
+<th>¿Energía de una vez o continua?</th>
+<th>Válvula (o “no hay”)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Guitarra (cuerda pulsada)</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Piano (cuerda golpeada por el martillo)</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Violín (cuerda frotada)</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Flauta (columna soplada)</td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h3 id="d.2-la-regla-de-los-cents-3-puntos">D.2 — La regla de los cents
+(3 puntos)</h3>
+<ol type="a">
+<li>(1 pt) ¿Cuántos cents mide un semitono del temperamento igual? ¿Y
+una octava?</li>
+</ol>
+<p>Semitono: __________ Octava: __________</p>
+<ol start="2" type="a">
+<li>(1 pt) El afinador marca su nota con <strong>−50 cents</strong>.
+¿Qué fracción de semitono es eso, y la nota está alta o baja?</li>
+</ol>
+<hr />
+<ol start="3" type="a">
+<li>(1 pt) Para apilar dos intervalos medidos en cents, ¿los cents se
+<strong>suman</strong> o se <strong>multiplican</strong>? (Esa es
+precisamente la gracia de la unidad: diga cuál.)</li>
+</ol>
+<hr />
+<h3 id="d.3-el-arco-que-aprieta-3-puntos">D.3 — El arco que aprieta (3
+puntos)</h3>
+<p>Una violinista sostiene una nota larga y, <strong>sin mover el dedo
+de la cuerda</strong>, aprieta más el arco y lo mueve más lento. ¿La
+altura sube, baja o se queda? ¿Qué es lo que cambia entonces? ¿Y qué
+pasa si exagera mucho la presión? (Tres respuestas breves; use la idea
+de quién pone el “metrónomo” del régimen.)</p>
+<hr />
+<hr />
+<hr />
+<p>— <em>Fin de la prueba. Revise que respondió las cuatro partes y
+entregue el cuadernillo junto con la hoja de figuras.</em> —</p>
+<hr />
+<h2
+id="especificación-de-la-hoja-de-figuras-para-producción-no-se-imprime-en-el-cuadernillo">Especificación
+de la hoja de figuras (para producción; NO se imprime en el
+cuadernillo)</h2>
+<p>El profesor genera las dos figuras esta semana (desde las demos del
+curso o redibujadas con software propio, NO fotocopiadas de un libro) y
+las imprime en UNA hoja aparte (tamaño carta, una cara, figuras grandes
+y en escala de grises legible).</p>
+<ul>
+<li><strong>Figura 1 — Curvas de respuesta de dos resonadores</strong>
+(generar con <code>demo_resonancia.html</code> de s10 en dos
+amortiguamientos, o redibujar): ejes — horizontal: frecuencia de
+excitación, 0–400 Hz, rotulada cada 50 Hz; vertical: amplitud de
+respuesta (unidades relativas, sin cifras). Dos curvas rotuladas
+<strong>R1</strong> y <strong>R2</strong>, ambas con máximo en
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>f</mi><mn>0</mn></msub><mo>=</mo><mn>200</mn></mrow><annotation encoding="application/x-tex">f_0 = 200</annotation></semantics></math>
+Hz: R1 con pico <strong>alto y angosto</strong> (ancho de ~10 Hz a media
+altura) y R2 con pico <strong>bajo y ancho</strong> (~80 Hz a media
+altura). <strong>Verificación imprescindible</strong>: en 190 Hz debe
+leerse con claridad que R2 queda POR ENCIMA de R1 (R1 ya cayó casi a
+cero; R2 sigue cerca de su máximo) — el ítem B.1c depende de eso. Marcar
+una línea vertical punteada en 190 Hz para guiar la lectura.</li>
+<li><strong>Figura 2 — Espectros del tubo en sus dos
+configuraciones</strong> (generar con
+<code>demo_tubo_agujeros.html</code> de s12 o redibujar): dos paneles
+apilados con los mismos ejes — frecuencia 0–1600 Hz lineal, rotulada
+cada 250 Hz; nivel en dB relativos (sin cifras). <em>Espectro X</em>:
+picos en <strong>250, 750 y 1250 Hz</strong> (solo impares de 250 — el
+tubo tapado; deben FALTAR visiblemente 500 y 1000). <em>Espectro Y</em>:
+picos en <strong>500, 1000 y 1500 Hz</strong> (serie completa del tubo
+abierto). Amplitudes decrecientes con la frecuencia en ambos. Los
+valores deben ser legibles contra la grilla de 250 Hz para que C.1c
+cierre con las respuestas calculadas en C.1a–b.</li>
+</ul>
+</body>
+</html>

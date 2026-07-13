@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="es" xml:lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>Capítulo 1 — Del golpe al tono</title>
+  <style>
+    /* Default styles provided by pandoc.
+    ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+    */
+    html {
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    svg {
+      height: auto;
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      border: none;
+      border-top: 1px solid #1a1a1a;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+  </style>
+  <style>
+  /* Estilo compartido para los .md del curso convertidos a HTML
+     (misma familia editorial de las demos y del mapa del curso) */
+  :root { --tinta:#1a1a1a; --acento:#7a2e2e; --azul:#2e4a7a;
+          --papel:#faf8f4; --panel:#f0ece4; }
+  body { margin:0 auto; padding:2rem 1.4rem 4rem; max-width:820px;
+         background:var(--papel); color:var(--tinta);
+         font-family:Georgia,'Times New Roman',serif; line-height:1.55;
+         font-size:1.02rem; }
+  h1,h2,h3,h4 { font-family:Georgia,serif; line-height:1.25; }
+  h1 { font-size:1.6rem; border-bottom:2px solid var(--tinta);
+       padding-bottom:.3rem; }
+  h2 { font-size:1.25rem; margin-top:2rem; color:var(--acento); }
+  h3 { font-size:1.05rem; margin-top:1.5rem; }
+  a { color:var(--azul); }
+  blockquote { border-left:4px solid var(--acento); margin:1rem 0;
+               padding:.2rem 1rem; background:var(--panel);
+               border-radius:0 6px 6px 0; }
+  table { border-collapse:collapse; margin:1rem 0; font-size:.92rem;
+          display:block; overflow-x:auto; }
+  th { font-family:Helvetica,Arial,sans-serif; font-size:.78rem;
+       text-transform:uppercase; letter-spacing:.04em; text-align:left;
+       border-bottom:2px solid var(--tinta); padding:.45rem .6rem;
+       background:var(--papel); }
+  td { padding:.45rem .6rem; border-bottom:1px solid #ddd;
+       vertical-align:top; }
+  code { font-family:Menlo,Consolas,monospace; font-size:.86em;
+         background:var(--panel); padding:.08em .35em; border-radius:3px; }
+  pre { background:var(--panel); padding:.8rem 1rem; border-radius:6px;
+        overflow-x:auto; }
+  pre code { background:none; padding:0; }
+  hr { border:none; border-top:1px solid #ccc; margin:2rem 0; }
+  img { max-width:100%; }
+  li { margin-bottom:.25rem; }
+  math { font-size:1.05em; }
+  @media print { body { background:white; max-width:none; } }
+  </style>
+</head>
+<body>
+<h1 id="capítulo-1-del-golpe-al-tono">Capítulo 1 — Del golpe al
+tono</h1>
+<p><em>Lectura previa a la sesión 01. Objetivos: OA3.1, OA1.1 (intro),
+OA2.1 (intro).</em></p>
+<h2 id="un-solo-golpe">Un solo golpe</h2>
+<p>Antes de leer nada más, haga esto: golpee una vez la mesa con el
+nudillo y escuche hasta que el sonido desaparezca del todo.</p>
+<p>En ese medio segundo pasaron más cosas de las que parece. La madera
+se deformó una fracción de milímetro y regresó, pero no de una vez: fue
+y volvió muchas veces, cada vez con menos ganas, como un temblor que se
+apaga. Ese temblor empujó y succionó el aire que la rodea, y esa
+perturbación viajó — atravesó la pieza en unos pocos milisegundos —
+hasta dos membranas que usted lleva a los lados de la cabeza. Lo demás
+lo puso su cerebro: “golpe”, “seco”, “madera”, “cerca”. Física del
+objeto, física del aire, fisiología del oído, interpretación. Cuatro
+eslabones de una cadena que este curso va a recorrer completa, muchas
+veces, en ambas direcciones.</p>
+<p>Y sin embargo, nadie llamaría música a ese golpe. No se puede cantar.
+No está afinado ni desafinado. No es grave ni agudo — o lo es de un modo
+tan borroso que no podríamos escribirlo en un pentagrama. Le falta lo
+que un músico llamaría <em>altura</em> y un físico llamaría… bueno, eso
+es exactamente lo que hay que averiguar.</p>
+<h2 id="muchos-golpes">Muchos golpes</h2>
+<p>La pregunta clave de la primera sesión es engañosamente simple:
+<strong>¿qué le falta a un golpe para ser una nota?</strong> Y la
+respuesta experimental es: le faltan <em>los demás golpes</em>.</p>
+<p>Pruebe con un peine y una tarjeta. Pase la tarjeta lento por los
+dientes: oye una secuencia de clics, un ritmo, casi un compás. Pásela
+rápido: los clics desaparecen como individuos y en su lugar aparece algo
+nuevo — un zumbido con altura, una especie de nota rasposa que sube
+cuando la tarjeta va más rápido. Los golpes no cambiaron; cambió la
+rapidez con que se suceden, y con ella cambió <em>la categoría
+entera</em> de lo que usted percibe. Donde había ritmo, ahora hay
+tono.</p>
+<p>Ese tránsito tiene una zona de frontera, y una parte del trabajo en
+la primera sesión será que usted encuentre la suya: ¿a cuántos eventos
+por segundo su oído deja de contar y empieza a fundir? No le adelantamos
+el número — sería arruinarle el experimento — pero sí una pista con
+siglo y medio de física detrás: no es una frontera nítida sino una zona
+de transición, es sorprendentemente baja, y no es exactamente igual para
+su compañero de banco (Benade 1990, cap. 2, hace de esta transición la
+puerta de entrada a toda la acústica musical; este curso le copia la
+puerta).</p>
+<p>La moraleja, en cambio, sí se puede adelantar, porque es la idea
+fundacional del semestre: <strong>un tono es una vibración que se repite
+tan seguido que el oído renuncia a contar y entrega, a cambio, una
+sensación nueva: la altura.</strong> Toda nota musical — de una cuerda,
+de un tubo, de una voz — es, en el fondo, un tren de empujones al aire
+lo bastante rápido y lo bastante regular.</p>
+<h2 id="dos-números-para-la-repetición">Dos números para la
+repetición</h2>
+<p>Para conversar sobre “qué tan seguido”, el curso necesita solo dos
+cantidades, y son la misma información mirada de frente y de perfil.</p>
+<p>La <strong>frecuencia</strong>, que anotaremos
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>f</mi><annotation encoding="application/x-tex">f</annotation></semantics></math>,
+cuenta repeticiones por segundo y se mide en hertz (Hz). El
+<strong>período</strong>,
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>T</mi><annotation encoding="application/x-tex">T</annotation></semantics></math>,
+mide la duración de una repetición, en segundos. Uno es el recíproco del
+otro:</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>T</mi><mo>=</mo><mfrac><mn>1</mn><mi>f</mi></mfrac></mrow><annotation encoding="application/x-tex">T = \frac{1}{f}</annotation></semantics></math></p>
+<p>Si una cuerda vibra a 100 Hz, cada vaivén dura 1/100 de segundo. Si
+vibra al doble, cada vaivén dura la mitad. Este razonamiento por
+proporciones — el doble, la mitad, tres veces más — es prácticamente
+toda la matemática que este curso le va a pedir, y a cambio le va a
+pedir usarla <em>mucho</em> y con precisión.</p>
+<p>Dos números de calibración para que el hertz deje de ser abstracto:
+el La con que afina una orquesta vibra 440 veces por segundo (La4 = 440
+Hz), y un oído joven y sano percibe como sonido las vibraciones entre
+unos 20 Hz y unos 20 000 Hz. Guarde el primero: 20 Hz. Le va a hacer eco
+cuando esté con el peine en la mano.</p>
+<h2 id="palabras-del-mundo-y-palabras-del-oído">Palabras del mundo y
+palabras del oído</h2>
+<p>Hay una distinción que la primera sesión deja instalada y que le
+conviene traer ya pensada, porque ordena todo lo que sigue. La
+frecuencia es una propiedad <em>del sonido</em>: se mide con un aparato,
+y da igual quién esté escuchando. La altura — eso de que una nota sea
+“más aguda” que otra — es una propiedad <em>de su experiencia</em>:
+ocurre dentro de un sistema auditivo particular, el suyo, y su relación
+con la frecuencia es sistemática pero tiene pliegues que darán para
+varias sesiones (¿duplicar la frecuencia “duplica” la altura? adelanto:
+no exactamente — la sube una <em>octava</em>, y por qué eso no es lo
+mismo es una pregunta más honda de lo que parece).</p>
+<p>El curso mantendrá esta higiene de vocabulario todo el semestre:
+<strong>frecuencia, intensidad, espectro</strong> hablan del mundo
+físico; <strong>altura, sonoridad, timbre</strong> hablan de la
+percepción (Roederer 1997, cap. 1, funda su libro entero en esta
+separación). No es pedantería: es lo que permite hacer preguntas que se
+pueden responder midiendo. “¿Por qué esta nota suena más brillante?” no
+se puede medir; “¿tiene este sonido más energía en los parciales
+agudos?” sí. Aprender a traducir de la primera pregunta a la segunda es,
+en una frase, aprender a escuchar como científico.</p>
+<h2 id="lo-que-viene-un-curso-con-protocolo">Lo que viene: un curso con
+protocolo</h2>
+<p>En la primera sesión usted conocerá los dos ritos permanentes del
+curso. Uno es el ciclo <strong>predicción → experimento →
+explicación</strong>: nada suena sin que usted haya escrito antes qué
+espera oír, porque la predicción escrita es lo que convierte un juego en
+un experimento — sin ella, cualquier resultado “tenía sentido” y no se
+aprende nada del error. El otro es la <strong>escucha del día</strong>:
+cada sesión abre con un sonido y con el protocolo de describir con
+precisión, proponer un mecanismo y proponer cómo verificarlo. En la
+sesión 1 se hace una versión sin nota, como línea base: escriba sin
+miedo, esas hojas se guardan y se las mostraremos de nuevo al final del
+semestre, cuando el contraste sea elocuente.</p>
+<h2 id="preguntas-que-la-sesión-va-a-responder">Preguntas que la sesión
+va a responder</h2>
+<ol type="1">
+<li>¿En qué zona — cuántos eventos por segundo — su propio oído deja de
+oír ritmo y empieza a oír una nota? ¿Le da lo mismo con un clic seco que
+con un golpe blando?</li>
+<li>¿Es ese umbral una propiedad del sonido o del oyente? ¿Cómo lo
+decidiría experimentalmente?</li>
+<li>Si acorta la parte libre de una regla que vibra en el borde de una
+mesa, ¿el sonido sube o baja? ¿Por qué? ¿Cuánto confía en su respuesta…
+antes de probarla?</li>
+<li>¿Qué tendría que <em>medir</em> para convencer a alguien de que dos
+notas difieren en altura y no solo en timbre?</li>
+</ol>
+<h2 id="referencias-del-capítulo">Referencias del capítulo</h2>
+<ul>
+<li>Benade (1990), cap. 2, secs. 2.1–2.3 y EEQ 2.5 — la transición
+ritmo→tono y los experimentos caseros que la exploran.</li>
+<li>Campbell &amp; Greated (1987), cap. 1 (pp. 5–38) — fuentes y
+transmisión del sonido musical.</li>
+<li>Roederer (1997), cap. 1 (pp. 9–23) — atributos físicos vs.
+perceptuales; en español.</li>
+<li>Rossing, Moore &amp; Wheeler (2002), caps. 1–2 — ejercicios
+numéricos de frecuencia y período, para quien quiera práctica
+adicional.</li>
+</ul>
+</body>
+</html>

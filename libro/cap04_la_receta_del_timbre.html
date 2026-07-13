@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="es" xml:lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>Capítulo 4 — La receta del timbre</title>
+  <style>
+    /* Default styles provided by pandoc.
+    ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+    */
+    html {
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    svg {
+      height: auto;
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      border: none;
+      border-top: 1px solid #1a1a1a;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+  </style>
+  <style>
+  /* Estilo compartido para los .md del curso convertidos a HTML
+     (misma familia editorial de las demos y del mapa del curso) */
+  :root { --tinta:#1a1a1a; --acento:#7a2e2e; --azul:#2e4a7a;
+          --papel:#faf8f4; --panel:#f0ece4; }
+  body { margin:0 auto; padding:2rem 1.4rem 4rem; max-width:820px;
+         background:var(--papel); color:var(--tinta);
+         font-family:Georgia,'Times New Roman',serif; line-height:1.55;
+         font-size:1.02rem; }
+  h1,h2,h3,h4 { font-family:Georgia,serif; line-height:1.25; }
+  h1 { font-size:1.6rem; border-bottom:2px solid var(--tinta);
+       padding-bottom:.3rem; }
+  h2 { font-size:1.25rem; margin-top:2rem; color:var(--acento); }
+  h3 { font-size:1.05rem; margin-top:1.5rem; }
+  a { color:var(--azul); }
+  blockquote { border-left:4px solid var(--acento); margin:1rem 0;
+               padding:.2rem 1rem; background:var(--panel);
+               border-radius:0 6px 6px 0; }
+  table { border-collapse:collapse; margin:1rem 0; font-size:.92rem;
+          display:block; overflow-x:auto; }
+  th { font-family:Helvetica,Arial,sans-serif; font-size:.78rem;
+       text-transform:uppercase; letter-spacing:.04em; text-align:left;
+       border-bottom:2px solid var(--tinta); padding:.45rem .6rem;
+       background:var(--papel); }
+  td { padding:.45rem .6rem; border-bottom:1px solid #ddd;
+       vertical-align:top; }
+  code { font-family:Menlo,Consolas,monospace; font-size:.86em;
+         background:var(--panel); padding:.08em .35em; border-radius:3px; }
+  pre { background:var(--panel); padding:.8rem 1rem; border-radius:6px;
+        overflow-x:auto; }
+  pre code { background:none; padding:0; }
+  hr { border:none; border-top:1px solid #ccc; margin:2rem 0; }
+  img { max-width:100%; }
+  li { margin-bottom:.25rem; }
+  math { font-size:1.05em; }
+  @media print { body { background:white; max-width:none; } }
+  </style>
+</head>
+<body>
+<h1 id="capítulo-4-la-receta-del-timbre">Capítulo 4 — La receta del
+timbre</h1>
+<p><em>Lectura previa a la sesión 04. Objetivos: OA1.1, OA1.2, OA2.1.
+Recordatorio logístico: esta es la sesión de los instrumentos — traiga
+su guitarra, ukelele, charango o lo que pulse su grupo (basta 1–2 por
+grupo), con el instrumento afinado si es posible.</em></p>
+<h2 id="la-pregunta-que-usted-dejó-firmada">La pregunta que usted dejó
+firmada</h2>
+<p>Al salir de la sesión 3 usted escribió una apuesta: si pulso la misma
+cuerda en el medio o pegado al puente, ¿cambia la nota o cambia el
+timbre? No la revise ahora; la sesión 4 empieza cobrándola, con una
+guitarra de verdad y el espectrograma mirando.</p>
+<p>Pero fíjese en lo rara que es la pregunta apenas se la toma en serio.
+Es la <em>misma</em> cuerda: el mismo largo, la misma tensión, el mismo
+repertorio de modos con sus frecuencias en fila india,
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>f</mi><mn>1</mn></msub><annotation encoding="application/x-tex">f_1</annotation></semantics></math>,
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>2</mn><msub><mi>f</mi><mn>1</mn></msub></mrow><annotation encoding="application/x-tex">2f_1</annotation></semantics></math>,
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>3</mn><msub><mi>f</mi><mn>1</mn></msub></mrow><annotation encoding="application/x-tex">3f_1</annotation></semantics></math>…
+Nada de eso cambia por pulsar en otra parte. Y sin embargo cualquier
+guitarrista jura que junto al puente suena “metálico” y sobre la boca
+suena “dulce” — y le pone nombres italianos a la diferencia (<em>sul
+ponticello</em>, <em>sul tasto</em>), señal de que a la música le
+importa. ¿Qué puede cambiar, si las frecuencias no pueden?</p>
+<p>La respuesta corta viene del capítulo pasado, aunque quizás no la vio
+venir: si el repertorio de modos es fijo, lo único negociable es
+<strong>cuánto se enciende cada modo</strong>. A esa lista de cantidades
+— tanto del modo 1, tanto del 2, tanto del 3 — Benade la llama la
+<strong>receta de vibración</strong> (Benade 1990, cap. 7), y este
+capítulo se dedica a ella. Adelantemos la tesis completa, para que la
+sesión la ponga a prueba: la <em>nota</em> vive en las frecuencias del
+repertorio; el <em>timbre</em> empieza en la receta.</p>
+<h2 id="el-dedo-y-la-púa-leen-el-mismo-mapa">El dedo y la púa leen el
+mismo mapa</h2>
+<p>¿Y quién escribe la receta? Aquí conviene volver a la imagen más útil
+que dejó la sesión 3: la tapa de olla sonando y un dedo apoyado encima.
+El dedo apagaba los modos que <em>se movían</em> en ese punto, y
+perdonaba los que tenían ahí un <strong>nodo</strong> — un lugar
+naturalmente quieto. Cada modo tiene su mapa de nodos y antinodos; el
+dedo es un lector de ese mapa.</p>
+<p>Ahora invierta el gesto. Pulsar una cuerda en un punto no es quitarle
+movimiento: es <em>imponérselo</em>, justo ahí. Piense en un modo que
+tenga un antinodo — máximo movimiento — en el punto donde usted pulsa:
+ese modo puede recibir con los brazos abiertos el movimiento que la púa
+le regala, y nace sonando fuerte. Piense ahora en un modo con un
+<strong>nodo</strong> exactamente en ese punto: ese modo, por
+definición, <em>no se mueve ahí</em>. Usted puede empujar cuanto quiera
+— no hay manera de entregarle energía por esa puerta. Nace mudo.</p>
+<p>Esa es la regla de la receta, y vale la pena escribirla con cuidado
+porque es fácil enunciarla al revés: <strong>pulsar en un punto enciende
+los modos que se mueven en ese punto, y deja mudos los que tienen un
+nodo ahí</strong>. La púa y el dedo apagador leen el mismo mapa de
+nodos, con palancas opuestas: pulsar enciende lo que se mueve; tocar
+apaga lo que se mueve.</p>
+<p>En la sesión, la regla deja de ser frase y se vuelve trabajo manual:
+su grupo va a marcar con cinta tres puntos de una cuerda de su
+instrumento, va a predecir por escrito qué parciales sobreviven y cuáles
+desaparecen en cada punto — la regla le da todo lo necesario para
+predecirlo — y va a cobrar la apuesta con el espectrograma. Piense desde
+ya el caso estrella: pulsada exactamente en la mitad de la cuerda, ¿qué
+pasa con el modo 2, que tiene su nodo justo ahí? ¿Y con el 4? ¿Qué clase
+de espectro queda?</p>
+<h2 id="tocar-el-nodo-tocar-el-armónico">Tocar el nodo, tocar el
+armónico</h2>
+<p>Hay un tercer gesto que lee el mapa, y los músicos de cuerda lo
+conocen desde hace siglos sin llamarlo física: el <strong>armónico
+natural</strong>. Apoye el dedo <em>suavemente</em> — sin apretar hasta
+el traste — sobre el punto medio exacto de una cuerda y púlsela: en vez
+de la nota de siempre aparece un sonido cristalino, una octava arriba,
+que parece venir de otro instrumento.</p>
+<p>Con la regla en la mano, el truco se explica solo — o casi. El dedo
+suave es un apagador selectivo: mata todo modo que se mueva bajo la
+yema. ¿Cuáles modos sobreviven a un dedo puesto en la mitad de la
+cuerda? Exactamente los que tienen un nodo ahí. ¿Y cuál es el más grave
+de esos sobrevivientes? Esa es la nota que usted oye. En la sesión lo
+hará con el afinador mirando: dedo en la mitad, en el tercio, en el
+cuarto de la cuerda (los trastes 12, 7 y 5 de una guitarra caen ahí, y
+no por casualidad), midiendo qué frecuencia emerge en cada caso y qué
+razón guarda con la cuerda al aire. Tocar el nodo es seleccionar un
+subconjunto del repertorio con la punta del dedo.</p>
+<h2 id="cocinar-el-timbre-al-revés-síntesis-aditiva">Cocinar el timbre
+al revés: síntesis aditiva</h2>
+<p>Si el timbre de una cuerda es su receta — tanto de cada parcial —,
+entonces debería poder falsificarse: tomar ocho senos puros afinados en
+razones
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>1</mn><mo>:</mo><mn>2</mn><mo>:</mo><mn>3</mn><mo>:</mo><mi>…</mi></mrow><annotation encoding="application/x-tex">1:2:3:\dots</annotation></semantics></math>,
+dosificar cuánto de cada uno, y sumarlos. Eso se llama <strong>síntesis
+aditiva</strong>, y la sesión trae una demo interactiva que es
+literalmente un mezclador de parciales: ocho sliders, una receta a
+gusto.</p>
+<p>Dos preguntas para llevar pensadas, porque la demo las hará en vivo.
+Primera: si al seno básico le voy sumando parciales — el 2, el 3, el 5
+—, ¿voy agregando <em>notas nuevas</em>, o estoy cambiando <em>otra
+cosa</em>? Segunda: si fabrico con osciladores la receta “solo parciales
+impares”, ¿a cuál de las pulsadas del taller debería parecerse el
+resultado? Si la tesis del capítulo es cierta, usted debería poder
+<em>construir</em> con senos el timbre que midió con la guitarra — y
+comprobar de paso una idea que la psicoacústica explotará en las
+próximas sesiones: componentes físicamente separados (ocho osciladores
+independientes) pueden fundirse en una sola experiencia (una nota, un
+color) (ROE cap. 4, secs. 4.8–4.10; C&amp;G cap. 3).</p>
+<p>Una cosa, eso sí, la receta no la cuenta completa. Dos sonidos con el
+mismo espectro pueden no sonar al mismo instrumento: falta el capítulo
+del <em>tiempo</em> — cómo ataca la nota, cómo decae —, la envolvente
+que usted ya vio asomarse en s03 cuando las líneas del espectrograma no
+morían juntas. La sesión abre su segundo módulo con un experimento
+sonoro sobre esto, y preferimos no arruinarle la sorpresa. Quédese con
+la pregunta: ¿puede el mismo espectro esconder dos instrumentos
+distintos?</p>
+<h2 id="las-palancas-de-la-nota">Las palancas de la nota</h2>
+<p>Queda la otra mitad de su apuesta: si el punto de pulsación no mueve
+la nota, ¿qué la mueve? Todo músico de cuerdas opera las tres respuestas
+a diario, aunque no las llame por su nombre físico:</p>
+<ul>
+<li><strong>El largo</strong>: el dedo que pisa un traste acorta la
+cuerda y la nota sube. Menos cuerda, vaivén más rápido: la frecuencia
+crece cuando
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>L</mi><annotation encoding="application/x-tex">L</annotation></semantics></math>
+disminuye.</li>
+<li><strong>La tensión</strong>: la clavija estira la cuerda y la nota
+sube. Más tensa, más rígido el resorte que devuelve la cuerda a su
+lugar: frecuencia arriba.</li>
+<li><strong>La masa</strong>: las cuerdas graves son las gordas. Más
+masa por metro de cuerda, vaivén más perezoso: frecuencia abajo. (Mire
+de cerca una cuerda grave: va <em>entorchada</em>, envuelta en alambre —
+engordada a propósito.)</li>
+</ul>
+<p>Lo que la sesión agrega a esta sabiduría de músico es la parte
+<em>cuantitativa</em>, al estilo del curso: proporciones, no fórmulas.
+¿La mitad del largo da exactamente el doble de frecuencia? Eso es
+medible con un afinador y el traste 12, y usted lo va a medir. ¿Y la
+tensión? Aquí va una pista con trampa, para predecir antes de la sesión:
+para subir la cuerda una octava completa usando solo la clavija, ¿habría
+que tensarla el doble… o bastante más? La respuesta explica por qué
+afinar es un gesto tan fino — y por qué los fabricantes prefieren
+engordar cuerdas antes que destensarlas (C&amp;G cap. 6; ROS cap.
+10).</p>
+<h2 id="preguntas-que-la-sesión-va-a-responder">Preguntas que la sesión
+va a responder</h2>
+<ol type="1">
+<li>La misma cuerda pulsada al medio y junto al puente: ¿cambia la nota,
+el timbre, o ambos? ¿Qué muestra el espectrograma en cada caso?</li>
+<li>Pulsada exactamente en
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>L</mi><mi>/</mi><mn>2</mn></mrow><annotation encoding="application/x-tex">L/2</annotation></semantics></math>,
+¿qué pasa con los parciales pares? ¿Y si pulsa en un punto a un tercio
+del largo, qué modos nacen mudos?</li>
+<li>Dedo suave en la mitad de la cuerda: ¿qué frecuencia emerge y por
+qué justo esa? ¿Qué razón guarda el armónico del traste 7 con la cuerda
+al aire?</li>
+<li>¿Se puede fabricar el timbre de una cuerda sumando senos puros? Al
+sumar parciales, ¿se agregan notas o se tiñe una sola?</li>
+<li>¿Puede el mismo espectro esconder dos instrumentos distintos? ¿Qué
+le falta a la receta para ser todo el timbre?</li>
+<li>Para subir un semitono con la clavija, ¿cuánta tensión extra hace
+falta: ~1 %, ~12 % o ~100 %?</li>
+</ol>
+<h2 id="referencias-del-capítulo">Referencias del capítulo</h2>
+<ul>
+<li>Benade (1990), cap. 7 (secs. 7.1–7.3 y EEQ 7.4) — la receta de
+vibración de la cuerda pulsada, construida desde cadenas de masas; cap.
+8 (secs. 8.1–8.5) — púas anchas, martillos blandos y rigidez: qué limita
+la receta en instrumentos reales.</li>
+<li>Campbell &amp; Greated (1987), cap. 3 (pp. 69–164) — timbre,
+espectros y envolventes; cap. 6 (pp. 203–232) — la guitarra y su
+familia.</li>
+<li>Roederer (1997), cap. 4, secs. 4.1–4.3 (pp. 120 y ss.) — cuerda,
+instrumentos de cuerda y sus espectros; secs. 4.8–4.10 — altura y timbre
+de tonos compuestos. En español.</li>
+<li>Rossing, Moore &amp; Wheeler (2002), cap. 10 (secs. 10.1–10.17) —
+cuerdas y guitarra, con ejercicios de trastes y afinación; cap. 7 (secs.
+7.10 y ss.) — Fourier, espectros y envolvente.</li>
+</ul>
+</body>
+</html>

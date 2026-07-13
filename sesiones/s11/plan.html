@@ -1,0 +1,699 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="es" xml:lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>Sesión 11 — Cuerdas frotadas y el cuerpo del instrumento:
+stick-slip, movimiento de Helmholtz, puente, caja y radiación</title>
+  <style>
+    /* Default styles provided by pandoc.
+    ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+    */
+    html {
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    svg {
+      height: auto;
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      border: none;
+      border-top: 1px solid #1a1a1a;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+  </style>
+  <style>
+  /* Estilo compartido para los .md del curso convertidos a HTML
+     (misma familia editorial de las demos y del mapa del curso) */
+  :root { --tinta:#1a1a1a; --acento:#7a2e2e; --azul:#2e4a7a;
+          --papel:#faf8f4; --panel:#f0ece4; }
+  body { margin:0 auto; padding:2rem 1.4rem 4rem; max-width:820px;
+         background:var(--papel); color:var(--tinta);
+         font-family:Georgia,'Times New Roman',serif; line-height:1.55;
+         font-size:1.02rem; }
+  h1,h2,h3,h4 { font-family:Georgia,serif; line-height:1.25; }
+  h1 { font-size:1.6rem; border-bottom:2px solid var(--tinta);
+       padding-bottom:.3rem; }
+  h2 { font-size:1.25rem; margin-top:2rem; color:var(--acento); }
+  h3 { font-size:1.05rem; margin-top:1.5rem; }
+  a { color:var(--azul); }
+  blockquote { border-left:4px solid var(--acento); margin:1rem 0;
+               padding:.2rem 1rem; background:var(--panel);
+               border-radius:0 6px 6px 0; }
+  table { border-collapse:collapse; margin:1rem 0; font-size:.92rem;
+          display:block; overflow-x:auto; }
+  th { font-family:Helvetica,Arial,sans-serif; font-size:.78rem;
+       text-transform:uppercase; letter-spacing:.04em; text-align:left;
+       border-bottom:2px solid var(--tinta); padding:.45rem .6rem;
+       background:var(--papel); }
+  td { padding:.45rem .6rem; border-bottom:1px solid #ddd;
+       vertical-align:top; }
+  code { font-family:Menlo,Consolas,monospace; font-size:.86em;
+         background:var(--panel); padding:.08em .35em; border-radius:3px; }
+  pre { background:var(--panel); padding:.8rem 1rem; border-radius:6px;
+        overflow-x:auto; }
+  pre code { background:none; padding:0; }
+  hr { border:none; border-top:1px solid #ccc; margin:2rem 0; }
+  img { max-width:100%; }
+  li { margin-bottom:.25rem; }
+  math { font-size:1.05em; }
+  @media print { body { background:white; max-width:none; } }
+  </style>
+</head>
+<body>
+<h1
+id="sesión-11-cuerdas-frotadas-y-el-cuerpo-del-instrumento-stick-slip-movimiento-de-helmholtz-puente-caja-y-radiación">Sesión
+11 — Cuerdas frotadas y el cuerpo del instrumento: stick-slip,
+movimiento de Helmholtz, puente, caja y radiación</h1>
+<p><strong>Objetivos que cubre</strong>: OA1.3 (principal: mecanismo de
+excitación frotada como oscilación auto-sostenida; el régimen de
+oscilación — la resonancia de la cuerda manda sobre la fricción), OA1.1
+(modos del cuerpo del instrumento y su relación con lo que se oye;
+radiación), OA1.2 (predicciones semicuantitativas contrastadas con el
+instrumento real: punto de frotado, tapado de aberturas, apoyo).
+Transversales: OA3.1 (escucha del día, con nota, pasada 2), OA4.1
+(espectrograma y SPL sobre instrumento real), OA5.2 (serie del objeto
+s08–s12: protocolo de acoplamiento al aire, a bitácora).
+<strong>Requisitos previos</strong>: s10 completa (resonancia, curva de
+respuesta, amortiguamiento; impedancia y acoplamiento con el experimento
+del elástico; panorama del bloque C con la oscilación auto-sostenida
+sembrada). s04 (cuerda pulsada: receta de vibración, punto de
+excitación) y s03 (modos). El <strong>ticket de salida de s10</strong>
+(“el arco entrega energía TODO el tiempo, no un golpe: ¿por qué la
+cuerda frotada no suena como chirrido continuo sino como una nota
+estable?”) se cobra en la escucha del día. Los estudiantes traen:
+celular con espectrograma y SPL (desde s02/s06), leída la lectura previa
+<code>libro/cap11_cuerdas_frotadas_y_cuerpo.md</code>; <strong>1–2
+estudiantes traen instrumento de cuerda frotada</strong> (coordinado en
+s10 y confirmado por correo — sesión con instrumentos de estudiantes
+#2). El profesor trae guitarra (comparación pulsada/frotada) y resina.
+<strong>Posición en la progresión</strong>: primera familia del bloque C
+desarrollada a fondo. s10 dejó el lenguaje (resonancia, impedancia,
+acoplamiento) y la semilla de la oscilación auto-sostenida; s11 la
+encarna en la cuerda frotada (fricción como válvula gobernada por la
+cuerda) y cierra la cadena cuerda→puente→tapa→aire. s12 (vientos y
+lutería) reutiliza el régimen de oscilación con otra válvula; la serie
+del objeto termina en s12. <strong>Reglas aplicadas y decisiones de
+carga (declaradas)</strong>: escucha del día (15′: estímulo 3′ +
+escritura 2′ + ronda de 4 sorteados × 2,5′ con cronómetro visible) abre
+el módulo 1; módulo 2 abre con gancho sonoro sin ronda; la lectura
+previa se consume en la mini-lección del módulo 1 (principio 6).
+Decisiones: (1) <strong>el taller EVALUADO de la semana es el del punto
+de frotado</strong> (m1, rúbrica rápida, cuenta en el 25 % de talleres);
+el bloque de acoplamiento de la serie del objeto (m2) va <strong>sin
+nota</strong>: es avance del proyecto y se cobra vía bitácora en el hito
+3. (2) s10 anunció que <strong>el objeto del proyecto descansa hasta
+s12</strong>; se honra: el bloque de la serie s08–s12 se ejecuta sobre
+los instrumentos presentes (frotado + guitarra) para instalar el
+<strong>protocolo</strong> “¿qué parte radia?”, y su aplicación al
+objeto propio queda como compromiso de bitácora antes de s12, junto al
+mapa de resonancias comprometido en s10. (3) Con 1–2 instrumentos en el
+curso, ambos talleres son de <strong>estación plenaria</strong>: la
+medición es simultánea (cada estudiante mide con SU celular; el registro
+oficial es 1 por grupo), lo que mantiene a los 20 activos sin flota de
+instrumentos. (4) La escucha del día se genera <strong>en vivo</strong>
+con el instrumento frotado (sin estímulo nuevo para el banco; plan B
+también es en vivo: guitarra del profesor con resina). (5) Wolf note
+(BEN 25.4) entra solo como curiosidad narrada en el cierre del m2: no es
+contenido evaluable. (6) <strong>Fusibles declarados por
+módulo</strong>: m1 — si el taller se atrasa, la fase B (cámara lenta)
+se reduce a UNA filmación proyectada y el contraste se hace con 2
+posiciones de arco en vez de 3; la demo puede comprimirse de 10′ a 6′
+(se saltan las predicciones intermedias y queda la animación con f0
+fija). m2 — a los 48′ se corta la fase C (radiación direccional) y se
+reemplaza por demostración del profesor girando el instrumento (2′); los
+anuncios de s12 y el ticket NO se sacrifican.</p>
+<h2
+id="módulo-1-la-nota-que-nace-de-pegar-y-soltar-variante-experimental-adaptada-a-estación-plenaria">Módulo
+1 — La nota que nace de pegar y soltar (variante: experimental, adaptada
+a estación plenaria)</h2>
+<table>
+<colgroup>
+<col style="width: 20%" />
+<col style="width: 20%" />
+<col style="width: 20%" />
+<col style="width: 20%" />
+<col style="width: 20%" />
+</colgroup>
+<thead>
+<tr>
+<th>Tiempo</th>
+<th>Bloque</th>
+<th>Actividad del estudiante</th>
+<th>Rol del profesor</th>
+<th>Materiales</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0–15′</td>
+<td><strong>Escucha del día (OA3.1, con nota; OA1.3): se cobra el ticket
+de s10</strong></td>
+<td>Escucha el estímulo en vivo (3′, dos pasadas): la MISMA cuerda del
+instrumento frotado, primero con arco bien calibrado (nota larga,
+estable, rica) y luego con presión exagerada y arco lento (graznido
+crujiente sin altura estable) rematada con arco veloz y superficial
+(sonido “flautado”, débil); todos escriben diagnóstico en 3 líneas (2′):
+describir las tres versiones → hipotetizar por qué la misma cuerda y el
+mismo arco dan nota o ruido → proponer verificación; <strong>4
+sorteados</strong> exponen (<strong>2,5′ c/u, cronómetro
+visible</strong>)</td>
+<td>Dirige al ejecutante (estudiante que trajo el instrumento; ensayado
+2′ antes de clase) o ejecuta él mismo el plan B (guitarra con resina);
+evalúa con la planilla OA3 (pasada 2) premiando D1 (¿separa altura
+estable / altura errática / sonoridad / rugosidad?) y D2 (¿invoca el
+ticket de s10: alguien tiene que estar organizando la entrega de energía
+en ciclos — y ese alguien es la cuerda?); lee 2–3 tickets de s10 en voz
+alta y deja la pregunta armada para la mini-lección</td>
+<td>Instrumento frotado de estudiante (plan B: guitarra + resina);
+tickets de s10; planilla rúbrica OA3 (pasada 2); cronómetro</td>
+</tr>
+<tr>
+<td>15–27′</td>
+<td><strong>Mini-lección: la fricción como válvula (OA1.3)</strong> —
+consume la lectura previa</td>
+<td>Rehace con el profesor el vocabulario del capítulo: fricción de
+<strong>agarre</strong> (estática, fuerte) vs. de
+<strong>deslizamiento</strong> (cinética, más débil) → ciclo
+pegar-soltar (stick-slip); responde votaciones: “¿quién fija la
+frecuencia del ciclo, el arco o la cuerda?” (la cuerda: el soltar se
+sincroniza con SU ida y vuelta — régimen de oscilación, BEN 23.2), “si
+froto más fuerte, ¿la nota sube?” (no: cambia el timbre y el límite del
+graznido; la afinación la fija la cuerda), “¿por qué la frotada suena
+‘llena’ todo el tiempo y la pulsada se apaga?” (la fricción repone
+energía en cada ciclo; el golpe la entrega una sola vez, s03–s04)</td>
+<td>Conduce en el pizarrón con el esquema puerta-que-chirría / copa
+frotada (s10, fase C del taller de botellas): toda superficie frotada
+chirría, pero solo la cuerda le impone al chirrido un metrónomo — la
+resonancia manda sobre la fricción; deja explícito el contraste con s04
+(pulsada: receta fijada al inicio y decaimiento) y anuncia que la forma
+real de la cuerda frotada NO es la que uno imagina — puente a la
+demo</td>
+<td>Pizarrón; guitarra (pulsada de contraste, 2 notas)</td>
+</tr>
+<tr>
+<td>27–37′</td>
+<td>Demo predictiva: la esquina que viaja (OA1.3, OA1.1) — formato
+1</td>
+<td>Predice a mano alzada ANTES de cada paso de
+<code>demo_helmholtz.html</code>: (1) ¿la cuerda frotada vibra con forma
+de curva suave (como la foto de un libro) o de otra manera? — ve la
+<strong>esquina</strong> de Helmholtz recorriendo el óvalo; (2) mirando
+la velocidad del punto frotado (colores pegado/deslizando): ¿cuánto del
+ciclo va pegada al arco y cuánto desliza? (casi todo pegada; el soltar
+es breve); (3) al mover el punto de frotado hacia el puente, ¿qué cambia
+en ese reparto y en el sonido de la demo?</td>
+<td>Opera la demo proyectada CON audio (diente de sierra filtrado: el
+“espectro de fuerza sobre el puente”, BEN 23.5); subraya la síntesis del
+ciclo: <strong>una vuelta de la esquina = un soltar</strong>: el viaje
+de la esquina cronometra a la fricción — eso ES el régimen de
+oscilación; anuncia el taller: “esto es un dibujo idealizado; ahora lo
+van a buscar en la cuerda real, con espectrograma y cámara lenta”</td>
+<td><code>demo_helmholtz.html</code> proyectada con audio de sala</td>
+</tr>
+<tr>
+<td>37–63′</td>
+<td><strong>Taller PEE: el punto de frotado (OA1.2, OA1.3, OA4.1) —
+formato 2, estación plenaria, EVALUADO</strong></td>
+<td>Instalación 2′ (instrumento al centro, luz sobre la cuerda,
+celulares en espectrograma, protocolo de silencio de medición); en grupo
+escribe <strong>3 predicciones</strong> ANTES de sonar (4′): (P1) al
+frotar <strong>cerca del puente</strong> (sul ponticello), ¿el espectro
+gana o pierde parciales agudos respecto del punto normal? ¿y
+<strong>sobre el diapasón</strong> (sul tasto)?; (P2) ¿la altura
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>f</mi><mn>1</mn></msub><annotation encoding="application/x-tex">f_1</annotation></semantics></math>)
+cambia al cambiar el punto de frotado?; (P3) filmada en cámara lenta,
+¿qué forma tendrá la cuerda?; <strong>fase A</strong> (8′): el
+ejecutante toca la misma nota larga en 3 posiciones (normal / ponticello
+/ tasto), 2 pasadas de ~20″ c/u con 30″ para anotar: <strong>cada
+estudiante captura el espectrograma en su propio celular</strong> y el
+registrador tabula
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>f</mi><mn>1</mn></msub><annotation encoding="application/x-tex">f_1</annotation></semantics></math>
+y qué pasa con los parciales altos; <strong>fase B</strong> (6′): un
+celular filma la cuerda de cerca en cámara lenta (240 fps <strong>[POR
+VERIFICAR** que el celular disponible resuelva la forma; plan B: video
+preparado**]</strong>) mientras se frota; se proyecta o circula: ¿se ve
+la esquina / la forma de dos rectas?; <strong>contraste</strong> (6′):
+P1–P3 vs. resultados en la guía, explicando con el ciclo pegar-soltar y
+la esquina</td>
+<td>Coordina las pasadas y el silencio de medición; rota entre los 5
+grupos durante las anotaciones (~1′ c/u por fase); provoca: “¿cambió la
+afinación o el reparto de energía?”, “¿por qué el ponticello exige más
+presión para no graznar?”, “si la forma es dos rectas y una esquina,
+¿por qué el espectrograma muestra TODOS los armónicos?”; administra la
+filmación (soporte o pulso firme, fondo claro tras la cuerda)</td>
+<td>Instrumento(s) frotado(s); guitarra (1 pasada pulsada de contraste
+en fase A si el tiempo alcanza); celulares (espectrograma; 1 filmando);
+guía <code>guia_pee_punto_de_frotado.md</code> (1 por grupo); paño claro
+de fondo; cable/adaptador para proyectar el video</td>
+</tr>
+<tr>
+<td>63–70′</td>
+<td>Cierre: contraste y moraleja (OA1.2, OA3.2)</td>
+<td>UN grupo expone sus espectrogramas ponticello vs. tasto (regla de
+metodología §7); todos contrastan sus predicciones y anotan la moraleja:
+<strong>la cuerda fija la afinación; el punto y la presión del arco
+esculpen el espectro</strong> — y la fricción repone energía en cada
+ciclo, por eso el espectro rico se SOSTIENE (vs. pulsada que decae);
+puente al m2: “todo esto lo midieron en el aire que movió… ¿quién? — la
+cuerda casi no mueve aire: eso viene ahora”</td>
+<td>Superpone los resultados de los 5 grupos (¿todos vieron más agudos
+hacia el puente y
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>f</mi><mn>1</mn></msub><annotation encoding="application/x-tex">f_1</annotation></semantics></math>
+quieta?); recoge las guías y evalúa con rúbrica rápida al vuelo; anuncia
+descanso</td>
+<td>Pizarrón; guías de los grupos</td>
+</tr>
+</tbody>
+</table>
+<h2
+id="módulo-2-la-caja-que-trabaja-del-puente-al-aire-variante-experimental-adaptada-a-estación-plenaria">Módulo
+2 — La caja que trabaja: del puente al aire (variante: experimental,
+adaptada a estación plenaria)</h2>
+<table>
+<colgroup>
+<col style="width: 20%" />
+<col style="width: 20%" />
+<col style="width: 20%" />
+<col style="width: 20%" />
+<col style="width: 20%" />
+</colgroup>
+<thead>
+<tr>
+<th>Tiempo</th>
+<th>Bloque</th>
+<th>Actividad del estudiante</th>
+<th>Rol del profesor</th>
+<th>Materiales</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0–8′</td>
+<td>Gancho sonoro: la pinza en el puente (OA1.1)</td>
+<td>Predice a mano alzada ANTES: si le pongo una pinza de ropa (o
+sordina) al puente del violín, ¿suena más despacio, más grave, o “otra
+cosa”?; escucha: misma nota, sonoridad parecida, timbre
+<strong>opaco</strong> (los parciales agudos se apagan); segunda
+predicción: ¿y si pudiera quitarle la caja y dejar la cuerda sola? —
+recuerda el elástico de s10 (casi no se oye); anota la pregunta del
+módulo: ¿cómo llega la vibración de una cuerda de 1 mm al aire de una
+sala entera?</td>
+<td>Ejecuta en vivo (pinza al puente del instrumento presente, misma
+nota antes/después; espectrograma proyectado si la logística lo
+permite); conecta con s10: la pinza agrega masa al
+<strong>transformador</strong> — el puente es el peaje obligado de TODA
+la energía; presenta el mapa del módulo: cuerda→puente→tapa (y aire
+encerrado)→aire de la sala</td>
+<td>Instrumento frotado; pinza de ropa o sordina; celular con
+espectrograma hacia el proyector (opcional)</td>
+</tr>
+<tr>
+<td>8–22′</td>
+<td>Mini-lección: el cuerpo tiene modos, igual que la cuerda
+(OA1.1)</td>
+<td>Observa las <strong>holografías de modos del cuerpo del
+violín</strong> (C&amp;G cap. 6, pp. 203–232) y las lee con el
+vocabulario de s03: líneas nodales, zonas que se mueven en contrafase;
+responde votaciones: “la tapa, ¿vibra entera como un pistón o por
+zonas?” (por zonas, según el modo), “¿para qué son las efes?” (la
+resonancia del aire encerrado ayuda a radiar los graves que la tapa
+chica no puede — la botella de s10 vive dentro del violín), “un parcial
+que cae cerca de un modo fuerte del cuerpo, ¿suena más o menos?” (más:
+el cuerpo es un ecualizador fijo hecho de resonancias, s10); radiación
+en 1 lámina: los graves salen parejos en todas direcciones, los agudos
+en haces (cualitativo)</td>
+<td>Proyecta 2–3 holografías (lámina preparada desde C&amp;G cap. 6) y
+el esquema de la cadena; ancla cada paso en s03 (modos) y s10
+(resonancia/impedancia); menciona que afinar esas placas es el oficio
+del lutier (BEN 24.4, ajuste de placas de Hutchins) — puente directo a
+s12; anuncia el taller: “ahora van a averiguar, midiendo, qué parte de
+ESTE instrumento hace el trabajo de radiar”</td>
+<td>Lámina de holografías (C&amp;G cap. 6); pizarrón</td>
+</tr>
+<tr>
+<td>22–48′</td>
+<td><strong>Taller serie del objeto: ¿quién radia aquí? (OA1.1, OA1.2,
+OA4.1, OA5.2) — estación plenaria, SIN nota (avance de
+proyecto)</strong></td>
+<td>Instalación 2′; en grupo escribe <strong>3 predicciones</strong>
+(4′): (P1) si tapamos las efes / la boca de la guitarra, ¿qué cambia: la
+sonoridad pareja, los graves, los agudos?; (P2) guitarra suspendida en
+el aire vs. apoyada plana contra la mesa: ¿suena más fuerte o más débil?
+¿la mesa es “caja extra” o freno?; (P3) caminando alrededor del
+instrumento mientras suena, ¿se oye igual en todas partes? ¿dónde se
+pierden primero los agudos?; <strong>fase A</strong> (8′):
+tapar/destapar efes o boca (cartón y paño) con la misma nota; todos
+miden espectrograma (zona grave) y 2 designados miden SPL a 1 m;
+<strong>fase B</strong> (6′): pizzicato controlado con el instrumento al
+aire vs. apoyado en la mesa; medir; <strong>fase C</strong> (4′): nota
+sostenida, 4 oyentes en cruz alrededor comparan brillo/SPL y el
+ejecutante gira lentamente; <strong>bitácora</strong> (2′): cada grupo
+anota cómo aplicará ESTE protocolo a su objeto de proyecto (¿qué parte
+radia? ¿taparla/apoyarla cambia qué?) — compromiso antes de s12, junto
+al mapa de resonancias de s10</td>
+<td>Coordina pasadas y silencio; reparte los puntos de medición SPL
+(misma app y distancia, condición anotada — disciplina de s06); rota por
+los grupos en las anotaciones; provoca: “¿el tapado mató TODO o mató una
+zona del espectro?”, “¿la mesa que amplifica gratis viola lo del
+elástico de s10?” (no: fuerte ↔︎ corto, misma energía gastada más
+rápido); vigila que la bitácora quede escrita (es el entregable de la
+serie esta semana)</td>
+<td>Instrumento frotado + guitarra; cartón/paño para tapar; mesa
+despejada; celulares (espectrograma + SPL); guía
+<code>guia_acoplamiento_objeto.md</code> (1 por grupo); bitácoras</td>
+</tr>
+<tr>
+<td>48–60′</td>
+<td>Cierre del taller + la nota lobo como coda (OA1.1, OA3.2)</td>
+<td>UN grupo expone su tabla (tapado / apoyo / dirección) y todos
+contrastan predicciones; anota la moraleja: <strong>el instrumento es
+cuerda + transformador + parlante</strong>: lo que se oye lleva la firma
+del cuerpo tanto como de la cuerda; escucha la coda: la <strong>nota
+lobo</strong> (audio o relato con el esquema en el pizarrón): cuando un
+modo del cuerpo es TAN fuerte que le disputa la energía a la cuerda, la
+nota “aúlla” a tirones — el acoplamiento de s10 llevado al exceso (BEN
+25.4, curiosidad, no entra en prueba)</td>
+<td>Superpone resultados de los 5 grupos; narra la nota lobo con el
+vocabulario del día (dos osciladores acoplados peleando el régimen) y
+toca el audio si lo consiguió <strong>[POR VERIFICAR** disponibilidad de
+grabación de wolf note; plan B: solo esquema**]</strong>; explicita qué
+de hoy es evaluable en la Prueba 2 (mecanismo frotado, cadena de
+radiación) y qué es cultura general (lobo, Hutchins)</td>
+<td>Pizarrón; audio de nota lobo si existe; tablas de los grupos</td>
+</tr>
+<tr>
+<td>60–70′</td>
+<td>Síntesis, ticket hacia s12 y anuncios</td>
+<td>Anota la síntesis (3 líneas: la fricción es una válvula y la cuerda
+su metrónomo; una vuelta de la esquina = un soltar; la caja no regala
+energía — la transforma y la gasta radiando); escribe su <strong>ticket
+de salida hacia s12</strong>: “en la cuerda, el pegar-soltar lo hace la
+fricción; en una flauta no hay nada que pegue ni suelte: <strong>¿qué
+hace de válvula?</strong>”; anota los anuncios en la bitácora del
+grupo</td>
+<td>Recoge tickets; <strong>anuncia s12</strong>: sesión-taller completa
+de <strong>lutería</strong> (formato 9, los 140′): se construyen y miden
+flautas/tubos — <strong>no hay que traer nada especial: los materiales
+los pone el curso</strong>; la <strong>serie del objeto termina en
+s12</strong>: bitácora al día con los DOS compromisos (mapa de
+resonancias de s10 + acoplamiento de hoy) — se revisan en s12; recuerda
+que la nota del hito 2 se publica esta semana (comprometido en s10)</td>
+<td>Tickets; bitácoras; lámina de anuncios</td>
+</tr>
+</tbody>
+</table>
+<h2 id="verificación-de-aprendizaje">Verificación de aprendizaje</h2>
+<ul>
+<li><strong>Ronda oral OA3 (con nota, pasada 2)</strong>: 4 registros
+nuevos en la planilla; el estímulo exige D1 fino (nota estable /
+graznido sin altura / flautado: tres regímenes de la misma cuerda) y D2
+conectado al ticket de s10 (la cuerda organiza la entrega de
+energía).</li>
+<li><strong>Taller del punto de frotado (OA1.2–1.3, EVALUADO, 25 %
+talleres)</strong>: rúbrica rápida logrado/parcial/incipiente sobre la
+guía: 3 predicciones escritas antes de sonar, tabla con
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>f</mi><mn>1</mn></msub><annotation encoding="application/x-tex">f_1</annotation></semantics></math>
+y comportamiento de los parciales altos en 3 posiciones (condiciones
+anotadas), contraste honesto y explicación que use el ciclo
+pegar-soltar. La superposición de los 5 grupos en el pizarrón
+(¿<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>f</mi><mn>1</mn></msub><annotation encoding="application/x-tex">f_1</annotation></semantics></math>
+quieta, agudos hacia el puente?) es la verificación pública.</li>
+<li><strong>Taller de acoplamiento (SIN nota, serie del
+objeto)</strong>: 5 tablas grupales completas + 5 bitácoras con el
+protocolo comprometido para el objeto propio antes de s12. Se cobra en
+s12 (revisión de bitácoras) y en el hito 3 (los compromisos de s10–s11
+son la vara del avance).</li>
+<li><strong>Gancho cobrado</strong>: la predicción típica fallida de la
+pinza (“va a sonar más despacio”) queda corregida: la masa en el puente
+filtra los agudos — el puente es un transformador con preferencias, no
+un cable neutro.</li>
+<li><strong>Cadena de tickets</strong>: ticket s10 cobrado en la escucha
+del día (respuesta: régimen de oscilación — la cuerda cronometra a la
+fricción); ticket s11 → gancho/escucha de s12 (¿qué hace de válvula en
+una flauta?).</li>
+</ul>
+<h2 id="aritmética-de-taller-declarada-regla-6b">Aritmética de taller
+declarada (regla 6b)</h2>
+<ul>
+<li><strong>Módulo 1</strong>: 15 + 12 + 10 + 26 + 7 = 70′ ✓. Escucha
+del día: 3′ + 2′ + 4 × 2,5′ = 15′ ✓.</li>
+<li><strong>Taller punto de frotado (m1, 37–63′)</strong>: 26′ = 2′
+instalación + 4′ predicciones + 8′ fase A (3 posiciones × 2 pasadas de
+~20″ + 30″ de anotación por pasada ≈ 6′, más 2′ de colchón para repetir
+una pasada fallida) + 6′ fase B (filmar 2′ + proyectar/circular 2′ +
+anotar 2′)
+<ul>
+<li>6′ contraste. <strong>Manos en la medición: todos
+simultáneos</strong> — cada estudiante captura el espectrograma en SU
+celular en las 6 pasadas (~8′ de medición activa por persona ✓ ≥2′); el
+registro oficial rota (roles en la guía). Estación única sin cuello:
+nadie espera turno de instrumento porque el instrumento es la fuente, no
+la herramienta. Profesor: coordina pasadas y rota en anotaciones (5 ×
+~1′ por fase).</li>
+</ul></li>
+<li><strong>Módulo 2</strong>: 8 + 14 + 26 + 12 + 10 = 70′ ✓.</li>
+<li><strong>Taller acoplamiento (m2, 22–48′)</strong>: 26′ = 2′ + 4′ +
+8′ + 6′ + 4′ + 2′ (bitácora). Igual que el m1: medición simultánea con
+celular propio; los 2 puestos SPL de la fase A y los 4 oyentes en cruz
+de la fase C rotan entre grupos (designados en la guía) — cada grupo
+pone al menos 1 persona en un rol de medición especial durante el
+módulo.</li>
+<li><strong>Ejecutante</strong>: es quien trajo el instrumento (1–2
+personas); su grupo redistribuye los roles de registro para que el
+ejecutante no cargue además con la tabla. Si el ejecutante se agota
+(fases A de ambos módulos), el profesor releva en las pasadas
+repetidas.</li>
+</ul>
+<h2 id="pendientes-de-producción">Pendientes de producción</h2>
+<ul>
+<li><strong>Demo</strong> (skill /demo-interactiva):
+<code>demo_helmholtz.html</code> — animación de la esquina de Helmholtz:
+cuerda idealizada con la esquina recorriendo la envolvente, velocidad
+del punto de frotado con pegado/deslizando marcados en color, sliders de
+punto de frotado y de
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>f</mi><mn>1</mn></msub><annotation encoding="application/x-tex">f_1</annotation></semantics></math>,
+audio de diente de sierra filtrado coherente con el espectro de fuerza
+en el puente. Concepto único: la nota estable nace de un ciclo
+pegar-soltar sincronizado con el viaje de la esquina. Única demo de la
+sesión.</li>
+<li><strong>Apuntes</strong>:
+<code>sesiones/s11/apuntes/apunte_s11_cuerdas_frotadas_y_cuerpo.md</code>.</li>
+<li><strong>Capítulo (lectura previa)</strong>:
+<code>libro/cap11_cuerdas_frotadas_y_cuerpo.md</code> (sin revelar el
+resultado de P1–P3 del taller ni el de la pinza).</li>
+<li><strong>Actividades</strong>: guía PEE evaluada
+<code>guia_pee_punto_de_frotado.md</code> + guía sin nota
+<code>guia_acoplamiento_objeto.md</code> (con el bloque de
+bitácora/compromiso) — en <code>sesiones/s11/actividades/</code>.</li>
+<li><strong>Material físico</strong>: resina (colofonia) para el plan B;
+pinza de ropa (o sordina prestada); cartón y paño para tapar efes/boca;
+paño claro de fondo para filmar; cable/adaptador para proyectar un
+celular; lámina con 2–3 holografías de C&amp;G cap. 6 (fotografiar del
+libro); lámina de anuncios de s12.</li>
+<li><strong>Trabajo previo del profesor (esta semana)</strong>:
+confirmar por correo quiénes traen instrumento (lista tomada en s10) y
+ensayar con el ejecutante 2′ antes de clase el estímulo de la escucha
+(nota estable / graznido / flautado); <strong>probar la cámara lenta del
+celular del curso sobre una cuerda real</strong> (¿240 fps resuelve la
+esquina? <strong>[POR VERIFICAR]</strong>; si no, dejar listo un video
+de respaldo de cuerda frotada en cámara lenta <strong>[POR VERIFICAR**
+fuente y derechos de uso en aula**]</strong>); buscar grabación de nota
+lobo (cello) para la coda <strong>[POR VERIFICAR]</strong>; imprimir 6
+guías de cada taller; planilla OA3 con el sorteo (pasada 2); publicar la
+nota del hito 2 (compromiso de s10).</li>
+<li><strong>Sin estímulo de grabación nuevo</strong>: la escucha del día
+es en vivo (plan A instrumento de estudiante, plan B guitarra con
+resina); no se agrega fila al banco de estímulos.</li>
+</ul>
+<h2 id="riesgos-y-plan-b">Riesgos y plan B</h2>
+<ul>
+<li><strong>Nadie trae instrumento frotado</strong> (pese al aviso de
+s10) → plan B declarado en el brief de la sesión: el profesor frota una
+cuerda de la guitarra (o del monocordio) con resina en el dedo/arco
+improvisado — el stick-slip y el contraste de punto de frotado se oyen
+igual aunque con menos elegancia; la fase B usa el video de respaldo; el
+gancho de la pinza se hace sobre la guitarra (paño bajo las cuerdas en
+el puente). La sesión pierde vitrina, no contenido.</li>
+<li><strong>El graznido no sale a demanda en la escucha</strong> (el
+ejecutante es demasiado bueno) → ensayado antes de clase: presión
+exagerada + arco lento junto al puente lo produce siempre; plan B: el
+profesor “sabotea” con la mano el arco del ejecutante.</li>
+<li><strong>La cámara lenta no resuelve la forma de la cuerda</strong>
+(240 fps insuficiente o luz pobre) → riesgo marcado [POR VERIFICAR] y
+probado ANTES de clase; plan B: video de respaldo preparado; plan C: se
+omite la fase B (fusible del m1) y P3 se contrasta contra la demo — se
+pierde la verificación en la cuerda real, se declara honestamente como
+límite del instrumental (buen meta-mensaje OA3/D3).</li>
+<li><strong>El espectrograma de 20 celulares con una sola
+fuente</strong> (ruido de sala) → protocolo de silencio de medición
+ensayado en s06/s08: pasadas cortas, anotación después, el profesor
+corta cualquier pasada contaminada y la repite (el colchón de 2′ de la
+fase A es para esto).</li>
+<li><strong>El SPL de la fase A del m2 no muestra diferencia clara al
+tapar</strong> (tapado parcial) → la evidencia principal es espectral
+(la zona grave del espectrograma se hunde al tapar), no el número SPL;
+la guía lo advierte y pide mirar la banda, no el promedio.</li>
+<li><strong>La demo no corre en el equipo de la sala</strong> → plan B:
+el esquema de la esquina se dibuja por cuadros en el pizarrón (secuencia
+de 6 posiciones, preparada en la lámina) y el diente de sierra se toca
+desde el celular del profesor con un generador; se pierde la animación,
+no el argumento.</li>
+<li><strong>El módulo 2 se atrasa</strong> → fusible declarado: cae la
+fase C (radiación) a demostración de 2′; si el atraso es mayor, la coda
+del lobo se reduce al relato de 1′; anuncios y ticket intocables.</li>
+<li><strong>Sobra tiempo</strong> (grupos rápidos) → m1: pasada extra
+pulsada vs. frotada en la MISMA cuerda del violín (¿el espectro
+sostenido vs. decayente se ve en el espectrograma? — conecta s04); m2:
+predecir y probar la guitarra “sorda” (paño dentro de la caja).</li>
+</ul>
+</body>
+</html>

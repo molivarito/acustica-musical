@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="es" xml:lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>Modos de vibración: por qué cada objeto suena como
+suena</title>
+  <style>
+    /* Default styles provided by pandoc.
+    ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+    */
+    html {
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    svg {
+      height: auto;
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      border: none;
+      border-top: 1px solid #1a1a1a;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+  </style>
+  <style>
+  /* Estilo compartido para los .md del curso convertidos a HTML
+     (misma familia editorial de las demos y del mapa del curso) */
+  :root { --tinta:#1a1a1a; --acento:#7a2e2e; --azul:#2e4a7a;
+          --papel:#faf8f4; --panel:#f0ece4; }
+  body { margin:0 auto; padding:2rem 1.4rem 4rem; max-width:820px;
+         background:var(--papel); color:var(--tinta);
+         font-family:Georgia,'Times New Roman',serif; line-height:1.55;
+         font-size:1.02rem; }
+  h1,h2,h3,h4 { font-family:Georgia,serif; line-height:1.25; }
+  h1 { font-size:1.6rem; border-bottom:2px solid var(--tinta);
+       padding-bottom:.3rem; }
+  h2 { font-size:1.25rem; margin-top:2rem; color:var(--acento); }
+  h3 { font-size:1.05rem; margin-top:1.5rem; }
+  a { color:var(--azul); }
+  blockquote { border-left:4px solid var(--acento); margin:1rem 0;
+               padding:.2rem 1rem; background:var(--panel);
+               border-radius:0 6px 6px 0; }
+  table { border-collapse:collapse; margin:1rem 0; font-size:.92rem;
+          display:block; overflow-x:auto; }
+  th { font-family:Helvetica,Arial,sans-serif; font-size:.78rem;
+       text-transform:uppercase; letter-spacing:.04em; text-align:left;
+       border-bottom:2px solid var(--tinta); padding:.45rem .6rem;
+       background:var(--papel); }
+  td { padding:.45rem .6rem; border-bottom:1px solid #ddd;
+       vertical-align:top; }
+  code { font-family:Menlo,Consolas,monospace; font-size:.86em;
+         background:var(--panel); padding:.08em .35em; border-radius:3px; }
+  pre { background:var(--panel); padding:.8rem 1rem; border-radius:6px;
+        overflow-x:auto; }
+  pre code { background:none; padding:0; }
+  hr { border:none; border-top:1px solid #ccc; margin:2rem 0; }
+  img { max-width:100%; }
+  li { margin-bottom:.25rem; }
+  math { font-size:1.05em; }
+  @media print { body { background:white; max-width:none; } }
+  </style>
+</head>
+<body>
+<h1 id="modos-de-vibración-por-qué-cada-objeto-suena-como-suena">Modos
+de vibración: por qué cada objeto suena como suena</h1>
+<p><strong>Sesión 03</strong> · Curso Acústica Musical UC
+<strong>Objetivos que cubre</strong>: OA1.1 (identificar modos y
+parciales y relacionar la forma de vibrar con el espectro), OA1.2
+(predecir el efecto del punto de golpe y del punto de apagado), OA5.1
+(introducción: el proyecto queda lanzado).</p>
+<h2 id="por-qué-el-vaso-dio-varias-líneas-y-no-una">¿Por qué el vaso dio
+varias líneas y no una?</h2>
+<p>La semana pasada usted dejó escrita una predicción: el vaso golpeado,
+¿una línea o varias en el espectrograma? En la sesión lo comprobó: son
+<strong>varias</strong> — un puñado de líneas horizontales nítidas, cada
+una en su frecuencia, cada una apagándose a su propio ritmo. Y eso exige
+una explicación, porque el golpe fue <em>uno solo</em>. Nadie le entregó
+al vaso varias frecuencias; se las sacó de adentro.</p>
+<p>La explicación es la idea central del curso: un objeto no vibra “a
+una frecuencia” ni vibra “como quiere”. Cada objeto — por su forma, su
+material, su tamaño y cómo está sostenido — tiene un repertorio
+<em>fijo</em> de maneras de vibrar, y cada una de esas maneras tiene su
+propia frecuencia. Ese repertorio se llama el conjunto de
+<strong>frecuencias características</strong> del objeto, y cada manera
+de vibrar se llama un <strong>modo de vibración</strong> (Benade 1990,
+cap. 4, construye la idea golpeando una sartén; nosotros hicimos lo
+mismo). El golpe no elige las frecuencias: solo decide con cuánta fuerza
+se enciende cada modo del repertorio. Por eso el vaso golpeado en el
+borde y el vaso golpeado apoyado en la palma dan huellas distintas del
+<em>mismo</em> repertorio.</p>
+<p>Dicho de una vez: <strong>el espectro que usted ve en la app es la
+lista de los modos que el golpe encendió</strong>. Cada línea es un
+parcial, y detrás de cada parcial hay una forma de vibrar de todo el
+objeto.</p>
+<h2 id="qué-es-exactamente-una-manera-de-vibrar">¿Qué es exactamente
+“una manera de vibrar”?</h2>
+<p>Imagine la versión más simple de un objeto: una masa colgando de un
+resorte. Tiene una sola manera de oscilar y, por tanto, una sola
+frecuencia característica. Ahora encadene dos masas con resortes:
+aparece una segunda posibilidad — las masas pueden ir y venir
+<em>juntas</em>, o ir y venir <em>en oposición</em> — y cada una de esas
+coreografías ocurre a una frecuencia distinta. Con tres masas hay tres
+coreografías; con muchas masas, muchas. Una cuerda, una membrana o una
+sartén son, a los ojos de la física, cadenas de muchísimas masas unidas
+elásticamente: por eso tienen muchas frecuencias características y no
+una (esta construcción, sin ninguna ecuación, es la del cap. 6 de Benade
+— la mejor exposición cualitativa del tema que va a encontrar).</p>
+<p>Dos rasgos de los modos conviene fijar desde ya. Primero, un modo es
+una forma de vibrar <strong>de todo el objeto a la vez</strong>: en el
+modo grave de la sartén se mueve el fondo completo; en un modo agudo,
+unas zonas suben mientras otras bajan. Segundo, en cada modo hay lugares
+que <strong>no se mueven</strong> — los <em>nodos</em> — y lugares de
+máximo movimiento — los <em>antinodos</em>. Esto no es un detalle
+decorativo: es la palanca práctica de la sesión. Si usted apoya un dedo
+donde un modo se mueve mucho, ese modo se apaga; si lo apoya donde el
+modo tiene un nodo, ese modo sobrevive. En el taller lo verificó: el
+dedo en el centro de la tapa mató unos parciales y perdonó otros. Tocar
+el objeto en distintos puntos es <em>editar</em> su espectro modo por
+modo — y eso es exactamente lo que hace un percusionista al elegir dónde
+golpear y dónde apagar.</p>
+<h2 id="qué-tiene-de-especial-la-cuerda">¿Qué tiene de especial la
+cuerda?</h2>
+<p>En el taller, las razones entre los parciales de la sartén no dieron
+números redondos:
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>f</mi><mn>2</mn></msub><mi>/</mi><msub><mi>f</mi><mn>1</mn></msub></mrow><annotation encoding="application/x-tex">f_2/f_1</annotation></semantics></math>
+salió 1,4 o 2,7 o cualquier cosa, según el objeto. La cuerda tensa es el
+caso opuesto y por eso es la estrella de la música. Sus modos tienen
+formas fáciles de dibujar — una barriga, dos barrigas, tres barrigas,
+siempre con nodos en los dos extremos fijos — y sus frecuencias guardan
+una relación asombrosamente simple:</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>f</mi><mi>n</mi></msub><mo>=</mo><mi>n</mi><mspace width="0.167em"></mspace><msub><mi>f</mi><mn>1</mn></msub><mspace width="2.0em"></mspace><mi>n</mi><mo>=</mo><mn>1</mn><mo>,</mo><mn>2</mn><mo>,</mo><mn>3</mn><mo>,</mo><mi>…</mi></mrow><annotation encoding="application/x-tex">f_n = n \, f_1 \qquad n = 1, 2, 3, \dots</annotation></semantics></math></p>
+<p>El modo de dos barrigas vibra exactamente al doble del modo
+fundamental; el de tres, al triple. Puede verlo y oírlo, modo por modo y
+sumados, en la demo de la sesión (<code>demo_modos_cuerda.html</code>),
+y lo oyó en la guitarra: apoyar el dedo suavemente en la mitad de la
+cuerda deja sonar solo los modos con nodo ahí (los pares) y aparece la
+octava; en el tercio, aparece la docena de notas más arriba que los
+músicos llaman armónico natural.</p>
+<p>Aquí el curso instala un vocabulario <strong>obligatorio</strong> de
+aquí a diciembre:</p>
+<ul>
+<li><strong>Parcial</strong> es cualquier componente del espectro,
+cualquier línea, venga del objeto que venga.</li>
+<li><strong>Armónico</strong> es un parcial cuya frecuencia está en
+razón <em>entera</em> con la fundamental
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>f</mi><mi>n</mi></msub><mo>=</mo><mi>n</mi><msub><mi>f</mi><mn>1</mn></msub></mrow><annotation encoding="application/x-tex">f_n = n f_1</annotation></semantics></math>).</li>
+</ul>
+<p>Todos los armónicos son parciales; casi ningún parcial de la sartén
+es armónico. La cuerda (y, veremos, la columna de aire) producen
+parciales armónicos; las campanas, placas, membranas y sartenes producen
+parciales <strong>inarmónicos</strong>. Cuando en la rúbrica de escucha
+describa un sonido, elegir bien entre estas dos palabras ya es media
+hipótesis: espectro armónico sugiere cuerda, tubo o voz; espectro
+inarmónico sugiere un objeto golpeado en dos o tres dimensiones. Y
+anticipa la percepción: los parciales armónicos se funden en
+<em>una</em> nota nítida; los inarmónicos se resisten, y por eso la
+sartén “no afina” (por qué el oído premia las razones enteras es tema de
+la sesión 5).</p>
+<blockquote>
+<p><strong>Recuadro opcional (para quienes vienen de
+ingeniería).</strong> La relación
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>f</mi><mi>n</mi></msub><mo>=</mo><mi>n</mi><msub><mi>f</mi><mn>1</mn></msub></mrow><annotation encoding="application/x-tex">f_n = n f_1</annotation></semantics></math>
+de la cuerda ideal se deriva de exigir nodos en ambos extremos: caben
+las longitudes de onda
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>λ</mi><mi>n</mi></msub><mo>=</mo><mn>2</mn><mi>L</mi><mi>/</mi><mi>n</mi></mrow><annotation encoding="application/x-tex">\lambda_n = 2L/n</annotation></semantics></math>,
+y con
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>f</mi><mo>=</mo><mi>v</mi><mi>/</mi><mi>λ</mi></mrow><annotation encoding="application/x-tex">f = v/\lambda</annotation></semantics></math>
+(la
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>v</mi><annotation encoding="application/x-tex">v</annotation></semantics></math>
+aquí es la velocidad de la onda <em>en la cuerda</em>, no en el aire)
+sale la serie entera. La rigidez de una cuerda real desafina levemente
+esta serie hacia lo agudo — inarmonicidad que en el piano es audible y
+obliga a la afinación “estirada” (C&amp;G, cap. 7; BEN cap. 8). En 2D el
+mismo argumento geométrico no produce razones enteras: las frecuencias
+de una membrana circular ideal siguen los ceros de funciones de Bessel,
+con razones como 1 : 1,59 : 2,14 : 2,30 (ROS, cap. 13; C&amp;G, cap.
+10).</p>
+</blockquote>
+<h2
+id="y-cuándo-el-objeto-es-una-superficie-la-percusión-en-su-lugar">¿Y
+cuándo el objeto es una superficie? (la percusión en su lugar)</h2>
+<p>Al pasar de la cuerda (una dimensión) a una membrana o una placa (dos
+dimensiones), los nodos dejan de ser puntos y se convierten en
+<strong>líneas nodales</strong>: curvas y diámetros quietos que dividen
+la superficie en zonas que suben y bajan alternadamente. Las figuras de
+Chladni que vio proyectadas — arena que dibuja las líneas nodales de una
+placa vibrando — son la fotografía clásica de esos modos (C&amp;G, cap.
+10, pp. 409–452).</p>
+<p>La consecuencia musical es directa: en 2D las frecuencias
+características <em>no</em> caen en razones enteras. Membranas, placas,
+platillos y gongs son inarmónicos de nacimiento, y por eso la mayoría de
+la percusión tiene altura difusa: su espectro no ofrece la serie entera
+que el oído sabe fundir en nota. El <strong>timbal</strong> es la
+excepción construida a pulso: el caldero de aire bajo el parche, la
+tensión afinable y la costumbre de golpear cerca del borde (no en el
+centro) desplazan y seleccionan un grupo de parciales hasta dejarlos en
+razones <em>casi</em> enteras entre sí — y entonces aparece una altura
+cantable (BEN cap. 9, secs. 9.5; C&amp;G cap. 10; ROS cap. 13). Es el
+mejor ejemplo del semestre de que la lutería es, en el fondo, ingeniería
+de modos: mover frecuencias características hasta donde el oído las
+quiere.</p>
+<h2 id="por-qué-el-sonido-del-golpe-cambia-mientras-se-apaga">¿Por qué
+el sonido del golpe cambia mientras se apaga?</h2>
+<p>Última pieza de la sesión, visible en el espectrograma del vaso: las
+líneas no mueren juntas. Cada modo pierde su energía a su propio ritmo —
+en general los modos agudos se disipan antes y los graves sobreviven —,
+de modo que el timbre de un objeto golpeado es una película, no una
+foto: brillante y complejo en el ataque, cada vez más simple y opaco
+hacia la cola (Benade 1990, cap. 4). El oído usa esa película completa
+para reconocer “vaso”, “sartén” o “campana”. Cuando en el proyecto grabe
+su instrumento, no mire solo <em>qué</em> parciales tiene: mire <em>cómo
+decaen</em>.</p>
+<h2 id="el-proyecto-quedó-lanzado">El proyecto quedó lanzado</h2>
+<p>Desde hoy usted y su grupo tienen un encargo que atraviesa el
+semestre: construir o modificar un instrumento o instalación sonora y —
+esto es lo evaluado — <strong>explicar acústicamente</strong> lo que
+resulte. El enunciado completo está en la pauta entregada (hitos en s05,
+s10 y s15; la explicación vale más que el éxito sonoro). La sesión de
+hoy ya le dio la primera herramienta de diseño: todo objeto sonoro es un
+repertorio de modos, y diseñar es decidir qué modos tendrá y cuáles va a
+encender.</p>
+<h2 id="síntesis">Síntesis</h2>
+<ul>
+<li>Todo objeto tiene un repertorio fijo de <strong>frecuencias
+características</strong>; cada una corresponde a un
+<strong>modo</strong>: una forma de vibrar de todo el objeto, con sus
+nodos y antinodos. El golpe no crea frecuencias: enciende modos.</li>
+<li>Dónde se golpea y dónde se toca deciden <em>cuáles</em> modos suenan
+y cuáles se apagan (la palanca práctica del percusionista y del
+lutier).</li>
+<li>Cuerda ideal:
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>f</mi><mi>n</mi></msub><mo>=</mo><mi>n</mi><msub><mi>f</mi><mn>1</mn></msub></mrow><annotation encoding="application/x-tex">f_n = n f_1</annotation></semantics></math>
+— parciales <strong>armónicos</strong>. Membranas y placas: razones no
+enteras — parciales <strong>inarmónicos</strong>; los nodos son
+<strong>líneas nodales</strong>. El timbal logra altura acomodando
+parciales en razones casi enteras.</li>
+<li><strong>Parcial</strong> ≠ <strong>armónico</strong>: armónico es
+solo el parcial en razón entera con la fundamental. Vocabulario
+obligatorio de la rúbrica.</li>
+<li>Cada modo decae a su ritmo: el timbre del golpe es una
+película.</li>
+</ul>
+<h2 id="hacia-la-sesión-04">Hacia la sesión 04</h2>
+<p>Quedó en su ticket una pregunta: si pulso la misma cuerda en el medio
+o pegado al puente, ¿cambia la nota o cambia el timbre? La sesión 4 la
+responde con la “receta de vibración”: cómo el punto y la forma de
+excitación reparten energía entre los modos de la cuerda — con los
+instrumentos de cuerda pulsada que ustedes mismos van a traer
+(<strong>recuerde: traer 1–2 guitarras, charangos, ukeleles u otros por
+grupo</strong>). Y el proyecto sigue corriendo: ideas conversadas y
+bitácora al día.</p>
+<h2 id="referencias-y-lectura-complementaria">Referencias y lectura
+complementaria</h2>
+<ul>
+<li>Benade, A. H. (1990). <em>Fundamentals of Musical Acoustics</em>,
+2.ª ed. Dover — cap. 4 (frecuencias características y decaimiento: la
+sartén, secs. 4.1–4.8 y EEQ 4.9), cap. 6 (modos desde cadenas de masas,
+secs. 6.1–6.5) y cap. 9 (membranas, placas y timbal, secs.
+9.1–9.5).</li>
+<li>Campbell, M. &amp; Greated, C. (1987). <em>The Musician’s Guide to
+Acoustics</em>. Oxford UP — cap. 5, pp. 183–202 (ondas y modos en
+cuerdas) y cap. 10, pp. 409–452 (percusión: membranas, ídiófonos,
+Chladni).</li>
+<li>Roederer, J. G. (1997). <em>Acústica y Psicoacústica de la
+Música</em>. Ricordi — cap. 4, sec. 4.1 (pp. 120 y ss.): ondas
+estacionarias en la cuerda. Lectura alternativa en español.</li>
+<li>Rossing, T. D., Moore, F. R. &amp; Wheeler, P. A. (2002). <em>The
+Science of Sound</em>, 3.ª ed. — caps. 2 y 4 (sistemas vibrantes, modos)
+y cap. 13 (percusión), para ejercicios.</li>
+</ul>
+</body>
+</html>

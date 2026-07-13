@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="es" xml:lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>La sala como instrumento</title>
+  <style>
+    /* Default styles provided by pandoc.
+    ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+    */
+    html {
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    svg {
+      height: auto;
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      border: none;
+      border-top: 1px solid #1a1a1a;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+  </style>
+  <style>
+  /* Estilo compartido para los .md del curso convertidos a HTML
+     (misma familia editorial de las demos y del mapa del curso) */
+  :root { --tinta:#1a1a1a; --acento:#7a2e2e; --azul:#2e4a7a;
+          --papel:#faf8f4; --panel:#f0ece4; }
+  body { margin:0 auto; padding:2rem 1.4rem 4rem; max-width:820px;
+         background:var(--papel); color:var(--tinta);
+         font-family:Georgia,'Times New Roman',serif; line-height:1.55;
+         font-size:1.02rem; }
+  h1,h2,h3,h4 { font-family:Georgia,serif; line-height:1.25; }
+  h1 { font-size:1.6rem; border-bottom:2px solid var(--tinta);
+       padding-bottom:.3rem; }
+  h2 { font-size:1.25rem; margin-top:2rem; color:var(--acento); }
+  h3 { font-size:1.05rem; margin-top:1.5rem; }
+  a { color:var(--azul); }
+  blockquote { border-left:4px solid var(--acento); margin:1rem 0;
+               padding:.2rem 1rem; background:var(--panel);
+               border-radius:0 6px 6px 0; }
+  table { border-collapse:collapse; margin:1rem 0; font-size:.92rem;
+          display:block; overflow-x:auto; }
+  th { font-family:Helvetica,Arial,sans-serif; font-size:.78rem;
+       text-transform:uppercase; letter-spacing:.04em; text-align:left;
+       border-bottom:2px solid var(--tinta); padding:.45rem .6rem;
+       background:var(--papel); }
+  td { padding:.45rem .6rem; border-bottom:1px solid #ddd;
+       vertical-align:top; }
+  code { font-family:Menlo,Consolas,monospace; font-size:.86em;
+         background:var(--panel); padding:.08em .35em; border-radius:3px; }
+  pre { background:var(--panel); padding:.8rem 1rem; border-radius:6px;
+        overflow-x:auto; }
+  pre code { background:none; padding:0; }
+  hr { border:none; border-top:1px solid #ccc; margin:2rem 0; }
+  img { max-width:100%; }
+  li { margin-bottom:.25rem; }
+  math { font-size:1.05em; }
+  @media print { body { background:white; max-width:none; } }
+  </style>
+</head>
+<body>
+<h1 id="la-sala-como-instrumento">La sala como instrumento</h1>
+<p><strong>Sesión 14</strong> · Curso Acústica Musical UC
+<strong>Objetivos que cubre</strong>: OA1.4 (reflexión, absorción,
+reverberación y modos de sala; cómo la sala condiciona ejecución y
+escucha), OA4.3 (medición de
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>T</mi><mn>60</mn></msub><annotation encoding="application/x-tex">T_{60}</annotation></semantics></math>
+en salas reales), OA3.2 (sensación–mecanismo– medición en un mismo
+fenómeno).</p>
+<h2 id="por-qué-la-ducha-lo-hace-cantar-mejor">¿Por qué la ducha lo hace
+cantar mejor?</h2>
+<p>El ticket de la semana pasada preguntaba por qué la misma voz suena
+tan distinta en la ducha, en la sala de clases y en una catedral. La
+respuesta corta es incómoda para el ego: no es la voz, es el socio. Todo
+sonido musical que usted ha oído en su vida llegó a sus oídos <em>a
+través de una sala</em> (o de una calle, o de un bosque), y ese espacio
+no es un canal neutro: refleja, absorbe, refuerza unas frecuencias,
+alarga las notas después de que la fuente calló. Benade (1990, cap. 11)
+lleva esta idea hasta el fondo: la sala es un sistema vibrante con modos
+y decaimiento, exactamente como la cuerda de s03 y el resonador de s10 —
+un instrumento más, que suena junto con el que usted toca. Esta sesión
+lo trata como tal: primero el mecanismo, después el número, y en el
+segundo módulo salimos a medirlo en espacios reales de la
+universidad.</p>
+<h2 id="qué-hace-una-pared-con-el-sonido-que-le-llega">¿Qué hace una
+pared con el sonido que le llega?</h2>
+<p>Cuando el frente de presión que estudiamos en s02 choca con una
+superficie, la energía se reparte: una parte <strong>se refleja</strong>
+de vuelta a la sala y otra <strong>se absorbe</strong> (se convierte en
+calor dentro del material o lo atraviesa). La proporción depende del
+material: una losa de hormigón o un vidrio devuelven casi todo; una
+cortina gruesa, una alfombra, un sofá — y, muy especialmente, un público
+de veinte personas con ropa — se tragan una fracción grande de lo que
+les llega. El caso límite es instructivo: una <strong>ventana
+abierta</strong> “absorbe” todo, porque nada de lo que sale por ahí
+regresa. Por definición se le asigna absorción 1, y contra ella se
+comparan todos los materiales (C&amp;G cap. 14, pp. 525–532).</p>
+<p>De esta repartición sale la primera herramienta de diagnóstico: una
+sala con muchas superficies duras y desnudas es una sala
+<strong>viva</strong> (todo rebota), y una sala llena de materiales
+blandos es una sala <strong>seca</strong>. Su pieza con cama, ropa y
+cortinas es seca; la caja de escala de hormigón del mismo edificio es
+viva. El oído lo detecta en una palmada: en la salida de hoy, ésa será
+siempre la primera medición — la de oído.</p>
+<h2 id="a-quién-le-escucho-al-instrumento-o-a-la-sala">¿A quién le
+escucho: al instrumento o a la sala?</h2>
+<p>Párese cerca de alguien que habla y camine alejándose. Al principio
+domina el <strong>campo directo</strong>: el sonido que viaja en línea
+recta de la fuente a su oído, y que se debilita rápido con la distancia
+(s06). Pero en una sala cerrada hay un segundo inquilino: el
+<strong>campo reverberante</strong>, la suma de todas las reflexiones
+que rebotan una y otra vez, que llena la sala de manera bastante pareja.
+Lejos de la fuente, ese campo de rebotes domina: por eso en una iglesia
+el nivel casi no baja cuando usted se aleja del coro, mientras que en
+una cancha abierta la misma distancia lo deja sin concierto (C&amp;G
+cap. 14, pp. 532–539; ROE 4.7).</p>
+<p>Que oigamos algo inteligible en medio de ese mar de reflexiones tiene
+su propia explicación perceptual, y es una de las curiosidades finas de
+la audición: el sistema auditivo le da prioridad al <strong>primer
+frente que llega</strong> — el directo — y funde las reflexiones
+tempranas con él, en vez de oírlas como ecos separados. Es el
+<strong>efecto precedencia</strong> (BEN 12.2). Queda como cultura
+general del curso: sin él, cada sala sería una cámara de ecos
+inhabitable.</p>
+<h2 id="cuánto-dura-una-sala-el-tiempo-de-reverberación">¿Cuánto dura
+una sala? El tiempo de reverberación</h2>
+<p>Detenga la fuente y la sala sigue sonando: la energía atrapada sigue
+rebotando y en cada rebote las superficies le cobran su parte, hasta que
+la cola se funde con el ruido de fondo. Para convertir esa “cola” en un
+número comparable entre salas se usa el <strong>tiempo de
+reverberación</strong>
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>T</mi><mn>60</mn></msub><annotation encoding="application/x-tex">T_{60}</annotation></semantics></math>:
+el tiempo que tarda el nivel en caer <strong>60 dB</strong> desde que la
+fuente se detiene. Con la regla de s06 usted puede traducirlo: 60 dB son
+seis pisos de ×10 — la intensidad cayó a la millonésima parte. Es, en la
+práctica, el tránsito desde un fortissimo hasta el umbral en que la sala
+“quedó en silencio”.</p>
+<p>Wallace Sabine, ordenando salas de Harvard hacia 1900 con un tubo de
+órgano y un cronómetro, encontró la relación que todavía usamos (ROS
+cap. 23; C&amp;G cap. 14, pp. 533–537): el tiempo de reverberación crece
+con el <strong>volumen</strong> de la sala y decrece con su
+<strong>absorción total</strong>,</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>T</mi><mn>60</mn></msub><mo>∝</mo><mfrac><mi>V</mi><mi>A</mi></mfrac></mrow><annotation encoding="application/x-tex">T_{60} \propto \frac{V}{A}</annotation></semantics></math></p>
+<p>donde
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>V</mi><annotation encoding="application/x-tex">V</annotation></semantics></math>
+es el volumen y
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>A</mi><annotation encoding="application/x-tex">A</annotation></semantics></math>
+la suma de las superficies pesadas por cuánto absorbe cada una. La
+lectura en proporciones — nuestro idioma de todo el semestre — es lo que
+importa: duplicar el volumen (catedral) duplica la cola; duplicar la
+absorción (llenar la sala de público) la corta a la mitad. Por eso el
+ensayo general en sala vacía “suena a otra sala” que el concierto con
+público: <em>es</em> otra sala, con otra
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>A</mi><annotation encoding="application/x-tex">A</annotation></semantics></math>.</p>
+<blockquote>
+<p><strong>Recuadro (el número, para quien lo quiera).</strong> Con
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>V</mi><annotation encoding="application/x-tex">V</annotation></semantics></math>
+en m³ y
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>A</mi><annotation encoding="application/x-tex">A</annotation></semantics></math>
+en m² de “ventana abierta equivalente”, la fórmula de Sabine es
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>T</mi><mn>60</mn></msub><mo>=</mo><mn>0</mn><mo>,</mo><mn>161</mn><mspace width="0.167em"></mspace><mfrac><mi>V</mi><mi>A</mi></mfrac></mrow><annotation encoding="application/x-tex">T_{60} = 0{,}161\,\frac{V}{A}</annotation></semantics></math>
+s/m (dato estándar; C&amp;G cap. 14; ROS cap. 23). Una sala de clases de
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>7</mn><mo>×</mo><mn>8</mn><mo>×</mo><mn>3</mn></mrow><annotation encoding="application/x-tex">7 \times 8 \times 3</annotation></semantics></math>
+m
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>V</mi><mo>≈</mo><mn>170</mn></mrow><annotation encoding="application/x-tex">V \approx 170</annotation></semantics></math>
+m³) con
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>A</mi><mo>≈</mo><mn>25</mn></mrow><annotation encoding="application/x-tex">A \approx 25</annotation></semantics></math>
+m² da
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>T</mi><mn>60</mn></msub><mo>≈</mo><mn>1</mn><mo>,</mo><mn>1</mn></mrow><annotation encoding="application/x-tex">T_{60} \approx 1{,}1</annotation></semantics></math>
+s vacía — y bastante menos con veinte estudiantes adentro. Para
+referencia: las salas de concierto célebres rondan los 2 s; una pieza
+amoblada, unas décimas.</p>
+</blockquote>
+<h2 id="por-qué-la-ducha-favorece-ciertas-notas-los-modos-de-sala">¿Por
+qué la ducha favorece ciertas notas? Los modos de sala</h2>
+<p>Falta el segundo fenómeno del ticket: la ducha no solo alarga su voz
+— le <em>afina</em> ciertas notas, que salen solas, gordas y
+satisfactorias. Eso ya no es reverberación: son <strong>modos</strong>.
+El aire encerrado entre dos paredes paralelas separadas una distancia
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>L</mi><annotation encoding="application/x-tex">L</annotation></semantics></math>
+es una columna vibrante como las de s12, y tiene ondas estacionarias con
+frecuencias</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>f</mi><mo>=</mo><mfrac><mrow><mi>v</mi><mspace width="0.167em"></mspace><mi>n</mi></mrow><mrow><mn>2</mn><mi>L</mi></mrow></mfrac><mo>,</mo><mspace width="2.0em"></mspace><mi>n</mi><mo>=</mo><mn>1</mn><mo>,</mo><mn>2</mn><mo>,</mo><mn>3</mn><mo>,</mo><mi>…</mi></mrow><annotation encoding="application/x-tex">f = \frac{v\,n}{2L}, \qquad n = 1, 2, 3, \dots</annotation></semantics></math></p>
+<p>por cada par de paredes enfrentadas (los llamados modos axiales; ROS
+cap. 25). Una ducha de 2 m de pared a pared tiene su primer modo en
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>343</mn><mi>/</mi><mo stretchy="false" form="prefix">(</mo><mn>2</mn><mo>×</mo><mn>2</mn><mo stretchy="false" form="postfix">)</mo><mo>≈</mo><mn>86</mn></mrow><annotation encoding="application/x-tex">343/(2 \times 2) \approx 86</annotation></semantics></math>
+Hz, y los siguientes en ~171 y ~257 Hz: plena zona de la voz. Cuando su
+nota cae cerca de una de esas frecuencias, la sala entera resuena con
+usted — es la curva de resonancia de s10, con la sala como resonador y
+su voz como excitador. Entre modo y modo, en cambio, la sala responde
+poco: por eso <em>algunas</em> notas engordan y otras no.</p>
+<p>¿Y por qué la catedral no hace esto? Sí lo hace — pero sus modos
+empiezan tan abajo y se apilan tan densamente que en la zona musical hay
+cientos por cada semitono: ya no se oyen frecuencias favoritas sino una
+respuesta pareja y una cola larga. La regla general: <strong>cuanto más
+chica la sala, más ralos y audibles sus modos</strong>. Las salas
+pequeñas de ensayo y las salas de control de estudio pelean con sus
+modos graves toda su vida útil; las salas grandes pelean con la
+reverberación. La demo de la sesión deja mover
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>L</mi><annotation encoding="application/x-tex">L</annotation></semantics></math>,
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>W</mi><annotation encoding="application/x-tex">W</annotation></semantics></math>
+y
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>H</mi><annotation encoding="application/x-tex">H</annotation></semantics></math>
+y barrer un tono para <em>oír</em> exactamente esta transición.</p>
+<h2 id="cómo-se-mide-esto-con-un-celular">¿Cómo se mide esto con un
+celular?</h2>
+<p>El protocolo de la salida es la versión pobre — y honesta — del
+método profesional: llenar la sala de energía, callarse y cronometrar la
+caída. Nuestro impulso es un globo reventado o una palmada fuerte; el
+cronómetro es una app que registra el nivel y estima el tiempo de caída.
+Tres reglas del oficio que la guía convierte en casillas: se mide
+<strong>tres veces</strong> y se reporta la mediana (un impulso es una
+medición ruidosa); se anota el <strong>nivel de fondo</strong> antes de
+medir, porque en un pasillo con gente la cola se funde con el fondo
+mucho antes de caer 60 dB — se lee la caída inicial y se extrapola,
+anotándolo; y <strong>nunca se comparan</strong> dos espacios medidos
+con impulsos distintos sin decirlo. El número que obtenga con un celular
+no es de laboratorio, pero para <em>comparar</em> la capilla con el hall
+— que es lo que pide OA4.3 — es perfectamente competente, igual que en
+s06: las comparaciones con el mismo aparato valen más que los valores
+absolutos.</p>
+<h2 id="síntesis">Síntesis</h2>
+<ul>
+<li>La sala es un instrumento más: refleja y absorbe según sus
+materiales, y suena junto con la fuente (BEN 11).</li>
+<li>Cerca de la fuente domina el campo directo; lejos, el reverberante.
+El efecto precedencia explica por qué no oímos cada reflexión como
+eco.</li>
+<li><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>T</mi><mn>60</mn></msub><annotation encoding="application/x-tex">T_{60}</annotation></semantics></math>:
+tiempo en que el nivel cae 60 dB (un millón de veces menos intensidad).
+Sabine:
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>T</mi><mn>60</mn></msub><mo>∝</mo><mi>V</mi><mi>/</mi><mi>A</mi></mrow><annotation encoding="application/x-tex">T_{60} \propto V/A</annotation></semantics></math>
+— crece con el volumen, cae con la absorción.</li>
+<li>Los modos de sala
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>f</mi><mo>=</mo><mi>v</mi><mspace width="0.167em"></mspace><mi>n</mi><mi>/</mi><mn>2</mn><mi>L</mi></mrow><annotation encoding="application/x-tex">f = v\,n/2L</annotation></semantics></math>
+por eje) son las frecuencias favoritas del aire encerrado: audibles y
+ralos en salas chicas (la ducha), densos e indistinguibles en salas
+grandes (la catedral).</li>
+<li>Medir
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>T</mi><mn>60</mn></msub><annotation encoding="application/x-tex">T_{60}</annotation></semantics></math>
+con celular: impulso, caída, tres repeticiones, mediana, fondo anotado.
+Comparar vale más que el valor absoluto.</li>
+</ul>
+<h2 id="hacia-la-sesión-15">Hacia la sesión 15</h2>
+<p>No queda contenido nuevo: queda el cierre. La próxima semana ustedes
+son el estímulo de la escucha del día — presentaciones finales del
+proyecto en ambos módulos, 25 minutos por grupo, con el instrumento
+funcionando y el informe entregado al inicio. La pauta del hito 3,
+publicada hoy, dice exactamente qué se evalúa; recuerde la regla que
+gobierna todo el proyecto desde s03: la calidad de la explicación pesa
+más que el éxito sonoro.</p>
+<h2 id="referencias-y-lectura-complementaria">Referencias y lectura
+complementaria</h2>
+<ul>
+<li>Benade, A. H. (1990). <em>Fundamentals of Musical Acoustics</em>,
+2.ª ed. Dover — cap. 11 (Room Acoustics I, secs. 11.1–11.10: la sala
+como sistema de modos, reverberación) y cap. 12, sec. 12.2 (efecto
+precedencia). El enfoque de esta sesión es el suyo.</li>
+<li>Campbell, M. &amp; Greated, C. (1987). <em>The Musician’s Guide to
+Acoustics</em>. Oxford UP — cap. 14 (pp. 525–548): absorción, tiempo de
+reverberación y Sabine, campo directo y reverberante, modos de sala y
+medidas correctivas.</li>
+<li>Rossing, T. D., Moore, F. R. &amp; Wheeler, P. A. (2002). <em>The
+Science of Sound</em>, 3.ª ed. — cap. 23 (secs. 23.1–23.14: RT, Sabine,
+el experimento de Joseph Henry) y cap. 25 (modos axiales de salas
+pequeñas); ejercicios de Sabine para quien quiera práctica.</li>
+<li>Roederer, J. G. (1997). <em>Acústica y Psicoacústica de la
+Música</em>. Ricordi — sec. 4.7 (sonido en ambientes cerrados). Lectura
+alternativa en español.</li>
+</ul>
+</body>
+</html>

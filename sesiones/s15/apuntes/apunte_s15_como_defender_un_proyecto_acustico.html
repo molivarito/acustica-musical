@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="es" xml:lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>Cómo defender un proyecto acústico</title>
+  <style>
+    /* Default styles provided by pandoc.
+    ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+    */
+    html {
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    svg {
+      height: auto;
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      border: none;
+      border-top: 1px solid #1a1a1a;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+  </style>
+  <style>
+  /* Estilo compartido para los .md del curso convertidos a HTML
+     (misma familia editorial de las demos y del mapa del curso) */
+  :root { --tinta:#1a1a1a; --acento:#7a2e2e; --azul:#2e4a7a;
+          --papel:#faf8f4; --panel:#f0ece4; }
+  body { margin:0 auto; padding:2rem 1.4rem 4rem; max-width:820px;
+         background:var(--papel); color:var(--tinta);
+         font-family:Georgia,'Times New Roman',serif; line-height:1.55;
+         font-size:1.02rem; }
+  h1,h2,h3,h4 { font-family:Georgia,serif; line-height:1.25; }
+  h1 { font-size:1.6rem; border-bottom:2px solid var(--tinta);
+       padding-bottom:.3rem; }
+  h2 { font-size:1.25rem; margin-top:2rem; color:var(--acento); }
+  h3 { font-size:1.05rem; margin-top:1.5rem; }
+  a { color:var(--azul); }
+  blockquote { border-left:4px solid var(--acento); margin:1rem 0;
+               padding:.2rem 1rem; background:var(--panel);
+               border-radius:0 6px 6px 0; }
+  table { border-collapse:collapse; margin:1rem 0; font-size:.92rem;
+          display:block; overflow-x:auto; }
+  th { font-family:Helvetica,Arial,sans-serif; font-size:.78rem;
+       text-transform:uppercase; letter-spacing:.04em; text-align:left;
+       border-bottom:2px solid var(--tinta); padding:.45rem .6rem;
+       background:var(--papel); }
+  td { padding:.45rem .6rem; border-bottom:1px solid #ddd;
+       vertical-align:top; }
+  code { font-family:Menlo,Consolas,monospace; font-size:.86em;
+         background:var(--panel); padding:.08em .35em; border-radius:3px; }
+  pre { background:var(--panel); padding:.8rem 1rem; border-radius:6px;
+        overflow-x:auto; }
+  pre code { background:none; padding:0; }
+  hr { border:none; border-top:1px solid #ccc; margin:2rem 0; }
+  img { max-width:100%; }
+  li { margin-bottom:.25rem; }
+  math { font-size:1.05em; }
+  @media print { body { background:white; max-width:none; } }
+  </style>
+</head>
+<body>
+<h1 id="cómo-defender-un-proyecto-acústico">Cómo defender un proyecto
+acústico</h1>
+<p><strong>Sesión 15</strong> · Curso Acústica Musical UC
+<strong>Objetivos que cubre</strong>: OA5.3 (explicar acústicamente el
+comportamiento obtenido, incluidas las desviaciones), OA3.2 (conectar
+sensación, mecanismo y medición en la defensa).</p>
+<p>Este apunte es distinto a todos los anteriores: no trae física nueva,
+porque la sesión 15 no la tiene. Trae el oficio que la sesión evalúa —
+cómo se defiende un proyecto acústico — condensado para releerse la
+noche anterior. La pauta completa del hito 3 (formato, tiempos y
+rúbrica) está en
+<code>sesiones/s14/actividades/pauta_hito3_presentacion_final.md</code>
+y se entregó impresa en la sesión 14; este apunte no la reemplaza:
+explica cómo estar a su altura.</p>
+<h2 id="qué-se-evalúa-cuando-ya-está-todo-construido">¿Qué se evalúa
+cuando ya está todo construido?</h2>
+<p>El instrumento ya existe; sonará lo que va a sonar. Lo único que
+queda en juego el día de la presentación es la
+<strong>explicación</strong>, y esa es precisamente la regla del curso
+desde el lanzamiento del proyecto en la sesión 3: <em>la calidad de la
+explicación pesa más que el éxito sonoro</em> (diseno/01, OA5.3 — regla
+heredada del curso 2019 y conservada a propósito). Un objeto que hizo
+exactamente lo predicho, presentado sin mecanismo, demuestra suerte. Un
+objeto que se desvió de la predicción, con la desviación medida,
+explicada y conectada a un modelo del curso, demuestra aprendizaje. La
+rúbrica está construida para eso: su dimensión R1 (explicación acústica)
+desempata y manda.</p>
+<h2 id="la-columna-vertebral-de-una-buena-explicación">La columna
+vertebral de una buena explicación</h2>
+<p>Toda explicación acústica sólida — la de su proyecto y la de
+cualquier artículo científico — recorre la misma cadena, en este
+orden:</p>
+<p><strong>fenómeno → modelo → predicción → medición → desviación →
+explicación</strong></p>
+<p>Primero el fenómeno: qué se oye, dicho con el vocabulario del curso
+(no “suena raro”: “el segundo parcial sobresale y el ataque es más largo
+que el del hito 1”). Luego el modelo que ustedes eligieron para pensarlo
+(cuerda, tubo, membrana, resonador) y la predicción que ese modelo
+produjo — la del hito 1, citada tal como se escribió, sin maquillaje
+retrospectivo. Después la medición: el número, con unidades y
+condiciones. Y entonces el momento que separa una defensa buena de una
+decorativa: la <strong>desviación</strong> — cuánto se apartó lo medido
+de lo predicho, en qué dirección — y su explicación con mecanismo, en
+proporciones (“la fundamental salió un 12 % más grave de lo predicho; el
+modelo asumía el tubo abierto en ambos extremos, pero el soporte tapa
+parcialmente uno: eso alarga el tubo efectivo y baja
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>f</mi><mn>1</mn></msub><annotation encoding="application/x-tex">f_1</annotation></semantics></math>”).</p>
+<p>Note que la cadena obliga a las tres capas del curso: el oído (el
+fenómeno descrito), el mecanismo (modelo y explicación) y la medición
+(el número que arbitra). Esa integración es exactamente OA3.2, y es lo
+que las preguntas individuales van a sondear.</p>
+<h2 id="los-errores-clásicos-y-cómo-se-ven-desde-la-rúbrica">Los errores
+clásicos (y cómo se ven desde la rúbrica)</h2>
+<p><strong>Contar lo que se hizo en vez de explicar por qué sonó como
+sonó.</strong> Es el error más frecuente: quince minutos de cronología
+(“primero compramos el tubo, después lo cortamos, después…”) sin un solo
+mecanismo. La bitácora ya cuenta esa historia; la presentación debe
+explicar el sonido. Regla práctica: si una lámina no responde a un “¿por
+qué?”, es bitácora, no defensa (R1 en nivel inicial: “narrativa sin
+mecanismo físico”).</p>
+<p><strong>Esconder la desviación.</strong> La tentación de mostrar solo
+lo que salió bien es humana y es, en este curso, la peor estrategia
+posible: la desviación explicada vale más que el éxito mudo, y la
+rúbrica lo dice por escrito (R1 y R3 premian la desviación cuantificada
+y explicada; R3 castiga la predicción “editada”). Si su instrumento hizo
+algo que no esperaban, ese es el mejor material que tienen: pónganlo al
+centro.</p>
+<p><strong>Figuras decorativas.</strong> Un espectrograma proyectado que
+nadie lee no es evidencia (R2: “mediciones presentes pero decorativas”).
+Cada figura debe sostener una afirmación: dígala, apunte al eje, lea el
+número. Y recuerde que cualquiera de los cuatro puede recibir la
+pregunta “¿qué significa esta figura?” — el checklist de la pauta lo
+advierte.</p>
+<p><strong>El “porque sí” simétrico.</strong> Tan débil como no explicar
+la desviación es “explicar” el acierto sin mecanismo (“afinó bien porque
+lo hicimos con cuidado”). El acierto también tiene física; si no puede
+decir cuál es, la predicción se cumplió de casualidad y eso R1 lo
+nota.</p>
+<h2 id="cómo-responder-una-pregunta-que-no-esperaba">¿Cómo responder una
+pregunta que no esperaba?</h2>
+<p>Las preguntas individuales (una por integrante, por nombre, sin ayuda
+del grupo) no buscan pillarlo: buscan verificar que el proyecto es de
+los cuatro. Tres reglas para responder bien:</p>
+<p>Primero, <strong>tómese cinco segundos</strong>. Pensar antes de
+hablar no descuenta; divagar, sí.</p>
+<p>Segundo, <strong>responda con la cadena</strong>: qué se oye o se
+midió → qué mecanismo lo explicaría → qué medición lo decidiría. Aunque
+no sepa la respuesta completa, recorrer la cadena demuestra que sabe
+pensar el problema — que es lo evaluado.</p>
+<p>Tercero, distinga con honestidad <strong>“no lo medimos”</strong> de
+<strong>“no se puede saber”</strong>. Son respuestas opuestas. “No lo
+medimos” es un dato honesto y recuperable si continúa bien: <em>“…pero
+se mediría así, y si la hipótesis es correcta debería dar
+aproximadamente esto”</em> — eso es un nivel experto de la dimensión D3
+que el curso entrena desde la semana 1. “No se puede saber”, en cambio,
+es casi siempre falsa en este curso: con un celular, un espectrograma y
+una regla se decide casi todo lo que su instrumento hace. Úsela solo si
+de verdad puede argumentar por qué ninguna medición factible
+discriminaría entre las hipótesis — y eso, dicho bien, también vale
+puntos.</p>
+<h2 id="síntesis">Síntesis</h2>
+<ul>
+<li>La explicación es la prueba: R1 manda, y la desviación explicada
+vale más que el éxito mudo.</li>
+<li>Toda la defensa recorre una sola cadena: fenómeno → modelo →
+predicción → medición → desviación → explicación.</li>
+<li>La cronología es bitácora; la defensa responde “¿por qué sonó
+así?”.</li>
+<li>Ante una pregunta imprevista: cinco segundos, la cadena, y la
+diferencia honesta entre “no lo medí” y “no se puede saber”.</li>
+</ul>
+<h2 id="hacia-lo-que-sigue">Hacia lo que sigue</h2>
+<p>No hay sesión 16. Lo que sigue es que usted ya no escucha igual: la
+sesión cierra devolviéndole su hoja de línea base de la semana 1 para
+que lo compruebe con sus propios ojos y oídos. El resto del arco — del
+golpe de la sesión 1 a la sala de la 14 — está recapitulado en el
+capítulo 15, que es también la mejor guía para preparar esta
+defensa.</p>
+<h2 id="referencias">Referencias</h2>
+<ul>
+<li>Pauta del hito 3:
+<code>sesiones/s14/actividades/pauta_hito3_presentacion_final.md</code>
+(formato, tiempos, rúbrica R1–R4, checklist).</li>
+<li><code>diseno/01_objetivos_aprendizaje.md</code>, OA5.3 — la regla
+“la calidad de la explicación pesa más que el éxito sonoro”.</li>
+<li><code>diseno/02_metodologia.md</code>, §4 — preguntas individuales y
+ajuste ±0,5 por coevaluación.</li>
+<li>El semestre completo: capítulos 1–14 del curso — cada modelo que su
+defensa necesite está en alguno de ellos.</li>
+</ul>
+</body>
+</html>

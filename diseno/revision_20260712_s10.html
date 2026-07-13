@@ -1,0 +1,776 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="es" xml:lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>Revisión de alineamiento constructivo — cierre de
+s06–s10</title>
+  <style>
+    /* Default styles provided by pandoc.
+    ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+    */
+    html {
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    svg {
+      height: auto;
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      border: none;
+      border-top: 1px solid #1a1a1a;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+  </style>
+  <style>
+  /* Estilo compartido para los .md del curso convertidos a HTML
+     (misma familia editorial de las demos y del mapa del curso) */
+  :root { --tinta:#1a1a1a; --acento:#7a2e2e; --azul:#2e4a7a;
+          --papel:#faf8f4; --panel:#f0ece4; }
+  body { margin:0 auto; padding:2rem 1.4rem 4rem; max-width:820px;
+         background:var(--papel); color:var(--tinta);
+         font-family:Georgia,'Times New Roman',serif; line-height:1.55;
+         font-size:1.02rem; }
+  h1,h2,h3,h4 { font-family:Georgia,serif; line-height:1.25; }
+  h1 { font-size:1.6rem; border-bottom:2px solid var(--tinta);
+       padding-bottom:.3rem; }
+  h2 { font-size:1.25rem; margin-top:2rem; color:var(--acento); }
+  h3 { font-size:1.05rem; margin-top:1.5rem; }
+  a { color:var(--azul); }
+  blockquote { border-left:4px solid var(--acento); margin:1rem 0;
+               padding:.2rem 1rem; background:var(--panel);
+               border-radius:0 6px 6px 0; }
+  table { border-collapse:collapse; margin:1rem 0; font-size:.92rem;
+          display:block; overflow-x:auto; }
+  th { font-family:Helvetica,Arial,sans-serif; font-size:.78rem;
+       text-transform:uppercase; letter-spacing:.04em; text-align:left;
+       border-bottom:2px solid var(--tinta); padding:.45rem .6rem;
+       background:var(--papel); }
+  td { padding:.45rem .6rem; border-bottom:1px solid #ddd;
+       vertical-align:top; }
+  code { font-family:Menlo,Consolas,monospace; font-size:.86em;
+         background:var(--panel); padding:.08em .35em; border-radius:3px; }
+  pre { background:var(--panel); padding:.8rem 1rem; border-radius:6px;
+        overflow-x:auto; }
+  pre code { background:none; padding:0; }
+  hr { border:none; border-top:1px solid #ccc; margin:2rem 0; }
+  img { max-width:100%; }
+  li { margin-bottom:.25rem; }
+  math { font-size:1.05em; }
+  @media print { body { background:white; max-width:none; } }
+  </style>
+</head>
+<body>
+<h1 id="revisión-de-alineamiento-constructivo-cierre-de-s06s10">Revisión
+de alineamiento constructivo — cierre de s06–s10</h1>
+<p>Fecha: 2026-07-12 · Alcance: control de calidad del loop al cerrar
+s10 (foco s06–s10 con material completo; s01–s05 ya auditadas y
+corregidas en <code>diseno/revision_20260712.md</code>; s11–s15 solo
+contra el mapa de <code>diseno/03_estructura_curso.md</code>).
+Referencias: <code>diseno/01_objetivos_aprendizaje.md</code>,
+<code>diseno/02_metodologia.md</code>, <code>ESTADO_LOOP.md</code>. Este
+archivo se nombra con sufijo <code>_s10</code> para no sobrescribir el
+reporte del mismo día que cerró s05.</p>
+<h2 id="veredicto-general">Veredicto general</h2>
+<p>El bloque s06–s10 está <strong>mejor alineado que s01–s05 en su
+versión original</strong>: las lecciones de la revisión anterior se
+aplicaron de verdad. Los cinco planes existen y cada módulo suma
+exactamente 70 minutos; la ronda oral viene ya dimensionada en la
+variante corregida (3′+2′+4×2,5′ con cronómetro); todos los planes
+declaran explícitamente sus decisiones de carga (“esta semana hay 2
+talleres; para que quepa se decide…”) y traen sección de aritmética por
+persona — exactamente la disciplina que la revisión de s05 pidió. Las 11
+guías/hojas/pautas del bloque cumplen las verificaciones metodológicas
+(casilla de predicción, contraste, cierre en aula; roles donde aplica);
+las 5 demos tienen “¿Qué observar?”, AudioContext tras interacción,
+botón de detener, cero dependencias externas, <strong>y además
+implementan todos los modos que los planes les exigen</strong> (modo
+oculto/presentación para la escucha del día, vista de parciales en
+colisión en s08, modo afinar con cents ocultos en s09,
+golpe/barrido/amortiguamiento en s10 — verificado contra el HTML). La
+Prueba 1 existe completa con pauta cerrada, presupuesto interno de
+53′+7′, calendario de audio público y manejo de rezagados: es el
+instrumento de evaluación mejor construido del curso hasta ahora. Los
+capítulos cap06–cap10 existen. La cadena de tickets de salida corre sin
+cortes de s05 a s11.</p>
+<p>Lo que queda son <strong>cuatro problemas medianos y uno de
+contabilidad</strong>: dos cierres de módulo que siguen siendo
+optimistas al multiplicar por 20 estudiantes (s06 m2, s08 m1), un
+descuadre de rotulación de OA entre la Prueba 1 y el mapa del curso, un
+pico de trabajo del profesor en las semanas s06–s07 que es mayor que lo
+declarado y se puede desinflar moviendo grabaciones al pre-semestre, y
+una fase de igualación de sonoridad (s06 m1) dimensionada para oídos
+entrenados.</p>
+<h2 id="matriz-de-cobertura-objetivo-sesión-s01s10">1. Matriz de
+cobertura objetivo × sesión (s01–s10)</h2>
+<p>Leyenda: <strong>P</strong> = objetivo principal del plan · i =
+introducción/siembra · t = transversal · a = administrativo
+(hito/devolución) · <strong>E</strong> = evaluado en prueba. Última
+columna: cobertura planificada en diseno/03 para s11–s15 (sin plan
+aún).</p>
+<table>
+<colgroup>
+<col style="width: 8%" />
+<col style="width: 8%" />
+<col style="width: 8%" />
+<col style="width: 8%" />
+<col style="width: 8%" />
+<col style="width: 8%" />
+<col style="width: 8%" />
+<col style="width: 8%" />
+<col style="width: 8%" />
+<col style="width: 8%" />
+<col style="width: 8%" />
+<col style="width: 8%" />
+</colgroup>
+<thead>
+<tr>
+<th>OA</th>
+<th>s01</th>
+<th>s02</th>
+<th>s03</th>
+<th>s04</th>
+<th>s05</th>
+<th>s06</th>
+<th>s07</th>
+<th>s08</th>
+<th>s09</th>
+<th>s10</th>
+<th>s11–s15 (mapa)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>OA1.1</td>
+<td>i</td>
+<td>t</td>
+<td><strong>P</strong></td>
+<td><strong>P</strong></td>
+<td>—</td>
+<td>—</td>
+<td><strong>E</strong></td>
+<td>t</td>
+<td>—</td>
+<td>—</td>
+<td>s11</td>
+</tr>
+<tr>
+<td>OA1.2</td>
+<td>—</td>
+<td>—</td>
+<td><strong>P</strong></td>
+<td><strong>P</strong></td>
+<td>—</td>
+<td>—</td>
+<td><strong>E</strong></td>
+<td>—</td>
+<td><strong>P</strong></td>
+<td><strong>P</strong></td>
+<td>s12 · E s13</td>
+</tr>
+<tr>
+<td>OA1.3</td>
+<td>—</td>
+<td>—</td>
+<td>—</td>
+<td>—</td>
+<td>—</td>
+<td>—</td>
+<td>—</td>
+<td>—</td>
+<td>—</td>
+<td>i (panorama)</td>
+<td>s11–s13 · E s13</td>
+</tr>
+<tr>
+<td>OA1.4</td>
+<td>—</td>
+<td>—</td>
+<td>—</td>
+<td>—</td>
+<td>—</td>
+<td>—</td>
+<td>—</td>
+<td>—</td>
+<td>—</td>
+<td>—</td>
+<td>s14</td>
+</tr>
+<tr>
+<td>OA2.1</td>
+<td>i</td>
+<td>—</td>
+<td>—</td>
+<td><strong>P</strong></td>
+<td><strong>P</strong></td>
+<td><strong>P</strong></td>
+<td><strong>E</strong></td>
+<td>—</td>
+<td>—</td>
+<td>—</td>
+<td>—</td>
+</tr>
+<tr>
+<td>OA2.2</td>
+<td>—</td>
+<td>—</td>
+<td>—</td>
+<td>—</td>
+<td><strong>P</strong></td>
+<td>—</td>
+<td>i (m2) + E*</td>
+<td><strong>P</strong></td>
+<td>—</td>
+<td>—</td>
+<td>E s13</td>
+</tr>
+<tr>
+<td>OA2.3</td>
+<td>—</td>
+<td>—</td>
+<td>—</td>
+<td>—</td>
+<td>—</td>
+<td>—</td>
+<td>—</td>
+<td><strong>P</strong></td>
+<td><strong>P</strong></td>
+<td>—</td>
+<td>E s13</td>
+</tr>
+<tr>
+<td>OA3.1</td>
+<td>t (línea base)</td>
+<td>t</td>
+<td>t</td>
+<td>t</td>
+<td>t</td>
+<td>t</td>
+<td>E (escucha escrita)</td>
+<td>t</td>
+<td>t</td>
+<td>t</td>
+<td>t hasta s14</td>
+</tr>
+<tr>
+<td>OA3.2</td>
+<td>—</td>
+<td>—</td>
+<td>—</td>
+<td>—</td>
+<td>—</td>
+<td>—</td>
+<td>—</td>
+<td>—</td>
+<td>—</td>
+<td><strong>P</strong> (clínica)</td>
+<td>s14, s15</td>
+</tr>
+<tr>
+<td>OA4.1</td>
+<td>—</td>
+<td><strong>P</strong></td>
+<td>t</td>
+<td>t</td>
+<td>—</td>
+<td>—</td>
+<td><strong>E</strong></td>
+<td>t</td>
+<td>t</td>
+<td>t</td>
+<td>transversal</td>
+</tr>
+<tr>
+<td>OA4.2</td>
+<td>—</td>
+<td>—</td>
+<td>—</td>
+<td>—</td>
+<td>—</td>
+<td><strong>P</strong></td>
+<td><strong>E</strong> (básico)</td>
+<td>—</td>
+<td>—</td>
+<td>—</td>
+<td>—</td>
+</tr>
+<tr>
+<td>OA4.3</td>
+<td>—</td>
+<td>—</td>
+<td>—</td>
+<td>—</td>
+<td>—</td>
+<td>—</td>
+<td>—</td>
+<td>—</td>
+<td>—</td>
+<td>—</td>
+<td>s14</td>
+</tr>
+<tr>
+<td>OA5.1</td>
+<td>—</td>
+<td>—</td>
+<td><strong>P</strong> (lanz.)</td>
+<td>a</td>
+<td>a (hito 1)</td>
+<td>a (devolución)</td>
+<td>—</td>
+<td>—</td>
+<td>—</td>
+<td>—</td>
+<td>—</td>
+</tr>
+<tr>
+<td>OA5.2</td>
+<td>—</td>
+<td>—</td>
+<td>—</td>
+<td>—</td>
+<td>—</td>
+<td>—</td>
+<td>—</td>
+<td><strong>P</strong> (serie)</td>
+<td><strong>P</strong></td>
+<td><strong>P</strong> (hito 2)</td>
+<td>s12</td>
+</tr>
+<tr>
+<td>OA5.3</td>
+<td>—</td>
+<td>—</td>
+<td>—</td>
+<td>—</td>
+<td>—</td>
+<td>—</td>
+<td>—</td>
+<td>—</td>
+<td>—</td>
+<td>—</td>
+<td>s15</td>
+</tr>
+</tbody>
+</table>
+<p>* Los ítems B.2 y C.2c de la Prueba 1 evalúan de hecho la fundamental
+ausente (OA2.2) aunque la pauta los rotula OA2.1 — ver P3.</p>
+<p><strong>Lectura crítica.</strong> Ningún OA queda huérfano; ninguna
+sesión carece de OA explícitos; la cobertura realizada coincide con el
+mapa de diseno/03 sesión por sesión (única divergencia: la rotulación de
+OA2.2 en la Prueba 1, P3). La serie s08–s12 sobre el objeto del proyecto
+quedó bien trenzada: radiografía (s08) → mapa de escala (s09) → hito 2 +
+mapa de resonancias como compromiso (s10) — el riesgo 2 de diseno/01
+(proyecto que se suma en vez de reutilizar) está efectivamente resuelto
+en los planes, no solo en la declaración. La advertencia de la revisión
+anterior sobre OA4.2 (una semana entre enseñar y evaluar) fue absorbida:
+s06, s07 y la prueba misma repiten la regla “solo ítems básicos” y la
+cumplen (C.3 y Fig. 3 son lectura y regla +10/+3, no transferencia).
+OA1.3 sigue siendo la apuesta más frágil del curso (4 sesiones por
+delante, una de ellas módulo liviano post-prueba): s10 hizo su parte
+(panorama del bloque C + semilla de oscilación auto-sostenida), pero
+s11–s13 no tienen holgura para perder nada.</p>
+<h2 id="los-problemas-del-bloque-priorizados">2. Los problemas del
+bloque (priorizados)</h2>
+<h3 id="p1-s06-módulo-2-el-cierre-de-7-contiene-tres-entregables">P1 —
+s06, módulo 2: el cierre de 7′ contiene tres entregables</h3>
+<p>El bloque 63–70′ exige: redactar el mini-informe grupal de
+<strong>media página</strong> con 4 puntos obligatorios, entregar las
+hojas isofónicas del m1, escribir el ticket de salida individual, y
+escuchar el anuncio de la Prueba 1. La guía misma dice “redacción en
+aula, 7 min”: la redacción en prosa de 4 puntos por un grupo de 4 toma
+eso <em>solo</em>, sin ticket ni anuncios. Es el mismo patrón que P1–P3
+de la revisión anterior: la aritmética declarada cierra en el papel
+porque el bloque hace más de una cosa a la vez. <strong>Solución
+concreta</strong>: convertir el mini-informe de “media página redactada”
+a <strong>formulario de 4 casillas rotuladas</strong> impreso al dorso
+de la planilla del grupo (pregunta / dato / interpretación / límite —
+los mismos 4 puntos de la pauta, sin prosa), y adelantar su inicio a los
+60′ comprimiendo la puesta en común de 8′ a 5′ (el fusible que s08 ya
+usa). El ticket se escribe mientras el profesor anuncia (son actos
+compatibles; s09 y s10 ya los solapan). Editar
+<code>sesiones/s06/plan.md</code> (bloques 55–63′ y 63–70′) y
+<code>sesiones/s06/actividades/guia_estaciones_niveles.md</code> (pauta
+del mini-informe).</p>
+<h3
+id="p2-s08-módulo-1-la-devolución-de-20-pruebas-en-10-y-la-síntesis-con-20-alfileres">P2
+— s08, módulo 1: la devolución de 20 pruebas en 10′ y la síntesis con 20
+alfileres</h3>
+<p>El módulo 1 de s08 es el más cargado del bloque: devolución (10′) +
+ronda (15′) + mini-lección (15′) + taller (22′) + síntesis (8′), sin un
+minuto de holgura. Dos puntos fallan al multiplicar por 20: (a) la
+<strong>devolución de la Prueba 1</strong> — repartir 20 cuadernillos
+individuales, que cada uno revise contra la pauta proyectada y anote su
+línea — es más lenta que los 8′ que s06 necesitó para 5 entregas
+grupales; 10′ es el mínimo teórico, no el esperable; (b) la
+<strong>síntesis de 8′</strong> pide que <em>cada estudiante</em> pegue
+su F3 en la recta del pizarrón “al pasar el vocero”: 20 pegadas
+secuenciales + lectura del mapa + moraleja no caben. El fusible
+declarado del plan solo protege el módulo 2. <strong>Solución
+concreta</strong>: (a) entregar las pruebas EN la puerta al entrar
+(regla: se revisa contra la lámina, que queda proyectada durante los
+primeros 10′; corte duro al minuto 10, precedente de s06); (b) que cada
+grupo consolide sus 4 puntos F3 en una <strong>tira de papel por
+grupo</strong> durante el taller (el último ítem de la hoja de registro)
+y solo el vocero la pegue: 5 pegadas, no 20. Declarar además fusible
+propio del m1: la mini-lección comprime a 12′ (las votaciones 2 y 3 se
+fusionan). Editar <code>sesiones/s08/plan.md</code> y
+<code>sesiones/s08/actividades/registro_mapa_del_choque.md</code>
+(cierre en aula).</p>
+<h3 id="p3-la-prueba-1-evalúa-oa2.2-pero-lo-contabiliza-como-oa2.1">P3 —
+La Prueba 1 evalúa OA2.2 pero lo contabiliza como OA2.1</h3>
+<p>diseno/03 declara que la Prueba 1 evalúa OA2.1–2.2; el plan de s07 y
+<code>prueba1_pauta.md</code> excluyen OA2.2 de la lista… pero los ítems
+<strong>B.2</strong> (altura con la fundamental eliminada) y
+<strong>C.2c</strong> (el Mi grave en el parlante de 1 cm) evalúan
+exactamente la fundamental ausente — el fenómeno estrella de OA2.2,
+enseñado a fondo en s05 con taller y registro. Tal como está, la
+contabilidad dice que OA2.2 solo se evalúa por escrito en la Prueba 2
+(s13), lo que es falso en los hechos y deja a s05 formalmente sin
+cosecha en pruebas. Es un descuadre de rotulación, no de contenido —
+pero una auditoría de alineamiento vive de esa contabilidad, y la Prueba
+2 se diseñará leyendo estas etiquetas. <strong>Solución
+concreta</strong>: rotular B.2 y C.2c como OA2.2 en
+<code>sesiones/s07/actividades/prueba1_pauta.md</code> (tabla ítem→OA y
+línea de cobertura) y agregar OA2.2 a la lista del encabezado de
+<code>sesiones/s07/actividades/prueba1.md</code> y de
+<code>sesiones/s07/plan.md</code> (“demostrar/explicar fenómenos
+psicoacústicos”: la explicación escrita del fenómeno ya vivido ES
+evaluable como OA2.2). Alternativa inferior: corregir el mapa — no
+recomendada, el contenido ya está en la prueba.</p>
+<h3
+id="p4-el-pico-docente-real-de-s06s07-excede-lo-declarado-y-tiene-arreglo-barato">P4
+— El pico docente real de s06–s07 excede lo declarado (y tiene arreglo
+barato)</h3>
+<p>La metodología declara picos de hito 1 ≈3 h y Prueba 1 ≈5 h (esta
+última es <em>corrección</em>). Pero la semana de s06 concentra:
+corregir el hito 1 (3 h) + elegir/probar el estímulo #9 + verificar E1
+(interfaz/micrófono/software) + probar la app SPL; y la semana de s07:
+<strong>producir 3 estímulos de audio</strong> (#10 grabado, #11
+sintetizado, #12 editado) + <strong>generar e imprimir 3
+figuras</strong> desde esos archivos + probarlo todo en el equipo de
+sala + imprimir 22 cuadernillos. Esa producción de material no está
+dentro de las 5 h declaradas y cae en las dos peores semanas posibles.
+<strong>Solución concreta</strong>: los estímulos #10, #11 y #12 no
+dependen de nada del semestre (vaso, síntesis con la demo de s04,
+reedición del ítem #5 + flauta): moverlos a la <strong>sesión única de
+grabación pre-s01</strong> que
+<code>materiales/banco_estimulos.md</code> ya recomienda — editar sus
+plazos de “semana previa a s07” a “pre-s01 (junto con ítems 1–2 y 5–7)”.
+Solo las figuras quedan para la semana de s07 (~1 h con los archivos ya
+hechos). De paso, corregir el encabezado del banco: el título ya dice
+s01–s07 pero el párrafo introductorio sigue diciendo “planes de
+s01–s05”.</p>
+<h3
+id="p5-s06-módulo-1-igualar-sonoridad-a-5-frecuencias-en-45-cada-una-es-ritmo-de-sujeto-entrenado">P5
+— s06, módulo 1: igualar sonoridad a 5 frecuencias en 45″ cada una es
+ritmo de sujeto entrenado</h3>
+<p>La experiencia isofónica asigna ~5′ por persona para igualar 5
+frecuencias contra la referencia de 1000 Hz (≈45″ por frecuencia, más
+cambio de audífonos). Igualar sonoridad exige bracketing (subir, pasar,
+volver): un novato necesita 1,5–2′ por frecuencia las primeras veces. El
+resultado esperable es que la mitad del curso entregue curvas de 2–3
+puntos tomados apurados. La forma de la curva —que es lo que el cierre
+necesita— se obtiene igual con 3 puntos bien tomados. <strong>Solución
+concreta</strong>: aplicar a la hoja isofónica la convención ★ de
+“mínimo irrenunciable” que la guía de estaciones del mismo día ya usa:
+<strong>obligatorias 125, 1000 (referencia) y 4000 Hz; 250 y 8000
+opcionales para quien alcance</strong>. Editar
+<code>sesiones/s06/actividades/hoja_registro_isofonica.md</code> y la
+celda del plan (41–63′). De paso: la hoja no declara roles (el plan sí);
+copiar la línea de roles del plan a la hoja, como hace la de s08.</p>
+<h2 id="coherencia-metodológica-verificación-por-principio">3.
+Coherencia metodológica (verificación por principio)</h2>
+<p>Los seis principios de diseno/02 §1 se verifican en los cinco planes.
+Sonido en el primer bloque de cada módulo: sí en todos (s06 m1 y s10 m1
+anteponen 5–8′ administrativos a la escucha — desviación ya registrada
+como excepción aceptable en la revisión anterior para s05; s10 lo
+declara explícitamente citando ese precedente). Predicción antes de
+sonar: las 6 guías PEE/medición del bloque tienen casilla P y bloque de
+contraste (verificado por inspección). Roles: declarados en guías
+grupales; falta solo en la hoja isofónica individual (P5, cosmético).
+Escucha del día en m1 con la variante corregida 3′+2′+4×2,5′: s06, s08,
+s09, s10 ✓; s07 la suspende con justificación explícita (la escucha
+escrita de la prueba la reemplaza) — correcto según metodología §4.
+Cierre en aula con rúbrica rápida: todos los talleres evaluados lo
+declaran, y el bloque introdujo una mejora no pedida pero valiosa: la
+decisión explícita de <strong>un solo taller evaluado por
+semana</strong> cuando hay dos talleres (s08: radiografía sí /
+psicoacústico sin nota; s09: afinación sí / escala del objeto vía hito
+2), que protege el tope de corrección. <strong>Ningún módulo tiene más
+de 30′ de exposición pasiva</strong>: la cátedra más larga del bloque es
+15′ y siempre con votaciones; el módulo 1 de s07 es prueba (no aplica).
+La sesión con prueba respeta la regla del módulo 2 liviano al pie de la
+letra.</p>
+<h2 id="progresión">4. Progresión</h2>
+<p>Sin violaciones. Verificaciones específicas hechas contra el material
+real (no solo contra los planes): la regla
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>f</mi><mi>s</mi></msub><mi>/</mi><mn>2</mn></mrow><annotation encoding="application/x-tex">f_s/2</annotation></semantics></math>
+que la Prueba 1 exige en D.2 está enseñada en s02 (apunte, sección “¿Por
+qué su app no muestra nada sobre 22 000 Hz?”); la proporción
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>f</mi><mn>1</mn></msub><mo>∝</mo><msqrt><msub><mi>F</mi><mi>T</mi></msub></msqrt></mrow><annotation encoding="application/x-tex">f_1 \propto
+\sqrt{F_T}</annotation></semantics></math> de C.1c está en el apunte de
+s04; la membrana basilar que s08 reutiliza (“dibujo de s05”) está en
+plan, apunte y capítulo de s05; la conversión Hz↔︎semitonos que s08
+necesita antes de que s09 instale los cents viene resuelta con una regla
+local en la propia hoja (1 semitono ≈ 6 % ≈ 26 Hz cerca de 440); los
+cents se instalan en s09 antes de usarse;
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>f</mi><mn>0</mn></msub><annotation encoding="application/x-tex">f_0</annotation></semantics></math>
+se define localmente en s10 sin chocar con la notación de diseno/03; el
+resonador de Helmholtz se nombra sin fórmula (la fórmula queda en
+recuadro del apunte — coherente con el piso matemático). La dependencia
+de s06 sobre s05 usa la no-linealidad efectivamente vista
+(octava/altura), no isofónicas — la advertencia de la revisión anterior
+fue acatada. La cadena de tickets s05→s06→s07→s08 →s09→s10→s11 está
+completa y cada ticket se cobra donde el plan siguiente lo declara.</p>
+<h2 id="producción-pendiente-acumulada-por-sesión">5. Producción
+pendiente acumulada (por sesión)</h2>
+<p>Todo lo que el loop podía escribir para s06–s10
+<strong>existe</strong> (planes, apuntes, capítulos, demos, guías,
+pautas, prueba). Lo pendiente es trabajo físico del profesor o de
+compra:</p>
+<ul>
+<li><strong>Transversal</strong>: sonómetro de referencia [POR
+VERIFICAR] (idealmente antes de s06); norma chilena DS 594 y atenuación
+de protectores [POR VERIFICAR] (guía E5 de s06 los marca); sesión de
+grabación pre-semestre del banco de estímulos (ítems 1–2, 5–7 <strong>y,
+si se acepta P4, también #10–#12</strong>).</li>
+<li><strong>s06</strong>: estímulo #9 (mezcla con bajo prominente)
+probado en sala a dos niveles; interfaz + micrófono + software E1
+configurados; app SPL del profesor; impresiones (guías, hojas
+isofónicas, entregas del hito 1); corrección del hito 1 (≈3 h).</li>
+<li><strong>s07</strong>: generar 3 figuras desde #10–#12 e imprimir
+hoja de figuras; 22 cuadernillos; probar estímulos en el equipo de sala;
+corrección ≈5 h.</li>
+<li><strong>s08</strong>: lámina de errores frecuentes (depende de la
+corrección real); impresiones; sorteo pasada 2 en la planilla OA3.</li>
+<li><strong>s09</strong>: guitarra levemente desafinada antes de clase;
+impresiones (12 guías de afinación + 6 de escala).</li>
+<li><strong>s10</strong>: compra única del kit botellas (5 botellas
+idénticas ~330 ml
+<ul>
+<li>embudos + jarras + cucharas + paños + 5 copas), calibrarlas al
+soplido; elástico + caja; lámina del bloque C; sobres de coevaluación;
+corrección hito 2 (≈2 h) + lectura de coevaluaciones y citas por
+asimetría antes de s12.</li>
+</ul></li>
+<li><strong>s11–s15</strong>: todo (planes, apuntes, capítulos, demos,
+actividades), incluidos los compromisos gruesos ya contraídos: aviso de
+instrumentos frotados hecho en s10 (s11 debe honrarlo), kit de lutería
+(s12), Prueba 2 con audio (s13), logística de salida de medición
+(s14).</li>
+</ul>
+<h2 id="qué-está-bien-y-debe-conservarse-para-el-loop-de-s11s15">6. Qué
+está bien y debe conservarse (para el loop de s11–s15)</h2>
+<p>La sección “decisiones de carga declaradas” en el encabezado de cada
+plan (s08–s10) es la mejor incorporación del bloque: convierte los
+recortes en decisiones auditables en vez de omisiones — replicarla en
+s11–s15. También: la regla “un solo taller evaluado por semana” cuando
+hay dos talleres; la serie s08–s12 donde cada taller es a la vez avance
+del proyecto (el compilado del hito 2 “se arma solo” — la promesa se
+cumplió); el protocolo del mapa de resonancias como compromiso
+post-clínica (mueve trabajo a la bitácora sin inflar el aula); los
+estímulos de escucha generados en vivo con la demo en modo oculto (cero
+grabaciones nuevas en s08–s10); y la Prueba 1 como plantilla de la
+Prueba 2 (calendario de audio público, estímulos con especificación
+verificable en el banco, pauta con mapeo ítem→OA — con la etiqueta OA2.2
+corregida, P3).</p>
+<h2 id="acciones-recomendadas-antes-de-abrir-s11">Acciones recomendadas
+antes de abrir s11</h2>
+<ol type="1">
+<li>Corregir P1 (s06 m2: mini-informe a formulario, cierre desde 60′) y
+P5 (hoja isofónica: 3 frecuencias ★ + roles) — ediciones acotadas.</li>
+<li>Corregir P2 (s08 m1: pruebas en la puerta, tira de F3 por grupo,
+fusible del m1).</li>
+<li>Corregir P3 (rotulación OA2.2 en prueba1_pauta.md, prueba1.md y plan
+de s07).</li>
+<li>Actualizar <code>materiales/banco_estimulos.md</code> (P4): plazos
+de #10–#12 a pre-s01 y párrafo introductorio a “s01–s07”.</li>
+<li>Registrar en ESTADO_LOOP.md el control de s10 como cumplido, con
+referencia a este reporte.</li>
+</ol>
+<h2 id="correcciones-aplicadas-post-reporte">Correcciones aplicadas
+(post-reporte)</h2>
+<ul>
+<li><strong>P1 (aplicada)</strong>: mini-informe SPL convertido a
+formulario de 4 casillas rotuladas (pregunta/dato/interpretación/límite,
+sin prosa) al dorso de la planilla del grupo; cierre del m2 inicia a los
+60′ (puesta en común comprimida de 8′ a 5′) y el ticket se escribe
+mientras el profesor anuncia — <code>sesiones/s06/plan.md</code>,
+<code>sesiones/s06/actividades/guia_estaciones_niveles.md</code>.</li>
+<li><strong>P2 (aplicada)</strong>: pruebas corregidas entregadas EN la
+puerta al entrar (lámina proyectada 10′, corte duro); síntesis del mapa
+del choque con UNA tira de frontera F3 por grupo pegada por el vocero (5
+pegadas, no 20; la tira se consolida como último ítem del taller);
+fusible propio del m1 declarado (mini-lección 15′→12′ fusionando las
+votaciones 2 y 3) — <code>sesiones/s08/plan.md</code>,
+<code>sesiones/s08/actividades/registro_mapa_del_choque.md</code>.</li>
+<li><strong>P3 (aplicada)</strong>: ítems B.2a, B.2b y C.2c re-rotulados
+OA2.1→OA2.2 en la tabla ítem→OA y la línea de cobertura de la pauta;
+OA2.2 agregado a los encabezados del cuadernillo y del plan de s07 —
+<code>sesiones/s07/actividades/prueba1_pauta.md</code>,
+<code>sesiones/s07/actividades/prueba1.md</code>,
+<code>sesiones/s07/plan.md</code>.</li>
+<li><strong>P4 (aplicada)</strong>: estímulos #10–#12 movidos al plazo
+“pre-s01 (sesión de grabación)” con la justificación (no dependen de
+nada del semestre; desinfla el pico docente de s06–s07); párrafo
+introductorio y recomendación operativa del banco actualizados a
+s01–s07; pendientes de s07 reflejan que esta semana solo quedan figuras
+(~1 h) y prueba en sala — <code>materiales/banco_estimulos.md</code>,
+<code>sesiones/s07/plan.md</code>.</li>
+<li><strong>P5 (aplicada)</strong>: hoja isofónica con mínimo
+irrenunciable ★ (125, 1000 de referencia y 4000 Hz; 250, 2000 y 8000 Hz
+opcionales para rápidos, con ritmo de 1,5–2′ por igualación) y línea de
+roles copiada del plan; celda 41–63′ y aritmética del plan actualizadas
+— <code>sesiones/s06/actividades/hoja_registro_isofonica.md</code>,
+<code>sesiones/s06/plan.md</code>.</li>
+</ul>
+</body>
+</html>

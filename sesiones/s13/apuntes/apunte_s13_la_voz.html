@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="es" xml:lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>La voz cantada: fuente y filtro</title>
+  <style>
+    /* Default styles provided by pandoc.
+    ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+    */
+    html {
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    svg {
+      height: auto;
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      border: none;
+      border-top: 1px solid #1a1a1a;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+  </style>
+  <style>
+  /* Estilo compartido para los .md del curso convertidos a HTML
+     (misma familia editorial de las demos y del mapa del curso) */
+  :root { --tinta:#1a1a1a; --acento:#7a2e2e; --azul:#2e4a7a;
+          --papel:#faf8f4; --panel:#f0ece4; }
+  body { margin:0 auto; padding:2rem 1.4rem 4rem; max-width:820px;
+         background:var(--papel); color:var(--tinta);
+         font-family:Georgia,'Times New Roman',serif; line-height:1.55;
+         font-size:1.02rem; }
+  h1,h2,h3,h4 { font-family:Georgia,serif; line-height:1.25; }
+  h1 { font-size:1.6rem; border-bottom:2px solid var(--tinta);
+       padding-bottom:.3rem; }
+  h2 { font-size:1.25rem; margin-top:2rem; color:var(--acento); }
+  h3 { font-size:1.05rem; margin-top:1.5rem; }
+  a { color:var(--azul); }
+  blockquote { border-left:4px solid var(--acento); margin:1rem 0;
+               padding:.2rem 1rem; background:var(--panel);
+               border-radius:0 6px 6px 0; }
+  table { border-collapse:collapse; margin:1rem 0; font-size:.92rem;
+          display:block; overflow-x:auto; }
+  th { font-family:Helvetica,Arial,sans-serif; font-size:.78rem;
+       text-transform:uppercase; letter-spacing:.04em; text-align:left;
+       border-bottom:2px solid var(--tinta); padding:.45rem .6rem;
+       background:var(--papel); }
+  td { padding:.45rem .6rem; border-bottom:1px solid #ddd;
+       vertical-align:top; }
+  code { font-family:Menlo,Consolas,monospace; font-size:.86em;
+         background:var(--panel); padding:.08em .35em; border-radius:3px; }
+  pre { background:var(--panel); padding:.8rem 1rem; border-radius:6px;
+        overflow-x:auto; }
+  pre code { background:none; padding:0; }
+  hr { border:none; border-top:1px solid #ccc; margin:2rem 0; }
+  img { max-width:100%; }
+  li { margin-bottom:.25rem; }
+  math { font-size:1.05em; }
+  @media print { body { background:white; max-width:none; } }
+  </style>
+</head>
+<body>
+<h1 id="la-voz-cantada-fuente-y-filtro">La voz cantada: fuente y
+filtro</h1>
+<p><strong>Sesión 13</strong> · Curso Acústica Musical UC
+<strong>Objetivos que cubre</strong>: OA1.3 (mecanismo de excitación
+cantada; cierre de la trilogía de válvulas del bloque C). Transversal:
+OA4.1 (el espectrograma de la propia voz). <em>Apunte breve, a
+propósito: la sesión dedicó su primer módulo a la Prueba 2 y solo el
+segundo a la voz — el único espacio del curso para este instrumento
+(decisión de diseño declarada en la estructura del curso).</em></p>
+<h2 id="qué-afina-usted-cuando-canta-una-vocal">¿Qué afina usted cuando
+canta una vocal?</h2>
+<p>El ticket de la sesión 12 preguntaba si al cantar una vocal usted
+afina la “cuerda” o el “tubo”. El gancho de la sesión dio la respuesta
+en dos gestos: la misma nota puede llevar cualquier vocal, y la misma
+vocal puede vivir en cualquier nota. Son <strong>dos perillas
+independientes</strong>, y la física de la voz es la historia de esa
+independencia.</p>
+<p>Las perillas tienen nombre. La primera es la <strong>fuente</strong>:
+los <strong>pliegues vocales</strong> — dos labios de músculo y mucosa
+en la laringe que, juntos y atravesados por el aire de los pulmones,
+oscilan cerrándose y abriéndose cientos de veces por segundo. Cada
+apertura deja escapar un soplido: el flujo continuo queda cortado en
+porciones periódicas. Usted reconoce el patrón: es la <strong>tercera
+válvula</strong> del curso, tras la fricción que pega y suelta (s11) y
+el chorro que entra y sale del bisel (s12). El zumbido glotal que
+producen es espectralmente rico — una fundamental
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>f</mi><mn>0</mn></msub><annotation encoding="application/x-tex">f_0</annotation></semantics></math>
+y su serie de armónicos — y musicalmente crudo: todavía no es ni una /a/
+ni una /o/.</p>
+<p>La segunda perilla es el <strong>filtro</strong>: el <strong>tracto
+vocal</strong>, el tubo blando que va de la laringe a los labios (unos
+17 cm en el adulto <strong>[POR VERIFICAR]</strong>). Como toda columna
+de aire — sesión 10 y 12 — tiene resonancias; pero a diferencia del PVC
+del taller, este tubo cambia de forma a voluntad: lengua, mandíbula y
+labios lo estrechan y ensanchan por tramos. Sus resonancias se llaman
+<strong>formantes</strong> (F1, F2, …), y hacen de filtro: refuerzan los
+armónicos de la fuente que caen cerca de ellas y desatienden el
+resto.</p>
+<h2 id="la-sorpresa-esta-válvula-no-obedece-al-resonador">La sorpresa:
+esta válvula no obedece al resonador</h2>
+<p>En el violín y en la flauta, el resonador <strong>gobierna</strong> a
+la válvula: la cuerda le impone su período a la fricción, la columna al
+chorro. Por eso allá la afinación es del resonador y no del gesto
+(apretar el arco no sube la nota; soplar más fuerte no la sube de a
+poco).</p>
+<p>En la voz el reparto es otro, y es la clave de todo: <strong>los
+pliegues fijan su frecuencia solos</strong>, con su tensión y su masa —
+el músculo los afina como se afina una cuerda con la clavija —, y el
+tracto se limita a filtrar lo que le llega, casi sin devolverle órdenes
+a la fuente (Benade 1990, secs. 19.1–19.2). Fuente y filtro quedan así
+<strong>desacoplados</strong>:
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>f</mi><mn>0</mn></msub><annotation encoding="application/x-tex">f_0</annotation></semantics></math>
+— la altura — se decide en la laringe; el patrón de formantes — la
+vocal, buena parte del timbre — se decide en la boca. Por eso, y solo
+por eso, usted puede cantar cualquier vocal en cualquier nota: el modelo
+<strong>fuente-filtro</strong>, la pieza central de la acústica de la
+voz.</p>
+<h2 id="la-vocal-es-un-lugar-en-el-mapa-de-formantes">La vocal es un
+lugar en el mapa de formantes</h2>
+<p>En el espectrograma proyectado, la sesión lo mostró en vivo: al
+cantar una nota fija y cambiar de vocal, las líneas armónicas (la
+fuente) no se mueven — se mueven las <strong>bandas oscuras</strong> de
+refuerzo (el filtro). Al subir la nota con la vocal fija, lo contrario.
+Una vocal es, físicamente, la posición de las dos primeras resonancias
+del tracto: el par (F1, F2). Los valores típicos para las cinco vocales
+del español, en una voz adulta, son del orden de <strong>[POR VERIFICAR
+en los valores finos; los rangos son estándar]</strong>:</p>
+<table>
+<thead>
+<tr>
+<th>Vocal</th>
+<th>F1 (Hz)</th>
+<th>F2 (Hz)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>/a/</td>
+<td>~700–800</td>
+<td>~1200–1400</td>
+</tr>
+<tr>
+<td>/e/</td>
+<td>~400–500</td>
+<td>~1800–2100</td>
+</tr>
+<tr>
+<td>/i/</td>
+<td>~250–320</td>
+<td>~2200–2500</td>
+</tr>
+<tr>
+<td>/o/</td>
+<td>~400–500</td>
+<td>~800–1000</td>
+</tr>
+<tr>
+<td>/u/</td>
+<td>~300–370</td>
+<td>~600–800</td>
+</tr>
+</tbody>
+</table>
+<p>No le pedimos memorizar la tabla: le pedimos la idea — F1 baja cuando
+la boca se cierra, F2 sube cuando la lengua avanza, y cada vocal es una
+<strong>esquina de ese mapa</strong>. La demo de la sesión
+(<code>demo_formantes_voz.html</code>) tiene el mapa en dos perillas:
+mueva F1 y F2 y la vocal cambia sin que la altura se inmute; mueva
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>f</mi><mn>0</mn></msub><annotation encoding="application/x-tex">f_0</annotation></semantics></math>
+y pasa lo contrario.</p>
+<h2 id="el-susurro-el-filtro-sin-la-fuente">El susurro: el filtro sin la
+fuente</h2>
+<p>La demostración más limpia de la independencia la hizo el curso en
+bloque, susurrando las cinco vocales al micrófono. Al susurrar, los
+pliegues no vibran: la fuente periódica se reemplaza por el ruido del
+aire turbulento. El espectrograma mostró <strong>bandas sin
+líneas</strong>: desapareció la altura (no hay
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>f</mi><mn>0</mn></msub><annotation encoding="application/x-tex">f_0</annotation></semantics></math>,
+no hay armónicos) pero las vocales siguieron perfectamente reconocibles
+— el filtro sigue ahí, coloreando el ruido. Una vocal no necesita nota;
+necesita formantes. Es el mismo experimento que la demo hace con su
+conmutador “tono/soplo”, y un recordatorio del lema de s08: lo que se
+oye no siempre es lo que la fuente emite — a veces es lo que el filtro
+deja pasar.</p>
+<h2
+id="dos-curiosidades-del-canto-cultura-general-no-entran-en-prueba">Dos
+curiosidades del canto (cultura general, no entran en prueba)</h2>
+<p><strong>El formante del cantante.</strong> Una orquesta completa
+produce mucha más potencia que cualquier voz; sin embargo, la voz lírica
+entrenada la atraviesa sin micrófono. El truco es espectral: el cantante
+ajusta su tracto (bajando la laringe, entre otros gestos) para agrupar
+resonancias en una zona de ~2,5–3 kHz donde la energía de la orquesta ya
+decayó — un refuerzo conocido como <strong>formante del
+cantante</strong> (Benade 1990, sec. 19.4; C&amp;G cap. 12). No canta
+más fuerte: canta donde la orquesta no está.</p>
+<p><strong>Las sopranos y las vocales que se disuelven.</strong> El
+filtro solo se “ve” donde hay armónicos que lo muestreen. Con
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>f</mi><mn>0</mn></msub><annotation encoding="application/x-tex">f_0</annotation></semantics></math>
+= 880 Hz, los armónicos van quedando a 880, 1760, 2640 Hz…: demasiado
+ralos para dibujar una envolvente cuyos rasgos distintivos (F1, F2)
+viven entre 300 y 2500 Hz. Resultado: en el registro agudo de una
+soprano las vocales se confunden — usted lo comprobó con la demo — y las
+cantantes entrenadas hacen de la necesidad virtud: ajustan la boca para
+llevar un formante exactamente hasta un armónico y ganar potencia
+(Benade 1990, sec. 19.5). Por eso los compositores confían las palabras
+importantes al registro medio.</p>
+<h2 id="síntesis">Síntesis</h2>
+<ul>
+<li>La voz es el modelo <strong>fuente-filtro</strong>: los pliegues
+vocales (válvula auto-sostenida) producen un zumbido armónico cuya
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>f</mi><mn>0</mn></msub><annotation encoding="application/x-tex">f_0</annotation></semantics></math>
+es la <strong>altura</strong>; el tracto vocal (filtro) refuerza zonas
+del espectro — los <strong>formantes</strong> — y ese patrón es la
+<strong>vocal</strong>.</li>
+<li>A diferencia del arco y del chorro, esta válvula <strong>no obedece
+al resonador</strong>: los pliegues se afinan solos (tensión y masa).
+Fuente y filtro son independientes: cualquier vocal en cualquier
+nota.</li>
+<li>El susurro es el filtro sin fuente periódica: bandas sin líneas —
+vocal sin altura.</li>
+<li>Trilogía del bloque C cerrada: fricción (s11), chorro (s12),
+pliegues (s13) — tres válvulas, una misma gramática de oscilación
+auto-sostenida, y una diferencia crucial en quién gobierna a quién.</li>
+</ul>
+<h2 id="hacia-la-sesión-14">Hacia la sesión 14</h2>
+<p>Su ticket de salida quedó apuntando al tercer socio: ya afinamos la
+fuente y moldeamos el filtro — falta el espacio donde todo eso suena.
+¿Por qué la misma voz es gloriosa en la ducha, opaca en la sala de
+clases y eterna en una catedral? La sesión 14 sale a medirlo: el
+<strong>módulo 2 completo es fuera del aula</strong> — salida de
+medición de salas UC por grupos, con ruta asignada; traiga el celular
+<strong>cargado</strong> y con las apps del curso. Además: al entrar a
+s14 recibirá su Prueba 2 corregida en la puerta, y esa sesión se publica
+la pauta del hito 3 (presentaciones finales + informe, sesión 15). Vaya
+cerrando la bitácora.</p>
+<h2 id="referencias-y-lectura-complementaria">Referencias y lectura
+complementaria</h2>
+<ul>
+<li>Benade, A. H. (1990). <em>Fundamentals of Musical Acoustics</em>,
+2.ª ed. Dover — cap. 19 completo (secs. 19.1–19.7): la fuente
+controlable, la laringe como oscilador auto-sostenido, la transmisión
+por el tracto, el formante del cantante (19.4), las sopranos (19.5) y
+sus EEQ. Fuente principal de esta sesión.</li>
+<li>Campbell, M. &amp; Greated, C. (1987). <em>The Musician’s Guide to
+Acoustics</em>. Oxford UP — cap. 12, pp. 471–496: aparato fonador,
+fuente glotal, resonancias del tracto y técnicas de cantantes
+entrenados.</li>
+<li>Rossing, T. D., Moore, F. R. &amp; Wheeler, P. A. (2002). <em>The
+Science of Sound</em>, 3.ª ed. — cap. 15, secs. 15.1–15.9 (habla y
+modelo fuente-filtro, con el modelo de tubo para los formantes) y cap.
+17 (canto: formantes y altura, formante del cantante, sopranos).</li>
+<li>Roederer, J. G. (1997) — <strong>omite la voz</strong> (omisión que
+el propio autor declara): no hay lectura alternativa en español esta
+semana; este apunte y el capítulo 13 cubren el vacío.</li>
+</ul>
+</body>
+</html>

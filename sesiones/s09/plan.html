@@ -1,0 +1,616 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="es" xml:lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>Sesión 09 — Escalas y temperamentos: afinar de oído (batidos
+como herramienta)</title>
+  <style>
+    /* Default styles provided by pandoc.
+    ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+    */
+    html {
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    svg {
+      height: auto;
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      border: none;
+      border-top: 1px solid #1a1a1a;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+  </style>
+  <style>
+  /* Estilo compartido para los .md del curso convertidos a HTML
+     (misma familia editorial de las demos y del mapa del curso) */
+  :root { --tinta:#1a1a1a; --acento:#7a2e2e; --azul:#2e4a7a;
+          --papel:#faf8f4; --panel:#f0ece4; }
+  body { margin:0 auto; padding:2rem 1.4rem 4rem; max-width:820px;
+         background:var(--papel); color:var(--tinta);
+         font-family:Georgia,'Times New Roman',serif; line-height:1.55;
+         font-size:1.02rem; }
+  h1,h2,h3,h4 { font-family:Georgia,serif; line-height:1.25; }
+  h1 { font-size:1.6rem; border-bottom:2px solid var(--tinta);
+       padding-bottom:.3rem; }
+  h2 { font-size:1.25rem; margin-top:2rem; color:var(--acento); }
+  h3 { font-size:1.05rem; margin-top:1.5rem; }
+  a { color:var(--azul); }
+  blockquote { border-left:4px solid var(--acento); margin:1rem 0;
+               padding:.2rem 1rem; background:var(--panel);
+               border-radius:0 6px 6px 0; }
+  table { border-collapse:collapse; margin:1rem 0; font-size:.92rem;
+          display:block; overflow-x:auto; }
+  th { font-family:Helvetica,Arial,sans-serif; font-size:.78rem;
+       text-transform:uppercase; letter-spacing:.04em; text-align:left;
+       border-bottom:2px solid var(--tinta); padding:.45rem .6rem;
+       background:var(--papel); }
+  td { padding:.45rem .6rem; border-bottom:1px solid #ddd;
+       vertical-align:top; }
+  code { font-family:Menlo,Consolas,monospace; font-size:.86em;
+         background:var(--panel); padding:.08em .35em; border-radius:3px; }
+  pre { background:var(--panel); padding:.8rem 1rem; border-radius:6px;
+        overflow-x:auto; }
+  pre code { background:none; padding:0; }
+  hr { border:none; border-top:1px solid #ccc; margin:2rem 0; }
+  img { max-width:100%; }
+  li { margin-bottom:.25rem; }
+  math { font-size:1.05em; }
+  @media print { body { background:white; max-width:none; } }
+  </style>
+</head>
+<body>
+<h1
+id="sesión-09-escalas-y-temperamentos-afinar-de-oído-batidos-como-herramienta">Sesión
+09 — Escalas y temperamentos: afinar de oído (batidos como
+herramienta)</h1>
+<p><strong>Objetivos que cubre</strong>: OA2.3 (principal: fundamento
+perceptual de la consonancia, las escalas y los temperamentos,
+demostrado audiblemente — la actividad de afinación por conteo de
+batidos es literalmente su evaluación declarada en diseno/01), OA1.2
+(proporciones aplicadas: razones de frecuencia y cents con aritmética
+simple; “para afinar el objeto hay que cambiar un parámetro físico”),
+OA5.2 (continúa la serie de talleres de medición sobre el objeto del
+proyecto, s08–s12). Transversales: OA3.1 (escucha del día, con nota,
+pasada 2 de la planilla) y OA4.1 (afinador y espectrograma bien leídos).
+<strong>Requisitos previos</strong>: s08 (consonancia sensorial por
+coincidencia o esquive de parciales; banda crítica; el ranking de
+lisura), s07 m2 (batidos contados;
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>f</mi><mi>b</mi></msub><mo>=</mo><mo stretchy="false" form="prefix">|</mo><msub><mi>f</mi><mn>2</mn></msub><mo>−</mo><msub><mi>f</mi><mn>1</mn></msub><mo stretchy="false" form="prefix">|</mo></mrow><annotation encoding="application/x-tex">f_b = |f_2 - f_1|</annotation></semantics></math>),
+s04 (tonos complejos, inarmonicidad de cuerdas reales — reaparece en la
+afinación estirada). El <strong>ticket de salida de s08</strong> (“si la
+5ª perfectamente lisa es 3:2, ¿puede un piano tener TODAS sus quintas
+lisas a la vez? ¿qué habría que sacrificar?”) se cobra en la escucha del
+día: la respuesta es NO, y el porqué es la coma pitagórica — de ahí
+nacen los temperamentos. Los estudiantes traen: (a)
+<strong>audífonos</strong> (anunciado en s08), (b) <strong>el objeto de
+su proyecto</strong> (la serie s08–s12 sigue; anunciado en s08), (c)
+celular con afinador y espectrograma (apps del curso desde s02), (d)
+leída la lectura previa
+<code>libro/cap09_escalas_y_temperamentos.md</code>. <strong>Posición en
+la progresión</strong>: cierra el bloque B (el sonido percibido). s08
+fundó la consonancia sensorial; s09 la convierte en escalas, muestra que
+el sistema de 12 notas no cierra (coma) y que afinar es siempre elegir
+un compromiso — audible, medible y contable por batidos. Deja sembrada
+la resonancia (s10: hito 2 y puente hacia los instrumentos).
+<strong>Reglas aplicadas y decisiones de carga (declaradas)</strong>:
+escucha del día (15′: estímulo 3′ + escritura 2′ + ronda de 4 sorteados
+× 2,5′ con cronómetro visible) en el primer bloque del módulo 1; módulo
+2 abre con gancho sonoro sin ronda; la lectura previa se consume en la
+mini-lección del módulo 1 (principio 6). Esta semana hay ronda + 2
+talleres; se decide: (1) el <strong>taller EVALUADO de la semana es la
+afinación por batidos</strong> (es la evaluación declarada de OA2.3 en
+diseno/01; rúbrica rápida, cuenta en el 25 % de talleres); (2) el taller
+del objeto (“¿en qué escala vive mi objeto?”) se registra en la
+<strong>bitácora</strong> y cuenta vía <strong>hito 2</strong> (espejo
+de la decisión de s08, con los roles invertidos); (3) <strong>sin
+instrumentos de estudiantes</strong> (no se avisó con una semana): la
+única guitarra de la sesión es la del profesor, en demostración
+plenaria; (4) la escucha del día se genera <strong>en vivo con la
+demo</strong> en modo presentación (sin estímulo nuevo para el
+banco).</p>
+<h2
+id="módulo-1-la-quinta-imposible-de-las-razones-a-la-coma-variante-experimental-adaptada">Módulo
+1 — La quinta imposible: de las razones a la coma (variante:
+experimental, adaptada)</h2>
+<table>
+<colgroup>
+<col style="width: 20%" />
+<col style="width: 20%" />
+<col style="width: 20%" />
+<col style="width: 20%" />
+<col style="width: 20%" />
+</colgroup>
+<thead>
+<tr>
+<th>Tiempo</th>
+<th>Bloque</th>
+<th>Actividad del estudiante</th>
+<th>Rol del profesor</th>
+<th>Materiales</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0–15′</td>
+<td><strong>Escucha del día (OA3.1, con nota; OA2.3): se cobra el ticket
+de s08</strong></td>
+<td>Escucha el estímulo (3′, dos pasadas): la MISMA quinta con tonos
+complejos, primero lisa y luego “casi igual pero que respira” (~1
+ondulación/s); después la misma tercera mayor en dos versiones (una
+dulce, otra que muele rápido); todos escriben diagnóstico en 3 líneas
+(2′): describir la diferencia → hipotetizar el mecanismo (¿qué par de
+parciales se está pisando?) → proponer verificación; <strong>4
+sorteados</strong> exponen (<strong>2,5′ c/u, cronómetro
+visible</strong>)</td>
+<td>Opera <code>demo_temperamentos.html</code> en modo presentación
+(números ocultos), alternando afinación justa/igual sobre el mismo
+intervalo; evalúa con la planilla OA3 (pasada 2) premiando D1 (¿describe
+la ondulación LENTA de la 5ª vs. el batido RÁPIDO de la 3ª?) y D2
+(¿invoca la coincidencia de parciales de s08?); lee 2–3 tickets de s08 y
+adelanta la respuesta sin desarrollarla: NO, un piano no puede tener
+todas sus quintas lisas — la mini-lección muestra por qué</td>
+<td><code>demo_temperamentos.html</code> proyectada (modo presentación);
+tickets de s08; planilla rúbrica OA3 (pasada 2); cronómetro</td>
+</tr>
+<tr>
+<td>15–30′</td>
+<td><strong>Mini-lección: la cuenta que no cierra (OA2.3,
+OA1.2)</strong> — consume la lectura previa</td>
+<td>Rehace con el profesor la aritmética del capítulo: intervalos =
+razones (2:1, 3:2, 4:3, 5:4, herencia directa del ranking de s08);
+apilar 12 quintas ≠ 7 octavas; con la regla nueva (cents: octava = 1200,
+semitono = 100, sumar intervalos = sumar cents): 12 × 702 = 8424 ≠ 8400
+= 7 × 1200 → <strong>sobran ~24 cents: la coma pitagórica
+(~23,5)</strong>; responde votaciones: “¿la coma es un semitono entero,
+la mitad o un cuarto?” (≈ un cuarto), “¿dónde esconderían el error: todo
+en una quinta o repartido entre las 12?”, “si reparto, ¿de cuánto es el
+‘impuesto’ por quinta?” (2 cents)</td>
+<td>Conduce la cuenta en el pizarrón con aritmética pura (sumas de
+cents, nada más); nombra el compromiso del <strong>temperamento
+igual</strong>: todas las quintas estrechadas ~2 cents — ninguna lisa,
+todas usables; anuncia el taller: “2 cents no se pueden ‘oír’ como
+desafinación… pero se pueden <strong>contar</strong>: la quinta
+temperada de Do4 late ~1 vez por segundo — ustedes van a afinar ambas
+quintas de oído, como un afinador de pianos (BEN 16.2)”</td>
+<td>Pizarrón (la escalera de quintas vs. la torre de octavas); demo como
+apoyo (lectura de cents en pantalla)</td>
+</tr>
+<tr>
+<td>30–62′</td>
+<td><strong>Taller PEE: afinar de oído contando batidos (OA2.3, OA2.2,
+OA1.2) — formato 2, en parejas, EVALUADO</strong></td>
+<td>En parejas dentro del grupo (2 parejas por notebook, por turnos): el
+<strong>afinador</strong> (audífonos) recibe de su operador una quinta
+desafinada al azar (botón de la demo, cents ocultos) y (A) la afina
+hasta dejarla <strong>sin batidos</strong>, anota los cents revelados;
+(B) desde ahí la <strong>estrecha hasta contar ~1 batido/s</strong>,
+anota los cents (¿cayó cerca de 700 = la quinta del piano?); luego
+intercambian roles. Fase C (parejas rápidas): repetir A con la 3ª mayor
+(batidos ~10 veces más rápidos: ¿se puede?). La pareja en espera
+resuelve los ítems de papel de la guía (predicción escrita ANTES del
+turno + la cuenta de la coma + conversiones de cents)</td>
+<td>Rota por los grupos (~5′ c/u); vigila que la predicción esté escrita
+antes del primer turno y que los cents estén OCULTOS durante la
+afinación (se revelan al anotar); provoca: “¿su ‘sin batidos’ cayó en
+702 o en 700 — y cómo lo sabe su oído sin mirar?”, “¿por qué la 3ª es
+tan difícil de anular?”, “¿qué haría el afinador de un piano real, que
+no tiene pantalla?”</td>
+<td>5 notebooks con <code>demo_temperamentos.html</code> (modo afinar,
+cents ocultos); audífonos personales; guía
+<code>guia_pee_afinar_por_batidos.md</code> (1 por pareja);
+cronómetro/reloj para contar batidos</td>
+</tr>
+<tr>
+<td>62–70′</td>
+<td>Cierre: el mapa de cents y la guitarra en vivo (OA2.3)</td>
+<td>Cada pareja pega sus dos resultados (cents de la quinta “lisa” y de
+la quinta “de 1 batido/s”) en la recta del pizarrón; anota la moraleja:
+el punto sin batidos del curso se agrupa en ~702, la quinta contada en
+~700 — <strong>el oído afina con precisión de par de cents si usa los
+batidos como cronómetro</strong>; observa la demostración: el profesor
+afina la guitarra por armónicos (5.º/7.º traste) anulando batidos en
+vivo</td>
+<td>Superpone los ~10 pares de puntos; contrasta con 702/700; demuestra
+en la guitarra: armónico del 5.º traste de Mi grave vs. 7.º de La —
+batidos audibles que mueren al afinar (misma física, cuerdas reales);
+cierra: “después del descanso, la pregunta incómoda: si nada puede ser
+perfecto, ¿qué versión del acorde ES la afinada?”</td>
+<td>Pizarrón con recta 690–710 cents; guitarra del profesor (+ micrófono
+de la sala si hace falta amplificar los armónicos)</td>
+</tr>
+</tbody>
+</table>
+<h2
+id="módulo-2-el-compromiso-los-colores-y-la-escala-del-objeto-variante-audición-adaptada-con-taller-de-medición">Módulo
+2 — El compromiso, los colores y la escala del objeto (variante:
+audición, adaptada con taller de medición)</h2>
+<table>
+<colgroup>
+<col style="width: 20%" />
+<col style="width: 20%" />
+<col style="width: 20%" />
+<col style="width: 20%" />
+<col style="width: 20%" />
+</colgroup>
+<thead>
+<tr>
+<th>Tiempo</th>
+<th>Bloque</th>
+<th>Actividad del estudiante</th>
+<th>Rol del profesor</th>
+<th>Materiales</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0–8′</td>
+<td>Gancho sonoro: ¿cuál está afinado? (OA2.3)</td>
+<td>Escucha el MISMO acorde mayor con tonos complejos en tres
+afinaciones (justa, pitagórica, temperamento igual; orden revuelto, sin
+nombres); vota por escrito: ¿cuál está “afinado”?, ¿cuál prefiere?;
+compara a mano alzada (los votos suelen dividirse — esa es la
+gracia)</td>
+<td>Opera la demo (modo comparar, presentación); revela la trampa:
+<strong>los tres están afinados</strong>, cada uno según su regla;
+pregunta puente: “¿entonces ‘afinado’ es un hecho físico o una
+decisión?”; anuncia que el módulo recorre las tres reglas y termina
+midiendo en qué regla vive el objeto de cada grupo</td>
+<td><code>demo_temperamentos.html</code> (modo comparar, presentación),
+audio de sala</td>
+</tr>
+<tr>
+<td>8–23′</td>
+<td>Mini-lección interactiva: tres maneras de repartir el error
+(OA2.3)</td>
+<td>Sigue la comparación con la vista de parciales de la demo:
+<strong>justa</strong> (terceras dulces 5:4… pero quintas rotas al
+transportar), <strong>pitagórica</strong> (quintas puras, terceras duras
+81:64 que muelen), <strong>igual</strong> (quintas −2 cents, terceras
++14 cents: nada perfecto, todo usable — el precio audible son las
+terceras que baten ~10/s); votación: “¿la 3ª mayor del piano que usted
+conoce de toda la vida está afinada ‘dulce’ o ‘ancha’?” (ancha — y a
+casi nadie le molesta: el oído se acostumbra); escucha la mención
+honesta de los <strong>temperamentos históricos</strong> (Werckmeister:
+repartir la coma DESIGUAL → cada tonalidad con su color; sin tablas) y
+de la <strong>afinación estirada del piano</strong> (los parciales de
+cuerdas reales son levemente agudos —s04—, así que las octavas sin
+batidos quedan más anchas que 2:1)</td>
+<td>Conduce con la demo (terceras justa/pitagórica/igual sobre la misma
+base, batidos a la vista); enuncia el matiz cultural sin relativismo
+barato: la física pone los batidos, la música decide cuánto tolerarlos y
+dónde (ROE 5.3–5.5); la afinación estirada se presenta cualitativa (BEN
+16.5, C&amp;G cap. 7), sin curvas; el estándar La4 = 440 Hz se nombra
+como <strong>convención</strong> histórica, no como constante
+física</td>
+<td>Demo proyectada (modo comparar + vista de parciales); pizarrón</td>
+</tr>
+<tr>
+<td>23–48′</td>
+<td><strong>Taller de medición: ¿en qué escala vive mi objeto? (OA5.2,
+OA1.2, OA4.1) — 2.º de la serie s08–s12, a bitácora</strong></td>
+<td>Por grupo, con SU objeto (2′ de instalación): escribe la
+<strong>predicción</strong> (¿qué notas produce?, ¿estarán a menos de
+±10 cents de alguna nota del temperamento igual?); hace sonar el objeto
+en las alturas que ofrece y mide cada una <strong>dos veces</strong>:
+afinador (nota + desviación en cents) y espectrograma (f en Hz,
+contraste con la radiografía de s08); tabula nota + cents; si el objeto
+da varias alturas, calcula los <strong>intervalos entre ellas en
+cents</strong> (resta simple) y decide: ¿corresponden a intervalos de
+alguna escala?; <strong>veredicto</strong>: mi objeto vive en… / está
+corrido en… cents / para afinarlo habría que cambiar ______ (longitud,
+tensión, masa, agujero — OA1.2); todo a la
+<strong>bitácora</strong></td>
+<td>Rota por los grupos (~4,5′ c/u); exige condiciones anotadas (misma
+app y gesto que s08: las mediciones de la serie deben ser comparables en
+el hito 2); provoca: “¿esos −30 cents son del objeto o de su gesto al
+excitarlo?”, “¿la app duda de la nota? — ¿qué dice eso del espectro
+(s08)?”, “¿y qué cambiarían FÍSICAMENTE para subir esos 30 cents?”</td>
+<td>Objetos de proyecto (1 por grupo); celulares con afinador +
+espectrograma (≥2 por grupo); guía
+<code>guia_medicion_escala_objeto.md</code> (1 por grupo); bitácoras;
+tabla de frecuencias del temperamento igual (en la guía)</td>
+</tr>
+<tr>
+<td>48–60′</td>
+<td>Puesta en común: el mapa de afinación de los 5 objetos (OA5.2,
+OA3.2)</td>
+<td>El vocero de cada grupo reporta en ≤1,5′: qué alturas da el objeto,
+la peor desviación en cents, el veredicto y UNA decisión de diseño que
+la medición sugiere para el hito 2; el curso discute: ¿“desafinado”
+respecto de qué regla?</td>
+<td>Tabula los 5 reportes en la planilla proyectada (objeto / notas /
+peor desviación / qué habría que cambiar); teje el puente: los 5
+veredictos terminan en lo mismo — para mover la afinación hay que mover
+la FÍSICA del objeto (tensar, acortar, agujerear…), no “pedirle” otra
+frecuencia; eso es exactamente s10</td>
+<td>Planilla proyectada; pizarrón</td>
+</tr>
+<tr>
+<td>60–70′</td>
+<td>Cierre: síntesis, ticket hacia s10 y anuncios</td>
+<td>Anota la síntesis (3 líneas: los intervalos lisos son razones de
+enteros; 12 quintas no cierran — la coma se reparte y nace el
+temperamento; afinar de oído = contar batidos, y afinar el objeto =
+cambiar su física); escribe su <strong>ticket de salida hacia
+s10</strong>: “para afinar mi objeto tengo que cambiarlo físicamente —
+¿qué determina que un sistema ‘prefiera’ vibrar en SUS frecuencias y no
+en las que yo le impongo?”</td>
+<td>Sintetiza; recoge tickets y las guías del taller de afinación
+(rúbrica rápida al vuelo); <strong>anuncia s10</strong>: <strong>hito 2
+del proyecto</strong> (avance 8 %: compilado de radiografía s08 + mapa
+de escala s09 + bitácora al día; coevaluación intra-grupo), clínica de
+proyecto en módulo 2, traer el objeto de nuevo (el aviso de instrumentos
+de estudiantes para s11 corresponde a s10, según diseno/03)</td>
+<td>Tickets; pizarrón</td>
+</tr>
+</tbody>
+</table>
+<h2 id="verificación-de-aprendizaje">Verificación de aprendizaje</h2>
+<ul>
+<li><strong>Ronda oral OA3 (con nota, pasada 2)</strong>: 4 registros
+nuevos en la planilla; el estímulo exige distinguir ondulación lenta
+(quinta temperada) de batido rápido (tercera) — D1 fino — y conectar con
+la coincidencia de parciales de s08 (D2).</li>
+<li><strong>Taller de afinación (OA2.3, EVALUADO, 25 %
+talleres)</strong>: rúbrica rápida logrado/parcial/incipiente sobre la
+guía: predicción previa escrita, cents anotados para las fases A y B por
+ambos integrantes de la pareja, la cuenta de la coma resuelta en los
+ítems de papel, contraste predicción–resultado honesto. El mapa
+colectivo del pizarrón (¿se agrupan en ~702 y ~700?) es la verificación
+pública de que el curso completo afinó por batidos.</li>
+<li><strong>Taller del objeto (OA5.2 + OA1.2, a bitácora, cuenta vía
+hito 2)</strong>: tabla de alturas en nota + cents con condiciones
+anotadas, veredicto de escala argumentado y UNA propuesta física de
+corrección de afinación — es el segundo insumo del compilado del hito 2
+(s10).</li>
+<li><strong>Gancho cobrado</strong>: la votación dividida del acorde en
+3 afinaciones demuestra audiblemente que “afinado” es un compromiso — el
+corazón de OA2.3.</li>
+<li><strong>Cadena de tickets</strong>: ticket s08 cobrado en la escucha
+del día (respuesta: NO — la coma); ticket s09 → gancho/escucha de s10
+(resonancia).</li>
+</ul>
+<h2 id="aritmética-de-taller-declarada-regla-6b">Aritmética de taller
+declarada (regla 6b)</h2>
+<ul>
+<li><strong>Módulo 1</strong>: 15 + 15 + 32 + 8 = 70′ ✓. Escucha del
+día: 3′ + 2′ + 4 × 2,5′ = 15′ ✓.</li>
+<li><strong>Taller de afinación (m1, 30–62′)</strong>: 32′ = 2′
+instalación + 30′ de trabajo; 1 notebook/grupo ÷ 2 parejas = 15′ por
+pareja; cada afinador hace las fases A y B en <strong>~6′ de oído por
+persona</strong> (A ~3′, B ~2′, anotación ~1′) ✓ ≥2′; la pareja en
+espera trabaja los ítems de papel de la guía (nadie mira sin hacer,
+principio 3); fase C declarada opcional (solo parejas rápidas).</li>
+<li><strong>Cierre m1</strong>: pegado de puntos 2′ + lectura del mapa
+2′ + guitarra en vivo 3′ + moraleja 1′ = 8′ ✓ (ajustado: la guitarra es
+demostración, no actividad).</li>
+<li><strong>Módulo 2</strong>: 8 + 15 + 25 + 12 + 10 = 70′ ✓.</li>
+<li><strong>Taller del objeto (m2, 23–48′)</strong>: 25′ = 2′
+instalación + 23′ de medición; sin cuello de material (cada grupo usa SU
+objeto y ≥2 celulares propios): con 3–5 alturas por objeto y roles
+rotando, <strong>~5′ de manos en la medición por integrante</strong> ✓;
+profesor: 5 grupos × ~4,5′ = ~23′ ✓.</li>
+<li><strong>Puesta en común m2</strong>: 5 voceros × 1,5′ + tabulación y
+discusión 4,5′ = 12′ ✓.</li>
+</ul>
+<h2 id="pendientes-de-producción">Pendientes de producción</h2>
+<ul>
+<li><strong>Demo</strong> (skill /demo-interactiva):
+<code>demo_temperamentos.html</code> — modo comparar (mismo
+intervalo/acorde en justa, pitagórica y temperamento igual; selector 3ª
+mayor / 5ª / acorde mayor; razones y cents a la vista; tonos complejos
+de 6 armónicos; vista de parciales con el par en colisión y sus batidos
+previstos) + modo afinar (nota superior ajustable en cents, cents
+ocultables, botón “desafinar al azar”) + modo presentación para la
+escucha del día. Es la única demo de la sesión.</li>
+<li><strong>Apuntes</strong>:
+<code>sesiones/s09/apuntes/apunte_s09_escalas_y_temperamentos.md</code>.</li>
+<li><strong>Capítulo (lectura previa)</strong>:
+<code>libro/cap09_escalas_y_temperamentos.md</code>.</li>
+<li><strong>Actividades</strong>: guía PEE evaluada
+<code>guia_pee_afinar_por_batidos.md</code> (1 por pareja) + guía de la
+serie <code>guia_medicion_escala_objeto.md</code> (1 por grupo, con
+tabla de frecuencias del temperamento igual) — en
+<code>sesiones/s09/actividades/</code>.</li>
+<li><strong>Trabajo previo del profesor (esta semana)</strong>: probar
+<code>demo_temperamentos.html</code> en el equipo de la sala
+(alternancia justa/igual del estímulo en modo presentación: la
+ondulación de la quinta DEBE oírse en los parlantes de la sala) y en 1
+notebook de grupo con audífonos; <strong>afinar la guitarra ANTES de
+clase dejando Mi–La levemente desafinada</strong> para que los batidos
+de armónicos se oigan al demostrar; imprimir ~12 guías de afinación (1
+por pareja) + 6 guías de objeto; planilla OA3 con el sorteo de la pasada
+2; recordatorio por correo: <strong>audífonos + objeto del proyecto +
+afinador instalado</strong>.</li>
+<li><strong>Sin estímulo de grabación nuevo</strong>: la escucha del día
+se genera en vivo con la demo (no se agrega fila al banco de
+estímulos).</li>
+</ul>
+<h2 id="riesgos-y-plan-b">Riesgos y plan B</h2>
+<ul>
+<li><strong>La ondulación de la quinta temperada no se oye en la
+sala</strong> (parlantes o ruido de fondo) → subir el registro del
+estímulo (base más aguda = batidos proporcionalmente más rápidos y más
+notorios) o abrir la escucha con la 3ª mayor (batido ~10/s, robusto) y
+dejar la quinta como segunda pasada; el taller no se afecta (es con
+audífonos).</li>
+<li><strong>Audífonos olvidados</strong> → la pareja afina con el
+parlante del notebook a volumen bajo (los batidos de la quinta
+sobreviven bien); si faltan muchos, la fase B (contar ~1 batido/s) se
+hace plenaria con la demo proyectada y cada pareja solo hace la fase A
+en su turno.</li>
+<li><strong>La demo no corre en los notebooks de grupo</strong> → plan B
+del curso: demo solo proyectada; las parejas pasan por turnos breves al
+notebook del profesor para la fase A mientras el resto avanza los ítems
+de papel; la fase B se hace plenaria contando en voz alta.</li>
+<li><strong>Un grupo llega sin su objeto</strong> → variante de la guía:
+medir la escala de la grabación más reciente de la bitácora, o del
+objeto de respaldo del profesor (vaso o flauta), y anotar el compromiso
+de repetir sobre el objeto real ANTES del hito 2 (s10 ya no lo tolera:
+es la entrega).</li>
+<li><strong>El objeto no tiene altura definida</strong> (espectro
+inarmónico, la app “duda”) → la guía lo contempla: reportar la altura
+más plausible y la duda de la app ES el resultado (conecta con la
+radiografía de s08: sin parciales armónicos no hay nota nítida); el
+veredicto pasa a ser “mi objeto no vive en ninguna escala, y sabemos por
+qué”.</li>
+<li><strong>La fase C tienta a alargar el taller</strong> → está
+declarada opcional; a los 62′ el pizarrón cambia a mapa de cents aunque
+haya parejas a medio camino (fusible del módulo 1).</li>
+<li><strong>La guitarra no coopera</strong> (armónicos débiles en la
+sala) → acercar el micrófono de la sala a la boca de la guitarra o, en
+el peor caso, reemplazar por la demo (dos “cuerdas” sintéticas en 4:3
+desafinadas 2 cents): se pierde el objeto real, no el fenómeno.</li>
+</ul>
+</body>
+</html>

@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="es" xml:lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>Batidos: la ondulación que delata la desafinación</title>
+  <style>
+    /* Default styles provided by pandoc.
+    ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+    */
+    html {
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    svg {
+      height: auto;
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      border: none;
+      border-top: 1px solid #1a1a1a;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+  </style>
+  <style>
+  /* Estilo compartido para los .md del curso convertidos a HTML
+     (misma familia editorial de las demos y del mapa del curso) */
+  :root { --tinta:#1a1a1a; --acento:#7a2e2e; --azul:#2e4a7a;
+          --papel:#faf8f4; --panel:#f0ece4; }
+  body { margin:0 auto; padding:2rem 1.4rem 4rem; max-width:820px;
+         background:var(--papel); color:var(--tinta);
+         font-family:Georgia,'Times New Roman',serif; line-height:1.55;
+         font-size:1.02rem; }
+  h1,h2,h3,h4 { font-family:Georgia,serif; line-height:1.25; }
+  h1 { font-size:1.6rem; border-bottom:2px solid var(--tinta);
+       padding-bottom:.3rem; }
+  h2 { font-size:1.25rem; margin-top:2rem; color:var(--acento); }
+  h3 { font-size:1.05rem; margin-top:1.5rem; }
+  a { color:var(--azul); }
+  blockquote { border-left:4px solid var(--acento); margin:1rem 0;
+               padding:.2rem 1rem; background:var(--panel);
+               border-radius:0 6px 6px 0; }
+  table { border-collapse:collapse; margin:1rem 0; font-size:.92rem;
+          display:block; overflow-x:auto; }
+  th { font-family:Helvetica,Arial,sans-serif; font-size:.78rem;
+       text-transform:uppercase; letter-spacing:.04em; text-align:left;
+       border-bottom:2px solid var(--tinta); padding:.45rem .6rem;
+       background:var(--papel); }
+  td { padding:.45rem .6rem; border-bottom:1px solid #ddd;
+       vertical-align:top; }
+  code { font-family:Menlo,Consolas,monospace; font-size:.86em;
+         background:var(--panel); padding:.08em .35em; border-radius:3px; }
+  pre { background:var(--panel); padding:.8rem 1rem; border-radius:6px;
+        overflow-x:auto; }
+  pre code { background:none; padding:0; }
+  hr { border:none; border-top:1px solid #ccc; margin:2rem 0; }
+  img { max-width:100%; }
+  li { margin-bottom:.25rem; }
+  math { font-size:1.05em; }
+  @media print { body { background:white; max-width:none; } }
+  </style>
+</head>
+<body>
+<h1 id="batidos-la-ondulación-que-delata-la-desafinación">Batidos: la
+ondulación que delata la desafinación</h1>
+<p><strong>Sesión 07</strong> (módulo 2) · Curso Acústica Musical UC
+<strong>Objetivos que cubre</strong>: OA2.2 (batidos de primer orden:
+primera experiencia del fenómeno, que s08 desarrolla), OA2.1 (un caso
+más donde lo percibido no copia lo físico: dos frecuencias → una sola
+altura que ondula). Apunte breve por diseño: el módulo 1 de esta sesión
+fue la Prueba 1 y casi no se introdujo contenido nuevo.</p>
+<h2 id="qué-es-esa-ondulación">¿Qué es esa ondulación?</h2>
+<p>Dos flautas tocaron la misma nota, y una quedó apenas desafinada. Lo
+que se oyó — y lo que la mayoría del curso había anticipado a medias en
+su ticket de s06 — no fue “dos notas”, ni exactamente “una nota
+desafinada”: fue <strong>una sola nota cuya sonoridad ondula</strong>,
+un <em>guau–guau–guau</em> regular, como si alguien subiera y bajara el
+volumen varias veces por segundo. Ese vaivén tiene nombre:
+<strong>batido</strong> (en rigor, <em>batido de primer orden</em>,
+porque hay parientes más sutiles que aparecerán más adelante en el
+curso).</p>
+<p>En la sesión lo contamos: con
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>f</mi><mn>1</mn></msub><mo>=</mo><mn>440</mn></mrow><annotation encoding="application/x-tex">f_1 = 440</annotation></semantics></math>
+Hz fija y
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>f</mi><mn>2</mn></msub><mo>=</mo><mn>443</mn></mrow><annotation encoding="application/x-tex">f_2 = 443</annotation></semantics></math>
+Hz, el curso contó tres ondulaciones por segundo. Con 442 Hz, dos. Con
+437 Hz, tres de nuevo — da lo mismo hacia qué lado está la desafinación.
+La regla empírica quedó a la vista en la demo:</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>f</mi><mi>b</mi></msub><mo>=</mo><mo stretchy="false" form="prefix">|</mo><msub><mi>f</mi><mn>2</mn></msub><mo>−</mo><msub><mi>f</mi><mn>1</mn></msub><mo stretchy="false" form="prefix">|</mo></mrow><annotation encoding="application/x-tex">f_b = |f_2 - f_1|</annotation></semantics></math></p>
+<p><strong>Los batidos por segundo son la diferencia entre las dos
+frecuencias.</strong> Un batido por segundo por cada hertz de
+diferencia. Es una de las relaciones más limpias de todo el curso: no es
+aproximada, no depende del instrumento ni del oyente, y se verifica
+contando con los dedos.</p>
+<h2 id="por-qué-dos-tonos-casi-iguales-laten">¿Por qué dos tonos casi
+iguales laten?</h2>
+<p>No hace falta trigonometría para entenderlo; basta la imagen de dos
+trenes de empujones al aire (así describimos toda nota desde s01).</p>
+<p>Suponga
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>f</mi><mn>1</mn></msub><mo>=</mo><mn>440</mn></mrow><annotation encoding="application/x-tex">f_1 = 440</annotation></semantics></math>
+y
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>f</mi><mn>2</mn></msub><mo>=</mo><mn>441</mn></mrow><annotation encoding="application/x-tex">f_2 = 441</annotation></semantics></math>
+Hz. En el instante en que ambas ondas empujan el aire <em>a la vez</em>
+— están <strong>en fase</strong> — sus empujones se suman: el sonido se
+refuerza. Pero la segunda onda completa un ciclo más que la primera en
+cada segundo, así que se le va adelantando poquito a poco. Medio segundo
+después le lleva <em>medio ciclo</em> de ventaja: cuando una empuja, la
+otra succiona — están <strong>en contrafase</strong> — y los empujones
+se cancelan: el sonido casi desaparece. Al completar el segundo, la
+ventaja acumulada es un ciclo entero y todo vuelve a empezar: refuerzo,
+silencio, refuerzo, silencio.</p>
+<p>Con 1 Hz de diferencia, ese ciclo completo de refuerzo y cancelación
+ocurre exactamente una vez por segundo. Con 3 Hz de diferencia, la
+segunda onda “adelanta” tres ciclos por segundo y el patrón se repite
+tres veces: tres batidos. De ahí la regla
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>f</mi><mi>b</mi></msub><mo>=</mo><mo stretchy="false" form="prefix">|</mo><msub><mi>f</mi><mn>2</mn></msub><mo>−</mo><msub><mi>f</mi><mn>1</mn></msub><mo stretchy="false" form="prefix">|</mo></mrow><annotation encoding="application/x-tex">f_b = |f_2 - f_1|</annotation></semantics></math>.
+La envolvente que dibuja la demo — esa curva que encierra a la onda y
+sube y baja lentamente — es el retrato de este juego de fases.</p>
+<blockquote>
+<p><strong>Recuadro opcional (para quienes quieran la cuenta
+exacta).</strong> La suma de dos sinusoides de igual amplitud se puede
+reescribir como
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mrow><mi mathvariant="normal">sin</mi><mo>&#8289;</mo></mrow><mo stretchy="false" form="prefix">(</mo><mn>2</mn><mi>π</mi><msub><mi>f</mi><mn>1</mn></msub><mi>t</mi><mo stretchy="false" form="postfix">)</mo><mo>+</mo><mrow><mi mathvariant="normal">sin</mi><mo>&#8289;</mo></mrow><mo stretchy="false" form="prefix">(</mo><mn>2</mn><mi>π</mi><msub><mi>f</mi><mn>2</mn></msub><mi>t</mi><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mn>2</mn><mrow><mi mathvariant="normal">cos</mi><mo>&#8289;</mo></mrow><mspace width="-0.167em"></mspace><mo minsize="120%" maxsize="120%" stretchy="true" form="prefix">(</mo><mn>2</mn><mi>π</mi><mstyle displaystyle="false"><mfrac><mrow><msub><mi>f</mi><mn>2</mn></msub><mo>−</mo><msub><mi>f</mi><mn>1</mn></msub></mrow><mn>2</mn></mfrac></mstyle><mi>t</mi><mo minsize="120%" maxsize="120%" stretchy="true" form="postfix">)</mo><mspace width="0.167em"></mspace><mrow><mi mathvariant="normal">sin</mi><mo>&#8289;</mo></mrow><mspace width="-0.167em"></mspace><mo minsize="120%" maxsize="120%" stretchy="true" form="prefix">(</mo><mn>2</mn><mi>π</mi><mstyle displaystyle="false"><mfrac><mrow><msub><mi>f</mi><mn>1</mn></msub><mo>+</mo><msub><mi>f</mi><mn>2</mn></msub></mrow><mn>2</mn></mfrac></mstyle><mi>t</mi><mo minsize="120%" maxsize="120%" stretchy="true" form="postfix">)</mo><mo>,</mo></mrow><annotation encoding="application/x-tex">\sin(2\pi f_1 t) + \sin(2\pi f_2 t) = 2\cos\!\big(2\pi \tfrac{f_2-f_1}{2} t\big)\,\sin\!\big(2\pi \tfrac{f_1+f_2}{2} t\big),</annotation></semantics></math>
+es decir, una onda “rápida” a la frecuencia promedio
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mstyle displaystyle="false"><mfrac><mrow><msub><mi>f</mi><mn>1</mn></msub><mo>+</mo><msub><mi>f</mi><mn>2</mn></msub></mrow><mn>2</mn></mfrac></mstyle><annotation encoding="application/x-tex">\tfrac{f_1+f_2}{2}</annotation></semantics></math>,
+multiplicada por una envolvente “lenta” que oscila a
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mstyle displaystyle="false"><mfrac><mrow><mo stretchy="false" form="prefix">|</mo><msub><mi>f</mi><mn>2</mn></msub><mo>−</mo><msub><mi>f</mi><mn>1</mn></msub><mo stretchy="false" form="prefix">|</mo></mrow><mn>2</mn></mfrac></mstyle><annotation encoding="application/x-tex">\tfrac{|f_2-f_1|}{2}</annotation></semantics></math>.
+Como la sonoridad no distingue si la envolvente es positiva o negativa,
+oímos <strong>dos</strong> máximos por cada ciclo de la envolvente: los
+batidos audibles ocurren a
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">|</mo><msub><mi>f</mi><mn>2</mn></msub><mo>−</mo><msub><mi>f</mi><mn>1</mn></msub><mo stretchy="false" form="prefix">|</mo></mrow><annotation encoding="application/x-tex">|f_2 - f_1|</annotation></semantics></math>
+por segundo, no a la mitad. Compare con Roederer (1997), sec. 2.4.</p>
+</blockquote>
+<h2 id="por-qué-oímos-una-sola-nota-y-no-dos">¿Por qué oímos una sola
+nota y no dos?</h2>
+<p>Aquí asoma la parte perceptual — y la más provocadora. Físicamente
+hay <em>dos</em> frecuencias presentes en el aire; un espectro
+suficientemente fino mostraría dos picos. Pero el oído no oye dos notas:
+oye <strong>una</strong>, de altura intermedia, que ondula. Cuando dos
+frecuencias caen muy cerca una de otra, el sistema auditivo no logra
+separarlas y las funde en una sola sensación — y la “pelea” entre ambas
+se percibe como esa fluctuación de sonoridad.</p>
+<p>¿Y qué pasa cuando la diferencia crece? En el cierre de la sesión lo
+escuchamos sin explicarlo: en algún punto los batidos se vuelven
+demasiado rápidos para contarlos, la ondulación se convierte en una
+aspereza, y más allá, en algún momento, aparecen por fin <em>dos
+notas</em> distinguibles. Dónde están esas fronteras, por qué existen y
+qué tienen que ver con la consonancia y con la construcción de acordes
+es exactamente el tema de la sesión 08. Por ahora, guarde la observación
+de su propio oído (quedó en su ticket de salida).</p>
+<h2
+id="cómo-se-convierte-el-batido-en-una-herramienta-de-afinación">¿Cómo
+se convierte el batido en una herramienta de afinación?</h2>
+<p>Esta es la lectura práctica del fenómeno, y es la que los afinadores
+de teclados explotan desde hace siglos: <strong>el batido es un detector
+de desafinación más fino que el oído melódico.</strong> Si dos cuerdas
+difieren en 1 Hz, ningún oído las distingue como dos alturas — pero
+<em>cualquier</em> oído cuenta un batido por segundo sin esfuerzo. La
+receta del unísono es entonces: toque las dos fuentes juntas, escuche la
+ondulación y ajuste una de ellas de modo que el batido se haga cada vez
+más lento — un batido por segundo, uno cada dos segundos, uno cada
+cuatro… — hasta que se detenga. <strong>Batido detenido =
+unísono.</strong> En el juego de afinación de la sesión, los voluntarios
+llegaron rutinariamente a menos de 1 Hz de error solo escuchando; con
+paciencia, el método llega a fracciones de hertz.</p>
+<p>En la sesión 09 esta herramienta pasa de truco a oficio: veremos que
+no solo los unísonos, sino los intervalos (octavas, quintas, terceras)
+también producen batidos característicos cuando están desafinados, y que
+contando batidos se puede afinar un temperamento completo — el
+procedimiento histórico de los afinadores de piano (Benade 1990, cap.
+16, lo describe paso a paso; lo probaremos).</p>
+<h2 id="síntesis">Síntesis</h2>
+<ul>
+<li>Dos tonos casi iguales no se oyen como dos notas: se oyen como una
+sola nota cuya sonoridad ondula — el <strong>batido de primer
+orden</strong>.</li>
+<li>La regla es exacta y simple:
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>f</mi><mi>b</mi></msub><mo>=</mo><mo stretchy="false" form="prefix">|</mo><msub><mi>f</mi><mn>2</mn></msub><mo>−</mo><msub><mi>f</mi><mn>1</mn></msub><mo stretchy="false" form="prefix">|</mo></mrow><annotation encoding="application/x-tex">f_b = |f_2 - f_1|</annotation></semantics></math>;
+un batido por segundo por cada hertz de diferencia.</li>
+<li>El mecanismo físico es el juego de fases: dos ondas casi iguales
+entran y salen de paso, alternando refuerzo y cancelación.</li>
+<li>El batido detenido es el detector de unísono más fino disponible sin
+instrumentos: la base de la afinación de oído (s09).</li>
+<li>Lo que aparece cuando la diferencia crece — aspereza, y luego dos
+notas — quedó oído pero no explicado: es el punto de partida de
+s08.</li>
+</ul>
+<h2 id="hacia-la-sesión-08">Hacia la sesión 08</h2>
+<p>Su ticket de salida quedó en la frontera: ¿qué se oye cuando la
+diferencia crece más allá de lo que “batea”, y dónde termina eso? La
+sesión 08 responde con el concepto de <strong>banda crítica</strong> —
+la resolución del oído — y con él explica la rugosidad, por qué algunos
+intervalos suenan ásperos y otros no, y qué tiene que decir la física
+sobre la consonancia. La misma demo de hoy vuelve a escena; traiga
+audífonos. Y desde s08 comienzan los talleres de medición sobre el
+objeto del proyecto de su grupo: traiga el objeto (o su avance
+medible).</p>
+<h2 id="referencias-y-lectura-complementaria">Referencias y lectura
+complementaria</h2>
+<ul>
+<li>Roederer, J. G. (1997). <em>Acústica y Psicoacústica de la
+Música</em>. Ricordi — cap. 2, sec. 2.4 (“Batidos de primer orden”,
+dentro de pp. 24–78): el tratamiento perceptual que este apunte
+sigue.</li>
+<li>Benade, A. H. (1990). <em>Fundamentals of Musical Acoustics</em>,
+2.ª ed. Dover — cap. 13, sec. 13.5 (batidos y sonoridad de sonidos
+combinados); cap. 14 (introducción) y cap. 16 (afinación práctica por
+batidos) como anticipo de s08–s09.</li>
+<li>Campbell, M. &amp; Greated, C. (1987). <em>The Musician’s Guide to
+Acoustics</em>. Oxford UP — cap. 3 (pp. 69–164), sección “Pitch”, para
+la superposición de tonos puros.</li>
+<li>Rossing, T. D., Moore, F. R. &amp; Wheeler, P. A. (2002). <em>The
+Science of Sound</em>, 3.ª ed. — cap. 8, secs. 8.1–8.4, para quien
+quiera ejercicios numéricos de batidos.</li>
+</ul>
+</body>
+</html>

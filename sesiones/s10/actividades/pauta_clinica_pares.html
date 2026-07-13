@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="es" xml:lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>Pauta de retroalimentación entre pares — Clínica de proyecto
+(s10, módulo 2)</title>
+  <style>
+    /* Default styles provided by pandoc.
+    ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+    */
+    html {
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    svg {
+      height: auto;
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      border: none;
+      border-top: 1px solid #1a1a1a;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+  </style>
+  <style>
+  /* Estilo compartido para los .md del curso convertidos a HTML
+     (misma familia editorial de las demos y del mapa del curso) */
+  :root { --tinta:#1a1a1a; --acento:#7a2e2e; --azul:#2e4a7a;
+          --papel:#faf8f4; --panel:#f0ece4; }
+  body { margin:0 auto; padding:2rem 1.4rem 4rem; max-width:820px;
+         background:var(--papel); color:var(--tinta);
+         font-family:Georgia,'Times New Roman',serif; line-height:1.55;
+         font-size:1.02rem; }
+  h1,h2,h3,h4 { font-family:Georgia,serif; line-height:1.25; }
+  h1 { font-size:1.6rem; border-bottom:2px solid var(--tinta);
+       padding-bottom:.3rem; }
+  h2 { font-size:1.25rem; margin-top:2rem; color:var(--acento); }
+  h3 { font-size:1.05rem; margin-top:1.5rem; }
+  a { color:var(--azul); }
+  blockquote { border-left:4px solid var(--acento); margin:1rem 0;
+               padding:.2rem 1rem; background:var(--panel);
+               border-radius:0 6px 6px 0; }
+  table { border-collapse:collapse; margin:1rem 0; font-size:.92rem;
+          display:block; overflow-x:auto; }
+  th { font-family:Helvetica,Arial,sans-serif; font-size:.78rem;
+       text-transform:uppercase; letter-spacing:.04em; text-align:left;
+       border-bottom:2px solid var(--tinta); padding:.45rem .6rem;
+       background:var(--papel); }
+  td { padding:.45rem .6rem; border-bottom:1px solid #ddd;
+       vertical-align:top; }
+  code { font-family:Menlo,Consolas,monospace; font-size:.86em;
+         background:var(--panel); padding:.08em .35em; border-radius:3px; }
+  pre { background:var(--panel); padding:.8rem 1rem; border-radius:6px;
+        overflow-x:auto; }
+  pre code { background:none; padding:0; }
+  hr { border:none; border-top:1px solid #ccc; margin:2rem 0; }
+  img { max-width:100%; }
+  li { margin-bottom:.25rem; }
+  math { font-size:1.05em; }
+  @media print { body { background:white; max-width:none; } }
+  </style>
+</head>
+<body>
+<h1
+id="pauta-de-retroalimentación-entre-pares-clínica-de-proyecto-s10-módulo-2">Pauta
+de retroalimentación entre pares — Clínica de proyecto (s10, módulo
+2)</h1>
+<p><strong>Objetivos</strong>: OA3.2 (conectar sensación, mecanismo y
+medición — en el proyecto ajeno), OA5.2 (avance del proyecto propio).
+Formato 6 de la metodología (§2). Esta pauta es la del curso: se
+reutiliza en toda clínica de pares (y su disciplina reaparece en las
+preguntas de la presentación final, s15). <strong>Organización (5
+grupos)</strong>: 2 parejas de grupos + 1 trío, asignados por el
+profesor (objetos lo más distintos posible). En cada ronda hay un grupo
+que <strong>presenta</strong> y un grupo que
+<strong>retroalimenta</strong>; en el trío, el tercer grupo
+<strong>cronometra y registra</strong> (los roles rotan: A→B→C).
+<strong>Tiempos</strong> (cronómetro a la vista): parejas — presentación
+6′ + retroalimentación 5′ + registro y firmas 3′, y se invierten los
+roles; trío — presentación 5′ + retroalimentación 4′ por ronda, tres
+rondas. <strong>Roles dentro del grupo que retroalimenta</strong>: 2
+<strong>lectores de pauta</strong> (formulan
+fortalezas/dudas/sugerencia), 1 <strong>escriba</strong> (llena esta
+hoja), 1 <strong>cronómetro</strong> (en el trío, ese rol pasa al tercer
+grupo).</p>
+<h2 id="qué-presenta-el-grupo-6-con-el-objeto-en-mano">Qué presenta el
+grupo (6′, con el objeto EN MANO)</h2>
+<ol type="1">
+<li>Qué es el objeto y qué prometió el hito 1 (30″).</li>
+<li>El objeto <strong>suena</strong> al menos una vez
+(obligatorio).</li>
+<li>Radiografía espectral (s08) y mapa de escala (s09): qué midieron y
+qué veredicto dieron.</li>
+<li>La duda más dura que tienen hoy (la sección 5 de su compilado).</li>
+</ol>
+<h2
+id="hoja-de-retroalimentación-el-escriba-la-llena-letra-legible">Hoja de
+retroalimentación (el escriba la llena; letra legible)</h2>
+<p><strong>Grupo que presenta</strong>: ____________ <strong>Grupo que
+retroalimenta</strong>: ____________</p>
+<p><strong>2 fortalezas</strong> (concretas: “la tabla de parciales trae
+condiciones”, no “está bonito”):</p>
+<ul>
+<li>F1: _______________________________________________</li>
+<li>F2: _______________________________________________</li>
+</ul>
+<p><strong>2 dudas</strong> (formuladas como pregunta al grupo, no como
+sentencia):</p>
+<ul>
+<li>D1: ¿____________________________________________?</li>
+<li>D2: ¿____________________________________________?</li>
+</ul>
+<p><strong>1 sugerencia MEDIBLE</strong> (las tres casillas son
+obligatorias — sin instrumento y resultado esperado, no es medible):</p>
+<table>
+<colgroup>
+<col style="width: 33%" />
+<col style="width: 33%" />
+<col style="width: 33%" />
+</colgroup>
+<thead>
+<tr>
+<th>Qué medir o cambiar</th>
+<th>Con qué (app/instrumento/gesto)</th>
+<th>Qué resultado esperarían y qué decidiría</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Firmas</strong> (vocero de cada grupo): presenta ________
+retroalimenta ________</p>
+<p><em>Terminada la ronda, la hoja se fotografía para la bitácora de
+AMBOS grupos y el original queda con el grupo que presentó.</em></p>
+<h2
+id="compromisos-verificables-cierre-de-la-sesión-a-bitácora">Compromisos
+verificables (cierre de la sesión, a bitácora)</h2>
+<p>Antes de salir, cada grupo escribe en su bitácora 1–2 compromisos
+para antes de s12, con el formato de la sugerencia medible (qué / con
+qué / resultado esperado). <strong>Uno es obligatorio para todos los
+grupos</strong>:</p>
+<blockquote>
+<p><strong>El mapa de resonancias de mi objeto.</strong> Protocolo
+sugerido: (1) excitarlo por <strong>golpe</strong> suave en 2–3 puntos
+distintos y capturar el espectro (¿qué picos aparecen siempre?); (2)
+barrerlo con una excitación externa — la voz cantando un glissando cerca
+del objeto, o una app de tonos con el celular apoyado — y anotar en qué
+frecuencias el objeto “contesta” (vibra, zumba, se infla); (3) tabular
+esas frecuencias y compararlas con la radiografía de s08: ¿el objeto
+responde donde ya sabíamos que vibra? Registrar todo en la bitácora
+(tabla + condiciones + una foto).</p>
+</blockquote>
+<p>El profesor fotografía los compromisos al cierre: son la vara contra
+la que se leerá el avance en el hito 3 (s15).</p>
+</body>
+</html>

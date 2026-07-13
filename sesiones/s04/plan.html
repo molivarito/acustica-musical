@@ -1,0 +1,537 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="es" xml:lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>Sesión 04 — La receta del timbre: cuerda pulsada, punto de
+excitación, síntesis aditiva</title>
+  <style>
+    /* Default styles provided by pandoc.
+    ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+    */
+    html {
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    svg {
+      height: auto;
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      border: none;
+      border-top: 1px solid #1a1a1a;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+  </style>
+  <style>
+  /* Estilo compartido para los .md del curso convertidos a HTML
+     (misma familia editorial de las demos y del mapa del curso) */
+  :root { --tinta:#1a1a1a; --acento:#7a2e2e; --azul:#2e4a7a;
+          --papel:#faf8f4; --panel:#f0ece4; }
+  body { margin:0 auto; padding:2rem 1.4rem 4rem; max-width:820px;
+         background:var(--papel); color:var(--tinta);
+         font-family:Georgia,'Times New Roman',serif; line-height:1.55;
+         font-size:1.02rem; }
+  h1,h2,h3,h4 { font-family:Georgia,serif; line-height:1.25; }
+  h1 { font-size:1.6rem; border-bottom:2px solid var(--tinta);
+       padding-bottom:.3rem; }
+  h2 { font-size:1.25rem; margin-top:2rem; color:var(--acento); }
+  h3 { font-size:1.05rem; margin-top:1.5rem; }
+  a { color:var(--azul); }
+  blockquote { border-left:4px solid var(--acento); margin:1rem 0;
+               padding:.2rem 1rem; background:var(--panel);
+               border-radius:0 6px 6px 0; }
+  table { border-collapse:collapse; margin:1rem 0; font-size:.92rem;
+          display:block; overflow-x:auto; }
+  th { font-family:Helvetica,Arial,sans-serif; font-size:.78rem;
+       text-transform:uppercase; letter-spacing:.04em; text-align:left;
+       border-bottom:2px solid var(--tinta); padding:.45rem .6rem;
+       background:var(--papel); }
+  td { padding:.45rem .6rem; border-bottom:1px solid #ddd;
+       vertical-align:top; }
+  code { font-family:Menlo,Consolas,monospace; font-size:.86em;
+         background:var(--panel); padding:.08em .35em; border-radius:3px; }
+  pre { background:var(--panel); padding:.8rem 1rem; border-radius:6px;
+        overflow-x:auto; }
+  pre code { background:none; padding:0; }
+  hr { border:none; border-top:1px solid #ccc; margin:2rem 0; }
+  img { max-width:100%; }
+  li { margin-bottom:.25rem; }
+  math { font-size:1.05em; }
+  @media print { body { background:white; max-width:none; } }
+  </style>
+</head>
+<body>
+<h1
+id="sesión-04-la-receta-del-timbre-cuerda-pulsada-punto-de-excitación-síntesis-aditiva">Sesión
+04 — La receta del timbre: cuerda pulsada, punto de excitación, síntesis
+aditiva</h1>
+<p><strong>Objetivos que cubre</strong>: OA1.1 (principal: la receta de
+vibración — qué modos enciende la pulsación y cómo eso se ve en el
+espectro), OA1.2 (principal: predecir el efecto del punto de pulsación
+y, por proporciones, de tensión/longitud/masa sobre
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>f</mi><mn>1</mn></msub><annotation encoding="application/x-tex">f_1</annotation></semantics></math>),
+OA2.1 (primera pasada seria del par espectro↔︎timbre: misma nota,
+distinta receta; la relación no es unívoca). OA3.1 corre transversal en
+la escucha del día (con nota); OA5.1 avanza: devolución de ideas y
+<strong>publicación de la pauta del hito 1</strong>. <strong>Requisitos
+previos</strong>: s03 (modos, nodos/antinodos, parcial vs. armónico,
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>f</mi><mi>n</mi></msub><mo>=</mo><mi>n</mi><msub><mi>f</mi><mn>1</mn></msub></mrow><annotation encoding="application/x-tex">f_n = n f_1</annotation></semantics></math>,
+leer espectrogramas). Los estudiantes traen: (a) <strong>1–2
+instrumentos de cuerda pulsada por grupo</strong> (guitarra, ukelele,
+charango, cuatro… — aviso hecho en s03), (b) el celular con app de
+espectrograma y afinador, (c) leída la <strong>lectura previa</strong>:
+<code>libro/cap04_la_receta_del_timbre.md</code>, y (d) su ticket de
+salida de s03 respondido (“¿nota o timbre?”) — el profesor los trae
+recopilados. <strong>Posición en la progresión</strong>: cierra el
+bloque A (el sonido como objeto físico). Es la <strong>primera sesión
+con instrumentos de estudiantes</strong> (#1 de 2–3) y la primera SIN la
+regla de “menos contenido”. Convierte los modos de s03 en timbre audible
+y deja lista la munición para s05 (percepción de altura: la pregunta “¿y
+si quito la fundamental?” queda sembrada en el ticket). El proyecto pasa
+de ideas a diseño: hito 1 en s05 (8 %). <strong>Reglas
+aplicadas</strong>: escucha del día (15′, con nota) en el primer bloque
+del módulo 1; módulo 2 abre con gancho sonoro breve sin ronda; la
+lectura previa se consume visiblemente en el bloque de 15–30′ del módulo
+1 (principio 6); las DOS guías PEE del día se cierran en aula y se
+evalúan juntas como el taller de la semana (principio 5).</p>
+<h2 id="módulo-1-el-mapa-de-la-cuerda-variante-experimental">Módulo 1 —
+El mapa de la cuerda (variante: experimental)</h2>
+<table>
+<colgroup>
+<col style="width: 20%" />
+<col style="width: 20%" />
+<col style="width: 20%" />
+<col style="width: 20%" />
+<col style="width: 20%" />
+</colgroup>
+<thead>
+<tr>
+<th>Tiempo</th>
+<th>Bloque</th>
+<th>Actividad del estudiante</th>
+<th>Rol del profesor</th>
+<th>Materiales</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0–15′</td>
+<td><strong>Escucha del día (OA3.1, con nota) = el ticket de s03 en
+vivo</strong></td>
+<td>Escucha la MISMA cuerda de una guitarra pulsada dos veces: en el
+medio y pegado al puente (primero solo de oído, sin pantalla) (3′);
+todos anotan diagnóstico en 3 líneas (describir → hipotetizar →
+verificar) (2′); <strong>4 sorteados</strong> exponen (<strong>2,5′ c/u,
+cronómetro visible</strong>) — la hipótesis natural es su propia
+respuesta del ticket de s03</td>
+<td>Ejecuta las dos pulsadas en vivo dentro de los 3′ de estímulo
+(guitarra propia o de un estudiante); cronometra la ronda (4 × 2,5′ =
+10′); exige vocabulario de s03 (parcial, armónico, espectro vs. timbre)
+al evaluar con la planilla OA3; cierra con el suspenso: “¿cambió la nota
+o cambió el timbre? — lo dejaron escrito la semana pasada”</td>
+<td>Guitarra (del profesor o de un grupo); planilla de rúbrica con
+sorteo; cronómetro visible; tickets de s03 recopilados</td>
+</tr>
+<tr>
+<td>15–30′</td>
+<td>Veredicto del espectrograma + mini-lección: la receta de vibración
+(consume lectura previa)</td>
+<td>Ve proyectado el espectrograma de ambas pulsadas y contrasta con su
+ticket: mismas líneas (mismas frecuencias, misma nota) con distinto
+reparto de energía (otro timbre); vota a mano alzada las preguntas de la
+mini-lección: “¿pulsar donde el modo 2 tiene un nodo lo enciende o lo
+deja mudo?”, “¿el dedo de la tapa de s03 y la púa hacen lo mismo o lo
+contrario?”</td>
+<td>Pulsa al micrófono con el espectrograma proyectado; devuelve los
+tickets; mini-lección interactiva (formato 7) sobre el cap. 4 leído:
+<strong>la regla de la receta</strong> — pulsar en un punto enciende con
+fuerza los modos que se <em>mueven</em> en ese punto (antinodo) y deja
+mudos los que tienen un <em>nodo</em> ahí; el dedo apagador de s03 lee
+el mismo mapa con la palanca opuesta; anuncia que el taller es dibujar
+ese mapa en SU instrumento</td>
+<td>Guitarra + micrófono + proyector (app o demo s02); pizarrón;
+tickets</td>
+</tr>
+<tr>
+<td>30–62′</td>
+<td><strong>Taller PEE: el mapa de la cuerda (OA1.1, OA1.2,
+OA4.1)</strong> — formato 2, con los instrumentos de los
+estudiantes</td>
+<td>En grupo, con roles y la guía: elige UNA cuerda, mide su largo
+vibrante
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>L</mi><annotation encoding="application/x-tex">L</annotation></semantics></math>
+y marca con cinta de papel
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>L</mi><mi>/</mi><mn>2</mn></mrow><annotation encoding="application/x-tex">L/2</annotation></semantics></math>,
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>L</mi><mi>/</mi><mn>4</mn></mrow><annotation encoding="application/x-tex">L/4</annotation></semantics></math>
+y
+~<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>L</mi><mi>/</mi><mn>10</mn></mrow><annotation encoding="application/x-tex">L/10</annotation></semantics></math>
+del puente; ANTES de pulsar predice por escrito qué parciales dominarán
+en cada punto (aplicando la regla leída); pulsa, mira el espectrograma y
+registra; fase 2 (<strong>opcional, solo grupos rápidos</strong>):
+<strong>armónicos naturales</strong> — predice qué frecuencia sonará con
+el dedo suave sobre el traste 12
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>L</mi><mi>/</mi><mn>2</mn></mrow><annotation encoding="application/x-tex">L/2</annotation></semantics></math>)
+y, si aún sobra tiempo, 7
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>L</mi><mi>/</mi><mn>3</mn></mrow><annotation encoding="application/x-tex">L/3</annotation></semantics></math>)
+y 5
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>L</mi><mi>/</mi><mn>4</mn></mrow><annotation encoding="application/x-tex">L/4</annotation></semantics></math>),
+verifica con app y calcula razones con la cuerda al aire</td>
+<td>Rota por los grupos (~6′ c/u); provoca: “¿la pulsada en
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>L</mi><mi>/</mi><mn>2</mn></mrow><annotation encoding="application/x-tex">L/2</annotation></semantics></math>
+tiene el parcial 2 o no lo tiene?” y, a los grupos que llegan a la fase
+2, “¿el armónico del traste 12 y la pulsada al medio dejan sonar los
+MISMOS modos… o los contrarios?”; vigila que la predicción esté escrita
+antes de tocar</td>
+<td>Instrumentos de los estudiantes (mín. 1 por grupo); 5 huinchas o
+reglas largas; cinta de papel; celulares con espectrograma y afinador;
+guía PEE “mapa de la cuerda” (1 por grupo)</td>
+</tr>
+<tr>
+<td>62–70′</td>
+<td>Cierre y contraste</td>
+<td>UN grupo expone su mapa (tabla de puntos de pulsación; + armónicos
+si llegó a la fase 2); todos anotan la moraleja en la guía: púa y dedo
+leen el mismo mapa de nodos — pulsar enciende lo que se mueve, tocar
+apaga lo que se mueve</td>
+<td>Sintetiza en el pizarrón el mapa de la cuerda con los hallazgos de
+los 5 grupos; pregunta relámpago a mano alzada (mínimo de OA1.1): “pulsé
+justo donde el modo 3 tiene un nodo: ¿suena el parcial 3?”; recoge las
+guías (se cierran con la guía del módulo 2)</td>
+<td>Pizarrón; guías</td>
+</tr>
+</tbody>
+</table>
+<h2
+id="módulo-2-la-receta-en-el-mezclador-variante-audición-adaptada">Módulo
+2 — La receta en el mezclador (variante: audición, adaptada)</h2>
+<table>
+<colgroup>
+<col style="width: 20%" />
+<col style="width: 20%" />
+<col style="width: 20%" />
+<col style="width: 20%" />
+<col style="width: 20%" />
+</colgroup>
+<thead>
+<tr>
+<th>Tiempo</th>
+<th>Bloque</th>
+<th>Actividad del estudiante</th>
+<th>Rol del profesor</th>
+<th>Materiales</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0–8′</td>
+<td>Gancho sonoro: la nota al revés</td>
+<td>Escucha una grabación misteriosa y anota en 1 línea qué instrumento
+cree que es; luego la oye al derecho: era una nota de guitarra
+reproducida al revés — misma receta de parciales, otra envolvente,
+timbre irreconocible</td>
+<td>Reproduce la grabación invertida (preparada en casa) sin explicar;
+revela; deja plantada la pregunta: “si el espectro es el mismo, ¿qué
+cambió?”</td>
+<td>Grabación de nota de guitarra normal e invertida; audio de sala</td>
+</tr>
+<tr>
+<td>8–28′</td>
+<td><strong>Demo predictiva: síntesis aditiva (OA2.1, OA1.1)</strong> —
+formato 1</td>
+<td>Predice a mano alzada ANTES de cada paso: “si al seno le sumo el
+parcial 2, ¿cambia la nota o el timbre?”, “¿cuál preset sonará más
+brillante: pulsada al medio o cerca del puente?”, “¿cuál de los dos se
+parece a lo que midieron en el taller?”; verifica oyendo y viendo forma
+de onda y espectro</td>
+<td>Opera <code>demo_sintesis_aditiva.html</code> proyectada: parte de
+un seno (solo parcial 1), suma parciales de a uno, luego presets
+“pulsada al medio” / “pulsada cerca del puente” / “diente de sierra”;
+activa la envolvente de pulsación al final (la receta suena “a cuerda”
+recién con su envolvente → cierra el gancho); instala la idea:
+<strong>el espectro es la receta del timbre, y la envolvente es el resto
+de la receta</strong></td>
+<td><code>demo_sintesis_aditiva.html</code> + proyector + audio de
+sala</td>
+</tr>
+<tr>
+<td>28–42′</td>
+<td><strong>PEE relámpago con instrumentos: estirar, acortar, engordar
+(OA1.2)</strong></td>
+<td>En grupo, con la media guía: predice por proporciones y verifica con
+el afinador — (a) dedo en el traste 12 = mitad del largo: ¿la frecuencia
+se duplica exactamente?; (b) razona sin medir: para subir un semitono
+con la clavija, ¿la tensión sube ~1 %, ~12 % o ~100 %? (la comparación
+“misma nota en dos cuerdas ≠ mismo timbre” ya quedó cubierta por los
+presets de la demo de síntesis)</td>
+<td>Rota; formaliza en el pizarrón SOLO proporciones:
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>f</mi><mn>1</mn></msub><mo>∝</mo><mn>1</mn><mi>/</mi><mi>L</mi></mrow><annotation encoding="application/x-tex">f_1 \propto 1/L</annotation></semantics></math>,
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>f</mi><mn>1</mn></msub><mo>∝</mo><msqrt><msub><mi>F</mi><mi>T</mi></msub></msqrt></mrow><annotation encoding="application/x-tex">f_1 \propto \sqrt{F_T}</annotation></semantics></math>,
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>f</mi><mn>1</mn></msub><mo>∝</mo><mn>1</mn><mi>/</mi><msqrt><mi>μ</mi></msqrt></mrow><annotation encoding="application/x-tex">f_1 \propto 1/\sqrt{\mu}</annotation></semantics></math>
+(la fórmula completa queda en el recuadro del apunte); conecta: por eso
+la guitarra afina con 3 palancas — clavija, traste, grosor de
+cuerda</td>
+<td>Instrumentos + afinadores (app); media guía PEE “estirar, acortar,
+engordar”; pizarrón</td>
+</tr>
+<tr>
+<td>42–62′</td>
+<td><strong>Proyecto: devolución de ideas + pauta del hito 1
+(OA5.1)</strong></td>
+<td>Recibe su media hoja de s03 comentada; lee la pauta del hito 1
+(entrega s05, 8 %) mientras se presenta; en grupo: elige su idea
+definitiva, nombra el parámetro modificable y esboza QUÉ va a predecir
+(la sesión de hoy le dio el modelo cuerda completo); anota dudas y las
+pregunta</td>
+<td>Presenta la pauta (estructura de 2 págs, rúbrica, bitácora firmada,
+fecha); devuelve las medias hojas comentadas; rota por los 5 grupos
+empujando de la idea a la predicción (“¿qué número van a atreverse a
+escribir?”)</td>
+<td>Pauta del hito 1 impresa (1 por grupo) + proyectada; medias hojas
+comentadas</td>
+</tr>
+<tr>
+<td>62–70′</td>
+<td>Cierre + ticket de salida + anuncios</td>
+<td>Completa el ticket: “en la demo (queda publicada), apague del todo
+el parcial 1 — la fundamental: ¿la nota baja una octava, desaparece o
+sigue igual? escriba su predicción”; entrega las dos guías del día;
+anota anuncios</td>
+<td>Recoge guías (rúbrica rápida: cuentan juntas como el taller de la
+semana) y tickets; anuncia s05: <strong>entrega del hito 1 al
+inicio</strong> + se responde el ticket; publica el enlace de la demo
+para explorar en casa</td>
+<td>Tickets de salida; guías</td>
+</tr>
+</tbody>
+</table>
+<h2 id="verificación-de-aprendizaje">Verificación de aprendizaje</h2>
+<ul>
+<li><strong>Ronda oral OA3 con nota</strong>: 4 registros en planilla;
+el estímulo (misma cuerda, dos puntos) exige separar altura de timbre y
+usar parcial/armónico (D1) e hipotetizar con la regla de la receta
+(D2).</li>
+<li><strong>Guías PEE del día cerradas en aula</strong> (mapa de la
+cuerda + estirar/ acortar/engordar) con rúbrica rápida
+logrado/parcial/incipiente; cuentan juntas como el taller de la semana.
+Criterios centrales: predicción escrita antes de pulsar; mapa
+punto-de-pulsación→parciales coherente con lo medido; proporciones bien
+aplicadas en (a)–(b). Las razones de armónicos naturales (fase 2) se
+valoran si están, pero no penalizan: la fase es opcional.</li>
+<li><strong>Pregunta relámpago</strong> al cerrar el módulo 1 (mínimo de
+OA1.1/OA1.2): “pulsé donde el modo 3 tiene un nodo: ¿suena el parcial
+3?” — la sala completa debe responder “no” sin dudar.</li>
+<li><strong>Proyecto (OA5.1)</strong>: las 5 medias hojas devueltas con
+comentario; cada grupo sale con idea elegida, parámetro nombrado y la
+pauta del hito 1 en la mano. Verificación: al rotar, el profesor pide a
+cada grupo decir en una frase qué va a predecir.</li>
+<li><strong>Ticket de salida</strong> hacia s05 (¿y sin fundamental?):
+siembra la fundamental ausente y se contrasta al abrir s05.</li>
+</ul>
+<h2 id="pendientes-de-producción">Pendientes de producción</h2>
+<ul>
+<li><strong>Demo</strong> (skill /demo-interactiva):
+<code>demo_sintesis_aditiva.html</code> — 8 sliders de amplitud por
+parcial, presets (seno / diente de sierra suave / pulsada al medio /
+pulsada cerca del puente), forma de onda + espectro-receta, envolvente
+de pulsación opcional. [Única demo nueva.]</li>
+<li><strong>Apuntes</strong>:
+<code>apunte_s04_la_receta_del_timbre.md</code>.</li>
+<li><strong>Capítulo (lectura previa)</strong>:
+<code>libro/cap04_la_receta_del_timbre.md</code> (referido desde el
+cierre de cap03).</li>
+<li><strong>Actividades</strong>: guía PEE “el mapa de la cuerda” +
+media guía PEE “estirar, acortar, engordar” + <strong>pauta detallada
+del hito 1</strong> (con rúbrica; se publica hoy) — en
+<code>sesiones/s04/actividades/</code>.</li>
+<li><strong>Trabajo previo del profesor (esta semana)</strong>: comentar
+las 5 medias hojas de s03 (~30–45 min; foco: ¿es medible?, ¿tiene
+parámetro?); grabar la nota de guitarra e invertirla (cualquier editor
+de audio); probar el espectrograma con una guitarra ANTES de clase.</li>
+<li><strong>Material físico/logístico</strong>: guitarra del profesor
+(respaldo por si un grupo llega sin instrumento); 5 huinchas de medir o
+reglas largas; cinta de papel (masking) para marcar puntos de pulsación;
+planilla de rúbrica OA3; pauta del hito 1 impresa; publicación de la
+demo en el repositorio del curso al terminar la sesión.</li>
+</ul>
+<h2 id="riesgos-y-plan-b">Riesgos y plan B</h2>
+<ul>
+<li><strong>Grupos sin instrumento</strong> (el aviso de s03 falla) → la
+guitarra del profesor + el monocordio de s03 rotan entre los grupos
+afectados; el taller es viable con un mínimo de 3 instrumentos en sala
+(grupos de a dos instrumentos comparten mediciones); plan B extremo: el
+mapa se hace demostrativo en una sola guitarra al proyector y los grupos
+predicen y registran igual (se pierde autonomía, no el ciclo PEE).</li>
+<li><strong>El espectrograma no resuelve los parciales</strong> (cuerdas
+de nylon graves, sala ruidosa) → usar la cuerda más aguda con sonido
+claro, pulsar fuerte y capturar pantalla justo tras el ataque (mismo
+truco de s03); preferir instrumentos de cuerda metálica si los hay en
+sala.</li>
+<li><strong>Los armónicos naturales no salen</strong> en instrumentos de
+escala corta (ukelele, charango) → la fase 2 completa ya es opcional
+(solo grupos rápidos); si un grupo rápido la intenta, el del traste 12
+sale siempre y basta.</li>
+<li><strong>La devolución del proyecto se alarga</strong> (grupos que
+quieren rediscutir la idea completa) → la discusión fina sigue por
+bitácora y en horario de consulta; lo innegociable hoy: pauta entendida,
+fecha clara (s05) y parámetro nombrado por grupo.</li>
+<li><strong>La demo falla en el proyector</strong> → plan B: la síntesis
+aditiva se muestra con <code>demo_modos_cuerda.html</code> de s03 (suma
+de modos con amplitudes ajustables cubre el núcleo); la exploración fina
+queda de tarea con el enlace publicado.</li>
+<li><strong>El módulo 1 se atrasa por afinar/instalar
+instrumentos</strong> → la instalación se hace DURANTE la escucha del
+día (los instrumentos ya están fuera de sus fundas al entrar; regla
+anunciada al llegar); si aun así falta tiempo, la fase 2 del taller
+(armónicos) simplemente se omite — ya es opcional por defecto — y la
+fase 1 conserva su tiempo.</li>
+</ul>
+</body>
+</html>
