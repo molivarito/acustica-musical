@@ -50,9 +50,11 @@ declarado en la pauta). (7) El **efecto precedencia** se menciona 2′
 como curiosidad (BEN 12.2): no entra en ninguna evaluación. (8)
 **Fusibles**: m1 — si la sesión se atrasa, el bloque de demo comprime
 14′→10′ (pasos 3 y 4 se fusionan); el bloque del método de medición es
-INTOCABLE (sin él la salida fracasa). m2 — corte duro al minuto 55:
-todo grupo vuelve al punto de encuentro aunque le falte el espacio C
-(es opcional por diseño).
+INTOCABLE (sin él la salida fracasa). m2 — corte duro al minuto 50:
+todo grupo parte al punto de encuentro aunque le falte el espacio C
+(es opcional por diseño); el tramo 50–55′ es traslado presupuestado, y
+durante el traslado el grupo llena la casilla final del
+informe-formulario.
 
 ## Módulo 1 — La sala también suena (variante: experimental, adaptada — la "mini-lección + demo" prepara la salida)
 
@@ -76,8 +78,9 @@ línea de oído ANTES de encender la app. Primero suena, después se mide.
 | 0–5′ | Despliegue | Sale del aula con su grupo directo al espacio A de su ruta; en el trayecto reparte roles de la guía (**ejecuta** el impulso / **mide** con la app / **registra** / **vocero**) — rotan en cada espacio | Despacha a los 5 grupos escalonados (30″ entre grupos, evita atochamiento); parte hacia su circuito de supervisión | Guías con rutas; celulares cargados |
 | 5–25′ | Espacio A (★ obligatorio): el protocolo completo | (1) palmada diagnóstica + 1 línea de oído (¿más seco o más vivo que la sala de clases?); (2) niveles de fondo: 30″ de app SPL en 2 posiciones, anota; (3) **3 mediciones de $T_{60}$** (globo o palmada fuerte, silencio antes de cada una), anota las 3 y la mediana; (4) dimensiones a pasos → $V$ estimado; (5) checklist de materiales de las superficies (duro/blando por pared, piso, techo); el registra sube los datos a la **planilla compartida** desde el celular | Rota por los espacios según su circuito (alcanza 2–3 grupos por bloque); destraba problemas (espacio ocupado → alternativa de la ruta); NO corrige mediciones: pregunta "¿la mediana les cuadra con lo que oyeron en la palmada?" | Por grupo: 2 celulares (app SPL + app/protocolo $T_{60}$), 3–4 globos, guía impresa, lápiz |
 | 25–45′ | Espacio B (★ obligatorio): protocolo completo en un espacio contrastante | Repite (1)–(5) con roles rotados; además responde en la guía la **pregunta de contraste**: ¿el orden A–B les está dando como predijeron?; si el fondo es alto (pasillo, hall), anota el límite en vez de esconderlo — es dato del informe | Segundo tramo del circuito; en cada visita pide UNA lectura en voz alta ("¿fondo?, ¿mediana?, ¿V?") para verificar que la planilla se está llenando | Ídem |
-| 45–55′ | Espacio C (opcional, si la ruta lo permite) o repetición | Grupos al día: protocolo abreviado en el espacio C (palmada + 3 impulsos + V; sin checklist fino); grupos atrasados: repiten la medición más dudosa del espacio A o B; **al minuto 55, corte duro**: todos caminando al punto de encuentro | Barre el final de las rutas arreando hacia el punto de encuentro | Ídem |
-| 55–70′ | **Puesta en común comprimida (D3) + cierre del semestre de talleres** | En el punto de encuentro (el aula u otro fijado): (1) 2′ completar celdas de la planilla; (2) 6′ lectura del mapa: la planilla proyectada/compartida ordena los ~12 espacios medidos por $T_{60}$ — cada vocero defiende EN UNA FRASE su fila más llamativa contra su predicción; (3) 4′ el grupo llena la última casilla del **informe-formulario** (la comparación central con mecanismo) y ENTREGA guía + informe (única nota de taller de la semana, última del semestre); (4) 3′ cierre y logística de s15: orden de presentación SORTEADO en vivo, 25′ por grupo cronometrados, informe ≤6 págs se entrega AL INICIO de s15, traer el instrumento/objeto FUNCIONANDO, coevaluación final al cierre — "la próxima semana, ustedes son el estímulo de la escucha del día" | Proyecta o comparte la planilla; dirige la lectura del ranking (¿le ganó la capilla al hall?, ¿alguna predicción invertida?); recibe 5 informes; sortea el orden de s15 en vivo (transparencia); recuerda que la pauta del hito 3 ya está en sus manos desde el m1 | Planilla compartida (proyector o celulares); informes-formulario; bombo/bolsa para el sorteo |
+| 45–50′ | Espacio C (opcional, si la ruta lo permite) o repetición | Grupos al día: protocolo abreviado en el espacio C (palmada + 3 impulsos + V; sin checklist fino); grupos atrasados: repiten la medición más dudosa del espacio A o B; **al minuto 50, corte duro**: todos caminando al punto de encuentro | Barre el final de las rutas arreando hacia el punto de encuentro | Ídem |
+| 50–55′ | **Traslado presupuestado al punto de encuentro** | Camina con su grupo; EN EL TRAYECTO (o al llegar) llena la última casilla del **informe-formulario** (la comparación central con mecanismo) — la tabla ya está completa desde la ruta; el registra verifica que la fila del grupo esté en la planilla compartida | Llega primero al punto de encuentro; proyecta la planilla y arranca la lectura del mapa con los grupos que ya están (la planilla compartida lo permite: se lee a medida que se llena) | Planilla compartida (proyector o celulares) |
+| 55–70′ | **Puesta en común comprimida (D3) + cierre del semestre de talleres** | En el punto de encuentro (el aula u otro fijado): (1) 2′ completar celdas de la planilla; (2) 6′ lectura del mapa: la planilla proyectada/compartida ordena los ~12 espacios medidos por $T_{60}$ — cada vocero defiende EN UNA FRASE su fila más llamativa contra su predicción; (3) 4′ el grupo revisa la casilla final del **informe-formulario** (llenada durante el traslado / al llegar) y ENTREGA guía + informe (única nota de taller de la semana, última del semestre); (4) 3′ cierre y logística de s15: orden de presentación SORTEADO en vivo — con la regla anunciada junto al sorteo: **el grupo sorteado primero responde preguntas de 5′ en vez de ~7′, en compensación por abrir en frío (su tiempo de presentación es idéntico; está en la pauta §2)** —, 25′ por grupo cronometrados, informe ≤6 págs se entrega AL INICIO de s15, **presentación enviada por el canal del curso hasta las 20:00 de la víspera de s15 (todas corren en el notebook único de sala) + respaldo en USB propio**, traer el instrumento/objeto FUNCIONANDO, coevaluación final al cierre — "la próxima semana, ustedes son el estímulo de la escucha del día" | Proyecta o comparte la planilla; dirige la lectura del ranking (¿le ganó la capilla al hall?, ¿alguna predicción invertida?); recibe 5 informes; sortea el orden de s15 en vivo (transparencia) y anuncia la regla del grupo 1 en el mismo acto; recuerda que la pauta del hito 3 ya está en sus manos desde el m1 y que el plazo de las 20:00 está en la pauta (§1 y §6) | Planilla compartida (proyector o celulares); informes-formulario; bombo/bolsa para el sorteo |
 
 ## Verificación de aprendizaje
 
@@ -106,7 +109,10 @@ línea de oído ANTES de encender la app. Primero suena, después se mide.
 - **Módulo 1**: 10 + 15 + 15 + 14 + 16 = 70′ ✓. Escucha del día en la
   variante corregida: 3′ estímulo + 2′ escritura + 4 sorteados × 2,5′ =
   15′ ✓.
-- **Módulo 2**: 5 + 20 + 20 + 10 + 15 = 70′ ✓.
+- **Módulo 2**: 5 + 20 + 20 + 5 + 5 + 15 = 70′ ✓ (el tramo 50–55′ es
+  traslado presupuestado: los grupos llegan escalonados SIN comerse la
+  puesta en común, y la casilla final del informe se llena en ese
+  tramo, no en los 15′ finales).
 - **Por grupo y por persona (salida)**: cada espacio ★ dispone de ~20′:
   tránsito 2′ + palmada y línea de oído 2′ + fondo 2′ + 3 impulsos ×2′
   = 6′ + dimensiones 3′ + checklist 2′ + subir a planilla 2′ + holgura
@@ -188,6 +194,7 @@ línea de oído ANTES de encender la app. Primero suena, después se mide.
   el pizarrón del punto de encuentro (5 filas × 4 datos caben en 2′
   de dictado por grupo).
 - **El sorteo del orden de s15 genera reclamo** → es en vivo y con
-  testigos, y la pauta del hito 3 declara que el orden no afecta la
-  rúbrica; el grupo que presenta primero recibe las preguntas
-  individuales más cortas (fatiga pareja: el cronómetro es el mismo).
+  testigos; la pauta del hito 3 (§2) declara que el orden no afecta la
+  rúbrica y la regla de compensación del grupo 1 (preguntas de 5′) se
+  anuncia junto con el sorteo en el cierre del m2 — es regla publicada,
+  no mitigación improvisada.

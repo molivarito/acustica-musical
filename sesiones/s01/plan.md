@@ -32,7 +32,7 @@ riesgo 1). La escucha del día de hoy es la **línea base sin nota**.
 
 ## Verificación de aprendizaje
 
-- Línea base OA3 recogida y archivada (comparable con la ronda de s14).
+- Línea base OA3 recogida y archivada (comparable con el cierre de s15).
 - Guías PEE del taller cerradas en aula con rúbrica rápida
   (logrado/parcial/incipiente) — sin nota esta semana, para calibrar.
 - Salida: cada estudiante deja escrita su predicción para s02 (ticket de

@@ -24,8 +24,10 @@ pie desde la sala]. Criterios de diseño que las rutas deben respetar:
   la caja de escala de un edificio es un sustituto vivo excelente.
 
 **Hora de corte** (escribirla en el pizarrón y en cada guía): minuto
-55 del módulo — todos caminando al punto de encuentro aunque falte el
-espacio C. **Punto de encuentro**: [POR COMPLETAR: el aula u otro].
+50 del módulo — todos caminando al punto de encuentro aunque falte el
+espacio C (el tramo 50–55′ es traslado presupuestado; la casilla final
+del informe se llena en el trayecto). **Punto de encuentro**:
+[POR COMPLETAR: el aula u otro].
 
 ## Ruta 1 — [nombre]
 

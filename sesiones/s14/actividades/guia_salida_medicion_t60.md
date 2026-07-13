@@ -73,8 +73,9 @@ sin decirlo.
 
 ## 4. Informe comparativo (dorso — ES la entrega evaluada; casillas, no prosa)
 
-Se completa durante la ruta y se cierra en la puesta en común. Media
-página total.
+Se completa durante la ruta; la última casilla pendiente se llena
+DURANTE el traslado al punto de encuentro (tras el corte) o al llegar,
+antes de la puesta en común. Media página total.
 
 - **Comparación central** (una frase con números): "El espacio ____
   resultó ____ veces más reverberante que ____ ( ____ s vs. ____ s)."
@@ -89,9 +90,11 @@ página total.
 
 ## Cierre (últimos 15′ de la salida, en el punto de encuentro)
 
-La planilla compartida —ya llena— ordena los ~12 espacios del curso
+A la hora de corte, TODOS caminando al punto de encuentro (el
+traslado está presupuestado: 5′); en el trayecto o al llegar, el grupo
+cierra la casilla de comparación del dorso. En el punto de encuentro,
+la planilla compartida —ya llena— ordena los ~12 espacios del curso
 por $T_{60}$; cada vocero defiende EN UNA FRASE su fila más llamativa
-contra su predicción. El grupo cierra la casilla de comparación y
-**entrega esta hoja completa (tabla + dorso)**: es el taller evaluado
-de la semana (rúbrica rápida logrado/parcial/incipiente) y la última
-nota de taller del semestre.
+contra su predicción. El grupo **entrega esta hoja completa (tabla +
+dorso)**: es el taller evaluado de la semana (rúbrica rápida
+logrado/parcial/incipiente) y la última nota de taller del semestre.

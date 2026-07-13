@@ -20,6 +20,7 @@ acierto sin explicación, no.
 |---|---|---|
 | **Informe** (≤6 páginas) | AL INICIO de s15, impreso o PDF, antes de la primera presentación | ver estructura en §3 |
 | **Presentación** (~25 min por grupo, cronometrados) | En s15, ambos módulos; orden SORTEADO en vivo al cierre de s14 | ver formato en §2 |
+| **Archivo de presentación** | Por el canal del curso hasta las **20:00 de la víspera de s15** (todas corren en el notebook único de sala) | + respaldo en USB propio |
 | **Instrumento/objeto FUNCIONANDO** | En s15, en escena — debe sonar en vivo | |
 | **Bitácora del proyecto** | Con el informe (anexo, no cuenta en las 6 págs) | roles firmados por hito |
 | **Coevaluación intra-grupo final** | Sobres al cierre de s15 | ajusta la nota individual hasta ±0,5 |
@@ -31,10 +32,12 @@ acierto sin explicación, no.
   **sonando en vivo**, la predicción original del hito 1 puesta en
   pantalla/pizarra TAL COMO SE ESCRIBIÓ, y al menos una medición propia
   proyectada o mostrada.
-- **~7′ de preguntas individuales**: el profesor dirige al menos UNA
-  pregunta a CADA integrante, por nombre; se responde sin relevo del
-  grupo (mitigación de pasajeros, metodología §4). Las preguntas salen
-  de su propio informe y bitácora.
+- **~7′ de preguntas individuales** (el grupo sorteado primero: 5′,
+  en compensación por abrir en frío; su tiempo de presentación es
+  idéntico): el profesor dirige al menos UNA pregunta a CADA
+  integrante, por nombre; se responde sin relevo del grupo (mitigación
+  de pasajeros, metodología §4). Las preguntas salen de su propio
+  informe y bitácora.
 - **~3′ de transición/montaje** del grupo siguiente.
 - El cronómetro es visible y el corte es duro para los 5 grupos por
   igual; el orden (sorteado en s14) no afecta la rúbrica.
@@ -87,6 +90,9 @@ proyecto COMPLETO, no solo su parte.
 - [ ] El objeto probado FUNCIONANDO el día anterior (y plan B si algo
       se rompe camino a la sala: grabación propia de respaldo).
 - [ ] Qué va a sonar en vivo, decidido y ensayado (≤3 min de sonido).
+- [ ] Archivo de presentación ENVIADO por el canal del curso antes de
+      las **20:00 de la víspera de s15** (corre en el notebook único
+      de sala) + respaldo en USB propio.
 - [ ] Los 4 integrantes pueden explicar CUALQUIER figura del informe.
 - [ ] Presentación ensayada CON cronómetro: 15′ es menos de lo que
       parece.

@@ -35,7 +35,7 @@ actividades > demo.
 |---|---|
 | revision-alineamiento al cerrar s05 | **lista** — reporte en `diseno/revision_20260712.md`; 5 correcciones recomendadas antes de abrir s06 (P1–P5) |
 | revision-alineamiento al cerrar s10 | **lista** — reporte en `diseno/revision_20260712_s10.md`; 5 correcciones recomendadas antes de abrir s11 (P1–P5: cierres de s06 m2 y s08 m1, rotulación OA2.2 en Prueba 1, plazos del banco #10–#12, hoja isofónica) |
-| revision-alineamiento final (s15) | pendiente |
+| revision-alineamiento final (s15) | **hecha** — reporte en diseno/revision_20260713.md; 5 problemas menores corregidos (P1–P5, 6 archivos) |
 | Compilación libro/LIBRO_CURSO.md (+PDF si hay pandoc) | pendiente |
 | RESUMEN_PARA_PATO.md | pendiente |
 
@@ -136,6 +136,10 @@ diseno/02 §6.)
   espacios concretos los fija el profesor); globos para impulso;
   lámina de errores de prueba 2. Nota: agente cortado tras escribir todo;
   verificación final del orquestador (JS OK, 70+70, hito 3 y rutas OK).
-- **s15**: sobres nominados con líneas base de s01; recibir/cargar 5
-  presentaciones la víspera; cronómetro; definir encuesta del curso
-  [decisión del profesor] y plazo de publicación de notas.
+- **s15**: ver el checklist canónico y completo en
+  `sesiones/s15/actividades/guion_profesor_s15.md` §0 (la víspera) y
+  "Trabajo físico del profesor" del plan de s15 — no se duplica aquí.
+  Ítems críticos: estímulo #1 probado en el equipo de sala,
+  presentaciones recibidas hasta las 20:00 de la víspera, sobres de
+  línea base, encuesta del curso [decisión del profesor] y plazo de
+  publicación de notas.
