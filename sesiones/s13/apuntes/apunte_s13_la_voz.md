@@ -80,7 +80,7 @@ valores finos; los rangos son estándar]**:
 No le pedimos memorizar la tabla: le pedimos la idea — F1 baja cuando
 la boca se cierra, F2 sube cuando la lengua avanza, y cada vocal es
 una **esquina de ese mapa** (figura 2). La demo de la sesión
-(`demo_formantes_voz.html`) tiene el mapa en dos perillas: mueva F1 y
+([`demo_formantes_voz.html`](../demos/demo_formantes_voz.html)) tiene el mapa en dos perillas: mueva F1 y
 F2 y la vocal cambia sin que la altura se inmute; mueva $f_0$ y pasa
 lo contrario.
 

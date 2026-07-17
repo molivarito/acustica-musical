@@ -129,7 +129,7 @@ oído descuenta; la teoría del filtro no es materia del curso. Las
 reglas de higiene de la medición salieron solas en las estaciones:
 
 - El micrófono del celular **no está calibrado**: los valores absolutos
-  pueden errar en varios dB (`materiales/apps_recomendadas.md`), y dos
+  pueden errar en varios dB ([`materiales/apps_recomendadas.md`](../../../materiales/apps_recomendadas.md)), y dos
   celulares lado a lado pueden discrepar. Las **comparaciones relativas
   con el mismo aparato** — ¿cuánto subió?, ¿cuál punto de la sala es
   más ruidoso? — sí son confiables.

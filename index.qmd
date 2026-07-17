@@ -1,0 +1,51 @@
+---
+title: "Acústica Musical — mapa del curso"
+---
+
+Curso de Acústica Musical, Pontificia Universidad Católica de Chile.
+15 sesiones semanales de dos módulos de 70 minutos, con metodología de
+aprendizaje activo. Este mapa enlaza todo el material; la barra lateral
+permite navegarlo sesión por sesión.
+
+**Documentos de diseño**:
+[objetivos de aprendizaje](diseno/01_objetivos_aprendizaje.md) ·
+[metodología](diseno/02_metodologia.md) ·
+[estructura del curso](diseno/03_estructura_curso.md) ·
+[programa](Admin/programa_curso.md)
+
+**Libro del curso**: [prólogo](libro/00_prologo.md) y capítulos 1–15 en la
+barra lateral (un capítulo = la lectura previa de su sesión) ·
+[libro completo en PDF](libro/LIBRO_CURSO.pdf)
+
+## Las 15 sesiones
+
+| Sesión | Tema (plan) | Apunte | Lectura previa | Demo | Actividades |
+|---|---|---|---|---|---|
+| s01 | [Escuchar como científico: del golpe al tono](sesiones/s01/plan.md) | [apunte](sesiones/s01/apuntes/apunte_s01_del_golpe_al_tono.md) | [cap. 1](libro/cap01_del_golpe_al_tono.md) | [tren pulsos](sesiones/s01/demos/demo_tren_pulsos.html) | [acta grupo y linea base](sesiones/s01/actividades/acta_grupo_y_linea_base.md) · [guia pee regla](sesiones/s01/actividades/guia_pee_regla.md) · [guia pee zona gris](sesiones/s01/actividades/guia_pee_zona_gris.md) |
+| s02 | [Ondas y representación: forma de onda, espectro y espectrograma](sesiones/s02/plan.md) | [apunte](sesiones/s02/apuntes/apunte_s02_ondas_y_representacion.md) | [cap. 2](libro/cap02_ondas_y_espectrograma.md) | [forma onda espectro](sesiones/s02/demos/demo_forma_onda_espectro.html) | [guia pee microscopio](sesiones/s02/actividades/guia_pee_microscopio.md) · [guia pee retratos de sonido](sesiones/s02/actividades/guia_pee_retratos_de_sonido.md) |
+| s03 | [Modos de vibración: por qué cada objeto suena como suena](sesiones/s03/plan.md) | [apunte](sesiones/s03/apuntes/apunte_s03_modos_de_vibracion.md) | [cap. 3](libro/cap03_modos_de_vibracion.md) | [modos cuerda](sesiones/s03/demos/demo_modos_cuerda.html) | [enunciado proyecto](sesiones/s03/actividades/enunciado_proyecto.md) · [guia pee sarten](sesiones/s03/actividades/guia_pee_sarten.md) |
+| s04 | [La receta del timbre: cuerda pulsada, punto de excitación, síntesis aditiva](sesiones/s04/plan.md) | [apunte](sesiones/s04/apuntes/apunte_s04_la_receta_del_timbre.md) | [cap. 4](libro/cap04_la_receta_del_timbre.md) | [sintesis aditiva](sesiones/s04/demos/demo_sintesis_aditiva.html) | [guia pee estirar acortar](sesiones/s04/actividades/guia_pee_estirar_acortar.md) · [guia pee mapa cuerda](sesiones/s04/actividades/guia_pee_mapa_cuerda.md) · [pauta feedback ideas proyecto](sesiones/s04/actividades/pauta_feedback_ideas_proyecto.md) · [pauta hito1 diseno](sesiones/s04/actividades/pauta_hito1_diseno.md) |
+| s05 | [La altura percibida: fundamental ausente, reconocimiento de patrones, el oído en una pasada](sesiones/s05/plan.md) | [apunte](sesiones/s05/apuntes/apunte_s05_la_altura_percibida.md) | [cap. 5](libro/cap05_la_altura_percibida.md) | [fundamental ausente](sesiones/s05/demos/demo_fundamental_ausente.html) | [registro el bajo que no esta](sesiones/s05/actividades/registro_el_bajo_que_no_esta.md) · [registro el oido y la octava](sesiones/s05/actividades/registro_el_oido_y_la_octava.md) |
+| s06 | [Sonoridad y decibel: intensidad, niveles, isofónicas; medir lo fuerte](sesiones/s06/plan.md) | [apunte](sesiones/s06/apuntes/apunte_s06_sonoridad_y_decibel.md) | [cap. 6](libro/cap06_sonoridad_y_decibel.md) | [decibel sonoridad](sesiones/s06/demos/demo_decibel_sonoridad.html) | [guia estaciones niveles](sesiones/s06/actividades/guia_estaciones_niveles.md) · [hoja registro isofonica](sesiones/s06/actividades/hoja_registro_isofonica.md) |
+| s07 | [Prueba 1 (módulo 1) + audición liviana: batidos (módulo 2)](sesiones/s07/plan.md) | [apunte](sesiones/s07/apuntes/apunte_s07_batidos.md) | [cap. 7](libro/cap07_batidos.md) | [batidos](sesiones/s07/demos/demo_batidos.html) | [prueba1](sesiones/s07/actividades/prueba1.md) · [prueba1 pauta](sesiones/s07/actividades/prueba1_pauta.md) |
+| s08 | [Psicoacústica de la superposición: batidos, banda crítica, rugosidad y consonancia](sesiones/s08/plan.md) | [apunte](sesiones/s08/apuntes/apunte_s08_banda_critica_y_consonancia.md) | [cap. 8](libro/cap08_banda_critica_y_consonancia.md) | [banda critica](sesiones/s08/demos/demo_banda_critica.html) | [guia pee radiografia espectral](sesiones/s08/actividades/guia_pee_radiografia_espectral.md) · [registro mapa del choque](sesiones/s08/actividades/registro_mapa_del_choque.md) |
+| s09 | [Escalas y temperamentos: afinar de oído (batidos como herramienta)](sesiones/s09/plan.md) | [apunte](sesiones/s09/apuntes/apunte_s09_escalas_y_temperamentos.md) | [cap. 9](libro/cap09_escalas_y_temperamentos.md) | [temperamentos](sesiones/s09/demos/demo_temperamentos.html) | [guia medicion escala objeto](sesiones/s09/actividades/guia_medicion_escala_objeto.md) · [guia pee afinar por batidos](sesiones/s09/actividades/guia_pee_afinar_por_batidos.md) |
+| s10 | [Resonancia, impedancia y acoplamiento: el puente hacia los instrumentos](sesiones/s10/plan.md) | [apunte](sesiones/s10/apuntes/apunte_s10_resonancia_e_impedancia.md) | [cap. 10](libro/cap10_resonancia_e_impedancia.md) | [resonancia](sesiones/s10/demos/demo_resonancia.html) | [guia pee resonancia botellas](sesiones/s10/actividades/guia_pee_resonancia_botellas.md) · [pauta clinica pares](sesiones/s10/actividades/pauta_clinica_pares.md) · [pauta hito2 avance](sesiones/s10/actividades/pauta_hito2_avance.md) |
+| s11 | [Cuerdas frotadas y el cuerpo del instrumento: stick-slip, movimiento de Helmholtz, puente, caja y radiación](sesiones/s11/plan.md) | [apunte](sesiones/s11/apuntes/apunte_s11_cuerdas_frotadas_y_cuerpo.md) | [cap. 11](libro/cap11_cuerdas_frotadas_y_cuerpo.md) | [helmholtz](sesiones/s11/demos/demo_helmholtz.html) | [guia acoplamiento objeto](sesiones/s11/actividades/guia_acoplamiento_objeto.md) · [guia pee punto de frotado](sesiones/s11/actividades/guia_pee_punto_de_frotado.md) |
+| s12 | [Vientos y lutería: columnas de aire, agujeros, regímenes; construcción y medición de flautas/tubos](sesiones/s12/plan.md) | [apunte](sesiones/s12/apuntes/apunte_s12_vientos_y_luteria.md) | [cap. 12](libro/cap12_vientos_y_luteria.md) | [tubo agujeros](sesiones/s12/demos/demo_tubo_agujeros.html) | [guia pee construccion tubo](sesiones/s12/actividades/guia_pee_construccion_tubo.md) · [pauta revision bitacoras](sesiones/s12/actividades/pauta_revision_bitacoras.md) |
+| s13 | [Prueba 2 (módulo 1) + la voz cantada: fuente-filtro y formantes (módulo 2, audición liviana)](sesiones/s13/plan.md) | [apunte](sesiones/s13/apuntes/apunte_s13_la_voz.md) | [cap. 13](libro/cap13_la_voz.md) | [formantes voz](sesiones/s13/demos/demo_formantes_voz.html) | [prueba2](sesiones/s13/actividades/prueba2.md) · [prueba2 pauta](sesiones/s13/actividades/prueba2_pauta.md) |
+| s14 | [La sala como instrumento: reflexión, absorción, reverberación, modos; salida de medición de T60](sesiones/s14/plan.md) | [apunte](sesiones/s14/apuntes/apunte_s14_la_sala_como_instrumento.md) | [cap. 14](libro/cap14_la_sala_como_instrumento.md) | [modos sala](sesiones/s14/demos/demo_modos_sala.html) | [guia salida medicion t60](sesiones/s14/actividades/guia_salida_medicion_t60.md) · [pauta hito3 presentacion final](sesiones/s14/actividades/pauta_hito3_presentacion_final.md) · [rutas salida medicion](sesiones/s14/actividades/rutas_salida_medicion.md) |
+| s15 | [Presentaciones finales del proyecto: explicar es la prueba](sesiones/s15/plan.md) | [apunte](sesiones/s15/apuntes/apunte_s15_como_defender_un_proyecto_acustico.md) | [cap. 15](libro/cap15_explicar_es_la_prueba.md) | — | [guion profesor s15](sesiones/s15/actividades/guion_profesor_s15.md) · [hoja coevaluacion final](sesiones/s15/actividades/hoja_coevaluacion_final.md) · [hoja escucha presentaciones](sesiones/s15/actividades/hoja_escucha_presentaciones.md) |
+
+## Materiales transversales
+
+[apps recomendadas](materiales/apps_recomendadas.md) ·
+[banco de estímulos](materiales/banco_estimulos.md) ·
+[planilla de rúbrica OA3](materiales/planilla_rubrica_oa3.md)
+
+## Bitácora de diseño
+
+Revisiones de alineamiento constructivo ya aplicadas al diseño:
+[2026-07-12](diseno/revision_20260712.md) ·
+[2026-07-12 (s10)](diseno/revision_20260712_s10.md) ·
+[2026-07-13](diseno/revision_20260713.md)

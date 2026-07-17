@@ -2,3 +2,7 @@
 CLAUDE.local.md
 .claude/settings.local.json
 referencias/libros/
+
+/.quarto/
+**/*.quarto_ipynb
+/_site/

@@ -73,7 +73,7 @@ $$f_n = n \, f_1 \qquad n = 1, 2, 3, \dots$$
 
 El modo de dos barrigas vibra exactamente al doble del modo fundamental;
 el de tres, al triple. Puede verlo y oírlo, modo por modo y sumados, en
-la demo de la sesión (`demo_modos_cuerda.html`), y lo oyó en la guitarra:
+la demo de la sesión ([`demo_modos_cuerda.html`](../demos/demo_modos_cuerda.html)), y lo oyó en la guitarra:
 apoyar el dedo suavemente en la mitad de la cuerda deja sonar solo los
 modos con nodo ahí (los pares) y aparece la octava; en el tercio, aparece
 la docena de notas más arriba que los músicos llaman armónico natural.

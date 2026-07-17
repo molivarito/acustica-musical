@@ -4,7 +4,7 @@
 cronograma con horas absolutas para completar, el protocolo de
 preguntas individuales, la planilla de rúbrica en vivo y las
 plantillas del cierre. La rúbrica de referencia es la de la pauta del
-hito 3 (`sesiones/s14/actividades/pauta_hito3_presentacion_final.md`);
+hito 3 ([`sesiones/s14/actividades/pauta_hito3_presentacion_final.md`](../../s14/actividades/pauta_hito3_presentacion_final.md));
 este guion no la repite: la operacionaliza. OA de la sesión: OA5.3,
 OA3.2 (+OA3.1 en la hoja del público y el cierre).
 

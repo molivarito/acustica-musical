@@ -13,7 +13,7 @@ ejercita OA2.1 sin nota.
 **Requisitos previos**: todo s01–s06. El **ticket de salida de s06**
 ("dos flautas tocan la MISMA nota y una queda apenas desafinada: ¿qué
 se oye? ¿y si la desafinación crece?") se cobra con los oídos en el
-módulo 2. Lectura previa: `libro/cap07_batidos.md` — mitad mapa de
+módulo 2. Lectura previa: [`libro/cap07_batidos.md`](../../libro/cap07_batidos.md) — mitad mapa de
 estudio para la prueba (se consume estudiando y EN la prueba misma),
 mitad física elemental de los batidos (se consume en la mini-lección
 del módulo 2, principio 6).
@@ -21,7 +21,7 @@ del módulo 2, principio 6).
 percibido). Cierra la primera mitad del curso con la Prueba 1 y abre la
 segunda con el fenómeno que gobierna s08 (banda crítica, rugosidad,
 consonancia) y s09 (afinar por batidos). La demo de hoy
-(`demo_batidos.html`) se **reutiliza en s08**.
+([`demo_batidos.html`](demos/demo_batidos.html)) se **reutiliza en s08**.
 **Reglas aplicadas**: sesión con prueba → la prueba ocupa TODO el
 módulo 1 y el módulo 2 es de **audición liviana** (metodología §3);
 **esta semana NO hay escucha del día** (la prueba incluye una escucha
@@ -51,7 +51,7 @@ estímulos). Duración diseñada ≤60′ dentro de 70′: 7′ de instalación 
 | Tiempo | Bloque | Actividad del estudiante | Rol del profesor | Materiales |
 |---|---|---|---|---|
 | 0–8′ | Gancho sonoro: **se cobra el ticket de s06** (OA2.2 siembra, OA3 informal) | Escucha dos flautas tocando la MISMA nota, una apenas desafinada; compara con lo que escribió en su ticket de s06 (el profesor lee 2–3 tickets anónimos); describe a mano alzada: ¿qué es esa ondulación? ¿es una tercera nota, un vibrato, un temblor? | Toca (o hace sonar) las dos flautas al unísono imperfecto, sostenido ≥10 s; lee tickets de s06 recopilados; NO explica: "eso que ondula tiene nombre y número, y hoy los vamos a encontrar" | 2 flautas del profesor (plan B abajo); tickets de s06 recopilados |
-| 8–22′ | Experiencia guiada I: contar el batido (OA2.2, OA2.1) | Con la demo proyectada: antes de cada cambio de f₂ **predice a mano alzada** si la ondulación irá más rápida o más lenta; luego **cuenta en voz baja los batidos por segundo** para f₂ = 442, 444 y 437 Hz (f₁ = 440 Hz fija) y compara su conteo con la diferencia de los números en pantalla | Opera `demo_batidos.html` con el marcador de f_b **oculto** primero: el curso cuenta, luego revela f_b = \|f₂−f₁\| en pantalla; repite para 2, 4 y 3 Hz de diferencia; pregunta: "¿alguien oye DOS notas?" (no: una nota que ondula) | `demo_batidos.html` proyectada con audio de sala |
+| 8–22′ | Experiencia guiada I: contar el batido (OA2.2, OA2.1) | Con la demo proyectada: antes de cada cambio de f₂ **predice a mano alzada** si la ondulación irá más rápida o más lenta; luego **cuenta en voz baja los batidos por segundo** para f₂ = 442, 444 y 437 Hz (f₁ = 440 Hz fija) y compara su conteo con la diferencia de los números en pantalla | Opera [`demo_batidos.html`](demos/demo_batidos.html) con el marcador de f_b **oculto** primero: el curso cuenta, luego revela f_b = \|f₂−f₁\| en pantalla; repite para 2, 4 y 3 Hz de diferencia; pregunta: "¿alguien oye DOS notas?" (no: una nota que ondula) | [`demo_batidos.html`](demos/demo_batidos.html) proyectada con audio de sala |
 | 22–35′ | Mini-lección liviana: por qué bate (OA2.2) — consume la lectura previa (mitad batidos de cap07) | Sigue el argumento con el dibujo de la demo: dos ondas casi iguales entran y salen de paso (en fase → refuerzo; en contrafase → silencio); verifica en la envolvente de la demo que el ciclo refuerzo–silencio ocurre \|f₂−f₁\| veces por segundo; responde votación: "f₁=440, f₂=443: ¿cuántos batidos por segundo?" | Presenta la regla del curso: **f_b = \|f₂ − f₁\|** (los batidos por segundo son la diferencia de frecuencias); la justifica con el dibujo de la envolvente (sin trigonometría: dos trenes que se desfasan); nombra "batido de primer orden" (ROE 2.4) y deja plantado: "esta ondulación es también un instrumento de medición" | Demo (vista de envolvente); pizarrón |
 | 35–52′ | Experiencia guiada II: afinar de oído (OA2.2, anticipo de s09) | Voluntarios (3–4) pasan al notebook proyectado: con el **modo afinación** de la demo (números ocultos), llevan f₂ al unísono SOLO escuchando: batido cada vez más lento hasta detenerse; el curso arbitra ("todavía bate… ahí quedó"); si hay segunda flauta o 2 cuerdas reales, un voluntario repite el juego afinando el instrumento real contra el otro | Modera el juego (relajado: es post-prueba, sin nota); muestra al revelar los números cuán cerca quedó cada voluntario (¿1 Hz? ¿0,5 Hz?); remata: "así afinan los afinadores de piano desde hace dos siglos — en s09 lo haremos en serio" | Demo en modo afinación, proyectada; 2 flautas o 2 cuerdas (opcional); audio de sala |
 | 52–62′ | El borde del fenómeno (siembra explícita de s08) | Escucha qué pasa cuando el profesor aleja f₂ más y más (Δf = 5, 10, 15, 20, 30 Hz): anota en una línea en su cuaderno dónde dejó de poder contar y qué oye ahora (¿ondulación → aspereza → dos notas?); compara impresiones con su vecino (1′) | Barre Δf lentamente hacia arriba con la demo; NO explica lo que aparece (la rugosidad y la separación en dos notas son el corazón de s08); solo recoge las palabras del curso en el pizarrón ("áspero", "granulado", "se separó") | Demo (f₂ hasta 470 Hz); pizarrón |
@@ -93,13 +93,13 @@ estímulos). Duración diseñada ≤60′ dentro de 70′: 7′ de instalación 
   del curso y las imprime en la hoja aparte (1 por estudiante): ~1 h
   con los archivos ya hechos. [Detalle en `prueba1.md`.]
 - **Estímulos de audio de la prueba**: los ítems #10, #11 y #12 del
-  banco (`materiales/banco_estimulos.md`, filas agregadas por esta
+  banco ([`materiales/banco_estimulos.md`](../../materiales/banco_estimulos.md), filas agregadas por esta
   sesión) **se graban/sintetizan en la sesión pre-s01** (no dependen
   de nada del semestre; P4 de la revisión 2026-07-12); esta semana
   solo PROBARLOS en el equipo de la sala.
 - **Impresión**: 22 cuadernillos + 22 hojas de figuras.
 - **Corrección**: pico declarado ≈5 h esta semana (20 × ~15 min).
-- **Demo**: `demo_batidos.html` ya producida con esta sesión (se
+- **Demo**: [`demo_batidos.html`](demos/demo_batidos.html) ya producida con esta sesión (se
   reutiliza en s08 — no modificarla sin revisar el plan de s08).
 
 ## Riesgos y plan B

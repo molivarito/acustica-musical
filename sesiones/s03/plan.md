@@ -10,7 +10,7 @@ $v = \lambda f$; el término "parcial"; apps de análisis instaladas). Los
 estudiantes traen: (a) su ticket de salida de s02 con la predicción "el
 vaso golpeado: ¿una línea o varias en el espectrograma?" — el profesor las
 trae recopiladas —, (b) el celular con la app de espectrograma, y
-(c) leída la **lectura previa**: `libro/cap03_modos_de_vibracion.md`.
+(c) leída la **lectura previa**: [`libro/cap03_modos_de_vibracion.md`](../../libro/cap03_modos_de_vibracion.md).
 **Posición en la progresión**: tercera y última sesión "con menos
 contenido" del bloque A. Instala el concepto que estructura todo el curso
 (modo de vibración), la distinción obligatoria **parcial vs. armónico**
@@ -38,7 +38,7 @@ el bloque de 15–30′ del módulo 1 (principio 6).
 | Tiempo | Bloque | Actividad del estudiante | Rol del profesor | Materiales |
 |---|---|---|---|---|
 | 0–10′ | Gancho sonoro: la cuerda que sí afina | Escucha una cuerda al aire y luego sus armónicos naturales (dedo apoyado suavemente en la mitad y en el tercio); anota en 1 línea: ¿por qué la cuerda tiene una nota clara y la sartén no? | Ejecuta en guitarra (o monocordio/elástico grueso tensado sobre caja); no explica todavía: deja la pregunta abierta | Guitarra del profesor o monocordio; audio de sala si se amplifica |
-| 10–25′ | **Demo predictiva: modos de una cuerda (OA1.1, OA1.2)** — formato 1 | Predice a mano alzada ANTES de cada paso de la demo: ¿el modo 2 suena a qué intervalo del modo 1?, ¿qué forma tiene el modo 3?, ¿la suma de modos se parece a la cuerda real?; verifica oyendo y viendo cada modo y la suma | Opera `demo_modos_cuerda.html`: forma espacial de los primeros ~6 modos, frecuencia de cada uno ($f_n = n f_1$), sonido de cada modo solo y de la suma; instala la **distinción obligatoria**: *parcial* = cualquier línea del espectro; *armónico* = parcial en razón entera con la fundamental — la cuerda es el objeto armónico por excelencia, la sartén no | `demo_modos_cuerda.html` + proyector + audio de sala |
+| 10–25′ | **Demo predictiva: modos de una cuerda (OA1.1, OA1.2)** — formato 1 | Predice a mano alzada ANTES de cada paso de la demo: ¿el modo 2 suena a qué intervalo del modo 1?, ¿qué forma tiene el modo 3?, ¿la suma de modos se parece a la cuerda real?; verifica oyendo y viendo cada modo y la suma | Opera [`demo_modos_cuerda.html`](demos/demo_modos_cuerda.html): forma espacial de los primeros ~6 modos, frecuencia de cada uno ($f_n = n f_1$), sonido de cada modo solo y de la suma; instala la **distinción obligatoria**: *parcial* = cualquier línea del espectro; *armónico* = parcial en razón entera con la fundamental — la cuerda es el objeto armónico por excelencia, la sartén no | [`demo_modos_cuerda.html`](demos/demo_modos_cuerda.html) + proyector + audio de sala |
 | 25–40′ | Mini-lección con sonido: modos en 2D — membranas y placas (percusión) (OA1.1) | Escucha timbal vs. tom (grabaciones); vota: ¿cuál tiene altura definida?; observa figuras de líneas nodales (Chladni) proyectadas; responde: ¿por qué al pasar de cuerda (1D) a membrana (2D) los modos dejan de ser armónicos? | Mini-lección (formato 7): en 2D los puntos quietos se vuelven **líneas nodales**; membranas y placas dan parciales inarmónicos (por eso la percusión "no afina"); el timbal es la excepción lograda: parche + caldero + punto de golpe corren algunos parciales hacia razones casi enteras y aparece altura (estilo BEN 9, C&G cap. 10) | Grabaciones cortas timbal/tom; imágenes de figuras de Chladni; pizarrón |
 | 40–65′ | **Lanzamiento del proyecto del curso (OA5.1)** — hito del semestre | Recibe y lee el enunciado (10′ de presentación); en grupo (15′): lluvia de ideas y anota en media hoja 2 ideas candidatas de instrumento/instalación, cada una con: qué modelo del curso permitiría *predecir* su sonido y qué se podría *medir*; entrega la media hoja (sin nota: insumo para feedback en s04) | Presenta el enunciado completo: qué es, grupos = los 5 grupos estables, 3 hitos con fechas y % (s05 diseño con predicción 8% · s10 avance 8% · s15 presentación + informe ≤6 págs 14%), regla de oro ("la explicación vale más que el éxito sonoro"), bitácora con roles firmados, coevaluación ±0,5, talleres de medición s08–s12 sobre el objeto; luego rota por los grupos empujando hacia ideas medibles y realistas | Enunciado impreso (1 por estudiante o por grupo) + proyectado; medias hojas |
 | 65–70′ | Cierre y anuncios | Completa el ticket de salida: "si pulso la MISMA cuerda en el medio o muy cerca del puente, ¿cambia la nota o cambia el timbre? ¿por qué?"; anota los anuncios | Anuncia s04: **traer instrumentos de cuerda pulsada** (aviso #1, una semana de plazo, basta 1–2 por grupo); recuerda hito 1 en s05; recoge tickets y medias hojas | Tickets de salida |
@@ -64,11 +64,11 @@ el bloque de 15–30′ del módulo 1 (principio 6).
 
 ## Pendientes de producción
 
-- **Demo** (skill /demo-interactiva): `demo_modos_cuerda.html` — formas
+- **Demo** (skill /demo-interactiva): [`demo_modos_cuerda.html`](demos/demo_modos_cuerda.html) — formas
   espaciales de los primeros 6 modos, $f_n = n f_1$, sonido por modo y
   suma con amplitudes ajustables. [Única demo nueva de la sesión.]
 - **Apuntes**: `apunte_s03_modos_de_vibracion.md`.
-- **Capítulo (lectura previa)**: `libro/cap03_modos_de_vibracion.md`
+- **Capítulo (lectura previa)**: [`libro/cap03_modos_de_vibracion.md`](../../libro/cap03_modos_de_vibracion.md)
   (referirlo desde el cierre de cap02).
 - **Actividades**: guía PEE "la sartén y sus parientes" + **enunciado
   completo del proyecto** (pauta con hitos, %, regla, bitácora,
@@ -110,3 +110,11 @@ el bloque de 15–30′ del módulo 1 (principio 6).
   grueso tensado sobre una caja) muestra armónicos en mitad y tercio
   igual; o la propia demo de cuerda como gancho (se pierde el objeto
   real, no el fenómeno).
+
+## Demo de la sesión (embebida)
+
+Para proyectar en clase conviene abrir la demo en su propia pestaña:
+[`demo_modos_cuerda.html`](demos/demo_modos_cuerda.html). Aquí embebida
+para revisión rápida.
+
+<iframe class="demo" src="demos/demo_modos_cuerda.html" title="Demo: modos de una cuerda"></iframe>

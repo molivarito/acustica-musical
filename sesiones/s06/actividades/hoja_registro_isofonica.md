@@ -7,7 +7,7 @@ estudiante), trabajando por turnos en el notebook del grupo
 **Roles mientras rotan los turnos** (como en el plan): uno mide con
 audífonos, otro registra la puesta en común del grupo y los otros dos
 resuelven el ítem de proyección de la sección 3.
-**Materiales**: notebook con `demo_decibel_sonoridad.html`, audífonos
+**Materiales**: notebook con [`demo_decibel_sonoridad.html`](../demos/demo_decibel_sonoridad.html), audífonos
 personales, esta hoja.
 
 Nombre: ______________________ Grupo: ______

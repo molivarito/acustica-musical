@@ -7,7 +7,7 @@ OA1.1 (conectar cómo vibra algo con qué espectro produce), OA3.1
 micrófono cuando toque el turno) · **mide** (lee la pantalla proyectada
 y dicta lo que ve) · **registra** (llena esta hoja) · **vocero**.
 **Materiales**: esta hoja y un lápiz; la demo
-`demo_forma_onda_espectro.html` corre en el proyector con micrófono.
+[`demo_forma_onda_espectro.html`](../demos/demo_forma_onda_espectro.html) corre en el proyector con micrófono.
 **Reparto**: el profesor marca con un círculo los **2 sonidos que su
 grupo producirá al micrófono**; los otros 2 los producirán otros grupos
 — igual deben predecirlos y registrar qué se vio cuando suenen.

@@ -9,7 +9,7 @@ Este apunte es distinto a todos los anteriores: no trae física nueva,
 porque la sesión 15 no la tiene. Trae el oficio que la sesión evalúa —
 cómo se defiende un proyecto acústico — condensado para releerse la
 noche anterior. La pauta completa del hito 3 (formato, tiempos y
-rúbrica) está en `sesiones/s14/actividades/pauta_hito3_presentacion_final.md`
+rúbrica) está en [`sesiones/s14/actividades/pauta_hito3_presentacion_final.md`](../../s14/actividades/pauta_hito3_presentacion_final.md)
 y se entregó impresa en la sesión 14; este apunte no la reemplaza:
 explica cómo estar a su altura.
 
@@ -127,11 +127,11 @@ capítulo 15, que es también la mejor guía para preparar esta defensa.
 
 ## Referencias
 
-- Pauta del hito 3: `sesiones/s14/actividades/pauta_hito3_presentacion_final.md`
+- Pauta del hito 3: [`sesiones/s14/actividades/pauta_hito3_presentacion_final.md`](../../s14/actividades/pauta_hito3_presentacion_final.md)
   (formato, tiempos, rúbrica R1–R4, checklist).
-- `diseno/01_objetivos_aprendizaje.md`, OA5.3 — la regla "la calidad
+- [`diseno/01_objetivos_aprendizaje.md`](../../../diseno/01_objetivos_aprendizaje.md), OA5.3 — la regla "la calidad
   de la explicación pesa más que el éxito sonoro".
-- `diseno/02_metodologia.md`, §4 — preguntas individuales y ajuste
+- [`diseno/02_metodologia.md`](../../../diseno/02_metodologia.md), §4 — preguntas individuales y ajuste
   ±0,5 por coevaluación.
 - El semestre completo: capítulos 1–14 del curso — cada modelo que su
   defensa necesite está en alguno de ellos.

@@ -79,7 +79,7 @@ subconjunto del repertorio con la punta del dedo.
 Si el espectro es una receta, debería poder cocinarse al revés: tomar
 senos puros — un oscilador por parcial —, dosificar sus amplitudes y
 sumarlos. Eso es la **síntesis aditiva**, y es exactamente lo que hace
-la demo de la sesión (`demo_sintesis_aditiva.html`): ocho parciales en
+la demo de la sesión ([`demo_sintesis_aditiva.html`](../demos/demo_sintesis_aditiva.html)): ocho parciales en
 razones $1{:}2{:}3{:}\dots$, un slider de amplitud por parcial.
 
 Lo que se comprueba al operarla ordena todo el semestre. Sumar parciales

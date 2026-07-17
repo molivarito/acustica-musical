@@ -208,7 +208,7 @@ aprobar esta versión:
 
 ## Conexión con la fase siguiente
 
-La fase 2 (metodología, `diseno/02_metodologia.md`) debe definir los
+La fase 2 (metodología, [`diseno/02_metodologia.md`](02_metodologia.md)) debe definir los
 formatos de aprendizaje activo que estos objetivos exigen — en particular
 el ciclo predicción→experimento→explicación (OA1.2, OA5), las
 evaluaciones de escucha argumentada con su rúbrica (OA3) y los talleres

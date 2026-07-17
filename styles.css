@@ -1,0 +1,136 @@
+/* Estilo del sitio del curso Acústica Musical.
+   Porta la identidad editorial de Admin/estilo_md_header.html
+   (papel, serif, acento rojo ladrillo) a la estructura de Quarto. */
+
+:root {
+  --tinta: #1a1a1a;
+  --acento: #7a2e2e;
+  --azul: #2e4a7a;
+  --papel: #faf8f4;
+  --panel: #f0ece4;
+}
+
+body {
+  background: var(--papel);
+  color: var(--tinta);
+  font-family: Georgia, 'Times New Roman', serif;
+  line-height: 1.55;
+  font-size: 1.02rem;
+}
+
+/* Contenido principal */
+main.content h1,
+main.content h2,
+main.content h3,
+main.content h4 {
+  font-family: Georgia, serif;
+  line-height: 1.25;
+  color: var(--tinta);
+}
+main.content h1 {
+  font-size: 1.6rem;
+  border-bottom: 2px solid var(--tinta);
+  padding-bottom: 0.3rem;
+}
+main.content h2 {
+  font-size: 1.25rem;
+  margin-top: 2rem;
+  color: var(--acento);
+  border-bottom: none;
+}
+main.content h3 { font-size: 1.05rem; margin-top: 1.5rem; }
+
+a { color: var(--azul); }
+a:hover { color: var(--acento); }
+
+blockquote {
+  border-left: 4px solid var(--acento);
+  margin: 1rem 0;
+  padding: 0.2rem 1rem;
+  background: var(--panel);
+  border-radius: 0 6px 6px 0;
+}
+
+/* Tablas: cuerpo serif, encabezado sans en versalitas */
+main.content table {
+  font-size: 0.92rem;
+  margin: 1rem 0;
+}
+main.content th {
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 0.78rem;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  text-align: left;
+  border-bottom: 2px solid var(--tinta);
+  background: var(--papel);
+}
+main.content td { vertical-align: top; }
+
+code {
+  font-family: Menlo, Consolas, monospace;
+  font-size: 0.86em;
+  background: var(--panel);
+  color: var(--tinta);
+  padding: 0.08em 0.35em;
+  border-radius: 3px;
+}
+pre {
+  background: var(--panel);
+  padding: 0.8rem 1rem;
+  border-radius: 6px;
+}
+pre code { background: none; padding: 0; }
+
+/* Figuras: imagen centrada, leyenda sans más pequeña */
+figure { margin: 1.6rem auto; text-align: center; }
+figure img { max-width: min(100%, 680px); }
+figcaption, .figure-caption {
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 0.82rem;
+  color: #555;
+  margin-top: 0.5rem;
+  text-align: left;
+  max-width: 640px;
+  margin-inline: auto;
+  line-height: 1.4;
+}
+
+/* Marco del sitio (barra lateral, navegación, buscador): sans-serif */
+.sidebar, .navbar, .quarto-secondary-nav,
+#quarto-sidebar, #TOC, .page-navigation, .pagination {
+  font-family: Helvetica, Arial, sans-serif;
+}
+#quarto-sidebar {
+  background: var(--panel);
+}
+.sidebar nav[role="doc-toc"] > h2 { font-family: Helvetica, Arial, sans-serif; }
+#quarto-margin-sidebar { background: transparent; }
+.sidebar-item .sidebar-item-text { font-size: 0.86rem; }
+.sidebar-item-container .active {
+  color: var(--acento);
+  font-weight: 600;
+}
+#TOC a { font-size: 0.82rem; }
+
+/* Título del sitio en la barra lateral */
+.sidebar-title, .sidebar-title a {
+  font-family: Georgia, serif;
+  color: var(--acento);
+}
+
+/* Demos embebidas en iframe */
+iframe.demo {
+  width: 100%;
+  height: 640px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  background: white;
+}
+
+hr { border: none; border-top: 1px solid #ccc; margin: 2rem 0; }
+img { max-width: 100%; }
+
+@media print {
+  body { background: white; }
+}

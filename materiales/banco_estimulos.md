@@ -2,7 +2,7 @@
 
 **Qué es**: la lista única y consolidada de TODAS las grabaciones y
 estímulos de audio que los planes de s01–s07 declaran y que **solo el
-profesor puede producir** (pendiente 7 de `diseno/02_metodologia.md`
+profesor puede producir** (pendiente 7 de [`diseno/02_metodologia.md`](../diseno/02_metodologia.md)
 §6: banco de ~15 estímulos para el semestre). Hasta la revisión de
 alineamiento del 2026-07-12 estas grabaciones vivían dispersas en 5
 planes; aquí tienen dueño (el profesor) y fecha.

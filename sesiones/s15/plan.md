@@ -13,7 +13,7 @@ AL INICIO de hoy; la predicción del hito 1 (s05) que cada grupo debe
 confrontar; las mediciones de la serie s08–s12 sobre el objeto; las 20
 hojas de línea base archivadas desde s01 y el estímulo #1 del banco
 (guitarra con batidos) para el cierre. Lectura previa:
-`libro/cap15_explicar_es_la_prueba.md` — se consume en la estructura
+[`libro/cap15_explicar_es_la_prueba.md`](../../libro/cap15_explicar_es_la_prueba.md) — se consume en la estructura
 misma de las defensas (los grupos la usaron para prepararse) y en la
 calidad de las hojas de escucha del público (el arsenal de preguntas
 del capítulo), principio 6.
@@ -97,7 +97,7 @@ s01 ni la coevaluación. Recuperación máxima: ~9′.
 ## Verificación de aprendizaje
 
 - **Hito 3 (OA5.3 + OA3.2, 14 %)**: rúbrica R1–R4 de la pauta
-  (`sesiones/s14/actividades/pauta_hito3_presentacion_final.md`)
+  ([`sesiones/s14/actividades/pauta_hito3_presentacion_final.md`](../s14/actividades/pauta_hito3_presentacion_final.md))
   registrada EN VIVO en la planilla del guion, grupo por grupo; R1
   (explicación acústica) desempata, según la pauta. El informe ≤6 págs
   se corrige contra la misma rúbrica esta semana (pico final declarado,
@@ -146,7 +146,7 @@ s01 ni la coevaluación. Recuperación máxima: ~9′.
   plantilla de la media hoja "hoy").
 - **Apuntes**: `apuntes/apunte_s15_como_defender_un_proyecto_acustico.md`
   (breve: no hay contenido nuevo).
-- **Capítulo (lectura previa)**: `libro/cap15_explicar_es_la_prueba.md`.
+- **Capítulo (lectura previa)**: [`libro/cap15_explicar_es_la_prueba.md`](../../libro/cap15_explicar_es_la_prueba.md).
 - **Demo**: no hay (diseno/03: "—"). Única sesión del curso sin demo.
 - **Trabajo físico del profesor (semana previa)**: recuperar del
   archivo las 20 hojas de línea base de s01, meterlas en sobres

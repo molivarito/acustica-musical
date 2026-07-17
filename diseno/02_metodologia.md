@@ -1,7 +1,7 @@
 # Metodología de aprendizaje activo — Acústica Musical
 
 Fase 2 del diseño — **versión aprobada** (2026-07-12). Operacionaliza los
-objetivos de `diseno/01_objetivos_aprendizaje.md` y resuelve sus riesgos
+objetivos de [`diseno/01_objetivos_aprendizaje.md`](01_objetivos_aprendizaje.md) y resuelve sus riesgos
 aceptados 1 (rúbrica de OA3, sección 5) y 2 (proyecto que reutiliza
 talleres, sección 4). **Dimensionada para el cupo del semestre actual: 20
 estudiantes, organizados en 5 grupos estables de 4** (formados en la
@@ -190,7 +190,7 @@ versión; las fases 3–4 deben vigilarlos:
 
 ## Conexión con la fase siguiente
 
-La fase 3 (`diseno/03_estructura_curso.md`) debe distribuir las 15
+La fase 3 ([`diseno/03_estructura_curso.md`](03_estructura_curso.md)) debe distribuir las 15
 sesiones respetando: el calendario grueso de evaluación (sección 4), la
 regla de sesiones con prueba, las 2–3 sesiones con instrumentos de
 estudiantes (avisadas), la sesión dedicada de lutería (formato 9), la
