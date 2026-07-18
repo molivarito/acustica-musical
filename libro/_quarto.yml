@@ -48,6 +48,10 @@ format:
   pdf:
     documentclass: scrreprt
     papersize: letter
+    # Georgia (la serif de la identidad del curso, presente en macOS):
+    # además de unificar con el sitio, cubre los glifos ≤ y ≈ que
+    # Latin Modern deja caer en silencio en la prosa.
+    mainfont: Georgia
     geometry:
       - margin=2.5cm
     toc: true

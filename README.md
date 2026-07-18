@@ -37,7 +37,8 @@ Los `.md` son la **fuente de verdad**; el sitio se genera en `_site/`
 - **Sitio completo**: `conda run -n base quarto render` (desde la raíz).
 - **Mientras se edita**: `conda run -n base quarto preview`.
 - **PDF del libro**: `conda run -n base quarto render libro`
-  (sale a `libro/LIBRO_CURSO.pdf`; requiere xelatex y rsvg-convert).
+  (sale a `libro/LIBRO_CURSO.pdf`; requiere LaTeX —Quarto usa
+  lualatex— y rsvg-convert para las figuras SVG).
 - **Documento nuevo**: crear el `.md` y agregarlo a la `sidebar` de
   `_quarto.yml`; si es capítulo del libro, también a `chapters` de
   `libro/_quarto.yml` y al arreglo `S` del mapa en `index.qmd`.

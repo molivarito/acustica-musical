@@ -10,3 +10,4 @@ libro/.quarto/
 libro/index.log
 libro/*.tex
 __pycache__/
+/libro/index_files/
