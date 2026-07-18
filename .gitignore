@@ -9,3 +9,4 @@ referencias/libros/
 libro/.quarto/
 libro/index.log
 libro/*.tex
+__pycache__/
