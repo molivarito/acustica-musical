@@ -1,0 +1,19 @@
+# Sobre este libro {.unnumbered}
+
+Este libro reúne las lecturas previas de las 15 sesiones del curso
+**Acústica Musical** (Pontificia Universidad Católica de Chile). Cada
+capítulo se lee *antes* de la sesión correspondiente (≤1 hora) y
+termina con las preguntas que esa sesión va a responder
+experimentalmente.
+
+La versión web navegable de estos capítulos vive en el sitio del curso,
+integrada sesión por sesión con los planes, actividades y demos
+interactivas; este PDF es la versión compilada para lectura continua e
+impresión.
+
+Las convenciones del libro: la matemática se limita a aritmética y
+proporciones (los desarrollos formales van en recuadros opcionales);
+las figuras esquemáticas se declaran como tales en su leyenda; los
+datos cuantitativos no verificados están marcados **[POR VERIFICAR]**;
+y las pocas figuras reproducidas desde la bibliografía llevan su cita
+completa en la leyenda. La bibliografía unificada cierra el volumen.

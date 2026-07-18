@@ -1,0 +1,63 @@
+# Sub-proyecto Quarto BOOK: el libro del curso como PDF compilado.
+#
+# Renderizar el PDF:   conda run -n base quarto render libro
+#                      (desde la raíz; salida: libro/LIBRO_CURSO.pdf)
+#
+# Decisión de arquitectura (Fase 2 de la migración): el libro genera
+# SOLO el PDF. La versión web de los capítulos ya vive en el sitio
+# principal (sección "Libro" de la barra lateral), con búsqueda y
+# navegación; un book-HTML paralelo duplicaría contenido. El PDF es el
+# artefacto imprimible/descargable que el sitio publica como recurso.
+#
+# Las figuras (../figuras/*.svg) requieren rsvg-convert instalado.
+
+project:
+  type: book
+  output-dir: .
+
+book:
+  title: "Escuchar como científico"
+  subtitle: "Lecturas del curso Acústica Musical"
+  author: "Patricio de la Cuadra · Pontificia Universidad Católica de Chile"
+  date: today
+  date-format: "YYYY-MM-DD"
+  output-file: LIBRO_CURSO
+  chapters:
+    - index.qmd
+    - 00_prologo.md
+    - cap01_del_golpe_al_tono.md
+    - cap02_ondas_y_espectrograma.md
+    - cap03_modos_de_vibracion.md
+    - cap04_la_receta_del_timbre.md
+    - cap05_la_altura_percibida.md
+    - cap06_sonoridad_y_decibel.md
+    - cap07_batidos.md
+    - cap08_banda_critica_y_consonancia.md
+    - cap09_escalas_y_temperamentos.md
+    - cap10_resonancia_e_impedancia.md
+    - cap11_cuerdas_frotadas_y_cuerpo.md
+    - cap12_vientos_y_luteria.md
+    - cap13_la_voz.md
+    - cap14_la_sala_como_instrumento.md
+    - cap15_explicar_es_la_prueba.md
+    - 99_bibliografia.md
+
+lang: es
+
+format:
+  pdf:
+    documentclass: scrreprt
+    papersize: letter
+    geometry:
+      - margin=2.5cm
+    toc: true
+    toc-depth: 1
+    number-sections: false
+    colorlinks: true
+    # Las leyendas ya traen su numeración manual ("Figura N. ...",
+    # consistente con la versión web); se suprime el prefijo automático
+    # "Figura N:" de LaTeX para no duplicar.
+    include-in-header:
+      text: |
+        \usepackage{caption}
+        \captionsetup[figure]{labelformat=empty}

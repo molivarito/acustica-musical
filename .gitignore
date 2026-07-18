@@ -6,3 +6,6 @@ referencias/libros/
 /.quarto/
 **/*.quarto_ipynb
 /_site/
+libro/.quarto/
+libro/index.log
+libro/*.tex
