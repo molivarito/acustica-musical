@@ -71,7 +71,7 @@ Al terminar este curso el o la estudiante será capaz de:
    acústicamente su comportamiento — funcione o no como se esperaba.
 
 El detalle completo de los resultados de aprendizaje específicos y su
-mapeo sesión a sesión está en `Admin/mapa_curso.html` y `diseno/01`.
+mapeo sesión a sesión está en el [mapa del curso](../index.qmd) y `diseno/01`.
 
 ## III. Contenidos
 
@@ -184,4 +184,4 @@ estas fuentes lo respaldan y se citan como lectura complementaria):
 
 *Materiales del curso: libro de lecturas (`libro/LIBRO_CURSO.pdf`),
 demos interactivas y guías de trabajo por sesión (`sesiones/`), mapa
-navegable del curso (`Admin/mapa_curso.html`).*
+navegable del curso (página de inicio del sitio).*

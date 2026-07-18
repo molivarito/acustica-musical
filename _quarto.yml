@@ -16,7 +16,6 @@ project:
     - libro/*.md
     - materiales/*.md
     - Admin/programa_curso.md
-    - "!libro/LIBRO_CURSO.md"
   resources:
     - "sesiones/*/demos/*.html"
     - "figuras/*.svg"

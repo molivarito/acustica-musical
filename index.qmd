@@ -201,9 +201,9 @@ desaparecen.
 
 <script>
 'use strict';
-// Mapa interactivo del curso (portado desde Admin/mapa_curso.html al
-// sitio Quarto). Los datos viven en el arreglo S; para actualizar una
-// sesión basta editar su objeto. Rutas relativas a la raíz del sitio.
+// Mapa interactivo del curso. Los datos viven en el arreglo S; para
+// actualizar una sesión basta editar su objeto. Rutas relativas a la
+// raíz del sitio (cada .md del repositorio se renderiza como .html).
 const DESC_OA = {
   'OA1.1':'Analizar modos y parciales; relacionar forma de vibrar y espectro',
   'OA1.2':'Predecir semicuantitativamente el efecto de cambiar un parámetro',

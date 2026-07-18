@@ -21,6 +21,15 @@
 - Cerrar cada apunte con: síntesis breve, conexión con la sesión siguiente
   y referencias (libro, capítulo, páginas).
 
+## Publicación
+
+- Los documentos se publican con Quarto: tras editar un `.md`, correr
+  `conda run -n base quarto render` (o `quarto preview` mientras se
+  trabaja). Documento nuevo → agregarlo a la `sidebar` de `_quarto.yml`.
+- Las figuras van como SVG generados por script en `figuras/`
+  (`gen_sXX.py`), insertadas con `![**Figura N.** leyenda](ruta)` y
+  numeradas por documento.
+
 ## Rigor
 - Toda afirmación cuantitativa (frecuencias, velocidades, rangos) debe ser
   verificable en las fuentes o marcada [POR VERIFICAR].

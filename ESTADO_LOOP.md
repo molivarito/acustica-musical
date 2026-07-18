@@ -1,5 +1,13 @@
 # ESTADO DEL LOOP — Fase 3–4 autónoma
 
+> **Registro histórico (cerrado).** La producción que este archivo
+> gobernaba terminó el 2026-07-13 con las 15 sesiones listas; se
+> conserva por su registro de decisiones (D0–D9) y de pendientes
+> físicos del profesor. Las instrucciones operativas de este archivo
+> (md2html, compilar_libro, "continúa el loop") quedaron obsoletas con
+> la migración a Quarto del 2026-07-17 — el flujo vigente está en
+> `README.md` y `CLAUDE.md`.
+
 Iniciado: 2026-07-12. Instrucción: desarrollar las 15 sesiones completas
 (plan, apuntes, capítulo del libro, demo principal, actividades) sin
 consultas al profesor. Para retomar tras una interrupción: leer este

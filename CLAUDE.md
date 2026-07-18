@@ -47,19 +47,22 @@ formación matemática y musical.
 - Las demos interactivas HTML siguen `.claude/rules/formato-demos.md`.
 - Los planes de sesión se generan con la skill `/plan-sesion` y se guardan
   en `sesiones/sXX/plan.md`.
-- Los `.md` del proyecto tienen gemelos `.html` GENERADOS (vistas
-  formateadas para humanos; el mapa `Admin/mapa_curso.html` enlaza a
-  ellas). Tras crear o editar cualquier `.md`, ejecutar
-  `python3 Admin/md2html.py` desde la raíz para regenerarlos. Nunca
-  editar un `.html` gemelo a mano (se pisa al regenerar); los únicos
-  HTML editables son las demos, el mapa y `Admin/estilo_md_header.html`.
+- **Publicación con Quarto** (migrado 2026-07-17; el pipeline anterior
+  está en `Admin/obsoleto/`, no usarlo). Los `.md` son la fuente de
+  verdad. Tras editar contenido: `conda run -n base quarto render`
+  (sitio completo, sale a `_site/`, ignorado por git) o
+  `quarto preview` mientras se trabaja. El PDF del libro:
+  `conda run -n base quarto render libro` (sub-proyecto book en
+  `libro/_quarto.yml`; sale a `libro/LIBRO_CURSO.pdf`).
+- Para agregar una sesión/capítulo/documento nuevo: crear el `.md` y
+  agregarlo a la `sidebar` de `_quarto.yml` (y a `render:` si cae fuera
+  de los globs ya listados); si es un capítulo, también a `chapters` de
+  `libro/_quarto.yml` y al arreglo `S` del mapa en `index.qmd`.
 - Las figuras de apuntes/libro son SVG generados por `figuras/gen_sXX.py`
   (con `figuras/estilo_figuras.py`): para cambiar una figura, editar y
-  re-ejecutar su script, nunca el SVG. Tras editar capítulos o figuras,
-  recompilar el libro con `python3 Admin/compilar_libro.py`.
-  Reproducciones desde la bibliografía: solo datos medidos
-  irreemplazables, con cita completa en la leyenda y registro en
-  `figuras/libros/EXTRACCIONES.md`.
+  re-ejecutar su script, nunca el SVG. Reproducciones desde la
+  bibliografía: solo datos medidos irreemplazables, con cita completa en
+  la leyenda y registro en `figuras/libros/EXTRACCIONES.md`.
 
 ## Fases del proyecto
 1. Objetivos de aprendizaje (diseno/01) — discutir en plan mode.
