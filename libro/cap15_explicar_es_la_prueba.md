@@ -154,7 +154,7 @@ feliz — de la manera de estar en el mundo sonoro.
 
 ## Referencias del capítulo
 
-- La pauta del hito 3 ([`sesiones/s14/actividades/pauta_hito3_presentacion_final.md`](../sesiones/s14/actividades/pauta_hito3_presentacion_final.md))
+- La pauta del hito 3 (`sesiones/s14/actividades/pauta_hito3_presentacion_final.md`)
   — el documento que gobierna la sesión: formato, rúbrica y checklist.
 - Los capítulos 1–14 de este mismo libro — la defensa no tiene
   bibliografía nueva: cada modelo que necesite está en el capítulo

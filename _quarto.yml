@@ -13,6 +13,8 @@ project:
     - index.qmd
     - diseno/*.md
     - sesiones/**/*.md
+    - "!sesiones/**/*pauta*.md"
+    - "!sesiones/**/guion_profesor*.md"
     - libro/*.md
     - materiales/*.md
     - Admin/programa_curso.md
@@ -79,8 +81,6 @@ website:
             contents:
               - sesiones/s04/actividades/guia_pee_estirar_acortar.md
               - sesiones/s04/actividades/guia_pee_mapa_cuerda.md
-              - sesiones/s04/actividades/pauta_feedback_ideas_proyecto.md
-              - sesiones/s04/actividades/pauta_hito1_diseno.md
           - text: "Demo — síntesis aditiva"
             href: sesiones/s04/demos/demo_sintesis_aditiva.html
       - section: "Sesión 05 — La altura percibida"
@@ -110,7 +110,6 @@ website:
           - section: "Actividades"
             contents:
               - sesiones/s07/actividades/prueba1.md
-              - sesiones/s07/actividades/prueba1_pauta.md
           - text: "Demo — batidos"
             href: sesiones/s07/demos/demo_batidos.html
       - section: "Sesión 08 — Psicoacústica de la superposición"
@@ -140,8 +139,6 @@ website:
           - section: "Actividades"
             contents:
               - sesiones/s10/actividades/guia_pee_resonancia_botellas.md
-              - sesiones/s10/actividades/pauta_clinica_pares.md
-              - sesiones/s10/actividades/pauta_hito2_avance.md
           - text: "Demo — resonancia"
             href: sesiones/s10/demos/demo_resonancia.html
       - section: "Sesión 11 — Cuerdas frotadas y el cuerpo"
@@ -161,7 +158,6 @@ website:
           - section: "Actividades"
             contents:
               - sesiones/s12/actividades/guia_pee_construccion_tubo.md
-              - sesiones/s12/actividades/pauta_revision_bitacoras.md
           - text: "Demo — tubo con agujeros"
             href: sesiones/s12/demos/demo_tubo_agujeros.html
       - section: "Sesión 13 — Prueba 2 + la voz"
@@ -171,7 +167,6 @@ website:
           - section: "Actividades"
             contents:
               - sesiones/s13/actividades/prueba2.md
-              - sesiones/s13/actividades/prueba2_pauta.md
           - text: "Demo — formantes de la voz"
             href: sesiones/s13/demos/demo_formantes_voz.html
       - section: "Sesión 14 — La sala como instrumento"
@@ -181,7 +176,6 @@ website:
           - section: "Actividades"
             contents:
               - sesiones/s14/actividades/guia_salida_medicion_t60.md
-              - sesiones/s14/actividades/pauta_hito3_presentacion_final.md
               - sesiones/s14/actividades/rutas_salida_medicion.md
           - text: "Demo — modos de sala"
             href: sesiones/s14/demos/demo_modos_sala.html
@@ -191,7 +185,6 @@ website:
           - sesiones/s15/apuntes/apunte_s15_como_defender_un_proyecto_acustico.md
           - section: "Actividades"
             contents:
-              - sesiones/s15/actividades/guion_profesor_s15.md
               - sesiones/s15/actividades/hoja_coevaluacion_final.md
               - sesiones/s15/actividades/hoja_escucha_presentaciones.md
       - section: "Libro — Escuchar como científico"

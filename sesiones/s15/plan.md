@@ -97,7 +97,7 @@ s01 ni la coevaluación. Recuperación máxima: ~9′.
 ## Verificación de aprendizaje
 
 - **Hito 3 (OA5.3 + OA3.2, 14 %)**: rúbrica R1–R4 de la pauta
-  ([`sesiones/s14/actividades/pauta_hito3_presentacion_final.md`](../s14/actividades/pauta_hito3_presentacion_final.md))
+  (`sesiones/s14/actividades/pauta_hito3_presentacion_final.md`)
   registrada EN VIVO en la planilla del guion, grupo por grupo; R1
   (explicación acústica) desempata, según la pauta. El informe ≤6 págs
   se corrige contra la misma rúbrica esta semana (pico final declarado,
