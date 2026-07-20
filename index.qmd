@@ -4,6 +4,17 @@ toc: false
 page-layout: full
 ---
 
+**Acústica Musical** propone aprender a *escuchar como científico*: en 15
+sesiones se combinan la física del sonido musical (cuerdas, tubos, modos
+de vibración), la percepción que lo transforma en sensación (altura,
+timbre, consonancia) y la medición que permite verificarlo (espectros,
+niveles, reverberación), siempre partiendo del oído y el instrumento en
+la mano antes de formalizar. No se requiere formación matemática
+avanzada. El curso se aprende haciendo —talleres, demostraciones sonoras
+y mediciones en vivo— y corre en paralelo un proyecto semestral de
+construir o modificar un instrumento, prediciendo su comportamiento
+acústico y explicándolo al final con lo escuchado y lo medido.
+
 Curso de Acústica Musical, Pontificia Universidad Católica de Chile.
 15 sesiones semanales de dos módulos de 70 minutos, con metodología de
 aprendizaje activo. Este mapa interactivo enlaza todo el material:
