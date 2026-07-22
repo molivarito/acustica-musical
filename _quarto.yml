@@ -15,6 +15,7 @@ project:
     - sesiones/**/*.md
     - "!sesiones/**/*pauta*.md"
     - "!sesiones/**/guion_profesor*.md"
+    - "!sesiones/**/prueba*.md"
     - libro/*.md
     - materiales/*.md
     - Admin/programa_curso.md
@@ -107,9 +108,6 @@ website:
         contents:
           - sesiones/s07/plan.md
           - sesiones/s07/apuntes/apunte_s07_batidos.md
-          - section: "Actividades"
-            contents:
-              - sesiones/s07/actividades/prueba1.md
           - text: "Demo — batidos"
             href: sesiones/s07/demos/demo_batidos.html
       - section: "Sesión 08 — Psicoacústica de la superposición"
@@ -164,9 +162,6 @@ website:
         contents:
           - sesiones/s13/plan.md
           - sesiones/s13/apuntes/apunte_s13_la_voz.md
-          - section: "Actividades"
-            contents:
-              - sesiones/s13/actividades/prueba2.md
           - text: "Demo — formantes de la voz"
             href: sesiones/s13/demos/demo_formantes_voz.html
       - section: "Sesión 14 — La sala como instrumento"

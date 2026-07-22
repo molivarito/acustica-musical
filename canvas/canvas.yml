@@ -133,10 +133,6 @@ modulos:
         url: "{sitio}/sesiones/s07/plan.html"
       - titulo: "Batidos: la ondulación que delata la desafinación"
         url: "{sitio}/sesiones/s07/apuntes/apunte_s07_batidos.html"
-      - {tipo: subheader, titulo: "Actividades"}
-      - titulo: "Prueba 1 — Acústica Musical UC"
-        url: "{sitio}/sesiones/s07/actividades/prueba1.html"
-        indent: 1
       - titulo: "Demo — batidos"
         url: "{sitio}/sesiones/s07/demos/demo_batidos.html"
   - nombre: "Sesión 08 — Psicoacústica de la superposición"
@@ -214,10 +210,6 @@ modulos:
         url: "{sitio}/sesiones/s13/plan.html"
       - titulo: "La voz cantada: fuente y filtro"
         url: "{sitio}/sesiones/s13/apuntes/apunte_s13_la_voz.html"
-      - {tipo: subheader, titulo: "Actividades"}
-      - titulo: "Prueba 2 — Acústica Musical UC"
-        url: "{sitio}/sesiones/s13/actividades/prueba2.html"
-        indent: 1
       - titulo: "Demo — formantes de la voz"
         url: "{sitio}/sesiones/s13/demos/demo_formantes_voz.html"
   - nombre: "Sesión 14 — La sala como instrumento"
