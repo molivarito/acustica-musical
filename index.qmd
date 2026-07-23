@@ -28,10 +28,10 @@ desaparecen.
 <style>
   /* Estilos del mapa, acotados a #mapa para no tocar el tema del sitio */
   #mapa {
-    --tinta: #1a1a1a; --acento: #7a2e2e; --azul: #2e4a7a;
-    --panel: #f0ece4;
-    --bloqueA: #dde7f0; --bloqueB: #e9e0ee;
-    --bloqueC: #e4eddd; --bloqueD: #f3e6d5;
+    --tinta: #1f2937; --acento: #0f766e; --azul: #34558b;
+    --panel: #eef3f2;
+    --bloqueA: #dce9f5; --bloqueB: #e8e2f4;
+    --bloqueC: #e1efe3; --bloqueD: #f7ead6;
   }
   #mapa details.oadef { background: white; border: 1px solid #ddd;
     border-radius: 8px; padding: .6rem 1rem; margin-bottom: 1rem; }
@@ -50,11 +50,12 @@ desaparecen.
   #mapa .oacard li { margin-bottom: .35rem; }
   #mapa .oanota { font-size: .78rem; color: #555; margin: .6rem 0 0; }
 
-  #mapa .controles { background: var(--panel); border-radius: 8px;
+  #mapa .controles { background: #ffffff; border: 1px solid #e5eae9;
+    border-radius: 8px;
     padding: .8rem 1rem; font-size: .85rem; display: flex;
     flex-wrap: wrap; gap: .8rem 1.6rem; align-items: center;
     position: sticky; top: 0; z-index: 5;
-    box-shadow: 0 2px 6px rgba(0,0,0,.06); }
+    box-shadow: 0 1px 4px rgba(15,118,110,.08); }
   #mapa .chips { display: inline-flex; flex-wrap: wrap; gap: .3rem; }
   #mapa .chip { border: 1px solid #bbb; border-radius: 12px;
     padding: .12rem .55rem; cursor: pointer; background: white;
@@ -86,13 +87,15 @@ desaparecen.
     font-size: .88rem; }
   #mapa table.mapa-tabla th { font-size: .75rem; text-transform: uppercase;
     letter-spacing: .05em; text-align: left; padding: .5rem .6rem;
-    border-bottom: 2px solid var(--tinta); }
+    border-bottom: 2px solid var(--acento); }
   #mapa table.mapa-tabla td { padding: .6rem .6rem;
     border-bottom: 1px solid #ddd; vertical-align: top; }
   #mapa tr.sesion { transition: opacity .15s; }
   #mapa tr.sesion.apagada { opacity: .25; }
   #mapa td.num { white-space: nowrap; }
   #mapa .snum { font-weight: bold; font-size: 1.05rem; }
+  #mapa .fecha { font-size: .72rem; color: #555; margin-left: .35rem;
+    font-variant-numeric: tabular-nums; }
   #mapa .tema { font-weight: bold; }
   #mapa .tema a { color: var(--tinta); }
   #mapa .modulos { font-size: .78rem; color: #555; font-style: italic; }
@@ -231,7 +234,7 @@ const DESC_OA = {
 };
 
 const S = [
- {n:1, b:'A', tema:'Escuchar como científico: del golpe al tono',
+ {n:1, f:'07-ago', b:'A', tema:'Escuchar como científico: del golpe al tono',
   mod:'m1 audición (inaugural) · m2 experimental',
   oa:['OA3.1','OA1.1','OA2.1'],
   ev:[['Línea base de escucha (sin nota)','suave'],['Formación de 5 grupos','suave']],
@@ -242,7 +245,7 @@ const S = [
   ap:'sesiones/s01/apuntes/apunte_s01_del_golpe_al_tono.md',
   cap:['cap. 1 — Del golpe al tono','libro/cap01_del_golpe_al_tono.md']},
 
- {n:2, b:'A', tema:'Ondas y representación: forma de onda, espectro y espectrograma',
+ {n:2, f:'14-ago', b:'A', tema:'Ondas y representación: forma de onda, espectro y espectrograma',
   mod:'m1 experimental · m2 experimental',
   oa:['OA4.1','OA1.1'],
   ev:[['Primera ronda OA3 con nota','suave']],
@@ -252,7 +255,7 @@ const S = [
   ap:'sesiones/s02/apuntes/apunte_s02_ondas_y_representacion.md',
   cap:['cap. 2 — Ondas y espectrograma','libro/cap02_ondas_y_espectrograma.md']},
 
- {n:3, b:'A', tema:'Modos de vibración: por qué cada objeto suena como suena',
+ {n:3, f:'21-ago', b:'A', tema:'Modos de vibración: por qué cada objeto suena como suena',
   mod:'m1 experimental · m2 demo + lanzamiento',
   oa:['OA1.1','OA1.2','OA5.1'],
   ev:[['LANZAMIENTO DEL PROYECTO','fuerte']],
@@ -262,7 +265,7 @@ const S = [
   ap:'sesiones/s03/apuntes/apunte_s03_modos_de_vibracion.md',
   cap:['cap. 3 — Modos de vibración','libro/cap03_modos_de_vibracion.md']},
 
- {n:4, b:'A', tema:'La receta del timbre: cuerda pulsada, punto de excitación, síntesis aditiva',
+ {n:4, f:'28-ago', b:'A', tema:'La receta del timbre: cuerda pulsada, punto de excitación, síntesis aditiva',
   mod:'m1 experimental · m2 experimental',
   oa:['OA1.1','OA1.2','OA2.1'],
   ev:[['Instrumentos de estudiantes #1 (pulsadas)','suave'],['Se publica pauta hito 1','suave']],
@@ -274,7 +277,7 @@ const S = [
   ap:'sesiones/s04/apuntes/apunte_s04_la_receta_del_timbre.md',
   cap:['cap. 4 — La receta del timbre','libro/cap04_la_receta_del_timbre.md']},
 
- {n:5, b:'B', tema:'La altura percibida: fundamental ausente y el oído en una pasada',
+ {n:5, f:'04-sep', b:'B', tema:'La altura percibida: fundamental ausente y el oído en una pasada',
   mod:'m1 audición · m2 audición',
   oa:['OA2.1','OA2.2'],
   ev:[['HITO 1: diseño con predicción (8%)','fuerte'],['Punto de control metodológico','suave']],
@@ -284,7 +287,7 @@ const S = [
   ap:'sesiones/s05/apuntes/apunte_s05_la_altura_percibida.md',
   cap:['cap. 5 — La altura percibida','libro/cap05_la_altura_percibida.md']},
 
- {n:6, b:'B', tema:'Sonoridad y decibel: intensidad, niveles, isofónicas',
+ {n:6, f:'11-sep', b:'B', tema:'Sonoridad y decibel: intensidad, niveles, isofónicas',
   mod:'m1 audición/experimental · m2 medición (estaciones)',
   oa:['OA2.1','OA4.2'],
   ev:[['Mini-informe SPL (taller)','suave'],['Devolución hito 1','suave']],
@@ -294,7 +297,7 @@ const S = [
   ap:'sesiones/s06/apuntes/apunte_s06_sonoridad_y_decibel.md',
   cap:['cap. 6 — Sonoridad y decibel','libro/cap06_sonoridad_y_decibel.md']},
 
- {n:7, b:'B', tema:'Prueba 1 + audición liviana: batidos',
+ {n:7, f:'25-sep', b:'B', tema:'Prueba 1 + audición liviana: batidos',
   mod:'m1 prueba · m2 audición liviana',
   oa:['OA2.2'],
   evalua:['OA1.1','OA1.2','OA2.1','OA4.1','OA4.2'],
@@ -304,7 +307,7 @@ const S = [
   ap:'sesiones/s07/apuntes/apunte_s07_batidos.md',
   cap:['cap. 7 — Batidos (y mapa de estudio)','libro/cap07_batidos.md']},
 
- {n:8, b:'B', tema:'Psicoacústica de la superposición: banda crítica, rugosidad y consonancia',
+ {n:8, f:'09-oct', b:'B', tema:'Psicoacústica de la superposición: banda crítica, rugosidad y consonancia',
   mod:'m1 audición · m2 experimental',
   oa:['OA2.2','OA2.3','OA5.2'],
   ev:[['Comienza serie de medición del objeto (s08–s12)','suave'],['Devolución prueba 1','suave']],
@@ -314,7 +317,7 @@ const S = [
   ap:'sesiones/s08/apuntes/apunte_s08_banda_critica_y_consonancia.md',
   cap:['cap. 8 — Banda crítica y consonancia','libro/cap08_banda_critica_y_consonancia.md']},
 
- {n:9, b:'B', tema:'Escalas y temperamentos: afinar de oído',
+ {n:9, f:'16-oct', b:'B', tema:'Escalas y temperamentos: afinar de oído',
   mod:'m1 experimental · m2 experimental',
   oa:['OA2.3','OA1.2','OA5.2'],
   ev:[['Taller de afinación por batidos (evaluado)','suave'],['Se anuncia hito 2','suave']],
@@ -324,7 +327,7 @@ const S = [
   ap:'sesiones/s09/apuntes/apunte_s09_escalas_y_temperamentos.md',
   cap:['cap. 9 — Escalas y temperamentos','libro/cap09_escalas_y_temperamentos.md']},
 
- {n:10, b:'C', tema:'Resonancia, impedancia y acoplamiento: el puente hacia los instrumentos',
+ {n:10, f:'23-oct', b:'C', tema:'Resonancia, impedancia y acoplamiento: el puente hacia los instrumentos',
   mod:'m1 experimental · m2 discusión de proyecto',
   oa:['OA1.2','OA1.3','OA5.2','OA3.2'],
   ev:[['HITO 2: avance del proyecto (8%)','fuerte'],['Clínicas de proyecto entre pares','suave'],['Aviso instrumentos frotados (s11)','suave']],
@@ -335,7 +338,7 @@ const S = [
   ap:'sesiones/s10/apuntes/apunte_s10_resonancia_e_impedancia.md',
   cap:['cap. 10 — Resonancia e impedancia','libro/cap10_resonancia_e_impedancia.md']},
 
- {n:11, b:'C', tema:'Cuerdas frotadas y el cuerpo del instrumento: stick-slip y Helmholtz',
+ {n:11, f:'30-oct', b:'C', tema:'Cuerdas frotadas y el cuerpo del instrumento: stick-slip y Helmholtz',
   mod:'m1 experimental · m2 experimental',
   oa:['OA1.3','OA1.1','OA1.2'],
   ev:[['Instrumentos de estudiantes #2 (frotadas)','suave']],
@@ -345,7 +348,7 @@ const S = [
   ap:'sesiones/s11/apuntes/apunte_s11_cuerdas_frotadas_y_cuerpo.md',
   cap:['cap. 11 — Cuerdas frotadas y cuerpo','libro/cap11_cuerdas_frotadas_y_cuerpo.md']},
 
- {n:12, b:'C', tema:'Vientos y lutería: columnas de aire, agujeros, regímenes (sesión-taller)',
+ {n:12, f:'06-nov', b:'C', tema:'Vientos y lutería: columnas de aire, agujeros, regímenes (sesión-taller)',
   mod:'sesión-taller completa de lutería (formato 9, 140′)',
   oa:['OA1.2','OA1.3','OA5.2'],
   ev:[['Construcción de tubos PVC (taller evaluado)','suave'],['Cierre serie del objeto + bitácoras','suave'],['Se anuncia prueba 2','suave']],
@@ -355,7 +358,7 @@ const S = [
   ap:'sesiones/s12/apuntes/apunte_s12_vientos_y_luteria.md',
   cap:['cap. 12 — Vientos y lutería','libro/cap12_vientos_y_luteria.md']},
 
- {n:13, b:'C', tema:'Prueba 2 + la voz cantada: fuente-filtro y formantes',
+ {n:13, f:'13-nov', b:'C', tema:'Prueba 2 + la voz cantada: fuente-filtro y formantes',
   mod:'m1 prueba · m2 audición liviana',
   oa:['OA1.3'],
   evalua:['OA1.2','OA1.3','OA2.2','OA2.3'],
@@ -365,7 +368,7 @@ const S = [
   ap:'sesiones/s13/apuntes/apunte_s13_la_voz.md',
   cap:['cap. 13 — La voz','libro/cap13_la_voz.md']},
 
- {n:14, b:'D', tema:'La sala como instrumento: reverberación, modos de sala, medición de T60',
+ {n:14, f:'20-nov', b:'D', tema:'La sala como instrumento: reverberación, modos de sala, medición de T60',
   mod:'m1 en aula · m2 salida de medición (formato 8)',
   oa:['OA1.4','OA4.3','OA3.2'],
   ev:[['Salida de medición T60 en salas UC','fuerte'],['Informe comparativo (último taller)','suave'],['Se publica pauta hito 3','suave'],['Devolución prueba 2','suave']],
@@ -376,7 +379,7 @@ const S = [
   ap:'sesiones/s14/apuntes/apunte_s14_la_sala_como_instrumento.md',
   cap:['cap. 14 — La sala como instrumento','libro/cap14_la_sala_como_instrumento.md']},
 
- {n:15, b:'D', tema:'Presentaciones finales del proyecto: explicar es la prueba',
+ {n:15, f:'27-nov', b:'D', tema:'Presentaciones finales del proyecto: explicar es la prueba',
   mod:'ambos módulos: 5 presentaciones × ~25′ + cierre del curso',
   oa:['OA5.3','OA3.2'],
   ev:[['PRESENTACIÓN FINAL + INFORME (14%)','fuerte'],['Coevaluación final','suave'],['Devolución líneas base de s01','suave']],
@@ -451,7 +454,8 @@ S.forEach(s => {
 
   tr.innerHTML = `
     <td class="num" style="background:${COLOR_BLOQUE[s.b]}">
-      <span class="snum">s${String(s.n).padStart(2,'0')}</span><br>
+      <span class="snum">s${String(s.n).padStart(2,'0')}</span>
+      <span class="fecha">vie ${s.f}</span><br>
       <span class="tema"><a href="${H(s.ap)}">${s.tema}</a></span><br>
       <span class="modulos">${s.mod}</span>
     </td>

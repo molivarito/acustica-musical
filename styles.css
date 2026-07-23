@@ -1,13 +1,16 @@
 /* Estilo del sitio del curso Acústica Musical.
-   Porta la identidad editorial del antiguo Admin/obsoleto/estilo_md_header.html
-   (papel, serif, acento rojo ladrillo) a la estructura de Quarto. */
+   Rediseño "tinta y agua" (2026-07-22): papel casi blanco y frío,
+   acento verde petróleo, títulos sans sobre cuerpo serif, paneles
+   gris-niebla y menos bordes. Reemplaza la identidad anterior
+   (papel beige, serif total, acento rojo ladrillo). */
 
 :root {
-  --tinta: #1a1a1a;
-  --acento: #7a2e2e;
-  --azul: #2e4a7a;
-  --papel: #faf8f4;
-  --panel: #f0ece4;
+  --tinta: #1f2937;
+  --acento: #0f766e;
+  --azul: #34558b;
+  --papel: #fbfbf9;
+  --panel: #eef3f2;
+  --sans: -apple-system, "Segoe UI", "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
 body {
@@ -96,34 +99,34 @@ main.content li p {
    devuelven al serif compartido con h1/h2/h4, que es el estilo que ya
    tenían antes de este cambio. */
 #mapa h3 {
-  font-family: Georgia, serif;
+  font-family: var(--sans);
+  font-weight: 700;
   text-transform: none;
   letter-spacing: normal;
 }
 
-/* Contenido principal */
+/* Contenido principal: títulos en sans moderna (el cuerpo sigue serif —
+   contraste editorial sans-display / serif-texto). */
 main.content h1,
 main.content h2,
-main.content h3,
 main.content h4 {
-  font-family: Georgia, serif;
+  font-family: var(--sans);
   line-height: 1.25;
   color: var(--tinta);
+  font-weight: 700;
+  letter-spacing: -0.01em;
 }
 main.content h1 {
-  font-size: 1.6rem;
-  border-bottom: 2px solid var(--tinta);
-  padding-bottom: 0.3rem;
+  font-size: 1.7rem;
+  border-bottom: 3px solid var(--acento);
+  padding-bottom: 0.35rem;
 }
 
-/* H2: más aire para que funcione como quiebre de sección al escanear,
-   con una línea sutil arriba (el propio espacio + la línea marcan el
-   quiebre; no se usa border-bottom para no duplicar la línea del h1). */
+/* H2: el quiebre de sección lo marcan el aire y el color de acento —
+   sin línea superior (aligera la página). */
 main.content h2 {
-  font-size: 1.25rem;
+  font-size: 1.22rem;
   margin-top: 2.8rem;
-  padding-top: 1rem;
-  border-top: 1px solid #ddd;
   color: var(--acento);
   border-bottom: none;
 }
@@ -133,18 +136,19 @@ main.content h2 {
    vistazo del cuerpo serif del párrafo. Va después del bloque h1/h2/h3/h4
    de arriba para ganar en la cascada (misma especificidad, orden posterior). */
 main.content h3 {
-  font-family: Helvetica, Arial, sans-serif;
+  font-family: var(--sans);
   font-size: 0.82rem;
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.08em;
-  color: var(--tinta);
+  color: #64748b;
   margin-top: 1.8rem;
   margin-bottom: 0.6rem;
+  line-height: 1.25;
 }
 
-a { color: var(--azul); }
-a:hover { color: var(--acento); }
+a { color: var(--acento); }
+a:hover { color: #0b5f59; }
 
 blockquote {
   border-left: 4px solid var(--acento);
@@ -180,12 +184,12 @@ main.content table {
   max-width: 100%;
 }
 main.content th {
-  font-family: Helvetica, Arial, sans-serif;
+  font-family: var(--sans);
   font-size: 0.78rem;
   text-transform: uppercase;
   letter-spacing: 0.04em;
   text-align: left;
-  border-bottom: 2px solid var(--tinta);
+  border-bottom: 2px solid var(--acento);
   background: var(--papel);
   padding: 0.5rem 0.6rem;
 }
@@ -253,7 +257,8 @@ figcaption, .figure-caption {
   font-family: Helvetica, Arial, sans-serif;
 }
 #quarto-sidebar {
-  background: var(--panel);
+  background: #ffffff;
+  border-right: 1px solid #e5eae9;
 }
 .sidebar nav[role="doc-toc"] > h2 { font-family: Helvetica, Arial, sans-serif; }
 #quarto-margin-sidebar { background: transparent; }
@@ -266,7 +271,9 @@ figcaption, .figure-caption {
 
 /* Título del sitio en la barra lateral */
 .sidebar-title, .sidebar-title a {
-  font-family: Georgia, serif;
+  font-family: var(--sans);
+  font-weight: 700;
+  letter-spacing: -0.01em;
   color: var(--acento);
 }
 
