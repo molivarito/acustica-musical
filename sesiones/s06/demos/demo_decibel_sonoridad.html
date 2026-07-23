@@ -5,13 +5,13 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Demo — Dibuje su curva isofónica (s06)</title>
 <style>
-  /* Estética editorial: fondo claro, serif para texto, sans para controles */
+  /* Estética "tinta y agua": fondo claro frío, serif para texto, sans para controles */
   :root {
-    --tinta: #1a1a1a;
-    --acento: #7a2e2e;     /* rojo ladrillo sobrio */
-    --linea: #2e4a7a;      /* azul para la curva del usuario */
-    --papel: #faf8f4;
-    --panel: #f0ece4;
+    --tinta: #1f2937;
+    --acento: #0f766e;    /* verde petróleo: referencia, acciones primarias */
+    --linea: #34558b;     /* azul: la curva del propio usuario */
+    --papel: #fbfbf9;
+    --panel: #eef3f2;
   }
   * { box-sizing: border-box; }
   body {
@@ -21,94 +21,166 @@
     max-width: 900px; margin-inline: auto;
   }
   h1 { font-size: 1.35rem; margin: 0 0 .2rem; }
-  .sesion { font-family: Helvetica, Arial, sans-serif; font-size: .8rem;
+  .sesion { font-family: -apple-system, "Segoe UI", Helvetica, Arial, sans-serif; font-size: .8rem;
             letter-spacing: .06em; text-transform: uppercase; color: var(--acento); }
   .bajada { font-style: italic; margin: .3rem 0 1rem; }
-  .panel {
+  .paso {
     background: var(--panel); border-radius: 6px; padding: .9rem 1rem;
-    font-family: Helvetica, Arial, sans-serif; font-size: .9rem;
+    font-family: -apple-system, "Segoe UI", Helvetica, Arial, sans-serif; font-size: .9rem;
     display: flex; flex-wrap: wrap; gap: 1rem 2rem; align-items: flex-start;
+    margin-bottom: .7rem;
+  }
+  .paso-titulo {
+    width: 100%; margin: 0 0 .2rem; font-weight: bold; font-size: .95rem;
+    display: flex; justify-content: space-between; align-items: baseline; gap: .6rem; flex-wrap: wrap;
+  }
+  .resumen-calibracion {
+    font-family: -apple-system, "Segoe UI", Helvetica, Arial, sans-serif; font-size: .85rem;
+    background: var(--panel); border-radius: 6px; padding: .5rem .9rem;
+    display: flex; justify-content: space-between; align-items: center; gap: .6rem; flex-wrap: wrap;
+    margin-bottom: .7rem;
   }
   .ctrl { display: flex; flex-direction: column; gap: .25rem; min-width: 220px; flex: 1; }
   .ctrl label { font-weight: bold; }
+  .ayuda { font-size: .8rem; font-weight: normal; }
   .valor { font-variant-numeric: tabular-nums; }
   input[type=range] { width: 100%; accent-color: var(--acento); }
+  input[type=range]:disabled { opacity: .5; }
   button {
-    font-family: Helvetica, Arial, sans-serif; font-size: .95rem;
+    font-family: -apple-system, "Segoe UI", Helvetica, Arial, sans-serif; font-size: .95rem;
     padding: .5rem 1rem; border: 1px solid var(--tinta); border-radius: 4px;
     background: white; cursor: pointer;
   }
   button.primario { background: var(--acento); color: white; border-color: var(--acento); }
-  fieldset { border: none; padding: 0; margin: 0; display: flex; flex-wrap: wrap; gap: .5rem .8rem; }
+  button.link {
+    border: none; background: none; padding: 0; font-size: .8rem; font-weight: normal;
+    text-decoration: underline; color: var(--linea); cursor: pointer;
+  }
+  button:disabled { opacity: .45; cursor: default; }
+  .botonera { display: flex; flex-direction: column; gap: .4rem; min-width: 190px; flex: 0; }
+  .progreso {
+    font-family: -apple-system, "Segoe UI", Helvetica, Arial, sans-serif; font-size: .88rem;
+    padding: .1rem 0 .3rem; width: 100%;
+  }
+  .progreso b { color: var(--acento); }
+  .chips { display: flex; flex-wrap: wrap; gap: .4rem; width: 100%; }
+  .chip {
+    font-family: -apple-system, "Segoe UI", Helvetica, Arial, sans-serif; font-size: .85rem;
+    padding: .3rem .7rem; border-radius: 999px; border: 1px solid var(--tinta);
+    background: white; cursor: pointer; transition: transform .1s ease;
+  }
+  .chip[data-req="1"]::after { content: " ★"; }
+  .chip.ref { background: white; border-style: dashed; cursor: default; color: #555; }
+  .chip.hecha { background: var(--acento); color: white; border-color: var(--acento); }
+  .chip.actual { outline: 2px solid var(--linea); outline-offset: 2px; font-weight: bold; }
+  .chip:active { transform: scale(.95); }
+  fieldset { border: none; padding: 0; margin: 0; }
   canvas { width: 100%; height: 280px; display: block; background: white;
-           border: 1px solid #ccc; border-radius: 4px; margin-top: 1rem; }
+           border: 1px solid #ccc; border-radius: 4px; margin-top: .3rem; }
   .sonando {
-    font-family: Helvetica, Arial, sans-serif; font-size: .95rem; font-weight: bold;
+    font-family: -apple-system, "Segoe UI", Helvetica, Arial, sans-serif; font-size: .95rem; font-weight: bold;
     padding: .3rem .6rem; border-radius: 4px; background: white; border: 1px solid #ccc;
     min-width: 12rem; text-align: center;
   }
-  .aviso { border-left: 4px solid var(--acento); background: #fdf3f3;
+  .aviso { border-left: 4px solid var(--acento); background: var(--panel);
            padding: .5rem .8rem; margin-top: 1rem; font-size: .92rem; }
   .observar { border-left: 4px solid var(--acento); padding: .2rem 0 .2rem 1rem; margin-top: 1.2rem; }
   .observar h2 { font-size: 1rem; margin: .2rem 0; }
   ol { margin: .4rem 0; padding-left: 1.2rem; }
+  .toast {
+    font-family: -apple-system, "Segoe UI", Helvetica, Arial, sans-serif; font-size: .85rem;
+    color: white; background: var(--tinta); border-radius: 4px; padding: .4rem .8rem;
+    opacity: 0; transform: translateY(-4px); transition: opacity .25s ease, transform .25s ease;
+    pointer-events: none; width: fit-content;
+  }
+  .toast.show { opacity: 1; transform: translateY(0); }
+  .banner-completa {
+    font-family: -apple-system, "Segoe UI", Helvetica, Arial, sans-serif; font-size: .9rem;
+    background: var(--acento); color: white; border-radius: 6px; padding: .6rem .9rem;
+    margin-top: .3rem; display: none;
+  }
+  .banner-completa.show { display: block; }
 </style>
 </head>
 <body>
 <p class="sesion">Acústica Musical UC · Sesión 06</p>
 <h1>Dibuje su curva isofónica</h1>
-<p class="bajada">Con audífonos: iguale de oído la sonoridad de cada tono de
-prueba con la referencia de 1000 Hz, marque el punto, y observe la curva
-que su propio oído dibuja.</p>
+<p class="bajada">Con audífonos: un camino guiado de 3 tonos obligatorios
+(y 3 opcionales) igualados de oído contra la referencia de 1000 Hz. Al
+final tendrá SU curva — la huella que su propio oído dibuja entre
+frecuencia y nivel.</p>
 
-<div class="panel">
-  <div class="ctrl" style="min-width:260px">
-    <label>Frecuencia del tono de prueba (Hz)</label>
-    <fieldset id="frecs">
-      <label><input type="radio" name="frec" value="125" checked> 125</label>
-      <label><input type="radio" name="frec" value="250"> 250</label>
-      <label><input type="radio" name="frec" value="2000"> 2000</label>
-      <label><input type="radio" name="frec" value="4000"> 4000</label>
-      <label><input type="radio" name="frec" value="8000"> 8000</label>
-    </fieldset>
+<!-- ===================== PASO 1: calibración de la referencia ===================== -->
+<section class="paso" id="pasoCalibracion">
+  <p class="paso-titulo">Paso 1 de 2 — Fije un nivel de referencia cómodo</p>
+  <div class="ctrl">
+    <label for="ref">Nivel de la referencia (1000 Hz):
+      <span class="valor" id="refVal">−30 dB (rel.)</span></label>
+    <input type="range" id="ref" min="-50" max="-10" value="-30" step="1">
+    <span class="ayuda">Suba el volumen del computador a su nivel normal
+    de escucha. Mueva este control hasta que el tono suene <b>cómodo</b> —
+    ni un susurro ni molesto — y no lo vuelva a tocar durante su medición:
+    todo lo que mida después es <i>relativo</i> a este nivel.</span>
+    <div class="sonando" id="sonando">■ silencio</div>
+  </div>
+  <div class="botonera">
+    <button id="btnPlayRef">▶ Escuchar referencia</button>
+    <button id="btnStop">■ Detener</button>
+    <button id="btnConfirmarRef" class="primario">Listo, empezar a medir ►</button>
+  </div>
+</section>
+
+<!-- Resumen compacto una vez confirmada la referencia -->
+<div class="resumen-calibracion" id="resumenCalibracion" style="display:none">
+  <span>Referencia fijada en <b id="refFijadaVal">−30 dB</b> (rel.), no se toca durante la medición.</span>
+  <button id="btnEditarRef" class="link">Editar nivel de referencia</button>
+</div>
+
+<!-- ===================== PASO 2: medición guiada ===================== -->
+<section class="paso" id="pasoMedicion" hidden>
+  <p class="paso-titulo">Paso 2 de 2 — Iguale cada tono con la referencia</p>
+  <div class="progreso" id="progreso">Progreso: 0/3 obligatorias</div>
+  <div class="chips" id="chips">
+    <button type="button" class="chip" data-f="125" data-req="1">125</button>
+    <button type="button" class="chip" data-f="250">250</button>
+    <button type="button" class="chip ref" data-f="1000" data-req="1" disabled>1000 (ref.)</button>
+    <button type="button" class="chip" data-f="2000">2000</button>
+    <button type="button" class="chip" data-f="4000" data-req="1">4000</button>
+    <button type="button" class="chip" data-f="8000">8000</button>
+  </div>
+  <div class="ctrl">
     <label for="nivel">Nivel del tono de prueba:
       <span class="valor" id="nivelVal">−30 dB (rel.)</span></label>
     <input type="range" id="nivel" min="-60" max="0" value="-30" step="1">
   </div>
-  <div class="ctrl" style="min-width:200px">
-    <label for="ref">Nivel de la referencia (1000 Hz):
-      <span class="valor" id="refVal">−30 dB (rel.)</span></label>
-    <input type="range" id="ref" min="-50" max="-10" value="-30" step="1">
-    <span style="font-size:.8rem">Fíjelo cómodo al empezar y no lo mueva
-    durante su medición.</span>
-    <div class="sonando" id="sonando">■ silencio</div>
-  </div>
-  <div class="ctrl" style="min-width:170px; flex:0">
+  <div class="botonera">
     <button id="btnPlay" class="primario">▶ Alternar ref./prueba</button>
-    <button id="btnStop">■ Detener</button>
     <button id="btnMarca">Marcar punto (igual de fuerte)</button>
     <button id="btnBorra">Borrar mi curva</button>
+    <div class="toast" id="toast"></div>
   </div>
-</div>
+  <div class="banner-completa" id="bannerCompleta"></div>
+</section>
 
 <canvas id="lienzo"></canvas>
 
 <div class="aviso"><b>Advertencia de calibración:</b> sin un micrófono
 calibrado, estos decibeles son <b>relativos</b> al máximo de la demo —
-no son dB SPL. La <b>forma</b> de su curva sí es comparable con la de
-otros; los valores absolutos, no. (Y dependen del volumen que usted
-fijó en el notebook: por eso no se toca a mitad de medición.)</div>
+no son dB SPL. Lo que vale es la <b>FORMA</b> de su curva (sí comparable
+con la de otros); los valores absolutos, no — y dependen del volumen que
+usted fijó en el notebook, por eso no se toca a mitad de medición.</div>
 
 <div class="observar">
   <h2>¿Qué observar?</h2>
   <ol>
-    <li><b>Prediga</b> por escrito antes de sonar nada: para igualar la
-        sonoridad de la referencia, ¿el tono de 125 Hz necesitará más,
-        igual o menos nivel? Después mida los 5 puntos.</li>
-    <li>¿Qué forma tiene su curva? ¿Dónde su oído pidió más nivel — y
-        coincide la forma (no los valores) con la de sus compañeros?</li>
-    <li>Baje la referencia 15 dB y repita 125 Hz y 4000 Hz: ¿la curva
-        conserva la forma o se acentúa en los extremos?</li>
+    <li><b>Prediga</b> por escrito antes de medir (en su hoja): para
+        igualar la referencia, ¿el tono de 125 Hz necesitará más, igual
+        o menos nivel que el de 4000 Hz? Confírmelo con sus 3 puntos ★.</li>
+    <li>¿Qué forma tiene su curva? ¿Dónde pidió su oído más nivel — y
+        coincide esa forma (no los valores) con la de sus compañeros?</li>
+    <li>Use "Editar nivel de referencia" para bajarla ~15 dB y repita
+        125 y 4000 Hz: ¿la forma se conserva o se acentúa hacia los
+        extremos?</li>
   </ol>
 </div>
 
@@ -118,25 +190,34 @@ fijó en el notebook: por eso no se toca a mitad de medición.)</div>
 // Demo s06 — curva isofónica propia. Un solo concepto: igual nivel físico
 // no es igual sonoridad; el usuario iguala de oído tonos de distinta
 // frecuencia contra una referencia de 1000 Hz y la demo grafica SU curva.
+// Flujo guiado en 2 pasos:
+//   1) calibrar el nivel de referencia (cómodo, no se vuelve a tocar);
+//   2) medir cada frecuencia siguiendo el orden sugerido por los "chips"
+//      (★ = obligatoria: 125, 1000 -ref-, 4000; el resto es opcional).
 // Audio: dos osciladores permanentes (referencia y prueba) cuyas ganancias
 // se alternan con rampas cortas (sin clics). Ganancia maestra ≤ 0,5.
-// El profesor puede ajustar abajo FRECS, niveles límite y tiempos.
+// El profesor puede ajustar abajo FRECUENCIAS, límites de nivel y tiempos.
 // ---------------------------------------------------------------------------
 const F_REF = 1000;                 // frecuencia de la referencia, Hz
+const REQUERIDAS = [125, 1000, 4000];       // ★ mínimo irrenunciable (incluye la ref.)
+const OPCIONALES = [250, 2000, 8000];       // para quien alcance
 const DUR_FASE = 0.9;               // duración de cada fase ref/prueba, s
 const RAMPA = 0.03;                 // rampa de conmutación, s (evita clics)
 const GAN_MAESTRA = 0.5;            // tope de seguridad auditiva
 
 let ctxAudio = null, oscRef = null, oscPrueba = null;
 let ganRef = null, ganPrueba = null, ganMaestra = null;
-let sonando = false, fase = 'ref', timerId = null;
+let sonando = false, modo = 'ninguno', fase = 'ref', timerId = null;
+let calibrado = false;
+let frecActual = 125;               // tono de prueba seleccionado (vía chips)
+let toastTimer = null;
 
 const $ = id => document.getElementById(id);
 const marcas = {};                  // {frecuencia: nivel dB igualado}
 
 function nivelPrueba() { return parseInt($('nivel').value, 10); }   // dB rel.
 function nivelRef()    { return parseInt($('ref').value, 10); }     // dB rel.
-function frecPrueba()  { return parseInt(document.querySelector('input[name=frec]:checked').value, 10); }
+function frecPrueba()  { return frecActual; }
 const dB2gan = dB => Math.pow(10, dB / 20);   // dB relativos → factor de ganancia
 
 function refrescaEtiquetas() {
@@ -145,28 +226,49 @@ function refrescaEtiquetas() {
 }
 
 // --- audio -----------------------------------------------------------------
-function iniciar() {
-  if (!ctxAudio) {
-    // El AudioContext se crea solo tras la interacción del usuario
-    ctxAudio = new (window.AudioContext || window.webkitAudioContext)();
-    ganMaestra = ctxAudio.createGain();
-    ganMaestra.gain.value = GAN_MAESTRA;
-    ganMaestra.connect(ctxAudio.destination);
-    oscRef = ctxAudio.createOscillator();
-    oscRef.frequency.value = F_REF;
-    ganRef = ctxAudio.createGain(); ganRef.gain.value = 0;
-    oscRef.connect(ganRef).connect(ganMaestra);
-    oscRef.start();
-    oscPrueba = ctxAudio.createOscillator();
-    ganPrueba = ctxAudio.createGain(); ganPrueba.gain.value = 0;
-    oscPrueba.connect(ganPrueba).connect(ganMaestra);
-    oscPrueba.start();
-  }
+function crearContextoSiFalta() {
+  if (ctxAudio) return;
+  // El AudioContext se crea solo tras la interacción del usuario
+  ctxAudio = new (window.AudioContext || window.webkitAudioContext)();
+  ganMaestra = ctxAudio.createGain();
+  ganMaestra.gain.value = GAN_MAESTRA;
+  ganMaestra.connect(ctxAudio.destination);
+  oscRef = ctxAudio.createOscillator();
+  oscRef.frequency.value = F_REF;
+  ganRef = ctxAudio.createGain(); ganRef.gain.value = 0;
+  oscRef.connect(ganRef).connect(ganMaestra);
+  oscRef.start();
+  oscPrueba = ctxAudio.createOscillator();
+  ganPrueba = ctxAudio.createGain(); ganPrueba.gain.value = 0;
+  oscPrueba.connect(ganPrueba).connect(ganMaestra);
+  oscPrueba.start();
+}
+
+// Paso 1: solo suena la referencia (para calibrar el nivel cómodo)
+function iniciarSoloRef() {
+  crearContextoSiFalta();
   ctxAudio.resume();
-  if (!sonando) {
+  if (timerId) { clearInterval(timerId); timerId = null; }
+  modo = 'solo-ref'; sonando = true; fase = 'ref';
+  const t = ctxAudio.currentTime;
+  ganPrueba.gain.setTargetAtTime(0, t, RAMPA / 3);
+  ganRef.gain.setTargetAtTime(dB2gan(nivelRef()), t, RAMPA / 3);
+  $('sonando').textContent = '♪ suena: REFERENCIA (1000 Hz)';
+  $('sonando').style.color = getComputedStyle(document.body).getPropertyValue('--acento');
+}
+
+// Paso 2: alterna referencia / tono de prueba
+function iniciarAlternando() {
+  crearContextoSiFalta();
+  ctxAudio.resume();
+  modo = 'alternando';
+  if (!sonando || fase === undefined) {
     sonando = true;
     fase = 'prueba';                 // conmuta() la invierte de inmediato
     conmuta();
+    if (timerId) clearInterval(timerId);
+    timerId = setInterval(conmuta, DUR_FASE * 1000);
+  } else if (!timerId) {
     timerId = setInterval(conmuta, DUR_FASE * 1000);
   }
 }
@@ -195,7 +297,7 @@ function conmuta() {
 }
 
 function detener() {
-  sonando = false;
+  sonando = false; modo = 'ninguno';
   if (timerId) { clearInterval(timerId); timerId = null; }
   if (ctxAudio) {
     const t = ctxAudio.currentTime;
@@ -206,17 +308,77 @@ function detener() {
   $('sonando').style.color = 'inherit';
 }
 
-// Si el usuario mueve el nivel mientras suena la prueba, se aplica al vuelo
+// Si el usuario mueve un nivel mientras algo suena, se aplica al vuelo
 $('nivel').addEventListener('input', () => {
   refrescaEtiquetas();
-  if (sonando && fase === 'prueba')
+  if (sonando && modo === 'alternando' && fase === 'prueba')
     ganPrueba.gain.setTargetAtTime(dB2gan(nivelPrueba()), ctxAudio.currentTime, 0.01);
 });
 $('ref').addEventListener('input', () => {
   refrescaEtiquetas();
-  if (sonando && fase === 'ref')
+  if (sonando && (modo === 'solo-ref' || (modo === 'alternando' && fase === 'ref')))
     ganRef.gain.setTargetAtTime(dB2gan(nivelRef()), ctxAudio.currentTime, 0.01);
 });
+
+// --- flujo guiado: progreso, chips y avance a la "siguiente" frecuencia -----
+function estaHecha(f) { return f === F_REF || Object.prototype.hasOwnProperty.call(marcas, f); }
+function frecsPendientesRequeridas() { return REQUERIDAS.filter(f => f !== F_REF && !estaHecha(f)); }
+function frecsPendientesOpcionales() { return OPCIONALES.filter(f => !estaHecha(f)); }
+function siguienteFrecuencia() {
+  const req = frecsPendientesRequeridas();
+  if (req.length) return req[0];
+  const opc = frecsPendientesOpcionales();
+  if (opc.length) return opc[0];
+  return null;
+}
+
+function seleccionaFrecuencia(f) {
+  frecActual = f;
+  if (sonando && modo === 'alternando' && fase === 'prueba' && ctxAudio)
+    oscPrueba.frequency.setValueAtTime(f, ctxAudio.currentTime);
+  // punto de partida sugerido para cada frecuencia nueva: el nivel de referencia
+  $('nivel').value = nivelRef();
+  refrescaEtiquetas();
+  actualizaChips();
+}
+
+function actualizaChips() {
+  document.querySelectorAll('#chips .chip').forEach(b => {
+    const f = Number(b.dataset.f);
+    b.classList.toggle('hecha', estaHecha(f) && f !== F_REF ? true : (f === F_REF));
+    b.classList.toggle('actual', f === frecActual && f !== F_REF);
+  });
+}
+
+function actualizaProgreso() {
+  const doneReq = REQUERIDAS.filter(estaHecha).length;
+  const totalReq = REQUERIDAS.length;
+  const doneOpc = OPCIONALES.filter(estaHecha).length;
+  const totalOpc = OPCIONALES.length;
+  const banner = $('bannerCompleta');
+  let texto = `Progreso: <b>${doneReq}/${totalReq}</b> obligatorias`;
+  if (doneReq < totalReq) {
+    texto += ` · Siguiente: iguale <b>${siguienteFrecuencia()} Hz</b> · faltan ${totalReq - doneReq}`;
+    banner.classList.remove('show');
+  } else if (doneOpc < totalOpc) {
+    texto += ` · opcionales ${doneOpc}/${totalOpc} · siguiente opcional: ${siguienteFrecuencia()} Hz`;
+    banner.textContent = '★ Mínimo completo — puede copiar su curva ahora, o seguir con las opcionales.';
+    banner.classList.add('show');
+  } else {
+    texto += ` · opcionales ${doneOpc}/${totalOpc} completas`;
+    banner.textContent = '✓ Curva completa (6/6 puntos). Cópiela a su hoja de registro.';
+    banner.classList.add('show');
+  }
+  $('progreso').innerHTML = texto;
+}
+
+function mostrarToast(msg) {
+  const t = $('toast');
+  t.textContent = msg;
+  t.classList.add('show');
+  clearTimeout(toastTimer);
+  toastTimer = setTimeout(() => t.classList.remove('show'), 1400);
+}
 
 // --- gráfico: ejes Hz (log) / dB relativos ----------------------------------
 const lienzo = $('lienzo');
@@ -233,7 +395,7 @@ function dibuja() {
   const g = lienzo.getContext('2d');
   g.setTransform(dpr, 0, 0, dpr, 0, 0);
   g.clearRect(0, 0, w, h);
-  g.font = '11px Helvetica, Arial, sans-serif';
+  g.font = '11px -apple-system, Helvetica, Arial, sans-serif';
 
   // rejilla y ejes rotulados
   g.strokeStyle = '#ddd'; g.fillStyle = '#555'; g.lineWidth = 1;
@@ -277,30 +439,72 @@ function dibuja() {
     g.beginPath(); g.arc(xDe(f, m, w), yDe(marcas[f], h), 4.5, 0, 2 * Math.PI); g.fill();
   }
 
-  // cruceta: posición actual del tono de prueba (aún sin marcar)
-  const xa = xDe(frecPrueba(), m, w), ya = yDe(nivelPrueba(), h);
-  g.strokeStyle = '#999';
-  g.beginPath(); g.moveTo(xa - 7, ya); g.lineTo(xa + 7, ya); g.stroke();
-  g.beginPath(); g.moveTo(xa, ya - 7); g.lineTo(xa, ya + 7); g.stroke();
+  // cruceta: posición actual del tono de prueba (aún sin marcar), solo en paso 2
+  if (calibrado) {
+    const xa = xDe(frecPrueba(), m, w), ya = yDe(nivelPrueba(), h);
+    g.strokeStyle = '#999';
+    g.beginPath(); g.moveTo(xa - 7, ya); g.lineTo(xa + 7, ya); g.stroke();
+    g.beginPath(); g.moveTo(xa, ya - 7); g.lineTo(xa, ya + 7); g.stroke();
+  }
 
   requestAnimationFrame(dibuja);
 }
 requestAnimationFrame(dibuja);
 
 // --- marcar y borrar puntos --------------------------------------------------
-$('btnMarca').addEventListener('click', () => { marcas[frecPrueba()] = nivelPrueba(); });
-$('btnBorra').addEventListener('click', () => { for (const k in marcas) delete marcas[k]; });
+$('btnMarca').addEventListener('click', () => {
+  marcas[frecActual] = nivelPrueba();
+  mostrarToast(`✓ ${frecActual} Hz marcado (${nivelPrueba().toString().replace('-', '−')} dB rel.)`);
+  actualizaChips();
+  actualizaProgreso();
+  const sig = siguienteFrecuencia();
+  if (sig !== null) seleccionaFrecuencia(sig);
+});
+$('btnBorra').addEventListener('click', () => {
+  for (const k in marcas) delete marcas[k];
+  mostrarToast('Curva borrada');
+  seleccionaFrecuencia(125);
+  actualizaChips();
+  actualizaProgreso();
+});
 
-// --- controles ----------------------------------------------------------------
-$('btnPlay').addEventListener('click', iniciar);
+// --- selección de frecuencia mediante los "chips" ---------------------------
+document.querySelectorAll('#chips .chip:not(.ref)').forEach(b => {
+  b.addEventListener('click', () => seleccionaFrecuencia(Number(b.dataset.f)));
+});
+
+// --- controles de audio -------------------------------------------------------
+$('btnPlayRef').addEventListener('click', iniciarSoloRef);
+$('btnPlay').addEventListener('click', iniciarAlternando);
 $('btnStop').addEventListener('click', detener);
-document.querySelectorAll('input[name=frec]').forEach(r =>
-  r.addEventListener('change', () => {
-    // al cambiar la frecuencia, aplica de inmediato si la prueba está sonando
-    if (sonando && fase === 'prueba' && ctxAudio)
-      oscPrueba.frequency.setValueAtTime(frecPrueba(), ctxAudio.currentTime);
-  }));
+
+// --- paso 1 → paso 2: confirmar calibración ----------------------------------
+$('btnConfirmarRef').addEventListener('click', () => {
+  detener();
+  calibrado = true;
+  $('ref').disabled = true;
+  $('pasoCalibracion').hidden = true;
+  $('refFijadaVal').textContent = nivelRef().toString().replace('-', '−') + ' dB';
+  $('resumenCalibracion').style.display = 'flex';
+  $('pasoMedicion').hidden = false;
+  seleccionaFrecuencia(siguienteFrecuencia() ?? 125);
+  actualizaChips();
+  actualizaProgreso();
+});
+
+// Volver a calibrar (p. ej. para repetir con una referencia más suave, ver "¿Qué observar?")
+$('btnEditarRef').addEventListener('click', () => {
+  detener();
+  calibrado = false;
+  $('ref').disabled = false;
+  $('pasoCalibracion').hidden = false;
+  $('resumenCalibracion').style.display = 'none';
+  $('pasoMedicion').hidden = true;
+});
+
 refrescaEtiquetas();
+actualizaChips();
+actualizaProgreso();
 </script>
 </body>
 </html>

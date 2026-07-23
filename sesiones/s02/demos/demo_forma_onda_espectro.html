@@ -5,13 +5,15 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Demo — Forma de onda y espectro en vivo (s02)</title>
 <style>
-  /* Estética editorial del curso: fondo claro, serif para texto, sans para controles */
+  /* Estética "tinta y agua" del curso (2026-07-22): fondo claro frío,
+     serif para texto explicativo, sans para controles y ejes. */
   :root {
-    --tinta: #1a1a1a;
-    --acento: #7a2e2e;     /* rojo ladrillo sobrio */
-    --linea: #2e4a7a;      /* azul para las curvas */
-    --papel: #faf8f4;
-    --panel: #f0ece4;
+    --tinta: #1f2937;
+    --acento: #0f766e;     /* verde petróleo: espectro, énfasis, botón primario */
+    --linea: #34558b;      /* azul: forma de onda */
+    --papel: #fbfbf9;
+    --panel: #eef3f2;
+    --sans: -apple-system, 'Segoe UI', Helvetica, sans-serif;
   }
   * { box-sizing: border-box; }
   body {
@@ -21,12 +23,12 @@
     max-width: 900px; margin-inline: auto;
   }
   h1 { font-size: 1.35rem; margin: 0 0 .2rem; }
-  .sesion { font-family: Helvetica, Arial, sans-serif; font-size: .8rem;
+  .sesion { font-family: var(--sans); font-size: .8rem;
             letter-spacing: .06em; text-transform: uppercase; color: var(--acento); }
   .bajada { font-style: italic; margin: .3rem 0 1rem; }
   .panel {
     background: var(--panel); border-radius: 6px; padding: .9rem 1rem;
-    font-family: Helvetica, Arial, sans-serif; font-size: .9rem;
+    font-family: var(--sans); font-size: .9rem;
     display: flex; flex-wrap: wrap; gap: 1rem 2rem; align-items: flex-start;
   }
   .ctrl { display: flex; flex-direction: column; gap: .25rem; min-width: 200px; flex: 1; }
@@ -34,22 +36,37 @@
   .valor { font-variant-numeric: tabular-nums; }
   input[type=range] { width: 100%; accent-color: var(--acento); }
   button {
-    font-family: Helvetica, Arial, sans-serif; font-size: .95rem;
+    font-family: var(--sans); font-size: .95rem;
     padding: .5rem 1rem; border: 1px solid var(--tinta); border-radius: 4px;
-    background: white; cursor: pointer;
+    background: white; color: var(--tinta); cursor: pointer;
   }
   button.primario { background: var(--acento); color: white; border-color: var(--acento); }
+  button.secundario { border-color: var(--linea); color: var(--linea); }
   button[disabled] { opacity: .45; cursor: default; }
   fieldset { border: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: .2rem; }
   canvas { width: 100%; height: 180px; display: block; background: white;
-           border: 1px solid #ccc; border-radius: 4px; margin-top: 1rem; }
-  .rotulo { font-family: Helvetica, Arial, sans-serif; font-size: .8rem;
-            color: #555; margin: .8rem 0 -0.8rem; }
-  #estado { font-family: Helvetica, Arial, sans-serif; font-size: .85rem;
+           border: 1px solid #ccc; border-radius: 4px; }
+  .contenedor-canvas { position: relative; margin-top: 1rem; }
+  .rotulo { font-family: var(--sans); font-size: .8rem;
+            color: #555; margin: .8rem 0 -0.8rem; display: flex; justify-content: space-between; gap: .5rem; flex-wrap: wrap; }
+  .rotulo .conteo { font-weight: bold; color: var(--acento); }
+  #estado { font-family: var(--sans); font-size: .85rem;
             margin-top: .6rem; color: var(--acento); min-height: 1.2em; }
+  .etiqueta-actual { font-family: var(--sans); font-size: .85rem; margin: .8rem 0 0;
+            color: var(--tinta); }
+  .etiqueta-actual b { color: var(--linea); }
   .observar { border-left: 4px solid var(--acento); padding: .2rem 0 .2rem 1rem; margin-top: 1.2rem; }
   .observar h2 { font-size: 1rem; margin: .2rem 0; }
   ol { margin: .4rem 0; padding-left: 1.2rem; }
+  /* Velo del "modo taller": cubre el gráfico para forzar la predicción en papel
+     antes de revelar la pantalla (taller "retratos de sonido" de s02). */
+  .velo {
+    position: absolute; inset: 0; display: none; align-items: center; justify-content: center;
+    text-align: center; padding: 1rem; border-radius: 4px;
+    background: rgba(251,251,249,.96); font-family: var(--sans); font-size: .9rem;
+    color: var(--tinta); border: 1px dashed var(--linea); cursor: pointer;
+  }
+  .cubierto .velo { display: flex; }
 </style>
 </head>
 <body>
@@ -82,25 +99,55 @@ como historia (presión vs. tiempo) y como receta (nivel vs. frecuencia).</p>
     <span style="font-size:.8rem; color:#555">El micrófono no se reproduce
     por los parlantes (evita el acople); suena lo que usted haga sonar.</span>
   </div>
+  <div class="ctrl" style="min-width:190px">
+    <label>Taller "retratos de sonido": ¿qué está retratando?</label>
+    <fieldset id="retrato">
+      <label><input type="radio" name="retrato" value="vocal"> vocal sostenida ("aaa")</label>
+      <label><input type="radio" name="retrato" value="silbido"> silbido</label>
+      <label><input type="radio" name="retrato" value="sss"> "sss" sostenido</label>
+      <label><input type="radio" name="retrato" value="golpe"> golpe seco</label>
+      <label><input type="radio" name="retrato" value="libre" checked> libre / explorando</label>
+    </fieldset>
+    <button id="btnCubrir" class="secundario">🙈 Cubrir (modo predicción)</button>
+  </div>
 </div>
 <div id="estado"></div>
+<p class="etiqueta-actual">Retratando ahora: <b id="tagActual">libre / explorando</b> —
+  congele la imagen para comparar con el dibujo hecho en la guía.</p>
 
-<p class="rotulo">Forma de onda — presión (amplitud relativa) vs. tiempo (ms)</p>
-<canvas id="cOnda"></canvas>
-<p class="rotulo">Espectro — nivel (dB relativos, 0 = máximo) vs. frecuencia (Hz)</p>
-<canvas id="cEspectro"></canvas>
+<p class="rotulo"><span>Forma de onda — presión (amplitud relativa) vs. tiempo (ms)</span></p>
+<div class="contenedor-canvas" id="wrapOnda">
+  <canvas id="cOnda"></canvas>
+  <div class="velo" id="veloOnda" title="Clic para revelar">🙈 Dibuje su predicción en la
+    guía. Clic aquí (o en «Cubrir») para revelar la forma de onda real.</div>
+</div>
+<p class="rotulo"><span>Espectro — nivel (dB relativos, 0 = máximo) vs. frecuencia (Hz)</span>
+  <span class="conteo" id="conteoPicos"></span></p>
+<div class="contenedor-canvas" id="wrapEspectro">
+  <canvas id="cEspectro"></canvas>
+  <div class="velo" id="veloEspectro" title="Clic para revelar">🙈 ¿Cuántos picos apuesta
+    que va a ver? Anótelo y haga clic aquí para revelar el espectro real.</div>
+</div>
 
 <div class="observar">
   <h2>¿Qué observar?</h2>
   <ol>
-    <li>Cante una vocal en una nota fija y <b>prediga antes</b>: ¿cuántos
-        picos (parciales) va a mostrar el espectro? ¿Puede distinguir esos
-        parciales mirando solo la forma de onda?</li>
+    <li><b>Apueste antes de mirar:</b> active "Cubrir", cante una vocal en
+        nota fija y anote cuántos picos (parciales) cree que va a mostrar
+        el espectro. Revele: ¿el contador de picos le dio la razón? ¿Puede
+        distinguir esos parciales mirando solo la forma de onda, sin el
+        espectro?</li>
     <li>Silbido y vocal en la misma nota: ¿en cuál de las dos vistas se
-        distinguen mejor, y qué diferencia exactamente?</li>
+        distinguen antes, y qué diferencia exactamente? Mire el contador de
+        picos: ¿por qué el silbido casi no suma parciales?</li>
     <li>Con la fuente interna, pase de senoidal a sierra sin cambiar la
         frecuencia: ¿qué cambia en cada vista, y qué cambia en lo que oye?
-        ¿Y el ruido: por qué no tiene picos?</li>
+        Cambie a ruido: ¿por qué el contador de picos salta de un número
+        estable a uno que tiembla cuadro a cuadro?</li>
+    <li>Con el rótulo "¿qué está retratando?" marcado y la imagen
+        congelada, guarde uno a uno los 4 retratos de su grupo (vocal,
+        silbido, "sss", golpe): ¿cuál de los cuatro cambia más entre la
+        forma de onda y el espectro? ¿Cuál casi no cambia?</li>
   </ol>
 </div>
 
@@ -127,8 +174,15 @@ let fuente = null;                          // nodo actual (mic u oscilador/ruid
 let streamMic = null;                       // stream del micrófono, para cerrarlo
 let tipoFuente = 'ninguna';                 // 'mic' | 'osc' | 'ninguna'
 let congelado = false;
+let cubierto = false;                       // "modo taller": vela los gráficos hasta revelar
 
 const $ = id => document.getElementById(id);
+
+// Etiquetas legibles del taller "retratos de sonido" (mismos 4 sonidos del plan de s02)
+const ETIQUETAS_RETRATO = {
+  vocal: 'vocal sostenida ("aaa")', silbido: 'silbido', sss: '"sss" sostenido',
+  golpe: 'golpe seco', libre: 'libre / explorando'
+};
 
 // Slider logarítmico: posición 0..1000 → F_MIN..F_MAX (posición 529 ≈ 440 Hz)
 function frecActual() {
@@ -247,7 +301,28 @@ $('btnStop').addEventListener('click', detener);
 $('btnFreeze').addEventListener('click', () => {
   congelado = !congelado;
   $('btnFreeze').textContent = congelado ? '▶ Descongelar' : '❄ Congelar imagen';
+  if (congelado) avisa('Imagen congelada — retrato: ' + ETIQUETAS_RETRATO[retratoActual()] +
+                        '. Compárela con el dibujo de la guía.');
 });
+
+// Taller "retratos de sonido": qué sonido de los 4 (o "libre") se está mostrando
+function retratoActual() {
+  return document.querySelector('input[name=retrato]:checked').value;
+}
+document.querySelectorAll('input[name=retrato]').forEach(r =>
+  r.addEventListener('change', () => { $('tagActual').textContent = ETIQUETAS_RETRATO[retratoActual()]; }));
+
+// "Modo taller": cubre ambos gráficos para forzar la predicción en papel antes
+// de revelar la pantalla (coincide con la secuencia "dibuja ANTES" del plan).
+function ponVelo(activo) {
+  cubierto = activo;
+  $('wrapOnda').classList.toggle('cubierto', cubierto);
+  $('wrapEspectro').classList.toggle('cubierto', cubierto);
+  $('btnCubrir').textContent = cubierto ? '👁 Revelar' : '🙈 Cubrir (modo predicción)';
+}
+$('btnCubrir').addEventListener('click', () => ponVelo(!cubierto));
+$('veloOnda').addEventListener('click', () => ponVelo(false));
+$('veloEspectro').addEventListener('click', () => ponVelo(false));
 
 // --- dibujo -------------------------------------------------------------------
 // Prepara un canvas nítido en pantallas retina; devuelve contexto y tamaño CSS.
@@ -260,6 +335,31 @@ function lienzo(c) {
   return { g, w, h };
 }
 const AZUL = getComputedStyle(document.documentElement).getPropertyValue('--linea');
+const TEAL = getComputedStyle(document.documentElement).getPropertyValue('--acento');
+
+// Detección simple de picos (parciales) del espectro: máximos locales que
+// superan el piso de ruido y están a UMBRAL_REL dB del pico más fuerte.
+// Es deliberadamente naíf (no es un detector "profesional"): alcanza para
+// que el número visible coincida con lo que el ojo cuenta como picos, y para
+// que el ruido ("sss") arroje un conteo inestable cuadro a cuadro (a
+// propósito: ilustra que ahí no hay periodicidad que contar).
+function detectaPicos(datos, nBins, hzPorBin) {
+  const UMBRAL_REL = 25;             // dB bajo el máximo: cuánto "asoma" un pico
+  const PISO = DB_MIN + 15;          // ignora el piso de ruido del analizador
+  const SEP_MIN_HZ = 25;             // separación mínima entre picos (evita duplicar un lóbulo)
+  const sepMinBins = Math.max(1, Math.round(SEP_MIN_HZ / hzPorBin));
+  let maxDb = -Infinity;
+  for (let i = 0; i < nBins; i++) if (datos[i] > maxDb) maxDb = datos[i];
+  const picos = [];
+  for (let i = 2; i < nBins - 2; i++) {
+    const v = datos[i];
+    if (v < PISO || v < maxDb - UMBRAL_REL) continue;
+    if (v >= datos[i - 1] && v >= datos[i + 1] && v > datos[i - 2] && v > datos[i + 2]) {
+      if (!picos.length || (i - picos[picos.length - 1]) > sepMinBins) picos.push(i);
+    }
+  }
+  return picos;
+}
 
 const datosOnda = new Float32Array(FFT_ONDA);
 function dibujaOnda() {
@@ -322,13 +422,13 @@ function dibujaEspectro() {
     const y = 6 + altoUtil * (DB_MAX - db) / (DB_MAX - DB_MIN);
     g.fillText(db + ' dB', 2, y + 4);
   }
-  if (!analEspectro || !ctxAudio) return;
+  if (!analEspectro || !ctxAudio) { $('conteoPicos').textContent = ''; return; }
   if (!datosEspectro) datosEspectro = new Float32Array(analEspectro.frequencyBinCount);
   analEspectro.getFloatFrequencyData(datosEspectro);
 
   const hzPorBin = ctxAudio.sampleRate / analEspectro.fftSize;
   const nBins = Math.min(datosEspectro.length, Math.ceil(F_VISTA_MAX / hzPorBin));
-  g.strokeStyle = AZUL; g.lineWidth = 1.5;
+  g.strokeStyle = TEAL; g.lineWidth = 1.5;
   g.beginPath();
   for (let i = 0; i < nBins; i++) {
     const x = margen + anchoUtil * (i * hzPorBin) / F_VISTA_MAX;
@@ -337,6 +437,19 @@ function dibujaEspectro() {
     i ? g.lineTo(x, y) : g.moveTo(x, y);
   }
   g.stroke();
+
+  // Marca los picos (parciales) detectados y actualiza el contador rotulado:
+  // responde en vivo a la pregunta guía "¿cuántos picos va a mostrar el espectro?"
+  const picos = detectaPicos(datosEspectro, nBins, hzPorBin);
+  g.fillStyle = TEAL;
+  for (const i of picos) {
+    const x = margen + anchoUtil * (i * hzPorBin) / F_VISTA_MAX;
+    const db = Math.max(DB_MIN, Math.min(DB_MAX, datosEspectro[i]));
+    const y = 6 + altoUtil * (DB_MAX - db) / (DB_MAX - DB_MIN);
+    g.beginPath(); g.arc(x, y, 3.2, 0, 2 * Math.PI); g.fill();
+  }
+  $('conteoPicos').textContent = picos.length + (picos.length === 1 ? ' pico detectado' : ' picos detectados') +
+    ' (aprox., sobre el piso de ruido)';
 }
 
 function cuadro() {

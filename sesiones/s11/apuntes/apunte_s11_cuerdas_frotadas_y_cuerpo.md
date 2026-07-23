@@ -80,7 +80,11 @@ vuelta completa por cada período de la nota (BEN 23.4; C&G cap. 6,
 pp. 203–232). El ojo no la ve porque a cientos de vueltas por segundo
 solo queda la envolvente; la cámara lenta del taller — si la del celular
 alcanza a resolverla **[POR VERIFICAR]** — o el video de respaldo la
-muestran. La figura 1 congela seis instantes de una vuelta.
+muestran (candidatos verificados jul-2026: "Helmholtz Motion of a Violin
+G-String — 18.750 fps High-Speed Visualization", canal peteroshkai,
+<https://www.youtube.com/shorts/WcRbQmNNeRw>; y "Bowed violin string in
+slow motion", canal ViolinB0W, <https://www.youtube.com/watch?v=6JeyiM0YNo4>).
+La figura 1 congela seis instantes de una vuelta.
 
 ![**Figura 1.** Seis instantáneas de un período del movimiento de Helmholtz (esquemático; el arco se dibuja a $2/10$ del largo desde el puente, más lejos que en un violín real, para que se vea). En cada instante la cuerda son dos rectas unidas en una esquina que recorre la envolvente punteada — el óvalo que el ojo ve borroso — una vuelta completa por período. El punto azul es el punto frotado: va pegado al arco mientras la esquina viaja por el lado del dedo, y desliza solo mientras ella pasa por el lado del puente.](../../../figuras/s11_helmholtz_esquina.svg)
 

@@ -5,13 +5,15 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Demo — Del batido a la consonancia: banda crítica (s08)</title>
 <style>
-  /* Estética editorial del curso: fondo claro, serif para texto, sans para controles */
+  /* Estética "tinta y agua" del curso: fondo claro frío, serif para texto,
+     sans para controles y ejes */
   :root {
-    --tinta: #1a1a1a;
-    --acento: #7a2e2e;     /* rojo ladrillo: tono 2, aspereza, marcas */
-    --linea: #2e4a7a;      /* azul: tono 1, batido */
-    --papel: #faf8f4;
-    --panel: #f0ece4;
+    --tinta: #1f2937;
+    --acento: #0f766e;     /* verde petróleo: tono 2, aspereza, marcas, énfasis */
+    --linea: #34558b;      /* azul: tono 1, batido */
+    --papel: #fbfbf9;
+    --panel: #eef3f2;
+    --sans: -apple-system, "Segoe UI", Helvetica, sans-serif;
   }
   * { box-sizing: border-box; }
   body {
@@ -21,12 +23,12 @@
     max-width: 960px; margin-inline: auto;
   }
   h1 { font-size: 1.35rem; margin: 0 0 .2rem; }
-  .sesion { font-family: Helvetica, Arial, sans-serif; font-size: .8rem;
+  .sesion { font-family: var(--sans); font-size: .8rem;
             letter-spacing: .06em; text-transform: uppercase; color: var(--acento); }
   .bajada { font-style: italic; margin: .3rem 0 1rem; }
   .panel {
     background: var(--panel); border-radius: 6px; padding: .9rem 1rem;
-    font-family: Helvetica, Arial, sans-serif; font-size: .9rem;
+    font-family: var(--sans); font-size: .9rem;
     display: flex; flex-wrap: wrap; gap: .8rem 2rem; align-items: flex-start;
   }
   .ctrl { display: flex; flex-direction: column; gap: .25rem; min-width: 250px; flex: 1; }
@@ -34,23 +36,26 @@
   .valor { font-variant-numeric: tabular-nums; font-weight: normal; }
   input[type=range] { width: 100%; accent-color: var(--acento); }
   select, button {
-    font-family: Helvetica, Arial, sans-serif; font-size: .9rem;
+    font-family: var(--sans); font-size: .9rem;
     padding: .4rem .7rem; border: 1px solid var(--tinta); border-radius: 4px;
     background: white; cursor: pointer;
   }
   button.primario { background: var(--acento); color: white; border-color: var(--acento); }
   button.chico { font-size: .8rem; padding: .25rem .5rem; }
+  button:disabled { opacity: .45; cursor: not-allowed; }
   .fila { display: flex; flex-wrap: wrap; gap: .4rem; align-items: center; }
   .marcador {
-    font-family: Helvetica, Arial, sans-serif; text-align: center;
+    font-family: var(--sans); text-align: center;
     background: white; border: 1px solid #ccc; border-radius: 6px;
     padding: .5rem 1rem; margin-top: 1rem;
   }
   .marcador .grande { font-size: 1.5rem; font-weight: bold; color: var(--acento);
                       font-variant-numeric: tabular-nums; }
+  .marcador .ancho { font-family: var(--sans); font-size: .85rem; color: var(--linea);
+                      margin-top: .4rem; }
   canvas { width: 100%; display: block; background: white;
            border: 1px solid #ccc; border-radius: 4px; margin-top: 1rem; }
-  .leyenda { font-family: Helvetica, Arial, sans-serif; font-size: .8rem; color: #555;
+  .leyenda { font-family: var(--sans); font-size: .8rem; color: #555;
              margin-top: .2rem; }
   .observar { border-left: 4px solid var(--acento); padding: .2rem 0 .2rem 1rem; margin-top: 1.2rem; }
   .observar h2 { font-size: 1rem; margin: .2rem 0; }
@@ -61,9 +66,10 @@
 <body>
 <p class="sesion">Acústica Musical UC · Sesión 08</p>
 <h1>Del batido a la consonancia: la banda crítica</h1>
-<p class="bajada">Separe los dos tonos desde el unísono hasta más de una
-octava, marque dónde cambia lo que oye, y pruebe qué pasa cuando los
-tonos traen armónicos.</p>
+<p class="bajada">¿Cuánto hay que separar dos tonos para dejar de oír uno
+solo? Muévalos desde el unísono hasta más de una octava, marque sus
+propias fronteras, y descubra por qué algunos intervalos suenan lisos
+y otros ásperos apenas les agrega armónicos.</p>
 
 <div class="panel">
   <div class="ctrl" style="flex:2; min-width:300px">
@@ -72,12 +78,26 @@ tonos traen armónicos.</p>
     <input type="range" id="dif" min="0" max="1400" value="12" step="1">
     <span style="font-size:.8rem">(0 a 14 semitonos = 1400 centésimas;
       f₂ = <span class="valor" id="f2Val">443,0 Hz</span>)</span>
-    <div class="fila" style="margin-top:.3rem">
+    <div class="fila" id="filaNombrada" style="margin-top:.3rem">
       <span style="font-size:.85rem"><b>Intervalos:</b></span>
       <button class="chico" data-int="0">unísono</button>
       <button class="chico" data-int="quinta">5ª justa (3:2)</button>
       <button class="chico" data-int="tritono">tritono</button>
       <button class="chico" data-int="octava">8ª (2:1)</button>
+    </div>
+    <div class="fila" id="filaRanking" style="margin-top:.3rem; display:none">
+      <span style="font-size:.85rem"><b>Ranking a ciegas:</b></span>
+      <button class="chico" data-rank>Intervalo A</button>
+      <button class="chico" data-rank>Intervalo B</button>
+      <button class="chico" data-rank>Intervalo C</button>
+      <button class="chico" data-rank>Intervalo D</button>
+      <button class="chico" id="btnBarajar">barajar de nuevo</button>
+      <button class="chico primario" id="btnRevelar">revelar nombres</button>
+    </div>
+    <div class="fila" style="margin-top:.5rem">
+      <button class="chico" id="btnBarrido">↝ barrido automático (20 s, hasta 40 Hz)</button>
+      <span style="font-size:.78rem; color:#555">parte en unísono y se
+        separa sola — para la escucha del día (use con modo escucha activo)</span>
     </div>
   </div>
   <div class="ctrl">
@@ -91,6 +111,8 @@ tonos traen armónicos.</p>
     </label>
     <label style="font-weight:normal"><input type="checkbox" id="complejo">
       <b>tonos complejos</b> (6 armónicos)</label>
+    <label style="font-weight:normal"><input type="checkbox" id="ranking">
+      <b>modo ranking</b> (orden revuelto, sin nombres — gancho m2)</label>
     <label style="font-weight:normal"><input type="checkbox" id="ocultar">
       modo escucha (ocultar números y gráficos)</label>
   </div>
@@ -113,16 +135,17 @@ tonos traen armónicos.</p>
     <button class="chico" id="btnF3">F3: quedó liso</button>
     <button class="chico" id="btnBorrar">borrar marcas</button>
   </div>
+  <div class="ancho" id="anchoF1F3"></div>
 </div>
 
 <canvas id="mapa" height="110"></canvas>
 <p class="leyenda" id="leyMapa">Su mapa de zonas: batido (azul) → áspero,
-una nota (rojo) → dos notas que rozan (rojo claro) → liso (blanco).
+una nota (verde) → dos notas que rozan (verde claro) → liso (blanco).
 El triángulo es la separación actual.</p>
 
 <canvas id="parciales" height="170"></canvas>
 <p class="leyenda" id="leyParc">Parciales del tono 1 (azul) y del tono 2
-(rojo). Fondo sombreado = par de parciales dentro de una banda crítica
+(verde). Fondo sombreado = par de parciales dentro de una banda crítica
 (rozan). <span id="conteoPares"></span></p>
 
 <div class="observar">
@@ -130,15 +153,21 @@ El triángulo es la separación actual.</p>
   <ol>
     <li>Con tonos puros y f₁ = 440 Hz, suba Δf lentamente desde 0 y
         marque sus tres fronteras (F1, F2, F3). ¿A qué intervalo musical
-        se parece su F3? ¿Coincide con la de su pareja?</li>
-    <li>Active los tonos complejos y compare 5ª justa contra tritono:
-        ¿cuál roza y qué dice la vista de parciales? Ahora repita ambos
-        <b>sin</b> armónicos (tonos puros): ¿la aspereza del tritono
-        estaba en el intervalo o en los parciales?</li>
+        se parece el ancho F1→F3? ¿Coincide con la de su pareja, o cada
+        oído traza su propio mapa?</li>
+    <li>Active el <b>modo ranking</b> y escuche los 4 intervalos sin
+        saber cuál es cuál: ¿puede ordenarlos de más liso a más áspero
+        antes de revelar los nombres? Luego repita la comparación
+        5ª/tritono con tonos <b>puros</b>: ¿la aspereza del tritono
+        estaba en el intervalo o en sus armónicos?</li>
     <li>Con la 5ª justa compleja, baje f₁ de 440 a 110 Hz: ¿el
         intervalo sigue igual de liso? ¿Cuántos pares rozan ahora,
         según el contador? (Pregúntese por qué los acordes cerrados
         se evitan en el registro grave.)</li>
+    <li>Corra el <b>barrido automático</b> en modo escucha (números
+        ocultos): ¿cuántas etapas distingue antes de mirar el mapa?
+        ¿Su F3 auditiva quedó más cerca o más lejos de los ~4 semitonos
+        que anuncia la mini-lección?</li>
   </ol>
 </div>
 
@@ -165,6 +194,16 @@ function cb(f) { return f < 500 ? 100 : 0.20 * f; }
 // Intervalos de los botones, como RAZONES exactas (no temperadas salvo el
 // tritono, que se define como media octava):
 const INTERVALOS = { '0': 1, 'quinta': 3 / 2, 'tritono': Math.SQRT2, 'octava': 2 };
+const NOMBRES_INTERVALO = { '0': 'unísono', quinta: '5ª justa (3:2)', tritono: 'tritono', octava: '8ª (2:1)' };
+
+// Fuente sans-serif para texto dibujado en canvas (misma familia que los
+// controles HTML; en <canvas> no se puede usar var(--sans), hay que repetirla)
+const FONT_SANS = '-apple-system, "Segoe UI", Helvetica, sans-serif';
+
+// Parámetros del barrido automático (estímulo de la escucha del día, m1):
+// parte en unísono y separa los tonos hasta ~40 Hz en ~20 s.
+const BARRIDO_HZ_OBJETIVO = 40;
+const BARRIDO_MS = 20000;
 
 // --- estado ------------------------------------------------------------------
 let f1 = 440;               // frecuencia del tono 1 (selector)
@@ -175,6 +214,10 @@ let marcas = { F1: null, F2: null, F3: null };   // fronteras del usuario, en ce
 let ctxAudio = null, osc1 = null, osc2 = null, ganMaestra = null;
 let ondaCompleja = null;    // PeriodicWave con N_ARM armónicos
 let sonando = false;
+let sweepRAF = null;        // id de requestAnimationFrame del barrido automático
+
+let ordenRanking = ['0', 'quinta', 'tritono', 'octava'];  // orden revuelto del gancho m2
+let rankingRevelado = false;
 
 const $ = id => document.getElementById(id);
 const coma = (x, d) => x.toFixed(d).replace('.', ',');
@@ -204,7 +247,19 @@ function refrescaEtiquetas() {
   // gráficos visibles solo fuera del modo escucha
   for (const id of ['mapa', 'parciales', 'leyMapa', 'leyParc'])
     $(id).classList.toggle('oculto-visual', modoOculto());
+  actualizaAncho();
   dibujaTodo();
+}
+
+// Retroalimentación inmediata: el ancho F1→F3 que el propio usuario trazó,
+// comparado con el orden de magnitud anunciado en la mini-lección (~1/3 de
+// octava ≈ 4 semitonos). No se muestra en modo escucha (no hay números).
+function actualizaAncho() {
+  const el = $('anchoF1F3');
+  if (modoOculto() || marcas.F1 === null || marcas.F3 === null) { el.textContent = ''; return; }
+  const anchoSt = (marcas.F3 - marcas.F1) / 100;
+  el.textContent = 'Su ancho F1→F3: ' + coma(anchoSt, 2) +
+    ' semitonos (referencia del curso: banda crítica ≈ 1/3 de octava ≈ 4 semitonos)';
 }
 
 // --- audio -------------------------------------------------------------------
@@ -243,6 +298,7 @@ async function iniciar() {
   }
 }
 function detener() {
+  detenerBarrido();
   if (sonando) { osc1.stop(); osc2.stop(); osc1 = osc2 = null; sonando = false; }
   if (ctxAudio) ctxAudio.suspend();
 }
@@ -254,11 +310,58 @@ function actualizaFrecuencias() {
   }
 }
 
+// --- barrido automático (estímulo de la escucha del día, m1) -----------------
+// Parte en unísono (Δf = 0) y separa los dos tonos hasta ~40 Hz de diferencia
+// en ~20 s, en línea recta en Hz (no en cents): así el barrido recorre las
+// cuatro etapas perceptuales al ritmo que describe el plan de la sesión.
+// Úsese con "modo escucha" activo para reproducir el estímulo real de clase.
+function detenerBarrido() {
+  if (sweepRAF !== null) { cancelAnimationFrame(sweepRAF); sweepRAF = null; }
+}
+async function iniciarBarrido() {
+  detenerBarrido();
+  await iniciar();                 // asegura audio partiendo (idempotente)
+  cents = 0; $('dif').value = 0;   // el barrido siempre parte en unísono
+  actualizaFrecuencias(); refrescaEtiquetas();
+  const centsObjetivo = 1200 * Math.log2((f1 + BARRIDO_HZ_OBJETIVO) / f1);
+  const t0 = performance.now();
+  function paso(t) {
+    const p = Math.min(1, (t - t0) / BARRIDO_MS);
+    cents = centsObjetivo * p;
+    $('dif').value = Math.round(cents);
+    actualizaFrecuencias(); refrescaEtiquetas();
+    sweepRAF = (p < 1) ? requestAnimationFrame(paso) : null;
+  }
+  sweepRAF = requestAnimationFrame(paso);
+}
+
+// --- modo ranking: el gancho del m2, intervalos revueltos y sin nombre -------
+function barajaRanking() {
+  ordenRanking = ['0', 'quinta', 'tritono', 'octava'];
+  for (let i = ordenRanking.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [ordenRanking[i], ordenRanking[j]] = [ordenRanking[j], ordenRanking[i]];
+  }
+  rankingRevelado = false;
+  pintaBotonesRanking();
+}
+function pintaBotonesRanking() {
+  const letras = ['A', 'B', 'C', 'D'];
+  document.querySelectorAll('#filaRanking [data-rank]').forEach((btn, i) => {
+    btn.dataset.int = ordenRanking[i];
+    btn.textContent = rankingRevelado
+      ? letras[i] + ': ' + NOMBRES_INTERVALO[ordenRanking[i]]
+      : 'Intervalo ' + letras[i];
+  });
+}
+
 // --- visualización 1: mapa de zonas (eje Δf en semitonos, marcas del usuario)
+// Colores derivados de la paleta "tinta y agua": azul (--linea, tono 1/batido)
+// y verde petróleo (--acento, aspereza/marcas).
 const ZONAS = [   // [desde marca, color, rótulo] — la zona termina en la marca sgte.
-  ['inicio', 'rgba(46,74,122,0.30)', 'batido'],
-  ['F1', 'rgba(122,46,46,0.45)', 'áspero (una nota)'],
-  ['F2', 'rgba(122,46,46,0.18)', 'dos notas, rozan'],
+  ['inicio', 'rgba(52,85,139,0.28)', 'batido'],
+  ['F1', 'rgba(15,118,110,0.42)', 'áspero (una nota)'],
+  ['F2', 'rgba(15,118,110,0.16)', 'dos notas, rozan'],
   ['F3', 'rgba(0,0,0,0)', 'liso'],
 ];
 function dibujaMapa() {
@@ -279,13 +382,13 @@ function dibujaMapa() {
     if (b <= a) continue;
     g.fillStyle = ZONAS[z][1];
     g.fillRect(xDe(a), y0 - 26, xDe(b) - xDe(a), 26);
-    g.fillStyle = '#555'; g.font = '10px Helvetica, Arial, sans-serif';
+    g.fillStyle = '#555'; g.font = '10px ' + FONT_SANS;
     if (xDe(b) - xDe(a) > 55) g.fillText(ZONAS[z][2], xDe(a) + 3, y0 - 31);
   }
   // eje en semitonos
   g.strokeStyle = '#999'; g.lineWidth = 1;
   g.beginPath(); g.moveTo(m, y0); g.lineTo(w - 15, y0); g.stroke();
-  g.font = '11px Helvetica, Arial, sans-serif'; g.fillStyle = '#555';
+  g.font = '11px ' + FONT_SANS; g.fillStyle = '#555';
   for (let st = 0; st <= 14; st += 2) {
     const x = xDe(st * 100);
     g.beginPath(); g.moveTo(x, y0); g.lineTo(x, y0 + 4); g.stroke();
@@ -294,7 +397,7 @@ function dibujaMapa() {
   g.fillText('separación (semitonos)', m, y0 + 30);
   g.fillText('su mapa de zonas', 4, 14);
   // marcas del usuario (F1, F2, F3)
-  g.font = 'bold 11px Helvetica, Arial, sans-serif';
+  g.font = 'bold 11px ' + FONT_SANS;
   for (const k of ['F1', 'F2', 'F3']) {
     if (marcas[k] === null) continue;
     const x = xDe(marcas[k]);
@@ -335,7 +438,7 @@ function dibujaParciales() {
     if (gap < 1.5) { coinciden++; continue; }         // coincidencia práctica
     if (gap < cb(fc)) {
       rozan++;
-      g.fillStyle = 'rgba(122,46,46,0.20)';           // sombreado del choque
+      g.fillStyle = 'rgba(15,118,110,0.20)';           // sombreado del choque (--acento)
       g.fillRect(xDe(Math.min(a, b)), 18, Math.max(2, xDe(Math.max(a, b)) - xDe(Math.min(a, b))), y0 - 18);
     }
   }
@@ -343,7 +446,7 @@ function dibujaParciales() {
   // eje de frecuencia
   g.strokeStyle = '#999'; g.lineWidth = 1;
   g.beginPath(); g.moveTo(m, y0); g.lineTo(w - 15, y0); g.stroke();
-  g.font = '11px Helvetica, Arial, sans-serif'; g.fillStyle = '#555';
+  g.font = '11px ' + FONT_SANS; g.fillStyle = '#555';
   const paso = fMax > 8000 ? 2000 : fMax > 4000 ? 1000 : 500;
   for (let f = 0; f <= fMax; f += paso) {
     const x = xDe(f);
@@ -353,7 +456,7 @@ function dibujaParciales() {
   g.fillText('frecuencia (Hz)', m, y0 + 29);
   g.fillText('parciales de cada tono (altura ∝ amplitud)', 4, 12);
 
-  // líneas espectrales: tono 1 azul, tono 2 rojo
+  // líneas espectrales: tono 1 azul, tono 2 verde petróleo
   const alto = y0 - 26;
   const colores = ['--linea', '--acento'];
   [p1, p2].forEach((lista, i) => {
@@ -379,10 +482,12 @@ function dibujaTodo() {
 $('btnPlay').addEventListener('click', iniciar);
 $('btnStop').addEventListener('click', detener);
 $('dif').addEventListener('input', () => {
+  detenerBarrido();   // el arrastre manual del usuario cancela el barrido automático
   cents = Number($('dif').value);
   actualizaFrecuencias(); refrescaEtiquetas();
 });
 $('f1sel').addEventListener('change', () => {
+  detenerBarrido();
   f1 = Number($('f1sel').value);
   marcas = { F1: null, F2: null, F3: null };   // las fronteras dependen de f1
   actualizaFrecuencias(); refrescaEtiquetas();
@@ -397,22 +502,52 @@ $('gan').addEventListener('input', () => {
   refrescaEtiquetas();
   if (ganMaestra) ganMaestra.gain.value = ganancia();  // tope 0,5: protección auditiva
 });
-// botones de intervalo: fijan la razón exacta (la 5ª "justa" es 3:2, no 7 semitonos)
-document.querySelectorAll('[data-int]').forEach(b =>
+// botones de intervalo (mini-lección con nombres): fijan la razón exacta
+// (la 5ª "justa" es 3:2, no 7 semitonos)
+document.querySelectorAll('#filaNombrada [data-int]').forEach(b =>
   b.addEventListener('click', () => {
+    detenerBarrido();
     cents = 1200 * Math.log2(INTERVALOS[b.dataset.int]);
     $('dif').value = Math.round(cents);
     actualizaFrecuencias(); refrescaEtiquetas();
   }));
 // marcas de fronteras del usuario
-$('btnF1').addEventListener('click', () => { marcas.F1 = cents; dibujaTodo(); });
-$('btnF2').addEventListener('click', () => { marcas.F2 = cents; dibujaTodo(); });
-$('btnF3').addEventListener('click', () => { marcas.F3 = cents; dibujaTodo(); });
+$('btnF1').addEventListener('click', () => { marcas.F1 = cents; actualizaAncho(); dibujaTodo(); });
+$('btnF2').addEventListener('click', () => { marcas.F2 = cents; actualizaAncho(); dibujaTodo(); });
+$('btnF3').addEventListener('click', () => { marcas.F3 = cents; actualizaAncho(); dibujaTodo(); });
 $('btnBorrar').addEventListener('click', () => {
-  marcas = { F1: null, F2: null, F3: null }; dibujaTodo();
+  marcas = { F1: null, F2: null, F3: null }; actualizaAncho(); dibujaTodo();
 });
+
+// --- barrido automático: botón dedicado --------------------------------------
+$('btnBarrido').addEventListener('click', iniciarBarrido);
+
+// --- modo ranking: gancho del m2 (intervalos revueltos, sin nombre) ----------
+$('ranking').addEventListener('change', () => {
+  const on = $('ranking').checked;
+  $('filaNombrada').style.display = on ? 'none' : '';
+  $('filaRanking').style.display = on ? 'flex' : 'none';
+  $('complejo').disabled = on;
+  if (on) {
+    complejo = true; $('complejo').checked = true;   // el ranking se oye con armónicos
+    if (sonando) { aplicaTimbre(osc1); aplicaTimbre(osc2); }
+    barajaRanking();
+  }
+  refrescaEtiquetas();
+});
+document.querySelectorAll('#filaRanking [data-rank]').forEach(b =>
+  b.addEventListener('click', () => {
+    detenerBarrido();
+    cents = 1200 * Math.log2(INTERVALOS[b.dataset.int]);
+    $('dif').value = Math.round(cents);
+    actualizaFrecuencias(); refrescaEtiquetas();
+  }));
+$('btnBarajar').addEventListener('click', barajaRanking);
+$('btnRevelar').addEventListener('click', () => { rankingRevelado = true; pintaBotonesRanking(); });
+
 window.addEventListener('resize', dibujaTodo);
 
+barajaRanking();       // deja los botones del ranking listos aunque no se abra el modo
 refrescaEtiquetas();
 </script>
 </body>

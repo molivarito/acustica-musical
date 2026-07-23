@@ -27,6 +27,11 @@ jobs:
       - name: Render sitio
         run: quarto render
 
+      - name: Render perfil canvas (páginas sin sidebar para los módulos de Canvas)
+        run: |
+          quarto render --profile canvas
+          cp -r _canvas _site/canvas
+
       - uses: actions/upload-pages-artifact@v3
         with:
           path: _site

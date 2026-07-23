@@ -5,13 +5,13 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Demo — La voz por dentro: fuente y filtro (s13)</title>
 <style>
-  /* Estética editorial del curso: fondo claro, serif para texto, sans para controles */
+  /* Estética "tinta y agua" del curso: fondo claro frío, serif para texto, sans para controles */
   :root {
-    --tinta: #1a1a1a;
-    --acento: #7a2e2e;     /* rojo ladrillo sobrio: filtro/formantes */
-    --linea: #2e4a7a;      /* azul: espectro (la señal que suena) */
-    --papel: #faf8f4;
-    --panel: #f0ece4;
+    --tinta: #1f2937;
+    --acento: #0f766e;     /* verde petróleo: filtro/formantes/envolvente */
+    --linea: #34558b;      /* azul: espectro (la señal que realmente suena) */
+    --papel: #fbfbf9;
+    --panel: #eef3f2;
   }
   * { box-sizing: border-box; }
   body {
@@ -40,11 +40,23 @@
   }
   button.primario { background: var(--acento); color: white; border-color: var(--acento); }
   button.preset { padding: .35rem .7rem; font-size: 1rem; }
+  button:disabled { opacity: .4; cursor: not-allowed; }
+  input[type=range]:disabled { opacity: .35; }
   fieldset { border: none; padding: 0; margin: 0; display: flex; gap: .8rem; flex-wrap: wrap; }
   .presets { display: flex; gap: .4rem; flex-wrap: wrap; align-items: center; }
-  .nota { font-size: .78rem; color: #555; font-family: Helvetica, Arial, sans-serif; }
+  .nota { font-size: .78rem; color: #5b6472; font-family: Helvetica, Arial, sans-serif; }
   canvas { width: 100%; height: 230px; display: block; background: white;
-           border: 1px solid #ccc; border-radius: 4px; margin-top: 1rem; }
+           border: 1px solid #ccc; border-radius: 4px; margin-top: .5rem; }
+  .leyenda { display: flex; gap: 1.2rem; flex-wrap: wrap; font-family: Helvetica, Arial, sans-serif;
+             font-size: .78rem; color: #5b6472; margin: .35rem 0 0; }
+  .leyenda span { display: inline-flex; align-items: center; gap: .35rem; }
+  .marca { display: inline-block; width: 18px; height: 0; border-top: 3px solid; }
+  .marca.punteada { border-top: 3px dashed; }
+  .juego { border: 1px dashed var(--acento); background: #fff; }
+  .juego .presets button.activo { background: var(--acento); color: white; }
+  #resultadoJuego { font-family: Helvetica, Arial, sans-serif; font-size: .92rem; min-height: 1.3em; }
+  #resultadoJuego.acierto { color: var(--acento); font-weight: bold; }
+  #resultadoJuego.fallo { color: #9a3b3b; font-weight: bold; }
   .observar { border-left: 4px solid var(--acento); padding: .2rem 0 .2rem 1rem; margin-top: 1.2rem; }
   .observar h2 { font-size: 1rem; margin: .2rem 0; }
   ol { margin: .4rem 0; padding-left: 1.2rem; }
@@ -61,6 +73,8 @@ perillas independientes.</p>
   <div class="ctrl">
     <label for="f0">Altura de la fuente f₀: <span class="valor" id="f0Val">140 Hz</span></label>
     <input type="range" id="f0" min="0" max="1000" value="270">
+    <span class="nota" id="avisoAgudo" style="min-height:1.1em; display:block;"></span>
+    <button id="btnSoprano" style="align-self:flex-start; margin-top:.2rem;">🎤 Saltar a 880 Hz (registro de soprano)</button>
     <label style="margin-top:.4rem">Fuente</label>
     <fieldset id="fuente">
       <label><input type="radio" name="fuente" value="tono" checked> tono glotal (periódico)</label>
@@ -91,20 +105,54 @@ perillas independientes.</p>
   </div>
 </div>
 
+<div class="panel juego">
+  <div class="ctrl" style="flex:2; min-width:280px;">
+    <label>🎲 Juego: ¿qué vocal es? (F1/F2 ocultos)</label>
+    <p class="nota" style="margin:.1rem 0 .5rem;">El profesor arma una ronda con la vocal en secreto.
+    El curso vota a mano alzada por la banda que "delata" la vocal — recién entonces se revela.</p>
+    <div style="display:flex; gap:.5rem; flex-wrap:wrap; align-items:center;">
+      <button id="btnRonda" class="primario">🎲 Nueva ronda</button>
+      <button id="btnRevelar" disabled>👁 Revelar</button>
+      <button id="btnSalirJuego" disabled>Salir del juego</button>
+      <span class="valor" id="rondaInfo">—</span>
+    </div>
+    <div class="presets" style="margin-top:.5rem;">
+      <span><b>Vota el curso:</b></span>
+      <button class="preset voto" data-voto="a" disabled>/a/</button>
+      <button class="preset voto" data-voto="e" disabled>/e/</button>
+      <button class="preset voto" data-voto="i" disabled>/i/</button>
+      <button class="preset voto" data-voto="o" disabled>/o/</button>
+      <button class="preset voto" data-voto="u" disabled>/u/</button>
+    </div>
+    <p id="resultadoJuego"></p>
+  </div>
+</div>
+
 <canvas id="lienzo"></canvas>
+<div class="leyenda">
+  <span><i class="marca" style="border-color: var(--linea);"></i> espectro que suena (lo que canta o susurra la demo)</span>
+  <span><i class="marca punteada" style="border-color: var(--acento);"></i> envolvente del filtro (formantes F1, F2)</span>
+</div>
 
 <div class="observar">
   <h2>¿Qué observar?</h2>
   <ol>
-    <li>Fije f₀ y recorra las vocales con los botones: ¿cambia la altura
-        que oye? ¿Qué se movió en el gráfico — las líneas del espectro o
-        la envolvente roja?</li>
-    <li>Fije una vocal y deslice f₀: ¿qué cambia y qué queda quieto ahora?
-        ¿Quién dibuja la envolvente y quién la "rellena"?</li>
-    <li>Cambie la fuente a <b>soplo (susurro)</b>: ¿se sigue reconociendo la
-        vocal sin altura? Luego, con tono glotal, suba f₀ sobre ~600 Hz:
-        ¿puede seguir distinguiendo /e/ de /i/? ¿Por qué? (Mire cuántos
-        armónicos quedan bajo la envolvente.)</li>
+    <li>Fije f₀ y recorra las vocales con los botones: ¿cambió la altura
+        que oye? En el gráfico, ¿qué se movió — las líneas azules del
+        espectro o la envolvente verde punteada?</li>
+    <li>Fije una vocal y deslice f₀: ahora invierta la pregunta — ¿qué
+        queda quieto? ¿Quién dibuja la envolvente y quién apenas la
+        "rellena" de armónicos?</li>
+    <li>Apague la fuente periódica: cambie a <b>soplo (susurro)</b>. Sin
+        una sola línea de armónico en el gráfico, ¿sigue reconociendo la
+        vocal? ¿Qué le queda al oído para agarrarse si no hay altura?</li>
+    <li>Juegue una ronda a ciegas: con F1/F2 ocultos, ¿de qué banda se fía
+        más para votar — la más grave o la más aguda? ¿Alguna ronda lo
+        engañó?</li>
+    <li>Vuelva a tono glotal y salte a f₀ ≈ 880 Hz (botón "soprano"):
+        ¿todavía se distinguen /e/ e /i/? Cuente cuántas líneas de
+        armónico quedan bajo los 2500 Hz — ¿alcanzan para dibujar la
+        envolvente, o el peine quedó demasiado ralo?</li>
   </ol>
 </div>
 
@@ -124,6 +172,12 @@ perillas independientes.</p>
 // El profesor puede ajustar abajo: PRESETS (valores F1/F2 de cada vocal,
 // típicos aproximados — los valores finos por hablante quedan
 // [POR VERIFICAR]), los Q de los formantes y los límites de f0.
+//
+// Modo juego (plan de s13, 36-52'): el profesor pulsa "Nueva ronda", la
+// demo elige una vocal al azar y OCULTA los valores de F1/F2 (sliders y
+// lectura numérica se deshabilitan); el curso vota a mano alzada y el
+// profesor registra el voto mayoritario con los botones "Vota el curso";
+// al pulsar "Revelar" se muestran los valores reales y el acierto.
 // ---------------------------------------------------------------------------
 const F0_MIN = 80, F0_MAX = 880;         // rango de f0 en Hz (slider logarítmico);
                                          // el tope agudo permite el experimento "soprano"
@@ -156,11 +210,23 @@ function f0Actual() {
 function ganActual() { return sgan.value / 100; }   // 0 .. 0,5 máx. (protección auditiva)
 function fuenteActual() { return document.querySelector('input[name=fuente]:checked').value; }
 
+// --- estado del juego "adivine la vocal" -------------------------------------
+let rondaActiva = false;     // true entre "Nueva ronda" y "Revelar"
+let vocalSecreta = null;     // clave de PRESETS de la ronda en curso
+let vocalVotada = null;      // voto del curso registrado por el profesor
+let rondasJugadas = 0, rondasAcertadas = 0;
+
 function refrescaEtiquetas() {
-  $('f0Val').textContent = f0Actual().toFixed(0) + ' Hz';
-  $('f1Val').textContent = sf1.value + ' Hz';
-  $('f2Val').textContent = sf2.value + ' Hz';
+  const f0 = f0Actual();
+  $('f0Val').textContent = f0.toFixed(0) + ' Hz';
+  $('f1Val').textContent = rondaActiva ? '?' : (sf1.value + ' Hz');
+  $('f2Val').textContent = rondaActiva ? '?' : (sf2.value + ' Hz');
   $('ganVal').textContent = ganActual().toFixed(2).replace('.', ',');
+  // aviso pedagógico: sobre ~600 Hz los armónicos empiezan a quedar tan
+  // separados que ya no "muestrean" bien la envolvente de formantes (paso 5)
+  $('avisoAgudo').textContent = (fuenteActual() === 'tono' && f0 > 600)
+    ? '⚠ registro agudo: los armónicos quedan ralos — ¿todavía distingue las vocales?'
+    : '';
 }
 
 // --- grafo de audio ---------------------------------------------------------
@@ -304,7 +370,7 @@ function dibuja() {
     }
     g.stroke();
 
-    // envolvente del filtro (rojo, punteado): respuesta combinada de los
+    // envolvente del filtro (verde, punteada): respuesta combinada de los
     // dos formantes + cuerpo, calculada con getFrequencyResponse
     bp1.getFrequencyResponse(frecResp, mag1, fase);
     bp2.getFrequencyResponse(frecResp, mag2, fase);
@@ -342,9 +408,90 @@ function dibuja() {
 }
 requestAnimationFrame(dibuja);
 
+// --- juego "adivine la vocal" -------------------------------------------------
+const VOCALES = Object.keys(PRESETS);
+const btnRonda = $('btnRonda'), btnRevelar = $('btnRevelar'), btnSalirJuego = $('btnSalirJuego');
+const rondaInfo = $('rondaInfo'), resultadoJuego = $('resultadoJuego');
+const botonesPresetVocal = document.querySelectorAll('button.preset:not(.voto)');
+const botonesVoto = document.querySelectorAll('button.voto');
+
+async function nuevaRonda() {
+  // elige una vocal distinta de la ronda anterior para que no se repita
+  let candidatas = VOCALES.filter(v => v !== vocalSecreta);
+  vocalSecreta = candidatas[Math.floor(Math.random() * candidatas.length)];
+  const [F1, F2] = PRESETS[vocalSecreta];
+  sf1.value = F1; sf2.value = F2;
+  aplicaFormantes(true);
+
+  rondaActiva = true; vocalVotada = null;
+  rondasJugadas++;
+  // fuerza fuente = tono (la ronda se juega cantada, como en el plan) y suena sola
+  document.querySelector('input[name=fuente][value=tono]').checked = true;
+  await iniciar();
+  if (fuenteActual() !== 'tono' || !fuenteNodo || !fuenteNodo.frequency) enciendeFuente();
+
+  // oculta F1/F2: sliders y botones de preset quedan bloqueados durante la ronda
+  sf1.disabled = true; sf2.disabled = true;
+  botonesPresetVocal.forEach(b => b.disabled = true);
+  botonesVoto.forEach(b => { b.disabled = false; b.classList.remove('activo'); });
+  btnRonda.disabled = true; btnRevelar.disabled = false; btnSalirJuego.disabled = false;
+  rondaInfo.textContent = `Ronda ${rondasJugadas} — F1/F2 ocultos: vote y pulse Revelar`;
+  resultadoJuego.textContent = ''; resultadoJuego.className = '';
+  refrescaEtiquetas();
+}
+
+function registraVoto(voto) {
+  if (!rondaActiva) return;
+  vocalVotada = voto;
+  botonesVoto.forEach(b => b.classList.toggle('activo', b.dataset.voto === voto));
+}
+
+function revelaRonda() {
+  if (!rondaActiva) return;
+  rondaActiva = false;
+  sf1.disabled = false; sf2.disabled = false;
+  botonesPresetVocal.forEach(b => b.disabled = false);
+  botonesVoto.forEach(b => b.disabled = true);
+  btnRonda.disabled = false; btnRevelar.disabled = true;
+
+  const acerto = vocalVotada === vocalSecreta;
+  if (acerto) rondasAcertadas++;
+  const [F1, F2] = PRESETS[vocalSecreta];
+  const votoTxt = vocalVotada ? `/${vocalVotada}/` : '(el curso no alcanzó a votar)';
+  resultadoJuego.textContent = `Era /${vocalSecreta}/ (F1 ≈ ${F1} Hz, F2 ≈ ${F2} Hz). `
+    + `El curso votó ${votoTxt}: ${vocalVotada ? (acerto ? '¡acertaron!' : 'no esta vez.') : ''} `
+    + `— Puntaje: ${rondasAcertadas}/${rondasJugadas} rondas.`;
+  resultadoJuego.className = vocalVotada ? (acerto ? 'acierto' : 'fallo') : '';
+  refrescaEtiquetas();
+}
+
+function saleDelJuego() {
+  rondaActiva = false; vocalSecreta = null; vocalVotada = null;
+  sf1.disabled = false; sf2.disabled = false;
+  botonesPresetVocal.forEach(b => b.disabled = false);
+  botonesVoto.forEach(b => { b.disabled = true; b.classList.remove('activo'); });
+  btnRonda.disabled = false; btnRevelar.disabled = true; btnSalirJuego.disabled = true;
+  rondaInfo.textContent = '—';
+  resultadoJuego.textContent = ''; resultadoJuego.className = '';
+  refrescaEtiquetas();
+}
+
+btnRonda.addEventListener('click', nuevaRonda);
+btnRevelar.addEventListener('click', revelaRonda);
+btnSalirJuego.addEventListener('click', saleDelJuego);
+botonesVoto.forEach(b => b.addEventListener('click', () => registraVoto(b.dataset.voto)));
+
 // --- controles ---------------------------------------------------------------
 $('btnPlay').addEventListener('click', iniciar);
 $('btnStop').addEventListener('click', detener);
+$('btnSoprano').addEventListener('click', () => {
+  // atajo del paso 5 del plan: salta f0 al tope del rango (~880 Hz, registro
+  // de soprano) sin tener que calzar el slider logarítmico a mano en vivo
+  sf0.value = 1000;
+  document.querySelector('input[name=fuente][value=tono]').checked = true;
+  refrescaEtiquetas(); aplicaF0();
+  if (sonando && fuenteActual() === 'tono' && (!fuenteNodo || !fuenteNodo.frequency)) enciendeFuente();
+});
 sf0.addEventListener('input', () => { refrescaEtiquetas(); aplicaF0(); });
 sf1.addEventListener('input', () => { refrescaEtiquetas(); aplicaFormantes(false); });
 sf2.addEventListener('input', () => { refrescaEtiquetas(); aplicaFormantes(false); });
@@ -353,8 +500,8 @@ sgan.addEventListener('input', () => {
   if (master) master.gain.value = ganActual();   // tope 0,5: protección auditiva
 });
 document.querySelectorAll('input[name=fuente]').forEach(r =>
-  r.addEventListener('change', () => { if (sonando) enciendeFuente(); }));
-document.querySelectorAll('button.preset').forEach(b =>
+  r.addEventListener('change', () => { refrescaEtiquetas(); if (sonando) enciendeFuente(); }));
+botonesPresetVocal.forEach(b =>
   b.addEventListener('click', () => {
     const [F1, F2] = PRESETS[b.dataset.v];
     sf1.value = F1; sf2.value = F2;

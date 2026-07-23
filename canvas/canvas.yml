@@ -18,7 +18,7 @@
 
 curso_id: 112005
 base_url: https://cursos.canvas.uc.cl
-sitio: https://molivarito.github.io/acustica-musical
+sitio: https://molivarito.github.io/acustica-musical/canvas
 
 modulos:
   - nombre: "Información del curso"

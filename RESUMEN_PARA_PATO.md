@@ -62,28 +62,44 @@ te incomoda, la salida es hacer el repo privado (pídelo).
 
 ## Pendientes que solo tú puedes hacer
 
-**Antes de s01** (lo que tiene plazo real):
+**Antes de s01** (lo que tiene plazo real — s01 = vie 07-ago):
 - Sesión única de grabación: estímulos #1–2, 5–7, 10–12 del banco
   (guitarra + flauta + vaso, una tarde). La #1 se reutiliza en s15.
 - Revisar y aprobar las **pruebas rediseñadas** (sin commitear).
-- Abrir las **14 demos en un navegador real** (nunca se probaron con
-  audio; las de más riesgo: `demo_forma_onda_espectro` con micrófono y
-  `demo_modos_sala`).
+- **Probar las 14 demos renovadas en navegador** (2026-07-23 se
+  revisaron y mejoraron todas: cobertura del plan completada, juegos y
+  modos predicción/oculto agregados, paleta nueva; el audio real sigue
+  sin probarse — las de más riesgo: `demo_forma_onda_espectro` con
+  micrófono, `demo_modos_sala`, y la captura de figuras de prueba en
+  `demo_resonancia`/`demo_tubo_agujeros`).
 - Kits: reglas (s01), objetos metálicos (s03), botellas (s10); lista
   del curso con carreras.
 - En Canvas: publicar el módulo "Información del curso" cuando quieras
   que los alumnos vean algo.
 
 **Con plazo institucional** (partir temprano):
-- s14: permisos/reserva de espacios UC para la salida T60 + elegir y
-  probar app de medición.
-- s12: compra del kit de lutería (PVC Ø20, cortatubos, tapas, lijas).
+- s14: permisos/reserva de espacios UC para la salida T60. App de
+  medición YA elegida (verificado 2026-07-23): iOS **ClapIR**; Android
+  **Room Acoustics: RT60 Meter** (confirmar precio al instalar) —
+  probar la elegida en un espacio real.
+- s12: compra del kit de lutería (PVC Ø20, cortatubos, tapas, lijas;
+  medir diámetro interior real en la ferretería).
 - s11: confirmar estudiantes con instrumento frotado; probar cámara
-  lenta 240 fps; conseguir nota lobo (o descartar la coda).
+  lenta 240 fps. Video de respaldo y nota lobo YA resueltos
+  (2026-07-23): URLs verificadas en `sesiones/s11/plan.md`.
 - s06: sonómetro de referencia (¿existe en el instituto?).
 
 **Decisiones tuyas**: encuesta de cierre (s15), plazo de publicación de
 notas, contrastar conversiones de nota con normativa UC.
+
+**Resuelto por investigación (2026-07-23)**: apps del curso verificadas
+en tiendas (Spectroid, SpectrumView, GuitarTuna, Sound Meter de
+rootApps fijada, Decibel X — ojo: la versión gratis solo mide dB(Z));
+norma DS 594 citada con fuente oficial (85 dBA/8h, regla de 3 dB — la
+tabla de la guía de s06 ya coincidía); atenuación de protectores,
+tracto vocal y F1/F2 del español anclados a literatura. Fletcher &
+Rossing en biblioteca UC NO fue verificable desde fuera: revisar tú
+con credenciales en bibliotecas.uc.cl.
 
 **Control de calidad pendiente** (heredado del loop, sigue vigente):
 lectura de continuidad del libro de punta a punta; pasada a las citas

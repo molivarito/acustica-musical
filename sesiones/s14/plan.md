@@ -155,8 +155,12 @@ línea de oído ANTES de encender la app. Primero suena, después se mide.
   reales y permisos (capilla/auditorio si se puede)
   **[POR VERIFICAR: reserva/permiso de los espacios]**; elegir y
   probar la app de medición de $T_{60}$ (o el protocolo de
-  grabación+espectrograma como plan B) **[POR VERIFICAR: app concreta
-  de RT en Android/iOS — ver guía]**; bolsa de globos; planilla
+  grabación+espectrograma como plan B) — candidatas verificadas
+  jul-2026: iOS **ClapIR** (Stephen Tarzia, gratis, respaldo académico
+  Northwestern) y Android **Room Acoustics: RT60 Meter**
+  (`com.simonj.roomacoustics`; confirmar precio en Play Store al
+  instalarla) — probar la elegida en un espacio real antes de s14;
+  bolsa de globos; planilla
   compartida en línea con una fila por espacio; impresiones (5 guías,
   5 rutas, 20 pautas hito 3); sorteo de la pasada 3 en la planilla OA3.
 

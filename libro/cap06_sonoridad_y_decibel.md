@@ -128,9 +128,11 @@ sonoras — es decir, para usted. El criterio ocupacional de referencia
 admite del orden de **8 horas diarias a 85 dB(A)**, y cada **+3 dB**
 — recuerde: el doble de energía — **reduce el tiempo admisible a la
 mitad**: 88 dB(A) → 4 horas, 91 → 2, 94 → 1 (criterio NIOSH; ROS caps.
-30–31). Un ensayo enérgico puede vivir sobre los 90 dB(A); las cifras
-de la norma chilena vigente las revisaremos con cuidado en clase
-**[POR VERIFICAR: DS 594]**. El daño por dosis acumulada no duele
+30–31). Un ensayo enérgico puede vivir sobre los 90 dB(A); la norma chilena
+vigente —el **DS 594** del Ministerio de Salud (1999, arts. 74–75)—
+fija el mismo tope de 85 dB(A)/8 h y la misma regla de intercambio de
+3 dB, y las revisaremos con cuidado en clase. El daño por dosis
+acumulada no duele
 mientras ocurre y no se recupera después. En la sesión hay una estación
 dedicada a esta cuenta — cuánto "tiempo de oído" gasta su semana
 musical — porque es, literalmente, aritmética de supervivencia
@@ -174,3 +176,6 @@ condiciones — es la mitad de lo que la sesión evalúa.
   nivel y el mecanismo de percepción de la sonoridad; en español.
 - Rossing, Moore & Wheeler (2002), cap. 6 — decibeles, fones y sones
   con ejercicios; caps. 30–31 — ruido ambiental y salud auditiva.
+- Chile, Ministerio de Salud. Decreto Supremo N.º 594 (1999), *Reglamento
+  sobre condiciones sanitarias y ambientales básicas en los lugares de
+  trabajo*, arts. 74–75 (texto vigente, leychile.cl/BCN).

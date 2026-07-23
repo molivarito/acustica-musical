@@ -7,12 +7,13 @@
 <style>
   /* Estética editorial: fondo claro, serif para texto, sans para controles */
   :root {
-    --tinta: #1a1a1a;
-    --acento: #7a2e2e;     /* rojo ladrillo sobrio */
-    --linea: #2e4a7a;      /* azul para la forma de onda */
-    --virtual: #1f7a4d;    /* verde para la altura virtual (fundamental reconstruida) */
-    --papel: #faf8f4;
-    --panel: #f0ece4;
+    /* Paleta "tinta y agua" del sitio (2026-07-22) */
+    --tinta: #1f2937;
+    --acento: #0f766e;     /* verde petróleo: foco pedagógico y controles primarios */
+    --linea: #34558b;      /* azul: forma de onda y barras del espectro */
+    --virtual: #0f766e;    /* verde petróleo: altura virtual (fundamental reconstruida) */
+    --papel: #fbfbf9;
+    --panel: #eef3f2;
   }
   * { box-sizing: border-box; }
   body {
@@ -59,6 +60,16 @@
   .prediccion b { color: var(--acento); }
   .prediccion .op { margin: .4rem .4rem 0 0; }
   #predMsg { font-style: italic; margin-top: .4rem; min-height: 1.1em; }
+  .conteo { font-family: Helvetica, Arial, sans-serif; font-size: .82rem; color: #555; margin-top: .2rem; }
+  .conteo.limite { color: #b45309; font-weight: bold; } /* zona límite: pocos parciales sobreviven */
+  .umbral {
+    background: var(--panel); border: 1px solid var(--linea); border-radius: 6px;
+    padding: .7rem 1rem; margin-top: 1rem;
+    font-family: Helvetica, Arial, sans-serif; font-size: .88rem;
+  }
+  .umbral-cta { display: flex; flex-wrap: wrap; gap: .6rem; align-items: center; }
+  #umbralInfo { margin: .5rem 0 0; }
+  #umbralInfo.marcado { color: var(--acento); font-weight: bold; }
   .observar { border-left: 4px solid var(--acento); padding: .2rem 0 .2rem 1rem; margin-top: 1.2rem; }
   .observar h2 { font-size: 1rem; margin: .2rem 0; }
   ol { margin: .4rem 0; padding-left: 1.2rem; }
@@ -66,7 +77,7 @@
              margin-top: .4rem; display: flex; gap: 1.2rem; flex-wrap: wrap; }
   .leyenda span::before { content: "■ "; }
   .lg-onda::before   { color: var(--linea); }
-  .lg-espec::before  { color: var(--acento); }
+  .lg-espec::before  { color: var(--linea); }
   .lg-virtual::before{ color: var(--virtual); }
 </style>
 </head>
@@ -89,6 +100,7 @@ octava… o el oído la reconstruye igual?</p>
     <input type="range" id="corte" min="0" max="8" value="0">
     <span style="font-family:Helvetica,Arial,sans-serif;font-size:.8rem;color:#555">
       Silencia los parciales graves de abajo hacia arriba (1, luego 2, 3…).</span>
+    <span class="conteo" id="conteoActivos"></span>
     <label for="gan" style="margin-top:.5rem">Ganancia: <span class="valor" id="ganVal">0,30</span></label>
     <input type="range" id="gan" min="0" max="45" value="30">
   </div>
@@ -110,6 +122,17 @@ octava… o el oído la reconstruye igual?</p>
   <div id="predMsg">Elija su predicción, luego apague el parcial 1 y compruebe con el oído.</div>
 </div>
 
+<div class="umbral">
+  <div class="umbral-cta">
+    <button id="btnUmbral" class="primario">📍 Marcar aquí: se rompió mi altura</button>
+    <button id="btnUmbralReset">Borrar mi registro</button>
+  </div>
+  <p id="umbralInfo">Protocolo en parejas: suba el filtro pasa-altos de a poco. En el
+  instante EXACTO en que la altura salte o deje de ser reconocible <i>para
+  usted</i>, presione el botón. Su umbral quedará marcado en el espectro (línea
+  punteada) para que lo compare con el de su pareja y el resto del grupo.</p>
+</div>
+
 <canvas id="ondaCanvas" height="150"></canvas>
 <div class="leyenda"><span class="lg-onda">forma de onda (el período no cambia = la altura no cambia)</span></div>
 
@@ -122,17 +145,20 @@ octava… o el oído la reconstruye igual?</p>
 <div class="observar">
   <h2>¿Qué observar?</h2>
   <ol>
-    <li><b>Prediga primero.</b> Con todos los parciales sonando, cante la
-        nota. Ahora apague el parcial 1 (la fundamental): ¿cambió la
-        <i>altura</i> que cantaría, o solo el <i>timbre</i>? Mire la forma
-        de onda: ¿cambió su período?</li>
+    <li><b>Prediga primero, luego traicione a su oído.</b> Con todos los
+        parciales sonando, cante la nota. Ahora apague el parcial 1 (la
+        fundamental) sin tocar nada más: ¿le mintió el oído, o resulta que
+        <i>altura</i> y <i>timbre</i> eran, sin que usted lo supiera, dos
+        preguntas distintas? Mire la forma de onda: ¿cambió su período?</li>
     <li>Suba el <b>filtro pasa-altos progresivo</b> quitando parciales
-        graves de a uno. ¿Hasta cuántos puede quitar antes de que la altura
-        por fin se rompa o salte? Ese umbral es suyo: compárelo con el de
-        su grupo.</li>
-    <li>La línea verde marca el f<sub>1</sub> del patrón: sigue ahí aunque
-        ese parcial no exista en el espectro. ¿Por qué el parlante chico
-        del celular "da" el bajo que no puede producir?</li>
+        graves de a uno y marque el instante en que la altura por fin se
+        rompe. ¿Aguantó más de lo que esperaba, o menos? Compare su umbral
+        marcado con el de su pareja: ¿el oído de los dos "cede" en el mismo
+        parcial, o no?</li>
+    <li>La línea verde marca la altura que el oído insiste en entregarle,
+        exista o no ese parcial en el espectro. Si su teléfono pudiera
+        hablar, ¿estaría mintiendo cuando "promete" un bajo que su
+        parlante diminuto es físicamente incapaz de radiar?</li>
   </ol>
 </div>
 
@@ -152,18 +178,14 @@ octava… o el oído la reconstruye igual?</p>
 // amplitudes.
 // ---------------------------------------------------------------------------
 const N_PARCIALES = 8;                 // cantidad de armónicos
-// Amplitud relativa del parcial n con caída 1/n, NORMALIZADA para que la
-// suma de todos los parciales sea 1. Así el pico de la onda compuesta nunca
-// supera la ganancia maestra: evitamos el recorte (clipping), que
-// distorsionaría y RE-generaría el grave arruinando justo el efecto a
-// demostrar (la fundamental debe estar de verdad ausente).
-const H8 = (() => { let s = 0; for (let k = 1; k <= N_PARCIALES; k++) s += 1 / k; return s; })();
-const AMP = n => (1 / n) / H8;
+// Peso "de receta" del parcial n: cae como 1/n (timbre armónico típico).
+function pesoBase(n) { return 1 / n; }
 const GAN_MAX = 0.45;                  // tope de ganancia maestra (protección auditiva)
 
 let ctxAudio = null, maestra = null;
 let osciladores = [];                  // {osc, gain} por parcial
 let sonando = false;
+let umbralRegistrado = null;           // {n, f1, hz} — umbral personal marcado por el estudiante
 
 const $ = id => document.getElementById(id);
 const sliderF1 = $('f1'), sliderCorte = $('corte'), sliderGan = $('gan');
@@ -177,6 +199,33 @@ function ganActual()   { return Math.min(sliderGan.value / 100, GAN_MAX); } // 0
 
 // Un parcial es efectivamente audible si está encendido Y por encima del corte.
 function activo(n) { return encendido[n] && n > corteActual(); }
+
+// Cuántos parciales sobreviven en este instante (para el contador y la
+// zona límite del filtro).
+function nActivos() {
+  let c = 0;
+  for (let n = 1; n <= N_PARCIALES; n++) if (activo(n)) c++;
+  return c;
+}
+
+// Suma de pesos "de receta" (1/n) de los parciales activos ahora mismo.
+function sumaPesosActivos() {
+  let s = 0;
+  for (let n = 1; n <= N_PARCIALES; n++) if (activo(n)) s += pesoBase(n);
+  return s;
+}
+
+// Amplitud EFECTIVA del parcial n: se renormaliza sobre los parciales
+// activos para que su suma sea siempre 1. Así, al apagar f1 (o cualquier
+// otro parcial), la SONORIDAD total no pega un salto brusco: la energía se
+// reparte entre los que quedan. Esto aísla el efecto que queremos mostrar
+// (cambia el timbre, no la altura) de un efecto espurio de volumen, clave
+// para que la demo funcione bien en audífonos.
+function ampEfectiva(n) {
+  if (!activo(n)) return 0;
+  const s = sumaPesosActivos();
+  return s > 0 ? pesoBase(n) / s : 0;
+}
 
 // --- construcción de los botones de parciales -------------------------------
 const contParciales = $('parciales');
@@ -210,6 +259,15 @@ function refrescaEtiquetas() {
   $('corteVal').textContent = c === 0 ? 'deja pasar todo'
       : 'silencia hasta ' + c + '·f₁ (' + (c * f1Actual()) + ' Hz)';
   $('ganVal').textContent = ganActual().toFixed(2).replace('.', ',');
+
+  // Contador de parciales sobrevivientes: refuerza visualmente la "zona
+  // límite" donde el patrón está a punto de romperse.
+  const activos = nActivos();
+  const elConteo = $('conteoActivos');
+  elConteo.textContent = activos === 0
+      ? 'silencio: no queda ningún parcial sonando'
+      : 'parciales sonando ahora: ' + activos + ' de ' + N_PARCIALES;
+  elConteo.classList.toggle('limite', activos > 0 && activos <= 2);
 }
 
 // --- audio ------------------------------------------------------------------
@@ -218,7 +276,7 @@ function aplicaGanancias() {
   const t = ctxAudio.currentTime;
   for (let n = 1; n <= N_PARCIALES; n++) {
     const g = osciladores[n - 1].gain.gain;
-    const objetivo = activo(n) ? AMP(n) : 0;
+    const objetivo = ampEfectiva(n);
     // rampa breve para evitar clics al conmutar
     g.cancelScheduledValues(t);
     g.setTargetAtTime(objetivo, t, 0.012);
@@ -276,9 +334,9 @@ function dibujaOnda() {
   g.fillText('amplitud', 4, 14);
   g.fillText('tiempo (2 períodos de f₁ = 2/f₁)', x1 - 170, h - 6);
 
-  // amplitud máxima teórica para normalizar la altura del trazo
-  let ampMax = 0; for (let n = 1; n <= N_PARCIALES; n++) if (activo(n)) ampMax += AMP(n);
-  if (ampMax === 0) ampMax = 1;
+  // La suma de amplitudes efectivas activas es siempre 1 (renormalizada),
+  // así que el trazo no necesita reescalarse al apagar parciales.
+  const ampMax = 1;
 
   const f1 = f1Actual(), Tven = 2 / f1;   // ventana = 2 períodos de f1
   g.strokeStyle = getComputedStyle(document.body).getPropertyValue('--linea');
@@ -287,7 +345,7 @@ function dibujaOnda() {
     const t = (px / (x1 - x0)) * Tven;
     let y = 0;
     for (let n = 1; n <= N_PARCIALES; n++)
-      if (activo(n)) y += AMP(n) * Math.sin(2 * Math.PI * n * f1 * t);
+      y += ampEfectiva(n) * Math.sin(2 * Math.PI * n * f1 * t);
     const yy = base - (y / ampMax) * (base - 12);
     px ? g.lineTo(x0 + px, yy) : g.moveTo(x0 + px, yy);
   }
@@ -337,15 +395,30 @@ function dibujaEspectro() {
   g.fillStyle = getComputedStyle(document.body).getPropertyValue('--virtual');
   g.fillText('altura ≈ ' + f1 + ' Hz', xV + 3, 24);
 
-  // barras de parciales activos
-  const acento = getComputedStyle(document.body).getPropertyValue('--acento');
+  // Barras de parciales activos. La altura usa la amplitud EFECTIVA
+  // (renormalizada): cuando quedan pocos parciales, los sobrevivientes se
+  // ven más altos, visualizando que la energía se reparte entre ellos para
+  // mantener el volumen total — la misma razón por la que no hay un salto
+  // de sonoridad al oído.
+  const azul = getComputedStyle(document.body).getPropertyValue('--linea');
   for (let n = 1; n <= N_PARCIALES; n++) {
     if (!activo(n)) continue;
-    const x = xDe(n * f1), alto = AMP(n) / AMP(1) * (base - 30);
-    g.fillStyle = acento;
+    const x = xDe(n * f1), alto = ampEfectiva(n) * (base - 30);
+    g.fillStyle = azul;
     g.fillRect(x - 3, base - alto, 6, alto);
     g.fillStyle = '#555';
     g.fillText(n + '·f₁', x - 9, base - alto - 4);
+  }
+
+  // Marca del umbral personal registrado por el estudiante (si ya marcó).
+  if (umbralRegistrado) {
+    const xU = xDe(umbralRegistrado.hz);
+    const tinta = getComputedStyle(document.body).getPropertyValue('--tinta');
+    g.strokeStyle = tinta; g.setLineDash([2, 3]); g.lineWidth = 1.4;
+    g.beginPath(); g.moveTo(xU, 14); g.lineTo(xU, base); g.stroke();
+    g.setLineDash([]);
+    g.fillStyle = tinta;
+    g.fillText('tu umbral', xU + 3, h - 20);
   }
 }
 
@@ -371,13 +444,43 @@ document.querySelectorAll('.prediccion .op').forEach(b => {
   });
 });
 
+// --- registro del umbral personal (protocolo del taller en parejas) --------
+function marcarUmbral() {
+  const n = corteActual();
+  const elInfo = $('umbralInfo');
+  if (n === 0) {
+    elInfo.classList.remove('marcado');
+    elInfo.textContent = 'Todavía no ha quitado ningún parcial: suba el filtro '
+        + 'pasa-altos hasta el instante en que la altura se rompa, y ahí marque.';
+    return;
+  }
+  const f1 = f1Actual(), hz = n * f1;
+  umbralRegistrado = { n, f1, hz };
+  elInfo.classList.add('marcado');
+  elInfo.textContent = 'Registrado: para usted, la altura se rompió al quitar '
+      + 'hasta el parcial ' + n + ' (≤ ' + hz + ' Hz). Compare su marca (línea '
+      + 'punteada en el espectro) con la de su pareja: ¿coincide?';
+}
+function borrarUmbral() {
+  umbralRegistrado = null;
+  const elInfo = $('umbralInfo');
+  elInfo.classList.remove('marcado');
+  elInfo.textContent = 'Protocolo en parejas: suba el filtro pasa-altos de a poco. En el '
+      + 'instante EXACTO en que la altura salte o deje de ser reconocible para '
+      + 'usted, presione el botón. Su umbral quedará marcado en el espectro '
+      + '(línea punteada) para que lo compare con el de su pareja y el resto del grupo.';
+}
+
 // --- controles --------------------------------------------------------------
 $('btnPlay').addEventListener('click', iniciar);
 $('btnStop').addEventListener('click', detener);
 $('btnStop').disabled = true;
+$('btnUmbral').addEventListener('click', marcarUmbral);
+$('btnUmbralReset').addEventListener('click', borrarUmbral);
 $('btnReset').addEventListener('click', () => {
   for (let n = 1; n <= N_PARCIALES; n++) encendido[n] = true;
   sliderCorte.value = 0; sliderF1.value = 150;
+  borrarUmbral();
   refrescaBotones(); aplicaFrecuencias(); aplicaGanancias(); refrescaEtiquetas();
 });
 sliderF1.addEventListener('input', () => { refrescaEtiquetas(); aplicaFrecuencias(); });

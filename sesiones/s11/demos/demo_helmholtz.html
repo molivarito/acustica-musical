@@ -5,13 +5,15 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Demo — La esquina de Helmholtz (s11)</title>
 <style>
-  /* Estética editorial del curso: fondo claro, serif para texto, sans para controles */
+  /* Estética "tinta y agua" del sitio (2026-07-22): fondo claro frío,
+     serif para texto explicativo, sans para controles y ejes. */
   :root {
-    --tinta: #1a1a1a;
-    --acento: #7a2e2e;     /* rojo ladrillo: deslizamiento, esquina */
-    --linea: #2e4a7a;      /* azul: la cuerda, fase pegada */
-    --papel: #faf8f4;
-    --panel: #f0ece4;
+    --tinta: #1f2937;
+    --acento: #0f766e;     /* verde petróleo: deslizamiento, esquina, énfasis */
+    --linea: #34558b;      /* azul: la cuerda, fase pegada */
+    --papel: #fbfbf9;
+    --panel: #eef3f2;
+    --sans: -apple-system, 'Segoe UI', Helvetica, sans-serif;
   }
   * { box-sizing: border-box; }
   body {
@@ -21,12 +23,12 @@
     max-width: 900px; margin-inline: auto;
   }
   h1 { font-size: 1.35rem; margin: 0 0 .2rem; }
-  .sesion { font-family: Helvetica, Arial, sans-serif; font-size: .8rem;
+  .sesion { font-family: var(--sans); font-size: .8rem;
             letter-spacing: .06em; text-transform: uppercase; color: var(--acento); }
   .bajada { font-style: italic; margin: .3rem 0 1rem; }
   .panel {
     background: var(--panel); border-radius: 6px; padding: .9rem 1rem;
-    font-family: Helvetica, Arial, sans-serif; font-size: .9rem;
+    font-family: var(--sans); font-size: .9rem;
     display: flex; flex-wrap: wrap; gap: 1rem 2rem; align-items: center;
   }
   .ctrl { display: flex; flex-direction: column; gap: .25rem; min-width: 220px; flex: 1; }
@@ -35,19 +37,46 @@
   .nota-ctrl { font-size: .8rem; color: #555; }
   input[type=range] { width: 100%; accent-color: var(--acento); }
   button {
-    font-family: Helvetica, Arial, sans-serif; font-size: .95rem;
+    font-family: var(--sans); font-size: .95rem;
     padding: .5rem 1rem; border: 1px solid var(--tinta); border-radius: 4px;
     background: white; cursor: pointer;
   }
   button.primario { background: var(--acento); color: white; border-color: var(--acento); }
+  button.secundario { background: var(--linea); color: white; border-color: var(--linea); }
   canvas { width: 100%; display: block; background: white;
-           border: 1px solid #ccc; border-radius: 4px; margin-top: 1rem; }
+           border: 1px solid #ccc; border-radius: 4px; }
   #lienzoCuerda { height: 230px; }
   #lienzoVel { height: 170px; }
+  .lienzo-caja { position: relative; margin-top: 1rem; }
+  /* contador "vueltas = sueltas": la síntesis del argumento, siempre visible */
+  .contador {
+    display: flex; flex-wrap: wrap; gap: .4rem 1rem; align-items: baseline;
+    justify-content: center; font-family: var(--sans); font-size: .95rem;
+    background: var(--panel); border-radius: 6px; padding: .5rem .9rem;
+    margin-top: 1rem;
+  }
+  .contador b { font-variant-numeric: tabular-nums; color: var(--tinta); transition: color .2s; }
+  .contador.pulso b { color: var(--acento); }
+  .contador .igual { font-weight: bold; color: #999; }
+  .contador .nota-ctrl { flex-basis: 100%; text-align: center; }
+  /* overlays de "vote antes de revelar" (modo predicción) */
+  .overlay-prediccion {
+    position: absolute; inset: 0; background: rgba(251, 251, 249, .96);
+    border-radius: 4px; display: flex; flex-direction: column; gap: .6rem;
+    align-items: center; justify-content: center; text-align: center;
+    padding: 1rem 1.5rem; font-family: var(--sans); font-size: .92rem;
+  }
+  .overlay-prediccion.oculto { display: none; }
+  .overlay-prediccion p { margin: 0; max-width: 32rem; }
+  .reto3 {
+    background: var(--panel); border-radius: 6px; padding: .5rem .7rem;
+    font-family: var(--sans); font-size: .8rem; display: flex;
+    flex-direction: column; gap: .4rem; align-items: flex-start;
+  }
   .observar { border-left: 4px solid var(--acento); padding: .2rem 0 .2rem 1rem; margin-top: 1.2rem; }
   .observar h2 { font-size: 1rem; margin: .2rem 0; }
   ol { margin: .4rem 0; padding-left: 1.2rem; }
-  .pie { font-family: Helvetica, Arial, sans-serif; font-size: .8rem; color: #555; margin-top: .5rem; }
+  .pie { font-family: var(--sans); font-size: .8rem; color: #555; margin-top: .5rem; }
 </style>
 </head>
 <body>
@@ -70,6 +99,12 @@ cuerda le entrega al puente.</p>
     <span class="nota-ctrl">Del período: pegada <span class="valor" id="pegVal">88 %</span> ·
       deslizando <span class="valor" id="desVal">12 %</span>
       (a ×<span class="valor" id="velVal">7,3</span> la velocidad del arco, en contra)</span>
+    <div class="reto3">
+      <span><b>Predicción 3</b> — antes de tocar el slider: si acerca el
+        arco al puente (baja el %), ¿el tramo deslizando se alarga o se
+        acorta? ¿el sonido se aclara o se apaga?</span>
+      <button id="btnSaltoPuente" type="button">Saltar cerca del puente ▶</button>
+    </div>
   </div>
   <div class="ctrl" style="min-width:160px; flex:0">
     <label for="gan">Ganancia: <span class="valor" id="ganVal">0,30</span></label>
@@ -77,22 +112,53 @@ cuerda le entrega al puente.</p>
     <button id="btnPlay" class="primario">▶ Sonar la cuerda</button>
     <button id="btnStop">■ Detener</button>
   </div>
+  <div class="ctrl" style="min-width:190px; flex:0">
+    <label>Uso en clase</label>
+    <button id="btnPrediccion" type="button">🔮 Modo predicción: OFF</button>
+    <span class="nota-ctrl">Oculta los paneles hasta "Revelar" — para
+      votar a mano alzada antes de ver.</span>
+  </div>
 </div>
 
-<canvas id="lienzoCuerda"></canvas>
-<canvas id="lienzoVel"></canvas>
+<div class="contador" id="contadorBar">
+  <span>Vueltas de la esquina: <b id="vueltasVal">0</b></span>
+  <span class="igual">=</span>
+  <span>Sueltas (deslizamientos): <b id="sueltasVal">0</b></span>
+  <span class="nota-ctrl">Cada vuelta completa dispara exactamente un
+    soltar — el mismo reloj visto desde dos lados.</span>
+</div>
+
+<div class="lienzo-caja">
+  <canvas id="lienzoCuerda"></canvas>
+  <div class="overlay-prediccion oculto" id="overlay1">
+    <p><b>Predicción 1</b> — ¿la cuerda frotada vibra dibujando una curva
+      suave, como suele verse en los libros, o de otra forma? Vote a mano
+      alzada antes de revelar.</p>
+    <button class="primario btnRevelar" data-overlay="overlay1" type="button">Revelar la forma real ▶</button>
+  </div>
+</div>
+<div class="lienzo-caja">
+  <canvas id="lienzoVel"></canvas>
+  <div class="overlay-prediccion oculto" id="overlay2">
+    <p><b>Predicción 2</b> — de los dos períodos que se van a mostrar,
+      ¿qué fracción cree que la cuerda pasa deslizando frente a pegada?
+      ¿mitad y mitad? ¿90/10? Vote antes de revelar.</p>
+    <button class="secundario btnRevelar" data-overlay="overlay2" type="button">Revelar el reparto ▶</button>
+  </div>
+</div>
 <p class="pie">Arriba: la cuerda idealizada (desplazamiento exagerado); la
 línea segmentada es la envolvente que el ojo ve como mancha borrosa. Abajo:
 velocidad del punto frotado a lo largo de dos períodos — azul: pegada al arco;
-rojo: deslizando en contra. El sonido es un diente de sierra (la fuerza que la
+verde: deslizando en contra. El sonido es un diente de sierra (la fuerza que la
 esquina imprime al puente en cada vuelta) filtrado según el punto de frotado.</p>
 
 <div class="observar">
   <h2>¿Qué observar?</h2>
   <ol>
-    <li>¿Cuántas vueltas completas da la esquina por cada episodio rojo de
-        deslizamiento? Si el soltar lo dispara el regreso de la esquina,
-        ¿quién fija entonces la frecuencia de la nota: el arco o la cuerda?</li>
+    <li>Mire el contador de arriba un rato sin tocar nada: ¿alguna vez el
+        número de vueltas y el de sueltas se desincronizan? Si el soltar
+        lo dispara el regreso de la esquina, ¿quién fija entonces la
+        frecuencia de la nota: el arco o la cuerda?</li>
     <li>Acerque el punto de frotado al puente (baje el porcentaje): ¿qué le
         pasa a la fracción del período que la cuerda pasa deslizando, a la
         velocidad de ese deslizamiento y al <i>brillo</i> del sonido?</li>
@@ -215,7 +281,9 @@ function envolvente(x) { return 4 * x * (1 - x); }
 function deslizando(p, beta) { return esquina(p).xc < beta; }
 
 // --- animación --------------------------------------------------------------
-let fase = 0, tAnterior = null;
+let fase = 0, tAnterior = null, tActual = 0;
+// contador "vueltas = sueltas": la síntesis visible del argumento de la demo.
+let vueltas = 0, sueltas = 0, flashHasta = 0;
 const colores = () => {
   const cs = getComputedStyle(document.body);
   return { linea: cs.getPropertyValue('--linea'), acento: cs.getPropertyValue('--acento') };
@@ -255,7 +323,7 @@ function dibujaCuerda() {
   g.setLineDash([]);
 
   // apoyos y rótulos de ejes
-  g.font = '11px Helvetica, Arial, sans-serif'; g.fillStyle = '#555';
+  g.font = '11px -apple-system, Helvetica, sans-serif'; g.fillStyle = '#555';
   g.strokeStyle = '#999';
   g.beginPath(); g.moveTo(X(0), base - amp - 12); g.lineTo(X(0), base + amp + 12); g.stroke();
   g.beginPath(); g.moveTo(X(1), base - amp - 12); g.lineTo(X(1), base + amp + 12); g.stroke();
@@ -270,9 +338,15 @@ function dibujaCuerda() {
   g.strokeStyle = col.linea; g.lineWidth = 2;
   g.beginPath(); g.moveTo(X(0), base); g.lineTo(X(e.xc), yc); g.lineTo(X(1), base); g.stroke();
 
-  // la esquina
+  // la esquina — se agranda un instante justo cuando cierra una vuelta
+  // completa (sincronizado con el contador "vueltas = sueltas" de abajo).
+  const destacar = tActual < flashHasta;
   g.fillStyle = col.acento;
-  g.beginPath(); g.arc(X(e.xc), yc, 5, 0, 2 * Math.PI); g.fill();
+  g.beginPath(); g.arc(X(e.xc), yc, destacar ? 9 : 5, 0, 2 * Math.PI); g.fill();
+  if (destacar) {
+    g.font = 'bold 12px -apple-system, Helvetica, sans-serif';
+    g.fillText('¡vuelta = soltar!', X(e.xc) + 10, yc - 10);
+  }
 
   // el arco: marca en el punto de frotado, color según estado
   const xb = X(beta);
@@ -282,7 +356,7 @@ function dibujaCuerda() {
   g.fillText('arco', xb - 10, base - amp - 14);
 
   // lámpara de estado
-  g.font = 'bold 13px Helvetica, Arial, sans-serif';
+  g.font = 'bold 13px -apple-system, Helvetica, sans-serif';
   g.fillStyle = desl ? col.acento : col.linea;
   g.fillText(desl ? 'DESLIZA (rápida, contra el arco)' : 'PEGADA (lenta, con el arco)',
              w - 250, 20);
@@ -304,7 +378,7 @@ function dibujaVelocidad() {
   const xDe = p => mIzq + (w - mIzq - mDer) * p / 2;   // p en [0,2): dos períodos
 
   // ejes y referencias
-  g.font = '11px Helvetica, Arial, sans-serif'; g.fillStyle = '#555';
+  g.font = '11px -apple-system, Helvetica, sans-serif'; g.fillStyle = '#555';
   g.strokeStyle = '#999'; g.lineWidth = 1;
   g.beginPath(); g.moveTo(mIzq, yDe(0)); g.lineTo(w - mDer, yDe(0)); g.stroke(); // v = 0
   g.setLineDash([4, 4]);
@@ -320,7 +394,7 @@ function dibujaVelocidad() {
   });
   g.fillText('tiempo (períodos) →', w / 2 - 50, h - 8);
 
-  // onda: pegada (v = +1, azul) y deslizando (v = −vDesl, rojo), 2 períodos.
+  // onda: pegada (v = +1, azul) y deslizando (v = −vDesl, verde), 2 períodos.
   // El episodio de deslizamiento ocurre alrededor de p = 0 (fase envolvente:
   // mitad al final del período anterior, mitad al comienzo del siguiente).
   const enDesl = p => deslizando(p % 1, beta);
@@ -346,10 +420,22 @@ let cicloPar = 0;   // alterna 0/1 para que el cursor recorra los dos períodos
 function anima(t) {
   if (tAnterior !== null) {
     const nueva = fase + (t - tAnterior) / 1000 / T_VISUAL;
-    if (nueva >= 1) cicloPar = 1 - cicloPar;   // cambió de período
+    if (nueva >= 1) {
+      // se cerró una vuelta completa de la esquina: por construcción
+      // (deslizando() cruza p=0/1 en un único episodio) eso es EXACTAMENTE
+      // un soltar — de ahí que los dos contadores avancen siempre juntos.
+      cicloPar = 1 - cicloPar;
+      vueltas++; sueltas++;
+      $('vueltasVal').textContent = vueltas;
+      $('sueltasVal').textContent = sueltas;
+      $('contadorBar').classList.add('pulso');
+      setTimeout(() => $('contadorBar').classList.remove('pulso'), 300);
+      flashHasta = t + 250;   // ms de reloj de rAF; ver "destacar" en dibujaCuerda
+    }
     fase = nueva % 1;
   }
   tAnterior = t;
+  tActual = t;
   dibujaCuerda();
   dibujaVelocidad();
   requestAnimationFrame(anima);
@@ -361,6 +447,29 @@ $('btnPlay').addEventListener('click', iniciar);
 $('btnStop').addEventListener('click', detener);
 [sliderF1, sliderBeta, sliderGan].forEach(s =>
   s.addEventListener('input', () => { refrescaEtiquetas(); actualizaAudio(); }));
+
+// Modo predicción: oculta los dos paneles tras un enunciado ("vote antes de
+// revelar") para el formato predictivo del plan (27–37' del m1). Al activarlo
+// se muestran (o se vuelven a mostrar) ambos enunciados; al desactivarlo, la
+// demo queda en modo normal (todo visible, útil fuera de la clase en vivo).
+const btnPrediccion = $('btnPrediccion');
+let modoPrediccion = false;
+btnPrediccion.addEventListener('click', () => {
+  modoPrediccion = !modoPrediccion;
+  btnPrediccion.textContent = modoPrediccion ? '🔮 Modo predicción: ON' : '🔮 Modo predicción: OFF';
+  btnPrediccion.classList.toggle('primario', modoPrediccion);
+  ['overlay1', 'overlay2'].forEach(id => $(id).classList.toggle('oculto', !modoPrediccion));
+});
+document.querySelectorAll('.btnRevelar').forEach(b =>
+  b.addEventListener('click', () => $(b.dataset.overlay).classList.add('oculto')));
+
+// Predicción 3: salta el punto de frotado cerca del puente para que el
+// contraste (reparto del ciclo, brillo del sonido) sea inmediato y notorio.
+$('btnSaltoPuente').addEventListener('click', () => {
+  sliderBeta.value = sliderBeta.min;
+  refrescaEtiquetas();
+  actualizaAudio();
+});
 refrescaEtiquetas();
 </script>
 </body>

@@ -5,13 +5,14 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Demo — Síntesis aditiva: el espectro como receta del timbre (s04)</title>
 <style>
-  /* Estética editorial: fondo claro, serif para texto, sans para controles */
+  /* Estética "tinta y agua" del sitio: fondo claro frío, serif para texto,
+     sans-serif para controles y ejes. */
   :root {
-    --tinta: #1a1a1a;
-    --acento: #7a2e2e;     /* rojo ladrillo sobrio */
-    --linea: #2e4a7a;      /* azul para la forma de onda y las barras */
-    --papel: #faf8f4;
-    --panel: #f0ece4;
+    --tinta: #1f2937;
+    --acento: #0f766e;     /* verde petróleo: acento principal */
+    --linea: #34558b;      /* azul: forma de onda y barras del espectro */
+    --papel: #fbfbf9;
+    --panel: #eef3f2;
   }
   * { box-sizing: border-box; }
   body {
@@ -21,12 +22,12 @@
     max-width: 900px; margin-inline: auto;
   }
   h1 { font-size: 1.35rem; margin: 0 0 .2rem; }
-  .sesion { font-family: Helvetica, Arial, sans-serif; font-size: .8rem;
+  .sesion { font-family: -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif; font-size: .8rem;
             letter-spacing: .06em; text-transform: uppercase; color: var(--acento); }
   .bajada { font-style: italic; margin: .3rem 0 1rem; }
   .panel {
     background: var(--panel); border-radius: 6px; padding: .9rem 1rem;
-    font-family: Helvetica, Arial, sans-serif; font-size: .9rem;
+    font-family: -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif; font-size: .9rem;
     display: flex; flex-wrap: wrap; gap: 1rem 2rem; align-items: center;
     margin-bottom: .8rem;
   }
@@ -35,22 +36,28 @@
   .valor { font-variant-numeric: tabular-nums; }
   input[type=range] { width: 100%; accent-color: var(--acento); }
   button {
-    font-family: Helvetica, Arial, sans-serif; font-size: .95rem;
+    font-family: -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif; font-size: .95rem;
     padding: .5rem 1rem; border: 1px solid var(--tinta); border-radius: 4px;
     background: white; cursor: pointer;
   }
   button.primario { background: var(--acento); color: white; border-color: var(--acento); }
   button.preset { font-size: .85rem; padding: .35rem .7rem; }
+  /* Botón de silenciar la fundamental: mismo tratamiento pero con estado
+     "activo" bien visible (fondo azul) para que sea inconfundible cuando
+     el parcial 1 está apagado — es la acción que pide el ticket de s04. */
+  button#btnFund.apagado { background: var(--linea); color: white; border-color: var(--linea); }
 
   /* El mezclador de parciales: 8 sliders verticales */
   .mezclador {
     background: var(--panel); border-radius: 6px; padding: .8rem .6rem;
-    font-family: Helvetica, Arial, sans-serif; font-size: .78rem;
+    font-family: -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif; font-size: .78rem;
     display: flex; justify-content: space-around; text-align: center;
     margin-bottom: .4rem;
   }
   .parcial { display: flex; flex-direction: column; align-items: center; gap: .3rem; }
   .parcial b { font-size: .9rem; }
+  .parcial.fundamental { background: rgba(15, 118, 110, .08); border-radius: 5px; padding-top: .3rem; }
+  .parcial.fundamental b { color: var(--acento); }
   input[type=range].vert {
     writing-mode: vertical-lr;      /* slider vertical (Chrome/Firefox modernos) */
     direction: rtl;                 /* cero abajo, máximo arriba */
@@ -61,7 +68,7 @@
 
   canvas { width: 100%; height: 150px; display: block; background: white;
            border: 1px solid #ccc; border-radius: 4px; margin-top: .8rem; }
-  .leyenda { font-family: Helvetica, Arial, sans-serif; font-size: .8rem;
+  .leyenda { font-family: -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif; font-size: .8rem;
              color: #555; margin: .15rem 0 0; }
   .observar { border-left: 4px solid var(--acento); padding: .2rem 0 .2rem 1rem; margin-top: 1.2rem; }
   .observar h2 { font-size: 1rem; margin: .2rem 0; }
@@ -96,6 +103,10 @@ pruebe la misma receta sostenida y pulsada.</p>
       <button class="preset" data-preset="puente">Pulsada cerca del puente</button>
     </div>
   </div>
+  <div class="ctrl" style="min-width:210px; flex:0">
+    <label for="btnFund">El experimento del ticket</label>
+    <button id="btnFund">⏻ Apagar la fundamental (parcial 1)</button>
+  </div>
 </div>
 
 <!-- Mezclador: un slider de amplitud por parcial (se llena por JS) -->
@@ -118,6 +129,11 @@ pruebe la misma receta sostenida y pulsada.</p>
     <li>Con la misma receta, compare el tono sostenido con "Pulsar":
         ¿cuál suena más "a cuerda"? ¿Qué parte del timbre NO está escrita
         en el espectro?</li>
+    <li><b>El ticket de salida, para resolver en casa:</b> arme una receta
+        con varios parciales sonando y use el botón "Apagar la fundamental
+        (parcial 1)". <b>Escriba su predicción antes de escuchar</b>: la
+        nota que suena, ¿baja una octava, desaparece, o sigue igual? Guarde
+        la respuesta para el inicio de la sesión 05.</li>
   </ol>
 </div>
 
@@ -155,11 +171,13 @@ const $ = id => document.getElementById(id);
 const sliderF1 = $('f1'), sliderGan = $('gan');
 
 // --- mezclador: crear los 8 sliders verticales ------------------------------
+// El parcial 1 (la fundamental) se marca visualmente aparte: es el que pide
+// apagar el ticket de s04 y el que s05 retoma para la fundamental ausente.
 const cols = [];
 for (let n = 1; n <= N_PARC; n++) {
   const col = document.createElement('div');
-  col.className = 'parcial';
-  col.innerHTML = '<b>' + n + '</b>' +
+  col.className = 'parcial' + (n === 1 ? ' fundamental' : '');
+  col.innerHTML = '<b>' + n + (n === 1 ? ' <small>(fund.)</small>' : '') + '</b>' +
     '<input type="range" class="vert" min="0" max="100" value="' + (n === 1 ? 100 : 0) + '">' +
     '<span class="valor">1,00</span><span class="hz"></span>';
   $('mezclador').appendChild(col);
@@ -186,6 +204,27 @@ function refrescaEtiquetas() {
     c.querySelector('.valor').textContent = a[i].toFixed(2).replace('.', ',');
     c.querySelector('.hz').textContent = (i + 1) * f1Actual() + ' Hz';
   });
+  refrescaBotonFund();
+}
+
+// --- botón "Apagar la fundamental": el experimento del ticket de s04 -------
+// Recuerda el último valor no nulo del parcial 1 para poder restaurarlo, y
+// mantiene el texto/estado del botón sincronizado incluso si el profesor
+// mueve el slider del parcial 1 a mano en vez de usar el botón.
+let ultimoValorFund = 100;
+function refrescaBotonFund() {
+  const apagado = Number(slidersA[0].value) === 0;
+  if (!apagado) ultimoValorFund = Number(slidersA[0].value);
+  $('btnFund').textContent = apagado
+    ? '⏻ Encender la fundamental (parcial 1)'
+    : '⏻ Apagar la fundamental (parcial 1)';
+  $('btnFund').classList.toggle('apagado', apagado);
+}
+function alternarFundamental() {
+  const apagadoAhora = Number(slidersA[0].value) === 0;
+  slidersA[0].value = apagadoAhora ? (ultimoValorFund || 100) : 0;
+  refrescaEtiquetas();
+  aplicaReceta();
 }
 
 // --- audio -------------------------------------------------------------------
@@ -334,6 +373,7 @@ requestAnimationFrame(animar);
 $('btnPlay').addEventListener('click', iniciarSostenido);
 $('btnPulsar').addEventListener('click', pulsar);
 $('btnStop').addEventListener('click', detener);
+$('btnFund').addEventListener('click', alternarFundamental);
 sliderF1.addEventListener('input', () => { refrescaEtiquetas(); aplicaFrecuencias(); });
 sliderGan.addEventListener('input', () => { refrescaEtiquetas(); aplicaReceta(); });
 slidersA.forEach(s => s.addEventListener('input', () => { refrescaEtiquetas(); aplicaReceta(); }));

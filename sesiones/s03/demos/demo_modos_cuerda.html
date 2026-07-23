@@ -5,13 +5,16 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Demo — Modos de una cuerda (s03)</title>
 <style>
-  /* Estética editorial: fondo claro, serif para texto, sans para controles */
+  /* Estética "tinta y agua" (identidad del sitio, 2026-07-22): papel casi
+     blanco y frío, tinta gris-azulada, acento verde petróleo, azul de
+     apoyo; serif para el texto explicativo, sans para controles y ejes. */
   :root {
-    --tinta: #1a1a1a;
-    --acento: #7a2e2e;     /* rojo ladrillo sobrio */
-    --linea: #2e4a7a;      /* azul para las formas modales */
-    --papel: #faf8f4;
-    --panel: #f0ece4;
+    --tinta: #1f2937;
+    --acento: #0f766e;    /* verde petróleo: nodos, énfasis, revelado */
+    --azul: #34558b;      /* formas modales, curva de suma */
+    --papel: #fbfbf9;
+    --panel: #eef3f2;
+    --sans: -apple-system, "Segoe UI", "Helvetica Neue", Helvetica, Arial, sans-serif;
   }
   * { box-sizing: border-box; }
   body {
@@ -21,12 +24,12 @@
     max-width: 900px; margin-inline: auto;
   }
   h1 { font-size: 1.35rem; margin: 0 0 .2rem; }
-  .sesion { font-family: Helvetica, Arial, sans-serif; font-size: .8rem;
+  .sesion { font-family: var(--sans); font-size: .8rem;
             letter-spacing: .06em; text-transform: uppercase; color: var(--acento); }
   .bajada { font-style: italic; margin: .3rem 0 1rem; }
   .panel {
     background: var(--panel); border-radius: 6px; padding: .9rem 1rem;
-    font-family: Helvetica, Arial, sans-serif; font-size: .9rem;
+    font-family: var(--sans); font-size: .9rem;
     display: flex; flex-wrap: wrap; gap: 1rem 2rem; align-items: flex-start;
   }
   .ctrl { display: flex; flex-direction: column; gap: .25rem; min-width: 200px; flex: 1; }
@@ -34,38 +37,64 @@
   .valor { font-variant-numeric: tabular-nums; }
   input[type=range] { width: 100%; accent-color: var(--acento); }
   button {
-    font-family: Helvetica, Arial, sans-serif; font-size: .95rem;
+    font-family: var(--sans); font-size: .95rem;
     padding: .5rem 1rem; border: 1px solid var(--tinta); border-radius: 4px;
-    background: white; cursor: pointer;
+    background: white; color: var(--tinta); cursor: pointer;
+    transition: transform .08s ease, background-color .15s ease;
   }
+  button:hover { transform: translateY(-1px); }
+  button:active { transform: translateY(0); }
   button.primario { background: var(--acento); color: white; border-color: var(--acento); }
-  button.activo { background: var(--linea); color: white; border-color: var(--linea); }
+  button.activo { background: var(--azul); color: white; border-color: var(--azul); }
   .escuchar { display: flex; flex-wrap: wrap; gap: .4rem; align-items: center; }
   .escuchar button { padding: .35rem .7rem; font-size: .85rem; }
   .presets button { padding: .3rem .6rem; font-size: .8rem; }
+  /* interruptor "modo predicción": caja destacada para separarlo del resto */
+  .prediccion {
+    border: 1px dashed var(--acento); border-radius: 6px;
+    padding: .6rem .8rem; display: flex; flex-direction: column; gap: .4rem;
+    min-width: 230px;
+  }
+  .prediccion .fila { display: flex; align-items: center; gap: .5rem; }
+  .prediccion input[type=checkbox] { width: 1.05rem; height: 1.05rem; accent-color: var(--acento); }
+  .prediccion .botones { display: flex; gap: .4rem; flex-wrap: wrap; }
+  .prediccion .botones button { padding: .3rem .55rem; font-size: .78rem; }
+  .prediccion .ayuda { font-size: .78rem; color: #555; margin: 0; }
   /* tabla de modos: slider de amplitud + datos de cada modo */
   table.modos {
     width: 100%; border-collapse: collapse; margin-top: 1rem;
-    font-family: Helvetica, Arial, sans-serif; font-size: .85rem;
+    font-family: var(--sans); font-size: .85rem;
   }
   table.modos td, table.modos th { padding: .25rem .5rem; border-bottom: 1px solid #ddd; }
   table.modos th { text-align: left; font-size: .78rem; text-transform: uppercase;
                    letter-spacing: .04em; color: #555; }
   table.modos input[type=range] { width: 110px; vertical-align: middle; }
+  table.modos tr.fila-activa { background: color-mix(in srgb, var(--azul) 10%, transparent); }
+  .oculto { color: var(--acento); font-weight: bold; letter-spacing: .05em; }
+  .revelar-fila {
+    font-family: var(--sans); font-size: .72rem; padding: .1rem .5rem;
+    border-radius: 999px; border: 1px solid var(--acento); background: white;
+    color: var(--acento); cursor: pointer;
+  }
   canvas { width: 100%; display: block; background: white;
            border: 1px solid #ccc; border-radius: 4px; margin-top: 1rem; }
-  .leyenda { font-family: Helvetica, Arial, sans-serif; font-size: .78rem; color: #555;
+  .leyenda { font-family: var(--sans); font-size: .78rem; color: #555;
              margin-top: .25rem; }
   .observar { border-left: 4px solid var(--acento); padding: .2rem 0 .2rem 1rem; margin-top: 1.2rem; }
   .observar h2 { font-size: 1rem; margin: .2rem 0; }
   ol { margin: .4rem 0; padding-left: 1.2rem; }
+  @media (max-width: 560px) {
+    .panel { flex-direction: column; }
+    .ctrl, .prediccion { min-width: 0; width: 100%; }
+  }
 </style>
 </head>
 <body>
 <p class="sesion">Acústica Musical UC · Sesión 03</p>
 <h1>Modos de una cuerda: la familia de razones enteras</h1>
-<p class="bajada">Encienda los modos uno a uno, escuche a qué intervalo
-suena cada uno, y arme el sonido de la cuerda sumándolos.</p>
+<p class="bajada">Apueste antes de escuchar: encienda el modo de
+predicción, adivine cada intervalo y forma, y luego arme el sonido de la
+cuerda sumando los modos.</p>
 
 <div class="panel">
   <div class="ctrl">
@@ -90,6 +119,19 @@ suena cada uno, y arme el sonido de la cuerda sumándolos.</p>
       <button id="preIguales">todos iguales</button>
     </div>
   </div>
+  <div class="prediccion">
+    <div class="fila">
+      <input type="checkbox" id="chkPrediccion">
+      <label for="chkPrediccion" style="font-weight:bold">Modo predicción</label>
+    </div>
+    <p class="ayuda">Oculta la frecuencia, el intervalo y la forma de cada
+      modo hasta que usted lo escuche o lo revele. Ideal para apostar
+      ANTES de tocar cada botón.</p>
+    <div class="botones">
+      <button id="btnRevelarTodo">Revelar todo</button>
+      <button id="btnOcultarTodo">Nueva ronda (ocultar)</button>
+    </div>
+  </div>
   <div class="ctrl" style="min-width:130px; flex:0">
     <button id="btnPlay" class="primario">▶ Iniciar</button>
     <button id="btnStop">■ Detener</button>
@@ -97,16 +139,17 @@ suena cada uno, y arme el sonido de la cuerda sumándolos.</p>
 </div>
 
 <table class="modos">
-  <thead><tr><th>modo n</th><th>amplitud</th><th>frecuencia (Hz)</th><th>intervalo respecto del modo 1</th></tr></thead>
+  <thead><tr><th>modo n</th><th>amplitud</th><th>frecuencia (Hz)</th><th>intervalo respecto del modo 1</th><th></th></tr></thead>
   <tbody id="filas"></tbody>
 </table>
 
 <canvas id="lienzoModos" height="360"></canvas>
 <p class="leyenda">Formas de los seis primeros modos (eje horizontal:
 posición a lo largo de la cuerda, 0–L; eje vertical: desplazamiento,
-exagerado). Los puntos rojos son los <b>nodos</b>: lugares que no se
+exagerado). Los puntos verdes son los <b>nodos</b>: lugares que no se
 mueven. La animación va en cámara lenta: las frecuencias reales son las
-de la tabla.</p>
+de la tabla. Con el modo predicción activo, la forma de un modo se
+dibuja solo después de revelarlo.</p>
 
 <canvas id="lienzoSuma" height="170"></canvas>
 <p class="leyenda">La cuerda "real": suma de los seis modos con las
@@ -115,16 +158,20 @@ amplitudes elegidas (misma cámara lenta).</p>
 <div class="observar">
   <h2>¿Qué observar?</h2>
   <ol>
-    <li><b>Prediga antes de apretar</b>: ¿a qué intervalo musical sonará
-        el modo 2 respecto del modo 1? ¿Y el 3 respecto del 2? Después
-        escúchelos con los botones y contraste.</li>
-    <li>Mire los nodos del dibujo: si apoyara un dedo justo en la
-        <b>mitad</b> de una cuerda real, ¿cuáles de los seis modos
-        sobrevivirían? Imítelo aquí: baje a cero las amplitudes de los
-        modos que el dedo mataría y escuche qué queda.</li>
-    <li>Compare la receta "solo el 1" con la receta "1/n": ¿cuál suena
-        más a cuerda de verdad? ¿Qué le aportan al timbre los modos
-        agudos, si la <i>nota</i> sigue siendo la misma?</li>
+    <li><b>Antes de apretar nada</b>: active "modo predicción". ¿A qué
+        intervalo musical cree que sonará el modo 2 respecto del modo 1?
+        ¿Y el modo 3 respecto del modo 2? Escriba su apuesta y recién
+        entonces toque los botones para comprobar.</li>
+    <li>¿Qué forma cree que tiene el modo 3 — cuántas "barrigas" y
+        cuántos nodos interiores? Dibújela mentalmente antes de revelarla.
+        Después: si apoyara un dedo justo en la <b>mitad</b> de una cuerda
+        real, ¿cuáles de los seis modos sobrevivirían? Imítelo aquí: baje
+        a cero las amplitudes de los modos que el dedo mataría y escuche
+        qué queda.</li>
+    <li>Compare la receta "solo el 1" con la receta "1/n": ¿cuál cree que
+        sonará más a cuerda de verdad, antes de escucharlas? ¿Qué le
+        aportan al timbre los modos agudos, si la <i>nota</i> sigue siendo
+        la misma?</li>
   </ol>
 </div>
 
@@ -136,6 +183,11 @@ amplitudes elegidas (misma cámara lenta).</p>
 // modo tiene su forma (y sus nodos) y el sonido de la cuerda es su suma.
 // Audio: 6 osciladores sinusoidales fijos (uno por modo) con una ganancia
 // por modo (amplitud del slider) y una ganancia maestra (tope 0,5).
+// "Modo predicción": oculta frecuencia/intervalo/forma de cada modo hasta
+// que se escucha ese modo solo o se revela a mano; sirve para la demo
+// predictiva del plan (m2, 10-25'). Se puede desactivar para uso libre
+// (p. ej. como plan B de síntesis aditiva en s04): al apagarlo se revela
+// todo de nuevo.
 // El profesor puede cambiar abajo N_MODOS, el rango de f1 y la velocidad
 // de la animación (CAMARA_LENTA) sin tocar nada más.
 // ---------------------------------------------------------------------------
@@ -151,28 +203,33 @@ let ctxAudio = null, ganMaestra = null;
 let oscs = [], gansModo = [];
 let sonando = false;
 let solo = 0;                 // 0 = suma; 1..6 = solo ese modo
+let prediccion = false;        // modo predicción activo/inactivo
+// revelado[n-1] = true si ya se puede mostrar frecuencia/intervalo/forma del modo n
+const revelado = new Array(N_MODOS).fill(true);
 
 const $ = id => document.getElementById(id);
 const amps = new Array(N_MODOS).fill(0);   // amplitudes 0..1 (sliders)
 amps[0] = 1;                               // parte con la fundamental sola
 
-// --- construcción de la tabla de modos (slider + datos por fila) -----------
+// --- construcción de la tabla de modos (slider + datos + botón revelar) ----
 const filas = $('filas');
 for (let n = 1; n <= N_MODOS; n++) {
   const tr = document.createElement('tr');
+  tr.id = 'fila' + n;
   tr.innerHTML = '<td><b>' + n + '</b></td>' +
     '<td><input type="range" min="0" max="100" value="' + (n === 1 ? 100 : 0) +
     '" id="amp' + n + '"> <span class="valor" id="ampVal' + n + '">' +
     (n === 1 ? '1,00' : '0,00') + '</span></td>' +
     '<td class="valor" id="f' + n + 'Val"></td>' +
-    '<td>' + INTERVALOS[n - 1] + '</td>';
+    '<td id="int' + n + 'Val"></td>' +
+    '<td><button class="revelar-fila" id="rev' + n + '" style="display:none">revelar</button></td>';
   filas.appendChild(tr);
 }
 
 function f1Actual()  { return Number($('f1').value); }
 function ganActual() { return $('gan').value / 100; }   // 0 .. 0,5 máximo
 
-// --- refresco de etiquetas y del audio --------------------------------------
+// --- refresco de etiquetas, tabla y audio -----------------------------------
 function refresca() {
   const f1 = f1Actual();
   $('f1Val').textContent = f1 + ' Hz';
@@ -180,7 +237,12 @@ function refresca() {
   for (let n = 1; n <= N_MODOS; n++) {
     amps[n - 1] = $('amp' + n).value / 100;
     $('ampVal' + n).textContent = amps[n - 1].toFixed(2).replace('.', ',');
-    $('f' + n + 'Val').textContent = (n * f1) + ' Hz';
+    const visible = !prediccion || revelado[n - 1];
+    $('f' + n + 'Val').textContent = visible ? (n * f1) + ' Hz' : '?';
+    $('f' + n + 'Val').className = visible ? 'valor' : 'valor oculto';
+    $('int' + n + 'Val').textContent = visible ? INTERVALOS[n - 1] : '? (apueste antes de revelar)';
+    $('int' + n + 'Val').className = visible ? '' : 'oculto';
+    $('rev' + n).style.display = (prediccion && !revelado[n - 1]) ? 'inline-block' : 'none';
   }
   if (ctxAudio && sonando) aplicaAudio();
 }
@@ -229,14 +291,40 @@ function detener() {
   }
 }
 
-// --- selector suma / modo solo ----------------------------------------------
+// --- selector suma / modo solo: escuchar un modo también lo revela ---------
 document.querySelectorAll('#escuchar button').forEach(b =>
   b.addEventListener('click', () => {
     solo = Number(b.dataset.solo);
     document.querySelectorAll('#escuchar button').forEach(x =>
       x.classList.toggle('activo', x === b));
+    document.querySelectorAll('tr[id^="fila"]').forEach(tr =>
+      tr.classList.remove('fila-activa'));
+    if (solo > 0) {
+      revelado[solo - 1] = true;              // escuchar el modo lo revela
+      const fila = $('fila' + solo);
+      fila.classList.add('fila-activa');      // feedback: fila resaltada
+    }
+    refresca();
     if (ctxAudio && sonando) aplicaAudio();
   }));
+
+// --- revelar fila a fila, o todo/nada de una vez ----------------------------
+for (let n = 1; n <= N_MODOS; n++) {
+  $('rev' + n).addEventListener('click', () => { revelado[n - 1] = true; refresca(); });
+}
+$('btnRevelarTodo').addEventListener('click', () => {
+  revelado.fill(true); refresca();
+});
+$('btnOcultarTodo').addEventListener('click', () => {
+  revelado.fill(false); revelado[0] = true;   // el modo 1 es la referencia (unísono)
+  refresca();
+});
+$('chkPrediccion').addEventListener('change', (e) => {
+  prediccion = e.target.checked;
+  if (!prediccion) revelado.fill(true);       // al apagar el modo, todo vuelve a verse
+  else { revelado.fill(false); revelado[0] = true; }
+  refresca();
+});
 
 // --- recetas rápidas de amplitudes -------------------------------------------
 function receta(fn) {
@@ -250,9 +338,12 @@ $('preIguales').addEventListener('click',() => receta(() => 0.6));
 // --- visualización -----------------------------------------------------------
 // Cada modo n se dibuja como onda estacionaria: y(x,t) = A·sin(nπx/L)·cos(ω_vis t)
 // con ω_vis proporcional a n (cámara lenta que conserva las proporciones).
+// Si el modo predicción está activo y el modo aún no fue revelado, se
+// dibuja solo el eje con un "?" (ni forma ni nodos), para no delatar la
+// respuesta antes de que el estudiante escuche o revele ese modo.
 const lzModos = $('lienzoModos'), lzSuma = $('lienzoSuma');
-const azul = getComputedStyle(document.body).getPropertyValue('--linea');
-const rojo = getComputedStyle(document.body).getPropertyValue('--acento');
+const colorCurva = getComputedStyle(document.body).getPropertyValue('--azul');
+const colorNodo  = getComputedStyle(document.body).getPropertyValue('--acento');
 
 function preparaCanvas(cv, alto) {
   const dpr = window.devicePixelRatio || 1;
@@ -268,7 +359,8 @@ function preparaCanvas(cv, alto) {
 function ejeCuerda(g, x0, x1, y, rotulo) {
   g.strokeStyle = '#bbb'; g.lineWidth = 1;
   g.beginPath(); g.moveTo(x0, y); g.lineTo(x1, y); g.stroke();
-  g.font = '11px Helvetica, Arial, sans-serif'; g.fillStyle = '#555';
+  g.font = '11px ' + getComputedStyle(document.body).fontFamily;
+  g.fillStyle = '#555';
   g.fillText('0', x0 - 4, y + 14); g.fillText('L', x1 - 4, y + 14);
   if (rotulo) g.fillText(rotulo, x0, y - 26);
 }
@@ -285,11 +377,21 @@ function dibuja(ms) {
   for (let n = 1; n <= N_MODOS; n++) {
     const yc = paso * (n - 0.5);
     ejeCuerda(g1, x0, x1, yc, null);
-    g1.fillStyle = '#555';
+    g1.fillStyle = (n === solo) ? colorCurva : '#555';
+    g1.font = (n === solo) ? 'bold 12px sans-serif' : '11px sans-serif';
     g1.fillText('n = ' + n, 6, yc + 4);
+
+    const oculto = prediccion && !revelado[n - 1];
+    if (oculto) {
+      // modo aún no revelado: solo el eje y un "?" a media cuerda
+      g1.fillStyle = colorNodo;
+      g1.font = 'bold 16px sans-serif';
+      g1.fillText('?', x0 + (x1 - x0) / 2 - 4, yc - 4);
+      continue;
+    }
     // forma modal (amplitud del slider; trazo tenue si está en cero)
     const A = amps[n - 1];
-    g1.strokeStyle = azul; g1.lineWidth = A > 0 ? 1.8 : 0.7;
+    g1.strokeStyle = colorCurva; g1.lineWidth = A > 0 ? 1.8 : 0.7;
     g1.globalAlpha = A > 0 ? 1 : 0.45;
     g1.beginPath();
     for (let i = 0; i <= 120; i++) {
@@ -301,20 +403,20 @@ function dibuja(ms) {
     g1.stroke();
     g1.globalAlpha = 1;
     // nodos interiores: puntos quietos en x = k·L/n
-    g1.fillStyle = rojo;
+    g1.fillStyle = colorNodo;
     for (let k = 1; k < n; k++) {
       const x = x0 + (x1 - x0) * k / n;
       g1.beginPath(); g1.arc(x, yc, 3, 0, 2 * Math.PI); g1.fill();
     }
   }
 
-  // panel 2: la suma de los modos
+  // panel 2: la suma de los modos (siempre visible: es "la cuerda real" que arma el estudiante)
   const ALTO2 = 170;
   const [g2, w2] = preparaCanvas(lzSuma, ALTO2);
   const yc2 = ALTO2 / 2, media2 = ALTO2 * 0.36;
   ejeCuerda(g2, x0, w2 - 16, yc2, 'suma de los 6 modos');
   const norm = Math.max(1, amps.reduce((s, a) => s + a, 0)); // que no se salga del cuadro
-  g2.strokeStyle = azul; g2.lineWidth = 2;
+  g2.strokeStyle = colorCurva; g2.lineWidth = 2;
   g2.beginPath();
   for (let i = 0; i <= 160; i++) {
     const u = i / 160;

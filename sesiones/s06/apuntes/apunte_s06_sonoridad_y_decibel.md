@@ -149,13 +149,18 @@ admisible a la mitad**: 88 dB(A) → 4 h, 91 → 2 h, 94 → 1 h (criterio
 NIOSH; ROS caps. 30–31). Un ensayo intenso puede vivir en los 90 y
 tantos dB(A) y una banda amplificada bastante más arriba: la dosis se
 gasta rápido, y el daño por exposición acumulada es indoloro y no se
-recupera. Los valores límite de la norma chilena aplicable
-**[POR VERIFICAR: DS 594 y su regla de intercambio]**. Las decisiones
-prácticas que sí están al alcance salieron en la estación E5: medir el
-propio ensayo, alejarse de la fuente cuando se pueda, y usar
-protectores (los de músico atenúan de forma más pareja que la espuma)
-— unos 15–25 dB de atenuación típica **[POR VERIFICAR: rango según
-modelo]** compran, por la regla de los 3 dB, muchas veces más tiempo.
+recupera. Los valores límite de la norma chilena aplicable van en la misma
+línea: el **DS 594** (Ministerio de Salud, 1999, arts. 74–75, vigente
+en 2026) fija idéntico tope — 85 dB(A) lento por 8 horas — y construye
+su tabla de tiempos admisibles con la **misma regla de intercambio de
+3 dB** (no de 5 dB). Las decisiones prácticas que sí están al alcance
+salieron en la estación E5: medir el propio ensayo, alejarse de la
+fuente cuando se pueda, y usar protectores (los de músico atenúan de
+forma más pareja que la espuma) — unos 15–25 dB de atenuación típica
+(rango de referencia de los protectores de músico de atenuación plana,
+tipo ER-15/ER-20, y de tapones y orejeras de uso comercial en su
+atenuación efectiva de terreno) compran, por la regla de los 3 dB,
+muchas veces más tiempo.
 
 ## Síntesis
 
@@ -197,3 +202,6 @@ oídos descansados.
 - Rossing, T. D., Moore, F. R. & Wheeler, P. A. (2002). *The Science of
   Sound*, 3.ª ed. — cap. 6 (dB, fones, sones: el banco de ejercicios de
   la prueba) y caps. 30–31 (niveles ambientales y efectos del ruido).
+- Chile, Ministerio de Salud. Decreto Supremo N.º 594 (1999), *Reglamento
+  sobre condiciones sanitarias y ambientales básicas en los lugares de
+  trabajo*, arts. 74–75 (texto vigente, leychile.cl/BCN).

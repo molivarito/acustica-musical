@@ -5,13 +5,15 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Demo — Batidos: dos tonos casi iguales (s07)</title>
 <style>
-  /* Estética editorial del curso: fondo claro, serif para texto, sans para controles */
+  /* Estética "tinta y agua" del sitio (2026-07-22): fondo claro frío,
+     serif para texto explicativo, sans para controles y ejes. */
   :root {
-    --tinta: #1a1a1a;
-    --acento: #7a2e2e;     /* rojo ladrillo: envolvente y acentos */
-    --linea: #2e4a7a;      /* azul: la onda suma */
-    --papel: #faf8f4;
-    --panel: #f0ece4;
+    --tinta: #1f2937;
+    --acento: #0f766e;     /* verde petróleo: envolvente y acentos */
+    --linea: #34558b;      /* azul: la onda suma */
+    --papel: #fbfbf9;
+    --panel: #eef3f2;
+    --sans: -apple-system, "Segoe UI", Helvetica, sans-serif;
   }
   * { box-sizing: border-box; }
   body {
@@ -21,12 +23,12 @@
     max-width: 900px; margin-inline: auto;
   }
   h1 { font-size: 1.35rem; margin: 0 0 .2rem; }
-  .sesion { font-family: Helvetica, Arial, sans-serif; font-size: .8rem;
+  .sesion { font-family: var(--sans); font-size: .8rem;
             letter-spacing: .06em; text-transform: uppercase; color: var(--acento); }
   .bajada { font-style: italic; margin: .3rem 0 1rem; }
   .panel {
     background: var(--panel); border-radius: 6px; padding: .9rem 1rem;
-    font-family: Helvetica, Arial, sans-serif; font-size: .9rem;
+    font-family: var(--sans); font-size: .9rem;
     display: flex; flex-wrap: wrap; gap: 1rem 2rem; align-items: center;
   }
   .ctrl { display: flex; flex-direction: column; gap: .25rem; min-width: 230px; flex: 1; }
@@ -34,13 +36,14 @@
   .valor { font-variant-numeric: tabular-nums; }
   input[type=range] { width: 100%; accent-color: var(--acento); }
   button {
-    font-family: Helvetica, Arial, sans-serif; font-size: .95rem;
+    font-family: var(--sans); font-size: .95rem;
     padding: .5rem 1rem; border: 1px solid var(--tinta); border-radius: 4px;
     background: white; cursor: pointer;
   }
+  button.mini { font-size: .78rem; padding: .3rem .6rem; }
   button.primario { background: var(--acento); color: white; border-color: var(--acento); }
   .marcador {
-    font-family: Helvetica, Arial, sans-serif; text-align: center;
+    font-family: var(--sans); text-align: center;
     background: white; border: 1px solid #ccc; border-radius: 6px;
     padding: .5rem 1rem; margin-top: 1rem;
   }
@@ -51,7 +54,14 @@
   .observar { border-left: 4px solid var(--acento); padding: .2rem 0 .2rem 1rem; margin-top: 1.2rem; }
   .observar h2 { font-size: 1rem; margin: .2rem 0; }
   ol { margin: .4rem 0; padding-left: 1.2rem; }
-  .afinacion { font-family: Helvetica, Arial, sans-serif; font-size: .85rem; }
+  .afinacion { font-family: var(--sans); font-size: .85rem; }
+  .atajos { margin-top: .5rem; display: flex; flex-wrap: wrap; gap: .4rem; align-items: center; }
+  .atajos span { font-size: .75rem; color: #555; }
+  .resultado-afinacion {
+    display: none; margin-top: .5rem; padding: .5rem .7rem; border-radius: 4px;
+    background: var(--panel); border: 1px solid var(--acento); font-size: .85rem;
+  }
+  .contador { font-size: .78rem; color: #555; }
 </style>
 </head>
 <body>
@@ -63,9 +73,15 @@ ondulaciones por segundo y compárelas con la diferencia de frecuencias.</p>
 <div class="panel">
   <div class="ctrl">
     <label>Tono 1 (fijo): <span class="valor">f₁ = 440,0 Hz</span></label>
-    <label for="f2">Tono 2: <span class="valor" id="f2Val">f₂ = 443,0 Hz</span></label>
-    <input type="range" id="f2" min="4100" max="4700" value="4430">
+    <label for="f2">Tono 2: <span class="valor" id="f2Val">f₂ = 442,0 Hz</span></label>
+    <input type="range" id="f2" min="4100" max="4700" value="4420">
     <span style="font-size:.8rem">(rango 410–470 Hz, paso 0,1 Hz)</span>
+    <div class="atajos">
+      <span>Atajos de la sesión (Δf):</span>
+      <button class="mini" type="button" data-f2="442">442 Hz (Δ2)</button>
+      <button class="mini" type="button" data-f2="444">444 Hz (Δ4)</button>
+      <button class="mini" type="button" data-f2="437">437 Hz (Δ3)</button>
+    </div>
   </div>
   <div class="ctrl" style="min-width:200px">
     <label for="gan">Ganancia: <span class="valor" id="ganVal">0,35</span></label>
@@ -74,7 +90,11 @@ ondulaciones por segundo y compárelas con la diferencia de frecuencias.</p>
       <label><input type="checkbox" id="ocultar"> modo afinación
         (ocultar números)</label><br>
       <button id="btnAzar" style="margin-top:.3rem; font-size:.85rem">
-        Desafinar al azar</button>
+        🎲 Desafinar al azar</button>
+      <button id="btnRevelar" style="margin-top:.3rem; font-size:.85rem">
+        👂 Revelar resultado</button>
+      <div class="contador" id="contadorDesafios"></div>
+      <div class="resultado-afinacion" id="resultadoAfinacion"></div>
     </div>
   </div>
   <div class="ctrl" style="min-width:150px; flex:0">
@@ -86,8 +106,8 @@ ondulaciones por segundo y compárelas con la diferencia de frecuencias.</p>
 <div class="marcador">
   <span style="font-size:.85rem">frecuencia de batido&nbsp;
     f<sub>b</sub> = |f₂ − f₁| =</span>
-  <span class="grande" id="fbVal">3,0 batidos/s</span>
-  <span class="valor" id="tbVal">(uno cada 0,33 s)</span>
+  <span class="grande" id="fbVal">2,0 batidos/s</span>
+  <span class="valor" id="tbVal">(uno cada 0,50 s)</span>
 </div>
 
 <canvas id="lienzo"></canvas>
@@ -95,15 +115,18 @@ ondulaciones por segundo y compárelas con la diferencia de frecuencias.</p>
 <div class="observar">
   <h2>¿Qué observar?</h2>
   <ol>
-    <li>Ponga f₂ = 443 Hz y <b>cuente</b> las ondulaciones por segundo
-        antes de mirar el marcador. ¿Coincide su conteo con
-        |f₂ − f₁|? Pruebe con 442 y con 437 Hz.</li>
-    <li>Acerque f₂ lentamente a 440 Hz: ¿qué le pasa al batido justo
-        antes de detenerse? ¿Cómo usaría eso para afinar dos
-        instrumentos al unísono sin mirar ningún número?</li>
-    <li>Aleje f₂ más de 15–20 Hz de f₁: ¿puede seguir contando los
-        batidos? ¿Qué oye ahora — una ondulación, una aspereza, dos
-        notas? (Esta pregunta es la puerta de la sesión 08.)</li>
+    <li>¿Su oído cuenta tan rápido como el reloj? Use los atajos
+        442 → 444 → 437 Hz (o el deslizador) y <b>cuente en voz alta</b>
+        las ondulaciones por segundo ANTES de mirar el marcador.
+        ¿Coincidió con |f₂ − f₁|?</li>
+    <li>¿Puede afinar solo de oído mejor que un instrumento afinador?
+        Active "modo afinación", pulse "Desafinar al azar" y lleve f₂ al
+        unísono guiándose únicamente por la velocidad del batido — luego
+        pulse "Revelar resultado". ¿A cuántos Hz quedó?</li>
+    <li>¿Dónde deja de ser un batido y empieza a ser otra cosa? Aleje f₂
+        más de 15–20 Hz de f₁: ¿sigue siendo una ondulación que se puede
+        contar, o ya suena áspero, o incluso separado en dos notas? Esa
+        frontera es exactamente el tema de la sesión 08.</li>
   </ol>
 </div>
 
@@ -131,7 +154,8 @@ let sonando = false;
 // faseDif crece a razón de 2π·(f2−f1) rad/s mientras suena.
 let faseDif = 0;
 let tUltimo = 0;                   // instante (tiempo de audio) de la última integración
-let f2Actual = 443;
+let f2Actual = 442;
+let desafios = 0;                  // contador de rondas del juego "modo afinación" (solo para animar la clase)
 
 const $ = id => document.getElementById(id);
 const sliderF2 = $('f2'), sliderGan = $('gan');
@@ -235,7 +259,7 @@ function dibuja() {
   // ejes
   g.strokeStyle = '#999'; g.lineWidth = 1;
   g.beginPath(); g.moveTo(margen, base); g.lineTo(w - 10, base); g.stroke();
-  g.font = '11px Helvetica, Arial, sans-serif'; g.fillStyle = '#555';
+  g.font = '11px -apple-system, "Segoe UI", Helvetica, sans-serif'; g.fillStyle = '#555';
   g.fillText('amplitud', 4, 14);
   for (let ms = 0; ms <= 1000; ms += 250) {
     const x = margen + anchoUtil * ms / 1000;
@@ -249,7 +273,7 @@ function dibuja() {
   const N = Math.max(300, anchoUtil);            // una muestra por pixel
 
   // banda de la onda rápida (rellena entre ±envolvente)
-  g.fillStyle = 'rgba(46, 74, 122, 0.25)';       // azul translúcido
+  g.fillStyle = 'rgba(52, 85, 139, 0.25)';       // azul translúcido (--linea)
   g.beginPath();
   for (let i = 0; i <= N; i++) {
     const tau = i / N * VENTANA_S;
@@ -299,16 +323,55 @@ sliderGan.addEventListener('input', () => {
 });
 $('ocultar').addEventListener('change', refrescaEtiquetas);
 
+// Atajos de la sesión: saltan directo a los Δf que pide el plan de clase
+// (442, 444 y 437 Hz) para no pelear con el mouse en vivo frente al curso.
+document.querySelectorAll('.atajos button[data-f2]').forEach(boton => {
+  boton.addEventListener('click', () => {
+    const nueva = parseFloat(boton.dataset.f2);
+    sliderF2.value = Math.round(nueva * 10);
+    cambiaF2(nueva);
+  });
+});
+
 // Modo afinación: desafina f2 al azar (±3 a ±12 Hz de f1, nunca 0) para el
 // juego de afinar de oído; conviene activar antes "ocultar números".
+// Cada clic cuenta como un desafío nuevo y borra el veredicto anterior.
+function actualizaContador() {
+  $('contadorDesafios').textContent = desafios > 0 ? 'Desafío n.º ' + desafios : '';
+}
 $('btnAzar').addEventListener('click', () => {
   const magnitud = 3 + Math.random() * 9;           // 3 .. 12 Hz
   const signo = Math.random() < 0.5 ? -1 : 1;
   const nueva = Math.round((F1 + signo * magnitud) * 10) / 10;
   sliderF2.value = Math.round(nueva * 10);
   cambiaF2(nueva);
+  $('ocultar').checked = true;                      // el desafío parte con números ocultos
+  desafios++;
+  actualizaContador();
+  const resultado = $('resultadoAfinacion');
+  resultado.style.display = 'none';
+  resultado.textContent = '';
+  refrescaEtiquetas();
 });
 
+// Revelar resultado: destapa los números y agrega un veredicto entretenido
+// según cuán cerca quedó el voluntario del unísono (el juego central del m2).
+$('btnRevelar').addEventListener('click', () => {
+  const delta = Math.abs(f2Actual - F1);
+  let veredicto;
+  if (delta < 0.3)      veredicto = '¡Unísono! Oído de afinador de piano.';
+  else if (delta < 1)   veredicto = 'Excelente: menos de 1 Hz de error.';
+  else if (delta < 3)   veredicto = 'Bien encaminado — el batido todavía se nota.';
+  else                  veredicto = 'Todavía bate rápido: siga cerrando el oído.';
+  const resultado = $('resultadoAfinacion');
+  resultado.textContent = 'Quedó a ' + coma(delta, 2) + ' Hz de f₁ (f₂ = '
+                          + coma(f2Actual, 1) + ' Hz). ' + veredicto;
+  resultado.style.display = 'block';
+  $('ocultar').checked = false;                     // revela f₂ y f_b en el marcador principal
+  refrescaEtiquetas();
+});
+
+actualizaContador();
 refrescaEtiquetas();
 </script>
 </body>

@@ -30,8 +30,10 @@ espectralmente rico — una fundamental $f_0$ y su serie de armónicos —
 y musicalmente crudo: todavía no es ni una /a/ ni una /o/.
 
 La segunda perilla es el **filtro**: el **tracto vocal**, el tubo
-blando que va de la laringe a los labios (unos 17 cm en el adulto
-**[POR VERIFICAR]**). Como toda columna de aire — sesión 10 y 12 —
+blando que va de la laringe a los labios (unos 17 cm en el adulto —
+valor estándar de la literatura fonética, cercano al promedio de la
+voz masculina adulta; la voz femenina adulta promedia unos 14–15 cm).
+Como toda columna de aire — sesión 10 y 12 —
 tiene resonancias; pero a diferencia del PVC del taller, este tubo
 cambia de forma a voluntad: lengua, mandíbula y labios lo estrechan y
 ensanchan por tramos. Sus resonancias se llaman **formantes** (F1,
@@ -66,8 +68,9 @@ se mueven — se mueven las **bandas oscuras** de refuerzo (el filtro).
 Al subir la nota con la vocal fija, lo contrario. Una vocal es,
 físicamente, la posición de las dos primeras resonancias del tracto:
 el par (F1, F2). Los valores típicos para las cinco vocales del
-español, en una voz adulta, son del orden de **[POR VERIFICAR en los
-valores finos; los rangos son estándar]**:
+español, en una voz adulta, son del orden de (valores estándar de la
+literatura fonética; varían con el hablante y el dialecto — cf. Quilis
+& Esgueva, 1983):
 
 | Vocal | F1 (Hz) | F2 (Hz) |
 |---|---|---|
@@ -168,3 +171,10 @@ bitácora.
 - Roederer, J. G. (1997) — **omite la voz** (omisión que el propio
   autor declara): no hay lectura alternativa en español esta semana;
   este apunte y el capítulo 13 cubren el vacío.
+- Quilis, A. & Esgueva, M. (1983). "Realización de los fonemas
+  vocálicos españoles en posición fonética normal". En *Estudios de
+  fonética* — fuente clásica de los valores de F1/F2 de las vocales
+  del español.
+- Fant, G. (1960). *Acoustic Theory of Speech Production*. Mouton —
+  referencia estándar para el largo típico del tracto vocal adulto
+  (~17,5 cm en el modelo masculino de referencia).

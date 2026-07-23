@@ -5,13 +5,14 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Demo — Resonancia: el oscilador forzado (s10)</title>
 <style>
-  /* Estética editorial del curso: fondo claro, serif para texto, sans para controles */
+  /* Estética "tinta y agua" del sitio (identidad 2026-07-22):
+     fondo claro frío, tinta gris azulada, acento verde petróleo, azul para curvas. */
   :root {
-    --tinta: #1a1a1a;
-    --acento: #7a2e2e;     /* rojo ladrillo sobrio */
-    --linea: #2e4a7a;      /* azul para curvas */
-    --papel: #faf8f4;
-    --panel: #f0ece4;
+    --tinta: #1f2937;
+    --acento: #0f766e;     /* verde petróleo */
+    --linea: #34558b;      /* azul para curvas */
+    --papel: #fbfbf9;
+    --panel: #eef3f2;
   }
   * { box-sizing: border-box; }
   body {
@@ -32,7 +33,7 @@
   .ctrl { display: flex; flex-direction: column; gap: .25rem; min-width: 230px; flex: 1; }
   .ctrl label { font-weight: bold; }
   .valor { font-variant-numeric: tabular-nums; }
-  .nota-ctrl { font-size: .8rem; color: #555; }
+  .nota-ctrl { font-size: .8rem; color: #4b5563; }
   input[type=range] { width: 100%; accent-color: var(--acento); }
   button {
     font-family: Helvetica, Arial, sans-serif; font-size: .95rem;
@@ -41,10 +42,15 @@
   }
   button.primario { background: var(--acento); color: white; border-color: var(--acento); }
   canvas { width: 100%; display: block; background: white;
-           border: 1px solid #ccc; border-radius: 4px; margin-top: 1rem; }
+           border: 1px solid #d8dcdb; border-radius: 4px; margin-top: 1rem; }
   #curva { height: 260px; }
   #envolvente { height: 90px; }
-  .leyenda { font-family: Helvetica, Arial, sans-serif; font-size: .8rem; color: #555; margin: .2rem 0 0; }
+  .leyenda { font-family: Helvetica, Arial, sans-serif; font-size: .8rem; color: #4b5563; margin: .2rem 0 0; }
+  .badge-resonando {
+    font-family: Helvetica, Arial, sans-serif; font-size: .78rem; font-weight: bold;
+    color: var(--acento); opacity: 0; transition: opacity .15s ease-out;
+    margin: .1rem 0 0; letter-spacing: .03em;
+  }
   .observar { border-left: 4px solid var(--acento); padding: .2rem 0 .2rem 1rem; margin-top: 1.2rem; }
   .observar h2 { font-size: 1rem; margin: .2rem 0; }
   ol { margin: .4rem 0; padding-left: 1.2rem; }
@@ -82,23 +88,26 @@ propia, y cómo el amortiguamiento cambia el pico y el transiente a la vez.</p>
 </div>
 
 <canvas id="curva"></canvas>
-<p class="leyenda">Curva de respuesta: la traza se dibuja a medida que usted barre la excitación.</p>
+<p class="leyenda">Curva de respuesta: la traza se dibuja a medida que usted barre la excitación.
+<span class="badge-resonando" id="badgeResonando">● ¡el resonador se infla!</span></p>
 <canvas id="envolvente"></canvas>
-<p class="leyenda">Envolvente temporal de la respuesta (últimos 4 s): aquí se ven el transiente de ataque y el decaimiento.</p>
+<p class="leyenda">Envolvente temporal de la respuesta relativa (últimos 4 s): aquí se ven el transiente de ataque y el decaimiento.</p>
 
 <div class="observar">
   <h2>¿Qué observar?</h2>
   <ol>
-    <li><b>Prediga primero</b> y barra después: ¿en qué frecuencia se va a
-        inflar la respuesta? Al pasar por ella, ¿qué cambia — la altura que
-        oye, la sonoridad, o ambas?</li>
-    <li>Mueva el amortiguamiento y repita el barrido y el golpe: ¿qué le
-        pasa al <i>ancho</i> del pico y a la <i>duración</i> del ping libre?
-        ¿Pueden cambiar por separado?</li>
-    <li>Con poco amortiguamiento, barra rápido y luego lento cerca del
-        pico: ¿por qué al pasar rápido la curva "no alcanza" su altura
-        verdadera? (Pista: mire la envolvente — ¿cuánto tarda el resonador
-        en creer?)</li>
+    <li><b>Apueste antes de barrer</b>: mirando el rango 220–880 Hz, diga en
+        voz alta dónde va a "explotar" la respuesta. Ahora barra despacio:
+        cuando llega el momento, ¿qué nota primero — que sube la altura del
+        tono, que crece la sonoridad, o son la misma cosa?</li>
+    <li>Lleve el amortiguamiento de un extremo a otro y repita barrido +
+        golpe en cada extremo. Intente conseguir un pico <i>angosto</i> con
+        un ping <i>corto</i> (o al revés): ¿se puede, o el ancho del pico y
+        la duración del ping son la misma perilla disfrazada de dos?</li>
+    <li>Con el amortiguamiento al mínimo (pico angosto), barra rápido una
+        vez y lento otra cerca de f₀: ¿por qué el barrido rápido
+        "miente" y deja un pico más bajo del real? (Pista: mire la
+        envolvente — el resonador tarda en creer que usted habla en serio).</li>
   </ol>
 </div>
 
@@ -199,9 +208,11 @@ function detener() {
 
 // Golpe: ráfaga de ruido de 3 ms inyectada al MISMO filtro → se oye la
 // oscilación libre del resonador (ping en f0) con su decaimiento.
+let golpeMarcaT = null;   // instante (performance.now) del último golpe, para marcarlo en la envolvente
 async function golpe() {
   if (!ctxAudio) armaAudio();
   await ctxAudio.resume();
+  golpeMarcaT = performance.now();
   const n = Math.round(ctxAudio.sampleRate * 0.003);
   const buf = ctxAudio.createBuffer(1, n, ctxAudio.sampleRate);
   const d = buf.getChannelData(0);
@@ -297,9 +308,9 @@ function dibujaCurva() {
   const aAy = a => y0 - (y0 - y1) * Math.min(1, a / RMS_MAX);
 
   // ejes
-  g.strokeStyle = '#999'; g.lineWidth = 1;
+  g.strokeStyle = '#94a3b8'; g.lineWidth = 1;
   g.beginPath(); g.moveTo(x0, y1); g.lineTo(x0, y0); g.lineTo(x1, y0); g.stroke();
-  g.font = '11px Helvetica, Arial, sans-serif'; g.fillStyle = '#555';
+  g.font = '11px Helvetica, Arial, sans-serif'; g.fillStyle = '#475569';
   g.fillText('amplitud de respuesta (relativa)', 4, 12);
   g.fillText('frecuencia de excitación (Hz)', (x0 + x1) / 2 - 70, alto - 8);
   for (let f = 220; f <= 880; f += 110) {
@@ -310,10 +321,10 @@ function dibujaCurva() {
 
   // marcador de la frecuencia propia (oculto en modo presentación)
   if (!modoPres()) {
-    g.strokeStyle = '#b09a6a'; g.setLineDash([5, 4]);
+    g.strokeStyle = 'rgba(31,41,55,0.45)'; g.setLineDash([5, 4]);
     g.beginPath(); g.moveTo(fAx(F0), y0); g.lineTo(fAx(F0), y1); g.stroke();
     g.setLineDash([]);
-    g.fillStyle = '#8a7440';
+    g.fillStyle = 'rgba(31,41,55,0.8)';
     g.fillText('f₀ = 440 Hz (frecuencia propia)', fAx(F0) + 6, y1 + 12);
   }
 
@@ -330,23 +341,36 @@ function dibujaCurva() {
   }
   g.stroke();
 
-  // punto vivo: dónde está la excitación ahora y cuánto responde
-  const xAhora = fAx(fExc()), yAhora = aAy(rmsActual);
+  // punto vivo: dónde está la excitación ahora y cuánto responde.
+  // El radio "infla" con la respuesta (feedback visual inmediato, la misma
+  // hinchazón que se oye) SOLO mientras hay excitación continua sonando:
+  // durante un "golpe" puro el punto no debe inflarse aquí (el golpe suena
+  // en f0, no en la frecuencia del slider) — su marca vive en la envolvente.
+  const nivelRel = sonando ? Math.min(1, rmsActual / RMS_MAX) : 0;
+  const xAhora = fAx(fExc()), yAhora = aAy(sonando ? rmsActual : 0);
+  const radioPunto = 4 + 7 * nivelRel;
   g.fillStyle = getComputedStyle(document.body).getPropertyValue('--acento');
-  g.beginPath(); g.arc(xAhora, yAhora, 5, 0, 2 * Math.PI); g.fill();
+  g.beginPath(); g.arc(xAhora, yAhora, radioPunto, 0, 2 * Math.PI); g.fill();
   g.strokeStyle = g.fillStyle; g.lineWidth = 1;
   g.beginPath(); g.moveTo(xAhora, y0); g.lineTo(xAhora, yAhora); g.stroke();
+
+  // badge "¡se infla!": aparece solo cuando la respuesta ya está bien cerca
+  // de su máximo (umbral alto para que sea un premio, no un ruido constante).
+  // OCULTO en modo presentación: en la escucha del día el curso debe
+  // notarlo por el oído, no leerlo en la pantalla.
+  $('badgeResonando').style.opacity = (sonando && !modoPres() && nivelRel > 0.82) ? '1' : '0';
 }
 
+const VENTANA_ENV_S = 4;   // segundos que abarca la franja de envolvente (debe calzar con histEnv/60fps)
 function dibujaEnv() {
   const alto = 90, margIzq = 46;
   const [g, w] = preparaLienzo(cEnv, alto);
   const x0 = margIzq, x1 = w - 10, base = alto - 14;
-  g.strokeStyle = '#999'; g.lineWidth = 1;
+  g.strokeStyle = '#94a3b8'; g.lineWidth = 1;
   g.beginPath(); g.moveTo(x0, base); g.lineTo(x1, base); g.stroke();
-  g.font = '11px Helvetica, Arial, sans-serif'; g.fillStyle = '#555';
+  g.font = '11px Helvetica, Arial, sans-serif'; g.fillStyle = '#475569';
   g.fillText('ahora →', x1 - 46, base + 11);
-  g.fillText('amplitud', 4, 12);
+  g.fillText('amplitud (relativa)', 4, 12);
   g.strokeStyle = getComputedStyle(document.body).getPropertyValue('--linea');
   g.lineWidth = 1.5;
   g.beginPath();
@@ -356,6 +380,24 @@ function dibujaEnv() {
     i ? g.lineTo(x, y) : g.moveTo(x, y);
   }
   g.stroke();
+
+  // marca del golpe: destello vertical que se apaga, ubicado en el instante
+  // en que ocurrió dentro de la ventana visible — ancla visual al oído del
+  // "ping" y su decaimiento (mismo fenómeno, dos sentidos a la vez).
+  if (golpeMarcaT !== null) {
+    const edadS = (performance.now() - golpeMarcaT) / 1000;
+    if (edadS >= 0 && edadS < VENTANA_ENV_S) {
+      const alfa = Math.max(0, 1 - edadS / 1.2);
+      if (alfa > 0) {
+        const xG = x1 - (x1 - x0) * (edadS / VENTANA_ENV_S);
+        g.strokeStyle = `rgba(15,118,110,${alfa})`;  // --acento con desvanecido
+        g.lineWidth = 2;
+        g.beginPath(); g.moveTo(xG, base); g.lineTo(xG, 8); g.stroke();
+      }
+    } else {
+      golpeMarcaT = null;
+    }
+  }
 }
 
 function cuadro() {

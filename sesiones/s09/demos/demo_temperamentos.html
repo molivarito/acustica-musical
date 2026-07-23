@@ -5,14 +5,15 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Demo — Temperamentos: afinar es elegir un compromiso (s09)</title>
 <style>
-  /* Estética editorial del curso: fondo claro, serif para texto, sans para controles */
+  /* Estética "tinta y agua" del sitio: fondo claro frío, tinta oscura,
+     acento verde petróleo, azul para la nota base. Serif para texto,
+     sans-serif para controles y ejes. */
   :root {
-    --tinta: #1a1a1a;
-    --acento: #7a2e2e;     /* rojo ladrillo: nota superior / marcas */
-    --linea: #2e4a7a;      /* azul: nota base */
-    --verde: #3a6b35;      /* verde: tercera del acorde */
-    --papel: #faf8f4;
-    --panel: #f0ece4;
+    --tinta: #1f2937;
+    --acento: #0f766e;    /* verde petróleo: nota que se ajusta / foco */
+    --azul: #34558b;      /* nota base */
+    --papel: #fbfbf9;
+    --panel: #eef3f2;
   }
   * { box-sizing: border-box; }
   body {
@@ -22,12 +23,12 @@
     max-width: 960px; margin-inline: auto;
   }
   h1 { font-size: 1.35rem; margin: 0 0 .2rem; }
-  .sesion { font-family: Helvetica, Arial, sans-serif; font-size: .8rem;
+  .sesion { font-family: -apple-system, 'Segoe UI', Helvetica, sans-serif; font-size: .8rem;
             letter-spacing: .06em; text-transform: uppercase; color: var(--acento); }
   .bajada { font-style: italic; margin: .3rem 0 1rem; }
   .panel {
     background: var(--panel); border-radius: 6px; padding: .9rem 1rem;
-    font-family: Helvetica, Arial, sans-serif; font-size: .9rem;
+    font-family: -apple-system, 'Segoe UI', Helvetica, sans-serif; font-size: .9rem;
     display: flex; flex-wrap: wrap; gap: .9rem 1.8rem; align-items: flex-start;
   }
   .ctrl { display: flex; flex-direction: column; gap: .3rem; min-width: 190px; flex: 1; }
@@ -35,21 +36,30 @@
   .valor { font-variant-numeric: tabular-nums; }
   input[type=range] { width: 100%; accent-color: var(--acento); }
   button {
-    font-family: Helvetica, Arial, sans-serif; font-size: .92rem;
+    font-family: -apple-system, 'Segoe UI', Helvetica, sans-serif; font-size: .92rem;
     padding: .45rem .9rem; border: 1px solid var(--tinta); border-radius: 4px;
     background: white; cursor: pointer;
   }
+  button.mini { font-size: .8rem; padding: .32rem .6rem; }
+  button:disabled { opacity: .45; cursor: default; }
   button.primario { background: var(--acento); color: white; border-color: var(--acento); }
-  button.activo { background: var(--linea); color: white; border-color: var(--linea); }
+  button.activo { background: var(--azul); color: white; border-color: var(--azul); }
   fieldset { border: none; padding: 0; margin: 0; display: flex; flex-wrap: wrap; gap: .5rem .9rem; }
   canvas { width: 100%; height: 230px; display: block; background: white;
            border: 1px solid #ccc; border-radius: 4px; margin-top: 1rem; }
   #lectura {
-    font-family: Helvetica, Arial, sans-serif; font-size: .88rem; margin-top: .6rem;
+    font-family: -apple-system, 'Segoe UI', Helvetica, sans-serif; font-size: .88rem; margin-top: .6rem;
     background: white; border: 1px solid #ddd; border-radius: 4px; padding: .5rem .8rem;
   }
   #lectura table { border-collapse: collapse; width: 100%; }
   #lectura td, #lectura th { padding: .15rem .5rem; text-align: left; border-bottom: 1px solid #eee; }
+  .nota-panel {
+    background: white; border: 1px solid #ddd; border-radius: 4px; padding: .35rem .6rem;
+    font-family: -apple-system, 'Segoe UI', Helvetica, sans-serif; font-size: .85rem;
+  }
+  .valor.ok    { color: var(--acento); font-weight: bold; }
+  .valor.cerca { color: #92601b; font-weight: bold; }
+  .valor.lejos { color: #9a3412; font-weight: bold; }
   .observar { border-left: 4px solid var(--acento); padding: .2rem 0 .2rem 1rem; margin-top: 1.2rem; }
   .observar h2 { font-size: 1rem; margin: .2rem 0; }
   ol { margin: .4rem 0; padding-left: 1.2rem; }
@@ -97,13 +107,38 @@ afine usted, de oído, usando los batidos como cronómetro.</p>
           <span class="nombre">temperamento igual</span><span class="letra">C</span></label>
       </fieldset>
     </div>
+    <div id="grupoPresentacion">
+      <label>Presentación rápida (para la escucha del día)</label>
+      <fieldset>
+        <button class="mini" id="btnQuintaLisa">5.ª: lisa</button>
+        <button class="mini" id="btnQuintaRespira">5.ª: que respira</button>
+      </fieldset>
+      <fieldset>
+        <button class="mini" id="btnTerceraDulce">3.ª: dulce</button>
+        <button class="mini" id="btnTerceraMuele">3.ª: que muele</button>
+      </fieldset>
+      <fieldset>
+        <button class="mini" id="btnSecuencia">Secuencia sorpresa (acorde, orden revuelto)</button>
+        <button class="mini" id="btnRevelarSecuencia" disabled>Revelar</button>
+      </fieldset>
+      <p class="nota-panel valor" id="etiquetaSecuencia">Toque «Secuencia sorpresa» para el gancho de «¿cuál está afinado?».</p>
+    </div>
     <div id="grupoAjuste" style="display:none">
+      <label>Fase del taller</label>
+      <fieldset id="fase">
+        <button class="mini activo" data-fase="A">A · anular batidos</button>
+        <button class="mini" data-fase="B">B · ~1 batido/s</button>
+        <button class="mini" data-fase="C">C · 3.ª mayor (opcional)</button>
+      </fieldset>
+      <p class="nota-panel valor" id="metaFase"></p>
       <label for="ajuste">Nota superior: <span class="valor" id="ajusteVal">700,0 cents</span></label>
       <input type="range" id="ajuste" min="660" max="740" value="700" step="0.5">
       <fieldset>
         <button id="btnAzar">desafinar al azar</button>
-        <label><input type="checkbox" id="chkOcultarCents" checked> ocultar cents</label>
+        <button id="btnAnotar">anotar (revelar)</button>
       </fieldset>
+      <label style="font-weight:normal"><input type="checkbox" id="chkOcultarCents" checked> ocultar cents</label>
+      <p class="nota-panel valor" id="feedbackAnotar"></p>
     </div>
   </div>
 
@@ -129,10 +164,18 @@ afine usted, de oído, usando los batidos como cronómetro.</p>
     <li>La <b>3.ª mayor</b>: ¿cuál de las tres versiones bate más rápido?
         ¿Cuál le suena "afinada" a usted — la lisa o la que ha oído toda la
         vida en el piano?</li>
-    <li>En modo <b>afinar de oído</b> (cents ocultos): deje la quinta sin
-        batidos y recién entonces mire los cents. ¿Cayó en 702 (justa) o en
-        700 (temperada)? Ahora estréchela hasta contar ~1 batido por segundo
-        y vuelva a mirar.</li>
+    <li>Pruebe la <b>secuencia sorpresa</b> con el acorde mayor: tres
+        versiones, orden mezclado, sin nombres. Vote por escrito ANTES de
+        revelar. ¿Alguna de las tres le pareció "mal afinada"? Al revelar,
+        ¿no eran las tres correctas, cada una según su propia regla?</li>
+    <li>En modo <b>afinar de oído</b> (cents ocultos): en la Fase A, deje la
+        quinta sin batidos SOLO con el oído (los números y el pulso exacto
+        están ocultos) y recién entonces anote. ¿Cayó cerca de 702 (justa)?
+        En la Fase B, desde ahí, estréchela hasta contar ~1 batido por
+        segundo: ¿ahora cae cerca de 700 (temperada)?</li>
+    <li>Fase C (opcional): repita la Fase A con la 3.ª mayor. Los batidos
+        corren ~10 veces más rápido que en la quinta — ¿logra anularlos de
+        oído igual de bien?</li>
   </ol>
 </div>
 
@@ -141,14 +184,21 @@ afine usted, de oído, usando los batidos como cronómetro.</p>
 // ---------------------------------------------------------------------------
 // Demo s09 — temperamentos y afinación por batidos. Un concepto: afinar es
 // elegir qué pares de parciales coinciden y cuáles baten.
-//   · Modo COMPARAR: el mismo intervalo/acorde en justa, pitagórica e igual.
-//   · Modo AFINAR: la nota superior se ajusta en cents (a ciegas si se
-//     ocultan) para anular o sembrar batidos, como un afinador de pianos.
+//   · Modo COMPARAR: el mismo intervalo/acorde en justa, pitagórica e igual;
+//     incluye atajos de presentación (alternar liso/que respira, dulce/que
+//     muele) y una "secuencia sorpresa" para el gancho "¿cuál está afinado?"
+//     (orden revuelto, sin nombres).
+//   · Modo AFINAR: la nota superior se ajusta en cents (a ciegas: cents y
+//     ritmo exacto de batido ocultos) para anular o sembrar batidos, como un
+//     afinador de pianos. Tres fases guían el taller (A/B/C) y el botón
+//     "anotar" revela el resultado con una devolución inmediata.
 // El profesor puede cambiar abajo N_ARM (armónicos por nota), F_MIN/F_MAX
-// (rango de la nota base) y los rangos del deslizador de afinación.
+// (rango de la nota base), RANGO_AJUSTE, los objetivos de FASES y la
+// duración de cada sonido de la secuencia (SECUENCIA_MS).
 // ---------------------------------------------------------------------------
 const N_ARM = 6;                 // armónicos por nota (tonos complejos)
 const F_MIN = 110, F_MAX = 440;  // rango de la nota base, Hz (slider log)
+const SECUENCIA_MS = 3000;       // duración de cada sonido en la secuencia sorpresa
 
 // Cents de cada intervalo según la afinación (valores exactos calculados
 // desde las razones: justa 5/4 y 3/2; pitagórica 81/64 y 3/2; igual 2^(n/12)).
@@ -158,12 +208,29 @@ const AFINACIONES = {
   pitagorica: { tercera: CENTS(81 / 64), quinta: CENTS(3 / 2), rot: { tercera: '81:64', quinta: '3:2' } },
   igual:      { tercera: 400,            quinta: 700,          rot: { tercera: '2^(4/12)', quinta: '2^(7/12)' } }
 };
+const NOMBRES = {
+  justa: 'entonación justa (5:4 / 3:2)',
+  pitagorica: 'pitagórica (quintas puras, tercera 81:64)',
+  igual: 'temperamento igual (2^(n/12))'
+};
 // Rango del deslizador del modo afinar, por intervalo (±40 cents del igual)
 const RANGO_AJUSTE = { tercera: [360, 440], quinta: [660, 740] };
+// Fases del taller PEE (formato 2, en parejas): A y C parten de un valor al
+// azar; B continúa desde donde quedó A ("desde ahí, estreche...").
+const FASES = {
+  A: { intervalo: 'quinta',  objetivo: 702,          ref: 'la quinta justa',
+       meta: 'Ajuste hasta que la quinta suene lisa — sin ningún latido. Recién entonces anote.' },
+  B: { intervalo: 'quinta',  objetivo: 700,          ref: 'la quinta del temperamento igual',
+       meta: 'Desde ahí, estreche la quinta hasta contar ~1 batido por segundo.' },
+  C: { intervalo: 'tercera', objetivo: CENTS(5 / 4), ref: 'la tercera justa',
+       meta: 'Repita el proceso con la 3.ª mayor — los batidos corren ~10× más rápido. Opcional.' }
+};
 
 let ctxAudio = null, master = null;
 let bancos = [];                 // 3 bancos de osciladores (base, voz2, voz3)
 let sonando = false;
+let faseActual = 'A';
+let reproduciendoSecuencia = false, secuenciaOrden = null;
 
 const $ = id => document.getElementById(id);
 const fmt = (x, d = 1) => x.toFixed(d).replace('.', ',');
@@ -178,7 +245,7 @@ function ganActual()   { return $('gan').value / 100; }   // tope 0,5: protecci�
 // Notas que suenan ahora: [{f, color, nombre, cents}] — la base siempre primero
 function notasActuales() {
   const f0 = baseActual();
-  const notas = [{ f: f0, color: 'var(--linea)', nombre: 'base', cents: 0 }];
+  const notas = [{ f: f0, color: 'var(--azul)', nombre: 'base', cents: 0 }];
   if (modoActual() === 'afinar') {
     const c = parseFloat($('ajuste').value);
     notas.push({ f: f0 * Math.pow(2, c / 1200), color: 'var(--acento)',
@@ -186,7 +253,7 @@ function notasActuales() {
   } else {
     const af = AFINACIONES[afinActual()];
     if (intervalo === 'tercera' || intervalo === 'acorde')
-      notas.push({ f: f0 * Math.pow(2, af.tercera / 1200), color: 'var(--verde)',
+      notas.push({ f: f0 * Math.pow(2, af.tercera / 1200), color: 'var(--tinta)',
                    nombre: '3.ª mayor', cents: af.tercera });
     if (intervalo === 'quinta' || intervalo === 'acorde')
       notas.push({ f: f0 * Math.pow(2, af.quinta / 1200), color: 'var(--acento)',
@@ -272,7 +339,8 @@ function detener() {
 function refrescaLectura() {
   const notas = notasActuales();
   const pares = paresEnColision(notas);
-  const ocultoCents = modoActual() === 'afinar' && $('chkOcultarCents').checked;
+  const enAfinar = modoActual() === 'afinar';
+  const ocultoCents = enAfinar && $('chkOcultarCents').checked;
   let html = '<table><tr><th>Nota</th><th>f (Hz)</th><th>Razón</th><th>Cents desde la base</th></tr>';
   const af = AFINACIONES[afinActual()];
   notas.forEach((nt, i) => {
@@ -285,13 +353,21 @@ function refrescaLectura() {
   });
   html += '</table>';
   if (pares.length) {
-    html += '<p style="margin:.4rem 0 0"><b>Parciales que se pisan:</b> '
-      + pares.map(p => describePar(p, notas)).join(' · ') + '</p>';
+    if (ocultoCents) {
+      // A ciegas: no se imprime el Δf/ritmo exacto (sería un atajo para
+      // deducir los cents). Solo el oído (y, en el gráfico, la posición del
+      // par que colisiona) guían la afinación — el ritmo hay que contarlo.
+      html += '<p style="margin:.4rem 0 0"><b>Escuche:</b> ¿el intervalo bate? '
+        + '¿rápido o lento? Anote su respuesta antes de presionar «anotar».</p>';
+    } else {
+      html += '<p style="margin:.4rem 0 0"><b>Parciales que se pisan:</b> '
+        + pares.map(p => describePar(p, notas)).join(' · ') + '</p>';
+    }
   } else {
     html += '<p style="margin:.4rem 0 0"><b>Ningún par de parciales se pisa</b> (con '
       + N_ARM + ' armónicos): el intervalo suena liso.</p>';
   }
-  if (modoActual() === 'afinar' && !ocultoCents) {
+  if (enAfinar && !ocultoCents) {
     const c = parseFloat($('ajuste').value);
     const justa = intervalo === 'tercera' ? CENTS(5 / 4) : CENTS(3 / 2);
     const igual = intervalo === 'tercera' ? 400 : 700;
@@ -315,6 +391,9 @@ function dibuja() {
   const notas = notasActuales();
   const pares = paresEnColision(notas);
   const oculto = document.body.classList.contains('oculto');
+  // A ciegas en modo afinar: se ve DÓNDE colisiona el par (concepto), pero no
+  // se anima al ritmo exacto del batido (eso hay que contarlo de oído).
+  const cegado = modoActual() === 'afinar' && $('chkOcultarCents').checked;
   const margen = 40, piso = h - 28;
   const fMax = Math.max(...notas.map(n => n.f)) * N_ARM * 1.06;
   const x = f => margen + (w - margen - 10) * f / fMax;
@@ -322,7 +401,7 @@ function dibuja() {
   // eje de frecuencia con rótulo y unidades
   g.strokeStyle = '#999'; g.lineWidth = 1;
   g.beginPath(); g.moveTo(margen, piso); g.lineTo(w - 8, piso); g.stroke();
-  g.font = '11px Helvetica, Arial, sans-serif'; g.fillStyle = '#555';
+  g.font = '11px -apple-system, "Segoe UI", Helvetica, sans-serif'; g.fillStyle = '#555';
   g.fillText('amplitud', 4, 14);
   const paso = fMax > 1800 ? 500 : 250;
   for (let f = 0; f <= fMax; f += paso) {
@@ -352,15 +431,19 @@ function dibuja() {
     g.strokeStyle = '#444'; g.lineWidth = 1;
     g.beginPath(); g.moveTo(px - 12, 26); g.lineTo(px - 12, 18);
     g.lineTo(px + 12, 18); g.lineTo(px + 12, 26); g.stroke();
-    if (!oculto) {
+    if (!oculto && !cegado) {
       g.fillStyle = '#444';
       const txt = p.df < 0.05 ? 'coinciden' : 'Δf = ' + fmt(p.df) + ' Hz';
       g.fillText(txt, px - 24, 12);
     }
-    if (sonando && p.df > 0.05 && p.df <= 12) {   // pulso visible solo si es contable
+    if (sonando && p.df > 0.05 && p.df <= 12 && !cegado) {   // pulso visible solo si es contable y no estamos a ciegas
       const amp = 0.5 + 0.5 * Math.sin(2 * Math.PI * p.df * t);
-      g.fillStyle = 'rgba(122,46,46,' + (0.25 + 0.6 * amp) + ')';
+      g.fillStyle = 'rgba(15,118,110,' + (0.25 + 0.6 * amp) + ')';
       g.beginPath(); g.arc(px, 34, 5 + 3 * amp, 0, 2 * Math.PI); g.fill();
+    } else if (sonando && p.df > 0.05 && p.df <= 12 && cegado) {
+      // marca fija (sin animar el ritmo): muestra DÓNDE colisiona, no A QUÉ VELOCIDAD
+      g.fillStyle = 'rgba(15,118,110,0.35)';
+      g.beginPath(); g.arc(px, 34, 5, 0, 2 * Math.PI); g.fill();
     }
   });
   requestAnimationFrame(dibuja);
@@ -368,41 +451,100 @@ function dibuja() {
 requestAnimationFrame(dibuja);
 
 // --- controles -----------------------------------------------------------------
+function actualizaFaseUI() {
+  const cfg = FASES[faseActual];
+  document.querySelectorAll('#fase button').forEach(b =>
+    b.classList.toggle('activo', b.dataset.fase === faseActual));
+  $('metaFase').textContent = 'Fase ' + faseActual + ' — ' + cfg.meta;
+}
 function refrescaTodo() {
   $('baseVal').textContent = fmt(baseActual(), 0) + ' Hz';
   $('ganVal').textContent = fmt(ganActual(), 2);
   const enAfinar = modoActual() === 'afinar';
   $('grupoAfinacion').style.display = enAfinar ? 'none' : '';
+  $('grupoPresentacion').style.display = enAfinar ? 'none' : '';
   $('grupoAjuste').style.display = enAfinar ? '' : 'none';
   // el acorde solo existe en modo comparar
   document.querySelector('[data-int=acorde]').disabled = enAfinar;
   if (enAfinar && intervalo === 'acorde') seleccionaIntervalo('quinta');
+  actualizaFaseUI();
   const c = parseFloat($('ajuste').value);
   $('ajusteVal').textContent = $('chkOcultarCents').checked ? '···· cents (ocultos)' : fmt(c) + ' cents';
   refrescaLectura();
   actualizaAudio();
 }
 function seleccionaIntervalo(nuevo) {
+  const cambia = nuevo !== intervalo;
   intervalo = nuevo;
   document.querySelectorAll('#intervalo button').forEach(b =>
     b.classList.toggle('activo', b.dataset.int === nuevo));
-  const [lo, hi] = RANGO_AJUSTE[nuevo === 'acorde' ? 'quinta' : nuevo];
-  $('ajuste').min = lo; $('ajuste').max = hi;
-  // al cambiar de intervalo, el ajuste parte en el temperamento igual
-  $('ajuste').value = (lo + hi) / 2;
+  if (cambia) {
+    // al cambiar de intervalo, el rango del deslizador se ajusta y el valor
+    // parte en el temperamento igual (si NO cambia, se conserva el valor
+    // actual: así la fase B puede continuar exactamente donde quedó la A)
+    const [lo, hi] = RANGO_AJUSTE[nuevo === 'acorde' ? 'quinta' : nuevo];
+    $('ajuste').min = lo; $('ajuste').max = hi;
+    $('ajuste').value = (lo + hi) / 2;
+  }
+  refrescaTodo();
+}
+function aleatoriza() {
+  // desafinación al azar: parte del ejercicio a ciegas del taller
+  const lo = +$('ajuste').min, hi = +$('ajuste').max;
+  $('ajuste').value = (lo + 4 + Math.random() * (hi - lo - 8)).toFixed(1);
+}
+function seleccionaFase(f) {
+  const fresco = f !== 'B';   // A y C parten de un valor nuevo al azar; B continúa desde donde quedó A
+  faseActual = f;
+  seleccionaIntervalo(FASES[f].intervalo);
+  if (fresco) aleatoriza();
+  $('chkOcultarCents').checked = true;
+  $('feedbackAnotar').innerHTML = '';
+  $('feedbackAnotar').className = 'nota-panel valor';
   refrescaTodo();
 }
 document.querySelectorAll('#intervalo button').forEach(b =>
   b.addEventListener('click', () => seleccionaIntervalo(b.dataset.int)));
+document.querySelectorAll('#fase button').forEach(b =>
+  b.addEventListener('click', () => seleccionaFase(b.dataset.fase)));
 document.querySelectorAll('input[name=modo]').forEach(r => r.addEventListener('change', refrescaTodo));
 document.querySelectorAll('input[name=afinacion]').forEach(r => r.addEventListener('change', refrescaTodo));
 $('base').addEventListener('input', refrescaTodo);
-$('ajuste').addEventListener('input', refrescaTodo);
+$('ajuste').addEventListener('input', () => {
+  // si el estudiante toca la perilla otra vez después de revelar, se oculta
+  // de nuevo (no se puede "espiar" mientras se sigue ajustando)
+  if (!$('chkOcultarCents').checked && modoActual() === 'afinar') {
+    $('chkOcultarCents').checked = true;
+    $('feedbackAnotar').innerHTML = '';
+    $('feedbackAnotar').className = 'nota-panel valor';
+  }
+  refrescaTodo();
+});
 $('chkOcultarCents').addEventListener('change', refrescaTodo);
 $('btnAzar').addEventListener('click', () => {
-  // desafinación al azar: parte del ejercicio a ciegas del taller
-  const lo = +$('ajuste').min, hi = +$('ajuste').max;
-  $('ajuste').value = (lo + 4 + Math.random() * (hi - lo - 8)).toFixed(1);
+  aleatoriza();
+  $('chkOcultarCents').checked = true;
+  $('feedbackAnotar').innerHTML = '';
+  $('feedbackAnotar').className = 'nota-panel valor';
+  refrescaTodo();
+});
+$('btnAnotar').addEventListener('click', () => {
+  // el corazón del taller: revela los cents y da una devolución inmediata,
+  // comparando contra el objetivo de la fase en curso
+  $('chkOcultarCents').checked = false;
+  const c = parseFloat($('ajuste').value);
+  const cfg = FASES[faseActual];
+  const delta = c - cfg.objetivo;
+  const absD = Math.abs(delta);
+  let veredicto, clase;
+  if (absD < 1)      { veredicto = 'Prácticamente exacto.';   clase = 'ok'; }
+  else if (absD < 3) { veredicto = 'Muy cerca.';               clase = 'ok'; }
+  else if (absD < 8) { veredicto = 'Cerca — siga afinando.';  clase = 'cerca'; }
+  else               { veredicto = 'Todavía lejos.';           clase = 'lejos'; }
+  const lado = delta > 0.05 ? ' más ancha que ' : (delta < -0.05 ? ' más estrecha que ' : ' igual a ');
+  $('feedbackAnotar').innerHTML = '<b>' + fmt(c) + ' cents.</b> ' + veredicto + ' Quedó ' + fmt(absD)
+    + ' cents' + lado + cfg.ref + ' (' + fmt(cfg.objetivo) + ' cents).';
+  $('feedbackAnotar').className = 'nota-panel valor ' + clase;
   refrescaTodo();
 });
 $('gan').addEventListener('input', () => {
@@ -414,6 +556,58 @@ $('chkOculto').addEventListener('change', e => {
 });
 $('btnPlay').addEventListener('click', iniciar);
 $('btnStop').addEventListener('click', detener);
+
+// --- atajos de presentación (comparaciones binarias para la escucha del día) --
+function fijaAfinacion(v) {
+  document.querySelector('input[name=afinacion][value="' + v + '"]').checked = true;
+  refrescaTodo();
+}
+$('btnQuintaLisa').addEventListener('click', () => { seleccionaIntervalo('quinta'); fijaAfinacion('justa'); });
+$('btnQuintaRespira').addEventListener('click', () => { seleccionaIntervalo('quinta'); fijaAfinacion('igual'); });
+$('btnTerceraDulce').addEventListener('click', () => { seleccionaIntervalo('tercera'); fijaAfinacion('justa'); });
+$('btnTerceraMuele').addEventListener('click', () => { seleccionaIntervalo('tercera'); fijaAfinacion('igual'); });
+
+// --- secuencia sorpresa: el gancho "¿cuál está afinado?" ----------------------
+// Reproduce el acorde mayor en las tres afinaciones, en un orden al azar y
+// sin mostrar nombres (fuerza modo presentación); tras votar, "revelar"
+// muestra qué afinación fue cada "Sonido".
+async function reproduceSecuencia() {
+  if (reproduciendoSecuencia) return;
+  reproduciendoSecuencia = true;
+  $('btnSecuencia').disabled = true;
+  $('btnRevelarSecuencia').disabled = true;
+  seleccionaIntervalo('acorde');
+  $('chkOculto').checked = true;
+  document.body.classList.add('oculto');
+  const orden = ['justa', 'pitagorica', 'igual'];
+  for (let i = orden.length - 1; i > 0; i--) {           // barajar (Fisher–Yates)
+    const j = Math.floor(Math.random() * (i + 1));
+    [orden[i], orden[j]] = [orden[j], orden[i]];
+  }
+  secuenciaOrden = orden.slice();
+  if (!ctxAudio) creaAudio();
+  await ctxAudio.resume();
+  sonando = true;
+  for (let i = 0; i < orden.length; i++) {
+    document.querySelector('input[name=afinacion][value="' + orden[i] + '"]').checked = true;
+    refrescaTodo();
+    $('etiquetaSecuencia').textContent = 'Sonido ' + (i + 1) + ' de 3…';
+    await new Promise(res => setTimeout(res, SECUENCIA_MS));
+  }
+  detener();
+  $('etiquetaSecuencia').textContent = 'Secuencia terminada. Vote por escrito antes de revelar.';
+  $('btnSecuencia').disabled = false;
+  $('btnRevelarSecuencia').disabled = false;
+  reproduciendoSecuencia = false;
+}
+$('btnSecuencia').addEventListener('click', reproduceSecuencia);
+$('btnRevelarSecuencia').addEventListener('click', () => {
+  if (!secuenciaOrden) return;
+  $('etiquetaSecuencia').innerHTML = secuenciaOrden
+    .map((a, i) => ('<b>Sonido ' + (i + 1) + '</b> = ' + NOMBRES[a]))
+    .join(' · ') + '. Los tres estaban "afinados" — cada uno según su regla.';
+});
+
 refrescaTodo();
 </script>
 </body>

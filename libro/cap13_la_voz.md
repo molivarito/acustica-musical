@@ -141,8 +141,10 @@ sec. 19.2). El zumbido que producen — rico en armónicos, áspero,
 nada musical — es la **fuente**.
 
 Ese zumbido no sale directo al aire: atraviesa la garganta y la boca —
-el **tracto vocal**, un tubo blando de unos 17 cm en el adulto
-**[POR VERIFICAR]** cuya forma usted cambia a voluntad con la lengua,
+el **tracto vocal**, un tubo blando de unos 17 cm en el adulto (valor
+estándar de la literatura fonética, típico de la voz masculina adulta;
+la voz femenina adulta promedia unos 14–15 cm) cuya forma usted cambia
+a voluntad con la lengua,
 la mandíbula y los labios. Y un tubo, usted lo sabe desde la sesión
 10, tiene resonancias: zonas de frecuencia donde responde con ganas y
 zonas donde no. Las resonancias del tracto se llaman **formantes**, y
@@ -208,3 +210,6 @@ que se oyen.
   no existe; los apuntes de la sesión cubren ese vacío.
 - Para la prueba: los capítulos 8–12 de este mismo libro y sus
   apuntes, con las referencias que cada uno declara.
+- Fant, G. (1960). *Acoustic Theory of Speech Production*. Mouton —
+  referencia estándar para el largo típico del tracto vocal adulto
+  (~17,5 cm en el modelo masculino de referencia).

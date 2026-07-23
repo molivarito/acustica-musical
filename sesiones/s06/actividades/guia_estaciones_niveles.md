@@ -82,7 +82,8 @@ previa; respuestas en proporciones, sin logaritmos.)
 dentro de OA4.2.)
 
 Tabla de referencia (criterio NIOSH: 85 dB(A) por 8 h; cada +3 dB, la
-mitad del tiempo — norma chilena **[POR VERIFICAR: DS 594]**):
+mitad del tiempo — la norma chilena DS 594, 1999, art. 75, usa la misma
+regla de 3 dB y da esta misma tabla, valor por valor):
 
 | Nivel dB(A) | 85 | 88 | 91 | 94 | 97 | 100 |
 |---|---|---|---|---|---|---|
@@ -93,9 +94,10 @@ mitad del tiempo — norma chilena **[POR VERIFICAR: DS 594]**):
 - ★ Elijan un caso real del grupo (ensayo, banda, audífonos al ir en
   micro — mídanlo con la app si se puede reproducir aquí) y calculen
   su tiempo admisible con la tabla.
-- Un protector auditivo de músico atenúa del orden de 15–25 dB
-  **[POR VERIFICAR: según modelo]**. Con la regla de los 3 dB: ¿por
-  cuánto multiplica el tiempo admisible una atenuación de 15 dB?
+- Un protector auditivo de músico atenúa del orden de 15–25 dB (valores
+  típicos de fabricante para protectores de atenuación plana, p. ej.
+  ER-15/ER-20). Con la regla de los 3 dB: ¿por cuánto multiplica el
+  tiempo admisible una atenuación de 15 dB?
 - Anoten UNA decisión práctica que el caso analizado debería tomar.
 
 ## Planilla del grupo (la llena el registrador de turno)

@@ -5,13 +5,14 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Demo — El tubo virtual: la columna de aire como resonador configurable (s12)</title>
 <style>
-  /* Estética editorial: fondo claro, serif para texto, sans para controles */
+  /* Estética "tinta y agua" (identidad 2026-07-22): fondo claro frío,
+     serif para texto, sans para controles y ejes. */
   :root {
-    --tinta: #1a1a1a;
-    --acento: #7a2e2e;     /* rojo ladrillo sobrio */
-    --linea: #2e4a7a;      /* azul para modos y espectro */
-    --papel: #faf8f4;
-    --panel: #f0ece4;
+    --tinta: #1f2937;
+    --acento: #0f766e;     /* verde petróleo */
+    --linea: #34558b;      /* azul, para modos secundarios y espectro */
+    --papel: #fbfbf9;
+    --panel: #eef3f2;
   }
   * { box-sizing: border-box; }
   body {
@@ -21,20 +22,21 @@
     max-width: 940px; margin-inline: auto;
   }
   h1 { font-size: 1.35rem; margin: 0 0 .2rem; }
-  .sesion { font-family: Helvetica, Arial, sans-serif; font-size: .8rem;
+  .sesion { font-family: -apple-system, "Segoe UI", Helvetica, sans-serif; font-size: .8rem;
             letter-spacing: .06em; text-transform: uppercase; color: var(--acento); }
   .bajada { font-style: italic; margin: .3rem 0 1rem; }
   .panel {
     background: var(--panel); border-radius: 6px; padding: .9rem 1rem;
-    font-family: Helvetica, Arial, sans-serif; font-size: .9rem;
+    font-family: -apple-system, "Segoe UI", Helvetica, sans-serif; font-size: .9rem;
     display: flex; flex-wrap: wrap; gap: 1rem 2rem; align-items: flex-start;
   }
   .ctrl { display: flex; flex-direction: column; gap: .3rem; min-width: 220px; flex: 1; }
   .ctrl label { font-weight: bold; }
   .valor { font-variant-numeric: tabular-nums; }
   input[type=range] { width: 100%; accent-color: var(--acento); }
+  input[type=checkbox], input[type=radio] { accent-color: var(--acento); }
   button {
-    font-family: Helvetica, Arial, sans-serif; font-size: .95rem;
+    font-family: -apple-system, "Segoe UI", Helvetica, sans-serif; font-size: .95rem;
     padding: .5rem 1rem; border: 1px solid var(--tinta); border-radius: 4px;
     background: white; cursor: pointer;
   }
@@ -45,11 +47,11 @@
   #lienzoTubo { height: 240px; }
   #lienzoEspectro { height: 190px; }
   .lectura {
-    font-family: Helvetica, Arial, sans-serif; font-size: 1rem; margin-top: .8rem;
+    font-family: -apple-system, "Segoe UI", Helvetica, sans-serif; font-size: 1rem; margin-top: .8rem;
     background: var(--panel); border-radius: 6px; padding: .5rem .9rem;
   }
   .lectura b { color: var(--acento); }
-  .aviso { font-size: .8rem; color: #555; font-family: Helvetica, Arial, sans-serif; }
+  .aviso { font-size: .8rem; color: #555; font-family: -apple-system, "Segoe UI", Helvetica, sans-serif; }
   .observar { border-left: 4px solid var(--acento); padding: .2rem 0 .2rem 1rem; margin-top: 1.2rem; }
   .observar h2 { font-size: 1rem; margin: .2rem 0; }
   ol { margin: .4rem 0; padding-left: 1.2rem; }
@@ -59,14 +61,17 @@
 <p class="sesion">Acústica Musical UC · Sesión 12</p>
 <h1>El tubo virtual: la columna de aire como resonador configurable</h1>
 <p class="bajada">Estire el tubo, tape el extremo y abra agujeros:
-prediga primero qué pasará con la nota y con el espectro, después
-compruébelo con los ojos y los oídos.</p>
+active «modo predicción», vote qué pasará con la nota y con el
+espectro, y después compruébelo con los ojos y los oídos.</p>
 
 <div class="panel">
   <div class="ctrl">
     <label for="largo">Largo del tubo L: <span class="valor" id="largoVal">40,0 cm</span></label>
     <input type="range" id="largo" min="150" max="1000" value="400">
-    <span class="aviso">v = 343 m/s (aire a 20 °C)</span>
+    <span class="aviso">v = 343 m/s (aire a 20 °C) ·
+      <label style="font-weight:normal; display:inline">valor exacto:
+      <input type="number" id="largoCm" min="15" max="100" step="0.1" value="40.0"
+             style="width:4.2em; font-family:inherit"> cm</label></span>
     <label for="gan">Ganancia: <span class="valor" id="ganVal">0,25</span></label>
     <input type="range" id="gan" min="0" max="50" value="25">
   </div>
@@ -89,6 +94,9 @@ compruébelo con los ojos y los oídos.</p>
   <div class="ctrl" style="min-width:150px; flex:0">
     <button id="btnPlay" class="primario">▶ Sonar</button>
     <button id="btnStop">■ Detener</button>
+    <label style="font-weight:normal; margin-top:.4rem">
+      <input type="checkbox" id="modoPrediccion"> modo predicción
+      (oculta las cifras)</label>
   </div>
 </div>
 
@@ -100,14 +108,22 @@ compruébelo con los ojos y los oídos.</p>
 <div class="observar">
   <h2>¿Qué observar?</h2>
   <ol>
-    <li>Con el extremo abierto, <b>duplique el largo</b> (p. ej. de 25 a
-        50 cm). Prediga antes: ¿qué le pasa a f₁ y a la nota? ¿Se cumple
-        f₁ = v/2L?</li>
-    <li><b>Tape el extremo</b> sin cambiar el largo: ¿cuánto baja la
-        nota y qué desaparece del espectro? ¿A qué intervalo saltaría
-        este tubo al soplarlo más fuerte, comparado con el abierto?</li>
-    <li><b>Abra un agujero</b>: ¿a qué largo de tubo equivale? Si abre
-        los dos a la vez, ¿cuál manda y por qué?</li>
+    <li>Active <b>modo predicción</b>, active el extremo abierto y
+        <b>duplique el largo</b> (p. ej. de 25 a 50 cm) sin mirar la
+        cifra: ¿qué le pasa a f₁ y a la nota — sube, baja, cuánto?
+        Revele después: ¿se cumple f₁ = v/2L?</li>
+    <li><b>Tape el extremo</b> sin cambiar el largo: al oído, ¿cuánto
+        baja la nota y qué "vacío" nota en el timbre? Mire el espectro:
+        ¿qué picos desaparecieron? ¿A qué intervalo saltaría este mismo
+        tubo si lo soplara más fuerte, comparado con el abierto —
+        octava o docena?</li>
+    <li><b>Abra un agujero</b>: ¿a qué largo de tubo equivale el sonido
+        resultante? Si abre los dos a la vez, ¿cuál manda y por qué el
+        otro queda "mudo"?</li>
+    <li>Escriba <code>34.3</code> en el campo de cm (sin agujeros):
+        compare el espectro abierto contra el tapado — ¿en qué
+        frecuencias exactas caen los picos, y cuáles del abierto
+        desaparecen al tapar?</li>
   </ol>
 </div>
 
@@ -140,6 +156,10 @@ const $ = id => document.getElementById(id);
 // --- estado del tubo --------------------------------------------------------
 function largoTubo() { return $('largo').value / 1000; }   // slider en mm → m
 function ganActual() { return $('gan').value / 100; }      // 0 .. 0,5 máx.
+// Modo predicción: para votaciones en clase (plan s12, mini-lección
+// 15-29'). Oculta las cifras exactas (f1, nota, armónicos) mientras el
+// curso predice de oído; el tubo y el espectro real se siguen viendo.
+function modoPrediccionActivo() { return $('modoPrediccion').checked; }
 function extremoCerrado() {
   return document.querySelector('input[name=extremo]:checked').value === 'cerrado';
 }
@@ -223,7 +243,20 @@ function refrescaLecturas() {
   const f1 = f1De(cfg);
   const cm = (largoTubo() * 100).toFixed(1).replace('.', ',');
   $('largoVal').textContent = cm + ' cm';
+  // el input numérico se sincroniza salvo mientras el usuario está
+  // escribiendo en él (evita pelear con el foco/cursor)
+  if (document.activeElement !== $('largoCm')) {
+    $('largoCm').value = (largoTubo() * 100).toFixed(1);
+  }
   $('ganVal').textContent = ganActual().toFixed(2).replace('.', ',');
+  if (modoPrediccionActivo()) {
+    // se ve el tubo y (al sonar) el espectro real, pero no la cifra:
+    // el curso predice de oído antes de destapar el checkbox
+    $('lectura').innerHTML =
+      '🤔 <b>Prediga</b>: ¿f₁ sube o baja? ¿qué armónicos quedan? ' +
+      'Desmarque «modo predicción» para revelar la cifra.';
+    return;
+  }
   const formula = cfg.cerrado ? 'v/4L' : 'v/2L';
   const serie = cfg.cerrado ? 'impares (1, 3, 5, …)' : 'completos (1, 2, 3, …)';
   const efect = cfg.porAgujero
@@ -260,7 +293,7 @@ function dibujaTubo() {
   // embocadura (izquierda, siempre abierta): boca dibujada
   g.fillStyle = '#fff';
   g.fillRect(xIzq - 2, yTubo + 2, 4, altoTubo - 4);
-  g.font = '11px Helvetica, Arial, sans-serif'; g.fillStyle = '#555';
+  g.font = '11px -apple-system, "Segoe UI", Helvetica, sans-serif'; g.fillStyle = '#555';
   g.fillText('embocadura', xIzq - 20, yTubo - 14);
   g.fillText('(abierta)', xIzq - 10, yTubo - 3);
   // extremo derecho: tapa si corresponde
@@ -327,7 +360,9 @@ function dibujaTubo() {
     g.fillStyle = '#555';
     // si el tubo llega al borde derecho, la etiqueta se mete dentro del dibujo
     const xTxt = (xFin + 92 > w) ? xFin - 96 : xFin + 6;
-    g.fillText('n=' + n + ' → ' + (n * f1).toFixed(0) + ' Hz', xTxt, y0 + 4);
+    // en modo predicción se oculta la cifra en Hz (no la forma del modo)
+    const etiqueta = modoPrediccionActivo() ? 'n=' + n + ' → ? Hz' : 'n=' + n + ' → ' + (n * f1).toFixed(0) + ' Hz';
+    g.fillText(etiqueta, xTxt, y0 + 4);
   });
 }
 
@@ -347,7 +382,7 @@ function dibujaEspectro() {
   // ejes y rejilla
   g.strokeStyle = '#999'; g.lineWidth = 1;
   g.strokeRect(margIzq, margArr, anchoU, altoU);
-  g.font = '11px Helvetica, Arial, sans-serif'; g.fillStyle = '#555';
+  g.font = '11px -apple-system, "Segoe UI", Helvetica, sans-serif'; g.fillStyle = '#555';
   for (let f = 0; f <= F_VISTA; f += 1000) {
     const x = margIzq + anchoU * f / F_VISTA;
     g.beginPath(); g.moveTo(x, margArr + altoU); g.lineTo(x, margArr + altoU + 4); g.stroke();
@@ -376,16 +411,20 @@ function dibujaEspectro() {
     g.stroke();
   }
   // marcas teóricas de los armónicos presentes (para leer "completos vs. impares")
-  const cfg = configEfectiva(), f1 = f1De(cfg);
-  const acento = getComputedStyle(document.body).getPropertyValue('--acento');
-  g.strokeStyle = acento; g.setLineDash([3, 3]); g.lineWidth = 1;
-  armonicosDe(cfg).forEach(n => {
-    const f = n * f1;
-    if (f > F_VISTA) return;
-    const x = margIzq + anchoU * f / F_VISTA;
-    g.beginPath(); g.moveTo(x, margArr); g.lineTo(x, margArr + altoU); g.stroke();
-  });
-  g.setLineDash([]);
+  // en modo predicción se ocultan: el curso predice mirando/escuchando
+  // el trazo real del analizador, no leyendo la respuesta marcada
+  if (!modoPrediccionActivo()) {
+    const cfg = configEfectiva(), f1 = f1De(cfg);
+    const acento = getComputedStyle(document.body).getPropertyValue('--acento');
+    g.strokeStyle = acento; g.setLineDash([3, 3]); g.lineWidth = 1;
+    armonicosDe(cfg).forEach(n => {
+      const f = n * f1;
+      if (f > F_VISTA) return;
+      const x = margIzq + anchoU * f / F_VISTA;
+      g.beginPath(); g.moveTo(x, margArr); g.lineTo(x, margArr + altoU); g.stroke();
+    });
+    g.setLineDash([]);
+  }
 }
 
 function cuadro() { dibujaTubo(); dibujaEspectro(); requestAnimationFrame(cuadro); }
@@ -395,6 +434,15 @@ requestAnimationFrame(cuadro);
 $('btnPlay').addEventListener('click', iniciar);
 $('btnStop').addEventListener('click', detener);
 $('largo').addEventListener('input', aplicaConfig);
+// campo numérico: permite fijar un largo EXACTO (p. ej. 34.3 cm para
+// reproducir al pizarrón, o cualquier valor de la escala del taller)
+$('largoCm').addEventListener('input', () => {
+  const cm = parseFloat($('largoCm').value);
+  if (!Number.isFinite(cm)) return;
+  const mm = Math.round(Math.min(1000, Math.max(150, cm * 10)));
+  $('largo').value = mm;
+  aplicaConfig();
+});
 $('gan').addEventListener('input', () => {
   refrescaLecturas();
   if (ganancia) ganancia.gain.value = ganActual();  // tope 0,5: protección auditiva
@@ -402,6 +450,7 @@ $('gan').addEventListener('input', () => {
 document.querySelectorAll('input[name=extremo]').forEach(r => r.addEventListener('change', aplicaConfig));
 $('agu1').addEventListener('change', aplicaConfig);
 $('agu2').addEventListener('change', aplicaConfig);
+$('modoPrediccion').addEventListener('change', refrescaLecturas);
 refrescaLecturas();
 </script>
 </body>

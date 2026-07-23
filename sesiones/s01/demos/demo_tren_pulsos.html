@@ -5,13 +5,13 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Demo — Tren de pulsos: del ritmo al tono (s01)</title>
 <style>
-  /* Estética editorial: fondo claro, serif para texto, sans para controles */
+  /* Estética "tinta y agua": fondo claro frío, serif para texto, sans para controles */
   :root {
-    --tinta: #1a1a1a;
-    --acento: #7a2e2e;     /* rojo ladrillo sobrio */
-    --linea: #2e4a7a;      /* azul para la forma de onda */
-    --papel: #faf8f4;
-    --panel: #f0ece4;
+    --tinta: #1f2937;
+    --acento: #0f766e;     /* verde petróleo: tono / interacción principal */
+    --linea: #34558b;      /* azul: forma de onda / ritmo */
+    --papel: #fbfbf9;
+    --panel: #eef3f2;
   }
   * { box-sizing: border-box; }
   body {
@@ -21,12 +21,12 @@
     max-width: 900px; margin-inline: auto;
   }
   h1 { font-size: 1.35rem; margin: 0 0 .2rem; }
-  .sesion { font-family: Helvetica, Arial, sans-serif; font-size: .8rem;
+  .sesion { font-family: -apple-system, "Segoe UI", Helvetica, sans-serif; font-size: .8rem;
             letter-spacing: .06em; text-transform: uppercase; color: var(--acento); }
   .bajada { font-style: italic; margin: .3rem 0 1rem; }
   .panel {
     background: var(--panel); border-radius: 6px; padding: .9rem 1rem;
-    font-family: Helvetica, Arial, sans-serif; font-size: .9rem;
+    font-family: -apple-system, "Segoe UI", Helvetica, sans-serif; font-size: .9rem;
     display: flex; flex-wrap: wrap; gap: 1rem 2rem; align-items: center;
   }
   .ctrl { display: flex; flex-direction: column; gap: .25rem; min-width: 220px; flex: 1; }
@@ -34,18 +34,58 @@
   .valor { font-variant-numeric: tabular-nums; }
   input[type=range] { width: 100%; accent-color: var(--acento); }
   button {
-    font-family: Helvetica, Arial, sans-serif; font-size: .95rem;
+    font-family: -apple-system, "Segoe UI", Helvetica, sans-serif; font-size: .95rem;
     padding: .5rem 1rem; border: 1px solid var(--tinta); border-radius: 4px;
-    background: white; cursor: pointer;
+    background: white; color: var(--tinta); cursor: pointer;
   }
   button.primario { background: var(--acento); color: white; border-color: var(--acento); }
+  button.preset {
+    font-size: .85rem; padding: .35rem .7rem; border-color: var(--linea); color: var(--linea);
+  }
+  button.preset:hover { background: var(--panel); }
   fieldset { border: none; padding: 0; margin: 0; display: flex; gap: .8rem; }
   canvas { width: 100%; height: 180px; display: block; background: white;
            border: 1px solid #ccc; border-radius: 4px; margin-top: 1rem; }
+
+  /* eje de frecuencia: referencia log 1-100 Hz con la "zona gris" marcada */
+  .ejeFrecuencia {
+    position: relative; height: 34px; margin-top: .3rem;
+    font-family: -apple-system, "Segoe UI", Helvetica, sans-serif;
+  }
+  .ejeFrecuencia .pista {
+    position: absolute; top: 6px; left: 0; right: 0; height: 6px;
+    background: #dfe6e4; border-radius: 3px;
+  }
+  .ejeFrecuencia .zonaGris {
+    position: absolute; top: 6px; height: 6px; background: var(--linea); opacity: .35;
+    border-radius: 3px;
+  }
+  .ejeFrecuencia .marcador {
+    position: absolute; top: -2px; width: 10px; height: 10px; margin-left: -5px;
+    background: var(--acento); border-radius: 50%; transition: background .25s;
+  }
+  .ejeFrecuencia .tick {
+    position: absolute; top: 16px; transform: translateX(-50%);
+    font-size: .72rem; color: #666;
+  }
+  .ejeFrecuencia .etiquetaZona {
+    position: absolute; top: -14px; font-size: .68rem; color: var(--linea);
+    transform: translateX(-50%); white-space: nowrap;
+  }
+  .badgeZona {
+    display: inline-block; padding: .15rem .55rem; border-radius: 3px;
+    font-family: -apple-system, "Segoe UI", Helvetica, sans-serif; font-size: .78rem;
+    font-weight: bold; letter-spacing: .04em; color: white;
+  }
+  .votoCtrl {
+    display: flex; align-items: center; gap: .4rem; font-size: .82rem;
+    font-family: -apple-system, "Segoe UI", Helvetica, sans-serif;
+  }
+  .revelable.oculto { filter: blur(6px); user-select: none; }
   .observar { border-left: 4px solid var(--acento); padding: .2rem 0 .2rem 1rem; margin-top: 1.2rem; }
   .observar h2 { font-size: 1rem; margin: .2rem 0; }
   ol { margin: .4rem 0; padding-left: 1.2rem; }
-  #anotaciones { font-family: Helvetica, Arial, sans-serif; font-size: .85rem; margin-top: .6rem; }
+  #anotaciones { font-family: -apple-system, "Segoe UI", Helvetica, sans-serif; font-size: .85rem; margin-top: .6rem; }
   #anotaciones span { display: inline-block; background: var(--panel); border-radius: 3px;
                       padding: .15rem .5rem; margin: .15rem .3rem 0 0; }
 </style>
@@ -53,14 +93,29 @@
 <body>
 <p class="sesion">Acústica Musical UC · Sesión 01</p>
 <h1>Tren de pulsos: del ritmo al tono</h1>
-<p class="bajada">Suba lentamente la tasa de repetición y encuentre la zona
-donde su oído deja de contar golpes y empieza a oír una nota.</p>
+<p class="bajada">Suba lentamente la tasa de repetición: ¿en qué momento su
+oído deja de contar golpes y decide, sin que usted se lo pida, que eso es
+una nota?</p>
 
 <div class="panel">
   <div class="ctrl">
-    <label for="tasa">Tasa de repetición: <span class="valor" id="tasaVal">4,0 pulsos/s (Hz)</span></label>
+    <label for="tasa">Tasa de repetición: <span class="valor revelable" id="tasaVal">4,0 pulsos/s (Hz)</span></label>
     <input type="range" id="tasa" min="0" max="1000" value="301">
-    <span>Período T = 1/f: <span class="valor" id="periodoVal">250 ms</span></span>
+    <span>Período T = 1/f: <span class="valor revelable" id="periodoVal">250 ms</span></span>
+    <div class="ejeFrecuencia" id="ejeFrecuencia">
+      <div class="pista"></div>
+      <div class="zonaGris" id="zonaGris"></div>
+      <span class="etiquetaZona" id="etiquetaZona">zona gris (Benade, ~20 Hz)</span>
+      <div class="marcador revelable" id="marcador"></div>
+      <span class="tick" style="left:0%">1</span>
+      <span class="tick" style="left:15.05%">2</span>
+      <span class="tick" style="left:45.15%">8</span>
+      <span class="tick" style="left:65.05%">20</span>
+      <span class="tick" style="left:100%">100 Hz</span>
+    </div>
+    <div style="margin-top:.4rem">
+      <span class="badgeZona revelable" id="badgeZona" style="background:#999">ritmo</span>
+    </div>
   </div>
   <div class="ctrl" style="min-width:180px">
     <label>Timbre del pulso</label>
@@ -70,11 +125,24 @@ donde su oído deja de contar golpes y empieza a oír una nota.</p>
     </fieldset>
     <label for="gan">Ganancia: <span class="valor" id="ganVal">0,35</span></label>
     <input type="range" id="gan" min="0" max="50" value="35">
+    <label class="votoCtrl"><input type="checkbox" id="ocultar"> Modo votación: ocultar el valor numérico</label>
   </div>
   <div class="ctrl" style="min-width:160px; flex:0">
     <button id="btnPlay" class="primario">▶ Iniciar</button>
     <button id="btnStop">■ Detener</button>
     <button id="btnMarca">Anotar este valor</button>
+  </div>
+</div>
+
+<div class="panel" style="margin-top:.6rem">
+  <div class="ctrl" style="flex:0; min-width:auto">
+    <label style="font-weight:normal; font-size:.82rem">Presets para el gancho del vota-a-mano-alzada:</label>
+    <div style="display:flex; gap:.5rem; flex-wrap:wrap">
+      <button class="preset" data-hz="1">1 Hz</button>
+      <button class="preset" data-hz="2">2 Hz</button>
+      <button class="preset" data-hz="8">8 Hz</button>
+      <button class="preset" data-hz="20">20 Hz</button>
+    </div>
   </div>
 </div>
 
@@ -84,13 +152,17 @@ donde su oído deja de contar golpes y empieza a oír una nota.</p>
 <div class="observar">
   <h2>¿Qué observar?</h2>
   <ol>
-    <li>¿En qué zona de tasas (pulsos por segundo) deja usted de oír golpes
-        separados y empieza a oír una altura? Anótela con el botón — primero
-        <b>prediga</b> el valor por escrito, después mida.</li>
-    <li>¿Cambia esa zona si el pulso es seco o blando? ¿Y entre compañeros
-        del grupo, con el mismo sonido?</li>
-    <li>Sobre la zona de transición: si duplica la tasa (p. ej. de 40 a
-        80 Hz), ¿qué le pasa a la <i>nota</i> que oye?</li>
+    <li>Con los ojos cerrados: ¿en qué punto exacto su oído se rinde y deja
+        de contar golpes para entregarle, en cambio, una nota sostenida?
+        Primero <b>prediga</b> ese valor por escrito, después mídalo con el
+        botón "Anotar este valor" — ¿qué tan lejos quedó su predicción?</li>
+    <li>¿Su zona gris personal es la misma con el pulso seco que con el
+        blando? ¿Y es la misma que la de su compañero de grupo, con
+        exactamente el mismo sonido? Si difieren, ¿de quién es "la culpa":
+        del sonido o del oyente?</li>
+    <li>Una vez adentro de la nota: si duplica la tasa (p. ej. de 40 a
+        80 Hz), ¿la nota suena "el doble de aguda" o sube en otra
+        proporción? Guarde la respuesta para la sesión 5.</li>
   </ol>
 </div>
 
@@ -123,13 +195,43 @@ function tasaActual() {
 function ganActual() { return sliderGan.value / 100; }  // 0 .. 0.5 máx.
 function timbreActual() { return document.querySelector('input[name=timbre]:checked').value; }
 
+// Posición (0-100%) de una frecuencia en el eje log 1-100 Hz: p = log10(f)/2
+function posEjeLog(f) { return (Math.log10(f) / Math.log10(F_MAX / F_MIN)) * 100; }
+
+// Límites de la "zona gris" (Benade 1990, sec. 2.2-2.3): ~15-30 Hz
+const ZONA_GRIS_MIN = 15, ZONA_GRIS_MAX = 30;
+
+function zonaDe(f) {
+  if (f < ZONA_GRIS_MIN) return { texto: 'ritmo', color: 'var(--linea)' };
+  if (f > ZONA_GRIS_MAX) return { texto: 'tono', color: 'var(--acento)' };
+  return { texto: 'zona gris', color: '#6b7280' };  /* gris neutro: ni ritmo ni tono todavía */
+}
+
 function refrescaEtiquetas() {
   const f = tasaActual();
   $('tasaVal').textContent = f.toFixed(1).replace('.', ',') + ' pulsos/s (Hz)';
   const T = 1000 / f;
   $('periodoVal').textContent = (T >= 100 ? T.toFixed(0) : T.toFixed(1)).replace('.', ',') + ' ms';
   $('ganVal').textContent = ganActual().toFixed(2).replace('.', ',');
+
+  // marcador sobre el eje de frecuencia + insignia de zona (ritmo/zona gris/tono)
+  const marcador = $('marcador');
+  marcador.style.left = posEjeLog(f) + '%';
+  const z = zonaDe(f);
+  marcador.style.background = z.color;
+  const badge = $('badgeZona');
+  badge.textContent = z.texto;
+  badge.style.background = z.color;
 }
+
+// Banda estática de la "zona gris" en el eje: se calcula una sola vez
+(function inicializaEjeFrecuencia() {
+  const izq = posEjeLog(ZONA_GRIS_MIN), der = posEjeLog(ZONA_GRIS_MAX);
+  const banda = $('zonaGris');
+  banda.style.left = izq + '%';
+  banda.style.width = (der - izq) + '%';
+  $('etiquetaZona').style.left = ((izq + der) / 2) + '%';
+})();
 
 // --- síntesis de un pulso -------------------------------------------------
 // "seco": ráfaga de ruido de 1,5 ms (ancho de banda amplio, ataque duro).
@@ -261,6 +363,22 @@ sliderGan.addEventListener('input', () => {
 });
 document.querySelectorAll('input[name=timbre]').forEach(r =>
   r.addEventListener('change', refrescaEtiquetas));
+
+// --- presets para el gancho del m2 (vota a mano alzada: 1, 2, 8, 20 Hz) -----
+document.querySelectorAll('button.preset').forEach(b => {
+  b.addEventListener('click', () => {
+    const f = Number(b.dataset.hz);
+    sliderTasa.value = Math.round((posEjeLog(f) / 100) * 1000);
+    refrescaEtiquetas();
+  });
+});
+
+// --- modo votación: oculta el valor numérico para votar antes de revelar ---
+const revelables = document.querySelectorAll('.revelable');
+$('ocultar').addEventListener('change', (e) => {
+  revelables.forEach(el => el.classList.toggle('oculto', e.target.checked));
+});
+
 refrescaEtiquetas();
 </script>
 </body>

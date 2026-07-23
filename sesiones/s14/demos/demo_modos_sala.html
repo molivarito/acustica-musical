@@ -5,14 +5,18 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Demo — Modos de sala: las notas favoritas de una pieza (s14)</title>
 <style>
-  /* Estética editorial: fondo claro, serif para texto, sans para controles */
+  /* Estética "tinta y agua" del sitio (2026-07-22): fondo claro frío,
+     serif para el texto, sans-serif para controles y ejes. Tres colores
+     categóricos (azul/acento/ámbar) identifican los tres ejes de la sala
+     — es una necesidad funcional del gráfico, no decoración. */
   :root {
-    --tinta: #1a1a1a;
-    --acento: #7a2e2e;     /* rojo ladrillo: eje ANCHO y cursor del tono */
-    --linea: #2e4a7a;      /* azul: eje LARGO y curva de respuesta */
-    --terciario: #4a7a4a;  /* verde sobrio: eje ALTO */
-    --papel: #faf8f4;
-    --panel: #f0ece4;
+    --tinta: #1f2937;
+    --acento: #0f766e;     /* verde petróleo: acento de la interfaz y eje ANCHO */
+    --azul: #34558b;       /* azul: eje LARGO y curva de respuesta */
+    --ambar: #b45309;      /* ámbar: eje ALTO (tercer color categórico) */
+    --papel: #fbfbf9;
+    --panel: #eef3f2;
+    --sans: -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif;
   }
   * { box-sizing: border-box; }
   body {
@@ -22,12 +26,12 @@
     max-width: 940px; margin-inline: auto;
   }
   h1 { font-size: 1.35rem; margin: 0 0 .2rem; }
-  .sesion { font-family: Helvetica, Arial, sans-serif; font-size: .8rem;
+  .sesion { font-family: var(--sans); font-size: .8rem;
             letter-spacing: .06em; text-transform: uppercase; color: var(--acento); }
   .bajada { font-style: italic; margin: .3rem 0 1rem; }
   .panel {
     background: var(--panel); border-radius: 6px; padding: .9rem 1rem;
-    font-family: Helvetica, Arial, sans-serif; font-size: .9rem;
+    font-family: var(--sans); font-size: .9rem;
     display: flex; flex-wrap: wrap; gap: .8rem 1.6rem; align-items: flex-start;
     margin-bottom: .6rem;
   }
@@ -36,22 +40,32 @@
   .valor { font-variant-numeric: tabular-nums; }
   input[type=range] { width: 100%; accent-color: var(--acento); }
   button {
-    font-family: Helvetica, Arial, sans-serif; font-size: .9rem;
+    font-family: var(--sans); font-size: .9rem;
     padding: .45rem .9rem; border: 1px solid var(--tinta); border-radius: 4px;
     background: white; cursor: pointer;
   }
   button.primario { background: var(--acento); color: white; border-color: var(--acento); }
   button.chico { font-size: .8rem; padding: .3rem .6rem; }
   select {
-    font-family: Helvetica, Arial, sans-serif; font-size: .9rem;
+    font-family: var(--sans); font-size: .9rem;
     padding: .3rem; border: 1px solid #999; border-radius: 4px; background: white;
   }
   .fila-botones { display: flex; gap: .5rem; flex-wrap: wrap; align-items: center; }
+  .nota-chica { font-family: var(--sans); font-size: .78rem; color: #555; margin: .15rem 0 0; }
   canvas { width: 100%; display: block; background: white;
            border: 1px solid #ccc; border-radius: 4px; margin-top: .8rem; }
-  .leyenda { font-family: Helvetica, Arial, sans-serif; font-size: .8rem; color: #444;
+  .leyenda { font-family: var(--sans); font-size: .8rem; color: #444;
              margin: .3rem 0 0; }
   .leyenda b { padding: 0 .25rem; }
+  .stat { font-family: var(--sans); font-size: .85rem; color: var(--tinta);
+          margin: .35rem 0 0; }
+  /* Insignia "¡modo!": aparece solo mientras el tono está sobre un modo */
+  .badge-modo {
+    font-family: var(--sans); font-weight: bold; font-size: .85rem;
+    color: var(--acento); margin-left: .6rem; opacity: 0;
+    transition: opacity .12s ease-out;
+  }
+  .badge-modo.activo { opacity: 1; }
   .observar { border-left: 4px solid var(--acento); padding: .2rem 0 .2rem 1rem; margin-top: 1.2rem; }
   .observar h2 { font-size: 1rem; margin: .2rem 0; }
   ol { margin: .4rem 0; padding-left: 1.2rem; }
@@ -81,11 +95,12 @@ y encuentre de oído las frecuencias donde la sala "engorda" — sus modos.</p>
   <div class="ctrl">
     <label for="tono">Tono de prueba: <span class="valor" id="tonoVal">100,0 Hz</span></label>
     <input type="range" id="tono" min="0" max="1000" value="500">
-    <span>Refuerzo de la sala: <span class="valor" id="refVal">0,0 dB</span></span>
+    <span>Refuerzo de la sala: <span class="valor" id="refVal">0,0 dB</span><span class="badge-modo" id="badgeModo">♪ ¡modo!</span></span>
     <label for="gan">Ganancia: <span class="valor" id="ganVal">0,35</span></label>
     <input type="range" id="gan" min="0" max="50" value="35">
     <div class="fila-botones" style="margin-top:.3rem">
       <button id="btnPlay" class="primario">▶ Iniciar tono</button>
+      <button id="btnBarrido">↝ Barrido automático (grave→agudo)</button>
       <button id="btnStop">■ Detener</button>
     </div>
   </div>
@@ -111,10 +126,16 @@ y encuentre de oído las frecuencias donde la sala "engorda" — sus modos.</p>
 
 <canvas id="cvResp" height="210"></canvas>
 <p class="leyenda">Respuesta de la sala entre 20 y 400 Hz (eje log). Rayas verticales:
-modos axiales — <b style="color:#2e4a7a">eje largo</b> ·
-<b style="color:#7a2e2e">eje ancho</b> · <b style="color:#4a7a4a">eje alto</b>.
+modos axiales — <b style="color:#34558b">eje largo</b> ·
+<b style="color:#0f766e">eje ancho</b> · <b style="color:#b45309">eje alto</b>.
 La curva es la suma de sus resonancias (como las curvas de la sesión 10);
-el cursor grueso es el tono que suena.</p>
+el cursor oscuro es el tono que suena.</p>
+<p class="stat" id="statModos"></p>
+<p class="nota-chica">
+  <label><input type="checkbox" id="chkRevelar" checked> revelar curva y rayas de los modos</label>
+  — desmárquelo ANTES del primer barrido: la clase predice solo de oído
+  y usted revela después.
+</p>
 
 <canvas id="cvModo" height="230"></canvas>
 <p class="leyenda" id="leyModo">Patrón de presión del modo elegido, visto en planta
@@ -124,15 +145,26 @@ nodal (ahí ese modo no se oye).</p>
 <div class="observar">
   <h2>¿Qué observar?</h2>
   <ol>
-    <li><b>Prediga antes de barrer</b>: en la sala de clases, ¿los refuerzos
-        estarán juntos o separados? Barra el tono lentamente de grave a agudo
-        y anote a oído dónde "engorda" — compare con las rayas del gráfico.</li>
-    <li>Pase al preset <b>ducha</b>: ¿qué pasó con la separación entre modos y
-        en qué zona de frecuencias quedaron? ¿Qué tiene eso que ver con que la
-        ducha "afine" la voz?</li>
-    <li>Pase al preset <b>catedral</b>: ¿puede todavía distinguir refuerzos
-        individuales de oído? Si los modos ya no destacan, ¿qué firma le queda
-        entonces a una sala grande (piense en el T₆₀)?</li>
+    <li><b>Apueste antes de escuchar</b>: con el preset <i>sala de clases</i> y
+        la curva OCULTA (desmarque "revelar" arriba), ¿un barrido de grave a
+        agudo sonará parejo, o habrá frecuencias que "engordan" de golpe?
+        Lance el <b>barrido automático</b>, levante la mano cada vez que oiga
+        un refuerzo, y solo AL FINAL marque "revelar" para comparar sus
+        aciertos con las rayas del gráfico.</li>
+    <li>Pase al preset <b>ducha</b> (2 m) y repita el barrido: ¿los refuerzos
+        quedaron más juntos o más separados que en la sala de clases? ¿En qué
+        zona de frecuencias cayeron — y qué tiene eso que ver con que la
+        ducha "afine" justo donde usted canta?</li>
+    <li>Pase al preset <b>catedral</b> y barra de nuevo: ¿todavía puede
+        contar refuerzos sueltos de oído, o ya suena a una sola "masa"
+        pareja? Mire el contador de modos bajo el gráfico — ¿qué le está
+        diciendo esa cifra sobre por qué una sala grande favorece la mezcla
+        (la cola) y no una nota en particular?</li>
+    <li><b>Reto final</b>: lleve los tres deslizadores (L, W, H) a su
+        mínimo — la sala más chica que la demo permite dibujar — y mire el
+        contador de modos. ¿Bajó de diez? Por más que achique la sala, ¿por
+        qué nunca llega a un solo modo? (pista: cada eje aporta los suyos, y
+        hasta la caja más chica sigue teniendo tres pares de paredes).</li>
   </ol>
 </div>
 
@@ -153,9 +185,12 @@ const V_SONIDO = 343;          // velocidad del sonido (m/s, 20 °C)
 const F_MIN = 20, F_MAX = 400; // rango del tono de prueba (Hz, escala log)
 const ANCHO_REL = 0.02;        // semiancho de cada resonancia ≈ 2 % de f (Q≈25)
 const AMP_N = n => 5 / n;      // peso del modo n (los graves dominan)
-const COLOR_EJE = { L: '#2e4a7a', W: '#7a2e2e', H: '#4a7a4a' };
+const COLOR_EJE = { L: '#34558b', W: '#0f766e', H: '#b45309' };
+const UMBRAL_MODO_DB = 9;      // sobre este refuerzo (dB) consideramos "en un modo"
+const DURACION_BARRIDO_S = 14; // duración del barrido automático grave→agudo (profesor: ajustar aquí)
 
 let ctxAudio = null, osc = null, ganancia = null, sonando = false;
+let barriendo = false, barridoId = null, barridoT0 = 0; // estado del barrido automático
 
 const $ = id => document.getElementById(id);
 // Los sliders de dimensiones van en decímetros (enteros) → metros /10.
@@ -217,9 +252,35 @@ async function iniciar() {
   aplicaGanancia();
 }
 function detener() {
+  detenerBarrido();  // detener también cancela un barrido automático en curso
   sonando = false;
   if (ganancia && ctxAudio) ganancia.gain.setTargetAtTime(0, ctxAudio.currentTime, 0.03);
   if (ctxAudio) setTimeout(() => { if (!sonando && ctxAudio) ctxAudio.suspend(); }, 150);
+}
+
+// --- barrido automático -------------------------------------------------------
+// Mueve el slider del tono solo, de grave a agudo, en DURACION_BARRIDO_S
+// segundos: deja al profesor las manos libres para señalar el gráfico o
+// pedir predicciones mientras la sala "encuentra" sus modos. Se detiene
+// solo al llegar al agudo, o si se aprieta "Detener" o se toca el slider.
+async function iniciarBarrido() {
+  await iniciar();               // misma interacción de usuario abre el AudioContext
+  barriendo = true;
+  barridoT0 = performance.now();
+  pasoBarrido();
+}
+function pasoBarrido() {
+  if (!barriendo) return;
+  const frac = Math.min(1, (performance.now() - barridoT0) / 1000 / DURACION_BARRIDO_S);
+  $('tono').value = Math.round(frac * 1000);
+  refresca();
+  if (frac >= 1) { barriendo = false; detener(); return; }
+  barridoId = requestAnimationFrame(pasoBarrido);
+}
+function detenerBarrido() {
+  barriendo = false;
+  if (barridoId) cancelAnimationFrame(barridoId);
+  barridoId = null;
 }
 
 // --- etiquetas ----------------------------------------------------------------
@@ -236,7 +297,17 @@ function refresca() {
   $('ganVal').textContent = coma(ganActual(), 2);
   const db = 20 * Math.log10(factorAudible(respuesta(f, modos)) / 0.15);
   $('refVal').textContent = '+' + coma(db, 1) + ' dB';
+  $('badgeModo').classList.toggle('activo', db >= UMBRAL_MODO_DB);
   $('modoFVal').textContent = coma(modoElegido().f, 1) + ' Hz';
+  // Umbrales calibrados en los tres presets de la sesión: ducha ≈12 modos
+  // (ralos), sala de clases ≈40 (audibles pero ya no todos sueltos),
+  // catedral ≈110 (densos). Si el profesor cambia F_MAX o los presets,
+  // puede recalibrar estos dos números.
+  $('statModos').textContent = '→ ' + modos.length +
+    ' modos axiales entre ' + F_MIN + ' y ' + F_MAX + ' Hz' +
+    (modos.length > 70 ? ' (tan densos que ya no se distinguen de oído).'
+                        : modos.length <= 15 ? ' (ralos: cada uno se oye por separado).'
+                        : '.');
   if (sonando && osc) {
     osc.frequency.setTargetAtTime(f, ctxAudio.currentTime, 0.02);
     aplicaGanancia();
@@ -283,29 +354,34 @@ function dibujaResp() {
   g.save(); g.translate(12, (y0 + y1) / 2 + 34); g.rotate(-Math.PI / 2);
   g.fillText('refuerzo (dB)', 0, 0); g.restore();
 
-  // rayas de los modos, coloreadas por eje
-  for (const m of modos) {
-    const x = xDeF(m.f, x0, x1);
-    g.strokeStyle = COLOR_EJE[m.eje]; g.globalAlpha = 0.55; g.lineWidth = 1.2;
-    g.beginPath(); g.moveTo(x, y0); g.lineTo(x, y1 + 8); g.stroke();
-    g.globalAlpha = 1;
+  // rayas de los modos y curva de respuesta: solo si "revelar" está marcado
+  // (con el casillero desmarcado, la clase predice de oído antes de ver el
+  // gráfico — el momento de predicción que pide el plan de la sesión).
+  if ($('chkRevelar').checked) {
+    // rayas de los modos, coloreadas por eje
+    for (const m of modos) {
+      const x = xDeF(m.f, x0, x1);
+      g.strokeStyle = COLOR_EJE[m.eje]; g.globalAlpha = 0.55; g.lineWidth = 1.2;
+      g.beginPath(); g.moveTo(x, y0); g.lineTo(x, y1 + 8); g.stroke();
+      g.globalAlpha = 1;
+    }
+
+    // curva de respuesta (en dB sobre el piso audible)
+    g.strokeStyle = getComputedStyle(document.body).getPropertyValue('--azul');
+    g.lineWidth = 1.8; g.beginPath();
+    const NP = 480;
+    for (let i = 0; i <= NP; i++) {
+      const f = F_MIN * Math.pow(F_MAX / F_MIN, i / NP);
+      const db = 20 * Math.log10(factorAudible(respuesta(f, modos)) / 0.15);
+      const x = xDeF(f, x0, x1), y = yDeDb(db);
+      i ? g.lineTo(x, y) : g.moveTo(x, y);
+    }
+    g.stroke();
   }
 
-  // curva de respuesta (en dB sobre el piso audible)
-  g.strokeStyle = getComputedStyle(document.body).getPropertyValue('--linea');
-  g.lineWidth = 1.8; g.beginPath();
-  const NP = 480;
-  for (let i = 0; i <= NP; i++) {
-    const f = F_MIN * Math.pow(F_MAX / F_MIN, i / NP);
-    const db = 20 * Math.log10(factorAudible(respuesta(f, modos)) / 0.15);
-    const x = xDeF(f, x0, x1), y = yDeDb(db);
-    i ? g.lineTo(x, y) : g.moveTo(x, y);
-  }
-  g.stroke();
-
-  // cursor del tono actual
+  // cursor del tono actual (tinta oscura: no se confunde con ningún eje)
   const xc = xDeF(tonoActual(), x0, x1);
-  g.strokeStyle = getComputedStyle(document.body).getPropertyValue('--acento');
+  g.strokeStyle = getComputedStyle(document.body).getPropertyValue('--tinta');
   g.lineWidth = 2.5;
   g.beginPath(); g.moveTo(xc, y0); g.lineTo(xc, y1); g.stroke();
 }
@@ -382,6 +458,7 @@ document.querySelectorAll('[data-preset]').forEach(b =>
 
 // --- controles -------------------------------------------------------------------
 $('btnPlay').addEventListener('click', iniciar);
+$('btnBarrido').addEventListener('click', iniciarBarrido);
 $('btnStop').addEventListener('click', detener);
 $('btnIrModo').addEventListener('click', () => {
   // lleva el slider de tono a la frecuencia del modo elegido (acotada al rango)
@@ -389,10 +466,13 @@ $('btnIrModo').addEventListener('click', () => {
   $('tono').value = Math.round(1000 * Math.log(f / F_MIN) / Math.log(F_MAX / F_MIN));
   refresca();
 });
+// Si el profesor toma el slider del tono a mano, cancela el barrido automático.
+$('tono').addEventListener('pointerdown', detenerBarrido);
 for (const id of ['dimL', 'dimW', 'dimH', 'tono', 'gan'])
   $(id).addEventListener('input', refresca);
 for (const id of ['modoEje', 'modoN'])
   $(id).addEventListener('change', refresca);
+$('chkRevelar').addEventListener('change', refresca);
 window.addEventListener('resize', refresca);
 refresca();
 </script>
