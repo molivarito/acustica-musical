@@ -1,9 +1,102 @@
-# Resumen del loop autónomo — Fases 3 y 4
+# Guía del curso para Pato — estado al 2026-07-22
 
-Ejecutado 2026-07-12/13 sin consultas, según tus instrucciones. Todo
-commiteado en git (repo inicializado en este loop, 18 commits). El
-detalle sesión a sesión vive en `ESTADO_LOOP.md`; las auditorías, en
-`diseno/revision_20260712.md`, `_s10.md` y `revision_20260713.md`.
+Este es TU documento de entrada: qué existe, dónde está, qué ven los
+alumnos, cómo se edita y qué falta. La segunda mitad (bajo la línea)
+conserva sin cambios el resumen histórico del loop autónomo que produjo
+el material (2026-07-13).
+
+## Estado en una mirada
+
+- **Material**: 15 sesiones completas (plan, apunte, actividades,
+  demos), libro de 15 capítulos + PDF, programa, banco de estímulos.
+  Diseño auditado 3 veces + verificación post-migración (2026-07-22).
+- **Publicado**: sitio en <https://molivarito.github.io/acustica-musical>
+  (se regenera solo con cada `git push`) y curso Canvas MUC860-1 con 18
+  módulos espejo del sitio, **todos sin publicar** — tú publicas cada
+  módulo a mano, semana a semana, desde la interfaz de Canvas.
+- **Pruebas 1 y 2**: rediseñadas 2026-07-22 con alternativas en las
+  Partes B–D (corrección ~2 h en vez de ~5 h; la Parte A de escucha
+  sigue abierta). **Sin commitear aún — esperan tu revisión**
+  (`git diff` las muestra).
+- **Pendiente grueso**: tu checklist físico/administrativo (abajo).
+
+## Qué ve el alumno y qué ves solo tú
+
+**Alumnos** (sitio + Canvas): apuntes, guías y hojas de actividades,
+demos, libro (+PDF), `Admin/programa_curso.md`,
+`materiales/apps_recomendadas.md`, mapa del curso.
+
+**Solo tú** (en el repo, fuera del sitio y de Canvas):
+
+| Material | Dónde vive |
+|---|---|
+| Planes de sesión (tu guión docente) | `sesiones/sNN/plan.md` |
+| Pruebas y sus pautas | `sesiones/s07/actividades/prueba1*`, `s13/.../prueba2*` |
+| Pautas de hitos, clínica, feedback | `sesiones/*/actividades/*pauta*` |
+| Guión de la sesión final | `sesiones/s15/actividades/guion_profesor_s15.md` |
+| Banco de estímulos (revela las pruebas) | `materiales/banco_estimulos.md` |
+| Planilla de rúbrica OA3 (registro de la ronda) | `materiales/planilla_rubrica_oa3.md` |
+| Diseño del curso y bitácora de auditorías | `diseno/` completo |
+
+La regla vive en `_quarto.yml` (bloque `render:`, con comentario). Ojo:
+el **repo de GitHub es público** — estos archivos no aparecen en el
+sitio, pero sí son visibles para quien navegue el código fuente. Si eso
+te incomoda, la salida es hacer el repo privado (pídelo).
+
+## Cómo trabajar
+
+- **Editar material**: editas el `.md` → `git commit` → `git push`. El
+  sitio se reconstruye solo (~2 min). Para previsualizar antes:
+  `conda run -n base quarto preview`.
+- **Material nuevo**: crear el `.md` y, SOLO si es para alumnos,
+  agregarlo a la `sidebar` de `_quarto.yml` y a `canvas/canvas.yml` +
+  correr `python3 canvas/publicar_canvas.py sync`. Material tuyo
+  (pautas, planes…): basta que el nombre calce con las exclusiones de
+  `_quarto.yml` (`plan.md`, `*pauta*`, `prueba*`, `guion_profesor*`) o
+  agregarlo ahí.
+- **PDF del libro**: `conda run -n base quarto render libro`.
+- **Figuras**: editar `figuras/gen_sXX.py` y re-ejecutarlo — nunca el SVG.
+- **Google Drive**: mantén la carpeta AM "Disponible sin conexión"; si
+  `git push` se cuelga con "Operation timed out", es Drive deshidratando
+  `.git` (ya pasó; el arreglo es re-descargar la carpeta).
+
+## Pendientes que solo tú puedes hacer
+
+**Antes de s01** (lo que tiene plazo real):
+- Sesión única de grabación: estímulos #1–2, 5–7, 10–12 del banco
+  (guitarra + flauta + vaso, una tarde). La #1 se reutiliza en s15.
+- Revisar y aprobar las **pruebas rediseñadas** (sin commitear).
+- Abrir las **14 demos en un navegador real** (nunca se probaron con
+  audio; las de más riesgo: `demo_forma_onda_espectro` con micrófono y
+  `demo_modos_sala`).
+- Kits: reglas (s01), objetos metálicos (s03), botellas (s10); lista
+  del curso con carreras.
+- En Canvas: publicar el módulo "Información del curso" cuando quieras
+  que los alumnos vean algo.
+
+**Con plazo institucional** (partir temprano):
+- s14: permisos/reserva de espacios UC para la salida T60 + elegir y
+  probar app de medición.
+- s12: compra del kit de lutería (PVC Ø20, cortatubos, tapas, lijas).
+- s11: confirmar estudiantes con instrumento frotado; probar cámara
+  lenta 240 fps; conseguir nota lobo (o descartar la coda).
+- s06: sonómetro de referencia (¿existe en el instituto?).
+
+**Decisiones tuyas**: encuesta de cierre (s15), plazo de publicación de
+notas, contrastar conversiones de nota con normativa UC.
+
+**Control de calidad pendiente** (heredado del loop, sigue vigente):
+lectura de continuidad del libro de punta a punta; pasada a las citas
+finas de C&G/BEN en los capítulos que más te importan.
+
+---
+
+# Registro histórico — Resumen del loop autónomo (Fases 3 y 4, 2026-07-13)
+
+*(Conservado tal como se escribió; algunos datos fueron superados —
+p. ej. las pruebas ya no se corrigen en ≤15 min/estudiante sino ~6 con
+el rediseño de alternativas. El detalle sesión a sesión vive en
+`ESTADO_LOOP.md`; las auditorías, en `diseno/revision_*.md`.)*
 
 ## Qué quedó listo
 
@@ -57,7 +150,7 @@ detalle sesión a sesión vive en `ESTADO_LOOP.md`; las auditorías, en
    estándar verificable; las citas de C&G usan los rangos de página del
    índice de fuentes (el escaneo no admite verificación por texto) y
    BEN se cita por capítulo/sección. Datos finos no estándar quedaron
-   [POR VERIFICAR] (lista abajo).
+   [POR VERIFICAR] (lista en `ESTADO_LOOP.md`).
 10. **Proceso**: repo git inicializado (PDFs de libros excluidos del
     versionado); cada sesión la produjo un subagente siguiendo las
     skills y reglas del proyecto, con s01 escrita a mano como ejemplar
@@ -97,41 +190,12 @@ detalle sesión a sesión vive en `ESTADO_LOOP.md`; las auditorías, en
 8. **Talleres aún optimistas**: las revisiones recortaron los peores
    casos, pero s02 m1, s08 m1 y la fase de afinación de s12 siguen
    ajustados al minuto; ensáyalos mentalmente con tus tiempos reales.
-9. **Los picos de corrección declarados** (~5 h en s07 y s13, ~4 h en
-   s15) caen encima de la producción de figuras/estímulos de esas
-   mismas semanas; la revisión movió lo movible a pre-s01, pero el
-   calendario real puede volver a apilarlos.
+9. **Los picos de corrección declarados** caen encima de la producción
+   de figuras/estímulos de esas mismas semanas; la revisión movió lo
+   movible a pre-s01, pero el calendario real puede volver a apilarlos.
+   *(Mitigado 2026-07-22: las pruebas pasaron a alternativas, ~2 h de
+   corrección en vez de ~5 h.)*
 10. **La demo de temperamentos y la de formantes usan "reglas del curso
     para colorear"** (banda crítica simplificada, F1/F2 típicos): son
     honestas pedagógicamente pero no datos finos; está comentado en el
     código.
-
-## Pendientes de producción acumulados (trabajo físico/decisiones)
-
-Lista completa por sesión en `ESTADO_LOOP.md`; lo crítico:
-
-- **Pre-s01**: grabar estímulos #1, #10–#12 (sesión de grabación
-  única); 5 kits (reglas, objetos metálicos, botellas); imprimir
-  rúbrica y planilla OA3; lista del curso con carreras.
-- **Compra única**: kit de lutería s12 (PVC Ø20, cortatubos, tapas,
-  lijas) — [POR VERIFICAR] diámetro interior real.
-- **Semana a semana**: resto del banco de estímulos (16 ítems,
-  `materiales/banco_estimulos.md`); figuras de las pruebas desde las
-  demos (~1 h cada prueba); confirmar interfaz/micrófono (s06) y
-  espacios+permisos de las rutas T60 (s14, plantilla editable).
-- **Decisiones tuyas pendientes**: instrumento de encuesta del curso
-  (s15); plazo de publicación de notas; sonómetro de referencia
-  [POR VERIFICAR]; Fletcher & Rossing en biblioteca UC [POR VERIFICAR].
-- **[POR VERIFICAR] técnicos dejados en los materiales**: norma
-  chilena DS 594 y atenuación de protectores (s06); 240 fps de celular
-  resolviendo la cuerda + video de respaldo + nota lobo (s11); tracto
-  ~17 cm y F1/F2 finos de vocales españolas (s13).
-
-## Cómo retomar
-
-`ESTADO_LOOP.md` tiene la tabla completa (todo `lista`). Si quieres
-iterar una sesión: los reportes de revisión indican qué se cambió y por
-qué; la regla del loop fue no reescribir sesiones cerradas salvo
-exigencia de auditoría. El siguiente paso natural es tu lectura crítica
-de `libro/LIBRO_CURSO.pdf` y una pasada por las 14 demos en el
-navegador.

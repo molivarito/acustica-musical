@@ -47,17 +47,29 @@ formación matemática y musical.
 - Las demos interactivas HTML siguen `.claude/rules/formato-demos.md`.
 - Los planes de sesión se generan con la skill `/plan-sesion` y se guardan
   en `sesiones/sXX/plan.md`.
-- **Publicación con Quarto** (migrado 2026-07-17; el pipeline anterior
-  está en `Admin/obsoleto/`, no usarlo). Los `.md` son la fuente de
-  verdad. Tras editar contenido: `conda run -n base quarto render`
-  (sitio completo, sale a `_site/`, ignorado por git) o
-  `quarto preview` mientras se trabaja. El PDF del libro:
-  `conda run -n base quarto render libro` (sub-proyecto book en
-  `libro/_quarto.yml`; sale a `libro/LIBRO_CURSO.pdf`).
-- Para agregar una sesión/capítulo/documento nuevo: crear el `.md` y
-  agregarlo a la `sidebar` de `_quarto.yml` (y a `render:` si cae fuera
-  de los globs ya listados); si es un capítulo, también a `chapters` de
-  `libro/_quarto.yml` y al arreglo `S` del mapa en `index.qmd`.
+- **Publicación con Quarto + GitHub Pages** (pipeline anterior en
+  `Admin/obsoleto/`, no usarlo). Los `.md` son la fuente de verdad.
+  Cada `git push` a `main` reconstruye y despliega el sitio
+  (molivarito.github.io/acustica-musical) vía GitHub Actions; para
+  previsualizar localmente, `conda run -n base quarto preview`. El PDF
+  del libro: `conda run -n base quarto render libro`. Canvas (curso
+  MUC860-1, id 112005): estructura en `canvas/canvas.yml`, se aplica
+  con `python3 canvas/publicar_canvas.py sync` (nunca publica ni borra).
+- **Regla de visibilidad (2026-07-22)**: el sitio y Canvas contienen
+  SOLO material para estudiantes (apuntes, guías/hojas, demos, libro,
+  programa, apps). Material solo-profesor — planes de sesión
+  (`plan.md`), pautas (`*pauta*`), pruebas (`prueba*`),
+  `guion_profesor*`, `banco_estimulos.md`, `planilla_rubrica_oa3.md` y
+  todo `diseno/` — está excluido del `render:` de `_quarto.yml` y NO se
+  enlaza con links Markdown desde páginas públicas (Quarto copiaría el
+  `.md` crudo a `_site`): solo backticks. Al crear material nuevo,
+  revisar 4 lugares: `render:` de `_quarto.yml`, sidebar, mapa de
+  `index.qmd`, `canvas/canvas.yml`.
+- Para agregar una sesión/capítulo/documento nuevo PARA ALUMNOS: crear
+  el `.md` y agregarlo a la `sidebar` de `_quarto.yml` (y a `render:`
+  si cae fuera de los globs) y a `canvas/canvas.yml` + `sync`; si es un
+  capítulo, también a `chapters` de `libro/_quarto.yml` y al arreglo
+  `S` del mapa en `index.qmd`.
 - Las figuras de apuntes/libro son SVG generados por `figuras/gen_sXX.py`
   (con `figuras/estilo_figuras.py`): para cambiar una figura, editar y
   re-ejecutar su script, nunca el SVG. Reproducciones desde la
@@ -72,9 +84,13 @@ formación matemática y musical.
 5. Revisión de alineamiento constructivo (skill `revision-alineamiento`).
 
 ## Estado del proyecto
-- Fase actual: 5 — pendiente revisión del profesor sobre lo producido.
-  Fase 1 completada (objetivos, 2026-07-12). Fase 2 completada
-  (metodología, 2026-07-12). Fases 3–4 completadas en loop autónomo
-  (2026-07-13): diseno/03 + 15 sesiones + libro; ver RESUMEN_PARA_PATO.md
-  y ESTADO_LOOP.md. Tres revisiones de alineamiento aplicadas
-  (diseno/revision_*.md). (Actualizar manualmente.)
+- Fases 1–5 completadas. Fases 1–2 (objetivos, metodología) 2026-07-12;
+  fases 3–4 en loop autónomo 2026-07-13 (15 sesiones + libro; registro
+  en ESTADO_LOOP.md, no regenerar); cuatro revisiones de alineamiento
+  (diseno/revision_*.md, la última 2026-07-22). Revisión del profesor
+  hecha en entrevista de recalibración (2026-07-22): pruebas
+  rediseñadas con alternativas y regla de visibilidad aplicada.
+  Publicado: sitio (GitHub Pages) + Canvas MUC860-1 (18 módulos, sin
+  publicar). La guía vigente del profesor es RESUMEN_PARA_PATO.md.
+  Pendiente: checklist físico/administrativo del profesor (ver
+  RESUMEN_PARA_PATO.md §Pendientes). (Actualizar manualmente.)

@@ -20,13 +20,19 @@ La publicación es un **sitio Quarto** (migración 2026-07-17).
   estímulos.
 - `Admin/` — programa del curso; `Admin/obsoleto/` guarda el pipeline
   de publicación anterior (solo referencia histórica).
+- `canvas/` — integración con Canvas UC (MUC860-1): `canvas.yml` es la
+  estructura de módulos (espejo de la sidebar del sitio) y
+  `publicar_canvas.py sync` la aplica; nunca publica ni borra.
 - `figuras/` — figuras de apuntes y libro: SVG **generados por scripts**
   (`gen_sXX.py` + `estilo_figuras.py`; editar el script y volver a
   correrlo, no el SVG). `figuras/libros/` guarda las pocas figuras
   reproducidas desde la bibliografía, citadas en su leyenda y
   registradas en `figuras/libros/EXTRACCIONES.md`.
-- `ESTADO_LOOP.md` / `RESUMEN_PARA_PATO.md` — registro histórico de la
-  producción autónoma de las fases 3–4 (2026-07-12/13).
+- `RESUMEN_PARA_PATO.md` — **la guía vigente del profesor**: estado,
+  qué es público vs. solo-profesor, flujos de trabajo y pendientes
+  (con el registro histórico del loop al final).
+- `ESTADO_LOOP.md` — registro histórico de la producción autónoma de
+  las fases 3–4 (2026-07-12/13); no se regenera.
 
 ## Flujo de publicación (Quarto)
 
@@ -39,13 +45,19 @@ Los `.md` son la **fuente de verdad**; el sitio se genera en `_site/`
 - **PDF del libro**: `conda run -n base quarto render libro`
   (sale a `libro/LIBRO_CURSO.pdf`; requiere LaTeX —Quarto usa
   lualatex— y rsvg-convert para las figuras SVG).
-- **Documento nuevo**: crear el `.md` y agregarlo a la `sidebar` de
-  `_quarto.yml`; si es capítulo del libro, también a `chapters` de
-  `libro/_quarto.yml` y al arreglo `S` del mapa en `index.qmd`.
+- **Documento nuevo PARA ALUMNOS**: crear el `.md` y agregarlo a la
+  `sidebar` de `_quarto.yml` y a `canvas/canvas.yml` (+ `sync`); si es
+  capítulo del libro, también a `chapters` de `libro/_quarto.yml` y al
+  arreglo `S` del mapa en `index.qmd`.
 
-**Publicación**: pendiente de decisión; lo más probable es Canvas
-(embeber el sitio o subir `_site/` exportado). Mientras tanto, el sitio
-se ve localmente abriendo `_site/index.html` tras un render.
+**Publicación** (desde 2026-07-20): cada `git push` a `main` reconstruye
+y despliega el sitio en <https://molivarito.github.io/acustica-musical>
+vía GitHub Actions. **Regla de visibilidad** (2026-07-22): el sitio y
+Canvas contienen SOLO material para estudiantes; lo solo-profesor
+(planes de sesión, pautas, pruebas, guión, banco de estímulos, planilla
+de rúbrica, `diseno/`) está excluido en el `render:` de `_quarto.yml` y
+no debe enlazarse con links Markdown desde páginas públicas (solo
+backticks). Guía completa en `RESUMEN_PARA_PATO.md`.
 
 ## Para partir
 
