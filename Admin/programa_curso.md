@@ -138,27 +138,30 @@ presencial en clase; los talleres toleran hasta ~2 ausencias
 
 ## VI. Cronograma (15 sesiones)
 
-| Semana | Tema | Proyecto / evaluación |
-|---|---|---|
-| 1 | Escuchar como científico: del golpe al tono | Formación de grupos; línea base de escucha (sin nota) |
-| 2 | Ondas: forma de onda, espectro y espectrograma | Parte la ronda oral evaluada (OA3) |
-| 3 | Modos de vibración (cuerdas, placas, membranas) | **Lanzamiento del proyecto** |
-| 4 | La receta del timbre: cuerda pulsada y síntesis aditiva | Traer instrumentos de cuerda pulsada |
-| 5 | La altura percibida: fundamental ausente y el oído | **Hito 1: diseño con predicción (8 %)** |
-| 6 | Sonoridad y decibel; estaciones de medición de niveles | Mini-informe SPL |
-| 7 | **Prueba 1** + batidos (audición liviana) | **Prueba 1 (12,5 %)** |
-| 8 | Banda crítica, rugosidad y consonancia | Parten los talleres de medición sobre el objeto del proyecto |
-| 9 | Escalas y temperamentos: afinar de oído | Medición: la escala del objeto |
-| 10 | Resonancia, impedancia y acoplamiento | **Hito 2: avance (8 %)** + clínicas de proyecto |
-| 11 | Cuerdas frotadas y el cuerpo del instrumento | Traer instrumentos de cuerda frotada |
-| 12 | Vientos y lutería (sesión-taller completa) | Construcción de tubos; cierre de mediciones del objeto |
-| 13 | **Prueba 2** + la voz cantada (audición liviana) | **Prueba 2 (12,5 %)** |
-| 14 | La sala como instrumento; salida de medición de T60 | Informe de salas (último taller); se publica pauta final |
-| 15 | Presentaciones finales | **Presentación + informe (14 %)**; coevaluación; cierre |
+| Semana | Fecha (vie) | Tema | Proyecto / evaluación |
+|---|---|---|---|
+| 1 | 07-ago | Escuchar como científico: del golpe al tono | Formación de grupos; línea base de escucha (sin nota) |
+| 2 | 14-ago | Ondas: forma de onda, espectro y espectrograma | Parte la ronda oral evaluada (OA3) |
+| 3 | 21-ago | Modos de vibración (cuerdas, placas, membranas) | **Lanzamiento del proyecto** |
+| 4 | 28-ago | La receta del timbre: cuerda pulsada y síntesis aditiva | Traer instrumentos de cuerda pulsada |
+| 5 | 04-sep | La altura percibida: fundamental ausente y el oído | **Hito 1: diseño con predicción (8 %)** |
+| 6 | 11-sep | Sonoridad y decibel; estaciones de medición de niveles | Mini-informe SPL |
+| 7 | 25-sep | **Prueba 1** + batidos (audición liviana) | **Prueba 1 (12,5 %)** |
+| 8 | 09-oct | Banda crítica, rugosidad y consonancia | Parten los talleres de medición sobre el objeto del proyecto |
+| 9 | 16-oct | Escalas y temperamentos: afinar de oído | Medición: la escala del objeto |
+| 10 | 23-oct | Resonancia, impedancia y acoplamiento | **Hito 2: avance (8 %)** + clínicas de proyecto |
+| 11 | 30-oct | Cuerdas frotadas y el cuerpo del instrumento | Traer instrumentos de cuerda frotada |
+| 12 | 06-nov | Vientos y lutería (sesión-taller completa) | Construcción de tubos; cierre de mediciones del objeto |
+| 13 | 13-nov | **Prueba 2** + la voz cantada (audición liviana) | **Prueba 2 (12,5 %)** |
+| 14 | 20-nov | La sala como instrumento; salida de medición de T60 | Informe de salas (último taller); se publica pauta final |
+| 15 | 27-nov | Presentaciones finales | **Presentación + informe (14 %)**; coevaluación; cierre |
 
-Las fechas exactas dependen del calendario académico del semestre
-**[COMPLETAR]**; si un feriado elimina una sesión, el diseño prioriza
-mantener s05/s07/s10/s13/s15 en su secuencia relativa.
+**Calendario 2026-2**: clases los **viernes, 14:50–16:00 y
+16:10–17:20** (10 min de descanso entre módulos), del 07-ago al 27-nov.
+Sin clases: vie 18-sep (receso de docencia 14–19 sep) y vie 02-oct
+(actividades suspendidas desde las 13:30). La semana del 17–22-ago
+(semana universitaria) hay clase normal, pero las actividades de esa
+sesión no llevan nota.
 
 ## VII. Bibliografía
 
