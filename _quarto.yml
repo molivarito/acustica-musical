@@ -9,15 +9,20 @@
 project:
   type: website
   output-dir: _site
+  # El sitio es el artefacto PARA ESTUDIANTES. Material solo-profesor
+  # (planes de sesión, pautas, pruebas, banco de estímulos, planilla,
+  # documentos de diseño y bitácora) queda fuera del render y NUNCA se
+  # enlaza con links Markdown desde páginas públicas (Quarto copiaría
+  # el .md crudo a _site): mencionarlo solo en backticks.
   render:
     - index.qmd
-    - diseno/*.md
     - sesiones/**/*.md
+    - "!sesiones/**/plan.md"
     - "!sesiones/**/*pauta*.md"
     - "!sesiones/**/guion_profesor*.md"
     - "!sesiones/**/prueba*.md"
     - libro/*.md
-    - materiales/*.md
+    - materiales/apps_recomendadas.md
     - Admin/programa_curso.md
   resources:
     - "sesiones/*/demos/*.html"
@@ -37,15 +42,9 @@ website:
     contents:
       - text: "Mapa del curso"
         href: index.qmd
-      - section: "Diseño del curso"
-        contents:
-          - diseno/01_objetivos_aprendizaje.md
-          - diseno/02_metodologia.md
-          - diseno/03_estructura_curso.md
-          - Admin/programa_curso.md
+      - Admin/programa_curso.md
       - section: "Sesión 01 — Escuchar como científico"
         contents:
-          - sesiones/s01/plan.md
           - sesiones/s01/apuntes/apunte_s01_del_golpe_al_tono.md
           - section: "Actividades"
             contents:
@@ -56,7 +55,6 @@ website:
             href: sesiones/s01/demos/demo_tren_pulsos.html
       - section: "Sesión 02 — Ondas y representación"
         contents:
-          - sesiones/s02/plan.md
           - sesiones/s02/apuntes/apunte_s02_ondas_y_representacion.md
           - section: "Actividades"
             contents:
@@ -66,7 +64,6 @@ website:
             href: sesiones/s02/demos/demo_forma_onda_espectro.html
       - section: "Sesión 03 — Modos de vibración"
         contents:
-          - sesiones/s03/plan.md
           - sesiones/s03/apuntes/apunte_s03_modos_de_vibracion.md
           - section: "Actividades"
             contents:
@@ -76,7 +73,6 @@ website:
             href: sesiones/s03/demos/demo_modos_cuerda.html
       - section: "Sesión 04 — La receta del timbre"
         contents:
-          - sesiones/s04/plan.md
           - sesiones/s04/apuntes/apunte_s04_la_receta_del_timbre.md
           - section: "Actividades"
             contents:
@@ -86,7 +82,6 @@ website:
             href: sesiones/s04/demos/demo_sintesis_aditiva.html
       - section: "Sesión 05 — La altura percibida"
         contents:
-          - sesiones/s05/plan.md
           - sesiones/s05/apuntes/apunte_s05_la_altura_percibida.md
           - section: "Actividades"
             contents:
@@ -96,7 +91,6 @@ website:
             href: sesiones/s05/demos/demo_fundamental_ausente.html
       - section: "Sesión 06 — Sonoridad y decibel"
         contents:
-          - sesiones/s06/plan.md
           - sesiones/s06/apuntes/apunte_s06_sonoridad_y_decibel.md
           - section: "Actividades"
             contents:
@@ -106,13 +100,11 @@ website:
             href: sesiones/s06/demos/demo_decibel_sonoridad.html
       - section: "Sesión 07 — Prueba 1 + batidos"
         contents:
-          - sesiones/s07/plan.md
           - sesiones/s07/apuntes/apunte_s07_batidos.md
           - text: "Demo — batidos"
             href: sesiones/s07/demos/demo_batidos.html
       - section: "Sesión 08 — Psicoacústica de la superposición"
         contents:
-          - sesiones/s08/plan.md
           - sesiones/s08/apuntes/apunte_s08_banda_critica_y_consonancia.md
           - section: "Actividades"
             contents:
@@ -122,7 +114,6 @@ website:
             href: sesiones/s08/demos/demo_banda_critica.html
       - section: "Sesión 09 — Escalas y temperamentos"
         contents:
-          - sesiones/s09/plan.md
           - sesiones/s09/apuntes/apunte_s09_escalas_y_temperamentos.md
           - section: "Actividades"
             contents:
@@ -132,7 +123,6 @@ website:
             href: sesiones/s09/demos/demo_temperamentos.html
       - section: "Sesión 10 — Resonancia, impedancia y acoplamiento"
         contents:
-          - sesiones/s10/plan.md
           - sesiones/s10/apuntes/apunte_s10_resonancia_e_impedancia.md
           - section: "Actividades"
             contents:
@@ -141,7 +131,6 @@ website:
             href: sesiones/s10/demos/demo_resonancia.html
       - section: "Sesión 11 — Cuerdas frotadas y el cuerpo"
         contents:
-          - sesiones/s11/plan.md
           - sesiones/s11/apuntes/apunte_s11_cuerdas_frotadas_y_cuerpo.md
           - section: "Actividades"
             contents:
@@ -151,7 +140,6 @@ website:
             href: sesiones/s11/demos/demo_helmholtz.html
       - section: "Sesión 12 — Vientos y lutería"
         contents:
-          - sesiones/s12/plan.md
           - sesiones/s12/apuntes/apunte_s12_vientos_y_luteria.md
           - section: "Actividades"
             contents:
@@ -160,13 +148,11 @@ website:
             href: sesiones/s12/demos/demo_tubo_agujeros.html
       - section: "Sesión 13 — Prueba 2 + la voz"
         contents:
-          - sesiones/s13/plan.md
           - sesiones/s13/apuntes/apunte_s13_la_voz.md
           - text: "Demo — formantes de la voz"
             href: sesiones/s13/demos/demo_formantes_voz.html
       - section: "Sesión 14 — La sala como instrumento"
         contents:
-          - sesiones/s14/plan.md
           - sesiones/s14/apuntes/apunte_s14_la_sala_como_instrumento.md
           - section: "Actividades"
             contents:
@@ -176,7 +162,6 @@ website:
             href: sesiones/s14/demos/demo_modos_sala.html
       - section: "Sesión 15 — Presentaciones finales"
         contents:
-          - sesiones/s15/plan.md
           - sesiones/s15/apuntes/apunte_s15_como_defender_un_proyecto_acustico.md
           - section: "Actividades"
             contents:
@@ -203,13 +188,6 @@ website:
       - section: "Materiales"
         contents:
           - materiales/apps_recomendadas.md
-          - materiales/banco_estimulos.md
-          - materiales/planilla_rubrica_oa3.md
-      - section: "Bitácora de diseño"
-        contents:
-          - diseno/revision_20260712.md
-          - diseno/revision_20260712_s10.md
-          - diseno/revision_20260713.md
 
 format:
   html:

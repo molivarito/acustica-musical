@@ -164,7 +164,7 @@ desaparecen.
       </ul>
     </div>
   </div>
-  <p class="oanota">Un clic en cualquier código (p. ej. <b>OA2.2</b>) activa el filtro correspondiente en la tabla de abajo. Enunciados completos, con contraste 2019 y respaldo bibliográfico, en <a href="diseno/01_objetivos_aprendizaje.html">objetivos de aprendizaje</a>.</p>
+  <p class="oanota">Un clic en cualquier código (p. ej. <b>OA2.2</b>) activa el filtro correspondiente en la tabla de abajo.</p>
 </details>
 
 <div class="controles">
@@ -203,12 +203,9 @@ desaparecen.
 </div>
 
 <p class="pie">Accesos directos:
-<a href="diseno/03_estructura_curso.html">estructura y notación</a> ·
-<a href="diseno/02_metodologia.html">metodología y rúbrica</a> ·
 <a href="Admin/programa_curso.html">programa del curso</a> ·
 <a href="libro/LIBRO_CURSO.pdf">libro completo (PDF)</a> ·
-<a href="materiales/banco_estimulos.html">banco de estímulos</a> ·
-<a href="materiales/planilla_rubrica_oa3.html">planilla rúbrica OA3</a>.</p>
+<a href="materiales/apps_recomendadas.html">apps recomendadas</a>.</p>
 
 <script>
 'use strict';
@@ -452,12 +449,11 @@ S.forEach(s => {
   const actsHTML = '<ul class="acts">' + s.acts.map(a =>
       `<li><a href="${H(a[1])}">${a[0]}</a></li>`).join('') + '</ul>';
 
-  const plan = `sesiones/s${String(s.n).padStart(2,'0')}/plan.html`;
   tr.innerHTML = `
     <td class="num" style="background:${COLOR_BLOQUE[s.b]}">
       <span class="snum">s${String(s.n).padStart(2,'0')}</span><br>
-      <span class="tema"><a href="${plan}">${s.tema}</a></span><br>
-      <span class="modulos">${s.mod} · <a href="${plan}">plan completo</a></span>
+      <span class="tema"><a href="${H(s.ap)}">${s.tema}</a></span><br>
+      <span class="modulos">${s.mod}</span>
     </td>
     <td>${oaHTML}</td>
     <td>${evHTML}</td>

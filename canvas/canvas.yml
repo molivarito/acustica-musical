@@ -8,12 +8,13 @@
 # `{sitio}` se reemplaza por el valor de `sitio` en cada url.
 #
 # curso_id 112005 = MUC860-1 Acústica Musical, 2do semestre 2026.
-# Generado a partir de la sidebar de `_quarto.yml` (mismo orden y
-# secciones que el sitio publicado). Se excluyen del sync los
-# documentos que no forman parte del sitio público — pautas de
-# evaluación, guión del profesor (ver `_quarto.yml`, exclusiones en
-# `render:`) — y la "Bitácora de diseño" (documentos de proceso interno
-# del diseño del curso, no contenido para alumnos).
+# Espejo de la sidebar de `_quarto.yml` (mismo orden y secciones que el
+# sitio publicado). REGLA DE VISIBILIDAD (2026-07-22): Canvas y el sitio
+# contienen SOLO material para estudiantes — apuntes, guías/hojas de
+# actividades, demos, libro, programa y apps. El material solo-profesor
+# (planes de sesión, pautas, pruebas, guión, banco de estímulos,
+# planilla de rúbrica, documentos de diseño y bitácora) NO se agrega
+# aquí ni al `render:` de `_quarto.yml`.
 
 curso_id: 112005
 base_url: https://cursos.canvas.uc.cl
@@ -24,20 +25,10 @@ modulos:
     items:
       - titulo: "Mapa del curso"
         url: "{sitio}/"
-  - nombre: "Diseño del curso"
-    items:
-      - titulo: "Objetivos de aprendizaje — Acústica Musical"
-        url: "{sitio}/diseno/01_objetivos_aprendizaje.html"
-      - titulo: "Metodología de aprendizaje activo — Acústica Musical"
-        url: "{sitio}/diseno/02_metodologia.html"
-      - titulo: "Estructura del curso — 15 sesiones"
-        url: "{sitio}/diseno/03_estructura_curso.html"
       - titulo: "Programa del curso — Acústica Musical"
         url: "{sitio}/Admin/programa_curso.html"
   - nombre: "Sesión 01 — Escuchar como científico"
     items:
-      - titulo: "Sesión 01 — Escuchar como científico: del golpe al tono"
-        url: "{sitio}/sesiones/s01/plan.html"
       - titulo: "Del golpe al tono"
         url: "{sitio}/sesiones/s01/apuntes/apunte_s01_del_golpe_al_tono.html"
       - {tipo: subheader, titulo: "Actividades"}
@@ -54,8 +45,6 @@ modulos:
         url: "{sitio}/sesiones/s01/demos/demo_tren_pulsos.html"
   - nombre: "Sesión 02 — Ondas y representación"
     items:
-      - titulo: "Sesión 02 — Ondas y representación: forma de onda, espectro y espectrograma"
-        url: "{sitio}/sesiones/s02/plan.html"
       - titulo: "Ondas y representación: dibujar el sonido"
         url: "{sitio}/sesiones/s02/apuntes/apunte_s02_ondas_y_representacion.html"
       - {tipo: subheader, titulo: "Actividades"}
@@ -69,8 +58,6 @@ modulos:
         url: "{sitio}/sesiones/s02/demos/demo_forma_onda_espectro.html"
   - nombre: "Sesión 03 — Modos de vibración"
     items:
-      - titulo: "Sesión 03 — Modos de vibración: por qué cada objeto suena como suena"
-        url: "{sitio}/sesiones/s03/plan.html"
       - titulo: "Modos de vibración: por qué cada objeto suena como suena"
         url: "{sitio}/sesiones/s03/apuntes/apunte_s03_modos_de_vibracion.html"
       - {tipo: subheader, titulo: "Actividades"}
@@ -84,8 +71,6 @@ modulos:
         url: "{sitio}/sesiones/s03/demos/demo_modos_cuerda.html"
   - nombre: "Sesión 04 — La receta del timbre"
     items:
-      - titulo: "Sesión 04 — La receta del timbre: cuerda pulsada, punto de excitación, síntesis aditiva"
-        url: "{sitio}/sesiones/s04/plan.html"
       - titulo: "La receta del timbre: cuerda pulsada, punto de excitación, síntesis aditiva"
         url: "{sitio}/sesiones/s04/apuntes/apunte_s04_la_receta_del_timbre.html"
       - {tipo: subheader, titulo: "Actividades"}
@@ -99,8 +84,6 @@ modulos:
         url: "{sitio}/sesiones/s04/demos/demo_sintesis_aditiva.html"
   - nombre: "Sesión 05 — La altura percibida"
     items:
-      - titulo: "Sesión 05 — La altura percibida: fundamental ausente, reconocimiento de patrones, el oído en una pasada"
-        url: "{sitio}/sesiones/s05/plan.html"
       - titulo: "La altura percibida"
         url: "{sitio}/sesiones/s05/apuntes/apunte_s05_la_altura_percibida.html"
       - {tipo: subheader, titulo: "Actividades"}
@@ -114,8 +97,6 @@ modulos:
         url: "{sitio}/sesiones/s05/demos/demo_fundamental_ausente.html"
   - nombre: "Sesión 06 — Sonoridad y decibel"
     items:
-      - titulo: "Sesión 06 — Sonoridad y decibel: intensidad, niveles, isofónicas; medir lo fuerte"
-        url: "{sitio}/sesiones/s06/plan.html"
       - titulo: "Sonoridad y decibel: medir lo fuerte"
         url: "{sitio}/sesiones/s06/apuntes/apunte_s06_sonoridad_y_decibel.html"
       - {tipo: subheader, titulo: "Actividades"}
@@ -129,16 +110,12 @@ modulos:
         url: "{sitio}/sesiones/s06/demos/demo_decibel_sonoridad.html"
   - nombre: "Sesión 07 — Prueba 1 + batidos"
     items:
-      - titulo: "Sesión 07 — Prueba 1 (módulo 1) + audición liviana: batidos (módulo 2)"
-        url: "{sitio}/sesiones/s07/plan.html"
       - titulo: "Batidos: la ondulación que delata la desafinación"
         url: "{sitio}/sesiones/s07/apuntes/apunte_s07_batidos.html"
       - titulo: "Demo — batidos"
         url: "{sitio}/sesiones/s07/demos/demo_batidos.html"
   - nombre: "Sesión 08 — Psicoacústica de la superposición"
     items:
-      - titulo: "Sesión 08 — Psicoacústica de la superposición: batidos, banda crítica, rugosidad y consonancia"
-        url: "{sitio}/sesiones/s08/plan.html"
       - titulo: "Banda crítica y consonancia"
         url: "{sitio}/sesiones/s08/apuntes/apunte_s08_banda_critica_y_consonancia.html"
       - {tipo: subheader, titulo: "Actividades"}
@@ -152,8 +129,6 @@ modulos:
         url: "{sitio}/sesiones/s08/demos/demo_banda_critica.html"
   - nombre: "Sesión 09 — Escalas y temperamentos"
     items:
-      - titulo: "Sesión 09 — Escalas y temperamentos: afinar de oído (batidos como herramienta)"
-        url: "{sitio}/sesiones/s09/plan.html"
       - titulo: "Escalas y temperamentos: afinar de oído"
         url: "{sitio}/sesiones/s09/apuntes/apunte_s09_escalas_y_temperamentos.html"
       - {tipo: subheader, titulo: "Actividades"}
@@ -167,8 +142,6 @@ modulos:
         url: "{sitio}/sesiones/s09/demos/demo_temperamentos.html"
   - nombre: "Sesión 10 — Resonancia, impedancia y acoplamiento"
     items:
-      - titulo: "Sesión 10 — Resonancia, impedancia y acoplamiento: el puente hacia los instrumentos"
-        url: "{sitio}/sesiones/s10/plan.html"
       - titulo: "Resonancia, impedancia y acoplamiento"
         url: "{sitio}/sesiones/s10/apuntes/apunte_s10_resonancia_e_impedancia.html"
       - {tipo: subheader, titulo: "Actividades"}
@@ -179,8 +152,6 @@ modulos:
         url: "{sitio}/sesiones/s10/demos/demo_resonancia.html"
   - nombre: "Sesión 11 — Cuerdas frotadas y el cuerpo"
     items:
-      - titulo: "Sesión 11 — Cuerdas frotadas y el cuerpo del instrumento: stick-slip, movimiento de Helmholtz, puente, caja y radiación"
-        url: "{sitio}/sesiones/s11/plan.html"
       - titulo: "Cuerdas frotadas y el cuerpo del instrumento"
         url: "{sitio}/sesiones/s11/apuntes/apunte_s11_cuerdas_frotadas_y_cuerpo.html"
       - {tipo: subheader, titulo: "Actividades"}
@@ -194,8 +165,6 @@ modulos:
         url: "{sitio}/sesiones/s11/demos/demo_helmholtz.html"
   - nombre: "Sesión 12 — Vientos y lutería"
     items:
-      - titulo: "Sesión 12 — Vientos y lutería: columnas de aire, agujeros, regímenes; construcción y medición de flautas/tubos"
-        url: "{sitio}/sesiones/s12/plan.html"
       - titulo: "Vientos y lutería: la columna de aire a la medida"
         url: "{sitio}/sesiones/s12/apuntes/apunte_s12_vientos_y_luteria.html"
       - {tipo: subheader, titulo: "Actividades"}
@@ -206,16 +175,12 @@ modulos:
         url: "{sitio}/sesiones/s12/demos/demo_tubo_agujeros.html"
   - nombre: "Sesión 13 — Prueba 2 + la voz"
     items:
-      - titulo: "Sesión 13 — Prueba 2 (módulo 1) + la voz cantada: fuente-filtro y formantes (módulo 2, audición liviana)"
-        url: "{sitio}/sesiones/s13/plan.html"
       - titulo: "La voz cantada: fuente y filtro"
         url: "{sitio}/sesiones/s13/apuntes/apunte_s13_la_voz.html"
       - titulo: "Demo — formantes de la voz"
         url: "{sitio}/sesiones/s13/demos/demo_formantes_voz.html"
   - nombre: "Sesión 14 — La sala como instrumento"
     items:
-      - titulo: "Sesión 14 — La sala como instrumento: reflexión, absorción, reverberación, modos; salida de medición de T60"
-        url: "{sitio}/sesiones/s14/plan.html"
       - titulo: "La sala como instrumento"
         url: "{sitio}/sesiones/s14/apuntes/apunte_s14_la_sala_como_instrumento.html"
       - {tipo: subheader, titulo: "Actividades"}
@@ -229,8 +194,6 @@ modulos:
         url: "{sitio}/sesiones/s14/demos/demo_modos_sala.html"
   - nombre: "Sesión 15 — Presentaciones finales"
     items:
-      - titulo: "Sesión 15 — Presentaciones finales del proyecto: explicar es la prueba"
-        url: "{sitio}/sesiones/s15/plan.html"
       - titulo: "Cómo defender un proyecto acústico"
         url: "{sitio}/sesiones/s15/apuntes/apunte_s15_como_defender_un_proyecto_acustico.html"
       - {tipo: subheader, titulo: "Actividades"}
@@ -278,7 +241,3 @@ modulos:
     items:
       - titulo: "Apps recomendadas — análisis de sonido en el celular"
         url: "{sitio}/materiales/apps_recomendadas.html"
-      - titulo: "Banco de estímulos — grabaciones del profesor (s01–s14)"
-        url: "{sitio}/materiales/banco_estimulos.html"
-      - titulo: "Planilla de rúbrica OA3 — Escucha argumentada (ronda oral)"
-        url: "{sitio}/materiales/planilla_rubrica_oa3.html"
