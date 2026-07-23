@@ -1,0 +1,202 @@
+---
+title: "Acústica Musical"
+subtitle: "MUC860 · Sesión 05 — La altura percibida · vie 04-sep-2026"
+author: "Patricio de la Cuadra · PUC"
+format:
+  revealjs:
+    theme: simple
+    lang: es
+    slide-number: true
+    html-math-method: katex
+    transition: fade
+---
+
+## Hoy: dos preguntas sobre el oído {.center}
+
+| | |
+|---|---|
+| **Módulo 1** | ¿Dónde está el bajo que un parlante minúsculo *no puede* dar? |
+| **Módulo 2** | ¿Por qué duplicar la frecuencia no suena "el doble de agudo"? |
+
+. . .
+
+Sesión de **audición**: hoy el taller es escuchar con protocolo y registrar.
+
+## Antes de empezar: hito 1
+
+Dejen en la caja, al entrar:
+
+::: {.incremental}
+- Su **documento** (2 páginas)
+- La **bitácora firmada** por los 4 integrantes
+:::
+
+. . .
+
+Se verifica contra checklist. [**No se corrige hoy**]{style="color:#0f766e"} — devolución en la sesión 06.
+
+## Escucha del día {.center}
+
+Protocolo, sin excepciones:
+
+::: {.incremental}
+- **3′** de estímulo
+- **2′** para escribir: describir → hipotetizar → verificar
+- **4 personas sorteadas** exponen, 2,5′ cada una
+:::
+
+. . .
+
+Usen el vocabulario de s03–s04: parcial, armónico, espectro.
+
+## La apuesta que dejaron firmada
+
+En su ticket de salida de s04 predijeron: si apago del todo el parcial 1
+—la fundamental $f_1$— y dejo sonando $2f_1, 3f_1, 4f_1,\dots$
+
+::: {.incremental}
+- ¿La nota **baja una octava**?
+- ¿**Desaparece**?
+- ¿**Sigue igual**?
+:::
+
+. . .
+
+Vote a mano alzada. Veámoslo.
+
+## Vamos a apagar $f_1$ en vivo
+
+Miren la forma de onda y el espectro. Predigan antes de que apague nada.
+
+## Demo: apagar la fundamental {background-iframe="../demos/demo_fundamental_ausente.html" background-interactive=true}
+
+## Fundamental ausente / altura virtual
+
+> Apagar $f_1$ (y a veces $f_2$, $f_3$) cambia el **timbre**, no la **altura**,
+> mientras sobreviva el patrón de armónicos vecinos.
+
+. . .
+
+El período $T = 1/f_1$ del patrón se conserva aunque $f_1$ no esté físicamente
+presente: el oído reconstruye la altura del patrón, no de una línea del
+espectro.
+
+. . .
+
+Por eso el parlante del celular "da" el bajo: radia los armónicos, y el
+oído repone la fundamental que falta.
+
+## ¿Hasta dónde aguanta el patrón?
+
+Si seguimos apagando parciales de abajo hacia arriba —$f_1$, luego $f_2$,
+luego $f_3\dots$— con un **filtro pasa-altos progresivo**:
+
+. . .
+
+¿en qué momento la altura finalmente se rompe o salta?
+
+. . .
+
+La respuesta es **personal** — por eso la vamos a registrar, uno por uno.
+
+## En parejas: predigan antes de subir el filtro
+
+Uno predice, el otro manipula y registra. Se intercambian a mitad del
+protocolo.
+
+## Demo: suba el filtro pasa-altos {background-iframe="../demos/demo_fundamental_ausente.html" background-interactive=true}
+
+## Taller — "el bajo que no está" {.center}
+
+::: {.incremental}
+- **Prediga** en su hoja (2′), antes de tocar la demo
+- En pareja: uno **manipula**, el otro **registra**; se intercambian tras
+  apagar $f_1$
+- Suban el filtro pasa-altos hasta que la altura se "rompa"
+- Cada uno anota **su propio umbral** en su hoja
+- Puesta en común del grupo (2′)
+:::
+
+## Síntesis del módulo 1 {.center}
+
+**La misma altura puede oírse sin que exista la frecuencia que la nombra.**
+
+. . .
+
+Por eso el parlante chico "da" el bajo — y por eso su umbral personal
+varía: no todos reconstruimos el patrón con la misma tozudez.
+
+## Un tono y su doble
+
+Escuchen: un tono de **220 Hz**, y luego uno de **440 Hz** — exactamente el
+doble de frecuencia.
+
+. . .
+
+Voten a mano alzada: ¿suena **el doble de agudo**, o **la misma nota, más
+arriba**?
+
+## El oído en una pasada
+
+| Parte | Qué hace |
+|---|---|
+| **Externo** (pabellón, canal) | Capta y colorea |
+| **Medio** (tímpano, huesecillos) | Adapta y transmite aire → líquido |
+| **Interno** (cóclea, membrana basilar) | Analiza por **lugar** |
+
+. . .
+
+Agudo → excita cerca de la entrada. Grave → excita el fondo. Un análisis
+*grueso*, pero es la primera clasificación que recibe el cerebro.
+
+. . .
+
+Dos pistas para la altura: el **lugar** en la membrana, y el **ritmo** del
+patrón (la fundamental ausente de recién). No siempre coinciden.
+
+## Duplicar $f$ no es "el doble de agudo"
+
+$$\text{octava} \;\Longleftrightarrow\; f \to 2f \quad (2{:}1)$$
+
+. . .
+
+110, 220, 440, 880, 1760 Hz: todos La, todos **equiespaciados** en un eje
+logarítmico. La altura se organiza por **razones**, no por diferencias.
+
+## Taller — "el oído y la octava" {.center}
+
+::: {.incremental}
+- **Prediga y empareje** de oído la octava de un tono; compare con $2f$ exacto
+- Escuche dos octavas de piano (grave y aguda): ¿el afinador exacto suena
+  perfecto, o un pelín estrecho?
+- Anote qué le sorprendió
+:::
+
+> Curiosidad honesta: las **octavas estiradas** no se resuelven hoy — se
+> retoman en s09. La regla operativa sigue siendo octava = $2{:}1$.
+
+## Síntesis del día {.center}
+
+Altura ≠ frecuencia línea a línea: el oído reconstruye un **patrón**
+(fundamental ausente) y mapea frecuencia a **lugar** — pero la octava
+muestra que ese mapa tiene pliegues.
+
+## Punto de control metodológico
+
+Encuesta relámpago, anónima, 30 segundos:
+
+::: {.incremental}
+1. ¿Hizo la **lectura previa**? sí / no
+2. ¿Le **sirvió** para la clase? mucho / algo / nada
+3. ¿La **ronda oral** se siente demasiado larga? sí / no
+:::
+
+## Para la próxima sesión
+
+Ticket de salida: dos sonidos de la **misma frecuencia**, ¿pueden oírse a
+distinto volumen? Un grave y un agudo con la **misma energía física**,
+¿suenan igual de fuertes? Escriban su predicción.
+
+. . .
+
+s06: **sonoridad**, decibel, curvas isofónicas — y devolución del hito 1.

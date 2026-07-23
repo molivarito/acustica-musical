@@ -1,0 +1,194 @@
+---
+title: "Acústica Musical"
+subtitle: "MUC860 · Sesión 13 — Prueba 2 + la voz cantada · vie 13-nov-2026"
+author: "Patricio de la Cuadra · PUC"
+format:
+  revealjs:
+    theme: simple
+    lang: es
+    slide-number: true
+    html-math-method: katex
+    transition: fade
+---
+
+## Hoy: dos módulos muy distintos
+
+| Módulo | Qué pasa |
+|---|---|
+| **1** | Prueba 2 (evaluada) — ocupa los 70′ completos |
+| **2** | La voz cantada — audición **liviana**, [sin nota]{style="color:#0f766e"} |
+
+Esta semana no hay escucha del día: la escucha escrita de la prueba la reemplaza.
+
+## Prueba 2 — las reglas
+
+- Puestos individuales, columnas separadas
+- Celular, apuntes y audífonos → a la mochila
+- Cuadernillo (boca abajo) + hoja de figuras aparte
+- Cada estímulo suena **2 veces**, con ~45 s de pausa
+- No hace falta calculadora: solo proporciones y sumas de cents
+- Preguntas solo de forma, a mano alzada
+
+## Prueba 2 — calendario de audio
+
+| Minuto | Qué suena |
+|---|---|
+| 10 | Estímulo 1 |
+| 25 | Estímulos 2 y 3 |
+| 40 | Pasada de repaso (recupera el Estímulo 1) |
+
+Memorícelo: el calendario es intocable.
+
+## El ticket de s12, cobrado {.center}
+
+Terminada la prueba: descansen — **el instrumento de hoy ya lo traen puesto**.
+
+> "Cuando usted canta una vocal, ¿qué afina — la 'cuerda' o el 'tubo'?"
+
+. . .
+
+Hoy lo averiguamos, **en vivo**.
+
+## Escuchen y voten
+
+::: {.incremental}
+- Misma nota, tres vocales — /a/ /e/ /i/: **¿cambió la altura?**
+- Misma vocal, tres notas distintas: **¿cambió la vocal?**
+:::
+
+Voten a mano alzada. Guarden su conclusión — se retoma más adelante.
+
+## La voz al espectrograma
+
+> En la pantalla: **líneas** = los armónicos de la fuente · **bandas oscuras** = los formantes del filtro
+
+. . .
+
+::: {.incremental}
+- Misma nota, cambio de vocal: ¿se mueven las líneas o las bandas?
+- Misma vocal, subo la nota: ¿y ahora?
+:::
+
+## La predicción estrella {.center}
+
+Si **todo el curso susurra** /a-e-i-o-u/ — sin que vibren las cuerdas —
+
+. . .
+
+¿la app va a ver algo? ¿se van a distinguir las vocales?
+
+. . .
+
+Susurremos todos juntos hacia el micrófono. Veámoslo.
+
+## La tercera válvula: los pliegues vocales
+
+Tras la fricción del arco (s11) y el chorro del bisel (s12)…
+
+> Los **pliegues vocales**: dos labios de músculo que el aire de los pulmones corta en soplidos periódicos.
+
+. . .
+
+**Votación**: ¿quién le pone el metrónomo a esta válvula — el tracto o los propios pliegues?
+
+. . .
+
+[Los pliegues, solos]{style="color:#0f766e"} — con su tensión y su masa, como una cuerda.
+
+## El filtro: el tracto vocal y sus formantes
+
+> El **tracto vocal**: el tubo (≈17 cm) de la laringe a los labios — cambia de forma a voluntad.
+
+::: {.incremental}
+- Como toda columna de aire, tiene resonancias
+- Sus resonancias se llaman **formantes** ($F_1$, $F_2$, …)
+- Refuerzan los armónicos cercanos; desatienden el resto
+:::
+
+## Fuente + filtro = dos perillas independientes {.center}
+
+> **Fuente** (pliegues): fija $f_0$ — la **altura**.
+> **Filtro** (tracto): fija los formantes — la **vocal**.
+
+. . .
+
+Por eso usted puede cantar **cualquier vocal en cualquier nota**.
+
+## A comprobarlo: dos perillas en la demo
+
+Con $f_0$ fija, recorran las vocales /a/ /e/ /i/ /o/ /u/ — ¿se mueve la altura?
+
+. . .
+
+Con la vocal fija, suban y bajen $f_0$ — ¿sobrevive la vocal?
+
+## Demo: altura vs. vocal {background-iframe="../demos/demo_formantes_voz.html" background-interactive=true}
+
+## El juego: ¿qué vocal es?
+
+$F_1$ y $F_2$ quedan **ocultos**. El curso vota por las bandas — sin ver los valores.
+
+En cada ronda: "¿qué banda lo delató?"
+
+## Demo: adivine la vocal (F1/F2 ocultos) {background-iframe="../demos/demo_formantes_voz.html" background-interactive=true}
+
+## ¿Y sin cuerdas vibrando?
+
+Cambiemos la fuente de **tono** a **soplo** — el susurro sintético.
+
+. . .
+
+¿Sigue reconociéndose la vocal sin ninguna altura?
+
+## Demo: la fuente en modo soplo {background-iframe="../demos/demo_formantes_voz.html" background-interactive=true}
+
+## El salto de la soprano
+
+Volvamos a tono glotal y saltemos a $f_0 \approx 880$ Hz.
+
+. . .
+
+¿Alguien distingue /e/ de /i/ ahí arriba?
+
+## Demo: f₀ ≈ 880 Hz — registro de soprano {background-iframe="../demos/demo_formantes_voz.html" background-interactive=true}
+
+## Curiosidad 1: el formante del cantante
+
+Una orquesta completa suena más fuerte que cualquier voz — sin micrófono, la voz lírica la atraviesa igual.
+
+. . .
+
+El truco: agrupar resonancias cerca de **2,5–3 kHz**, donde la orquesta ya decayó. No canta más fuerte: [canta donde la orquesta no está]{style="color:#0f766e"}.
+
+*Cultura general — no entra en la prueba.*
+
+## Curiosidad 2: las vocales que se disuelven
+
+Con $f_0$ muy alta, los armónicos quedan demasiado separados para dibujar los formantes.
+
+. . .
+
+Ustedes ya lo vieron en la demo: arriba, las vocales **se confunden** — y las sopranos entrenadas llevan un formante justo sobre un armónico.
+
+*Cultura general — no entra en la prueba.*
+
+## Síntesis y el próximo ticket
+
+::: {.incremental}
+- Los **pliegues** se afinan solos: fijan la **altura** ($f_0$)
+- El **tracto** filtra: sus **formantes** fijan la **vocal**
+- Son independientes: cierra la trilogía de válvulas del bloque C — fricción, chorro, pliegues
+:::
+
+. . .
+
+> **Ticket hacia s14**: ya afinamos la fuente y moldeamos el filtro — queda el tercer socio. ¿Por qué la misma voz suena tan distinta en la ducha, en esta sala y en una catedral?
+
+## Para la próxima sesión
+
+::: {.incremental}
+- **s14**: salida de medición de salas UC — módulo 2 completo fuera del aula, por grupos
+- Traer el **celular cargado** con las apps del curso
+- Devolución de la **Prueba 2** en la puerta, al entrar
+- **s15**: presentaciones finales + informe — pauta se publica en s14
+:::

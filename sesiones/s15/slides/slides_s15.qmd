@@ -1,0 +1,140 @@
+---
+title: "Acústica Musical"
+subtitle: "MUC860 · Sesión 15 — Presentaciones finales: explicar es la prueba · vie 27-nov-2026"
+author: "Patricio de la Cuadra · PUC"
+format:
+  revealjs:
+    theme: simple
+    lang: es
+    slide-number: true
+    html-math-method: katex
+    transition: fade
+---
+
+## Hoy: el día en que ustedes son la prueba
+
+| Módulo 1 (70′) | Módulo 2 (70′) |
+|---|---|
+| Grupo 1 → Grupo 2 → Grupo 3 | Grupo 4 → Grupo 5 → **Cierre del curso** (24′) |
+
+Cada bloque: **15′ de presentación** (el objeto suena en vivo) + preguntas individuales.
+
+## ¿Cómo corre el día?
+
+| | |
+|---|---|
+| **Orden** | sorteado en la sesión anterior, proyectado a la entrada |
+| **Tiempos** | 15′ presentación + preguntas individuales (7′; grupo 1: 5′) |
+| **Corte** | cronómetro visible — corte duro, igual para los 5 grupos |
+| **Transición** | el grupo siguiente pre-monta mientras el anterior responde |
+
+## Mientras el otro grupo defiende, ¿qué hace usted?
+
+> Un diagnóstico por cada instrumento que escuchan sonar (el propio, no)
+
+::: {.incremental}
+- **4 bloques**: uno por cada presentación que observan
+- Se escriben durante las preguntas y la transición de ese grupo (~9′)
+- La misma tríada de siempre: **describir → hipotetizar → verificar**
+- Al cierre, marquen ★ su **mejor diagnóstico** del día
+:::
+
+## La regla que gobierna todo desde la sesión 3 {.center}
+
+> La calidad de la explicación pesa más que el éxito sonoro.
+
+[la regla del curso — hoy se aplica completa]{style="color:#0f766e"}
+
+## ¿Por qué la explicación pesa más que el sonido?
+
+::: {.incremental}
+- Un objeto que sonó exactamente como se predijo, **sin mecanismo**, demuestra **suerte**
+- Un objeto que se desvió — y cuya desviación fue medida y explicada — demuestra **aprendizaje**
+- Por eso la dimensión que explica el sonido **desempata** la nota
+:::
+
+## Se acabaron las defensas {.center}
+
+Quedan ustedes con ustedes mismos.
+
+## Antes que nada: la coevaluación
+
+> Ficha individual, en sobre cerrado — mismo formato del hito 2, ahora sobre todo el semestre
+
+::: {.incremental}
+- Ajusta la nota individual hasta **±0,5** respecto de la nota del grupo
+- Se llena ahora y se entrega en su sobre, junto con sus hojas de escucha (cajas separadas)
+- Sin ella, su nota individual del hito queda pendiente
+:::
+
+## La línea base, otra vez {.center}
+
+Sin abrir el sobre todavía…
+
+. . .
+
+Van a escuchar, una vez más, **el mismo audio de la sesión 1**.
+
+. . .
+
+Y van a responder la misma consigna de entonces: qué oyen, qué lo produce, cómo lo comprobarían.
+
+## Abran el sobre {.center}
+
+Ahí está su hoja de la semana 1, esperándolos.
+
+. . .
+
+Compárenla, en silencio, con lo que acaban de escribir.
+
+**¿Quién era usted en la semana 1? ¿Quién es hoy?**
+
+. . .
+
+Ambas hojas son suyas: se las llevan.
+
+## El arco completo, en un minuto (1/2)
+
+::: {.incremental}
+- Un **golpe** que no era música — hasta que la repetición regaló la **altura**
+- Aprendimos a **ver** el sonido: forma de onda, espectro, espectrograma
+- Cada objeto vibra en sus **modos**: la receta de parciales es el timbre
+- El oído **no es un micrófono**: sonoridad, batidos, consonancia — percepción con reglas propias
+:::
+
+## El arco completo, en un minuto (2/2)
+
+::: {.incremental}
+- La **resonancia**: el puente hacia los instrumentos sostenidos
+- Tres válvulas, una sola gramática: **fricción** (arco), **aire** (flauta), **pliegues vocales** (voz)
+- Y al final, **la sala**: el instrumento que nadie elige tocar, pero que suena en todo lo que suena
+:::
+
+## El método que no cambió nunca
+
+> Lo que se oye. El mecanismo que lo produce. La medición que arbitra.
+
+- **Describir → hipotetizar → verificar**, desde la sesión 1 hasta la defensa de hoy
+- Hoy cada grupo recorrió esa cadena completa — con su propio instrumento, en vivo
+
+## Desde hoy, ustedes ya no pueden des-oír {.center}
+
+Escuchar como científico no se olvida.
+
+. . .
+
+[Desde hoy, ustedes ya no pueden des-oír.]{style="color:#0f766e"}
+
+## Antes de irse
+
+Un semestre también se mide con su opinión.
+
+::: {.center}
+<div style="width:220px;height:220px;border:3px dashed #0f766e;display:flex;align-items:center;justify-content:center;margin:1.5em auto;font-family:sans-serif;color:#0f766e;font-size:1.2em;">
+QR<br>encuesta
+</div>
+
+*(el profesor completa aquí el QR o enlace de la encuesta del curso)*
+:::
+
+Gracias por un semestre de escuchar como científicos.

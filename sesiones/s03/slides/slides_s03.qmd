@@ -1,0 +1,221 @@
+---
+title: "Acústica Musical"
+subtitle: "MUC860 · Sesión 03 — Modos de vibración · vie 21-ago-2026"
+author: "Patricio de la Cuadra · PUC"
+format:
+  revealjs:
+    theme: simple
+    lang: es
+    slide-number: true
+    html-math-method: katex
+    transition: fade
+---
+
+## Hoy: del golpe al lanzamiento del proyecto {.center}
+
+> Semana universitaria: las actividades de hoy van **sin nota** (se
+> hacen y se registran igual, no se califican).
+
+| Módulo 1 — objetos golpeados | Módulo 2 — la cuerda y el proyecto |
+|---|---|
+| Escucha del día: en vivo | Gancho: la cuerda que sí afina |
+| Veredicto + ¿qué es un modo? | Demo predictiva: modos de una cuerda |
+| Taller PEE: la sartén y sus parientes | Percusión en 2D: membranas y placas |
+| | **Lanzamiento del proyecto del curso** |
+
+## Escucha del día: el protocolo {.center}
+
+> Describir → hipotetizar → verificar
+
+::: {.incremental}
+- Estímulo: **3′**, solo escuchar
+- Escritura: **2′**, su diagnóstico en 3 líneas
+- **4 sorteados** exponen — 2,5′ cada uno, cronómetro visible
+:::
+
+## ¿Cuántas líneas anotó en su ticket de la semana pasada? {.center}
+
+Ese ticket de s02 ya tiene su apuesta por escrito.
+
+. . .
+
+Veámoslo — proyectado, en vivo.
+
+## ¿Qué significa que un objeto "vibre a varias frecuencias"?
+
+> Cada objeto tiene un repertorio fijo de **frecuencias
+> características**; cada una es un **modo**: una forma de vibrar de
+> todo el objeto a la vez.
+
+. . .
+
+Una masa con un resorte: **una** manera de oscilar.
+
+. . .
+
+Dos masas encadenadas: **dos** coreografías posibles (juntas / en
+oposición).
+
+. . .
+
+Muchas masas — como una cuerda, una membrana o una sartén — → **muchas**
+frecuencias características.
+
+## Cada modo tiene lugares que no se mueven
+
+> **Nodo**: no se mueve. **Antinodo**: máximo movimiento.
+
+::: {.incremental}
+- Un dedo en un **antinodo** apaga ese modo
+- Un dedo en un **nodo** deja sobrevivir ese modo
+:::
+
+. . .
+
+[Tocar un objeto en distintos puntos es editar su espectro, modo por
+modo.]{style="color:#0f766e"}
+
+## Taller: la sartén y sus parientes (30′)
+
+**Antes de golpear** (5′): prediga cuántas líneas, si están igualmente
+espaciadas, cuál dura más.
+
+. . .
+
+**Golpeen y midan** (15′): los 3 parciales más fuertes de 2 objetos;
+calculen $f_2/f_1$ y $f_3/f_1$.
+
+. . .
+
+**Editen** (fase 2): golpe en el centro vs. cerca del borde; un dedo en
+el centro mientras suena. Prediga primero, verifique después.
+
+> Roles: **ejecuta** · **mide** · **registra** · **vocero** — roten
+> entre los dos objetos.
+
+## ¿Algún objeto de la sala resultó armónico? {.center}
+
+Ninguna sartén, tapa o taza dio razones $1:2:3$.
+
+. . .
+
+**¿Qué objeto sí las daría?**
+
+## La cuerda que sí afina {.center}
+
+Escuchen: la cuerda al aire, y luego sus armónicos naturales (dedo
+apoyado suavemente en la mitad, y en el tercio).
+
+. . .
+
+**¿Por qué la cuerda tiene una nota clara y la sartén no?**
+
+## Antes de ver la demo: aposte {.center}
+
+¿A qué intervalo suena el modo 2 respecto del modo 1? ¿Y el modo 3
+respecto del modo 2? ¿Qué forma tiene el modo 3?
+
+Activen "modo predicción" y verifiquen escuchando cada modo, uno por
+uno.
+
+## Demo: modos de una cuerda {background-iframe="../demos/demo_modos_cuerda.html" background-interactive=true}
+
+## Parcial ≠ armónico
+
+> **Parcial**: cualquier línea del espectro, venga del objeto que
+> venga.
+> **Armónico**: parcial cuya frecuencia está en razón *entera* con la
+> fundamental.
+
+$$f_n = n\,f_1 \qquad n = 1, 2, 3, \dots$$
+
+. . .
+
+Todos los armónicos son parciales; casi ningún parcial de la sartén lo
+es.
+
+## ¿Por qué la percusión "no afina"? {.center}
+
+Escuchen: timbal vs. tom.
+
+. . .
+
+En 2D los nodos se vuelven **líneas nodales** (figuras de Chladni).
+
+. . .
+
+Membranas y placas: parciales en razones **no enteras** →
+inarmónicos.
+
+. . .
+
+El **timbal** es la excepción: caldero de aire + tensión afinable +
+golpe cerca del borde acomodan los parciales en razones casi enteras →
+aparece altura.
+
+## El proyecto del curso queda lanzado {.center}
+
+En grupos de 4: **construir o modificar** un instrumento o instalación
+sonora, y **explicar acústicamente** su comportamiento.
+
+> [La calidad de la explicación vale más que el éxito
+> sonoro.]{style="color:#0f766e"}
+
+Vale **30 %** de la nota final.
+
+## Tres hitos, todo el semestre
+
+| Hito | Fecha | Entrega | % |
+|---|---|---|---|
+| 1 — Diseño con predicción | vie 04-sep (s05) | predicción escrita + modelo del curso | 8 % |
+| 2 — Avance | vie 23-oct (s10) | mediciones + evidencia sonora | 8 % |
+| Final | vie 27-nov (s15) | presentación (~25′) + informe ≤ 6 págs | 14 % |
+
+## Cómo se juega
+
+::: {.incremental}
+- **Bitácora**: fecha, qué se hizo, quién lo hizo — firmada por los 4
+  integrantes en cada hito
+- **Coevaluación**: puede mover la nota individual hasta **±0,5**
+- **Defensa individual**: en s15 responde cada integrante, no solo
+  "el vocero"
+:::
+
+## Para hoy: 15 minutos de ideas {.center}
+
+En grupo, 2 ideas candidatas — media hoja con, para cada una:
+
+::: {.incremental}
+1. ¿Qué es y qué suena?
+2. ¿Qué modelo del curso permitiría **predecir** su sonido?
+3. ¿Qué medirían con el celular para comprobarlo?
+:::
+
+> Sin nota — el profesor la devuelve comentada en s04.
+
+## Ticket de salida {.center}
+
+Si pulsa la MISMA cuerda en el medio, o muy cerca del puente...
+
+. . .
+
+**¿cambia la nota, o cambia el timbre? ¿por qué?**
+
+## Síntesis del día
+
+::: {.incremental}
+- Todo objeto tiene un repertorio fijo de **modos**; el golpe no crea
+  frecuencias, las **enciende**
+- Dónde se golpea o se toca decide qué modos suenan
+- Cuerda: $f_n = n f_1$ → armónicos. Membranas y placas: inarmónicos
+- **El proyecto del curso queda lanzado**
+:::
+
+## Para la próxima sesión
+
+::: {.incremental}
+- **Traer instrumentos de cuerda pulsada** (guitarra, charango,
+  ukelele — 1 o 2 por grupo)
+- Bitácora del proyecto al día
+- Hito 1 en s05 (vie 04-sep)
+:::

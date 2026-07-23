@@ -17,6 +17,7 @@ project:
   render:
     - index.qmd
     - sesiones/**/*.md
+    - sesiones/**/slides_*.qmd
     - "!sesiones/**/plan.md"
     - "!sesiones/**/*pauta*.md"
     - "!sesiones/**/guion_profesor*.md"
@@ -46,6 +47,8 @@ website:
       - section: "Sesión 01 — Escuchar como científico"
         contents:
           - sesiones/s01/apuntes/apunte_s01_del_golpe_al_tono.md
+          - text: "Slides de la clase"
+            href: sesiones/s01/slides/slides_s01.qmd
           - section: "Actividades"
             contents:
               - sesiones/s01/actividades/acta_grupo_y_linea_base.md
@@ -56,6 +59,8 @@ website:
       - section: "Sesión 02 — Ondas y representación"
         contents:
           - sesiones/s02/apuntes/apunte_s02_ondas_y_representacion.md
+          - text: "Slides de la clase"
+            href: sesiones/s02/slides/slides_s02.qmd
           - section: "Actividades"
             contents:
               - sesiones/s02/actividades/guia_pee_microscopio.md
@@ -65,6 +70,8 @@ website:
       - section: "Sesión 03 — Modos de vibración"
         contents:
           - sesiones/s03/apuntes/apunte_s03_modos_de_vibracion.md
+          - text: "Slides de la clase"
+            href: sesiones/s03/slides/slides_s03.qmd
           - section: "Actividades"
             contents:
               - sesiones/s03/actividades/enunciado_proyecto.md
@@ -74,6 +81,8 @@ website:
       - section: "Sesión 04 — La receta del timbre"
         contents:
           - sesiones/s04/apuntes/apunte_s04_la_receta_del_timbre.md
+          - text: "Slides de la clase"
+            href: sesiones/s04/slides/slides_s04.qmd
           - section: "Actividades"
             contents:
               - sesiones/s04/actividades/guia_pee_estirar_acortar.md
@@ -83,6 +92,8 @@ website:
       - section: "Sesión 05 — La altura percibida"
         contents:
           - sesiones/s05/apuntes/apunte_s05_la_altura_percibida.md
+          - text: "Slides de la clase"
+            href: sesiones/s05/slides/slides_s05.qmd
           - section: "Actividades"
             contents:
               - sesiones/s05/actividades/registro_el_bajo_que_no_esta.md
@@ -92,6 +103,8 @@ website:
       - section: "Sesión 06 — Sonoridad y decibel"
         contents:
           - sesiones/s06/apuntes/apunte_s06_sonoridad_y_decibel.md
+          - text: "Slides de la clase"
+            href: sesiones/s06/slides/slides_s06.qmd
           - section: "Actividades"
             contents:
               - sesiones/s06/actividades/guia_estaciones_niveles.md
@@ -101,11 +114,15 @@ website:
       - section: "Sesión 07 — Prueba 1 + batidos"
         contents:
           - sesiones/s07/apuntes/apunte_s07_batidos.md
+          - text: "Slides de la clase"
+            href: sesiones/s07/slides/slides_s07.qmd
           - text: "Demo — batidos"
             href: sesiones/s07/demos/demo_batidos.html
       - section: "Sesión 08 — Psicoacústica de la superposición"
         contents:
           - sesiones/s08/apuntes/apunte_s08_banda_critica_y_consonancia.md
+          - text: "Slides de la clase"
+            href: sesiones/s08/slides/slides_s08.qmd
           - section: "Actividades"
             contents:
               - sesiones/s08/actividades/guia_pee_radiografia_espectral.md
@@ -115,6 +132,8 @@ website:
       - section: "Sesión 09 — Escalas y temperamentos"
         contents:
           - sesiones/s09/apuntes/apunte_s09_escalas_y_temperamentos.md
+          - text: "Slides de la clase"
+            href: sesiones/s09/slides/slides_s09.qmd
           - section: "Actividades"
             contents:
               - sesiones/s09/actividades/guia_medicion_escala_objeto.md
@@ -124,6 +143,8 @@ website:
       - section: "Sesión 10 — Resonancia, impedancia y acoplamiento"
         contents:
           - sesiones/s10/apuntes/apunte_s10_resonancia_e_impedancia.md
+          - text: "Slides de la clase"
+            href: sesiones/s10/slides/slides_s10.qmd
           - section: "Actividades"
             contents:
               - sesiones/s10/actividades/guia_pee_resonancia_botellas.md
@@ -132,6 +153,8 @@ website:
       - section: "Sesión 11 — Cuerdas frotadas y el cuerpo"
         contents:
           - sesiones/s11/apuntes/apunte_s11_cuerdas_frotadas_y_cuerpo.md
+          - text: "Slides de la clase"
+            href: sesiones/s11/slides/slides_s11.qmd
           - section: "Actividades"
             contents:
               - sesiones/s11/actividades/guia_acoplamiento_objeto.md
@@ -141,6 +164,8 @@ website:
       - section: "Sesión 12 — Vientos y lutería"
         contents:
           - sesiones/s12/apuntes/apunte_s12_vientos_y_luteria.md
+          - text: "Slides de la clase"
+            href: sesiones/s12/slides/slides_s12.qmd
           - section: "Actividades"
             contents:
               - sesiones/s12/actividades/guia_pee_construccion_tubo.md
@@ -149,11 +174,15 @@ website:
       - section: "Sesión 13 — Prueba 2 + la voz"
         contents:
           - sesiones/s13/apuntes/apunte_s13_la_voz.md
+          - text: "Slides de la clase"
+            href: sesiones/s13/slides/slides_s13.qmd
           - text: "Demo — formantes de la voz"
             href: sesiones/s13/demos/demo_formantes_voz.html
       - section: "Sesión 14 — La sala como instrumento"
         contents:
           - sesiones/s14/apuntes/apunte_s14_la_sala_como_instrumento.md
+          - text: "Slides de la clase"
+            href: sesiones/s14/slides/slides_s14.qmd
           - section: "Actividades"
             contents:
               - sesiones/s14/actividades/guia_salida_medicion_t60.md
@@ -163,6 +192,8 @@ website:
       - section: "Sesión 15 — Presentaciones finales"
         contents:
           - sesiones/s15/apuntes/apunte_s15_como_defender_un_proyecto_acustico.md
+          - text: "Slides de la clase"
+            href: sesiones/s15/slides/slides_s15.qmd
           - section: "Actividades"
             contents:
               - sesiones/s15/actividades/hoja_coevaluacion_final.md

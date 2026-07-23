@@ -1,0 +1,201 @@
+---
+title: "Acústica Musical"
+subtitle: "MUC860 · Sesión 06 — Sonoridad y decibel · vie 11-sep-2026"
+author: "Patricio de la Cuadra · PUC"
+format:
+  revealjs:
+    theme: simple
+    lang: es
+    slide-number: true
+    html-math-method: katex
+    transition: fade
+---
+
+## Hoy: medir lo fuerte
+
+| | |
+|---|---|
+| **Antes** | Devolución del hito 1 corregido — 1 línea de compromiso |
+| **Módulo 1** | Escucha del día · El decibel · Mi curva isofónica |
+| **Módulo 2** | Gancho: ¿cuatro palmas? · **Estaciones de medición** (E1–E5) · Mini-informe SPL |
+
+## Escucha del día {.center}
+
+**Mismo fragmento, dos niveles.** Estímulo (3′) → escriba su diagnóstico
+en 3 líneas (2′) → 4 sorteados exponen (2,5′ c/u, cronómetro visible)
+
+> **Describir → hipotetizar → verificar**
+
+¿Qué cambió *además* del volumen?
+
+## Una pregunta que quedó pendiente {.center}
+
+Del ticket de la sesión 5:
+
+> Un sonido grave y uno agudo, con **exactamente la misma energía
+> física**, ¿suenan igual de fuerte?
+
+. . .
+
+Hoy lo resolvemos — con números.
+
+## Un rango descomunal
+
+Entre el sonido más débil que un oído sano detecta y el nivel que ya
+duele hay un factor de intensidad de:
+
+::: {.center}
+[**10¹²**]{style="color:#0f766e"}
+:::
+
+**Un millón de millones.** Ningún instrumento, y ningún oído, trabaja
+cómodo con eso en escala lineal.
+
+## ¿Cómo se comprime un rango así?
+
+> El **decibel** no es una cantidad de sonido: es la forma de expresar
+> la **razón** entre dos sonidos.
+
+En vez de *sumar* energía, el oído (y el dB) **comparan multiplicando**.
+
+**Votación**: ¿"+10 dB" es sumar un poco, o multiplicar por 10?
+
+. . .
+
+**Multiplicar por 10.**
+
+## La gramática mínima del dB
+
+::: {.incremental}
+- **+10 dB = ×10** en intensidad. +20 dB, ×100. +30 dB, ×1000.
+- **+3 dB = ×2** en intensidad — un cambio **chico** al oído.
+- Para sonar **el doble de fuerte** hacen falta unos
+  [**+10 dB**]{style="color:#0f766e"} — diez veces más energía.
+:::
+
+**Votación**: dos parlantes idénticos sonando juntos, ¿suben +3, +6 o
++10 dB?
+
+. . .
+
+**+3 dB.** (Volveremos sobre esto en las estaciones.)
+
+## Poniendo un cero a la escala
+
+> $L_p$ = **nivel de presión sonora**, en **dB SPL re 20 µPa**
+> (la referencia: el umbral de audición a 1000 Hz)
+
+| Nivel | Referencia |
+|---|---|
+| 0 dB SPL | umbral de audición |
+| ~30 dB | un susurro |
+| ~60 dB | conversación |
+| ~95–110 dB | orquesta o banda en fortissimo |
+| ~120 dB | umbral del dolor |
+
+## ¿Mi oído mide parejo en toda la escala musical? {.center}
+
+**Prediga por escrito, antes de tocar la demo:**
+
+Para sonar **igual de fuerte** que un tono de 1000 Hz, uno de 125 Hz
+¿va a necesitar más, igual o menos nivel?
+
+## Demo: dibuje su curva isofónica {background-iframe="../demos/demo_decibel_sonoridad.html" background-interactive=true}
+
+## Lo que dibujaron las curvas {.center}
+
+::: {.incremental}
+- **Igual nivel físico ≠ igual sonoridad.**
+- El oído es más sordo a los graves (y a los muy agudos).
+- Esa sordera **se agrava a niveles bajos**.
+:::
+
+. . .
+
+Por eso la mezcla suave de la escucha del día **perdió el bajo**: su
+oído lo soltó primero.
+
+## Módulo 2 — ¿Cuatro palmas son cuatro veces más fuerte? {.center}
+
+Una persona aplaude sostenido. Después, cuatro a la vez, con la app SPL
+proyectada.
+
+**Vote antes de mirar el número**: ¿el medidor va a subir ~3, ~6 o
+~12 dB?
+
+Veámoslo.
+
+## El mapa de las cinco estaciones
+
+**Formato 5 — debut de hoy.** 5 grupos, 5 estaciones, roles
+*ejecuta / mide / registra / vocero* que **rotan** al cambiar de
+estación.
+
+| Estación | Pregunta |
+|---|---|
+| **E1** | app del celular vs. micrófono de referencia — ¿cuánto difieren? |
+| **E2** | mapa de niveles de la sala — ¿dónde se ensaya más protegido? |
+| **E3** | dos fuentes iguales — ¿la suma da el doble? |
+| **E4** | aritmética de dB con papel y lápiz |
+| **E5** | la dosis del oído — salud auditiva |
+
+## Logística de la rotación
+
+> **7′ de trabajo + 1′ de rotación**, con cronómetro proyectado.
+
+::: {.incremental}
+- **E1 es zona silenciosa** (equipo delicado, cuello único): el resto
+  no grita al lado del micrófono.
+- Prediga **antes** de medir en cada estación.
+- Si el tiempo aprieta, asegure el **mínimo irrenunciable** ★.
+:::
+
+## El oído no tiene párpados {.center}
+
+**Salud auditiva del músico** (E5, OA4.2):
+
+> **[DS 594]{style="color:#0f766e"}** (MINSAL, 1999) fija **85 dB(A)**
+> por 8 horas diarias — y por cada **+3 dB**, el tiempo admisible se
+> **corta a la mitad**.
+
+88 dB(A) → 4 h · 91 → 2 h · 94 → 1 h · 97 → 30 min
+
+Un protector de músico atenúa ~15–25 dB: por la misma regla, **compra
+mucho más tiempo**.
+
+## Mini-informe SPL (cierre en aula)
+
+Formulario de **4 casillas**, sin prosa, al dorso de la planilla de
+estaciones:
+
+::: {.incremental}
+1. **Pregunta** elegida (una estación, en una frase)
+2. **El dato**: valor con unidad y condiciones (app, celular, distancia)
+3. **Interpretación**: usando +10/+3 dB correctamente
+4. **Límite**: qué NO se puede afirmar con esta medición
+:::
+
+## Síntesis del día
+
+::: {.incremental}
+- Intensidad es del sonido; **sonoridad** es del oyente.
+- El dB compara por factores: +10 dB ≈ el doble de fuerte; +3 dB, un
+  cambio chico.
+- Medir con juicio: comparaciones relativas confiables, dosis auditiva
+  vigilada.
+:::
+
+**Ticket hacia s07**: dos flautas tocan la MISMA nota y una queda
+apenas desafinada. ¿Qué se oye? ¿Y si la desafinación crece?
+
+## Antes de irse {.center}
+
+Esta fue la **última clase antes del receso** (14–19 de septiembre —
+el viernes 18 no hay clase).
+
+::: {.incremental}
+- Entregue: hoja isofónica + planilla con el mini-informe.
+- **Vie 25-sep, s07: Prueba 1** (módulo 1) — entra s01–s06, lo de hoy
+  solo en su versión básica.
+- Traiga los oídos descansados.
+:::

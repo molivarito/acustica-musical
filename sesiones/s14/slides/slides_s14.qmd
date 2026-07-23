@@ -1,0 +1,213 @@
+---
+title: "Acústica Musical"
+subtitle: "MUC860 · Sesión 14 — La sala como instrumento · vie 20-nov-2026"
+author: "Patricio de la Cuadra · PUC"
+format:
+  revealjs:
+    theme: simple
+    lang: es
+    slide-number: true
+    html-math-method: katex
+    transition: fade
+---
+
+## Antes de sentarse… {.center}
+
+Su Prueba 2 corregida los espera en la puerta.
+
+. . .
+
+**10′** para revisarla contra la lámina de errores frecuentes — dudas de
+forma solamente.
+
+Al minuto 10, corte duro: a la mochila.
+
+## Hoy: la sala entra en escena
+
+::: {.incremental}
+- **Módulo 1** (aquí): escucha, mini-lección, demo — y **el método** de medición
+- **Módulo 2** (afuera): salida a medir $T_{60}$ en espacios reales de la UC
+:::
+
+. . .
+
+El único taller del semestre que ocupa un módulo completo **fuera del aula**.
+
+## Escucha del día — última ronda del semestre {.center}
+
+::: {.incremental}
+- Escuchan el estímulo **una vez**, 3′
+- Escriben su diagnóstico, 2′: **describir → hipotetizar → verificar**
+- 4 sorteados exponen, ~2,5′ c/u, cronómetro visible
+:::
+
+*(Con esta ronda, todos completan sus ~3 pasadas del semestre.)*
+
+## El ticket de la semana pasada {.center}
+
+> ¿Por qué la MISMA voz suena tan distinta en la ducha, en esta sala y
+> en una catedral?
+
+. . .
+
+Hoy: **mecanismo → número → medición.**
+
+## ¿Qué hace una pared con el sonido que le llega?
+
+Toda superficie reparte la energía que recibe: una parte **se refleja**,
+otra **se absorbe**.
+
+**Voten**: ¿quién absorbe más, un muro de hormigón o una cortina gruesa?
+
+. . .
+
+¿Y 20 personas con ropa, comparadas con la sala vacía?
+
+## ¿A quién le escucho: al instrumento o a la sala?
+
+> **Campo directo**: llega en línea recta, se debilita con la distancia.
+> **Campo reverberante**: la suma de todos los rebotes, casi parejo en
+> toda la sala.
+
+**Voten**: si me alejo al doble, ¿el nivel cae igual en esta sala que en
+la cancha?
+
+. . .
+
+Lejos de la fuente, manda la sala — no la fuente.
+
+## ¿Cuánto dura una sala?
+
+> $T_{60}$: tiempo que tarda el nivel en caer **60 dB** desde que la
+> fuente se detiene.
+
+60 dB = seis pisos de ×10 = la **millonésima parte** de la intensidad.
+
+. . .
+
+*(2′ de cultura: por qué no oímos cada rebote como un eco aparte — el
+**efecto precedencia**, BEN 12.2. No entra en evaluación.)*
+
+## Sabine, en proporciones
+
+$$T_{60} \propto \frac{V}{A}$$
+
+::: {.incremental}
+- Duplico el **volumen** (catedral) → duplico la cola
+- Duplico la **absorción** (lleno la sala de público) → la corto a la mitad
+:::
+
+. . .
+
+Por eso el ensayo sin público "suena a otra sala" — *es* otra sala, con
+otra $A$.
+
+## Prediga, antes de mover nada {.center}
+
+Con la sala de clases dibujada y la curva **oculta**: si barro un tono
+de grave a agudo, ¿sonará parejo o habrá notas que "engordan"?
+
+## Demo: la sala de clases {background-iframe="../demos/demo_modos_sala.html" background-interactive="true"}
+
+## Achicamos la sala a una ducha (2 m) {.center}
+
+¿Qué le pasa a esas frecuencias favoritas?
+
+## Demo: la ducha {background-iframe="../demos/demo_modos_sala.html" background-interactive="true"}
+
+## Ahora, una catedral {.center}
+
+¿Todavía se distinguen protagonistas, o pasa otra cosa?
+
+## Demo: la catedral {background-iframe="../demos/demo_modos_sala.html" background-interactive="true"}
+
+## Un resonador hecho de aire y paredes
+
+::: {.incremental}
+- **Modos** (s03): las frecuencias favoritas de la sala
+- **Decaimiento** (s10): la misma curva de resonancia, a escala de edificio
+- **Medido con los dB** (s06): así se cuantifica todo lo anterior
+:::
+
+. . .
+
+Sala chica → modos ralos y audibles. Sala grande → modos tan densos que
+ya no se distinguen.
+
+## El método, antes de salir
+
+Van a ver la medición completa, una vez, en esta misma sala:
+
+::: {.incremental}
+1. **Silencio**
+2. **Impulso** — globo reventado o palmada fuerte
+3. La **app** registra la caída de nivel
+4. Se **lee** el valor de $T_{60}$
+:::
+
+## Regla del oficio: nunca un solo dato
+
+::: {.incremental}
+- **Tres mediciones** por espacio → se reporta la **mediana** (un
+  impulso solo es una medición ruidosa)
+- Se anota el **nivel de fondo** ANTES de medir
+- Si el fondo tapa la cola: se lee la caída inicial y se **extrapola**
+  — anotándolo
+:::
+
+*(Nunca comparar dos espacios medidos con impulsos distintos sin
+decirlo.)*
+
+## La salida: roles y materiales
+
+Grupo con roles que **rotan** en cada espacio:
+
+**ejecuta** el impulso · **mide** con la app · **registra** · **vocero**
+
+. . .
+
+Por grupo: 2 celulares con las apps, 3–4 globos, guía impresa.
+
+## Su ruta de hoy
+
+| | |
+|---|---|
+| **Espacio A** (★ obligatorio) | *[a completar]* |
+| **Espacio B** (★ obligatorio) | *[a completar]* |
+| **Espacio C** (opcional) | *[a completar]* |
+| **Hora de corte** | *[a completar]* |
+| **Punto de encuentro** | *[a completar]* |
+
+## En cada espacio {.center}
+
+Primero suena, después se mide: **palmada diagnóstica** antes de
+encender la app.
+
+Después: fondo → 3 impulsos → mediana → dimensiones → materiales →
+planilla compartida.
+
+## Al volver: sorteo y reglas de s15
+
+Sorteo **en vivo** del orden de exposición.
+
+::: {.incremental}
+- **15′** de exposición + **7′** de preguntas
+- El grupo sorteado **primero**: preguntas de **5′** — compensación por
+  abrir en frío; su exposición dura igual
+- Envían la presentación por el canal del curso hasta las **20:00 del
+  jueves 26-nov** (víspera) + respaldo en USB propio
+- Instrumento/objeto **funcionando**; informe (≤6 págs.) se entrega al
+  inicio de s15
+:::
+
+## Síntesis y cierre
+
+::: {.incremental}
+- La sala refleja, absorbe, reverbera y tiene modos — un instrumento más
+- $T_{60}$ se mide: silencio, impulso, tres veces, mediana
+- La pauta del hito 3 ya está en sus manos — se lee en casa
+:::
+
+. . .
+
+**La próxima semana, ustedes son el estímulo de la escucha del día.**

@@ -1,0 +1,208 @@
+---
+title: "Acústica Musical"
+subtitle: "MUC860 · Sesión 11 — Cuerdas frotadas y el cuerpo del instrumento · vie 30-oct-2026"
+author: "Patricio de la Cuadra · PUC"
+format:
+  revealjs:
+    theme: simple
+    lang: es
+    slide-number: true
+    html-math-method: katex
+    transition: fade
+---
+
+## Hoy {.center}
+
+::: {.incremental}
+- **Módulo 1** — el mecanismo: por qué una cuerda frotada suena *nota*, no *chirrido*
+- **Taller evaluado** — el punto de frotado (ponticello / tasto)
+- **Módulo 2** — el cuerpo: cuerda → puente → tapa → aire
+- **Taller** (serie del objeto) — ¿quién radia aquí?
+:::
+
+## Escucha del día
+
+Escuchen con atención. Al terminar (2′):
+
+::: {.incremental}
+- **Describan** en 3 líneas lo que oyeron
+- **Hipoteticen** por qué la misma cuerda y el mismo arco dan resultados distintos
+- **Propongan** cómo lo verificarían
+:::
+
+. . .
+
+4 personas sorteadas exponen — 2,5′ cada una, cronómetro visible.
+
+## El ticket que dejamos pendiente {.center}
+
+> Un golpe entrega energía **una vez** y el sonido decae. El arco entrega
+> energía **todo el tiempo**.
+
+. . .
+
+**¿Por qué entonces la cuerda frotada no suena como un chirrido continuo,
+sino como una nota estable?**
+
+## Dos fricciones, un ciclo
+
+> Fricción de **agarre** (estática, fuerte) vs. fricción de
+> **deslizamiento** (cinética, más débil)
+
+. . .
+
+Esa asimetría produce un ciclo: **pegar → soltar → pegar…** — en inglés,
+*stick-slip*.
+
+. . .
+
+La resina del arco existe para exagerarlo: agarre feroz, deslizamiento fácil.
+
+## ¿Quién fija la frecuencia del ciclo: el arco o la cuerda?
+
+::: {.incremental}
+- Toda superficie frotada chirría (la puerta vieja, la copa de s10…)
+- Pero solo la cuerda es un resonador **afinado**
+- El soltar se sincroniza con la ida y vuelta de la onda por la cuerda
+:::
+
+. . .
+
+**[La cuerda]{style="color:#0f766e"}**. Esto es el *régimen de oscilación*
+(Benade, cap. 23): la fricción es tonta, pero el resonador le impone el calendario.
+
+## Si froto más fuerte, ¿sube la nota?
+
+. . .
+
+**No.** La afinación es de la cuerda. Presión y velocidad del arco cambian
+el **timbre** — y si se pasan de rango, rompen el régimen: graznido
+(presión excesiva) o silbido aflautado (arco veloz y liviano).
+
+## ¿Por qué la frotada "no se apaga" y la pulsada sí?
+
+. . .
+
+La fricción **repone energía en cada ciclo** (s04: el golpe la entrega
+una sola vez). Por eso el violín puede hacer *crescendo* en una nota larga
+y la guitarra no.
+
+## Antes de ver la demo, prediga {.center}
+
+::: {.incremental}
+- **P1** — ¿la cuerda frotada vibra como una curva suave, o de otra forma?
+- **P2** — ¿qué fracción del período pasa pegada al arco y cuál deslizando?
+- **P3** — si el arco se acerca al puente, ¿ese reparto se alarga o se acorta?
+:::
+
+. . .
+
+Activamos 🔮 **Modo predicción** en la demo — paneles ocultos hasta
+"Revelar" — y miramos el contador **vueltas de la esquina = sueltas**.
+
+## Demo: la esquina de Helmholtz {background-iframe="../demos/demo_helmholtz.html" background-interactive=true}
+
+## Taller evaluado: el punto de frotado
+
+| Fase | Qué hacen | Tiempo |
+|---|---|---|
+| Predicciones | P1–P3 por escrito, ANTES de sonar | 4′ |
+| A | 3 posiciones (normal / ponticello / tasto): espectrograma en su celular | 8′ |
+| B | Filmación en cámara lenta de la cuerda | 6′ |
+| Contraste | P1–P3 vs. resultados, con el ciclo pegar-soltar | 6′ |
+
+Registrador tabula $f_1$ y el comportamiento de los parciales altos.
+
+## Si la cámara del celular no resuelve
+
+Respaldo verificado (jul-2026) — cuerda frotada real en cámara lenta:
+
+- [Helmholtz Motion of a Violin G-String — 18.750 fps](https://www.youtube.com/shorts/WcRbQmNNeRw)
+  · canal **peteroshkai** (Peter Oshkai, ingeniería mecánica)
+- [Bowed violin string in slow motion](https://www.youtube.com/watch?v=6JeyiM0YNo4)
+  · canal **ViolinB0W**
+
+*Filmaciones reales, no animación — streaming directo, sin problema de licencia para uso en clase.*
+
+## Moraleja del módulo 1 {.center}
+
+**La cuerda fija la afinación; el punto y la presión del arco esculpen
+el espectro.** La fricción repone energía en cada ciclo: por eso el
+espectro rico se sostiene.
+
+## La pinza en el puente {.center}
+
+Le pongo una pinza de ropa al puente del instrumento.
+
+. . .
+
+**¿Suena más despacio, más grave, o "otra cosa"?**
+
+. . .
+
+Veámoslo.
+
+## El cuerpo también tiene modos
+
+> La tapa y el fondo no vibran enteros como un pistón: vibran **por
+> modos**, con líneas nodales — igual que la sartén de s03.
+
+. . .
+
+¿La tapa vibra entera o por zonas?
+
+. . .
+
+**Por zonas**, según el modo (holografías de C&G, cap. 6).
+
+## Dos preguntas más sobre el cuerpo
+
+¿Para qué son las efes?
+
+. . .
+
+La resonancia del aire encerrado ayuda a radiar los graves que la tapa,
+sola, no puede — la botella de s10 vive dentro del violín.
+
+. . .
+
+Un parcial que cae cerca de un modo fuerte del cuerpo, ¿suena más o menos?
+
+. . .
+
+**Más.** El cuerpo es un ecualizador fijo hecho de resonancias.
+
+## Taller (sin nota): ¿quién radia aquí?
+
+::: {.incremental}
+- **P1** — ¿tapar las efes / la boca cambia la sonoridad pareja, los graves o los agudos?
+- **P2** — instrumento suspendido vs. apoyado en la mesa: ¿más fuerte o más débil?
+- **P3** — caminando alrededor mientras suena, ¿se oye igual en todas partes?
+:::
+
+Fases A (tapar/destapar), B (apoyado/al aire), C (radiación en cruz) — 18′.
+
+. . .
+
+**Bitácora**: cómo aplicarán este protocolo a su objeto de proyecto — compromiso antes de s12.
+
+## Síntesis del día {.center}
+
+- La fricción es una válvula; la cuerda, su metrónomo.
+- Una vuelta de la esquina = un soltar.
+- La caja no regala energía: la transforma y la gasta radiando.
+
+## Su ticket hacia s12 {.center}
+
+> En la cuerda, el pegar-soltar lo hace la fricción.
+> En una flauta no hay nada que pegue ni suelte.
+>
+> **¿Qué hace de válvula?**
+
+## Para la próxima sesión
+
+::: {.incremental}
+- **s12**: taller completo de lutería — construimos y medimos flautas/tubos (materiales los pone el curso)
+- La **serie del objeto termina en s12**: bitácora al día con los dos compromisos (mapa de resonancias de s10 + acoplamiento de hoy)
+- Se publica esta semana la nota del **hito 2**
+:::

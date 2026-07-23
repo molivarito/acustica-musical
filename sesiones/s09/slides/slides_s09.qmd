@@ -1,0 +1,188 @@
+---
+title: "Acústica Musical"
+subtitle: "MUC860 · Sesión 09 — Escalas y temperamentos · vie 16-oct-2026"
+author: "Patricio de la Cuadra · PUC"
+format:
+  revealjs:
+    theme: simple
+    lang: es
+    slide-number: true
+    html-math-method: katex
+    transition: fade
+---
+
+## Hoy
+
+- **Módulo 1** — la quinta imposible: de las razones a la coma
+  - Escucha del día · mini-lección · **taller evaluado**: afinar de oído
+- **Módulo 2** — el compromiso, los colores y la escala del objeto
+  - Gancho sonoro · mini-lección · taller del objeto (hito 2)
+
+## Escucha del día
+
+Protocolo (15′): **describir → hipotetizar → verificar**
+
+::: {.incremental}
+- 3′ de estímulo, dos pasadas
+- 2′ para escribir: qué oye, qué mecanismo propone, cómo lo comprobaría
+- 4 personas sorteadas exponen — 2,5′ cada una, cronómetro visible
+:::
+
+Hoy, además, se cobra su **ticket de salida de s08**.
+
+## Escuchemos {background-iframe="../demos/demo_temperamentos.html" background-interactive=true}
+
+## Intervalos son razones — ¿y si las apilamos doce veces?
+
+::: {.incremental}
+- Octava — **2:1**
+- Quinta — **3:2**
+- Cuarta — **4:3**
+- Tercera mayor, dulce — **5:4**
+:::
+
+. . .
+
+**¿Puede un piano tener TODAS sus quintas lisas a la vez?**
+
+(el ticket que dejó s08)
+
+## Una regla para sumar en vez de multiplicar
+
+> El **cent**: el semitono mide 100, la octava mide 1200. Apilar
+> intervalos es **sumar cents**, no multiplicar razones.
+
+La quinta justa (3:2) mide **~702 cents**.
+
+## La cuenta que no cierra
+
+12 quintas justas:
+
+$$12 \times 702 = 8424 \text{ cents}$$
+
+. . .
+
+7 octavas:
+
+$$7 \times 1200 = 8400 \text{ cents}$$
+
+. . .
+
+Las dos escaleras **no llegan al mismo piso**.
+
+## Sobran ~24 cents — ¿cuánto es eso?
+
+**¿La coma pitagórica es un semitono entero, la mitad, o un cuarto?**
+
+. . .
+
+Un [**cuarto de semitono**]{style="color:#0f766e"} (23,5 cents exactos):
+la **coma pitagórica**.
+
+![Dos escaleras que no cierran: doce quintas justas versus siete
+octavas.](../../../figuras/s09_coma_pitagorica.svg)
+
+## Afinar es elegir un compromiso
+
+::: {.incremental}
+- ¿Se esconde el error en una sola quinta, o se reparte entre las 12?
+- El **temperamento igual** reparte: cada quinta se estrecha **~2 cents**
+- Ninguna quinta queda lisa; todas quedan usables; todas las
+  tonalidades, iguales
+:::
+
+. . .
+
+2 cents no se "oyen"… pero se **cuentan**: la quinta de Do4 late ~1 vez
+por segundo. Van a afinar de oído, como un afinador de pianos.
+
+## Afinemos, de oído {background-iframe="../demos/demo_temperamentos.html" background-interactive=true}
+
+## El taller: contando batidos
+
+En parejas, con audífonos, cents ocultos:
+
+::: {.incremental}
+- **Fase A** — anulen el batido de la quinta, de oído; anoten
+- **Fase B** — desde ahí, estréchenla hasta contar **~1 batido/s**; anoten
+- **Fase C** (opcional) — repitan la fase A con la 3.ª mayor
+:::
+
+Predicción escrita ANTES de cada turno. Los roles rotan.
+
+## Cierre: el mapa de cents (y la guitarra en vivo)
+
+Cada pareja aporta sus dos puntos a la recta del pizarrón.
+
+. . .
+
+El profesor afina su guitarra por armónicos, anulando batidos — en
+vivo.
+
+## ¿Cuál de los tres acordes está afinado? {.center}
+
+El mismo acorde mayor, **tres afinaciones**, orden al azar.
+
+Voten por escrito antes de que digamos nada.
+
+## Escuchen las tres versiones {background-iframe="../demos/demo_temperamentos.html" background-interactive=true}
+
+## ¿Afinado es un hecho físico, o una decisión?
+
+. . .
+
+Las tres versiones **están afinadas** — cada una según su propia
+regla.
+
+## Tres maneras de repartir el error
+
+| Sistema | Quinta | Tercera mayor |
+|---|---|---|
+| Justa | 702 (pura) | 386 (pura, dulce) |
+| Pitagórica | 702 (pura) | 408 (ancha, muele) |
+| Temperamento igual | 700 (−2) | 400 (+14, muele ~10/s) |
+
+![Qué sacrifica cada temperamento, en cents respecto del intervalo
+justo.](../../../figuras/s09_desviaciones.svg)
+
+## El color de las tonalidades — y el piano que se estira
+
+::: {.incremental}
+- **Werckmeister** y otros temperamentos históricos: la coma se
+  reparte DESIGUAL — cada tonalidad, su color
+- Las cuerdas reales tienen parciales agudos (s04): la **afinación
+  estirada** ensancha las octavas del piano
+- **La4 = 440 Hz** es una convención histórica, no una constante física
+:::
+
+## ¿En qué escala vive su objeto?
+
+::: {.incremental}
+- Predigan qué notas dará su objeto
+- Midan CADA altura dos veces: afinador (cents) + espectrograma (Hz)
+- Calculen los intervalos entre alturas, en cents
+- Veredicto: ¿en qué escala vive? ¿qué habría que cambiar para
+  afinarlo?
+:::
+
+A la **bitácora** — insumo del **hito 2**.
+
+## Síntesis del día — y el ticket hacia s10
+
+::: {.incremental}
+- Los intervalos lisos son **razones** de enteros pequeños
+- 12 quintas no cierran: la **coma** se reparte, nace el temperamento
+- Afinar de oído es **contar batidos**; afinar el objeto es **cambiar
+  su física**
+:::
+
+> Ticket: "Para afinar mi objeto tengo que cambiarlo físicamente —
+> ¿qué determina que un sistema 'prefiera' vibrar en SUS frecuencias?"
+
+## Para la próxima sesión
+
+::: {.incremental}
+- Traigan de nuevo el **objeto del proyecto**
+- **Hito 2**: radiografía (s08) + escala (s09) + bitácora al día
+- Clínica de proyecto en el módulo 2
+:::

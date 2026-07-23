@@ -1,0 +1,225 @@
+---
+title: "Acústica Musical"
+subtitle: "MUC860 · Sesión 02 — Ondas y representación · vie 14-ago-2026"
+author: "Patricio de la Cuadra · PUC"
+format:
+  revealjs:
+    theme: simple
+    lang: es
+    slide-number: true
+    html-math-method: katex
+    transition: fade
+---
+
+## Hoy {.center}
+
+::: {.incremental}
+- **Módulo 1**: el sonido dibujado — forma de onda y espectro
+- **Módulo 2**: el sonido viaja — $v = \lambda f$ y el espectrograma
+:::
+
+. . .
+
+Dos módulos, un hilo: **traducir** el sonido a imágenes que se puedan leer.
+
+## Escucha del día — primera ronda con nota
+
+**Protocolo** (igual que siempre, ahora cuenta):
+
+::: {.incremental}
+- Escuchan el estímulo (**3′**)
+- Anotan en 3 líneas: **describir → hipotetizar → verificar** (**2′**)
+- **4 sorteados** exponen, **2,5′ cada uno**, cronómetro visible
+:::
+
+> Se evalúa con la rúbrica OA3 que conocen desde la sesión pasada.
+
+## ¿Cómo se dibuja un golpe? {.center}
+
+En su ticket de salida de la sesión pasada, ustedes predijeron cómo se
+*vería* un pulso.
+
+. . .
+
+**¿Coincide su dibujo con lo que dice la lectura?**
+
+## La forma de onda
+
+> **Forma de onda**: presión sonora (eje vertical) vs. **tiempo**
+> (eje horizontal).
+
+Es el sonido contado como **historia**: qué pasó primero, qué pasó después.
+
+## ¿Línea o mancha? {.center}
+
+Voten: el dibujo de un **golpe seco**, ¿es una línea sostenida o una
+mancha breve? ¿Cuál eje es cuál?
+
+. . .
+
+Una **sacudida breve que se apaga** — no una línea continua. Horizontal:
+tiempo. Vertical: presión.
+
+## Lo que la forma de onda no muestra
+
+Un golpe y un silbido se distinguen a simple vista.
+
+. . .
+
+Pero una vocal "aaa" y una "ooo" en la misma nota se ven
+[**desconcertantemente parecidas**]{style="color:#0f766e"}: el mismo
+vaivén periódico.
+
+. . .
+
+Lo que las diferencia — el **timbre** — está *dentro* de la forma del
+vaivén. Ahí el ojo no llega.
+
+## El espectro: la otra vista
+
+> **Espectro**: nivel de cada componente (eje vertical) vs.
+> **frecuencia** (eje horizontal, Hz).
+
+En vez de "¿qué pasa en cada instante?", pregunta: **¿de qué
+frecuencias está hecho este sonido?**
+
+## Dos preguntas, un mismo sonido
+
+| | Pregunta | Eje horizontal |
+|---|---|---|
+| **Forma de onda** | ¿qué pasó, y cuándo? | tiempo |
+| **Espectro** | ¿de qué frecuencias está hecho? | frecuencia |
+
+. . .
+
+Ninguna es "la verdadera": cada una responde lo que la otra esconde.
+
+## Antes de partir: el micrófono {.center}
+
+La demo que viene **usa el micrófono de la sala**.
+
+. . .
+
+El navegador va a pedir permiso — **autorícenlo** cuando aparezca el
+aviso. ¿No hay micrófono o lo niegan? La demo tiene un **oscilador
+interno** como fuente alternativa.
+
+## Demo: forma de onda y espectro en vivo {background-iframe="../demos/demo_forma_onda_espectro.html" background-interactive=true}
+
+## Taller PEE — retratos de sonido {.center}
+
+**Cuatro sonidos**: vocal "aaa" cantada, silbido, "sss" sostenido, golpe
+seco en la mesa.
+
+::: {.incremental}
+- **Dibujan ANTES** (~10′): forma de onda + espectro que esperan para
+  los 4
+- Cada grupo produce al micrófono **solo sus 2 sonidos asignados**
+  (~2′ c/u)
+- **Contrastan** su dibujo contra la pantalla y corrigen los 4
+:::
+
+> Registro en la guía "retratos de sonido".
+
+## Cierre módulo 1
+
+UN grupo expone su par dibujo/pantalla **más discrepante**.
+
+. . .
+
+Forma de onda y espectro: **dos vistas del mismo sonido**. El tiempo
+esconde lo que la frecuencia muestra, y viceversa.
+
+## El trueno retrasado {.center}
+
+Escuchan: relámpago, y el trueno llega **después**.
+
+. . .
+
+En parejas, 1 minuto: si el trueno tardó 3 segundos, **¿a qué distancia
+cayó el rayo?**
+
+## ¿Qué es lo que viaja?
+
+No el aire en bloque — nadie siente viento al escuchar.
+
+. . .
+
+Una **perturbación de presión** que se pasa de mano en mano, como la ola
+del estadio: viaja el empujón, no el material.
+
+## $v = \lambda f$ {.center}
+
+> $v \approx 343$ m/s en aire a 20 °C — dato del curso.
+
+La distancia entre dos crestas sucesivas de una onda periódica es la
+**longitud de onda** $\lambda$:
+
+$$v = \lambda f$$
+
+## Proporciones con el celular
+
+Calculen $\lambda$ para: La4 (440 Hz), el grave audible (20 Hz) y el
+agudo audible (20 000 Hz).
+
+. . .
+
+$343/440 \approx 0{,}78$ m · $343/20 \approx 17$ m · $343/20\,000
+\approx 1{,}7$ cm
+
+. . .
+
+Del porte de una guitarra a un cuarto: **la escala de los instrumentos y
+las salas**.
+
+## El espectrograma
+
+> **Espectrograma**: tiempo (horizontal), frecuencia (vertical), y el
+> nivel codificado como **color**.
+
+Cada columna vertical es un espectro instantáneo — leídas de izquierda a
+derecha, cuentan la película completa.
+
+## Antes de abrir la app {.center}
+
+Voten: en el espectrograma, ¿qué eje es el tiempo? ¿qué codifica el
+color?
+
+. . .
+
+Horizontal: tiempo. Vertical: frecuencia. Color: **nivel** (más
+oscuro/encendido = más fuerte).
+
+## Taller — el microscopio en su bolsillo
+
+Con su celular y la app de espectrograma, en grupo:
+
+::: {.incremental}
+- **Predicen y verifican** el retrato de: silbido glissando, vocal
+  cantada, "sss", golpe
+- Luego, **límites de la herramienta**: ¿hasta qué frecuencia muestra su
+  app, y por qué? ¿qué pasa con dos golpes muy seguidos?
+:::
+
+> Anoten marca/modelo de su app junto a cada observación.
+
+## Síntesis del día {.center}
+
+Forma de onda, espectro y espectrograma son **tres traducciones** del
+mismo sonido — cada una revela lo que otra esconde.
+
+## Ticket de salida {.center}
+
+Si golpeo un vaso y miro el espectrograma…
+
+. . .
+
+**¿veré una línea o varias? ¿por qué?**
+
+## Para la próxima sesión
+
+::: {.incremental}
+- Traer el celular con la app de espectrograma (ya instalada y probada)
+- s03: esas líneas son los ***modos*** del objeto — y ahí se lanza el
+  **proyecto del curso**
+:::

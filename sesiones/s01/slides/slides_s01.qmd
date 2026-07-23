@@ -1,0 +1,179 @@
+---
+title: "Acústica Musical"
+subtitle: "MUC860 · Sesión 01 — Del golpe al tono · vie 07-ago-2026"
+author: "Patricio de la Cuadra · PUC"
+format:
+  revealjs:
+    theme: simple
+    lang: es
+    slide-number: true
+    html-math-method: katex
+    transition: fade
+---
+
+## Escuchen {.center}
+
+*(golpe seco en la mesa — luego una nota larga de flauta)*
+
+. . .
+
+**Anoten en 3 líneas: ¿qué los diferencia, además de lo obvio?**
+
+## Bienvenidos a [Acústica Musical]{style="color:#0f766e"}
+
+> Al terminar el semestre, ustedes no van a poder oír un instrumento, una
+> sala o una grabación de la misma manera que antes.
+
+Este curso es sobre **escuchar como científico**.
+
+## Un mismo fenómeno, tres capas
+
+| Capa | Pregunta |
+|---|---|
+| **Oído** | ¿Qué sensación produce? |
+| **Mecanismo** | ¿Qué vibra, y cómo, para producirla? |
+| **Medición** | ¿Qué dato confirma o refuta mi hipótesis? |
+
+. . .
+
+Todo diagnóstico de este curso conecta las tres.
+
+## Cómo se evalúa
+
+::: {.incremental}
+- **Escucha argumentada** (ronda oral, en vivo) — 20%
+- **Talleres** (cerrados en clase, mejores 8 de ~10) — 25%
+- **Pruebas** (2, con audio) — 12,5% c/u = 25%
+- **Proyecto** (grupos de 4): hito diseño 8% + hito avance 8% +
+  presentación final 14% = 30%
+:::
+
+. . .
+
+**0% participación separada** — la absorben la ronda y los talleres.
+
+## Los cinco grupos {.center}
+
+Estables para todo el semestre — mezcla música/ingeniería.
+
+::: {.incremental}
+- Se nombran y reparten roles: **ejecuta / mide / registra / vocero**
+- Firman un acta de grupo
+- Son también sus grupos de **proyecto**
+:::
+
+## La línea base de hoy (sin nota)
+
+El protocolo que vamos a repetir toda la sesión, toda la sesión, todo el
+semestre:
+
+::: {.incremental}
+1. **Describir** lo que se oye, sin explicar todavía
+2. **Hipotetizar** un mecanismo físico plausible
+3. **Proponer una verificación** — qué medirían para confirmarlo
+:::
+
+## Mecánica de la línea base
+
+Van a escuchar un estímulo **una sola vez**.
+
+::: {.incremental}
+- Todos escriben su diagnóstico en 3 líneas
+- 4 a 5 voluntarios lo leen en voz alta (~2′ c/u)
+- Guardamos las hojas — las volveremos a mirar en la sesión 15
+:::
+
+*No hay nota. Hoy es solo para calibrar.*
+
+## PEE relámpago: la regla en la mesa
+
+Una regla firme, apoyada en el borde de la mesa, vibrando.
+
+> **Predicción → Experimento → Explicación**
+
+. . .
+
+**Prediga por escrito**: si acorto la parte libre de la regla, ¿qué le
+pasa al sonido?
+
+## Del golpe al tono {.center}
+
+Un golpe. Luego, muchos golpes por segundo.
+
+. . .
+
+**¿En qué momento deja de ser ritmo y empieza a ser una nota?**
+
+Voten a mano alzada.
+
+## Demo: tasa de repetición {background-iframe="../demos/demo_tren_pulsos.html" background-interactive="true"}
+
+## ¿El mismo dato, dos caras?
+
+> **Frecuencia** $f$: repeticiones por segundo, en **hertz (Hz)**.
+> **Período** $T$: cuánto dura cada repetición.
+
+$$T = \frac{1}{f}$$
+
+. . .
+
+Razonarán en **proporciones** todo el semestre: el doble, la mitad, tres
+veces.
+
+## Votación: ¿duplicar $f$ duplica la altura?
+
+. . .
+
+**No.** Duplicar la frecuencia sube una **octava** — que es otra cosa.
+
+Lo físico (frecuencia) no es lo percibido (altura): primera advertencia
+del curso.
+
+## Dos números para calibrar
+
+::: {.incremental}
+- El La con que afina la orquesta (La4): **440 Hz**
+- Rango audible humano joven: **20 Hz a 20 000 Hz**, aprox.
+:::
+
+. . .
+
+¿Casualidad que el límite inferior coincida con donde el ritmo empieza a
+sonar a nota?
+
+## Taller: la zona gris ritmo–tono
+
+::: {.incremental}
+- **Prediga** por escrito su umbral personal ritmo→tono
+- **Mídalo** con la demo, para 2 timbres de pulso distintos
+- **Registre** en la guía y compare entre integrantes del grupo
+- Contraste con Benade cap. 2 (~20 Hz)
+:::
+
+## Antes de medir {.center}
+
+**¿El umbral es del sonido, o del oyente?**
+
+Predigan en grupo antes de tocar la demo.
+
+## Demo: midan su umbral {background-iframe="../demos/demo_tren_pulsos.html" background-interactive="true"}
+
+## Síntesis del día
+
+::: {.incremental}
+- Un tono nace de una vibración que se repite lo bastante rápido
+- $f$ y $T = 1/f$ son el mismo dato, mirado de dos maneras
+- Todo experimento del curso: predicción → experimento → explicación
+:::
+
+## Ticket de salida
+
+Escriban su predicción para la próxima sesión:
+
+> **¿Cómo se vería este pulso, si pudiéramos dibujarlo?**
+
+## Para el miércoles
+
+- Traer **celular con app de espectrograma** instalada
+- s02: convertimos el sonido en imagen — forma de onda, espectro,
+  espectrograma

@@ -1,0 +1,210 @@
+---
+title: "Acústica Musical"
+subtitle: "MUC860 · Sesión 10 — Resonancia, impedancia y acoplamiento · vie 23-oct-2026"
+author: "Patricio de la Cuadra · PUC"
+format:
+  revealjs:
+    theme: simple
+    lang: es
+    slide-number: true
+    html-math-method: katex
+    transition: fade
+---
+
+## Hoy {.center}
+
+Dos módulos, un puente hacia los instrumentos.
+
+::: {.incremental}
+- **M1**: Hito 2 → escucha del día → resonancia y amortiguamiento → taller de botellas
+- **M2**: clínica de proyecto entre pares → mapa del bloque C
+:::
+
+## Antes de nada: entrega del [Hito 2]{style="color:#0f766e"} (5′)
+
+::: {.incremental}
+- Entreguen el **compilado del grupo** (radiografía + mapa de escala + bitácora + estado vs. hito 1)
+- Cada integrante deposita su **coevaluación en sobre cerrado**
+- Anoten la fecha de entrega en la bitácora
+:::
+
+> La clínica del módulo 2 trabaja **sobre lo que acaban de entregar** — guarden una copia o foto de su compilado.
+
+## Escucha del día (15′)
+
+**Protocolo**: describir → hipotetizar → verificar.
+
+::: {.incremental}
+- Estímulo, dos pasadas (3′)
+- Escriben su diagnóstico en 3 líneas (2′)
+- 4 sorteados exponen, 2,5′ c/u, cronómetro visible
+:::
+
+*Separen bien lo que sube parejo de lo que se infla — son cosas distintas.*
+
+## Demo — modo presentación {background-iframe="../demos/demo_resonancia.html" background-interactive=true}
+
+## ¿Por qué el columpio solo acepta su ritmo? {.center}
+
+Ustedes empujan; el columpio decide cuánto responder.
+
+. . .
+
+**¿Qué determina que un sistema "prefiera" vibrar en SUS frecuencias?**
+
+*(la pregunta que dejaron pendiente en el ticket de s09)*
+
+## Libre vs. forzada
+
+> **Oscilación libre**: lo sueltan — vibra en su $f_0$ y decae.
+> **Oscilación forzada**: lo empujan a la frecuencia que ELLOS eligen.
+
+## Votación: casi al ritmo, pero no exacto {.center}
+
+**Si empujan el columpio casi al ritmo de $f_0$, pero no exacto, ¿qué pasa?**
+
+. . .
+
+Responde a medias y "forcejea": los empujones a veces ayudan, a veces se oponen.
+
+. . .
+
+> Solo cuando la excitación coincide con $f_0$, cada empujón suma en vez de cancelarse — eso es la [resonancia]{style="color:#0f766e"}.
+
+## El pico y su precio: el amortiguamiento {.center}
+
+**Un resonador con MUY poco roce, ¿responde a más o a menos frecuencias vecinas?**
+
+. . .
+
+A menos: **pico angosto**. (Mucho roce → pico bajo y ancho.)
+
+. . .
+
+**¿Y ese mismo resonador tarda más o menos en arrancar?**
+
+. . .
+
+Más — el transiente dura lo que dura su ping libre. Dos caras de la misma moneda.
+
+## Veamos la curva dibujarse al barrer {.center}
+
+Frecuencia de excitación subiendo lento y pareja — observen la curva.
+
+## Demo — barrido {background-iframe="../demos/demo_resonancia.html" background-interactive=true}
+
+## Ahora muevan el amortiguamiento {.center}
+
+Un extremo, luego el otro. Repitan barrido y golpe en cada uno.
+
+## Demo — amortiguamiento {background-iframe="../demos/demo_resonancia.html" background-interactive=true}
+
+## El golpe: la oscilación libre pura {.center}
+
+Sin excitación externa que siga sonando — solo el ping en $f_0$.
+
+## Demo — golpe {background-iframe="../demos/demo_resonancia.html" background-interactive=true}
+
+## La botella: un resonador de aire con $f_0$ medible
+
+Predigan por escrito, ANTES de soplar nada:
+
+::: {.incremental}
+- **P1**: vacía vs. con agua hasta la mitad, soplando — ¿la nota sube o baja, y cuánto (semitonos, aprox.)?
+- **P2**: la misma botella, pero GOLPEADA con la cuchara — ¿el agua la sube o la baja?
+:::
+
+## Taller: la botella que canta (27′)
+
+| Fase | Qué hacen |
+|---|---|
+| **A — soplar** | cada integrante sopla un nivel de agua distinto; miden $f$ con afinador/espectrograma |
+| **B — golpear** | golpean la botella vacía y con 1/2 de agua; miden |
+| **Contraste** | ¿P1 y P2 dieron la MISMA dirección? ¿quién vibra en cada caso? |
+| **C (opcional)** | copa frotada vs. golpeada — ¿misma altura? |
+
+## Cierre M1: contraste {.center}
+
+Un grupo expone su tabla. Todos contrastan contra su propia predicción.
+
+. . .
+
+**Moraleja**: lo que suena depende de **a quién le entregan la energía**.
+
+*(el resonador que acaban de medir tiene nombre: Helmholtz — el detalle, en el apunte)*
+
+## M2 — El elástico, el puente y la trampa
+
+::: {.incremental}
+- Elástico estirado y pulsado **en el aire**: ¿se oirá?
+- El mismo elástico **sobre una caja de cartón**: ¿más fuerte?
+- Trampa: si la caja lo hace sonar más fuerte **sin agregar energía**, ¿la vibración dura más o menos?
+:::
+
+. . .
+
+Veámoslo.
+
+## La cuerda es "dura de mover" para el aire {.center}
+
+> [Impedancia]{style="color:#0f766e"}: cuánta fuerza cuesta lograr cuánta velocidad.
+> [Acoplamiento]{style="color:#0f766e"}: qué tan bien fluye la energía entre sistemas.
+
+El puente (o la caja) es el **transformador** que conecta ambos mundos.
+
+## El mapa del bloque C
+
+Cuatro maneras de entregarle energía a un resonador (OA1.3):
+
+| Mecanismo | Sesión | Energía |
+|---|---|---|
+| **Golpear / pulsar** | s03–s04 (ya visto) | de una vez |
+| **Frotar** | s11 | continua |
+| **Soplar** | s12 | continua |
+| **Cantar** | s13 | continua |
+
+. . .
+
+La botella soplada ya adelantó algo raro: nadie la empuja periódicamente y, aun así, suena estable — una **oscilación auto-sostenida**.
+
+## Clínica de proyecto entre pares (30′)
+
+::: {.incremental}
+- Cada grupo **presenta** su avance (6′): objeto en mano, sonando al menos una vez, qué falta
+- El grupo receptor **retroalimenta** (5′) con la pauta:
+:::
+
+> **2 fortalezas · 2 dudas · 1 sugerencia medible** (qué medir, con qué instrumento, qué resultado esperan)
+
+. . .
+
+Se invierten los roles. Firman y copian la pauta a ambas bitácoras.
+
+## Plenario y compromisos {.center}
+
+Dos proyectos al pizarrón: objeto sonando + la medición más informativa + la duda más dura.
+
+. . .
+
+Cada grupo escribe 1–2 **compromisos verificables** antes de s12 — incluido el obligatorio: **el mapa de resonancias de su propio objeto**.
+
+## Síntesis del día
+
+::: {.incremental}
+- Forzado ≠ libre: la resonancia es la respuesta grande solo cerca de $f_0$
+- El amortiguamiento decide, a la vez, el ancho del pico y la duración del transiente
+- Sonar más fuerte vía acoplamiento se paga durando menos
+:::
+
+## Ticket de salida hacia s11 {.center}
+
+> El arco entrega energía **todo el tiempo**, no un golpe.
+> ¿Por qué entonces la cuerda frotada no suena como un chirrido continuo, sino como una nota estable?
+
+## Para la próxima
+
+::: {.incremental}
+- **s11 — instrumentos de estudiantes #2**: violín/viola/cello/guitarrón, quien tenga (coordinar HOY quién trae)
+- El objeto del proyecto descansa hasta s12 — sus compromisos corren por bitácora
+- La nota del Hito 2 llega antes de s12
+:::

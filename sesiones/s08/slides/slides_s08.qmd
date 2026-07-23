@@ -1,0 +1,202 @@
+---
+title: "Acústica Musical"
+subtitle: "MUC860 · Sesión 08 — Psicoacústica de la superposición · vie 09-oct-2026"
+author: "Patricio de la Cuadra · PUC"
+format:
+  revealjs:
+    theme: simple
+    lang: es
+    slide-number: true
+    html-math-method: katex
+    transition: fade
+---
+
+## Hoy {.center}
+
+| Módulo 1 | Módulo 2 |
+|---|---|
+| Devolución Prueba 1 | Ranking a ciegas: ¿qué intervalo es más liso? |
+| Escucha del día (con nota) | Por qué la 5ª es lisa y el tritono roza |
+| El mapa del choque: batido → dos notas | Taller PEE: **radiografía espectral** del objeto |
+| Taller psicoacústico (registro, sin nota) | *(evaluado, 25 %)* |
+
+## Antes de nada: su Prueba 1
+
+**10 minutos**, con la pauta proyectada.
+
+::: {.incremental}
+- Revísenla contra la lámina
+- Anoten **1 línea**: el error propio que no quiere repetir
+- Apelaciones: por escrito u horario de consulta — **no en aula**
+:::
+
+. . .
+
+Corte duro al minuto 10.
+
+## Escucha del día {.center}
+
+**Con nota** — pasada 2 de la planilla.
+
+::: {.incremental}
+- Estímulo (2 pasadas, 3′)
+- Escriben: **describir** → **hipotetizar** → **proponer verificación** (2′)
+- 4 sorteados exponen, **2,5′ c/u**, cronómetro visible
+:::
+
+## Escuchen con atención {.center}
+
+Va a sonar algo que **cambia** en el tiempo.
+
+Diagnostiquen las etapas — no busquen nombres técnicos todavía.
+
+## Demo: escucha del día {background-iframe="../demos/demo_banda_critica.html" background-interactive=true}
+
+## El mapa del choque
+
+Al separar dos tonos desde el unísono, ¿qué le pasa al oído?
+
+::: {.incremental}
+1. **Batido contable** — una nota que ondula, se cuentan las pulsaciones
+2. **Aspereza fusionada** — la ondulación es demasiado rápida: una nota áspera
+3. **Dos notas, todavía ásperas** — el sonido se parte, pero roza
+4. **Dos notas lisas** — la aspereza desaparece
+:::
+
+## ¿El batido termina porque el sonido cambia? {.center}
+
+. . .
+
+O porque el **oído deja de seguirlo**.
+
+. . .
+
+En el aire: dos ondas superpuestas, siempre limpias.
+En el oído: dos zonas de la membrana basilar que dejan de pisarse.
+
+## La banda crítica
+
+> Ancho de separación a partir del cual dos tonos dejan de interferirse en la membrana basilar.
+
+- Orden de magnitud: **~1/3 de octava** en el registro medio
+- Alrededor de 440 Hz: del orden de **100 Hz**
+
+. . .
+
+Sus fronteras F1, F2, F3 son personales — ¿coinciden con las de su compañero?
+
+## Taller psicoacústico {.center}
+
+En parejas, con audífonos — **roles que rotan**.
+
+::: {.incremental}
+- **Oyente**: dicta 3 fronteras — F1 (cuento batidos), F2 (oigo dos notas), F3 (queda liso)
+- Registra en **Hz y semitonos**, predicción escrita **antes** de escuchar
+- Pareja en espera: ítems de papel + conversión Hz↔semitonos
+- Al final: la tira de frontera **F3** del grupo, al pizarrón
+:::
+
+Registro individual — **sin nota**, evidencia de OA2.2.
+
+## Todo esto fue con tonos puros {.center}
+
+Después del descanso: música de verdad.
+
+**¿Por qué la quinta suena lisa?**
+
+## Ranking a ciegas {.center}
+
+4 intervalos, con **tonos complejos**, orden revuelto y sin nombres.
+
+Voten su ranking del más liso al más áspero.
+
+## Demo: ranking de lisura {background-iframe="../demos/demo_banda_critica.html" background-interactive=true}
+
+## ¿Es física, es oído, o es costumbre? {.center}
+
+El ranking convergió rápido — sus oídos ya lo sabían.
+
+. . .
+
+El módulo lo responde por partes.
+
+## Por qué la 5ª es lisa {.center}
+
+Cada nota aporta su familia de **parciales**.
+
+Vean qué pares **coinciden**, cuáles se **esquivan** y cuáles **rozan**.
+
+## Demo: vista de parciales {background-iframe="../demos/demo_banda_critica.html" background-interactive=true}
+
+## Coincidencia y esquive
+
+|  | Parciales | Resultado |
+|---|---|---|
+| **8ª** (2:1) | coinciden exacto | transparente |
+| **5ª justa** (3:2) | coinciden cada 3/2 | lisa |
+| **tritono** | casi ninguna coincidencia | roza |
+
+. . .
+
+Con **tonos puros**, el mismo tritono casi no roza: [la aspereza vive en los armónicos]{style="color:#0f766e"}.
+
+## La misma 5ª, una octava más grave {.center}
+
+¿más lisa o más áspera?
+
+. . .
+
+**Más áspera** — las bandas críticas de esa zona son proporcionalmente más anchas: más pares caen dentro. Por eso los acordes cerrados graves suenan turbios.
+
+## Una curiosidad: los tonos que no están
+
+Dos tonos puros, suficientemente fuertes.
+
+. . .
+
+Se oye un tercer tono grave — que **el micrófono no ve**.
+
+Lo fabrica la mecánica no lineal del propio oído.
+
+## Consonancia: dos capas distintas
+
+> **Sensorial**: cuánto roza un par de notas sostenidas, aislado de contexto.
+
+> **Musical**: qué intervalos una práctica trata como estables — depende de estilo, época, entrenamiento.
+
+. . .
+
+La 4ª justa es físicamente lisa y el contrapunto la trata como disonancia.
+
+## Taller PEE: radiografía espectral {.center}
+
+**Evaluado** — 25 % de talleres · 1º de la serie s08–s12 · línea base del hito 2
+
+::: {.incremental}
+- **Predicen**: ¿armónico o inarmónico?, ¿dónde $f_1$?
+- Hacen sonar SU objeto, capturan espectro/espectrograma
+- Tabulan **4–6 parciales** en Hz, calculan $f_n/f_1$
+- Veredicto: ¿armónico, casi armónico, inarmónico?
+- Condiciones anotadas: app, celular, distancia, gesto — debe ser **repetible en s10**
+:::
+
+## Síntesis del día
+
+::: {.incremental}
+- La aspereza vive en el oído; muere pasada la banda crítica
+- La consonancia sensorial es coincidencia o esquive de parciales
+- Su objeto ya tiene su primera radiografía espectral
+:::
+
+## Su ticket de salida {.center}
+
+Si la quinta perfectamente lisa es la razón 3:2 exacta,
+
+**¿puede un piano tener TODAS sus quintas lisas a la vez?**
+
+¿qué habría que sacrificar?
+
+## Para la próxima {.center}
+
+- s09: afinar de oído con batidos — **traigan audífonos** otra vez
+- La serie de mediciones del objeto sigue hasta el hito 2 (s10)

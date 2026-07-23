@@ -1,0 +1,179 @@
+---
+title: "Acústica Musical"
+subtitle: "MUC860 · Sesión 04 — La receta del timbre · vie 28-ago-2026"
+author: "Patricio de la Cuadra · PUC"
+format:
+  revealjs:
+    theme: simple
+    lang: es
+    slide-number: true
+    html-math-method: katex
+    transition: fade
+---
+
+## Hoy: de la cuerda al mezclador
+
+::: {.incremental}
+- **Módulo 1** — el mapa de la cuerda: escucha del día, veredicto del espectrograma, taller con SUS instrumentos
+- **Módulo 2** — la receta en el mezclador: síntesis aditiva, las tres palancas de la nota, devolución del proyecto
+:::
+
+## Escucha del día (con nota) {.center}
+
+**Protocolo**: describir → hipotetizar → verificar
+
+::: {.incremental}
+- Estímulo: **3′** (solo de oído, sin pantalla)
+- Escriben su diagnóstico en 3 líneas: **2′**
+- **4 sorteados** exponen: 2,5′ c/u, cronómetro visible
+:::
+
+## ¿Cambió la nota o cambió el timbre? {.center}
+
+Es la misma pregunta que dejaron escrita en su ticket de s03.
+
+. . .
+
+Guárdense la hipótesis — en 15 minutos hay veredicto con espectrograma.
+
+## La receta de vibración
+
+> La lista de **amplitudes**, parcial por parcial, con que se enciende
+> cada modo del repertorio fijo de la cuerda (Benade 1990, cap. 7).
+
+::: {.incremental}
+- La nota vive en las **frecuencias** ($f_n = n f_1$, ya lo saben de s03)
+- El timbre empieza en el [**reparto de energía**]{style="color:#0f766e"} entre ellas
+- La pulsación no inventa frecuencias: solo las **dosifica**
+:::
+
+## Votación 1
+
+¿Pulsar donde el modo 2 tiene un **nodo** lo enciende o lo deja mudo?
+
+. . .
+
+**Mudo** — un modo no puede moverse donde tiene un nodo.
+
+## Votación 2
+
+El dedo de la tapa de olla (s03) y la púa de hoy: ¿leen el mismo mapa o el contrario?
+
+. . .
+
+**El mismo mapa, con la palanca invertida.**
+
+## La regla de la receta {.center}
+
+> Pulsar en un punto [**enciende**]{style="color:#0f766e"} los modos que se
+> *mueven* ahí y **silencia** los que tienen un *nodo* ahí.
+
+. . .
+
+Pulsar enciende lo que se mueve; tocar apaga lo que se mueve.
+
+## El mapa de la cuerda
+
+| Punto de pulsación | Modos encendidos | Timbre |
+|---|---|---|
+| $L/2$ (medio) | solo impares (2, 4, 6… mudos) | hueco, redondo |
+| $\sim L/10$ (cerca del puente) | casi todos, agudos incluidos | brillante, metálico |
+
+En general: pulsar a $1/n$ del largo silencia el modo $n$ y sus múltiplos.
+
+## Taller: el mapa de la cuerda
+
+En grupo, con SU instrumento: midan $L$, marquen $L/2$, $L/4$, $\sim L/10$ con cinta.
+
+**Prediquen por escrito antes de pulsar.**
+
+| Fase | Qué hacen | Tiempo |
+|---|---|---|
+| 1 (obligatoria) | Predecir qué parciales dominan en cada punto; pulsar y verificar con el espectrograma | ~25′ |
+| 2 (opcional, grupos rápidos) | Armónicos naturales: dedo suave en traste 12 ($L/2$), luego 7 ($L/3$), 5 ($L/4$); verificar con afinador | resto |
+
+Registran su mapa punto→parciales en la guía PEE.
+
+## Cierre módulo 1
+
+Pregunta relámpago: pulsé exactamente donde el modo 3 tiene un nodo.
+
+. . .
+
+**¿Suena el parcial 3?**
+
+## La nota al revés {.center}
+
+Escuchen esta grabación: ¿qué instrumento creen que es?
+
+. . .
+
+Ahora al derecho. Misma receta de parciales, otra envolvente.
+
+## Antes de escuchar, prediga
+
+::: {.incremental}
+- Si al seno le sumo el parcial 2, ¿cambia la **nota** o el **timbre**?
+- ¿Cuál preset sonará más brillante: pulsada al medio o cerca del puente?
+- ¿Cuál de los dos se parece a lo que midieron en el taller?
+:::
+
+## Demo: cocinar el timbre desde cero {background-iframe="../demos/demo_sintesis_aditiva.html" background-interactive=true}
+
+## Espectro↔timbre: la relación no es unívoca
+
+::: {.incremental}
+- Sumar parciales en razones enteras **no agrega notas** — es una sola nota, otro color
+- La misma receta, **sostenida**, suena a órgano; con **envolvente de pulsación**, empieza a sonar a cuerda
+:::
+
+> El timbre es la [**receta + su envolvente**]{style="color:#0f766e"} — el espectro solo no basta.
+
+## Estirar, acortar, engordar: las tres palancas de $f_1$
+
+| Palanca | Qué mueven | Proporción |
+|---|---|---|
+| Largo $L$ | Traste, dedo | $f_1 \propto 1/L$ |
+| Tensión $F_T$ | Clavija | $f_1 \propto \sqrt{F_T}$ |
+| Masa $\mu$ | Grosor, entorchado | $f_1 \propto 1/\sqrt{\mu}$ |
+
+::: {.incremental}
+- Traste 12 = mitad del largo → ¿se duplica la frecuencia exactamente?
+- Subir un semitono con la clavija: ¿tensión +1 %, +12 % o +100 %?
+:::
+
+. . .
+
+Sí, y **+12 %** — las dos raíces cuadradas en acción.
+
+## Proyecto: de la idea a la predicción
+
+::: {.incremental}
+- Reciben su media hoja de s03 comentada
+- Se publica la **pauta del hito 1** (entrega s05, 8 %)
+- En grupo: eligen su idea definitiva, nombran el parámetro, esbozan qué van a predecir
+:::
+
+## Síntesis del día
+
+::: {.incremental}
+- La pulsación no elige frecuencias: **dosifica energía** entre los modos — la receta de vibración
+- Regla: enciende lo que se mueve, silencia lo que tiene nodo ahí
+- El timbre es receta **+ envolvente**, no espectro solo
+:::
+
+## Ticket de salida {.center}
+
+En la demo (queda publicada), apaguen del todo el **parcial 1** — la fundamental.
+
+. . .
+
+¿La nota baja una octava, desaparece, o sigue igual? **Escriban su predicción.**
+
+## Para la próxima sesión
+
+::: {.incremental}
+- **Hito 1** se entrega al inicio de s05 (pauta ya en sus manos)
+- La demo queda publicada: explórenla en casa, sin borrar su predicción del ticket
+- s05 abre respondiendo el ticket de hoy
+:::
