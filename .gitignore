@@ -12,4 +12,3 @@ libro/*.tex
 __pycache__/
 /libro/index_files/
 /_canvas/
-/Admin/slides_profesor/

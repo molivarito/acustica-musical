@@ -32,6 +32,13 @@ jobs:
           quarto render --profile canvas
           cp -r _canvas _site/canvas
 
+      - name: Filtrar material solo-profesor del deploy (patrón SyS)
+        run: |
+          # las slides se renderizan junto a su clase (para el render
+          # local del profesor), pero NO se publican en el sitio
+          find _site -type d -name slides -path "*/sesiones/*" -exec rm -rf {} +
+          echo "slides restantes en _site: $(find _site -name 'slides_*.html' | wc -l)"
+
       - uses: actions/upload-pages-artifact@v3
         with:
           path: _site

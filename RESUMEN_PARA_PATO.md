@@ -45,14 +45,15 @@ te incomoda, la salida es hacer el repo privado (pídelo).
 
 ## Cómo trabajar
 
-- **Slides de cada clase (solo tuyas)**: abre
-  `Admin/slides_profesor/index.html` (doble clic) — es tu mapa privado
-  con los 15 decks. `F` = pantalla completa; las demos van embebidas
-  dentro de las slides (cargan del sitio: requiere internet en la
-  sala). Los fuentes son `sesiones/sNN/slides/slides_sNN.qmd`; si
-  editas uno, regenera su deck con
-  `bash Admin/genera_slides_profesor.sh NN`. No están en el sitio ni
-  en Canvas (los alumnos no las ven).
+- **Slides de cada clase (solo tuyas, patrón SyS)**: se renderizan
+  junto a su clase en `_site/sesiones/sNN/slides/slides_sNN.html`,
+  pero el deploy público las FILTRA — los alumnos no las ven en línea.
+  Para usarlas: `conda run -n base quarto preview` y navegar a
+  `sesiones/sNN/slides/slides_sNN.html` (o abrir el archivo de
+  `_site/` directamente). `F` = pantalla completa; las demos van
+  embebidas dentro de las slides. Fuente editable:
+  `sesiones/sNN/slides/slides_sNN.qmd`; tras editar, regenerar con
+  `conda run -n base quarto render sesiones/sNN/slides/slides_sNN.qmd`.
 
 - **Editar material**: editas el `.md` → `git commit` → `git push`. El
   sitio se reconstruye solo (~2 min). Para previsualizar antes:
