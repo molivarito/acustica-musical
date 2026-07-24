@@ -112,3 +112,12 @@ formación matemática y musical.
   documentos raíz `OBJETIVOS_APRENDIZAJE.md` / `METODOLOGIA.md` /
   `PLAN_SEMESTRE.md`; ver rama `migracion-estructura`. (Actualizar
   manualmente.)
+  **Decisión de evaluación (2026-07-24)**: la escucha del día es
+  práctica de 10 min **sin nota** (en la mesa del grupo, con pregunta
+  selectiva del profesor); OA3 se evalúa **solo por escrito** — Parte A
+  de cada prueba + hoja de s15, mejores 2 de 3, 10 % del curso. Pesos:
+  talleres 35 · proyecto 35 (hitos 10/10/15) · pruebas 20 (48 puntos
+  cada una) · escucha escrita 10. Regla derivada: **ningún documento
+  del curso promete nota por hablar en clase** (la única instancia oral
+  evaluada es la defensa del proyecto en s15). El detalle vive en
+  `METODOLOGIA.md` §§1–5 y §7.7.
