@@ -22,17 +22,18 @@ format:
 
 Dos módulos, un hilo: **traducir** el sonido a imágenes que se puedan leer.
 
-## Escucha del día — primera ronda con nota
+## Escucha del día — la práctica de cada semana
 
-**Protocolo** (igual que siempre, ahora cuenta):
+**Protocolo** (10′, sin nota):
 
 ::: {.incremental}
-- Escuchan el estímulo (**3′**)
+- Escuchan el estímulo, **dos pasadas**
 - Anotan en 3 líneas: **describir → hipotetizar → verificar** (**2′**)
-- **4 sorteados** exponen, **2,5′ cada uno**, cronómetro visible
+- Discuten en la mesa (**3′**): el vocero anota el diagnóstico del grupo
+- Plenario (**3′**): el profesor pregunta a una o dos mesas — responde el vocero por el grupo — y cierra con su propia versión
 :::
 
-> Se evalúa con la rúbrica OA3 que conocen desde la sesión pasada.
+> La rúbrica OA3 es guía para autoevaluarse, no calificación: se usa así todas las semanas; se evalúa por escrito en s07, s13 y s15.
 
 ## ¿Cómo se dibuja un golpe? {.center}
 

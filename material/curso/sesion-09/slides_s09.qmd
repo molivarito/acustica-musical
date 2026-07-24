@@ -20,12 +20,13 @@ format:
 
 ## Escucha del día
 
-Protocolo (15′): **describir → hipotetizar → verificar**
+Protocolo (10′, sin nota): **describir → hipotetizar → verificar**
 
 ::: {.incremental}
-- 3′ de estímulo, dos pasadas
-- 2′ para escribir: qué oye, qué mecanismo propone, cómo lo comprobaría
-- 4 personas sorteadas exponen — 2,5′ cada una, cronómetro visible
+- Escuchan el estímulo, **dos pasadas**
+- Escriben en 3 líneas (**2′**): qué oye, qué mecanismo propone, cómo lo comprobaría
+- Discuten en la mesa (**3′**): el vocero anota el diagnóstico del grupo
+- Plenario (**3′**): el profesor pregunta a una o dos mesas — responde el vocero por el grupo — y cierra con su propia versión
 :::
 
 Hoy, además, se cobra su **ticket de salida de s08**.

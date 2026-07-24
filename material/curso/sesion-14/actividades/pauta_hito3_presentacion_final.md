@@ -1,4 +1,4 @@
-# Pauta del Hito 3 — Presentación final + informe del proyecto (s15, 14 %)
+# Pauta del Hito 3 — Presentación final + informe del proyecto (s15, 15 %)
 
 **Se publica en s14** (compromiso anunciado en s13). **Objetivos que
 evalúa**: OA5.3 (explicar acústicamente el comportamiento obtenido,

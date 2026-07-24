@@ -21,10 +21,14 @@ format:
 
 ## Escucha del día {.center}
 
-**Mismo fragmento, dos niveles.** Estímulo (3′) → escriba su diagnóstico
-en 3 líneas (2′) → 4 sorteados exponen (2,5′ c/u, cronómetro visible)
+**Mismo fragmento, dos niveles.** Protocolo (10′, sin nota):
 
-> **Describir → hipotetizar → verificar**
+::: {.incremental}
+- Escuchan el fragmento, **dos pasadas** (nivel de sala realista y luego muy suave)
+- Anotan en 3 líneas: **describir → hipotetizar → verificar** (**2′**)
+- Discuten en la mesa (**3′**): el vocero anota el diagnóstico del grupo
+- Plenario (**3′**): el profesor pregunta a una o dos mesas — responde el vocero por el grupo — y cierra con su propia versión
+:::
 
 ¿Qué cambió *además* del volumen?
 

@@ -4,7 +4,7 @@
 temperamentos: es SU evaluación declarada), OA2.2 (batidos como
 herramienta), OA1.2 (cents con aritmética).
 **Es el taller EVALUADO de la semana** (rúbrica rápida
-logrado/parcial/incipiente, cuenta en el 25 % de talleres).
+logrado/parcial/incipiente, cuenta en el 35 % de talleres).
 **Trabajo en parejas** dentro del grupo (2 parejas por notebook, por
 turnos): el **afinador** (con audífonos) afina de oído; el
 **operador** maneja la demo (desafina al azar, oculta y revela los

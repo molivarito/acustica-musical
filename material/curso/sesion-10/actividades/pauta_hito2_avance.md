@@ -1,4 +1,4 @@
-# Pauta — Hito 2 del proyecto: avance con evidencia sonora y medida (s10, 8 %)
+# Pauta — Hito 2 del proyecto: avance con evidencia sonora y medida (s10, 10 %)
 
 **Objetivo evaluado**: OA5.2 (construir/implementar y caracterizar el
 resultado combinando escucha analítica y mediciones). Publicar esta

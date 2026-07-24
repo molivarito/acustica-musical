@@ -26,7 +26,7 @@ estructurada, y **suena**: incluye estímulos que se reproducen por el
 equipo de la sala en momentos anunciados (cada uno dos veces, más una
 pasada de repaso), figuras impresas — espectros, espectrogramas,
 curvas — para leer e interpretar, y una **escucha escrita corta** que
-se evalúa con la misma rúbrica de la ronda oral de todas las semanas:
+se evalúa con la rúbrica de escucha argumentada del curso:
 describir, hipotetizar, proponer verificación, y distinguir lo que se
 oye de lo que se interpreta. No necesita calculadora: toda la
 aritmética es de proporciones — el doble, la mitad, diez veces —, el

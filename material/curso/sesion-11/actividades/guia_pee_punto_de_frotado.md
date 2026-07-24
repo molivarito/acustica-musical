@@ -67,4 +67,4 @@ en todos? ¿agudos hacia el puente en todos?). La guía se entrega al
 salir y se evalúa con rúbrica rápida (logrado / parcial / incipiente):
 predicciones escritas antes de sonar, tabla completa con condiciones,
 contraste honesto y explicación que use el ciclo pegar-soltar. Cuenta
-en el 25 % de talleres.
+en el 35 % de talleres.

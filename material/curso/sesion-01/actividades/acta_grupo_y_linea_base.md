@@ -34,8 +34,13 @@ audible) [preparar; ver pendientes].
 **Uso en clase**: 4–5 voluntarios leen su respuesta; el profesor
 presenta la rúbrica OA3 (metodología §5) mostrando dónde caería cada
 respuesta real — con cuidado de no exponer negativamente a nadie: se
-elogia lo logrado, no se sanciona lo inicial.
+elogia lo logrado, no se sanciona lo inicial. Aclare que esta rúbrica es
+la que se usará para corregir las **escuchas argumentadas escritas**
+del curso (Parte A de la Prueba 1, Parte A de la Prueba 2 y el bloque ★
+de la hoja de s15), no la participación en clase: la escucha del día,
+todas las semanas, **nunca lleva nota**.
 
 **Después de clase**: archivar las 20 hojas rotuladas "s01 – línea
-base". En s14–s15 se repite el mismo estímulo y cada estudiante recibe
-sus dos hojas juntas.
+base". En **s15** se repite el mismo estímulo y cada estudiante recibe
+sus dos hojas juntas como evidencia de su propio progreso en el
+semestre.

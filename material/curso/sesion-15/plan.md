@@ -2,7 +2,7 @@
 
 **Objetivos que cubre**: OA5.3 (principal: explicar acústicamente el
 comportamiento obtenido — incluidas las desviaciones respecto de lo
-predicho — integrando modelo, medición y escucha; es el hito 3, 14 %),
+predicho — integrando modelo, medición y escucha; es el hito 3, 15 %),
 OA3.2 (conectar sensación–mecanismo–medición: en la defensa de cada
 grupo y en la hoja de escucha argumentada del público), OA3.1 (hoja de
 escucha del público + cierre del arco con la línea base de s01).
@@ -24,15 +24,15 @@ presentaciones finales (5 grupos × bloque cronometrado) y los últimos
 del curso desde s03: **la calidad de la explicación pesa más que el
 éxito sonoro** (`OBJETIVOS_APRENDIZAJE.md`, OA5.3; pauta del hito 3).
 **Reglas aplicadas y decisiones de carga (declaradas)**:
-(1) **No hay escucha del día con ronda**: la última ronda oral fue s14
-(así se anunció: "en s15, el estímulo son ustedes"). Su lugar lo ocupa
-la **hoja de escucha argumentada**: cada estudiante escribe UN
+(1) **No hay escucha del día** en s15: la práctica semanal (sin nota)
+terminó en s14 (así se anunció: "en s15, el estímulo son ustedes"). Su
+lugar lo ocupa la **escucha escrita 3**: cada estudiante escribe UN
 diagnóstico OA3 (describir/hipotetizar/verificar) del instrumento de
 CADA grupo que observa — el público no es espectador pasivo. Las hojas
 se recogen al cierre y son la evidencia final de OA3; el bloque que
-cada estudiante marque como su mejor diagnóstico se califica con la
-rúbrica OA3 y entra a su registro como pasada final (cuentan las
-mejores 2 del semestre, metodología §4: solo puede ayudar).
+cada estudiante marque con ★ como su mejor diagnóstico se califica con
+la rúbrica OA3 (10 % del curso junto con la Parte A de la Prueba 1 y de
+la Prueba 2, metodología §4: cuentan las mejores 2 de 3).
 (2) **El módulo 2 no tiene gancho sonoro separado**: el gancho es el
 instrumento del grupo 4 sonando en vivo (regla §3 adaptada; precedente
 de excepción declarada: s07 con prueba).
@@ -96,7 +96,7 @@ s01 ni la coevaluación. Recuperación máxima: ~9′.
 
 ## Verificación de aprendizaje
 
-- **Hito 3 (OA5.3 + OA3.2, 14 %)**: rúbrica R1–R4 de la pauta
+- **Hito 3 (OA5.3 + OA3.2, 15 %)**: rúbrica R1–R4 de la pauta
   (`material/curso/sesion-14/actividades/pauta_hito3_presentacion_final.md`)
   registrada EN VIVO en la planilla del guion, grupo por grupo; R1
   (explicación acústica) desempata, según la pauta. El informe ≤6 págs
@@ -107,12 +107,11 @@ s01 ni la coevaluación. Recuperación máxima: ~9′.
   metodología §4): una por integrante, por nombre, sin relevo del
   grupo; protocolo y banco de preguntas en el guion. Una respuesta
   insolvente puede bajar R4 (pauta §5).
-- **Hoja de escucha argumentada (OA3.1–3.2, evidencia final)**: 4
-  diagnósticos por estudiante (uno por presentación observada); el
-  bloque marcado ★ se califica con la rúbrica OA3 y entra al registro
-  como pasada final (cuentan las mejores 2 del semestre — solo puede
-  mejorar la nota de escucha). El resto se hojea como evidencia del
-  arco OA3.
+- **Escucha escrita 3 (OA3.1–3.2, evidencia final)**: 4 diagnósticos
+  por estudiante (uno por presentación observada); el bloque marcado ★
+  se califica con la rúbrica OA3 (cuentan las mejores 2 de 3, junto con
+  las Partes A de las Pruebas 1 y 2). El resto se hojea como evidencia
+  del arco OA3.
 - **Línea base (OA3.1, sin nota)**: el contraste s01/hoy es la
   verificación simbólica y personal del objetivo transversal del
   curso; no se recoge — el diseño de s01 lo prometió ("en s14–s15 se
@@ -193,8 +192,8 @@ s01 ni la coevaluación. Recuperación máxima: ~9′.
   afecta la rúbrica.
 - **Un estudiante llegó tarde y perdió bloques de escucha** → hojas de
   repuesto en la caja; para marcar ★ necesita al menos 3 de 4 bloques
-  propios; con menos, su evidencia OA3 queda con las pasadas orales
-  que ya tiene (no se castiga: la hoja solo podía ayudar).
+  propios; con menos, su evidencia OA3 queda con las escuchas escritas
+  de s07 y s13 que ya tiene (no se castiga: la hoja solo podía ayudar).
 - **La emoción del cierre se desborda o se enfría** → las voces son
   voluntarias y el silencio de la devolución es deliberado; si nadie
   quiere leer, el profesor lee (anónima) UNA línea base de s01 junto a

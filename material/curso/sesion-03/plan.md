@@ -4,7 +4,7 @@
 de un objeto vibrante y relacionar la forma de vibrar con el espectro que
 se oye), OA1.2 (predicción semicuantitativa: dónde golpear/tocar y qué
 parciales cambian), OA5.1 (introducción: **lanzamiento del proyecto del
-curso**). OA3.1 corre transversal en la escucha del día (con nota).
+curso**). OA3.1 corre transversal en la escucha del día (práctica sin nota).
 **Requisitos previos**: s02 (leer forma de onda, espectro y espectrograma;
 $v = \lambda f$; el término "parcial"; apps de análisis instaladas). Los
 estudiantes traen: (a) su ticket de salida de s02 con la predicción "el
@@ -20,17 +20,17 @@ del timbre, punto de excitación). Desde hoy corre en paralelo el proyecto
 (OA5): hito 1 en s05.
 **Reglas aplicadas**: s01–s03 con menos contenido (metodología §7, riesgo
 1) — por eso los modos 2D se tratan en demo predictiva y mini-lección, no
-en taller; escucha del día en el primer bloque del módulo 1; módulo 2 abre
-con gancho sonoro sin ronda; la lectura previa se consume visiblemente en
-el bloque de 15–30′ del módulo 1 (principio 6).
+en taller; escucha del día (10′, sin nota) en el primer bloque del módulo
+1; módulo 2 abre con gancho sonoro sin escucha del día; la lectura previa
+se consume visiblemente en el bloque de 10–25′ del módulo 1 (principio 6).
 
 ## Módulo 1 — La huella del objeto golpeado (variante: experimental)
 
 | Tiempo | Bloque | Actividad del estudiante | Rol del profesor | Materiales |
 |---|---|---|---|---|
-| 0–15′ | **Escucha del día (OA3.1, con nota) = el ticket de s02 en vivo** | Escucha el vaso golpeado real (dos golpes: en el borde y con el vaso apoyado en la palma) (3′); todos anotan diagnóstico en 3 líneas (describir → hipotetizar → verificar) (2′); **4 sorteados** exponen (**2,5′ c/u, cronómetro visible**) — la hipótesis natural es su propia predicción del ticket | Golpea el vaso en vivo dentro de los 3′ de estímulo (aún SIN mostrar el espectrograma: primero el oído); cronometra la ronda (4 × 2,5′ = 10′); evalúa con la planilla de rúbrica OA3; cierra la ronda con la pregunta en suspenso: "¿una línea o varias? ya lo escribieron la semana pasada — veamos" | Vaso de vidrio + cuchara; planilla de rúbrica con sorteo; cronómetro visible; tickets de s02 recopilados |
-| 15–30′ | El veredicto del espectrograma + mini-lección (consume lectura previa) | Ve el espectrograma del vaso proyectado y contrasta con su ticket de s02 (¿cuántas líneas predijo?); vota a mano alzada las preguntas de la mini-lección (¿las líneas del vaso están igualmente espaciadas?, ¿cuál dura más?); conecta con el cap. 3 leído: cada línea = un modo | Golpea el vaso al micrófono con la app/demo de s02 proyectada; devuelve los tickets; mini-lección interactiva (formato 7): frecuencias características de un objeto, modo = forma de vibrar de todo el objeto (imagen de la cadena de masas del cap. 3, estilo BEN 6); deja instalada la palabra **parcial** para "línea del espectro" y anuncia que la palabra **armónico** se gana en el módulo 2 | Vaso + micrófono + proyector (demo s02 u app); pizarrón; figura de cadena de masas (del cap. 3) |
-| 30–60′ | **Taller PEE: la sartén y sus parientes (OA1.1, OA1.2)** — formato 2, kit casero | En grupo, con roles y la guía: elige 2 objetos metálicos del kit (sartén, tapa de olla, taza…); ANTES de golpear predice por escrito: nº de líneas, ¿espaciado regular?, ¿cuál decae primero?; golpea y mide con la app: anota las frecuencias de los 3 parciales más fuertes y calcula sus razones ($f_2/f_1$, $f_3/f_1$); fase 2: predice y verifica el efecto de (a) golpear en otro punto y (b) apoyar un dedo en el centro vs. en el borde | Rota por los grupos (~6′ c/u); provoca: "¿las razones dan números enteros?", "¿el dedo apaga TODO el sonido o solo parte?"; recuerda que el contraste predicción–resultado vale tanto como el acierto | 5 kits: sartén u olla pequeña, tapa metálica, taza o vaso, cuchara de palo + celulares con app de espectrograma (mín. 2 por grupo); guía PEE "la sartén" (1 por grupo) |
+| 0–10′ | **Escucha del día (OA3.1, práctica sin nota) = el ticket de s02 en vivo** | Todos anotan su diagnóstico en 3 líneas (describir → hipotetizar → verificar) (2′); discuten en la mesa y el vocero anota el diagnóstico del grupo (3′); en el plenario, el vocero de una o dos mesas responde por el grupo (3′) — la hipótesis natural es su propia predicción del ticket | Golpea el vaso en vivo, **dos pasadas** (en el borde y con el vaso apoyado en la palma) (~2′) (aún SIN mostrar el espectrograma: primero el oído); pregunta selectivamente a una o dos mesas en el plenario; cierra con su propia versión experta y la pregunta en suspenso: "¿una línea o varias? ya lo escribieron la semana pasada — veamos" | Vaso de vidrio + cuchara; tickets de s02 recopilados |
+| 10–25′ | El veredicto del espectrograma + mini-lección (consume lectura previa) | Ve el espectrograma del vaso proyectado y contrasta con su ticket de s02 (¿cuántas líneas predijo?); vota a mano alzada las preguntas de la mini-lección (¿las líneas del vaso están igualmente espaciadas?, ¿cuál dura más?); conecta con el cap. 3 leído: cada línea = un modo | Golpea el vaso al micrófono con la app/demo de s02 proyectada; devuelve los tickets; mini-lección interactiva (formato 7): frecuencias características de un objeto, modo = forma de vibrar de todo el objeto (imagen de la cadena de masas del cap. 3, estilo BEN 6); deja instalada la palabra **parcial** para "línea del espectro" y anuncia que la palabra **armónico** se gana en el módulo 2 | Vaso + micrófono + proyector (demo s02 u app); pizarrón; figura de cadena de masas (del cap. 3) |
+| 25–60′ | **Taller PEE: la sartén y sus parientes (OA1.1, OA1.2)** — formato 2, kit casero | En grupo, con roles y la guía: elige 2 objetos metálicos del kit (sartén, tapa de olla, taza…); ANTES de golpear predice por escrito: nº de líneas, ¿espaciado regular?, ¿cuál decae primero?; golpea y mide con la app: anota las frecuencias de los 3 parciales más fuertes y calcula sus razones ($f_2/f_1$, $f_3/f_1$); fase 2: predice y verifica el efecto de (a) golpear en otro punto y (b) apoyar un dedo en el centro vs. en el borde | Rota por los grupos (~6′ c/u); provoca: "¿las razones dan números enteros?", "¿el dedo apaga TODO el sonido o solo parte?"; recuerda que el contraste predicción–resultado vale tanto como el acierto | 5 kits: sartén u olla pequeña, tapa metálica, taza o vaso, cuchara de palo + celulares con app de espectrograma (mín. 2 por grupo); guía PEE "la sartén" (1 por grupo) |
 | 60–70′ | Cierre y contraste | UN grupo expone su tabla de razones y su hallazgo del dedo; todos anotan la moraleja en la guía: cada objeto tiene su familia fija de frecuencias características; dónde se golpea y dónde se toca decide cuáles suenan | Sintetiza en el pizarrón con las razones de los 5 grupos: ninguna da 1 : 2 : 3 (objetos inarmónicos); planta la pregunta puente al módulo 2: "¿qué objeto tendría parciales en razones enteras?"; cierra las guías con rúbrica rápida | Pizarrón; guías |
 
 ## Módulo 2 — De la sartén a la orquesta (y el proyecto) (variante: experimental, adaptada — demo predictiva + lanzamiento)
@@ -45,9 +45,8 @@ el bloque de 15–30′ del módulo 1 (principio 6).
 
 ## Verificación de aprendizaje
 
-- **Ronda oral OA3 con nota**: 4 registros en la planilla (el estímulo
-  del vaso exige usar "parcial" y leer espectrograma: D1 con vocabulario
-  de s02–s03).
+- **Escucha del día**: práctica no calificada; la evidencia de OA3 se
+  recoge por escrito en s07, s13 y s15.
 - **Guía PEE "la sartén" cerrada en aula** con rúbrica rápida
   (logrado/parcial/incipiente): cuenta como taller de la semana. Criterio
   central: predicción escrita antes de golpear + razones de frecuencia
@@ -87,8 +86,8 @@ el bloque de 15–30′ del módulo 1 (principio 6).
 
 - **El vaso de la escucha del día no muestra líneas claras en la app**
   (vaso grueso, ruido de sala) → probar el vaso ANTES de clase y tener un
-  segundo vaso más resonante (copa); si aun así falla en vivo, la ronda
-  se hace igual (es de oído) y el veredicto del espectrograma se toma con
+  segundo vaso más resonante (copa); si aun así falla en vivo, la escucha
+  del día se hace igual (es de oído) y el veredicto del espectrograma se toma con
   la grabación de respaldo hecha en casa.
 - **Las apps no resuelven los parciales de la sartén** (parciales muy
   juntos o decaimiento muy rápido) → la guía pide congelar/capturar la

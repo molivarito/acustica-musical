@@ -28,9 +28,10 @@ format:
 > Describir → hipotetizar → verificar
 
 ::: {.incremental}
-- Estímulo: **3′**, solo escuchar
+- Escuchan el vaso golpeado, **dos pasadas** (borde y palma)
 - Escritura: **2′**, su diagnóstico en 3 líneas
-- **4 sorteados** exponen — 2,5′ cada uno, cronómetro visible
+- Discuten en la mesa (**3′**): el vocero anota el diagnóstico del grupo
+- Plenario (**3′**): el profesor pregunta a una o dos mesas — responde el vocero por el grupo — y cierra con su propia versión
 :::
 
 ## ¿Cuántas líneas anotó en su ticket de la semana pasada? {.center}
@@ -161,15 +162,15 @@ sonora, y **explicar acústicamente** su comportamiento.
 > [La calidad de la explicación vale más que el éxito
 > sonoro.]{style="color:#0f766e"}
 
-Vale **30 %** de la nota final.
+Vale **35 %** de la nota final.
 
 ## Tres hitos, todo el semestre
 
 | Hito | Fecha | Entrega | % |
 |---|---|---|---|
-| 1 — Diseño con predicción | vie 04-sep (s05) | predicción escrita + modelo del curso | 8 % |
-| 2 — Avance | vie 23-oct (s10) | mediciones + evidencia sonora | 8 % |
-| Final | vie 27-nov (s15) | presentación (~25′) + informe ≤ 6 págs | 14 % |
+| 1 — Diseño con predicción | vie 04-sep (s05) | predicción escrita + modelo del curso | 10 % |
+| 2 — Avance | vie 23-oct (s10) | mediciones + evidencia sonora | 10 % |
+| Final | vie 27-nov (s15) | presentación (~25′) + informe ≤ 6 págs | 15 % |
 
 ## Cómo se juega
 

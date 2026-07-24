@@ -33,15 +33,20 @@ Al minuto 10, corte duro: a la mochila.
 
 El único taller del semestre que ocupa un módulo completo **fuera del aula**.
 
-## Escucha del día — última ronda del semestre {.center}
+## Escucha del día — la última del semestre {.center}
+
+*(la misma frase de flauta: primero seca, después reverberante)* — 10′,
+sin nota:
 
 ::: {.incremental}
-- Escuchan el estímulo **una vez**, 3′
+- Escuchan el estímulo, **dos pasadas**
 - Escriben su diagnóstico, 2′: **describir → hipotetizar → verificar**
-- 4 sorteados exponen, ~2,5′ c/u, cronómetro visible
+- Discuten en la mesa (3′): el vocero anota el diagnóstico del grupo
+- Plenario (3′): pregunta a una o dos mesas, responde el vocero
 :::
 
-*(Con esta ronda, todos completan sus ~3 pasadas del semestre.)*
+*(La próxima semana el estímulo son ustedes — y esa escucha sí se
+escribe y se califica.)*
 
 ## El ticket de la semana pasada {.center}
 
@@ -210,4 +215,4 @@ Sorteo **en vivo** del orden de exposición.
 
 . . .
 
-**La próxima semana, ustedes son el estímulo de la escucha del día.**
+**La próxima semana, ustedes son el estímulo: el público escribe su escucha argumentada sobre las presentaciones.**

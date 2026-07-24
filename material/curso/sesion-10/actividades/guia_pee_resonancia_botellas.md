@@ -9,7 +9,7 @@ esta hoja) · **vocero**. El rol "ejecuta" rota: cada integrante sopla
 y mide al menos un nivel de agua.
 **Materiales**: botella de vidrio del kit, jarra con agua, embudo,
 cuchara, paño, ≥2 celulares (afinador + espectrograma), esta hoja.
-**Cuenta como taller evaluado de la semana** (rúbrica rápida, 25 %).
+**Cuenta como taller evaluado de la semana** (rúbrica rápida, 35 %).
 
 **El truco del soplido** (léanlo antes de frustrarse): apoye el labio
 inferior en el borde de la boca de la botella y sople un chorro fino

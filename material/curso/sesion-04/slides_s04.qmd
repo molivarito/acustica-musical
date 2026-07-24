@@ -18,14 +18,15 @@ format:
 - **Módulo 2** — la receta en el mezclador: síntesis aditiva, las tres palancas de la nota, devolución del proyecto
 :::
 
-## Escucha del día (con nota) {.center}
+## Escucha del día {.center}
 
-**Protocolo**: describir → hipotetizar → verificar
+**Protocolo** (10′, sin nota): describir → hipotetizar → verificar
 
 ::: {.incremental}
-- Estímulo: **3′** (solo de oído, sin pantalla)
+- Escuchan la MISMA cuerda pulsada en el medio y pegado al puente, **dos pasadas** (solo de oído, sin pantalla)
 - Escriben su diagnóstico en 3 líneas: **2′**
-- **4 sorteados** exponen: 2,5′ c/u, cronómetro visible
+- Discuten en la mesa (**3′**): el vocero anota el diagnóstico del grupo
+- Plenario (**3′**): el profesor pregunta a una o dos mesas — responde el vocero por el grupo — y cierra con su propia versión
 :::
 
 ## ¿Cambió la nota o cambió el timbre? {.center}
@@ -150,7 +151,7 @@ Sí, y **+12 %** — las dos raíces cuadradas en acción.
 
 ::: {.incremental}
 - Reciben su media hoja de s03 comentada
-- Se publica la **pauta del hito 1** (entrega s05, 8 %)
+- Se publica la **pauta del hito 1** (entrega s05, 10 %)
 - En grupo: eligen su idea definitiva, nombran el parámetro, esbozan qué van a predecir
 :::
 

@@ -97,7 +97,7 @@ libro (+ PDF), `material/programa_curso.md`,
 | Pruebas y sus pautas | `ediciones/2026-2/pruebas/` |
 | Pautas de hitos, clínica, feedback | `material/curso/sesion-NN/actividades/*pauta*` |
 | Banco de estímulos (revela las pruebas) | `material/profesor/banco_estimulos.md` |
-| Planilla de rúbrica OA3 | `material/profesor/planilla_rubrica_oa3.md` |
+| Planilla de registro de las escuchas escritas (OA3) | `material/profesor/planilla_rubrica_oa3.md` |
 | Diseño del curso y bitácora de auditorías | `OBJETIVOS_APRENDIZAJE.md`, `METODOLOGIA.md`, `PLAN_SEMESTRE.md`, `_archivo/bitacora/` |
 
 La regla vive en `material/_quarto.yml` (bloque `render:`, con comentario).

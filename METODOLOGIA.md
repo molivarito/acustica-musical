@@ -127,11 +127,12 @@ grupal y con fecha conocida desde s03.
 de escucha (sin nota) · s2–s14 escucha del día (sin nota) + talleres ·
 s3 lanzamiento del proyecto · s5 hito 1 · s7 prueba 1 + escucha escrita 1
 (módulo 2 liviano) · s8–s12 talleres de medición sobre el objeto del
-proyecto · s10 hito 2 · s13 prueba 2 + escucha escrita 2 · s14
-repetición de la línea base de escucha (sin nota, se devuelve junto a la
-de s01 como evidencia de progreso personal) · s15 presentaciones finales
-(ambos módulos, clínica ampliada con preguntas individuales, ~25 min por
-grupo cronometrados) + informe + hoja de escucha (escucha escrita 3).
+proyecto · s10 hito 2 · s13 prueba 2 + escucha escrita 2 · s15
+presentaciones finales (ambos módulos, clínica ampliada con preguntas
+individuales, ~25 min por grupo cronometrados) + informe + hoja de
+escucha (escucha escrita 3) + **repetición de la línea base de s01** en
+el cierre (mismo estímulo, sin nota: cada estudiante lee sus dos hojas
+juntas y se las lleva).
 
 **Carga docente fuera de aula**: semanas normales ≈ 0,5–1 h (preparar
 kits y estímulos; corrección regular = 0 por diseño). Picos declarados:
@@ -225,7 +226,7 @@ versión; las fases 3–4 deben vigilarlos:
    equidad y de validez — se decidió en la recalibración del 2026-07-24
    que medir el oído de entrada era peor defecto que medir menos veces.
    Contrapesos: la escucha del día ocurre igual todas las semanas, y la
-   línea base de s01 repetida en s14 documenta el progreso de cada
+   línea base de s01 repetida en s15 documenta el progreso de cada
    estudiante sin calificarlo.
 
 ## Conexión con la fase siguiente

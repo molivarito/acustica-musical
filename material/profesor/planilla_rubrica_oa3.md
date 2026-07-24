@@ -1,32 +1,38 @@
-# Planilla de rúbrica OA3 — Escucha argumentada (ronda oral)
+# Planilla de rúbrica OA3 — Escucha argumentada escrita
 
-**Uso**: registro en vivo de la ronda oral de la "escucha del día"
-(formato 4 de [`METODOLOGIA.md`](../../METODOLOGIA.md) §2), sesiones s02–s14. Cubre el
-20 % de la nota del curso. La rúbrica completa vive en
-[`METODOLOGIA.md`](../../METODOLOGIA.md) §5; esta planilla es su versión operativa
-para el aula (imprimir una copia por sesión, o llevarla como hoja de
-cálculo).
+**Uso**: hoja de registro para corregir las tres escuchas argumentadas
+**escritas** del curso (fila "Escucha argumentada escrita (OA3)" de
+[`METODOLOGIA.md`](../../METODOLOGIA.md) §4):
+**E1** (Parte A de la Prueba 1, s07), **E2** (Parte A de la Prueba 2,
+s13) y **E3** (bloque ★ de la hoja de escucha de s15). **Ya no se usa
+en clase**: la escucha del día (práctica semanal de la sesión, s02–s14)
+no se registra aquí ni en ninguna otra planilla — no lleva nota nunca.
+Este instrumento cubre el 10 % de la nota del curso (OA3). La rúbrica
+completa vive en [`METODOLOGIA.md`](../../METODOLOGIA.md) §5; esta
+planilla es su versión operativa para corregir (imprimir una copia por
+evento, o llevarla como hoja de cálculo).
 
-## Cómo se usa (2 minutos antes de cada clase)
+## Por qué se evalúa por escrito
 
-1. **Sorteo sin reposición**: antes de s02, ordene la nómina de los 20
-   estudiantes en una lista barajada (una sola vez). En cada sesión
-   pasan **los 4 siguientes de la lista**; se tachan al pasar. **Nadie
-   repite hasta que la lista se agota** (5 sesiones por pasada). Al
-   agotarse, se vuelve a barajar y comienza la pasada siguiente. Con
-   ronda en s02–s14 (~13 sesiones) cada estudiante pasa **~3 veces** en
-   el semestre. Ausente el día que le toca: pasa al inicio de la cola de
-   su pasada (no pierde el turno, lo posterga).
-2. **Durante la intervención (2,5′ con cronómetro visible)**: marque UN
-   nivel (1–4) por dimensión, en caliente. No redacte comentarios:
-   marque y siga. Si el estudiante se bloquea, reformule por dimensiones
-   (¿qué oyó? → ¿por qué? → ¿cómo lo verificaría?) y evalúe lo
-   efectivamente dicho.
-3. **Puntaje y nota**: puntaje = D1+D2+D3+D4 (rango 4–16);
+Calificar el diagnóstico auditivo en vivo premiaba el oído entrenado
+con que llega el estudiante de música, no lo que el curso enseña
+(equidad/validez). Por escrito, con el mismo audio, varias pasadas y
+tiempo para pensar, se evalúa lo que sí enseña el curso: la cadena
+hipótesis–verificación–argumento. Ver `METODOLOGIA.md` §4 (fila
+"Escucha argumentada escrita (OA3)") y §5 ("Equidad de la dimensión
+D1"). **La escucha del día, en ninguna de sus semanas, se registra ni
+se convierte en nota**: su función es formativa y de lenguaje común, no
+de evaluación.
+
+## Cómo se corrige
+
+1. Marque un nivel (1–4) por dimensión (D1–D4) sobre lo escrito por el
+   estudiante.
+2. **Puntaje y nota**: puntaje = D1+D2+D3+D4 (rango 4–16);
    **nota = 1 + (puntaje − 4) / 2**.
-4. **Cierre del semestre**: para cada estudiante cuentan sus
-   **mejores 2 notas de las ~3 pasadas** (promedio simple). Se registra
-   en la tabla resumen del final.
+3. **Cierre del semestre**: para cada estudiante cuentan sus
+   **mejores 2 notas de las 3 escuchas** (promedio simple) → nota OA3
+   (10 % del curso). Se registra en la tabla resumen del final.
 
 ## Recordatorio de la rúbrica (versión de bolsillo; la completa en `METODOLOGIA.md` §5)
 
@@ -45,88 +51,84 @@ cálculo).
 
 Umbral de aprobación (4,0) = 10 puntos.
 
-## Pasada 1 (sesiones s02–s06 aprox.)
+## E1 — Parte A de la Prueba 1 (s07)
 
-| Nº | Estudiante | Fecha | Estímulo | D1 | D2 | D3 | D4 | Puntaje | Nota |
-|---|---|---|---|---|---|---|---|---|---|
-| 1 | | | | | | | | | |
-| 2 | | | | | | | | | |
-| 3 | | | | | | | | | |
-| 4 | | | | | | | | | |
-| 5 | | | | | | | | | |
-| 6 | | | | | | | | | |
-| 7 | | | | | | | | | |
-| 8 | | | | | | | | | |
-| 9 | | | | | | | | | |
-| 10 | | | | | | | | | |
-| 11 | | | | | | | | | |
-| 12 | | | | | | | | | |
-| 13 | | | | | | | | | |
-| 14 | | | | | | | | | |
-| 15 | | | | | | | | | |
-| 16 | | | | | | | | | |
-| 17 | | | | | | | | | |
-| 18 | | | | | | | | | |
-| 19 | | | | | | | | | |
-| 20 | | | | | | | | | |
+| Nº | Estudiante | D1 | D2 | D3 | D4 | Puntaje | Nota |
+|---|---|---|---|---|---|---|---|
+| 1 | | | | | | | |
+| 2 | | | | | | | |
+| 3 | | | | | | | |
+| 4 | | | | | | | |
+| 5 | | | | | | | |
+| 6 | | | | | | | |
+| 7 | | | | | | | |
+| 8 | | | | | | | |
+| 9 | | | | | | | |
+| 10 | | | | | | | |
+| 11 | | | | | | | |
+| 12 | | | | | | | |
+| 13 | | | | | | | |
+| 14 | | | | | | | |
+| 15 | | | | | | | |
+| 16 | | | | | | | |
+| 17 | | | | | | | |
+| 18 | | | | | | | |
+| 19 | | | | | | | |
+| 20 | | | | | | | |
 
-## Pasada 2 (sesiones s07–s11 aprox.)
+## E2 — Parte A de la Prueba 2 (s13)
 
-| Nº | Estudiante | Fecha | Estímulo | D1 | D2 | D3 | D4 | Puntaje | Nota |
-|---|---|---|---|---|---|---|---|---|---|
-| 1 | | | | | | | | | |
-| 2 | | | | | | | | | |
-| 3 | | | | | | | | | |
-| 4 | | | | | | | | | |
-| 5 | | | | | | | | | |
-| 6 | | | | | | | | | |
-| 7 | | | | | | | | | |
-| 8 | | | | | | | | | |
-| 9 | | | | | | | | | |
-| 10 | | | | | | | | | |
-| 11 | | | | | | | | | |
-| 12 | | | | | | | | | |
-| 13 | | | | | | | | | |
-| 14 | | | | | | | | | |
-| 15 | | | | | | | | | |
-| 16 | | | | | | | | | |
-| 17 | | | | | | | | | |
-| 18 | | | | | | | | | |
-| 19 | | | | | | | | | |
-| 20 | | | | | | | | | |
+| Nº | Estudiante | D1 | D2 | D3 | D4 | Puntaje | Nota |
+|---|---|---|---|---|---|---|---|
+| 1 | | | | | | | |
+| 2 | | | | | | | |
+| 3 | | | | | | | |
+| 4 | | | | | | | |
+| 5 | | | | | | | |
+| 6 | | | | | | | |
+| 7 | | | | | | | |
+| 8 | | | | | | | |
+| 9 | | | | | | | |
+| 10 | | | | | | | |
+| 11 | | | | | | | |
+| 12 | | | | | | | |
+| 13 | | | | | | | |
+| 14 | | | | | | | |
+| 15 | | | | | | | |
+| 16 | | | | | | | |
+| 17 | | | | | | | |
+| 18 | | | | | | | |
+| 19 | | | | | | | |
+| 20 | | | | | | | |
 
-## Pasada 3 (sesiones s12–s14 aprox.; puede quedar incompleta)
+## E3 — bloque ★ de la hoja de escucha (s15)
 
-| Nº | Estudiante | Fecha | Estímulo | D1 | D2 | D3 | D4 | Puntaje | Nota |
-|---|---|---|---|---|---|---|---|---|---|
-| 1 | | | | | | | | | |
-| 2 | | | | | | | | | |
-| 3 | | | | | | | | | |
-| 4 | | | | | | | | | |
-| 5 | | | | | | | | | |
-| 6 | | | | | | | | | |
-| 7 | | | | | | | | | |
-| 8 | | | | | | | | | |
-| 9 | | | | | | | | | |
-| 10 | | | | | | | | | |
-| 11 | | | | | | | | | |
-| 12 | | | | | | | | | |
-| 13 | | | | | | | | | |
-| 14 | | | | | | | | | |
-| 15 | | | | | | | | | |
-| 16 | | | | | | | | | |
-| 17 | | | | | | | | | |
-| 18 | | | | | | | | | |
-| 19 | | | | | | | | | |
-| 20 | | | | | | | | | |
+| Nº | Estudiante | D1 | D2 | D3 | D4 | Puntaje | Nota |
+|---|---|---|---|---|---|---|---|
+| 1 | | | | | | | |
+| 2 | | | | | | | |
+| 3 | | | | | | | |
+| 4 | | | | | | | |
+| 5 | | | | | | | |
+| 6 | | | | | | | |
+| 7 | | | | | | | |
+| 8 | | | | | | | |
+| 9 | | | | | | | |
+| 10 | | | | | | | |
+| 11 | | | | | | | |
+| 12 | | | | | | | |
+| 13 | | | | | | | |
+| 14 | | | | | | | |
+| 15 | | | | | | | |
+| 16 | | | | | | | |
+| 17 | | | | | | | |
+| 18 | | | | | | | |
+| 19 | | | | | | | |
+| 20 | | | | | | | |
 
-## Resumen del semestre (mejores 2 de ~3 pasadas)
+## Resumen del semestre (mejores 2 de 3)
 
-Si la pasada 3 quedó incompleta para un estudiante, sus mejores 2 se
-toman de las pasadas que efectivamente tuvo (mínimo 2 garantizadas por
-el calendario).
-
-| Nº | Estudiante | Nota P1 | Nota P2 | Nota P3 | Mejores 2 (promedio) = **Nota OA3 (20 %)** |
+| Nº | Estudiante | Nota E1 | Nota E2 | Nota E3 | Mejores 2 (promedio) = **Nota OA3 (10 %)** |
 |---|---|---|---|---|---|
 | 1 | | | | | |
 | 2 | | | | | |
@@ -148,3 +150,7 @@ el calendario).
 | 18 | | | | | |
 | 19 | | | | | |
 | 20 | | | | | |
+
+**Advertencia**: la escucha del día (s02–s14) no se registra en esta
+planilla ni en ninguna otra — no lleva nota, en ninguna semana, bajo
+ninguna circunstancia.

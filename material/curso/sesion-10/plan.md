@@ -6,10 +6,10 @@ sobre la afinación, y contrastar con el resultado sonoro), OA1.3
 (panorama de los mecanismos de excitación que organiza el bloque C:
 impulsivo / frotado / soplado / cantado; siembra de la oscilación
 auto-sostenida y el régimen de oscilación, BEN 20.2), OA5.2 (**hito 2
-del proyecto, 8 %**: avance con evidencia sonora y medida) y OA3.2
+del proyecto, 10 %**: avance con evidencia sonora y medida) y OA3.2
 (clínica de proyecto: conectar sensación, mecanismo y medición del
-objeto propio y del ajeno). Transversales: OA3.1 (escucha del día, con
-nota, pasada 2) y OA4.1 (afinador y espectrograma sobre las botellas).
+objeto propio y del ajeno). Transversales: OA3.1 (escucha del día,
+práctica sin nota) y OA4.1 (afinador y espectrograma sobre las botellas).
 **Requisitos previos**: s03 (modos y frecuencias características: cada
 objeto tiene SUS frecuencias), s06 (energía y niveles: sonar más fuerte
 = entregar energía más rápido), s09 (afinar el objeto = cambiar su
@@ -31,14 +31,15 @@ mecanismos se le entrega energía a un instrumento (panorama del bloque
 C). s11 (cuerdas frotadas) y s12 (vientos) desarrollan la oscilación
 auto-sostenida que aquí solo se siembra.
 **Reglas aplicadas y decisiones de carga (declaradas)**: escucha del
-día (15′: estímulo 3′ + escritura 2′ + ronda de 4 sorteados × 2,5′ con
-cronómetro visible) en el primer bloque del módulo 1 — precedida solo
-por la entrega administrativa del hito 2 (5′, precedente de s08 con la
-devolución); módulo 2 abre con gancho sonoro sin ronda; la lectura
-previa se consume en la mini-lección del módulo 1 (principio 6).
+día (10′, sin nota: dos pasadas del estímulo + 2′ de escritura + 3′ de
+discusión en la mesa + 3′ de plenario) en el primer bloque del módulo 1
+— precedida solo por la entrega administrativa del hito 2 (5′,
+precedente de s08 con la devolución); módulo 2 abre con gancho sonoro
+sin escucha del día; la lectura previa se consume en la mini-lección
+del módulo 1 (principio 6).
 Decisiones: (1) el **taller EVALUADO de la semana es el de resonancia
-con botellas** (rúbrica rápida, cuenta en el 25 % de talleres); el hito
-2 se evalúa aparte (8 %, pauta propia); (2) el **taller de la serie
+con botellas** (rúbrica rápida, cuenta en el 35 % de talleres); el hito
+2 se evalúa aparte (10 %, pauta propia); (2) el **taller de la serie
 s08–s12 de esta semana ES el hito 2 + la clínica** (el compilado se
 construyó en s08–s09); la pregunta "¿dónde están las resonancias de mi
 objeto?" NO se ejecuta en aula por tiempo: queda como **compromiso
@@ -57,10 +58,10 @@ consistente con $f_1, f_n$ de `PLAN_SEMESTRE.md`).
 
 | Tiempo | Bloque | Actividad del estudiante | Rol del profesor | Materiales |
 |---|---|---|---|---|
-| 0–5′ | **Entrega del hito 2 (OA5.2, 8 %)** | Entrega el compilado del grupo (radiografía s08 + mapa de escala s09 + bitácora al día + estado vs. hito 1) y cada integrante deposita su **coevaluación en sobre cerrado**; anota en la bitácora la fecha de entrega | Recibe y verifica contra lista (5 compilados + 20 sobres); recuerda la regla: la coevaluación ajusta la nota individual hasta ±0,5 (metodología §4); anuncia que la clínica del módulo 2 trabaja SOBRE lo recién entregado (cada grupo conserva una copia o foto de su compilado) | Pauta `pauta_hito2_avance.md` (publicada en s09); caja para sobres; lista de curso |
-| 5–20′ | **Escucha del día (OA3.1, con nota; OA1.2): se cobra el ticket de s09** | Escucha el estímulo (3′, dos pasadas): un tono que sube lenta y parejamente, pero cuya sonoridad se **infla** bruscamente al pasar por un punto y luego un "golpe" que suena justo en esa altura con un ping largo; segunda pasada igual pero el inflamiento es suave y ancho y el ping del golpe muere enseguida; todos escriben diagnóstico en 3 líneas (2′): describir → hipotetizar el mecanismo (¿qué hay en ese punto?) → proponer verificación; **4 sorteados** exponen (**2,5′ c/u, cronómetro visible**) | Opera [`demo_resonancia.html`](../../demos/demo_resonancia.html) en modo presentación (números ocultos): pasada 1 con amortiguamiento bajo (pico angosto, ping largo), pasada 2 con amortiguamiento alto (pico ancho, ping corto); evalúa con la planilla OA3 (pasada 2) premiando D1 (¿separa la altura que sube parejo de la sonoridad que se infla?, ¿nota que el golpe cae EN la misma altura?) y D2 (¿invoca una frecuencia propia del sistema — el ticket de s09?); lee 2–3 tickets de s09 y los conecta: eso que "prefiere" el sistema tiene nombre y hoy se mide | [`demo_resonancia.html`](../../demos/demo_resonancia.html) proyectada (modo presentación); tickets de s09; planilla rúbrica OA3 (pasada 2); cronómetro |
-| 20–35′ | **Mini-lección: forzar un sistema que ya tiene opinión (OA1.2, OA1.3)** — consume la lectura previa | Rehace con el profesor el vocabulario del capítulo sobre el columpio: oscilación **libre** (lo sueltas: vibra en SU $f_0$ y decae) vs. **forzada** (lo empujas a la frecuencia que TÚ quieras: responde poco… salvo que coincidas); ve la **curva de respuesta** dibujarse en la demo al barrer; responde votaciones: "si empujo el columpio casi a su ritmo pero no exacto, ¿qué pasa?" (responde a medias y 'forcejea'), "un resonador con MUY poco roce, ¿responde a más o a menos notas?" (a menos: pico angosto), "¿y tarda más o menos en arrancar?" (más: el transiente dura ~lo que dura su ping libre) | Conduce con la demo (barrido manual lento + slider de amortiguamiento): el pico angosto/ancho y el transiente largo/corto son LAS DOS CARAS del mismo amortiguamiento (BEN 10.2–10.3, 10.7: la bandeja de lata que zumba solo con una nota de la orquesta); cierra anunciando el taller: "la botella es un resonador de aire con $f_0$ medible — y ustedes van a predecir qué le pasa a esa $f_0$ al cambiarle el volumen de aire" | [`demo_resonancia.html`](../../demos/demo_resonancia.html) proyectada (modo normal); pizarrón (curva de respuesta y las dos caras del amortiguamiento) |
-| 35–62′ | **Taller PEE: la botella que canta (OA1.2, OA4.1, OA2.1) — formato 2, EVALUADO** | En grupo con su kit (2′ de instalación): escribe las **2 predicciones** ANTES de sonar nada: (P1) si soplo la botella vacía y luego con agua hasta la mitad, ¿la nota sube o baja, y cuánto (en semitonos, aprox.)?; (P2) si en vez de soplar la GOLPEO con la cuchara, ¿el agua la sube o la baja?; fase A (soplar): cada integrante sopla y mide con afinador/espectrograma un nivel de agua distinto (vacía, 1/3, 1/2, 2/3), tabula $f$ en Hz y nota; fase B (golpear): golpea la botella vacía y con 1/2 de agua, mide y tabula; **contraste**: ¿las dos preguntas dieron la MISMA dirección? explica quién vibra en cada caso; fase C (opcional, grupos rápidos): copa frotada con dedo mojado vs. golpeada — ¿misma altura? | Rota por los grupos (~5′ c/u); vigila predicción escrita ANTES del primer soplido y condiciones anotadas (app, gesto); enseña el truco del soplido rasante donde haga falta (plan B: palmada sobre la boca de la botella — el "tock" también se mide en el espectrograma); provoca: "¿quién vibra cuando sopla — el vidrio o el aire?", "al dejar la mitad del aire, ¿la nota subió una octava o menos? ¿cuánto predice la proporción?", "¿por qué golpear y soplar dan direcciones opuestas?" | 5 kits: botella de vidrio idéntica + jarra con agua + embudo + cuchara + paño (+ 1 copa de vino, fase C); celulares con afinador y espectrograma; guía `guia_pee_resonancia_botellas.md` (1 por grupo) |
+| 0–5′ | **Entrega del hito 2 (OA5.2, 10 %)** | Entrega el compilado del grupo (radiografía s08 + mapa de escala s09 + bitácora al día + estado vs. hito 1) y cada integrante deposita su **coevaluación en sobre cerrado**; anota en la bitácora la fecha de entrega | Recibe y verifica contra lista (5 compilados + 20 sobres); recuerda la regla: la coevaluación ajusta la nota individual hasta ±0,5 (metodología §4); anuncia que la clínica del módulo 2 trabaja SOBRE lo recién entregado (cada grupo conserva una copia o foto de su compilado) | Pauta `pauta_hito2_avance.md` (publicada en s09); caja para sobres; lista de curso |
+| 5–15′ | **Escucha del día (OA3.1, práctica sin nota; OA1.2): se cobra el ticket de s09** | Escucha el estímulo, **dos pasadas** (~2′): un tono que sube lenta y parejamente, pero cuya sonoridad se **infla** bruscamente al pasar por un punto y luego un "golpe" que suena justo en esa altura con un ping largo (amortiguamiento bajo); segunda pasada igual pero el inflamiento es suave y ancho y el ping del golpe muere enseguida (amortiguamiento alto); todos escriben diagnóstico en 3 líneas (2′): describir → hipotetizar el mecanismo (¿qué hay en ese punto?) → proponer verificación; discuten en la mesa (3′): el vocero anota el diagnóstico consensuado; plenario (3′): responde el vocero de una o dos mesas | Opera [`demo_resonancia.html`](../../demos/demo_resonancia.html) en modo presentación (números ocultos): pasada 1 con amortiguamiento bajo (pico angosto, ping largo), pasada 2 con amortiguamiento alto (pico ancho, ping corto); pregunta selectivamente en el plenario buscando D1 (¿separa la altura que sube parejo de la sonoridad que se infla?, ¿nota que el golpe cae EN la misma altura?) y D2 (¿invoca una frecuencia propia del sistema — el ticket de s09?); lee 2–3 tickets de s09 y los conecta: eso que "prefiere" el sistema tiene nombre y hoy se mide | [`demo_resonancia.html`](../../demos/demo_resonancia.html) proyectada (modo presentación); tickets de s09 |
+| 15–30′ | **Mini-lección: forzar un sistema que ya tiene opinión (OA1.2, OA1.3)** — consume la lectura previa | Rehace con el profesor el vocabulario del capítulo sobre el columpio: oscilación **libre** (lo sueltas: vibra en SU $f_0$ y decae) vs. **forzada** (lo empujas a la frecuencia que TÚ quieras: responde poco… salvo que coincidas); ve la **curva de respuesta** dibujarse en la demo al barrer; responde votaciones: "si empujo el columpio casi a su ritmo pero no exacto, ¿qué pasa?" (responde a medias y 'forcejea'), "un resonador con MUY poco roce, ¿responde a más o a menos notas?" (a menos: pico angosto), "¿y tarda más o menos en arrancar?" (más: el transiente dura ~lo que dura su ping libre) | Conduce con la demo (barrido manual lento + slider de amortiguamiento): el pico angosto/ancho y el transiente largo/corto son LAS DOS CARAS del mismo amortiguamiento (BEN 10.2–10.3, 10.7: la bandeja de lata que zumba solo con una nota de la orquesta); cierra anunciando el taller: "la botella es un resonador de aire con $f_0$ medible — y ustedes van a predecir qué le pasa a esa $f_0$ al cambiarle el volumen de aire" | [`demo_resonancia.html`](../../demos/demo_resonancia.html) proyectada (modo normal); pizarrón (curva de respuesta y las dos caras del amortiguamiento) |
+| 30–62′ | **Taller PEE: la botella que canta (OA1.2, OA4.1, OA2.1) — formato 2, EVALUADO** | En grupo con su kit (2′ de instalación): escribe las **2 predicciones** ANTES de sonar nada: (P1) si soplo la botella vacía y luego con agua hasta la mitad, ¿la nota sube o baja, y cuánto (en semitonos, aprox.)?; (P2) si en vez de soplar la GOLPEO con la cuchara, ¿el agua la sube o la baja?; fase A (soplar): cada integrante sopla y mide con afinador/espectrograma un nivel de agua distinto (vacía, 1/3, 1/2, 2/3), tabula $f$ en Hz y nota; fase B (golpear): golpea la botella vacía y con 1/2 de agua, mide y tabula; **contraste**: ¿las dos preguntas dieron la MISMA dirección? explica quién vibra en cada caso; fase C (opcional, grupos rápidos): copa frotada con dedo mojado vs. golpeada — ¿misma altura? | Rota por los grupos (~5′ c/u); vigila predicción escrita ANTES del primer soplido y condiciones anotadas (app, gesto); enseña el truco del soplido rasante donde haga falta (plan B: palmada sobre la boca de la botella — el "tock" también se mide en el espectrograma); provoca: "¿quién vibra cuando sopla — el vidrio o el aire?", "al dejar la mitad del aire, ¿la nota subió una octava o menos? ¿cuánto predice la proporción?", "¿por qué golpear y soplar dan direcciones opuestas?" | 5 kits: botella de vidrio idéntica + jarra con agua + embudo + cuchara + paño (+ 1 copa de vino, fase C); celulares con afinador y espectrograma; guía `guia_pee_resonancia_botellas.md` (1 por grupo) |
 | 62–70′ | Cierre: contraste y moraleja (OA1.2, OA3.2) | UN grupo expone su tabla (regla de metodología §7); todos contrastan su predicción P1/P2 con el resultado y anotan la moraleja: soplar excita el **aire** (menos aire → más agudo), golpear excita el **vidrio con su carga** (más masa → más grave) — "qué suena" depende de **a quién le entrego la energía**; puente al módulo 2: la clínica pregunta exactamente eso de SU objeto | Superpone en el pizarrón las direcciones de los 5 grupos (¿todos vieron subir al soplar y bajar al golpear?); nombra el resonador de Helmholtz (botella = masa de aire del cuello + resorte de aire del cuerpo, ROS cap. 4) sin fórmula (la fórmula queda en recuadro del apunte); anuncia el descanso y que el módulo 2 abre con "el experimento del elástico" | Pizarrón; tablas de los grupos |
 
 ## Módulo 2 — La clínica del hito 2 (variante: discusión de proyecto, adaptada)
@@ -74,17 +75,17 @@ consistente con $f_1, f_n$ de `PLAN_SEMESTRE.md`).
 
 ## Verificación de aprendizaje
 
-- **Hito 2 (OA5.2, 8 %)**: 5 compilados + 20 coevaluaciones recibidos y
+- **Hito 2 (OA5.2, 10 %)**: 5 compilados + 20 coevaluaciones recibidos y
   fechados; se corrige con `pauta_hito2_avance.md` (≈2 h, pico declarado
   en metodología §4); **riesgo 4 de metodología §7**: el profesor lee
   las coevaluaciones ESTA semana y cita a conversación breve a los
   grupos con asimetría fuerte (≥2 puntos entre integrantes) antes de
   s12.
-- **Ronda oral OA3 (con nota, pasada 2)**: 4 registros nuevos; el
-  estímulo exige D1 fino (altura que sube parejo vs. sonoridad que se
-  infla; ping largo vs. corto) y D2 conectado al ticket de s09
-  (frecuencia propia).
-- **Taller de botellas (OA1.2, EVALUADO, 25 % talleres)**: rúbrica
+- **Escucha del día**: práctica no calificada; el estímulo exige D1 fino
+  (altura que sube parejo vs. sonoridad que se infla; ping largo vs.
+  corto) y D2 conectado al ticket de s09 (frecuencia propia). La
+  evidencia de OA3 se recoge por escrito en s07, s13 y s15.
+- **Taller de botellas (OA1.2, EVALUADO, 35 % talleres)**: rúbrica
   rápida logrado/parcial/incipiente sobre la guía: 2 predicciones
   escritas antes de sonar, ≥4 mediciones tabuladas en Hz con
   condiciones, contraste honesto (¿soplar y golpear dieron direcciones
@@ -105,17 +106,17 @@ consistente con $f_1, f_n$ de `PLAN_SEMESTRE.md`).
 
 ## Aritmética de taller declarada (regla 6b)
 
-- **Módulo 1**: 5 + 15 + 15 + 27 + 8 = 70′ ✓. Escucha del día: 3′ + 2′ +
-  4 × 2,5′ = 15′ ✓.
-- **Taller de botellas (m1, 35–62′)**: 27′ = 2′ instalación + 25′ de
-  trabajo: predicciones 3′ + fase A 12′ (4 niveles de agua × ~3′ por
+- **Módulo 1**: 5 + 10 + 15 + 32 + 8 = 70′ ✓. Escucha del día: ~2′ (dos
+  pasadas) + 2′ escritura + 3′ discusión de mesa + 3′ plenario = 10′ ✓.
+- **Taller de botellas (m1, 30–62′)**: 32′ = 2′ instalación + 30′ de
+  trabajo: predicciones 3′ + fase A 15′ (4 niveles de agua × ~3,75′ por
   integrante: soplar, estabilizar la lectura del afinador, anotar; el
-  agua se ajusta con embudo entre turnos) + fase B 4′ + contraste y
-  explicación en la guía 6′. **Manos en la medición: ~3′ por persona**
+  agua se ajusta con embudo entre turnos) + fase B 5′ + contraste y
+  explicación en la guía 7′. **Manos en la medición: ~3,5′ por persona**
   ✓ ≥2′ (cada integrante sopla y mide SU nivel; roles registra/mide
   rotan por turno); fase C declarada opcional. Sin cuello de material
-  (1 kit por grupo, ≥2 celulares por grupo). Profesor: 5 grupos × ~5′ =
-  25′ ✓.
+  (1 kit por grupo, ≥2 celulares por grupo). Profesor: 5 grupos × ~5–6′
+  ≈ 27–30′ ✓.
 - **Módulo 2**: 10 + 30 + 18 + 12 = 70′ ✓.
 - **Clínicas (m2, 10–40′)**: 30′ = 2′ de organización + 2 rondas de 14′
   en las parejas (6′ presentación + 5′ retroalimentación con pauta + 3′
@@ -141,7 +142,7 @@ consistente con $f_1, f_n$ de `PLAN_SEMESTRE.md`).
 - **Capítulo (lectura previa)**: [`libro/cap10_resonancia_e_impedancia.md`](../../libro/cap10_resonancia_e_impedancia.md)
   (sin revelar los resultados de P1/P2 del taller ni del elástico).
 - **Actividades**: guía PEE evaluada `guia_pee_resonancia_botellas.md`
-  (1 por grupo) + `pauta_hito2_avance.md` (entrega, rúbrica del 8 % y
+  (1 por grupo) + `pauta_hito2_avance.md` (entrega, rúbrica del 10 % y
   formulario de coevaluación — publicar ANTES de s10, idealmente con el
   anuncio de s09) + `pauta_clinica_pares.md` (2 fortalezas, 2 dudas, 1
   sugerencia medible + protocolo del mapa de resonancias como
@@ -156,10 +157,9 @@ consistente con $f_1, f_n$ de `PLAN_SEMESTRE.md`).
   barrido DEBE oírse con los parlantes; ensayar las dos pasadas de la
   escucha con amortiguamiento bajo/alto); calibrar las 5 botellas
   (soplarlas y verificar que el afinador engancha); imprimir 6 guías de
-  botellas + 12 pautas de clínica; planilla OA3 con el sorteo de la
-  pasada 2; caja y sobres para la coevaluación; recordatorio por
-  correo: **compilado del hito 2 + coevaluación impresa + objeto del
-  proyecto**.
+  botellas + 12 pautas de clínica; caja y sobres para la coevaluación;
+  recordatorio por correo: **compilado del hito 2 + coevaluación
+  impresa + objeto del proyecto**.
 - **Trabajo posterior del profesor (pico declarado)**: corrección del
   hito 2 con la pauta (≈2 h) + lectura de coevaluaciones y citas por
   asimetría (riesgo 4) — nota publicada antes de s12.

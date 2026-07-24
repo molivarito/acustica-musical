@@ -8,9 +8,9 @@ auto-sostenida — el chorro sobre el bisel como válvula gobernada por la
 columna; abierto vs. cerrado y sus registros), OA5.2 (cierre formal de
 la serie del objeto s08–s12: revisión de bitácoras con los dos
 compromisos exigibles + el ciclo construir-medir-explicar vivido en
-carne propia). Transversales: OA3.1 (escucha del día, con nota),
-OA4.1 (espectrograma sobre la flauta real; afinador como instrumento
-de medición).
+carne propia). Transversales: OA3.1 (escucha del día, práctica sin
+nota), OA4.1 (espectrograma sobre la flauta real; afinador como
+instrumento de medición).
 **Requisitos previos**: s10 (resonancia, curva de respuesta, impedancia,
 régimen de oscilación sembrado), s11 (oscilación auto-sostenida con
 fricción: la válvula y su metrónomo; cadena excitador→resonador→
@@ -35,12 +35,12 @@ columna de aire. Aquí cierra la serie del objeto s08–s12. s13 abre con
 la **Prueba 2** (módulo 1, temario s08–s12) y sigue con la voz: el
 ticket de hoy siembra fuente-filtro.
 **Reglas aplicadas y decisiones de carga (declaradas)**: escucha del día
-(15′: estímulo 3′ + escritura 2′ + ronda de 4 sorteados × 2,5′ con
-cronómetro visible) abre el módulo 1; módulo 2 abre con gancho sonoro
-breve sin ronda; la lectura previa se consume en la mini-lección del
-módulo 1 (principio 6). Decisiones: (1) **un solo taller evaluado**: la
+(10′, sin nota) abre el módulo 1; módulo 2 abre con gancho sonoro
+breve sin escucha del día; la lectura previa se consume en la
+mini-lección del módulo 1 (principio 6). Decisiones: (1) **un solo
+taller evaluado**: la
 guía PEE de construcción del tubo corre por los dos módulos y se evalúa
-UNA vez al cierre del m2 (rúbrica rápida; cuenta en el 25 % de
+UNA vez al cierre del m2 (rúbrica rápida; cuenta en el 35 % de
 talleres). (2) **Sin taladro en aula**: los agujeros laterales se
 enseñan sobre la flauta real del profesor y en la demo virtual, no en
 la construcción (seguridad + tiempo); la red de agujeros y la
@@ -66,10 +66,10 @@ a una línea; el anuncio de la Prueba 2 y el ticket NO se sacrifican.
 
 | Tiempo | Bloque | Actividad del estudiante | Rol del profesor | Materiales |
 |---|---|---|---|---|
-| 0–15′ | **Escucha del día (OA3.1, con nota; OA1.3): se cobra el ticket de s11** | Escucha en vivo (3′, dos pasadas): la flauta del profesor sostiene una nota con soplo suave y, **sin cambiar la digitación**, el soplo crece hasta que la nota **salta limpia una octava** (y una tercera pasada con soplo intermedio: sonido "roto", inestable, que no decide registro); todos escriben diagnóstico en 3 líneas (2′): describir (¿qué cambió y qué NO cambió?; el salto es discreto, no glissando) → hipotetizar (¿por qué soplar más fuerte no sube la altura de a poco sino de golpe?) → proponer verificación; **4 sorteados** exponen (**2,5′ c/u, cronómetro visible**) | Ejecuta (es su instrumento de especialidad); evalúa con la planilla OA3 premiando D1 (¿nota que la digitación no cambió y que el salto es a la octava, no a cualquier intervalo?) y D2 (¿invoca el ticket de s11: si hay nota estable tiene que haber válvula con metrónomo — y aquí la válvula no se ve?); lee 2–3 tickets de s11 en voz alta; deja armada la pregunta: "la válvula es el propio chorro — veamos cómo" | Flauta del profesor; tickets de s11; planilla rúbrica OA3; cronómetro |
-| 15–29′ | **Mini-lección: la columna de aire como resonador configurable (OA1.3, OA1.2)** — consume la lectura previa | Rehace con el profesor el argumento del capítulo, con la demo [`demo_tubo_agujeros.html`](../../demos/demo_tubo_agujeros.html) sonando como pizarra: (a) el **chorro sobre el bisel** es la válvula — el vaivén del aire del tubo lo empuja alternadamente adentro/afuera, y el tubo le pone el metrónomo (mismo régimen que s11, otra válvula); (b) la columna tiene **modos**, como la cuerda de s03, y responde votaciones: "si duplico el largo del tubo, ¿la nota…?" (baja una octava: $f_1 = v/2L$), "¿y si tapo un extremo?" (baja OTRA octava: $f_1 = v/4L$, y el timbre se 'vacía': quedan solo armónicos **impares**); (c) por eso la flauta (abierta) salta la **octava** y el clarinete (cerrado en la caña) salta la **docena** (12.ª) — el salto de la escucha explicado; agujeros: abrir un agujero ≈ cortar el tubo ahí (la demo lo muestra y suena) | Opera la demo proyectada CON audio (abierto vs. cerrado audible: espectro completo vs. impares; agujero que acorta); ancla cada paso en s10–s11 (resonador, válvula, régimen); menciona en UNA frase la red de agujeros y su frecuencia de corte (sello de Benade) como "el apellido fino que hoy no desarrollamos"; deja escrita en el pizarrón la caja de herramientas del taller: $f_1 = v/4L$ (tubo tapado), $v = 343$ m/s a 20 °C, 1 semitono ≈ 6 % ≈ 100 cents | [`demo_tubo_agujeros.html`](../../demos/demo_tubo_agujeros.html) proyectada con audio; pizarrón |
-| 29–41′ | Demo predictiva: radiografía de una flauta real (OA1.1, OA1.3, OA4.1) — formato 1 | Predice a mano alzada ANTES de cada paso: (1) con el espectrograma proyectado sobre una nota grave de la flauta: ¿espectro completo o solo impares? (completo: la flauta es un tubo **abierto** — la embocadura cuenta como extremo abierto); (2) destapando agujeros desde abajo, uno a uno: ¿la nota sube de a saltos o continuo? (escala: cada agujero "corta" el tubo más arriba); (3) ¿dos digitaciones distintas pueden dar (casi) la misma nota? (sí: horquillas — el tubo efectivo se puede fabricar de varias maneras); anota en la guía la **pregunta que el taller responde**: "¿puedo fabricar una nota a pedido cortando un tubo a la medida?" | Toca y mide en vivo (espectrograma + afinador proyectados); nombra cada resultado con el vocabulario de la mini-lección; muestra la flauta por dentro (el bisel, el corcho, la columna); anuncia el taller y sus roles: "ahora la lutería la hacen ustedes: cada grupo fabrica UNA nota de una escala que vamos a tocar juntos al final" | Flauta(s) del profesor; celular/notebook con espectrograma y afinador al proyector; guía del taller |
-| 41–70′ | **Taller PEE de lutería, fase 1: predecir y cortar (OA1.2, OA5.2, OA4.1) — formato 9, EVALUADO (guía única de la sesión)** | Instalación 3′ (kit por grupo: tubo PVC en bruto, cortatubo, lija, huincha, marcador; roles: **ejecuta** corta y sopla, **mide** afinador, **registra** llena la guía, **vocero**); **predicción** 6′: el grupo recibe su nota asignada (escala pentatónica: Sol4 392 Hz · La4 440 Hz · Si4 494 Hz · Re5 587 Hz · Mi5 659 Hz), calcula por escrito $L = v/4f_1$ para su tubo **tapado** (dos integrantes calculan por separado y comparan antes de marcar) y anota la casilla de predicción: "cortado a ___ cm, el afinador marcará ___ ± ___"; **corte** 8′: medir, marcar, cortar con cortatubo, lijar el borde (¡rebaba = labio cortado y nota sucia!), calzar la tapa; **primera medición** 6′: protocolo de soplo (borde al labio inferior, chorro fino al filo opuesto; lo demuestra el profesor en la instalación) — 3 lecturas de afinador con soplo suave, se registra la **mediana** en Hz y en cents vs. la nota objetivo; **registro público** 6′: el vocero escribe en la tabla del pizarrón: nota objetivo / L cortado / f medida / desviación en cents | Demuestra el soplo panpipe UNA vez en la instalación (técnica: "ffff" al filo); rota por los 5 grupos durante cálculo y corte (~2′ c/u): verifica la casilla de predicción ANTES de autorizar el corte (regla PEE), vigila el lijado (seguridad) y el protocolo de 3 lecturas; NO explica todavía la desviación: cuando la tabla del pizarrón queda llena, cierra el módulo señalándola: "cinco grupos, cinco tubos, y todos quedaron **bajos**. Todos. ¿Casualidad? Piénsenlo en el descanso" | 5 kits de lutería (tubo PVC ~30 cm en bruto Ø 20 mm, cortatubo, lija, tapa/cinta, huincha, marcador); celulares con afinador; guía `guia_pee_construccion_tubo.md` (1 por grupo); pizarrón con tabla de 5 filas preparada |
+| 0–10′ | **Escucha del día (OA3.1, práctica sin nota; OA1.3): se cobra el ticket de s11** | Todos anotan su diagnóstico en 3 líneas (describir → hipotetizar → verificar) (2′); discuten en la mesa y el vocero anota el diagnóstico consensuado del grupo (3′); en el plenario, el vocero de una o dos mesas responde por el grupo (3′) | Ejecuta (es su instrumento de especialidad), **dos pasadas** (~2′) en vivo: la flauta del profesor sostiene una nota con soplo suave y, **sin cambiar la digitación**, el soplo crece hasta que la nota **salta limpia una octava** (y una tercera pasada con soplo intermedio: sonido "roto", inestable, que no decide registro); pregunta selectivamente a una o dos mesas en el plenario, premiando que noten que la digitación no cambió y que el salto es a la octava, no a cualquier intervalo, y que invoquen el ticket de s11 (si hay nota estable tiene que haber válvula con metrónomo — y aquí la válvula no se ve); lee 2–3 tickets de s11 en voz alta; cierra dejando armada la pregunta: "la válvula es el propio chorro — veamos cómo" | Flauta del profesor; tickets de s11 |
+| 10–24′ | **Mini-lección: la columna de aire como resonador configurable (OA1.3, OA1.2)** — consume la lectura previa | Rehace con el profesor el argumento del capítulo, con la demo [`demo_tubo_agujeros.html`](../../demos/demo_tubo_agujeros.html) sonando como pizarra: (a) el **chorro sobre el bisel** es la válvula — el vaivén del aire del tubo lo empuja alternadamente adentro/afuera, y el tubo le pone el metrónomo (mismo régimen que s11, otra válvula); (b) la columna tiene **modos**, como la cuerda de s03, y responde votaciones: "si duplico el largo del tubo, ¿la nota…?" (baja una octava: $f_1 = v/2L$), "¿y si tapo un extremo?" (baja OTRA octava: $f_1 = v/4L$, y el timbre se 'vacía': quedan solo armónicos **impares**); (c) por eso la flauta (abierta) salta la **octava** y el clarinete (cerrado en la caña) salta la **docena** (12.ª) — el salto de la escucha explicado; agujeros: abrir un agujero ≈ cortar el tubo ahí (la demo lo muestra y suena) | Opera la demo proyectada CON audio (abierto vs. cerrado audible: espectro completo vs. impares; agujero que acorta); ancla cada paso en s10–s11 (resonador, válvula, régimen); menciona en UNA frase la red de agujeros y su frecuencia de corte (sello de Benade) como "el apellido fino que hoy no desarrollamos"; deja escrita en el pizarrón la caja de herramientas del taller: $f_1 = v/4L$ (tubo tapado), $v = 343$ m/s a 20 °C, 1 semitono ≈ 6 % ≈ 100 cents | [`demo_tubo_agujeros.html`](../../demos/demo_tubo_agujeros.html) proyectada con audio; pizarrón |
+| 24–36′ | Demo predictiva: radiografía de una flauta real (OA1.1, OA1.3, OA4.1) — formato 1 | Predice a mano alzada ANTES de cada paso: (1) con el espectrograma proyectado sobre una nota grave de la flauta: ¿espectro completo o solo impares? (completo: la flauta es un tubo **abierto** — la embocadura cuenta como extremo abierto); (2) destapando agujeros desde abajo, uno a uno: ¿la nota sube de a saltos o continuo? (escala: cada agujero "corta" el tubo más arriba); (3) ¿dos digitaciones distintas pueden dar (casi) la misma nota? (sí: horquillas — el tubo efectivo se puede fabricar de varias maneras); anota en la guía la **pregunta que el taller responde**: "¿puedo fabricar una nota a pedido cortando un tubo a la medida?" | Toca y mide en vivo (espectrograma + afinador proyectados); nombra cada resultado con el vocabulario de la mini-lección; muestra la flauta por dentro (el bisel, el corcho, la columna); anuncia el taller y sus roles: "ahora la lutería la hacen ustedes: cada grupo fabrica UNA nota de una escala que vamos a tocar juntos al final" | Flauta(s) del profesor; celular/notebook con espectrograma y afinador al proyector; guía del taller |
+| 36–70′ | **Taller PEE de lutería, fase 1: predecir y cortar (OA1.2, OA5.2, OA4.1) — formato 9, EVALUADO (guía única de la sesión)** | Instalación 3′ (kit por grupo: tubo PVC en bruto, cortatubo, lija, huincha, marcador; roles: **ejecuta** corta y sopla, **mide** afinador, **registra** llena la guía, **vocero**); **predicción** 6′: el grupo recibe su nota asignada (escala pentatónica: Sol4 392 Hz · La4 440 Hz · Si4 494 Hz · Re5 587 Hz · Mi5 659 Hz), calcula por escrito $L = v/4f_1$ para su tubo **tapado** (dos integrantes calculan por separado y comparan antes de marcar) y anota la casilla de predicción: "cortado a ___ cm, el afinador marcará ___ ± ___"; **corte** 8′: medir, marcar, cortar con cortatubo, lijar el borde (¡rebaba = labio cortado y nota sucia!), calzar la tapa; **primera medición** 6′: protocolo de soplo (borde al labio inferior, chorro fino al filo opuesto; lo demuestra el profesor en la instalación) — 3 lecturas de afinador con soplo suave, se registra la **mediana** en Hz y en cents vs. la nota objetivo; **registro público** 6′: el vocero escribe en la tabla del pizarrón: nota objetivo / L cortado / f medida / desviación en cents | Demuestra el soplo panpipe UNA vez en la instalación (técnica: "ffff" al filo); rota por los 5 grupos durante cálculo y corte (~2′ c/u): verifica la casilla de predicción ANTES de autorizar el corte (regla PEE), vigila el lijado (seguridad) y el protocolo de 3 lecturas; NO explica todavía la desviación: cuando la tabla del pizarrón queda llena, cierra el módulo señalándola: "cinco grupos, cinco tubos, y todos quedaron **bajos**. Todos. ¿Casualidad? Piénsenlo en el descanso" | 5 kits de lutería (tubo PVC ~30 cm en bruto Ø 20 mm, cortatubo, lija, tapa/cinta, huincha, marcador); celulares con afinador; guía `guia_pee_construccion_tubo.md` (1 por grupo); pizarrón con tabla de 5 filas preparada |
 
 ## Módulo 2 — Afinar es cortar (y saber por qué): taller de afinación y cierre de la serie del objeto (variante: experimental/formato 9 — el módulo ES el taller)
 
@@ -82,11 +82,12 @@ a una línea; el anuncio de la Prueba 2 y el ticket NO se sacrifican.
 
 ## Verificación de aprendizaje
 
-- **Ronda oral OA3 (con nota)**: 4 registros nuevos en la planilla; el
-  estímulo exige D1 fino (salto discreto de octava con digitación fija;
-  la pasada "rota" que no decide registro) y D2 conectado al ticket de
-  s11 (tiene que haber una válvula con metrónomo; aquí la válvula es el
-  chorro mismo).
+- **Escucha del día**: práctica no calificada; el estímulo exige
+  distinguir el salto discreto de octava con digitación fija (y la
+  pasada "rota" que no decide registro) y conectar con el ticket de
+  s11 (tiene que haber una válvula con metrónomo; aquí la válvula es
+  el chorro mismo); la evidencia de OA3 se recoge por escrito en s07,
+  s13 y s15.
 - **Taller de lutería (OA1.2, OA1.3, OA5.2 — EVALUADO, guía única)**:
   rúbrica rápida logrado/parcial/incipiente al recoger: casilla de
   predicción con el cálculo $L = v/4f_1$ hecho ANTES del corte (con
@@ -111,15 +112,16 @@ a una línea; el anuncio de la Prueba 2 y el ticket NO se sacrifican.
 
 ## Aritmética de taller declarada (regla 6b)
 
-- **Módulo 1**: 15 + 14 + 12 + 29 = 70′ ✓. Escucha del día: 3′ + 2′ +
-  4 × 2,5′ = 15′ ✓.
-- **Taller fase 1 (m1, 41–70′)**: 29′ = 3′ instalación + 6′ predicción
-  + 8′ corte + 6′ medición + 6′ registro público. Por grupo: 1 tubo,
+- **Módulo 1**: 10 + 14 + 12 + 34 = 70′ ✓. Escucha del día: 2′
+  (estímulo, dos pasadas) + 2′ (individual) + 3′ (mesa) + 3′
+  (plenario) = 10′ ✓.
+- **Taller fase 1 (m1, 36–70′)**: 34′ = 3′ instalación + 7′ predicción
+  + 9′ corte + 7′ medición + 8′ registro público. Por grupo: 1 tubo,
   1 cortatubo propio (sin cola entre grupos). Por persona: el cálculo
   lo hacen 2 integrantes en paralelo (≥3′ de aritmética cada uno), el
   corte/lijado ocupa a 2 (uno corta, uno mide y marca), y en la
   medición TODOS corren el afinador en su propio celular durante los
-  soplos (~4′ de medición activa por persona ✓ ≥2′); el registro
+  soplos (~5′ de medición activa por persona ✓ ≥2′); el registro
   oficial es 1 por grupo (roles).
 - **Módulo 2**: 7 + 42 + 12 + 9 = 70′ ✓.
 - **Taller fase 2 (m2, 7–49′)**: 42′ = 14′ (A: 3–4 iteraciones de
@@ -174,8 +176,8 @@ a una línea; el anuncio de la Prueba 2 y el ticket NO se sacrifican.
   taller; elegir qué flautas lleva (mínimo una con espectro cómodo de
   proyectar); dejar la flauta media hora fuera del estuche antes del
   m2 (gancho térmico); imprimir 6 guías del taller + 1 pauta de
-  bitácoras; planilla OA3 con el sorteo del día; lámina de anuncio de
-  la Prueba 2 (temario s08–s12 + calendario de estímulos); leer las
+  bitácoras; lámina de anuncio de la Prueba 2 (temario s08–s12 +
+  calendario de estímulos); leer las
   coevaluaciones del hito 2 y citar a los grupos con asimetría ANTES
   de esta sesión (pendiente arrastrado de s10).
 

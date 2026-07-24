@@ -23,17 +23,14 @@ format:
 
 ## Escucha del día
 
-Escuchen con atención (dos pasadas, 3′). Al terminar (2′), en 3 líneas:
+**Protocolo** (10′, sin nota):
 
 ::: {.incremental}
-- **Describan** qué cambió — y qué NO cambió
-- **Hipoteticen** por qué
-- **Propongan** cómo lo verificarían
+- Escuchan el estímulo, **dos pasadas**
+- Anotan en 3 líneas (**2′**): **describen** qué cambió y qué NO cambió, **hipotetizan** por qué, **proponen** cómo lo verificarían
+- Discuten en la mesa (**3′**): el vocero anota el diagnóstico del grupo
+- Plenario (**3′**): el profesor pregunta a una o dos mesas — responde el vocero por el grupo — y cierra con su propia versión
 :::
-
-. . .
-
-4 personas sorteadas exponen — 2,5′ cada una, cronómetro visible.
 
 ## El ticket que dejamos pendiente {.center}
 

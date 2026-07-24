@@ -22,17 +22,14 @@ format:
 
 ## Escucha del día
 
-Escuchen con atención. Al terminar (2′):
+**Protocolo** (10′, sin nota):
 
 ::: {.incremental}
-- **Describan** en 3 líneas lo que oyeron
-- **Hipoteticen** por qué la misma cuerda y el mismo arco dan resultados distintos
-- **Propongan** cómo lo verificarían
+- Escuchan el estímulo, **dos pasadas**
+- Anotan en 3 líneas (**2′**): **describen** lo que oyeron, **hipotetizan** por qué la misma cuerda y el mismo arco dan resultados distintos, **proponen** cómo lo verificarían
+- Discuten en la mesa (**3′**): el vocero anota el diagnóstico del grupo
+- Plenario (**3′**): el profesor pregunta a una o dos mesas — responde el vocero por el grupo — y cierra con su propia versión
 :::
-
-. . .
-
-4 personas sorteadas exponen — 2,5′ cada una, cronómetro visible.
 
 ## El ticket que dejamos pendiente {.center}
 

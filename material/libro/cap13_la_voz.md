@@ -26,7 +26,7 @@ individual, de respuesta corta y estructurada, y **suena** — estímulos
 por el equipo de la sala en momentos anunciados (cada uno dos veces,
 más una pasada de repaso), una hoja de figuras para leer e
 interpretar, y una **escucha escrita corta** evaluada con la misma
-rúbrica de la ronda oral: describir, hipotetizar, proponer
+rúbrica de escucha argumentada del curso: describir, hipotetizar, proponer
 verificación, y distinguir lo que se oye de lo que se interpreta. No
 necesita calculadora: la aritmética es de proporciones y de **sumas de
 cents** — el semitono de 100 que la sesión 09 dejó instalado.

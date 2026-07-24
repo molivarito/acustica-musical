@@ -164,7 +164,7 @@ presencial en clase; los talleres toleran hasta ~2 ausencias
 | 11 | 30-oct | Cuerdas frotadas y el cuerpo del instrumento | Traer instrumentos de cuerda frotada |
 | 12 | 06-nov | Vientos y lutería (sesión-taller completa) | Construcción de tubos; cierre de mediciones del objeto |
 | 13 | 13-nov | **Prueba 2** + la voz cantada (audición liviana) | **Prueba 2 (10 %)** + escucha escrita 2 |
-| 14 | 20-nov | La sala como instrumento; salida de medición de T60 | Informe de salas (último taller); se repite la línea base de escucha (sin nota); se publica pauta final |
+| 14 | 20-nov | La sala como instrumento; salida de medición de T60 | Informe de salas (último taller); se publica pauta final |
 | 15 | 27-nov | Presentaciones finales | **Presentación + informe (15 %)**; hoja de escucha (escucha escrita 3); coevaluación; cierre |
 
 **Calendario 2026-2**: clases los **viernes, 14:50–16:00 y

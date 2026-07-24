@@ -6,7 +6,7 @@ resonancia de la cuerda manda sobre la fricción), OA1.1 (modos del
 cuerpo del instrumento y su relación con lo que se oye; radiación),
 OA1.2 (predicciones semicuantitativas contrastadas con el instrumento
 real: punto de frotado, tapado de aberturas, apoyo). Transversales:
-OA3.1 (escucha del día, con nota, pasada 2), OA4.1 (espectrograma y SPL
+OA3.1 (escucha del día, práctica sin nota), OA4.1 (espectrograma y SPL
 sobre instrumento real), OA5.2 (serie del objeto s08–s12: protocolo de
 acoplamiento al aire, a bitácora).
 **Requisitos previos**: s10 completa (resonancia, curva de respuesta,
@@ -30,11 +30,11 @@ cadena cuerda→puente→tapa→aire. s12 (vientos y lutería) reutiliza el
 régimen de oscilación con otra válvula; la serie del objeto termina en
 s12.
 **Reglas aplicadas y decisiones de carga (declaradas)**: escucha del
-día (15′: estímulo 3′ + escritura 2′ + ronda de 4 sorteados × 2,5′ con
-cronómetro visible) abre el módulo 1; módulo 2 abre con gancho sonoro
-sin ronda; la lectura previa se consume en la mini-lección del módulo 1
-(principio 6). Decisiones: (1) **el taller EVALUADO de la semana es el
-del punto de frotado** (m1, rúbrica rápida, cuenta en el 25 % de
+día (10′, sin nota) abre el módulo 1; módulo 2 abre con gancho sonoro
+sin escucha del día; la lectura previa se consume en la mini-lección
+del módulo 1 (principio 6). Decisiones: (1) **el taller EVALUADO de la
+semana es el
+del punto de frotado** (m1, rúbrica rápida, cuenta en el 35 % de
 talleres); el bloque de acoplamiento de la serie del objeto (m2) va
 **sin nota**: es avance del proyecto y se cobra vía bitácora en el hito
 3. (2) s10 anunció que **el objeto del proyecto descansa hasta s12**;
@@ -62,10 +62,10 @@ instrumento (2′); los anuncios de s12 y el ticket NO se sacrifican.
 
 | Tiempo | Bloque | Actividad del estudiante | Rol del profesor | Materiales |
 |---|---|---|---|---|
-| 0–15′ | **Escucha del día (OA3.1, con nota; OA1.3): se cobra el ticket de s10** | Escucha el estímulo en vivo (3′, dos pasadas): la MISMA cuerda del instrumento frotado, primero con arco bien calibrado (nota larga, estable, rica) y luego con presión exagerada y arco lento (graznido crujiente sin altura estable) rematada con arco veloz y superficial (sonido "flautado", débil); todos escriben diagnóstico en 3 líneas (2′): describir las tres versiones → hipotetizar por qué la misma cuerda y el mismo arco dan nota o ruido → proponer verificación; **4 sorteados** exponen (**2,5′ c/u, cronómetro visible**) | Dirige al ejecutante (estudiante que trajo el instrumento; ensayado 2′ antes de clase) o ejecuta él mismo el plan B (guitarra con resina); evalúa con la planilla OA3 (pasada 2) premiando D1 (¿separa altura estable / altura errática / sonoridad / rugosidad?) y D2 (¿invoca el ticket de s10: alguien tiene que estar organizando la entrega de energía en ciclos — y ese alguien es la cuerda?); lee 2–3 tickets de s10 en voz alta y deja la pregunta armada para la mini-lección | Instrumento frotado de estudiante (plan B: guitarra + resina); tickets de s10; planilla rúbrica OA3 (pasada 2); cronómetro |
-| 15–27′ | **Mini-lección: la fricción como válvula (OA1.3)** — consume la lectura previa | Rehace con el profesor el vocabulario del capítulo: fricción de **agarre** (estática, fuerte) vs. de **deslizamiento** (cinética, más débil) → ciclo pegar-soltar (stick-slip); responde votaciones: "¿quién fija la frecuencia del ciclo, el arco o la cuerda?" (la cuerda: el soltar se sincroniza con SU ida y vuelta — régimen de oscilación, BEN 23.2), "si froto más fuerte, ¿la nota sube?" (no: cambia el timbre y el límite del graznido; la afinación la fija la cuerda), "¿por qué la frotada suena 'llena' todo el tiempo y la pulsada se apaga?" (la fricción repone energía en cada ciclo; el golpe la entrega una sola vez, s03–s04) | Conduce en el pizarrón con el esquema puerta-que-chirría / copa frotada (s10, fase C del taller de botellas): toda superficie frotada chirría, pero solo la cuerda le impone al chirrido un metrónomo — la resonancia manda sobre la fricción; deja explícito el contraste con s04 (pulsada: receta fijada al inicio y decaimiento) y anuncia que la forma real de la cuerda frotada NO es la que uno imagina — puente a la demo | Pizarrón; guitarra (pulsada de contraste, 2 notas) |
-| 27–37′ | Demo predictiva: la esquina que viaja (OA1.3, OA1.1) — formato 1 | Predice a mano alzada ANTES de cada paso de [`demo_helmholtz.html`](../../demos/demo_helmholtz.html): (1) ¿la cuerda frotada vibra con forma de curva suave (como la foto de un libro) o de otra manera? — ve la **esquina** de Helmholtz recorriendo el óvalo; (2) mirando la velocidad del punto frotado (colores pegado/deslizando): ¿cuánto del ciclo va pegada al arco y cuánto desliza? (casi todo pegada; el soltar es breve); (3) al mover el punto de frotado hacia el puente, ¿qué cambia en ese reparto y en el sonido de la demo? | Opera la demo proyectada CON audio (diente de sierra filtrado: el "espectro de fuerza sobre el puente", BEN 23.5); subraya la síntesis del ciclo: **una vuelta de la esquina = un soltar**: el viaje de la esquina cronometra a la fricción — eso ES el régimen de oscilación; anuncia el taller: "esto es un dibujo idealizado; ahora lo van a buscar en la cuerda real, con espectrograma y cámara lenta" | [`demo_helmholtz.html`](../../demos/demo_helmholtz.html) proyectada con audio de sala |
-| 37–63′ | **Taller PEE: el punto de frotado (OA1.2, OA1.3, OA4.1) — formato 2, estación plenaria, EVALUADO** | Instalación 2′ (instrumento al centro, luz sobre la cuerda, celulares en espectrograma, protocolo de silencio de medición); en grupo escribe **3 predicciones** ANTES de sonar (4′): (P1) al frotar **cerca del puente** (sul ponticello), ¿el espectro gana o pierde parciales agudos respecto del punto normal? ¿y **sobre el diapasón** (sul tasto)?; (P2) ¿la altura ($f_1$) cambia al cambiar el punto de frotado?; (P3) filmada en cámara lenta, ¿qué forma tendrá la cuerda?; **fase A** (8′): el ejecutante toca la misma nota larga en 3 posiciones (normal / ponticello / tasto), 2 pasadas de ~20″ c/u con 30″ para anotar: **cada estudiante captura el espectrograma en su propio celular** y el registrador tabula $f_1$ y qué pasa con los parciales altos; **fase B** (6′): un celular filma la cuerda de cerca en cámara lenta (240 fps **[POR VERIFICAR** que el celular disponible resuelva la forma; plan B: video preparado**]**) mientras se frota; se proyecta o circula: ¿se ve la esquina / la forma de dos rectas?; **contraste** (6′): P1–P3 vs. resultados en la guía, explicando con el ciclo pegar-soltar y la esquina | Coordina las pasadas y el silencio de medición; rota entre los 5 grupos durante las anotaciones (~1′ c/u por fase); provoca: "¿cambió la afinación o el reparto de energía?", "¿por qué el ponticello exige más presión para no graznar?", "si la forma es dos rectas y una esquina, ¿por qué el espectrograma muestra TODOS los armónicos?"; administra la filmación (soporte o pulso firme, fondo claro tras la cuerda) | Instrumento(s) frotado(s); guitarra (1 pasada pulsada de contraste en fase A si el tiempo alcanza); celulares (espectrograma; 1 filmando); guía `guia_pee_punto_de_frotado.md` (1 por grupo); paño claro de fondo; cable/adaptador para proyectar el video |
+| 0–10′ | **Escucha del día (OA3.1, práctica sin nota; OA1.3): se cobra el ticket de s10** | Todos anotan su diagnóstico en 3 líneas (describir → hipotetizar → verificar) (2′); discuten en la mesa y el vocero anota el diagnóstico consensuado del grupo (3′); en el plenario, el vocero de una o dos mesas responde por el grupo (3′) | Dirige al ejecutante (estudiante que trajo el instrumento; ensayado 2′ antes de clase) o ejecuta él mismo el plan B (guitarra con resina), **dos pasadas** (~2′) en vivo: la MISMA cuerda del instrumento frotado, primero con arco bien calibrado (nota larga, estable, rica) y luego con presión exagerada y arco lento (graznido crujiente sin altura estable) rematada con arco veloz y superficial (sonido "flautado", débil); pregunta selectivamente a una o dos mesas en el plenario, premiando que separen altura estable / altura errática / sonoridad / rugosidad y que invoquen el ticket de s10 (alguien tiene que estar organizando la entrega de energía en ciclos — y ese alguien es la cuerda); lee 2–3 tickets de s10 en voz alta y cierra con su propia versión, dejando la pregunta armada para la mini-lección | Instrumento frotado de estudiante (plan B: guitarra + resina); tickets de s10 |
+| 10–22′ | **Mini-lección: la fricción como válvula (OA1.3)** — consume la lectura previa | Rehace con el profesor el vocabulario del capítulo: fricción de **agarre** (estática, fuerte) vs. de **deslizamiento** (cinética, más débil) → ciclo pegar-soltar (stick-slip); responde votaciones: "¿quién fija la frecuencia del ciclo, el arco o la cuerda?" (la cuerda: el soltar se sincroniza con SU ida y vuelta — régimen de oscilación, BEN 23.2), "si froto más fuerte, ¿la nota sube?" (no: cambia el timbre y el límite del graznido; la afinación la fija la cuerda), "¿por qué la frotada suena 'llena' todo el tiempo y la pulsada se apaga?" (la fricción repone energía en cada ciclo; el golpe la entrega una sola vez, s03–s04) | Conduce en el pizarrón con el esquema puerta-que-chirría / copa frotada (s10, fase C del taller de botellas): toda superficie frotada chirría, pero solo la cuerda le impone al chirrido un metrónomo — la resonancia manda sobre la fricción; deja explícito el contraste con s04 (pulsada: receta fijada al inicio y decaimiento) y anuncia que la forma real de la cuerda frotada NO es la que uno imagina — puente a la demo | Pizarrón; guitarra (pulsada de contraste, 2 notas) |
+| 22–32′ | Demo predictiva: la esquina que viaja (OA1.3, OA1.1) — formato 1 | Predice a mano alzada ANTES de cada paso de [`demo_helmholtz.html`](../../demos/demo_helmholtz.html): (1) ¿la cuerda frotada vibra con forma de curva suave (como la foto de un libro) o de otra manera? — ve la **esquina** de Helmholtz recorriendo el óvalo; (2) mirando la velocidad del punto frotado (colores pegado/deslizando): ¿cuánto del ciclo va pegada al arco y cuánto desliza? (casi todo pegada; el soltar es breve); (3) al mover el punto de frotado hacia el puente, ¿qué cambia en ese reparto y en el sonido de la demo? | Opera la demo proyectada CON audio (diente de sierra filtrado: el "espectro de fuerza sobre el puente", BEN 23.5); subraya la síntesis del ciclo: **una vuelta de la esquina = un soltar**: el viaje de la esquina cronometra a la fricción — eso ES el régimen de oscilación; anuncia el taller: "esto es un dibujo idealizado; ahora lo van a buscar en la cuerda real, con espectrograma y cámara lenta" | [`demo_helmholtz.html`](../../demos/demo_helmholtz.html) proyectada con audio de sala |
+| 32–63′ | **Taller PEE: el punto de frotado (OA1.2, OA1.3, OA4.1) — formato 2, estación plenaria, EVALUADO** | Instalación 2′ (instrumento al centro, luz sobre la cuerda, celulares en espectrograma, protocolo de silencio de medición); en grupo escribe **3 predicciones** ANTES de sonar (4′): (P1) al frotar **cerca del puente** (sul ponticello), ¿el espectro gana o pierde parciales agudos respecto del punto normal? ¿y **sobre el diapasón** (sul tasto)?; (P2) ¿la altura ($f_1$) cambia al cambiar el punto de frotado?; (P3) filmada en cámara lenta, ¿qué forma tendrá la cuerda?; **fase A** (8′): el ejecutante toca la misma nota larga en 3 posiciones (normal / ponticello / tasto), 2 pasadas de ~20″ c/u con 30″ para anotar: **cada estudiante captura el espectrograma en su propio celular** y el registrador tabula $f_1$ y qué pasa con los parciales altos; **fase B** (6′): un celular filma la cuerda de cerca en cámara lenta (240 fps **[POR VERIFICAR** que el celular disponible resuelva la forma; plan B: video preparado**]**) mientras se frota; se proyecta o circula: ¿se ve la esquina / la forma de dos rectas?; **contraste** (6′): P1–P3 vs. resultados en la guía, explicando con el ciclo pegar-soltar y la esquina | Coordina las pasadas y el silencio de medición; rota entre los 5 grupos durante las anotaciones (~1′ c/u por fase); provoca: "¿cambió la afinación o el reparto de energía?", "¿por qué el ponticello exige más presión para no graznar?", "si la forma es dos rectas y una esquina, ¿por qué el espectrograma muestra TODOS los armónicos?"; administra la filmación (soporte o pulso firme, fondo claro tras la cuerda) | Instrumento(s) frotado(s); guitarra (1 pasada pulsada de contraste en fase A si el tiempo alcanza); celulares (espectrograma; 1 filmando); guía `guia_pee_punto_de_frotado.md` (1 por grupo); paño claro de fondo; cable/adaptador para proyectar el video |
 | 63–70′ | Cierre: contraste y moraleja (OA1.2, OA3.2) | UN grupo expone sus espectrogramas ponticello vs. tasto (regla de metodología §7); todos contrastan sus predicciones y anotan la moraleja: **la cuerda fija la afinación; el punto y la presión del arco esculpen el espectro** — y la fricción repone energía en cada ciclo, por eso el espectro rico se SOSTIENE (vs. pulsada que decae); puente al m2: "todo esto lo midieron en el aire que movió… ¿quién? — la cuerda casi no mueve aire: eso viene ahora" | Superpone los resultados de los 5 grupos (¿todos vieron más agudos hacia el puente y $f_1$ quieta?); recoge las guías y evalúa con rúbrica rápida al vuelo; anuncia descanso | Pizarrón; guías de los grupos |
 
 ## Módulo 2 — La caja que trabaja: del puente al aire (variante: experimental, adaptada a estación plenaria)
@@ -80,11 +80,12 @@ instrumento (2′); los anuncios de s12 y el ticket NO se sacrifican.
 
 ## Verificación de aprendizaje
 
-- **Ronda oral OA3 (con nota, pasada 2)**: 4 registros nuevos en la
-  planilla; el estímulo exige D1 fino (nota estable / graznido sin
-  altura / flautado: tres regímenes de la misma cuerda) y D2 conectado
-  al ticket de s10 (la cuerda organiza la entrega de energía).
-- **Taller del punto de frotado (OA1.2–1.3, EVALUADO, 25 % talleres)**:
+- **Escucha del día**: práctica no calificada; el estímulo exige
+  distinguir los tres regímenes de la misma cuerda (nota estable /
+  graznido sin altura / flautado) y conectar con el ticket de s10 (la
+  cuerda organiza la entrega de energía); la evidencia de OA3 se
+  recoge por escrito en s07, s13 y s15.
+- **Taller del punto de frotado (OA1.2–1.3, EVALUADO, 35 % talleres)**:
   rúbrica rápida logrado/parcial/incipiente sobre la guía: 3
   predicciones escritas antes de sonar, tabla con $f_1$ y comportamiento
   de los parciales altos en 3 posiciones (condiciones anotadas),
@@ -106,15 +107,16 @@ instrumento (2′); los anuncios de s12 y el ticket NO se sacrifican.
 
 ## Aritmética de taller declarada (regla 6b)
 
-- **Módulo 1**: 15 + 12 + 10 + 26 + 7 = 70′ ✓. Escucha del día: 3′ +
-  2′ + 4 × 2,5′ = 15′ ✓.
-- **Taller punto de frotado (m1, 37–63′)**: 26′ = 2′ instalación + 4′
-  predicciones + 8′ fase A (3 posiciones × 2 pasadas de ~20″ + 30″ de
-  anotación por pasada ≈ 6′, más 2′ de colchón para repetir una pasada
-  fallida) + 6′ fase B (filmar 2′ + proyectar/circular 2′ + anotar 2′)
-  + 6′ contraste. **Manos en la medición: todos simultáneos** — cada
+- **Módulo 1**: 10 + 12 + 10 + 31 + 7 = 70′ ✓. Escucha del día: 2′
+  (estímulo, dos pasadas) + 2′ (individual) + 3′ (mesa) + 3′
+  (plenario) = 10′ ✓.
+- **Taller punto de frotado (m1, 32–63′)**: 31′ = 2′ instalación + 4′
+  predicciones + 9′ fase A (3 posiciones × 2 pasadas de ~20″ + 30″ de
+  anotación por pasada ≈ 6′, más 3′ de colchón para repetir una pasada
+  fallida) + 7′ fase B (filmar 2′ + proyectar/circular 2′ + anotar 3′)
+  + 9′ contraste. **Manos en la medición: todos simultáneos** — cada
   estudiante captura el espectrograma en SU celular en las 6 pasadas
-  (~8′ de medición activa por persona ✓ ≥2′); el registro oficial rota
+  (~9′ de medición activa por persona ✓ ≥2′); el registro oficial rota
   (roles en la guía). Estación única sin cuello: nadie espera turno de
   instrumento porque el instrumento es la fuente, no la herramienta.
   Profesor: coordina pasadas y rota en anotaciones (5 × ~1′ por fase).
@@ -172,8 +174,7 @@ instrumento (2′); los anuncios de s12 y el ticket NO se sacrifican.
   ("Ep. 87 - Wolf tones on cello, viola, violin and doublebass", canal
   Edgar Russ Distinguished Violinmaker, luthier de Cremona); el profesor
   debe escucharlos y elegir uno antes de clase; imprimir 6 guías de cada
-  taller; planilla OA3 con el sorteo (pasada 2); publicar la nota del
-  hito 2 (compromiso de s10).
+  taller; publicar la nota del hito 2 (compromiso de s10).
 - **Sin estímulo de grabación nuevo**: la escucha del día es en vivo
   (plan A instrumento de estudiante, plan B guitarra con resina); no se
   agrega fila al banco de estímulos.

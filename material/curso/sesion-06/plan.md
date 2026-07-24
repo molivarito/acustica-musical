@@ -5,7 +5,8 @@ interpretar el decibel y las curvas de sonoridad en contextos musicales
 reales — incluye salud auditiva del músico, según `OBJETIVOS_APRENDIZAJE.md`, riesgo
 aceptado 5, sin crear objetivo nuevo), OA2.1 (el par
 intensidad↔sonoridad no es lineal ni unívoco: depende del nivel y de la
-frecuencia). OA3.1 corre transversal en la escucha del día (con nota).
+frecuencia). OA3.1 corre transversal en la escucha del día (práctica sin
+nota).
 OA5.1 avanza administrativamente: **devolución del hito 1 corregido**
 (compromiso heredado de s05).
 **Requisitos previos**: s02 (ondas, presión, $v=\lambda f$), s05
@@ -27,10 +28,10 @@ dB que s14 necesita para salas, y el vocabulario de niveles para la
 salud auditiva. s07 (prueba 1) evalúa lo de s06 **solo con ítems
 básicos** (regla de dimensionamiento: lo de la semana inmediatamente
 anterior no entra con transferencia).
-**Reglas aplicadas**: escucha del día (15′, con nota; estímulo 3′ +
-escritura 2′ + ronda de 4 sorteados × 2,5′ con cronómetro visible) en el
+**Reglas aplicadas**: escucha del día (10′, sin nota; estímulo ~2′ dos
+pasadas + escritura 2′ + discusión de mesa 3′ + plenario 3′) en el
 primer bloque del módulo 1; módulo 2 abre con gancho sonoro breve sin
-ronda; la lectura previa se consume visiblemente en la mini-lección del
+escucha del día; la lectura previa se consume visiblemente en la mini-lección del
 módulo 1 y en la estación E4 (principio 6); el mini-informe SPL se
 completa (formulario de 4 casillas) y entrega EN aula (principio 5). **Debutan las estaciones de
 medición formales** (formato 5): cuello logístico = 1 interfaz + 1
@@ -41,9 +42,9 @@ micrófono; la rotación está dimensionada abajo.
 | Tiempo | Bloque | Actividad del estudiante | Rol del profesor | Materiales |
 |---|---|---|---|---|
 | 0–8′ | **Devolución del hito 1 corregido (OA5.1)** | Recibe la entrega corregida de su grupo; lee la observación principal con sus compañeros; anota en la bitácora del grupo **1 línea de compromiso**: qué corrección incorporarán al diseño antes del hito 2 (s10) | Devuelve las 5 entregas con pauta marcada; comenta al curso (2′) los 2 aciertos y las 2 debilidades más repetidas (sin nombrar grupos); instruye qué hacer con la corrección: se responde por escrito en la bitácora y se cobra en el hito 2 | 5 entregas corregidas con pauta; pizarrón |
-| 8–23′ | **Escucha del día (OA3.1, con nota)**: la mezcla que pierde el bajo | Escucha el mismo fragmento musical dos veces: a nivel de sala realista y luego muy suave (estímulo 3′); todos anotan diagnóstico en 3 líneas (describir → hipotetizar → verificar) (2′): ¿qué cambió *además* del volumen?; **4 sorteados** exponen (**2,5′ c/u, cronómetro visible**) | Reproduce el fragmento fuerte y luego muy suave dentro de los 3′; evalúa con la planilla OA3 exigiendo separar "suena más despacio" (obvio) de "desaparecieron el bajo y el brillo" (el dato); NO explica todavía — anuncia que la sesión termina de resolverlo | Fragmento de mezcla completa con bajo prominente (banco de estímulos #9); audio de sala; planilla de rúbrica con sorteo; cronómetro visible |
-| 23–41′ | **Cobro del ticket de s05 + mini-lección: el decibel con aritmética mínima (OA2.1, OA4.2)** — consume lectura previa | Vota a mano alzada su ticket de s05 (misma frecuencia ↔ distinto volumen: sí; misma energía grave/agudo ↔ igual de fuerte: se resuelve hoy); sigue la construcción del dB; responde votaciones: "¿+10 dB es sumar poco o multiplicar por 10?", "dos parlantes iguales, ¿+3, +6 o +10 dB?", "¿cuántas guitarras iguales para oír *el doble* de fuerte?" | Instala con proporciones (estilo BEN 13): la intensidad útil al oído abarca un factor ~10¹²; el dB comprime ese rango; **+10 dB = ×10 en intensidad ≈ el doble de sonoridad; +3 dB = ×2 en intensidad, un cambio chico**; define $L_p$ en dB SPL re 20 µPa (notación de `PLAN_SEMESTRE.md`); presenta las **isofónicas** (fones) cualitativamente y con ellas resuelve la escucha del día (a bajo nivel el oído pierde graves y agudos); nombra la **ponderación A** ("la curva que las apps imitan") sin teoría de filtros | Pizarrón; [`demo_decibel_sonoridad.html`](../../demos/demo_decibel_sonoridad.html) como apoyo visual; tickets de s05 recopilados |
-| 41–63′ | **Experiencia guiada: mi curva isofónica (OA2.1, OA4.2)** — formato 3 | PREDICE por escrito en su hoja (2′, antes de tocar la demo): "para sonar igual de fuerte que 1000 Hz, el tono de 125 Hz necesitará ¿más, igual o menos nivel?"; luego, por turnos con audífonos, cada integrante iguala la sonoridad contra la referencia de 1000 Hz en la demo — **mínimo irrenunciable ★: 125, 1000 (referencia) y 4000 Hz; 250, 2000 y 8000 Hz son opcionales para quien alcance** (la forma de la curva se obtiene igual con 3 puntos bien tomados) — y **copia SU curva** a su hoja de registro. Aritmética declarada: fase de 22′ − 2′ de predicción = 20′ ÷ 4 integrantes = **~5′ por persona** (≥2′: cumple); mientras uno mide, otro registra la puesta en común del grupo y los otros dos resuelven el ítem de proyección de la hoja | Rota por los grupos (~4′ c/u); verifica al pasar que la predicción esté escrita antes de escuchar; provoca: "¿su curva es la de su compañero?, ¿a qué nivel de referencia está midiendo — y cambiaría con otro nivel?"; recuerda la advertencia de la demo: sin calibración los dB son relativos, lo que vale es la FORMA | 5 notebooks con [`demo_decibel_sonoridad.html`](../../demos/demo_decibel_sonoridad.html); audífonos personales; hoja de registro "mi curva isofónica" (1 por estudiante) |
+| 8–18′ | **Escucha del día (OA3.1, práctica sin nota)**: la mezcla que pierde el bajo | Todos anotan su diagnóstico en 3 líneas (describir → hipotetizar → verificar) (2′): ¿qué cambió *además* del volumen?; discuten en la mesa y el vocero anota el diagnóstico del grupo (3′); en el plenario, el vocero de una o dos mesas responde por el grupo (3′) | Reproduce el mismo fragmento musical, **dos pasadas** (a nivel de sala realista y luego muy suave) (~2′); pregunta selectivamente a una o dos mesas en el plenario exigiendo separar "suena más despacio" (obvio) de "desaparecieron el bajo y el brillo" (el dato); NO explica todavía — anuncia que la sesión termina de resolverlo | Fragmento de mezcla completa con bajo prominente (banco de estímulos #9); audio de sala |
+| 18–36′ | **Cobro del ticket de s05 + mini-lección: el decibel con aritmética mínima (OA2.1, OA4.2)** — consume lectura previa | Vota a mano alzada su ticket de s05 (misma frecuencia ↔ distinto volumen: sí; misma energía grave/agudo ↔ igual de fuerte: se resuelve hoy); sigue la construcción del dB; responde votaciones: "¿+10 dB es sumar poco o multiplicar por 10?", "dos parlantes iguales, ¿+3, +6 o +10 dB?", "¿cuántas guitarras iguales para oír *el doble* de fuerte?" | Instala con proporciones (estilo BEN 13): la intensidad útil al oído abarca un factor ~10¹²; el dB comprime ese rango; **+10 dB = ×10 en intensidad ≈ el doble de sonoridad; +3 dB = ×2 en intensidad, un cambio chico**; define $L_p$ en dB SPL re 20 µPa (notación de `PLAN_SEMESTRE.md`); presenta las **isofónicas** (fones) cualitativamente y con ellas resuelve la escucha del día (a bajo nivel el oído pierde graves y agudos); nombra la **ponderación A** ("la curva que las apps imitan") sin teoría de filtros | Pizarrón; [`demo_decibel_sonoridad.html`](../../demos/demo_decibel_sonoridad.html) como apoyo visual; tickets de s05 recopilados |
+| 36–63′ | **Experiencia guiada: mi curva isofónica (OA2.1, OA4.2)** — formato 3 | PREDICE por escrito en su hoja (2′, antes de tocar la demo): "para sonar igual de fuerte que 1000 Hz, el tono de 125 Hz necesitará ¿más, igual o menos nivel?"; luego, por turnos con audífonos, cada integrante iguala la sonoridad contra la referencia de 1000 Hz en la demo — **mínimo irrenunciable ★: 125, 1000 (referencia) y 4000 Hz; 250, 2000 y 8000 Hz son opcionales para quien alcance** (la forma de la curva se obtiene igual con 3 puntos bien tomados) — y **copia SU curva** a su hoja de registro. Aritmética declarada: fase de 27′ − 2′ de predicción = 25′ ÷ 4 integrantes = **~6′ por persona** (≥2′: cumple); mientras uno mide, otro registra la puesta en común del grupo y los otros dos resuelven el ítem de proyección de la hoja | Rota por los grupos (~4′ c/u); verifica al pasar que la predicción esté escrita antes de escuchar; provoca: "¿su curva es la de su compañero?, ¿a qué nivel de referencia está midiendo — y cambiaría con otro nivel?"; recuerda la advertencia de la demo: sin calibración los dB son relativos, lo que vale es la FORMA | 5 notebooks con [`demo_decibel_sonoridad.html`](../../demos/demo_decibel_sonoridad.html); audífonos personales; hoja de registro "mi curva isofónica" (1 por estudiante) |
 | 63–70′ | Puesta en común y síntesis (OA2.1) | Un vocero por grupo describe la forma de la curva del grupo (¿dónde pidió más nivel?); todos anotan la moraleja: **igual nivel físico ≠ igual sonoridad; el oído es más sordo a los graves, y más cuanto más bajo el nivel** | Superpone las formas de los 5 grupos en el pizarrón sobre ejes Hz/dB; cierra conectando con la escucha del día (por eso la mezcla suave "perdió" el bajo) y deja el puente: en el módulo 2, esto se mide en la sala | Pizarrón; hojas de registro (se recogen al final del módulo 2 junto con el mini-informe) |
 
 ## Módulo 2 — Medir lo fuerte (variante: medición — debut del formato 5)
@@ -58,10 +59,8 @@ micrófono; la rotación está dimensionada abajo.
 
 ## Verificación de aprendizaje
 
-- **Ronda oral OA3 con nota**: 4 registros en planilla; el estímulo exige
-  distinguir descripción ("bajó el volumen") de observación fina
-  ("desapareció el bajo") y proponer verificación (medir el espectro a
-  ambos niveles) — dimensiones D1, D2, D3.
+- **Escucha del día**: práctica no calificada; la evidencia de OA3 se
+  recoge por escrito en s07, s13 y s15.
 - **Hoja de registro "mi curva isofónica"** (individual, m1): predicción
   escrita antes de escuchar; los puntos ★ obligatorios igualados (los
   opcionales si alcanzó) y curva copiada; el ítem
@@ -72,7 +71,7 @@ micrófono; la rotación está dimensionada abajo.
   condiciones anotadas (app, celular, distancia), interpretación que usa
   correctamente +10/+3 dB, y un límite de la medición declarado
   (calibración/AGC). Cuenta, junto con la hoja isofónica, como el taller
-  de la semana (25 %).
+  de la semana (35 %).
 - **Gancho cobrado**: la sala converge a "duplicar fuentes ≈ +3 dB, y el
   doble de fuerte necesita ≈ +10 dB (unas diez fuentes)".
 - **Devolución del hito 1**: 5 bitácoras con línea de compromiso escrita
@@ -81,9 +80,10 @@ micrófono; la rotación está dimensionada abajo.
 
 ## Aritmética de taller declarada (regla 6b)
 
-- **Escucha del día**: 3′ + 2′ + 4×2,5′ = 15′ ✓.
-- **Experiencia isofónica (m1)**: 22′ = 2′ predicción + 20′ medición;
-  1 notebook/grupo ÷ 4 integrantes = ~5′/persona (protocolo ★ de 3
+- **Escucha del día**: ~2′ (estímulo, dos pasadas) + 2′ (individual) +
+  3′ (discusión de mesa) + 3′ (plenario) = 10′ ✓.
+- **Experiencia isofónica (m1)**: 27′ = 2′ predicción + 25′ medición;
+  1 notebook/grupo ÷ 4 integrantes = ~6′/persona (protocolo ★ de 3
   frecuencias obligatorias ≈ 1,5–2′ por igualación, ritmo de novato,
   + cambio de audífonos; 250, 2000 y 8000 Hz opcionales para
   rápidos) ✓ ≥2′.
@@ -115,7 +115,7 @@ micrófono; la rotación está dimensionada abajo.
   interfaz + micrófono + software de medición en el notebook de E1 y
   fijar su configuración (misma ganancia toda la sesión); instalar y
   probar la app SPL elegida en su propio celular (la misma para
-  proyectar el gancho); imprimir guías, hojas isofónicas, pauta OA3 y
+  proyectar el gancho); imprimir guías, hojas isofónicas y
   entregas corregidas del hito 1; **corregir el hito 1 (pico declarado
   ≈3 h, metodología §4)**; sonómetro de referencia para E1 si existe
   **[POR VERIFICAR — pendiente global 9 de metodología §6]**.

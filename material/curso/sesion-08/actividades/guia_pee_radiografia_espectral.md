@@ -4,7 +4,7 @@
 escucha y medición), OA4.1 (espectro/espectrograma bien leídos), OA1.1
 (parciales; ¿armónico o inarmónico?).
 **Es el taller EVALUADO de la semana** (rúbrica rápida
-logrado/parcial/incipiente, cuenta en el 25 % de talleres) y es el
+logrado/parcial/incipiente, cuenta en el 35 % de talleres) y es el
 **taller 1 de la serie s08–s12 sobre su objeto**: su compilado es la
 entrega del **hito 2 (s10)**. Esta radiografía es la línea base — hecha
 con cuidado hoy, el hito 2 se arma solo.

@@ -1,6 +1,6 @@
 # Proyecto del curso — Construir y explicar
 
-**Curso Acústica Musical UC** · Se lanza en la sesión 03 · Vale **30 %**
+**Curso Acústica Musical UC** · Se lanza en la sesión 03 · Vale **35 %**
 de la nota final.
 **Objetivos que evalúa**: OA5.1 (diseñar prediciendo), OA5.2 (construir,
 medir y caracterizar), OA5.3 (explicar el resultado integrando modelo,
@@ -32,9 +32,9 @@ micrófono con interfaz del curso).
 | Hito | Sesión | Entrega | % |
 |---|---|---|---|
 | Lanzamiento | s03 | media hoja con 2 ideas candidatas (sin nota; feedback en s04) | — |
-| **Hito 1 — Diseño con predicción** | **s05** | 2 págs máx.: qué van a construir/modificar, qué modelo del curso aplica, y la **predicción escrita** del resultado sonoro esperado (qué parciales, qué altura, qué cambia al mover el parámetro — con números donde se pueda) + bitácora al día | **8 %** |
-| **Hito 2 — Avance** | **s10** | compilado de los talleres de medición s08–s12 ya hechos sobre SU objeto + evidencia sonora (grabación) + bitácora al día; clínica de pares en s10 | **8 %** |
-| **Presentación final + informe** | **s15** | presentación de ~25 min por grupo (con preguntas individuales) + informe escrito de **6 páginas máximo** | **14 %** |
+| **Hito 1 — Diseño con predicción** | **s05** | 2 págs máx.: qué van a construir/modificar, qué modelo del curso aplica, y la **predicción escrita** del resultado sonoro esperado (qué parciales, qué altura, qué cambia al mover el parámetro — con números donde se pueda) + bitácora al día | **10 %** |
+| **Hito 2 — Avance** | **s10** | compilado de los talleres de medición s08–s12 ya hechos sobre SU objeto + evidencia sonora (grabación) + bitácora al día; clínica de pares en s10 | **10 %** |
+| **Presentación final + informe** | **s15** | presentación de ~25 min por grupo (con preguntas individuales) + informe escrito de **6 páginas máximo** | **15 %** |
 
 **Los talleres de medición de las sesiones s08–s12 se hacen sobre el
 objeto de su proyecto**: espectros, niveles, resonancias de *su*

@@ -1,7 +1,7 @@
 # Pauta del Hito 1 — Diseño con predicción
 
 **Proyecto del curso** · Se publica en la sesión 04 · **Entrega: al
-inicio de la sesión 05** · Vale **8 %** de la nota final.
+inicio de la sesión 05** · Vale **10 %** de la nota final.
 **Objetivo que evalúa**: OA5.1 (diseñar la construcción o modificación
 aplicando modelos del curso para anticipar explícitamente el resultado
 sonoro esperado). Complementa el enunciado general del proyecto

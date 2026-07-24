@@ -58,7 +58,7 @@ metodología, sección 4).
   cantado s13) · **OA1.4** s14.
 - **OA2.1** s01, s04–s06 · **OA2.2** s05, s07(m2), s08 · **OA2.3** s08, s09.
 - **OA3.1–3.2** transversal: escucha del día (práctica sin nota) en
-  todas las sesiones s02–s14; línea base en s01 y su repetición en s14;
+  todas las sesiones s02–s14; línea base en s01 y su repetición en s15;
   evaluado por escrito en s07, s13 y s15; OA3.2 explícito en clínicas
   (s10) y defensa final (s15).
 - **OA4.1** s02 y transversal (espectrogramas en talleres) · **OA4.2**
@@ -73,8 +73,8 @@ Ningún OA queda sin sesión; ninguna sesión queda sin OA.
 s01 línea base sin nota · s03 lanzamiento proyecto · s05 hito 1 (10%) ·
 s07 prueba 1 (10%) + escucha escrita 1 · s08–s12 talleres de medición =
 avance de proyecto · s10 hito 2 (10%) · s13 prueba 2 (10%) + escucha
-escrita 2 · s14 repetición de la línea base (sin nota) · s15
-presentación final + informe (15%) + hoja de escucha (escucha escrita 3).
+escrita 2 · s15 presentación final + informe (15%) + hoja de escucha
+(escucha escrita 3) + repetición de la línea base de s01 (sin nota).
 **Escucha argumentada escrita (10%)**: los tres eventos anteriores,
 cuentan las mejores 2. Talleres (35%): cuentan las mejores 8 de ~10
 guías. La **escucha del día corre de s02 a s14 sin nota** (práctica).

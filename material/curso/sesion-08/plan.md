@@ -7,8 +7,8 @@ declarada en `OBJETIVOS_APRENDIZAJE.md`), OA2.3 (fundamento perceptual de la
 consonancia: por qué la 8ª y la 5ª suenan "lisas" con tonos complejos),
 OA5.2 (arranca la **serie de talleres de medición sobre el objeto del
 proyecto, s08–s12**, con la radiografía espectral). Corren
-transversales: OA3.1 (escucha del día, con nota, pasada 2 de la
-planilla) y OA4.1 (leer espectrogramas del objeto, instalado en s02).
+transversales: OA3.1 (escucha del día, práctica sin nota) y OA4.1
+(leer espectrogramas del objeto, instalado en s02).
 **Requisitos previos**: s07 m2 (batidos oídos y contados; regla
 $f_b = |f_2 - f_1|$), s05 (membrana basilar: la cóclea como teclado de
 filtros), s02–s04 (espectro, parciales, armónico vs. inarmónico). El
@@ -20,9 +20,7 @@ celular con app de espectrograma (desde s02), (d) leída la lectura
 previa [`libro/cap08_banda_critica_y_consonancia.md`](../../libro/cap08_banda_critica_y_consonancia.md).
 **Compromisos heredados que esta sesión absorbe**: devolución de la
 **Prueba 1** corregida (entregada EN la puerta al entrar; ~10′ de
-revisión contra la lámina, errores más repetidos por parte); la
-**ronda oral OA3 vuelve** tras la semana de prueba (pasada 2 de la
-planilla, sorteo entre quienes ya pasaron una vez menos veces).
+revisión contra la lámina, errores más repetidos por parte).
 **Posición en la progresión**: tercera estación del bloque B (el sonido
 percibido). s07 dejó el batido contado; s08 recorre qué pasa cuando la
 diferencia crece (batido → aspereza → dos notas) y con eso funda la
@@ -30,13 +28,12 @@ consonancia sensorial que s09 convierte en escalas y temperamentos.
 Además abre la serie s08–s12 de mediciones sobre el objeto del
 proyecto, que alimenta directamente el **hito 2 (s10)**.
 **Reglas aplicadas y decisiones de carga (declaradas)**: escucha del
-día (15′: estímulo 3′ + escritura 2′ + ronda de 4 sorteados × 2,5′ con
-cronómetro visible) en el primer bloque del módulo 1; módulo 2 abre con
-gancho sonoro sin ronda; la lectura previa se consume en la
+día (10′, sin nota) en el primer bloque del módulo 1; módulo 2 abre con
+gancho sonoro sin escucha del día; la lectura previa se consume en la
 mini-lección del módulo 1 (principio 6). **Esta semana carga
-devolución + ronda + 2 talleres; para que quepa se decide**: (1) la
+devolución + escucha del día + 2 talleres; para que quepa se decide**: (1) la
 **radiografía espectral es el ÚNICO taller evaluado** de la semana
-(rúbrica rápida, cuenta en el 25 % de talleres y alimenta el hito 2);
+(rúbrica rápida, cuenta en el 35 % de talleres y alimenta el hito 2);
 el taller psicoacústico produce **registro individual que se recoge
 SIN nota** (es dato del curso y evidencia de OA2.2, estilo calibración
 de s01); (2) la exploración de consonancia del módulo 2 es **plenaria**
@@ -48,9 +45,9 @@ II" se comprime a mini-lección interactiva con audio.
 | Tiempo | Bloque | Actividad del estudiante | Rol del profesor | Materiales |
 |---|---|---|---|---|
 | 0–10′ | **Devolución de la Prueba 1** (cierre administrativo de s07) | Recibe su prueba corregida **en la puerta, al entrar** (nadie espera reparto en el puesto); la revisa contra la lámina de la pauta, que queda proyectada durante los primeros 10′; anota en su cuaderno **1 línea**: el error propio que no quiere repetir en la Prueba 2 | Entrega las 20 pruebas EN la puerta mientras el curso entra; con la lámina de la pauta proyectada comenta **los 2 errores más repetidos por parte** (A: mezclar describir con interpretar; B: leer ejes sin unidades; C: proporciones invertidas; D: vocabulario físico/perceptual cruzado — ajustar a lo que la corrección real muestre) sin nombrar a nadie; **corte duro al minuto 10** (precedente de s06); regla anunciada: apelaciones por escrito u horario de consulta, NO en aula (regla que funcionó en s06) | 20 pruebas corregidas (en la mano del profesor, en la puerta); pauta en 1 lámina proyectada 10′; pizarrón |
-| 10–25′ | **Escucha del día (OA3.1, con nota; OA2.2): se cobra el ticket de s07** | Escucha el estímulo: dos tonos que parten al unísono y se separan MUY lentamente hasta ~40 Hz de diferencia, dos pasadas (3′); todos escriben diagnóstico en 3 líneas (2′): describir las etapas oídas → hipotetizar el mecanismo → proponer verificación; **4 sorteados** exponen (**2,5′ c/u, cronómetro visible**) | Opera el barrido con [`demo_banda_critica.html`](../../demos/demo_banda_critica.html) (números ocultos); evalúa con la planilla OA3 (pasada 2) premiando D1 fino (¿cuántas etapas distingue?: ondulación → aspereza → dos notas) y D3 (¿cómo verificaría DÓNDE cambia?); lee 2–3 tickets de s07 recopilados y los contrasta con lo recién descrito; NO da nombres técnicos todavía | [`demo_banda_critica.html`](../../demos/demo_banda_critica.html) proyectada (audio de sala, modo oculto); tickets de s07; planilla rúbrica OA3 (pasada 2); cronómetro |
-| 25–40′ | **Mini-lección: la banda crítica (OA2.2)** — consume la lectura previa | Sigue el mapa de las 4 zonas (batido contable → aspereza fusionada → dos notas aún ásperas → dos notas lisas) y lo conecta con la membrana basilar de s05: dos zonas de excitación que se pisan; responde votaciones: "¿el batido termina porque el sonido cambia o porque el oído no lo sigue?", "a 440 Hz, la zona áspera ¿durará 1 Hz, 10 Hz o 100 Hz de ancho?", "¿la frontera será igual para su compañero?" | Nombra las fronteras sobre el dibujo coclear: mientras las dos excitaciones se superponen hay interferencia (batido/aspereza); cuando se separan lo suficiente, aparecen DOS alturas; la aspereza muere cuando la separación supera la **banda crítica** — orden de magnitud **~1/3 de octava en el rango medio** (una tercera menor, ~100 Hz alrededor de 440 Hz), sin tablas finas (ROE 2.4); deja las fronteras personales como pregunta empírica → taller | Pizarrón (dibujo membrana basilar de s05 reutilizado); demo como apoyo |
-| 40–62′ | **Taller psicoacústico con registro individual (OA2.2) — formato 3, en parejas** | En parejas dentro del grupo (2 parejas por notebook, por turnos): el **oyente** (audífonos) explora con el operador el eje Δf y dicta sus 3 fronteras personales: (F1) hasta dónde puede CONTAR batidos, (F2) desde dónde oye DOS notas, (F3) desde dónde queda LISO; las anota en Hz y en semitonos en SU hoja de registro; luego intercambian roles. La pareja que espera resuelve los ítems de papel de la hoja (predicción escrita ANTES del turno propio + conversión Hz↔semitonos + pregunta de proyección); en los últimos minutos del taller, el grupo consolida sus 4 puntos F3 (en semitonos) en la **tira de frontera F3 del grupo** (último ítem de la hoja de registro) | Rota por los grupos (~4′ c/u); vigila que la predicción esté escrita antes de escuchar y que el registro sea INDIVIDUAL (las fronteras no se negocian con la pareja); provoca: "¿su F3 coincide con la de su pareja?, ¿el orden F1<F2<F3 se cumplió?, ¿qué pasa con las fronteras en semitonos si baja f₁ a 220 Hz?" (grupos rápidos: repetir F3 con f₁ = 220); recuerda al pasar que la tira F3 debe quedar lista ANTES de la síntesis | 5 notebooks con [`demo_banda_critica.html`](../../demos/demo_banda_critica.html) (y [`demo_batidos.html`](../../demos/demo_batidos.html) de s07 disponible para la fase de batido fino, opcional); audífonos personales; hoja `registro_mapa_del_choque.md` (1 por estudiante); 5 tiras de papel para la frontera F3 (1 por grupo) |
+| 10–20′ | **Escucha del día (OA3.1, práctica sin nota; OA2.2): se cobra el ticket de s07** | Todos anotan su diagnóstico en 3 líneas (describir → hipotetizar → verificar) (2′); discuten en la mesa y el vocero anota el diagnóstico consensuado del grupo (3′); en el plenario, el vocero de una o dos mesas responde por el grupo (3′) | Reproduce el estímulo, **dos pasadas** (~2′): dos tonos que parten al unísono y se separan MUY lentamente hasta ~40 Hz de diferencia, con [`demo_banda_critica.html`](../../demos/demo_banda_critica.html) (números ocultos); pregunta selectivamente a una o dos mesas en el plenario, premiando que distingan las etapas (ondulación → aspereza → dos notas) y que propongan DÓNDE medir el cambio; lee 2–3 tickets de s07 recopilados y los contrasta con lo recién descrito; cierra con su propia versión experta; NO da nombres técnicos todavía | [`demo_banda_critica.html`](../../demos/demo_banda_critica.html) proyectada (audio de sala, modo oculto); tickets de s07 |
+| 20–35′ | **Mini-lección: la banda crítica (OA2.2)** — consume la lectura previa | Sigue el mapa de las 4 zonas (batido contable → aspereza fusionada → dos notas aún ásperas → dos notas lisas) y lo conecta con la membrana basilar de s05: dos zonas de excitación que se pisan; responde votaciones: "¿el batido termina porque el sonido cambia o porque el oído no lo sigue?", "a 440 Hz, la zona áspera ¿durará 1 Hz, 10 Hz o 100 Hz de ancho?", "¿la frontera será igual para su compañero?" | Nombra las fronteras sobre el dibujo coclear: mientras las dos excitaciones se superponen hay interferencia (batido/aspereza); cuando se separan lo suficiente, aparecen DOS alturas; la aspereza muere cuando la separación supera la **banda crítica** — orden de magnitud **~1/3 de octava en el rango medio** (una tercera menor, ~100 Hz alrededor de 440 Hz), sin tablas finas (ROE 2.4); deja las fronteras personales como pregunta empírica → taller | Pizarrón (dibujo membrana basilar de s05 reutilizado); demo como apoyo |
+| 35–62′ | **Taller psicoacústico con registro individual (OA2.2) — formato 3, en parejas** | En parejas dentro del grupo (2 parejas por notebook, por turnos): el **oyente** (audífonos) explora con el operador el eje Δf y dicta sus 3 fronteras personales: (F1) hasta dónde puede CONTAR batidos, (F2) desde dónde oye DOS notas, (F3) desde dónde queda LISO; las anota en Hz y en semitonos en SU hoja de registro; luego intercambian roles. La pareja que espera resuelve los ítems de papel de la hoja (predicción escrita ANTES del turno propio + conversión Hz↔semitonos + pregunta de proyección); en los últimos minutos del taller, el grupo consolida sus 4 puntos F3 (en semitonos) en la **tira de frontera F3 del grupo** (último ítem de la hoja de registro) | Rota por los grupos (~4′ c/u); vigila que la predicción esté escrita antes de escuchar y que el registro sea INDIVIDUAL (las fronteras no se negocian con la pareja); provoca: "¿su F3 coincide con la de su pareja?, ¿el orden F1<F2<F3 se cumplió?, ¿qué pasa con las fronteras en semitonos si baja f₁ a 220 Hz?" (grupos rápidos: repetir F3 con f₁ = 220); recuerda al pasar que la tira F3 debe quedar lista ANTES de la síntesis | 5 notebooks con [`demo_banda_critica.html`](../../demos/demo_banda_critica.html) (y [`demo_batidos.html`](../../demos/demo_batidos.html) de s07 disponible para la fase de batido fino, opcional); audífonos personales; hoja `registro_mapa_del_choque.md` (1 por estudiante); 5 tiras de papel para la frontera F3 (1 por grupo) |
 | 62–70′ | Puesta en común y síntesis (OA2.2) | Solo el **vocero** de cada grupo pega la **tira con los 4 F3 del grupo** (fin de la aspereza, en semitonos) en la recta del pizarrón — **5 pegadas, no 20**; todos anotan la moraleja: las fronteras son personales pero se agrupan — la aspereza muere alrededor de una **tercera menor** en este registro; el batido/aspereza no está "en el aire" (el micrófono ve dos líneas limpias): está **en el oído** | Lee las 5 tiras (~20 puntos) sobre la recta de semitonos; contrasta con el orden de magnitud anunciado (~1/3 de octava); cierra con el gancho hacia el módulo 2: "todo esto fue con DOS tonos puros; después del descanso, música de verdad: ¿por qué la quinta suena lisa?"; **recoge las hojas de registro (sin nota)** | Pizarrón con recta 0–12 semitonos; 5 tiras F3; hojas de registro |
 
 ## Módulo 2 — De la aspereza a la consonancia, y el primer retrato del objeto (variante: experimental, adaptada)
@@ -65,9 +62,10 @@ II" se comprime a mini-lección interactiva con audio.
 
 ## Verificación de aprendizaje
 
-- **Ronda oral OA3 (con nota, pasada 2)**: 4 registros nuevos en la
-  planilla; el estímulo-barrido exige describir un fenómeno que CAMBIA
-  en el tiempo (D1) y proponer dónde/cómo medir las fronteras (D3).
+- **Escucha del día**: práctica no calificada; el estímulo-barrido
+  exige describir un fenómeno que CAMBIA en el tiempo y proponer
+  dónde/cómo medir las fronteras; la evidencia de OA3 se recoge por
+  escrito en s07, s13 y s15.
 - **Taller psicoacústico (OA2.2, registro individual SIN nota)**: ~20
   hojas con predicción previa, 3 fronteras personales en Hz y
   semitonos, y la pregunta de proyección respondida; el mapa colectivo
@@ -75,7 +73,7 @@ II" se comprime a mini-lección interactiva con audio.
   verificación pública. Las hojas se archivan como evidencia de OA2.2
   (comparables con el taller de afinación de s09).
 - **Radiografía espectral (OA5.2 + OA4.1, taller evaluado de la
-  semana, 25 %)**: rúbrica rápida logrado/parcial/incipiente sobre la
+  semana, 35 %)**: rúbrica rápida logrado/parcial/incipiente sobre la
   guía: predicción previa escrita, ≥4 parciales tabulados con unidades
   y condiciones, veredicto armónico/inarmónico argumentado con las
   razones $f_n/f_1$, contraste con el hito 1, captura en bitácora.
@@ -89,13 +87,13 @@ II" se comprime a mini-lección interactiva con audio.
 
 ## Aritmética de taller declarada (regla 6b)
 
-- **Módulo 1**: 10+15+15+22+8 = 70′ ✓. Escucha del día: 3′+2′+4×2,5′ =
-  15′ ✓.
-- **Taller psicoacústico (m1, 40–62′)**: 22′ = 2′ instalación + 20′ de
-  medición; 1 notebook/grupo ÷ 2 parejas = 10′ por pareja; cada oyente
-  mide sus 3 fronteras en **~5′ por persona** (barrido de ~1′ por
-  frontera + anotación) ✓ ≥2′; la pareja en espera trabaja los ítems de
-  papel de la hoja (nadie mira sin hacer, principio 3).
+- **Módulo 1**: 10+10+15+27+8 = 70′ ✓. Escucha del día: 2′ (estímulo,
+  dos pasadas) + 2′ (individual) + 3′ (mesa) + 3′ (plenario) = 10′ ✓.
+- **Taller psicoacústico (m1, 35–62′)**: 27′ = 2′ instalación + 25′ de
+  medición; 1 notebook/grupo ÷ 2 parejas ≈ 12,5′ por pareja; cada
+  oyente mide sus 3 fronteras en **~6′ por persona** (barrido de ~1,5′
+  por frontera + anotación) ✓ ≥2′; la pareja en espera trabaja los
+  ítems de papel de la hoja (nadie mira sin hacer, principio 3).
 - **Módulo 2**: 8+15+27+10+10 = 70′ ✓.
 - **Radiografía (m2, 23–50′)**: 27′ = 2′ instalación + 25′ de trabajo;
   sin cuello de material (cada grupo usa SU objeto y ≥2 celulares
@@ -122,9 +120,9 @@ II" se comprime a mini-lección interactiva con audio.
   preparar la lámina de errores por parte; probar
   [`demo_banda_critica.html`](../../demos/demo_banda_critica.html) en el equipo de la sala (barrido de la
   escucha del día en modo oculto) y en 1 notebook de grupo; imprimir
-  ~22 hojas de registro + 6 guías de radiografía + 5 tiras F3; planilla OA3 con el
-  sorteo de la pasada 2; recordatorio por correo/agenda: **audífonos +
-  objeto del proyecto** (ya anunciado en s07).
+  ~22 hojas de registro + 6 guías de radiografía + 5 tiras F3;
+  recordatorio por correo/agenda: **audífonos + objeto del proyecto**
+  (ya anunciado en s07).
 - **Sin estímulo de grabación nuevo**: la escucha del día se genera en
   vivo con la demo (no se agrega fila al banco de estímulos).
 
@@ -150,7 +148,7 @@ II" se comprime a mini-lección interactiva con audio.
 - **La devolución se alarga** → regla anunciada al entregar en la
   puerta (apelaciones fuera de aula); a los 10′ el pizarrón cambia de
   tema aunque queden manos alzadas (corte duro, precedente de s06).
-- **El módulo 1 se atrasa** (devolución o ronda estiradas) → **fusible
+- **El módulo 1 se atrasa** (devolución o escucha del día estirada) → **fusible
   propio del m1, declarado**: la mini-lección se comprime de 15′ a
   12′ **fusionando las votaciones 2 y 3** (ancho de la zona áspera y
   frontera personal se preguntan en una sola votación); el taller

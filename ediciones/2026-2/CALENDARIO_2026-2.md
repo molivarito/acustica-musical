@@ -29,22 +29,22 @@ oficial de Dirección Académica, `fechas-importantes-2026-2.pdf`).
 | Sesión | Fecha | Hito / nota |
 |---|---|---|
 | s01 | vie 07-ago | Grupos + línea base (sin nota, por diseño) |
-| s02 | vie 14-ago | **Parte la ronda oral con nota** |
+| s02 | vie 14-ago | Parte la escucha del día (práctica sin nota) |
 | s03 | vie 21-ago | Lanzamiento del proyecto · **F1: semana universitaria — sin evaluaciones ese día** |
 | s04 | vie 28-ago | Instrumentos de cuerda pulsada #1 |
-| s05 | vie 04-sep | **Hito 1 del proyecto (8 %)** |
+| s05 | vie 04-sep | **Hito 1 del proyecto (10 %)** |
 | s06 | vie 11-sep | Estaciones de niveles; mini-informe SPL. Última clase antes del receso |
 | — | vie 18-sep | **RECESO (14–19 sep) — sin clase** |
-| s07 | vie 25-sep | **Prueba 1 (12,5 %)** — dos semanas después de s06: colchón de estudio natural |
+| s07 | vie 25-sep | **Prueba 1 (10 %) + escucha escrita E1** — dos semanas después de s06: colchón de estudio natural |
 | — | vie 02-oct | **SIN CLASE — actividades suspendidas desde 13:30** |
 | s08 | vie 09-oct | Parten talleres de medición sobre el objeto (s08–s12) |
 | s09 | vie 16-oct | Afinar por batidos; escala del objeto |
-| s10 | vie 23-oct | **Hito 2 del proyecto (8 %)** + clínicas |
+| s10 | vie 23-oct | **Hito 2 del proyecto (10 %)** + clínicas |
 | s11 | vie 30-oct | Instrumentos de cuerda frotada #2 |
 | s12 | vie 06-nov | Sesión-taller de lutería; cierre serie del objeto |
-| s13 | vie 13-nov | **Prueba 2 (12,5 %)** |
+| s13 | vie 13-nov | **Prueba 2 (10 %) + escucha escrita E2** |
 | s14 | vie 20-nov | Salida de medición T60; **se publica pauta del hito 3** |
-| s15 | vie 27-nov | **Presentaciones finales + informe (14 %)** — coincide con el tope de fin de clases (permitido: mismo caso que I4 de SyS) |
+| s15 | vie 27-nov | **Presentaciones finales + informe (15 %) + escucha escrita E3** — coincide con el tope de fin de clases (permitido: mismo caso que I4 de SyS) |
 
 Fechas derivadas: presentaciones de s15 se envían hasta las **20:00 del
 jue 26-nov** (regla de la pauta del hito 3); la nota del hito 2 se
@@ -60,23 +60,23 @@ y las conversaciones por asimetría ocurren entre el 24-oct y el 05-nov.
 | Hito 2 | 23-oct | Fuera ✓ |
 | Prueba 2 | 13-nov | Fuera ✓ |
 | Presentaciones | 27-nov | Fuera ✓ |
-| Ronda oral (s02–s14) | semanal | **s03 (21-ago) cae en semana universitaria → F1** |
 | Talleres evaluados | semanal | **s03 (21-ago) → F1** |
+
+La escucha del día (s02–s14) no es evaluación — no lleva nota ninguna
+semana — por lo que esta verificación no le aplica: corre igual en s03
+pese a la semana universitaria.
 
 ### F1 — s03 (21-ago) en semana universitaria: decisión pendiente del profesor
 
-La sesión corre normal (la ventana solo prohíbe evaluaciones), pero la
-**ronda oral con nota** y el **taller evaluado** ("la sartén y sus
-parientes") no pueden llevar nota ese día. **Recomendación**: ambos
-corren formativos en s03 (mismo formato, sin registro en planilla ni en
-el 25 % de talleres) — hay precedente de diseño (s01 es formativa) y el
-lanzamiento del proyecto, que es lo estructural de s03, no es
-evaluación. Consecuencias: la ronda con nota queda s02, s04–s06,
-s08–s12, s14 (11 sesiones — igual alcanzan ~2–3 pasadas por estudiante
-para "mejores 2"); los talleres evaluados quedan 9 → la regla "mejores
-8 de ~10" pasa a **"mejores 8 de 9"**. Si prefieres otra salida (p. ej.
-correr la nota del taller de s03 a la guía de s04), decidirlo antes de
-s02 para anunciarlo con las reglas del curso.
+La sesión corre normal (la ventana solo prohíbe evaluaciones), pero el
+**taller evaluado** ("la sartén y sus parientes") no puede llevar nota
+ese día. **Recomendación**: corre formativo en s03 (mismo formato, sin
+registro en el 35 % de talleres) — hay precedente de diseño (s01 es
+formativa) y el lanzamiento del proyecto, que es lo estructural de s03,
+no es evaluación. Consecuencia: los talleres evaluados quedan 9 → la
+regla "mejores 8 de ~10" pasa a **"mejores 8 de 9"**. Si prefieres otra
+salida (p. ej. correr la nota del taller de s03 a la guía de s04),
+decidirlo antes de s02 para anunciarlo con las reglas del curso.
 
 ## Consecuencias de calendario a tener presentes
 

@@ -6,8 +6,9 @@ C.2c: explicar por escrito el fenómeno ya vivido ES evaluable como
 OA2.2), OA4.1 y OA4.2 (contenido de s01–s06; lo de s06 solo con ítems
 básicos,
 regla de dimensionamiento de metodología §4 e instrucciones 6b) e
-incluye una **escucha escrita corta evaluada con la rúbrica OA3**
-(cuenta en la nota de la prueba, metodología §4). El módulo 2 **siembra
+incluye la **escucha escrita 1** (Parte A), evaluada aparte con la
+rúbrica OA3 y que **no entra en los 48 puntos de la prueba** (metodología
+§4). El módulo 2 **siembra
 OA2.2** (batidos de primer orden, primera experiencia auditiva) y
 ejercita OA2.1 sin nota.
 **Requisitos previos**: todo s01–s06. El **ticket de salida de s06**
@@ -24,10 +25,10 @@ consonancia) y s09 (afinar por batidos). La demo de hoy
 ([`demo_batidos.html`](../../demos/demo_batidos.html)) se **reutiliza en s08**.
 **Reglas aplicadas**: sesión con prueba → la prueba ocupa TODO el
 módulo 1 y el módulo 2 es de **audición liviana** (metodología §3);
-**esta semana NO hay escucha del día** (la prueba incluye una escucha
-escrita corta que la reemplaza) **ni taller evaluado** (la prueba es la
-evaluación de la semana; la ronda oral OA3 se retoma en s08 con la
-pasada 2 de la planilla).
+**esta semana NO hay escucha del día** (la prueba incluye la escucha
+escrita 1, calificada aparte con la rúbrica OA3) **ni taller evaluado**
+(la prueba es la evaluación de la semana); la escucha del día (práctica,
+sin nota) se retoma en s08.
 
 ## Módulo 1 — Prueba 1: "escuchar, leer, predecir" (formato: evaluación; sin variante de anatomía)
 
@@ -55,16 +56,18 @@ estímulos). Duración diseñada ≤60′ dentro de 70′: 7′ de instalación 
 | 22–35′ | Mini-lección liviana: por qué bate (OA2.2) — consume la lectura previa (mitad batidos de cap07) | Sigue el argumento con el dibujo de la demo: dos ondas casi iguales entran y salen de paso (en fase → refuerzo; en contrafase → silencio); verifica en la envolvente de la demo que el ciclo refuerzo–silencio ocurre \|f₂−f₁\| veces por segundo; responde votación: "f₁=440, f₂=443: ¿cuántos batidos por segundo?" | Presenta la regla del curso: **f_b = \|f₂ − f₁\|** (los batidos por segundo son la diferencia de frecuencias); la justifica con el dibujo de la envolvente (sin trigonometría: dos trenes que se desfasan); nombra "batido de primer orden" (ROE 2.4) y deja plantado: "esta ondulación es también un instrumento de medición" | Demo (vista de envolvente); pizarrón |
 | 35–52′ | Experiencia guiada II: afinar de oído (OA2.2, anticipo de s09) | Voluntarios (3–4) pasan al notebook proyectado: con el **modo afinación** de la demo (números ocultos), llevan f₂ al unísono SOLO escuchando: batido cada vez más lento hasta detenerse; el curso arbitra ("todavía bate… ahí quedó"); si hay segunda flauta o 2 cuerdas reales, un voluntario repite el juego afinando el instrumento real contra el otro | Modera el juego (relajado: es post-prueba, sin nota); muestra al revelar los números cuán cerca quedó cada voluntario (¿1 Hz? ¿0,5 Hz?); remata: "así afinan los afinadores de piano desde hace dos siglos — en s09 lo haremos en serio" | Demo en modo afinación, proyectada; 2 flautas o 2 cuerdas (opcional); audio de sala |
 | 52–62′ | El borde del fenómeno (siembra explícita de s08) | Escucha qué pasa cuando el profesor aleja f₂ más y más (Δf = 5, 10, 15, 20, 30 Hz): anota en una línea en su cuaderno dónde dejó de poder contar y qué oye ahora (¿ondulación → aspereza → dos notas?); compara impresiones con su vecino (1′) | Barre Δf lentamente hacia arriba con la demo; NO explica lo que aparece (la rugosidad y la separación en dos notas son el corazón de s08); solo recoge las palabras del curso en el pizarrón ("áspero", "granulado", "se separó") | Demo (f₂ hasta 470 Hz); pizarrón |
-| 62–70′ | Cierre, ticket hacia s08 y anuncios | Anota la síntesis (3 líneas: un batido por segundo por cada Hz de diferencia; el batido delata desafinaciones que el oído no distingue como dos alturas; el batido detenido = unísono); escribe su **ticket de salida hacia s08**: "cuando la diferencia crece más allá de lo que batea, ¿qué se oye y dónde termina eso?" | Sintetiza; recoge tickets; **anuncia s08**: taller psicoacústico con registro individual (traer audífonos) y **comienzan los talleres de medición sobre el objeto del proyecto** (s08–s12): cada grupo trae su objeto o un avance medible; recuerda que la ronda oral OA3 vuelve en s08 (pasada 2) | Tickets; pizarrón |
+| 62–70′ | Cierre, ticket hacia s08 y anuncios | Anota la síntesis (3 líneas: un batido por segundo por cada Hz de diferencia; el batido delata desafinaciones que el oído no distingue como dos alturas; el batido detenido = unísono); escribe su **ticket de salida hacia s08**: "cuando la diferencia crece más allá de lo que batea, ¿qué se oye y dónde termina eso?" | Sintetiza; recoge tickets; **anuncia s08**: taller psicoacústico con registro individual (traer audífonos) y **comienzan los talleres de medición sobre el objeto del proyecto** (s08–s12): cada grupo trae su objeto o un avance medible; recuerda que la escucha del día (práctica, sin nota) vuelve en s08 | Tickets; pizarrón |
 
 ## Verificación de aprendizaje
 
-- **Prueba 1** (instrumento central de la semana, 12,5 % del curso):
-  partes A–D corregidas con la pauta cerrada
+- **Prueba 1** (instrumento central de la semana, 10 % del curso, 48
+  puntos): partes B–D corregidas con la pauta cerrada
   (`ediciones/2026-2/pruebas/prueba1_pauta.md`), ~15 min por estudiante, pico
-  declarado ≈5 h (metodología §4). La Parte A alimenta además el
-  seguimiento de OA3 (comparable con la línea base de s01 y la ronda
-  oral).
+  declarado ≈5 h (metodología §4). La **Parte A (escucha escrita 1)** se
+  aplica dentro de la prueba pero se califica aparte con la rúbrica OA3
+  (10 % del curso junto con s13 y s15, cuentan las mejores 2 de 3) — no
+  entra en los 48 puntos; alimenta el seguimiento de OA3 comparable con
+  la línea base de s01.
 - **Módulo 2 (sin nota, por diseño)**: verificación informal — el curso
   cuenta batidos que coinciden con \|f₂−f₁\| (bloque 8–22′); los
   voluntarios logran detener el batido en el juego de afinación (35–52′);

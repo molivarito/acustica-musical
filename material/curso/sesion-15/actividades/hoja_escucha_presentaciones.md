@@ -2,9 +2,12 @@
 
 **Objetivos**: OA3.1 (describir e hipotetizar sobre un instrumento
 real) y OA3.2 (conectar lo oído con el mecanismo y con las mediciones
-presentadas). **Individual.** Es la evidencia final de escucha
-argumentada del curso: reemplaza a la ronda oral de esta sesión
-("ustedes son el estímulo", como se anunció en s14).
+presentadas). **Individual.** Es la tercera y última escucha
+argumentada escrita del curso (**E3**): junto con la Parte A de la
+Prueba 1 (E1, s07) y la Parte A de la Prueba 2 (E2, s13), cuentan las
+mejores 2 de las 3 para la nota OA3 (10 % del curso). Aquí el estímulo
+son los instrumentos de sus propios compañeros ("ustedes son el
+estímulo", como se anunció en s14).
 
 **Mecánica** (también en la lámina de entrada):
 
@@ -18,9 +21,9 @@ argumentada del curso: reemplaza a la ronda oral de esta sesión
   compañeros es tarea del profesor.
 - Al cierre (min 46 del módulo 2) marque la casilla ★ de **su mejor
   diagnóstico del día** y entregue las 2 hojas en la caja. El bloque
-  marcado se califica con la rúbrica OA3 del curso y entra a su
-  registro como pasada final (cuentan sus mejores 2 del semestre:
-  esta hoja solo puede ayudarlo).
+  marcado se corrige con la rúbrica OA3 del curso y es la **tercera
+  escucha escrita (E3)**: cuentan las mejores 2 de las 3 del semestre
+  (E1, E2, E3) para el 10 % de OA3 — esta hoja solo puede ayudarlo.
 
 **Impresión**: 2 bloques por cara; 2 hojas por estudiante (40 + repuestos).
 

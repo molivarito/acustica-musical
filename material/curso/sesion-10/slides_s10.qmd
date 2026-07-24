@@ -30,14 +30,15 @@ Dos módulos, un puente hacia los instrumentos.
 
 > La clínica del módulo 2 trabaja **sobre lo que acaban de entregar** — guarden una copia o foto de su compilado.
 
-## Escucha del día (15′)
+## Escucha del día (10′, sin nota)
 
 **Protocolo**: describir → hipotetizar → verificar.
 
 ::: {.incremental}
-- Estímulo, dos pasadas (3′)
+- Estímulo, dos pasadas
 - Escriben su diagnóstico en 3 líneas (2′)
-- 4 sorteados exponen, 2,5′ c/u, cronómetro visible
+- Discuten en la mesa (3′): el vocero anota el diagnóstico del grupo
+- Plenario (3′): pregunta a una o dos mesas, responde el vocero
 :::
 
 *Separen bien lo que sube parejo de lo que se infla — son cosas distintas.*

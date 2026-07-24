@@ -16,9 +16,9 @@ format:
 | Módulo 1 | Módulo 2 |
 |---|---|
 | Devolución Prueba 1 | Ranking a ciegas: ¿qué intervalo es más liso? |
-| Escucha del día (con nota) | Por qué la 5ª es lisa y el tritono roza |
+| Escucha del día (sin nota) | Por qué la 5ª es lisa y el tritono roza |
 | El mapa del choque: batido → dos notas | Taller PEE: **radiografía espectral** del objeto |
-| Taller psicoacústico (registro, sin nota) | *(evaluado, 25 %)* |
+| Taller psicoacústico (registro, sin nota) | *(evaluado, 35 %)* |
 
 ## Antes de nada: su Prueba 1
 
@@ -36,13 +36,16 @@ Corte duro al minuto 10.
 
 ## Escucha del día {.center}
 
-**Con nota** — pasada 2 de la planilla.
+**Protocolo** (10′, sin nota):
 
 ::: {.incremental}
-- Estímulo (2 pasadas, 3′)
-- Escriben: **describir** → **hipotetizar** → **proponer verificación** (2′)
-- 4 sorteados exponen, **2,5′ c/u**, cronómetro visible
+- Escuchan el estímulo, **dos pasadas**
+- Anotan en 3 líneas: **describir → hipotetizar → verificar** (**2′**)
+- Discuten en la mesa (**3′**): el vocero anota el diagnóstico del grupo
+- Plenario (**3′**): el profesor pregunta a una o dos mesas — responde el vocero por el grupo — y cierra con su propia versión
 :::
+
+> La rúbrica OA3 es guía para autoevaluarse, no calificación; la evidencia se recoge por escrito en s07, s13 y s15.
 
 ## Escuchen con atención {.center}
 
@@ -170,7 +173,7 @@ La 4ª justa es físicamente lisa y el contrapunto la trata como disonancia.
 
 ## Taller PEE: radiografía espectral {.center}
 
-**Evaluado** — 25 % de talleres · 1º de la serie s08–s12 · línea base del hito 2
+**Evaluado** — 35 % de talleres · 1º de la serie s08–s12 · línea base del hito 2
 
 ::: {.incremental}
 - **Predicen**: ¿armónico o inarmónico?, ¿dónde $f_1$?

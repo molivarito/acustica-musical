@@ -6,9 +6,10 @@ impedancia, acoplamiento, proporciones de tubos y resonadores), OA1.3
 OA2.2 (batidos, banda crítica, rugosidad), OA2.3 (escalas, temperamentos
 y cents), sobre el contenido de las sesiones 08–12 — **lo de s12 solo
 con ítems básicos** (tubo abierto/cerrado, $v/2L$–$v/4L$, registros;
-regla 6b y compromiso explícito del anuncio de s12) — e incluye una
-**escucha escrita corta evaluada con la rúbrica OA3.1** (cuenta en la
-nota de la prueba, metodología §4). El módulo 2 cubre **OA1.3
+regla 6b y compromiso explícito del anuncio de s12) — e incluye la
+**escucha escrita 2** (Parte A), evaluada aparte con la rúbrica OA3.1 y
+que **no entra en los 48 puntos de la prueba** (metodología §4). El
+módulo 2 cubre **OA1.3
 (excitación cantada)** en audición liviana, sin nota: es el único
 espacio de la voz en el curso (decisión D2 de `PLAN_SEMESTRE.md`) y cierra la
 trilogía de válvulas del bloque C (fricción s11, chorro s12, pliegues
@@ -30,9 +31,10 @@ finales. El ticket de hoy siembra exactamente esa transición.
 **Reglas aplicadas y decisiones de carga (declaradas)**: sesión con
 prueba → la prueba ocupa TODO el módulo 1 y el módulo 2 es de
 **audición liviana** (metodología §3); **esta semana NO hay escucha del
-día** (la escucha escrita de la prueba la reemplaza; la ronda oral OA3
-se retoma en s14, precedente de s07) **ni taller evaluado** (la prueba
-es la evaluación de la semana). Decisiones: (1) el **módulo 2 es
+día** (la prueba incluye la escucha escrita 2, calificada aparte con la
+rúbrica OA3) **ni taller evaluado** (la prueba es la evaluación de la
+semana); la escucha del día (práctica, sin nota) se retoma en s14.
+Decisiones: (1) el **módulo 2 es
 plenario y sin guía impresa ni registro recogido**: el curso sale
 agotado de la prueba; el material es la propia voz (profesor y curso) y
 la demo. (2) La Prueba 2 usa **3 estímulos de audio y solo 2 figuras**
@@ -83,12 +85,14 @@ Presupuesto interno del cuadernillo: A 10′ + B 15′ + C 20′ + D 8′ =
 
 ## Verificación de aprendizaje
 
-- **Prueba 2** (instrumento central de la semana, 12,5 % del curso):
-  partes A–D corregidas con la pauta cerrada
+- **Prueba 2** (instrumento central de la semana, 10 % del curso, 48
+  puntos): partes B–D corregidas con la pauta cerrada
   (`ediciones/2026-2/pruebas/prueba2_pauta.md`), ~13–15 min por estudiante, pico
-  declarado ≈5 h (metodología §4). La Parte A alimenta además el
-  seguimiento de OA3 (comparable con la línea base de s01, la ronda
-  oral y la Parte A de la Prueba 1).
+  declarado ≈5 h (metodología §4). La **Parte A (escucha escrita 2)** se
+  aplica dentro de la prueba pero se califica aparte con la rúbrica OA3
+  (10 % del curso junto con s07 y s15, cuentan las mejores 2 de 3) — no
+  entra en los 48 puntos; alimenta el seguimiento de OA3 comparable con
+  la línea base de s01 y la Parte A de la Prueba 1.
 - **Módulo 2 (sin nota, por diseño)**: verificación informal — las
   predicciones del susurro contrastadas en vivo (bloque 8–22′); el
   curso adivina las vocales de la demo por sus bandas (36–52′, ≥3
@@ -149,8 +153,8 @@ Presupuesto interno del cuadernillo: A 10′ + B 15′ + C 20′ + D 8′ =
   respuesta: captura de la demo de s10 con dos amortiguamientos, o
   redibujo) y Figura 2 (espectros tubo abierto/tapado: captura de la
   demo de s12, o redibujo); probar app de espectrograma + micrófono en
-  el proyector para el m2; NO hay planilla OA3 esta semana (la ronda
-  vuelve en s14); revisar que el equipo de sala reproduzca el batido de
+  el proyector para el m2; esta semana no hay escucha del día (la
+  escucha del día, práctica sin nota, vuelve en s14); revisar que el equipo de sala reproduzca el batido de
   #13 sin distorsión (escuchar a nivel moderado).
 
 ## Riesgos y plan B

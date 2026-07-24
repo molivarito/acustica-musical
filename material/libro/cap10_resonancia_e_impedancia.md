@@ -163,7 +163,7 @@ apenas siembra esa idea; las dos siguientes la cosechan.
 
 ## La clínica: su proyecto pasa al pizarrón
 
-La sesión 10 es también el **hito 2** de su proyecto (8 %): al inicio
+La sesión 10 es también el **hito 2** de su proyecto (10 %): al inicio
 de la clase su grupo entrega el compilado (radiografía espectral de
 s08, mapa de escala de s09, bitácora al día, estado respecto de lo
 prometido en el hito 1) y cada integrante su coevaluación en sobre

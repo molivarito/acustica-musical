@@ -37,12 +37,13 @@ Se verifica contra checklist. [**No se corrige hoy**]{style="color:#0f766e"} —
 
 ## Escucha del día {.center}
 
-Protocolo, sin excepciones:
+Protocolo (10′, sin nota):
 
 ::: {.incremental}
-- **3′** de estímulo
+- El bajo suena en el parlante del celular y luego en el de sala (~2′)
 - **2′** para escribir: describir → hipotetizar → verificar
-- **4 personas sorteadas** exponen, 2,5′ cada una
+- **3′** de discusión en la mesa: el vocero anota el diagnóstico del grupo
+- Plenario (**3′**): pregunta a una o dos mesas, responde el vocero
 :::
 
 . . .
@@ -188,7 +189,7 @@ Encuesta relámpago, anónima, 30 segundos:
 ::: {.incremental}
 1. ¿Hizo la **lectura previa**? sí / no
 2. ¿Le **sirvió** para la clase? mucho / algo / nada
-3. ¿La **ronda oral** se siente demasiado larga? sí / no
+3. ¿Las **mesas llegan con algo escrito** al plenario? sí / no
 :::
 
 ## Para la próxima sesión
