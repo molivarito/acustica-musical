@@ -1,10 +1,11 @@
 # Pauta de corrección — Prueba 2 (s13)
 
-**Uso del profesor.** Puntaje total 64. Presupuesto de corrección:
-**~13–15 min por estudiante** (A: ~4′ con rúbrica · B: ~4′ · C: ~3′ ·
-D: ~2′), 20 estudiantes ≈ 4,5–5 h (pico declarado en metodología §4).
-Corregir por PARTE (todos los A, luego todos los B…), no por
-estudiante: mantiene el criterio parejo y es más rápido.
+**Uso del profesor.** Puntaje total 64. Desde 2026-07 las Partes B, C
+y D son de alternativas (Parte A sigue siendo de desarrollo, con
+rúbrica). Presupuesto de corrección: **~6′ por estudiante** (A: ~4′
+con rúbrica · B–D: ~2′ de cotejo directo contra la clave), 20
+estudiantes ≈ 2 h. Corregir por PARTE (todos los A, luego todos los
+B…), no por estudiante: mantiene el criterio parejo y es más rápido.
 
 ## Conversión puntaje → nota (exigencia 60 %)
 
@@ -14,6 +15,27 @@ estudiante: mantiene el criterio parejo y es más rápido.
 | Puntaje | 0 | 13 | 26 | 38,4 | 45 | 51 | 58 | 64 |
 |---|---|---|---|---|---|---|---|---|
 | Nota | 1,0 | 2,0 | 3,0 | **4,0** | 4,8 | 5,5 | 6,3 | 7,0 |
+
+## Clave rápida (Partes B–D, cotejo directo)
+
+| Ítem | Letra | Pts | Ítem | Letra | Pts |
+|---|---|---|---|---|---|
+| B.1a | c | 2 | C.2b | c | 2 |
+| B.1b | a | 2 | C.2c | d | 2 |
+| B.1c | d | 2 | C.3a | b | 2 |
+| B.1d | b | 2 | C.3b | a | 2 |
+| B.2a | a | 2 | C.3c | c | 2 |
+| B.2b | c | 2 | C.3d | b | 2 |
+| B.2c | b | 2 | D.1 | (tabla) | 4 |
+| B.3a | d | 2 | D.2a | d | 1 |
+| B.3b | c | 2 | D.2b | c | 1 |
+| C.1a | a | 2 | D.2c | b | 1 |
+| C.1b | b | 2 | D.3a | a | 1 |
+| C.1c | d | 2 | D.3b | b | 1 |
+| C.2a | a | 2 | D.3c | d | 1 |
+
+Distribución de letras correctas (24 ítems de alternativa de 4
+opciones + D.2c binaria): a=6 · b=7 · c=6 · d=6.
 
 ## Tabla de mapeo ítem → OA → puntaje
 
@@ -31,7 +53,8 @@ acoplamiento/proporciones = **OA1.2**; mecanismos/regímenes/familias =
 | B.1c | OA1.2 | — | 2 | aplicación |
 | B.1d | OA1.2 | — | 2 | aplicación |
 | B.2a | OA2.2 | — | 2 | básico (s08: vivido en taller) |
-| B.2b | OA2.2 | — | 4 | aplicación |
+| B.2b | OA2.2 | — | 2 | aplicación |
+| B.2c | OA2.2 | — | 2 | aplicación |
 | B.3a | OA1.3 | — | 2 | **básico** (s12: registros — regla 6b) |
 | B.3b | OA1.3 | — | 2 | **básico** (s12 — regla 6b) |
 | C.1a | OA1.2 | — | 2 | **básico** (s12: $v/2L$ — regla 6b) |
@@ -103,114 +126,147 @@ reafinar hasta detener el batido.
 
 ## Parte B — Casos sonoros y figura (18 pts)
 
-**B.1a (2)**: horizontal = frecuencia de excitación (Hz) (1 pt);
-vertical = amplitud de respuesta (unidades relativas; se acepta
-"cuánto responde/vibra el resonador") (1 pt). "Frecuencia" sin más se
-acepta; "tiempo" en cualquiera de los dos ejes = 0 en ese eje.
+**B.1a (2) — c**. Horizontal = frecuencia de excitación (Hz);
+vertical = amplitud de respuesta. Distractores: (a) pone "tiempo" en
+el eje horizontal — el error típico documentado; (b) pone "tiempo" en
+el eje vertical; (d) invierte los dos ejes.
 
-**B.1b (2)**: R1 = poco amortiguado (copa), R2 = muy amortiguado
-(bandeja sujeta) (1 pt). Rasgo válido (1 pt): R1 tiene el pico
-alto y angosto / responde mucho pero solo casi exactamente en $f_0$;
-R2 bajo y ancho / responde "más o menos" en un rango amplio.
+**B.1b (2) — a**. R1 = poco amortiguado (copa): pico alto y angosto,
+responde fuerte solo muy cerca de $f_0$. Distractores: (b) identifica
+bien R1 pero le atribuye el rasgo de R2 (pico bajo y ancho); (c) invierte
+R1/R2 manteniendo el rasgo correcto de "copa"; (d) invierte R1/R2 y además
+razona mal (el amortiguamiento angosta la curva, cuando en realidad la
+ensancha).
 
-**B.1c (2)**: **R2** (1 pt). Lectura (1 pt): en 190 Hz la curva R1 ya
-cayó casi a cero (su pico es angostísimo) mientras R2 sigue cerca de
-su máximo — el resonador "peor" responde más fuera del pico. Responder
-R1 "porque es el más resonante" sin leer la figura: 0.
+**B.1c (2) — d**. **R2** responde más en 190 Hz: la curva de R1 ya
+cayó casi a cero (pico angostísimo) mientras R2 sigue cerca de su
+máximo. Distractores: (a) es el error típico documentado — "R1 porque
+es el más resonante", sin leer la figura; (b) elige R1 con un
+argumento que en realidad describe a R2 (responder fuera del pico); (c)
+dice que responden igual, ignorando que solo uno tiene la curva alta en
+190 Hz.
 
-**B.1d (2)**: **R1** (1 pt). Regla (1 pt): pico angosto ↔ poco roce ↔
-arranque lento y decaimiento largo — el ancho del pico y la duración
-del ping son dos caras del mismo amortiguamiento (s10). Se acepta el
-argumento por energía ("pierde poca energía por ciclo, tarda en
-gastarla").
+**B.1d (2) — b**. **R1** suena más tiempo: pico angosto ↔ poco
+amortiguamiento ↔ pierde poca energía por ciclo ↔ tarda en gastarla.
+Distractores: (a) elige R2 con el argumento de "rango amplio", que en
+realidad predice decaimiento corto; (c) elige R1 correctamente pero con
+la lógica invertida (angosto = mucho amortiguamiento); (d) niega la
+diferencia entre ambos.
 
-**B.2a (2)**: secuencia esperada: (1) una sola nota que ondula —
-batido contable; (2) la ondulación se acelera hasta volverse aspereza
-/ rugosidad que ya no se puede contar (sigue oyéndose UNA nota); (3)
-se separa en dos notas, todavía ásperas; (4) dos notas lisas y
-separadas. Tres o más etapas en el orden correcto = 2 pts; dos etapas
-correctas = 1 pt. No se exigen los nombres del curso si la descripción
-es inequívoca.
+**B.2a (2) — a**. Secuencia: batido contable → aspereza fusionada
+(una sola nota) → dos notas ásperas separándose → dos notas lisas.
+Distractores: (b) parte por el paso equivocado y termina invertido; (c)
+permuta "dos ásperas" y "aspereza fusionada"; (d) es plausible pero
+omite la etapa intermedia de "dos notas todavía ásperas" antes de
+volverse lisas.
 
-**B.2b (4)**: idea completa (4): dos tonos cercanos excitan **zonas
-superpuestas de la membrana basilar**: una misma población de células
-recibe la suma de ambos, con sus refuerzos y cancelaciones — eso se
-oye como batido o rugosidad; al crecer la separación más allá de la
-**banda crítica**, las dos zonas dejan de pisarse, cada tono se
-procesa por separado y la interferencia desaparece: dos notas lisas.
-Parcial (2): invoca "banda crítica" o "salen de la misma zona del
-oído" sin el mecanismo de superposición de zonas. Incorrecto típico
-(0): "las ondas dejan de mezclarse en el aire" — la rugosidad no está
-en el aire (el micrófono siempre ve dos líneas limpias, s08).
+**B.2b (2) — c**. Los dos tonos cercanos excitan **zonas superpuestas
+de la membrana basilar**: una misma población de células recibe la
+suma de ambos, con refuerzos y cancelaciones que se oyen como
+aspereza. Distractores: (a) es el error típico documentado — "las
+ondas se mezclan en el aire" (la rugosidad no está en el aire: el
+micrófono siempre ve dos líneas limpias, s08); (b) inventa un
+mecanismo mecánico en el tímpano sin relación con la membrana basilar;
+(d) confunde con saturación neural, no con el mecanismo de bandas.
 
-**B.3a (2)**: saltó **una octava** (1 pt); el cambio es **discreto** —
-de golpe, sin pasar por las alturas intermedias (no es glissando)
-(1 pt). "Subió mucho" sin intervalo: 0 en la primera mitad.
+**B.2c (2) — b**. Al superar la banda crítica, las zonas de la
+membrana basilar excitadas por cada tono dejan de superponerse: cada
+uno se procesa por separado y no hay interferencia. Distractores: (a)
+confunde "se separan en frecuencia" con "uno deja de oírse"; (c) apela
+a adaptación/acostumbramiento, no al mecanismo de bandas; (d) repite el
+error del "aire" (mismo error típico que en B.2b, aplicado a la
+desaparición).
 
-**B.3b (2)**: la columna de aire solo ofrece **sus modos** (sus
-frecuencias características): soplar más fuerte no corre esas
-frecuencias, y el régimen de oscilación termina enganchándose al
-siguiente modo disponible (1 pt); en un tubo abierto como la flauta el
-siguiente modo está al **doble** de la fundamental — por eso el salto
-es justo una octava (1 pt). Se acepta (y celebra) el contraste con el
-tubo tapado del taller, que salta a la docena; no se exige.
+**B.3a (2) — d**. Saltó **una octava**, **de golpe** (discreto, sin
+glissando). Distractores: (a) tiene el intervalo correcto pero dice que
+es gradual; (b) y (c) cambian el intervalo (quinta, docena)
+manteniendo "de golpe".
+
+**B.3b (2) — c**. La columna de aire solo ofrece **sus modos**: soplar
+más fuerte no corre esas frecuencias, y el régimen se engancha al
+siguiente modo disponible; en un tubo abierto ese modo está al
+**doble** de la fundamental — por eso el salto es una octava.
+Distractores: (a) inventa un mecanismo de tensión de cuerda, ajeno a
+una columna de aire; (b) tiene el primer tramo correcto pero equivoca
+la razón del salto (quinta en vez de octava — el tubo tapado del
+taller sí salta a la docena, no la flauta); (d) atribuye el salto a un
+cambio de embocadura, no al régimen de modos.
 
 ## Parte C — Predecir con proporciones (20 pts)
 
-**C.1a (2)**: $f_1 = v/2L = 343/0{,}686 = 500$ Hz (1 pt); proporción
-$v/2L$ para tubo abierto-abierto (1 pt). Aceptar 490–510 Hz por
-redondeo.
+**C.1a (2) — a**. $f_1 = v/2L = 343/0{,}686 = 500$ Hz, con la
+proporción $v/2L$ para tubo abierto-abierto. Distractores: (b) usa
+$v/4L$ (250 Hz, error típico de confundir la fórmula del tubo tapado);
+(c) invierte la fórmula ($2v/L$); (d) iguala $f_1 \approx v$, sin
+proporción de longitud de onda.
 
-**C.1b (2)**: $f_1 = v/4L = 250$ Hz (1 pt); una **octava abajo** de la
-nota del tubo abierto (razón 2:1) (1 pt).
+**C.1b (2) — b**. $f_1 = v/4L = 250$ Hz, una **octava abajo** de la
+nota del tubo abierto (razón 2:1). Distractores: (a) tiene el valor
+correcto pero la relación equivocada (quinta en vez de octava); (c)
+repite la frecuencia del tubo abierto, como si tapar un extremo no
+cambiara nada; (d) confunde octava simple con dos octavas.
 
-**C.1c (2)**: **X** es el tubo tapado (1 pt). Criterio (1 pt): sus
-picos están en 250, 750 y 1250 Hz — **solo los múltiplos impares** de
-250 (faltan 500 y 1000): la firma del tubo cerrado en un extremo; Y
-tiene la serie completa de 500 (500, 1000, 1500) — el tubo abierto.
-Nota de corrección: la respuesta debe ser consistente con los cálculos
-de a–b; si a–b vienen malos pero la lectura "X salta de a dos, es el
-tapado" es correcta, dar el punto del criterio.
+**C.1c (2) — d**. **X** es el tubo tapado: sus picos están en 250, 750
+y 1250 Hz — **solo los múltiplos impares** de 250 (faltan 500 y
+1000) — la firma del tubo cerrado en un extremo; Y tiene la serie
+completa (500, 1000, 1500), el tubo abierto. Distractores: (a) y (c)
+eligen Y con criterios ajenos al espectro (cantidad de parciales,
+separación en dB); (b) describe correctamente la serie de Y pero
+concluye mal, atribuyéndosela al tubo tapado.
 
-**C.2a (2)**: $12 \times 702 = 8424$; $7 \times 1200 = 8400$; sobran
-**24 cents** (1 pt); es la **coma pitagórica**, aproximadamente un
-**cuarto de semitono** (1 pt; se acepta "23,5" o "~24" y el nombre
-"coma" solo).
+**C.2a (2) — a**. $12 \times 702 = 8424$; $7 \times 1200 = 8400$;
+sobran **24 cents**: es la **coma pitagórica**, aproximadamente un
+**cuarto de semitono**. Distractores: (b) tiene el valor correcto pero
+el nombre equivocado (coma sintónica) y el tamaño equivocado (medio
+semitono); (c) calcula mal el sobrante (12 cents); (d) confunde el
+sobrante con un semitono completo.
 
-**C.2b (2)**: $24/12 = $ **~2 cents** por quinta (1 pt); pasa casi
-inadvertido porque 2 cents no se percibe como cambio de altura — solo
-se delata como un **batido lento** (~1 por segundo en el registro
-central), mucho más suave que cualquier desafinación audible (1 pt).
+**C.2b (2) — c**. $24/12 = $ **~2 cents** por quinta; pasa casi
+inadvertido porque no se oye como cambio de altura — solo se delata
+como un **batido lento**, mucho más suave que cualquier desafinación
+audible. Distractores: (a) tiene el valor correcto pero el argumento
+equivocado (el oído "no distingue cents" no es la razón: si distingue
+diferencias mayores); (b) no divide por 12 y arrastra el total; (d)
+niega que exista batido, contradiciendo lo escuchado en B.2.
 
-**C.2c (2)**: la **tercera mayor** (1 pt); su error es **14 cents**
-contra 2 de la quinta — siete veces mayor: su par de parciales en
-colisión late ~10 veces por segundo (aspereza que "muele") mientras la
-quinta apenas ondula (1 pt). Basta el argumento "14 ≫ 2 → bate más
-rápido / más áspera"; el valor 10/s no se exige.
+**C.2c (2) — d**. La **tercera mayor**: su error es **14 cents**
+contra 2 de la quinta — mucho mayor — late más rápido y se oye más
+áspera. Distractores: (a) invierte el argumento de percepción; (b)
+confunde el tamaño total del intervalo (400 o 702 cents) con el
+tamaño del error de afinación, que es lo que realmente determina el
+batido; (c) niega la diferencia entre ambos temperamentos.
 
-**C.3a (2)**: **sube** (1 pt). Mecanismo (1 pt): al soplar, lo que
-vibra es el **aire** (resonador de Helmholtz): el agua no participa —
-solo achica el volumen de aire, y un resorte de aire más corto es más
-rígido → $f_0$ sube.
+**C.3a (2) — b**. **Sube**: al soplar, lo que vibra es el **aire**
+(resonador de Helmholtz); el agua no participa — solo achica el
+volumen de aire, y un resorte de aire más corto es más rígido.
+Distractores: (a) identifica bien que vibra el aire pero invierte la
+dirección; (c) atribuye la vibración al vidrio, mecanismo de (b) y no
+de (a); (d) tiene el mecanismo del aire pero invierte el efecto del
+agua sobre el volumen.
 
-**C.3b (2)**: **baja** (1 pt). Mecanismo (1 pt): golpeada, lo que
-vibra es el **vidrio con su contenido**: el agua es masa agregada que
-alenta la vibración → más grave. La clave que se premia: la misma
-botella es DOS resonadores distintos según a quién se le entrega la
-energía.
+**C.3b (2) — a**. **Baja**: golpeada, lo que vibra es el **vidrio con
+su contenido**; el agua es masa agregada que alenta la vibración. La
+clave que se premia: la misma botella es DOS resonadores distintos
+según a quién se le entrega la energía. Distractores: (b) confunde el
+mecanismo golpeado con el soplado (aire/Helmholtz); (c) tiene la
+dirección correcta pero el mecanismo del caso (a), no del (b); (d)
+niega que el agua tenga efecto.
 
-**C.3c (2)**: el elástico solo es delgado y "duro de mover": corta el
-aire en vez de empujarlo — su impedancia no calza con la del aire y la
-energía queda atrapada en la vibración (1 pt); la caja, movida por el
-elástico, tiene superficie grande y liviana: empuja mucho aire con
-poca fuerza — actúa de **transformador/acoplador** entre elástico y
-aire (1 pt). "La caja amplifica el sonido" sin mecanismo (¿con qué
-energía?): máximo 1 pt.
+**C.3c (2) — c**. El elástico solo es delgado y "duro de mover": corta
+el aire en vez de empujarlo — su impedancia no calza con la del aire;
+la caja, grande y liviana, empuja mucho aire con poca fuerza y actúa
+de **transformador/acoplador**. Distractor clave documentado (a): "la
+caja amplifica el sonido" sin mecanismo (¿con qué energía?);
+(b) confunde acoplamiento con aporte de energía extra; (d) inventa una
+resonancia exacta de la caja, que no es el mecanismo enseñado.
 
-**C.3d (2)**: dura **menos** (1 pt); la caja **no agrega energía** —
-el pulso inicial puso toda la que habrá; si esa misma energía se
-convierte en sonido más intenso, se gasta antes: fuerte ↔ corto es el
-compromiso de todo instrumento de cuerda (1 pt).
+**C.3d (2) — b**. Dura **menos**: la caja **no agrega energía** — el
+pulso inicial puso toda la que habrá; si esa misma energía se
+convierte en sonido más intenso, se gasta antes (fuerte ↔ corto).
+Distractores: (a) invierte la conclusión asumiendo que "más fuerte"
+implica más energía disponible; (c) niega el efecto de la caja sobre
+la duración; (d) tiene la conclusión correcta pero el mecanismo
+opuesto al enseñado (la caja "absorbe" en vez de "no agregar").
 
 ## Parte D — Mecanismos y vocabulario (10 pts)
 
@@ -227,18 +283,37 @@ Se aceptan equivalentes claros ("stick-slip", "el chorro que oscila en
 el filo"). "El arco" o "el aire" a secas en la columna válvula: 0 en
 esa casilla (la válvula es el mecanismo, no el objeto).
 
-**D.2a (1)**: semitono = 100 cents; octava = 1200 (0,5 c/u).
-**D.2b (1)**: medio semitono (0,5) y la nota está **baja** (0,5).
-**D.2c (1)**: se **suman** — esa es la gracia del cent frente a las
-razones, que se multiplican.
+**D.2a (1) — d**. Semitono = 100 cents; octava = 1200 cents.
+Distractores: (a) invierte los valores; (b) tiene el semitono correcto
+pero duplica la octava (2400); (c) reparte mal ambos valores (50/1200).
 
-**D.3 (3)**: la altura **se queda** (1 pt): la afinación la fija la
-cuerda — el viaje de ida y vuelta de la onda es el metrónomo del
-régimen, y la presión del arco no lo toca. Lo que cambia es el
-**timbre** — el reparto de energía entre parciales (más presión y arco
-lento cargan los agudos) (1 pt). Si exagera la presión, el régimen
-**se rompe**: la fricción deja de obedecer al metrónomo y la nota se
-quiebra en graznido/ruido (1 pt).
+**D.2b (1) — c**. Medio semitono, y la nota está **baja** (−50 cents).
+Distractores: (a) tiene la fracción correcta pero invierte alta/baja;
+(b) confunde medio semitono con un semitono completo; (d) confunde la
+fracción (cuarto en vez de medio).
+
+**D.2c (1) — b**. Los cents se **suman** — esa es la gracia del cent
+frente a las razones, que se multiplican. Distractor (a): confunde
+cents con razones de frecuencia, que sí se multiplican.
+
+**D.3a (1) — a**. La altura **se queda** igual: la afinación la fija
+la cuerda — el viaje de ida y vuelta de la onda es el metrónomo del
+régimen, y la presión del arco no lo toca. Distractores: (b) y (c)
+asumen que más presión o arco más lento cambian la altura directamente,
+ignorando que el régimen lo fija la cuerda; (d) inventa una transición
+que no ocurre.
+
+**D.3b (1) — b**. Lo que cambia es el **timbre** — el reparto de
+energía entre parciales (más presión y arco lento cargan los agudos).
+Distractores: (a) y (d) niegan que algo cambie más allá de la
+sonoridad; (c) confunde con duración, que no es lo que varía aquí.
+
+**D.3c (1) — d**. Si exagera la presión, el régimen **se rompe**: la
+fricción deja de obedecer al metrónomo de la cuerda y la nota se
+quiebra en graznido/ruido. Distractores: (a) confunde con el salto de
+octava de un tubo soplado (mecanismo distinto); (b) y (c) asumen que el
+sistema se detiene o es indefinidamente estable, sin considerar la
+ruptura del régimen.
 
 ## Registro y devolución
 

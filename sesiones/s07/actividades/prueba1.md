@@ -27,8 +27,12 @@ puntos (exigencia 60 %).**
    una vez en el repaso. Mientras suena el audio, solo se escucha.
 4. No se necesita calculadora: toda la aritmética es de proporciones.
    No se permite celular, audífonos ni apuntes.
-5. Las preguntas de desarrollo piden **una o dos frases**: se evalúa
-   la idea correcta, no la extensión.
+5. La **Parte A** es de desarrollo: pide una o dos frases; se evalúa la
+   idea correcta, no la extensión. Las **Partes B, C y D** son de
+   **selección única** (o de marcar casillas, donde se indique):
+   encierre en un círculo la letra de la alternativa correcta. Las
+   respuestas incorrectas **no descuentan puntaje**, así que conviene
+   responder todo.
 
 ---
 
@@ -70,6 +74,9 @@ _________________________________________________________________
 
 ## Parte B — Casos sonoros y figuras (18 puntos, ~15 minutos)
 
+*Desde aquí, encierre en un círculo la letra de la alternativa
+correcta en cada ítem (salvo donde se indique otra cosa).*
+
 ### B.1 — El espectrograma de dos sonidos (8 puntos)
 
 La **Figura 1** muestra el espectrograma de dos sonidos consecutivos:
@@ -77,31 +84,53 @@ un **vaso golpeado** y una **nota de flauta**, en algún orden. El
 **Estímulo 3** (minuto 25) reproduce ese mismo par, en el mismo orden
 de la figura.
 
-a) (2 pts) Identifique los ejes de la figura: ¿qué magnitud y unidad
-hay en el eje horizontal, cuál en el vertical, y qué representa la
-intensidad del color?
+a) (2 pts) ¿Qué magnitud y unidad hay en el eje horizontal, cuál en el
+vertical, y qué representa la intensidad del color?
 
-Horizontal: ____________________ Vertical: ____________________
-Color: ____________________
+(a) Horizontal: tiempo (s) · Vertical: frecuencia (Hz) · Color: nivel
+(qué tan fuerte suena cada frecuencia en cada instante).
+(b) Horizontal: frecuencia (Hz) · Vertical: tiempo (s) · Color: nivel.
+(c) Horizontal: tiempo (s) · Vertical: amplitud (Pa) · Color:
+frecuencia.
+(d) Horizontal: frecuencia (Hz) · Vertical: nivel (dB) · Color:
+tiempo.
 
 b) (2 pts) ¿Cuál de los dos eventos de la figura es el vaso y cuál la
-flauta? Dé **dos rasgos observables en la figura** que fundamenten su
-respuesta.
+flauta?
 
-_________________________________________________________________
-_________________________________________________________________
+(i) El primer evento es el vaso y el segundo la flauta.
+(ii) El primer evento es la flauta y el segundo el vaso.
+
+Encierre (i) o (ii) — vale 1 pt. Además, **marque las DOS casillas**
+con los rasgos observables en la figura que fundamentan su respuesta
+(1 pt por marcar exactamente las dos correctas):
+
+☐ El primer evento muestra una columna de ataque breve, seguida de
+líneas que decaen rápido y de forma no equiespaciada.
+☐ El primer evento muestra líneas equiespaciadas que se sostienen por
+varios segundos.
+☐ El segundo evento parte con una columna de ataque intensa y decae en
+menos de un segundo.
+☐ El segundo evento muestra líneas horizontales equiespaciadas y
+sostenidas mientras dura el sonido.
 
 c) (2 pts) Estime, leyendo la figura, la **frecuencia fundamental**
-$f_1$ de la nota de flauta. Indique cómo la leyó.
+$f_1$ de la nota de flauta.
 
-$f_1 \approx$ ____________ porque ______________________________
+(a) 220 Hz
+(b) 880 Hz
+(c) 440 Hz
+(d) ≈ 1000 Hz
 
-d) (2 pts) El sonido del vaso, ¿es **armónico o inarmónico**? Explique
-cómo se decide eso mirando la figura (use los términos *parcial* y
-*armónico* correctamente).
+d) (2 pts) El sonido del vaso, ¿es **armónico o inarmónico**?
 
-_________________________________________________________________
-_________________________________________________________________
+(a) Armónico, porque se distinguen varios parciales en la figura.
+(b) Inarmónico, porque las líneas no están en múltiplos enteros de la
+más grave (no equiespaciadas): "armónico" exige $f_n = n f_1$.
+(c) Armónico, porque las líneas del vaso coinciden con la grilla
+marcada cada 500 Hz.
+(d) Inarmónico, porque el sonido del vaso decae más rápido que el de
+la flauta.
 
 ### B.2 — Las dos versiones (6 puntos)
 
@@ -110,19 +139,36 @@ versiones de un mismo sonido sintetizado**, una tras otra. La versión
 2 es idéntica a la versión 1, salvo que **se le eliminó por completo
 el parcial más grave** (la fundamental).
 
-a) (2 pts) Según lo que usted oyó: ¿cambió la **altura** de la nota
-entre las dos versiones? ¿Cambió el **timbre**?
+a) (2 pts) Según lo que usted oyó, encierre lo que corresponda en cada
+línea (1 pt c/u):
 
-Altura: ______________ Timbre: ______________
+Altura: **Cambió** / **No cambió**
+Timbre: **Cambió** / **No cambió**
 
-b) (4 pts) Explique el resultado de (a) usando lo aprendido en el
-curso: ¿qué hace el sistema auditivo con los parciales que quedan, y
-por qué eso explica lo que se oye? (Una cadena causa–efecto de 2–3
-frases.)
+b) (4 pts, dos partes de 2 pts cada una) Explique el resultado de (a)
+usando lo aprendido en el curso.
 
-_________________________________________________________________
-_________________________________________________________________
-_________________________________________________________________
+**b.i)** (2 pts) ¿Qué información usa el oído para asignar la altura
+cuando falta la fundamental?
+
+(a) El parcial más fuerte (de mayor amplitud) de los que quedan.
+(b) El parcial más agudo presente en el sonido.
+(c) El promedio aritmético de las frecuencias de los parciales
+restantes.
+(d) El patrón (espaciamiento/periodicidad) de los armónicos
+restantes, que sigue correspondiendo a la fundamental ausente.
+
+**b.ii)** (2 pts) ¿Por qué la altura **no cambia** al eliminar la
+fundamental?
+
+(a) Porque el sistema auditivo reconstruye la fundamental ausente a
+partir de la periodicidad común de los armónicos que quedan.
+(b) Porque el parcial más fuerte pasa a definir la nueva altura, que
+coincide por casualidad con la original.
+(c) Porque la fundamental en realidad nunca se eliminó del todo, solo
+bajó de nivel.
+(d) Porque el timbre determina la altura, y el timbre no cambia lo
+suficiente.
 
 ### B.3 — Dos espectros, una cuerda (4 puntos)
 
@@ -132,14 +178,26 @@ cuerda de guitarra**, pulsada en dos puntos distintos.
 a) (2 pts) En ambos espectros los picos están en las **mismas
 frecuencias**. ¿Qué significa eso para lo que se oye?
 
-_________________________________________________________________
+(a) La altura no cambia, porque el timbre depende únicamente del punto
+de pulsación y no de las frecuencias de los picos.
+(b) El timbre no cambia, porque los picos están en las mismas
+frecuencias en ambos espectros.
+(c) La altura no cambia (mismos picos = misma nota); solo cambia el
+reparto de energía entre los parciales, es decir el timbre.
+(d) La altura sube levemente, porque pulsar en otro punto tensiona
+más la cuerda.
 
 b) (2 pts) En el **espectro 2** los parciales pares (2.º, 4.º…) casi
-desaparecen. ¿En qué punto de la cuerda se pulsó esa vez? Justifique
-con la idea de nodos.
+desaparecen. ¿En qué punto de la cuerda se pulsó esa vez?
 
-_________________________________________________________________
-_________________________________________________________________
+(a) Cerca del puente; ahí los modos pares tienen un antinodo que
+amplifica solo los parciales impares.
+(b) En la mitad de la cuerda; ese punto es **nodo** de los modos
+pares, que por eso casi no se excitan.
+(c) En la mitad de la cuerda; ese punto es **antinodo** de los modos
+pares, que por eso vibran con más fuerza.
+(d) A un cuarto del largo; ahí coinciden nodos de los modos impares,
+que por eso se debilitan.
 
 ## Parte C — Predecir con proporciones (20 puntos, ~20 minutos)
 
@@ -151,22 +209,34 @@ de largo vibrante, afinada de modo que su fundamental es **220 Hz**
 
 a) (2 pts) Se presiona la cuerda de modo que quedan **30 cm**
 vibrantes, sin cambiar la tensión. ¿Cuál es la nueva frecuencia
-fundamental? Indique la proporción que usó.
+fundamental?
 
-_________________________________________________________________
+(a) 110 Hz
+(b) 220 Hz
+(c) 660 Hz
+(d) 440 Hz
 
 b) (2 pts) ¿Qué relación musical hay entre la nota original y la
-nueva? ¿Qué **razón de frecuencias** define esa relación?
+nueva, y qué razón de frecuencias la define?
 
-_________________________________________________________________
+(a) Una octava; razón de frecuencias 2:1.
+(b) Una quinta justa; razón de frecuencias 3:2.
+(c) Una octava; razón de frecuencias 4:1.
+(d) Una segunda mayor; razón de frecuencias 9:8.
 
 c) (2 pts) Ahora se quiere subir la cuerda **completa** (los 60 cm)
 esa misma distancia musical, pero girando la clavija. ¿Por qué factor
 habría que multiplicar la **tensión**, y por qué en la práctica es una
 mala idea intentarlo?
 
-_________________________________________________________________
-_________________________________________________________________
+(a) ×2, porque la frecuencia y la tensión son directamente
+proporcionales; es mala idea porque desafina las demás cuerdas.
+(b) ×8, porque hay que compensar también el cambio de masa por unidad
+de largo; es mala idea porque la clavija no resistiría el giro.
+(c) ×4, porque $f_1 \propto \sqrt{F_T}$; es mala idea porque una
+tensión tan alta puede romper la cuerda o dañar el instrumento.
+(d) ×4, porque la frecuencia depende del cuadrado de la tensión; es
+mala idea porque cambiaría el timbre de la cuerda.
 
 ### C.2 — El Mi grave y el parlante chico (6 puntos)
 
@@ -174,21 +244,33 @@ La cuerda más grave de una guitarra vibra a **82 Hz** (Mi2). Tome
 $v \approx 343$ m/s para el sonido en el aire.
 
 a) (2 pts) Calcule la **longitud de onda** de esa nota en el aire.
-Compárela con algo de la sala (¿del porte de qué es?).
 
-$\lambda \approx$ _______________________________________________
+(a) $\lambda \approx 0{,}24$ m
+(b) $\lambda \approx 4{,}2$ m
+(c) $\lambda \approx 28\,000$ m
+(d) $\lambda \approx 2{,}1$ m
 
 b) (2 pts) Calcule el **período** de esa vibración, en milisegundos.
 
-$T \approx$ _____________________________________________________
+(a) $T \approx 82$ ms
+(b) $T \approx 1{,}2$ ms
+(c) $T \approx 120$ ms
+(d) $T \approx 12$ ms
 
 c) (2 pts) Esa nota, grabada, se escucha por el parlante de un
 celular, de alrededor de **1 cm** — incapaz de radiar 82 Hz con
-energía apreciable. Sin embargo, se sigue oyendo un Mi grave. Explique
-por qué.
+energía apreciable. Sin embargo, se sigue oyendo un Mi grave.
+¿Por qué?
 
-_________________________________________________________________
-_________________________________________________________________
+(a) El parlante sí radia los armónicos (164, 246 Hz…); el oído
+reconstruye la altura del Mi grave a partir del patrón de esos
+armónicos.
+(b) El parlante logra radiar igual los 82 Hz, aunque con menos
+energía, y eso basta para oírlo.
+(c) El oído no necesita oír el Mi grave: lo "recuerda" porque es una
+nota común en la música que escuchamos.
+(d) Los armónicos se oyen por separado y el cerebro los suma en
+volumen, no en altura, dando la sensación de un tono grave.
 
 ### C.3 — El coro en la sala (8 puntos)
 
@@ -198,25 +280,42 @@ punto donde está sentado el director.
 a) (2 pts) Cantan **dos** cantantes iguales (misma potencia, misma
 distancia). ¿Qué nivel marca ahora un sonómetro en ese punto?
 
-_________________________________________________________________
+(a) 66 dB
+(b) 60 dB
+(c) 63 dB
+(d) 120 dB
 
 b) (2 pts) ¿Y con **diez** cantantes iguales?
 
-_________________________________________________________________
+(a) 600 dB
+(b) 70 dB
+(c) 69 dB
+(d) 63 dB
 
 c) (2 pts) Esos diez cantantes, ¿se oyen aproximadamente "el doble de
 fuerte" o "diez veces más fuerte" que uno solo? Justifique con la
 regla del curso.
 
-_________________________________________________________________
+(a) Diez veces más fuerte, porque suenan diez cantantes en vez de uno.
+(b) Prácticamente igual de fuerte, porque el oído se satura por
+encima de 60 dB.
+(c) El doble de fuerte, porque diez cantantes producen el doble de
+presión sonora que uno solo.
+(d) El doble de fuerte, porque +10 dB (×10 en intensidad) equivale
+aproximadamente a duplicar la sonoridad percibida.
 
 d) (2 pts) La **Figura 3** muestra curvas isofónicas. A nivel bajo
 (curva de 40 fones): un tono de **100 Hz** y uno de **1000 Hz** llegan
-al oído con el **mismo nivel en dB SPL**. ¿Se oyen igual de fuertes?
-Si no, ¿cuál se oye más débil? Léalo de la figura e indique cómo.
+al oído con el **mismo nivel en dB SPL**. ¿Se oyen igual de fuerte?
 
-_________________________________________________________________
-_________________________________________________________________
+(a) El de 100 Hz se oye más débil; en la curva de 40 fones, a 100 Hz
+la curva está más arriba, es decir necesita más dB SPL que el de
+1000 Hz para igual sonoridad.
+(b) Se oyen igual de fuerte, porque tienen el mismo nivel en dB SPL.
+(c) El de 1000 Hz se oye más débil, porque el oído es menos sensible
+a esa frecuencia.
+(d) El de 100 Hz se oye más fuerte, porque los graves se perciben con
+más energía a igual nivel.
 
 ## Parte D — Vocabulario y herramienta (10 puntos, ~8 minutos)
 
@@ -236,24 +335,52 @@ Una app de espectrograma trabaja con **48 000 muestras por segundo**.
 a) (1,5 pts) ¿Cuál es la frecuencia más alta que esa app puede
 representar?
 
-_________________________________________________________________
+(a) 20 000 Hz
+(b) 24 000 Hz
+(c) 48 000 Hz
+(d) 96 000 Hz
 
 b) (1,5 pts) Un compañero asegura que su app "mostró un parcial en
-30 000 Hz". ¿Puede confiarse en ese dato? ¿Por qué?
+30 000 Hz". ¿Puede confiarse en ese dato?
 
-_________________________________________________________________
+(a) Sí, porque la app graba a 48 000 muestras por segundo, muy por
+sobre 30 000 Hz.
+(b) Sí, porque el oído humano no distingue frecuencias tan altas de
+todos modos.
+(c) No: 30 000 Hz está sobre el techo de 24 000 Hz que permite la
+tasa de muestreo; ese "parcial" es un artefacto.
+(d) No, porque ningún instrumento musical real produce parciales
+sobre 20 000 Hz.
 
-### D.3 — Mismo espectro, otro instrumento (4 puntos)
+### D.3 — Mismo espectro, otro instrumento (4 puntos, dos partes de 2 pts)
 
 En clase escuchamos dos sonidos con **el mismo espectro promedio**:
 una nota de guitarra y esa misma nota **reproducida al revés** — que
-nadie reconoce como guitarra. ¿Qué información sobre el sonido, que el
-espectro promedio **no** contiene, explica la diferencia? ¿Qué le dice
-este experimento sobre la relación espectro ↔ timbre?
+nadie reconoce como guitarra.
 
-_________________________________________________________________
-_________________________________________________________________
-_________________________________________________________________
+**i)** (2 pts) ¿Qué información sobre el sonido, ausente del espectro
+promedio, explica que se reconozcan tan distinto?
+
+(a) La afinación exacta de cada parcial, con más decimales de
+precisión.
+(b) La frecuencia de la fundamental, que cambia al invertir la
+grabación.
+(c) La cantidad total de energía acústica emitida por el instrumento.
+(d) La envolvente temporal: cómo evolucionan el ataque y el
+decaimiento en el tiempo.
+
+**ii)** (2 pts) ¿Qué le dice este experimento sobre la relación entre
+espectro y timbre?
+
+(a) Que el espectro promedio determina el timbre por completo, y la
+diferencia se debe a un error de medición.
+(b) Que no es unívoca: dos sonidos con el mismo espectro promedio
+pueden tener timbres distintos, porque el timbre es espectro más
+envolvente.
+(c) Que el timbre depende solo de la envolvente, y el espectro
+promedio no influye en nada.
+(d) Que la relación espectro-timbre es unívoca, pero solo para
+sonidos armónicos como la guitarra.
 
 --- *Fin de la prueba. Revise que respondió las cuatro partes y
 entregue el cuadernillo junto con la hoja de figuras.* ---
@@ -276,8 +403,10 @@ en escala de grises legible).
   que decaen (las agudas antes), y la flauta como líneas horizontales
   **equiespaciadas** sostenidas, con $f_1 = 440$ Hz legible contra la
   grilla. Rotular el eje solo cada 500 Hz (sin marca auxiliar en
-  440 Hz, para no regalar la lectura): la pauta acepta cualquier
-  estimación en el rango 400–500 Hz bien justificada.
+  440 Hz, para no regalar la lectura): el ítem B.1c pide elegir el
+  valor de $f_1$ entre 220/440/880/≈1000 Hz a partir de leer el
+  espaciamiento de las líneas contra esa grilla, no de una marca
+  explícita.
 - **Figura 2 — Dos espectros de la misma nota de guitarra** (La3,
   220 Hz; desde grabación propia): dos paneles apilados con los mismos
   ejes — frecuencia 0–1500 Hz lineal, nivel en dB relativos.
