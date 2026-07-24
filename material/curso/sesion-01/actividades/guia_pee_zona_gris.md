@@ -5,7 +5,7 @@ percepción no copia la física), OA3.1 (describir con precisión).
 **Grupo**: 4 integrantes con roles: **ejecuta** (opera la demo) ·
 **mide** (lee y anota los Hz) · **registra** (llena esta hoja) ·
 **vocero**. Roten "ejecuta" para que cada integrante mida su umbral.
-**Materiales**: notebook con [`demo_tren_pulsos.html`](../demos/demo_tren_pulsos.html), audífonos
+**Materiales**: notebook con [`demo_tren_pulsos.html`](../../../demos/demo_tren_pulsos.html), audífonos
 personales (para la fase individual), esta hoja.
 
 ## 1. Predicción individual (ANTES de abrir la demo — 3 min)

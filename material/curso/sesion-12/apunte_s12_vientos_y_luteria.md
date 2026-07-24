@@ -61,7 +61,7 @@ tubo cerrado-abierto tiene una condición distinta en cada punta, y solo
 un cuarto de onda cabe entre ambas; de ahí el $4L$, y de ahí que solo
 los patrones impares calcen (figura 1).
 
-![**Figura 1.** Amplitud de la onda estacionaria de presión de los tres primeros modos de un tubo abierto–abierto (izquierda) y cerrado–abierto (derecha). En el extremo abierto la presión no puede acumularse (nodo); en la tapa es máxima. La velocidad del aire (punteada, primera fila) es exactamente complementaria: máxima donde la presión tiene nodo. Entre puerta y pared cabe solo un cuarto de onda: por eso el tubo tapado baja a $f_1 = v/4L$ y conserva solo los armónicos impares.](../../../figuras/s12_modos_tubos.svg)
+![**Figura 1.** Amplitud de la onda estacionaria de presión de los tres primeros modos de un tubo abierto–abierto (izquierda) y cerrado–abierto (derecha). En el extremo abierto la presión no puede acumularse (nodo); en la tapa es máxima. La velocidad del aire (punteada, primera fila) es exactamente complementaria: máxima donde la presión tiene nodo. Entre puerta y pared cabe solo un cuarto de onda: por eso el tubo tapado baja a $f_1 = v/4L$ y conserva solo los armónicos impares.](../../assets/figuras/s12_modos_tubos.svg)
 
 Estas dos fórmulas son toda la lutería de la sesión. Con $v = 343$ m/s,
 un La4 de 440 Hz pide un tubo tapado de $L = 343/(4 \times 440) \approx
@@ -97,7 +97,7 @@ saltos, y dos digitaciones distintas pudieron fabricar casi la misma
 nota (horquillas), porque hay más de una manera de construir el mismo
 "largo efectivo" (figura 2).
 
-![**Figura 2.** Un agujero abierto es una fuga de presión: para la onda, el tubo termina aproximadamente donde está el primer agujero destapado (esquemático, tubo abierto–abierto). El largo efectivo $L_{ef}$ es menor que $L$ y la nota sube — destapar agujeros de abajo hacia arriba es ir acortando el tubo.](../../../figuras/s12_agujero_tubo.svg)
+![**Figura 2.** Un agujero abierto es una fuga de presión: para la onda, el tubo termina aproximadamente donde está el primer agujero destapado (esquemático, tubo abierto–abierto). El largo efectivo $L_{ef}$ es menor que $L$ y la nota sube — destapar agujeros de abajo hacia arriba es ir acortando el tubo.](../../assets/figuras/s12_agujero_tubo.svg)
 
 La versión fina de esta historia — que un agujero abierto no corta el
 tubo del todo, y que la *red* de agujeros abiertos deja pasar los
@@ -125,7 +125,7 @@ abajo de lo predicho. Es la **corrección de extremo** (figura 3), y es
 la razón de que la lutería real afine como usted afinó: cortando de
 menos a más, midiendo cada vez.
 
-![**Figura 3.** La corrección de extremo (esquemática, con $\Delta L$ exagerado): la columna que vibra sobresale del tubo y el nodo de presión queda afuera. El largo efectivo es $L_{ef} = L + \Delta L$, con $\Delta L \approx 0{,}6$ veces el radio interior, y por eso la nota medida sale más grave que la calculada con el $L$ de la huincha.](../../../figuras/s12_correccion_extremo.svg)
+![**Figura 3.** La corrección de extremo (esquemática, con $\Delta L$ exagerado): la columna que vibra sobresale del tubo y el nodo de presión queda afuera. El largo efectivo es $L_{ef} = L + \Delta L$, con $\Delta L \approx 0{,}6$ veces el radio interior, y por eso la nota medida sale más grave que la calculada con el $L$ de la huincha.](../../assets/figuras/s12_correccion_extremo.svg)
 
 > **Recuadro opcional (el número fino).** Para un tubo cilíndrico sin
 > pestaña, la columna sobresale del extremo abierto aproximadamente

@@ -1,5 +1,7 @@
 # Guía del curso para Pato — estado al 2026-07-22
 
+*(bitácora histórica: las rutas mencionadas corresponden a la estructura previa a la migración de 2026-07-24)*
+
 Este es TU documento de entrada: qué existe, dónde está, qué ven los
 alumnos, cómo se edita y qué falta. La segunda mitad (bajo la línea)
 conserva sin cambios el resumen histórico del loop autónomo que produjo

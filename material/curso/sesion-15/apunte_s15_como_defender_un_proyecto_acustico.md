@@ -9,7 +9,7 @@ Este apunte es distinto a todos los anteriores: no trae física nueva,
 porque la sesión 15 no la tiene. Trae el oficio que la sesión evalúa —
 cómo se defiende un proyecto acústico — condensado para releerse la
 noche anterior. La pauta completa del hito 3 (formato, tiempos y
-rúbrica) está en `sesiones/s14/actividades/pauta_hito3_presentacion_final.md`
+rúbrica) está en `material/curso/sesion-14/actividades/pauta_hito3_presentacion_final.md`
 y se entregó impresa en la sesión 14; este apunte no la reemplaza:
 explica cómo estar a su altura.
 
@@ -19,7 +19,7 @@ El instrumento ya existe; sonará lo que va a sonar. Lo único que queda
 en juego el día de la presentación es la **explicación**, y esa es
 precisamente la regla del curso desde el lanzamiento del proyecto en
 la sesión 3: *la calidad de la explicación pesa más que el éxito
-sonoro* (diseno/01, OA5.3 — regla heredada del curso 2019 y
+sonoro* (`OBJETIVOS_APRENDIZAJE.md`, OA5.3 — regla heredada del curso 2019 y
 conservada a propósito). Un objeto que hizo exactamente lo predicho,
 presentado sin mecanismo, demuestra suerte. Un objeto que se desvió de
 la predicción, con la desviación medida, explicada y conectada a un
@@ -46,7 +46,7 @@ proporciones ("la fundamental salió un 12 % más grave de lo predicho;
 el modelo asumía el tubo abierto en ambos extremos, pero el soporte
 tapa parcialmente uno: eso alarga el tubo efectivo y baja $f_1$").
 
-![**Figura 1.** La columna vertebral de toda defensa: seis estaciones, en este orden. Las dos últimas — la desviación y su explicación con mecanismo — son donde la dimensión R1 de la rúbrica se decide.](../../../figuras/s15_cadena_defensa.svg)
+![**Figura 1.** La columna vertebral de toda defensa: seis estaciones, en este orden. Las dos últimas — la desviación y su explicación con mecanismo — son donde la dimensión R1 de la rúbrica se decide.](../../assets/figuras/s15_cadena_defensa.svg)
 
 Note que la cadena obliga a las tres capas del curso: el oído (el
 fenómeno descrito), el mecanismo (modelo y explicación) y la medición
@@ -127,11 +127,11 @@ capítulo 15, que es también la mejor guía para preparar esta defensa.
 
 ## Referencias
 
-- Pauta del hito 3: `sesiones/s14/actividades/pauta_hito3_presentacion_final.md`
+- Pauta del hito 3: `material/curso/sesion-14/actividades/pauta_hito3_presentacion_final.md`
   (formato, tiempos, rúbrica R1–R4, checklist).
-- `diseno/01_objetivos_aprendizaje.md`, OA5.3 — la regla "la calidad
+- `OBJETIVOS_APRENDIZAJE.md`, OA5.3 — la regla "la calidad
   de la explicación pesa más que el éxito sonoro".
-- `diseno/02_metodologia.md`, §4 — preguntas individuales y ajuste
+- `METODOLOGIA.md`, §4 — preguntas individuales y ajuste
   ±0,5 por coevaluación.
 - El semestre completo: capítulos 1–14 del curso — cada modelo que su
   defensa necesite está en alguno de ellos.

@@ -1,9 +1,9 @@
 # Planilla de rúbrica OA3 — Escucha argumentada (ronda oral)
 
 **Uso**: registro en vivo de la ronda oral de la "escucha del día"
-(formato 4 de [`diseno/02_metodologia.md`](../diseno/02_metodologia.md) §2), sesiones s02–s14. Cubre el
+(formato 4 de [`METODOLOGIA.md`](../../METODOLOGIA.md) §2), sesiones s02–s14. Cubre el
 20 % de la nota del curso. La rúbrica completa vive en
-[`diseno/02_metodologia.md`](../diseno/02_metodologia.md) §5; esta planilla es su versión operativa
+[`METODOLOGIA.md`](../../METODOLOGIA.md) §5; esta planilla es su versión operativa
 para el aula (imprimir una copia por sesión, o llevarla como hoja de
 cálculo).
 
@@ -28,7 +28,7 @@ cálculo).
    **mejores 2 notas de las ~3 pasadas** (promedio simple). Se registra
    en la tabla resumen del final.
 
-## Recordatorio de la rúbrica (versión de bolsillo; la completa en diseno/02 §5)
+## Recordatorio de la rúbrica (versión de bolsillo; la completa en `METODOLOGIA.md` §5)
 
 | Dimensión | 4 — Experto | 3 — Logrado | 2 — En desarrollo | 1 — Inicial |
 |---|---|---|---|---|

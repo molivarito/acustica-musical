@@ -66,7 +66,7 @@ objeto — un vaso en la repisa, una moldura del auto — que zumba
 sabe qué es: un resonador de pico angosto al que alguien, por fin, le
 acertó (figura 1).
 
-![**Figura 1.** La curva de respuesta de un resonador (esquema): cuánto responde frente a la frecuencia con que se lo fuerza, con un pico en su frecuencia propia $f_0$. Poco amortiguamiento da un pico alto y angosto (la copa de cristal, que exige su nota exacta); mucho amortiguamiento da un pico bajo y ancho (responde algo a muchas frecuencias vecinas).](../figuras/s10_curva_resonancia.svg)
+![**Figura 1.** La curva de respuesta de un resonador (esquema): cuánto responde frente a la frecuencia con que se lo fuerza, con un pico en su frecuencia propia $f_0$. Poco amortiguamiento da un pico alto y angosto (la copa de cristal, que exige su nota exacta); mucho amortiguamiento da un pico bajo y ancho (responde algo a muchas frecuencias vecinas).](../assets/figuras/s10_curva_resonancia.svg)
 
 Hay un segundo personaje, menos famoso y musicalmente decisivo: el
 **transiente de ataque**. Un resonador no responde de inmediato. Como

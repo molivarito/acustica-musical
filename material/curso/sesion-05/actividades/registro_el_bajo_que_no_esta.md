@@ -15,7 +15,7 @@ va completando predicción y sección 4).
 **Roles para la puesta en común del grupo**: **vocero** (reporta el
 umbral del grupo) · **registra** (anota la tabla del grupo en el
 pizarrón si le toca). **Materiales**: notebook con
-[`demo_fundamental_ausente.html`](../demos/demo_fundamental_ausente.html), audífonos personales, esta hoja.
+[`demo_fundamental_ausente.html`](../../../demos/demo_fundamental_ausente.html), audífonos personales, esta hoja.
 
 > Regla de oro del curso: **la predicción se escribe ANTES de escuchar**.
 > Equivocarse con argumentos vale; escribir después de oír, no.

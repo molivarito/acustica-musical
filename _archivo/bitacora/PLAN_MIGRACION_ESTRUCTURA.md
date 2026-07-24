@@ -1,5 +1,7 @@
 # Plan de migración: AM a la arquitectura de SyS
 
+*(bitácora histórica: las rutas mencionadas corresponden a la estructura previa a la migración de 2026-07-24)*
+
 **Estado: ACORDADO con el profesor (2026-07-23) — decisiones cerradas:
 (1) compuerta = sitio completo + módulos Canvas semanales (se conserva);
 (2) pruebas → ediciones/2026-2/pruebas/; (3) demos → material/demos/

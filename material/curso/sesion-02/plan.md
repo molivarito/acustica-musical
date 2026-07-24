@@ -11,7 +11,7 @@ recopiladas —, (b) el celular con la app de espectrograma instalada, y
 (c) leída la **lectura previa**: [`libro/cap02_ondas_y_espectrograma.md`](../../libro/cap02_ondas_y_espectrograma.md).
 **Posición en la progresión**: segunda sesión del bloque A. Instala las
 tres representaciones que el curso usará como "anteojos" hasta s15, la
-relación $v = \lambda f$ (notación de diseno/03) y el primer uso de apps
+relación $v = \lambda f$ (notación de `PLAN_SEMESTRE.md`) y el primer uso de apps
 de análisis en celular. s03 la usa de inmediato: el espectro de un objeto
 golpeado como huella de sus modos (y ahí se lanza el proyecto).
 **Reglas aplicadas**: s01–s03 con menos contenido (metodología §7, riesgo
@@ -26,7 +26,7 @@ módulo 1 (principio 6).
 |---|---|---|---|---|
 | 0–15′ | **Escucha del día (OA3.1, primera con nota)** | Todos anotan su diagnóstico en 3 líneas (describir → hipotetizar → verificar) (2′); **4 sorteados** lo exponen oralmente (**2,5′ c/u, cronómetro visible**) | Reproduce el estímulo (3′) (banco: grabación propia, nota larga de flauta con ataque soploso — capa impulsiva + capa sostenida, conecta con s01); cronometra la ronda (4 × 2,5′ = 10′); evalúa en vivo con la planilla de rúbrica OA3; cierra señalando 1 fortaleza y 1 debilidad comunes al despedir al último sorteado | Estímulo de audio; planilla de rúbrica con sorteo de nombres; cronómetro visible; audio de sala |
 | 15–30′ | Los tickets de s01 contra la lectura (consume lectura previa) | En grupo (5′): compara su predicción de s01 ("¿cómo se vería este pulso dibujado?") con la forma de onda que propone el cap. 2 leído; vota a mano alzada las preguntas de la mini-lección (¿el dibujo del golpe seco es una línea o una mancha?, ¿qué eje es cuál?) | Devuelve los tickets de s01; mini-lección interactiva (formato 7): forma de onda = presión vs. tiempo; qué se ve y qué NO se ve en ella (la altura no está "a simple vista"); presenta el espectro como la otra vista | Tickets de s01 recopilados; proyector; pizarrón |
-| 30–60′ | **Taller PEE: retratos de sonido (OA4.1, OA1.1)** | En grupo, con la guía: para 4 sonidos producibles en la sala (vocal "aaa" cantada, silbido, "sss" sostenido, golpe seco en la mesa) **dibuja ANTES** la forma de onda y el espectro que espera (~10′, los 4 sonidos); luego un integrante produce al micrófono SOLO los 2 sonidos asignados al grupo (los otros 2 los producen los demás grupos y se registran desde el puesto); el grupo contrasta dibujo vs. pantalla y corrige los 4 | Opera [`demo_forma_onda_espectro.html`](demos/demo_forma_onda_espectro.html) con micrófono en vivo (proyector); asigna 2 sonidos a cada grupo al repartir las guías (los 4 quedan cubiertos entre los 5 grupos y el contraste cruzado alimenta el cierre); llama a los grupos por turnos al micrófono (5 grupos × 2 sonidos × ~2′ = 20′); provoca: "¿en cuál de las dos vistas se distingue mejor el silbido de la vocal?" | Demo con micrófono + proyector; guía PEE "retratos de sonido" (1 por grupo); micrófono de la interfaz o del notebook |
+| 30–60′ | **Taller PEE: retratos de sonido (OA4.1, OA1.1)** | En grupo, con la guía: para 4 sonidos producibles en la sala (vocal "aaa" cantada, silbido, "sss" sostenido, golpe seco en la mesa) **dibuja ANTES** la forma de onda y el espectro que espera (~10′, los 4 sonidos); luego un integrante produce al micrófono SOLO los 2 sonidos asignados al grupo (los otros 2 los producen los demás grupos y se registran desde el puesto); el grupo contrasta dibujo vs. pantalla y corrige los 4 | Opera [`demo_forma_onda_espectro.html`](../../demos/demo_forma_onda_espectro.html) con micrófono en vivo (proyector); asigna 2 sonidos a cada grupo al repartir las guías (los 4 quedan cubiertos entre los 5 grupos y el contraste cruzado alimenta el cierre); llama a los grupos por turnos al micrófono (5 grupos × 2 sonidos × ~2′ = 20′); provoca: "¿en cuál de las dos vistas se distingue mejor el silbido de la vocal?" | Demo con micrófono + proyector; guía PEE "retratos de sonido" (1 por grupo); micrófono de la interfaz o del notebook |
 | 60–70′ | Cierre y contraste | UN grupo expone su par dibujo/pantalla más discrepante y explica la diferencia; todos anotan la moraleja en la guía | Sintetiza: forma de onda y espectro son dos vistas del mismo sonido — el tiempo esconde lo que la frecuencia muestra, y viceversa; cierra las guías con rúbrica rápida | Pizarrón; guías |
 
 ## Módulo 2 — El sonido viaja y el microscopio del curso (variante: medición, adaptada)
@@ -34,7 +34,7 @@ módulo 1 (principio 6).
 | Tiempo | Bloque | Actividad del estudiante | Rol del profesor | Materiales |
 |---|---|---|---|---|
 | 0–10′ | Gancho sonoro: el trueno retrasado | Escucha una grabación de tormenta (relámpago descrito, trueno después); calcula en 1 minuto, en parejas, a qué distancia cayó el rayo si el trueno tardó 3 s; puesta en común relámpago | Reproduce el estímulo; instala $v \approx 343$ m/s a 20 °C como dato del curso; pregunta puente: "si el sonido viaja, ¿qué es lo que viaja?" | Grabación de trueno; pizarrón |
-| 10–25′ | Mini-lección: $v = \lambda f$ y el espectrograma | Calcula con proporciones: $\lambda$ del La4 (343/440 ≈ 0,78 m), de 20 Hz (~17 m) y de 20 kHz (~1,7 cm); vota: ¿el espectrograma tiene el tiempo en qué eje? ¿qué codifica el color? | Define $\lambda$ y la relación $v = \lambda f$ (notación de diseno/03, se usa todo el semestre); presenta el espectrograma como espectro que recupera el eje del tiempo: los tres ejes y sus unidades (s, Hz, dB) ANTES de soltar las apps | Pizarrón; demo o imagen de espectrograma proyectada |
+| 10–25′ | Mini-lección: $v = \lambda f$ y el espectrograma | Calcula con proporciones: $\lambda$ del La4 (343/440 ≈ 0,78 m), de 20 Hz (~17 m) y de 20 kHz (~1,7 cm); vota: ¿el espectrograma tiene el tiempo en qué eje? ¿qué codifica el color? | Define $\lambda$ y la relación $v = \lambda f$ (notación de `PLAN_SEMESTRE.md`, se usa todo el semestre); presenta el espectrograma como espectro que recupera el eje del tiempo: los tres ejes y sus unidades (s, Hz, dB) ANTES de soltar las apps | Pizarrón; demo o imagen de espectrograma proyectada |
 | 25–60′ | **Taller PEE: el microscopio en su bolsillo (OA4.1)** | En grupo, cada integrante con su celular y la app: predice y verifica el "retrato" en espectrograma de silbido glissando, vocal cantada, "sss" y golpe; luego fase de límites de la herramienta: ¿hasta qué frecuencia muestra su app y por qué?, ¿qué pasa con dos golpes muy seguidos? (resolución tiempo–frecuencia); registra en la guía | Rota por los grupos (~6′ c/u); ayuda a configurar apps dispares; provoca: "¿la app miente o solo tiene límites?"; introduce al paso, donde surja, la noción mínima de muestreo (el techo cerca de 22 000 Hz no es del sonido, es de la herramienta) | Celulares con app de espectrograma (1 por estudiante, mínimo 2 por grupo); guía PEE "microscopio"; objetos de la sala |
 | 60–70′ | Puesta en común y cierre | UN grupo muestra su espectrograma más informativo (foto al proyector o descripción); todos completan el ticket de salida: "si golpeo un vaso y miro el espectrograma, ¿veré una línea o varias? ¿por qué?" | Superpone los techos de frecuencia encontrados por los grupos (¿todas las apps llegan igual de arriba?); anuncia s03: esas líneas son los *modos* del objeto, y en s03 se lanza el proyecto del curso | Proyector; tickets de salida |
 
@@ -53,7 +53,7 @@ módulo 1 (principio 6).
 
 ## Pendientes de producción
 
-- **Demo** (skill /demo-interactiva): [`demo_forma_onda_espectro.html`](demos/demo_forma_onda_espectro.html) —
+- **Demo** (skill /demo-interactiva): [`demo_forma_onda_espectro.html`](../../demos/demo_forma_onda_espectro.html) —
   micrófono en vivo con forma de onda + espectro simultáneos; **debe**
   ofrecer oscilador interno como fuente alternativa si el navegador niega
   el micrófono. [Única demo de la sesión.]
@@ -96,8 +96,8 @@ módulo 1 (principio 6).
 ## Demo de la sesión (embebida)
 
 Para proyectar en clase conviene abrir la demo en su propia pestaña:
-[`demo_forma_onda_espectro.html`](demos/demo_forma_onda_espectro.html).
+[`demo_forma_onda_espectro.html`](../../demos/demo_forma_onda_espectro.html).
 Aquí embebida para revisión rápida (usa el micrófono: el navegador
 pedirá permiso al activarla).
 
-<iframe class="demo" src="demos/demo_forma_onda_espectro.html" title="Demo: forma de onda y espectro" allow="microphone"></iframe>
+<iframe class="demo" src="../../demos/demo_forma_onda_espectro.html" title="Demo: forma de onda y espectro" allow="microphone"></iframe>

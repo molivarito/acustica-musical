@@ -49,7 +49,7 @@ su compañero de banco (Benade 1990, cap. 2, hace de esta transición la
 puerta de entrada a toda la acústica musical; este curso le copia la
 puerta).
 
-![**Figura 1.** Un mismo pulso repetido a tres tasas crecientes, sobre el mismo eje de tiempo. Abajo (10 pulsos/s) se oyen golpes separados; en el medio (~28 pulsos/s) la sensación es ambigua; arriba (120 pulsos/s) los golpes se funden en un tono. La transición ritmo→tono es una zona, no una frontera nítida.](../figuras/s01_pulsos_ritmo_tono.svg)
+![**Figura 1.** Un mismo pulso repetido a tres tasas crecientes, sobre el mismo eje de tiempo. Abajo (10 pulsos/s) se oyen golpes separados; en el medio (~28 pulsos/s) la sensación es ambigua; arriba (120 pulsos/s) los golpes se funden en un tono. La transición ritmo→tono es una zona, no una frontera nítida.](../assets/figuras/s01_pulsos_ritmo_tono.svg)
 
 La moraleja, en cambio, sí se puede adelantar, porque es la idea
 fundacional del semestre: **un tono es una vibración que se repite tan
@@ -69,7 +69,7 @@ repetición, en segundos. Uno es el recíproco del otro:
 
 $$T = \frac{1}{f}$$
 
-![**Figura 2.** Frecuencia y período, el mismo dato de dos maneras: sobre una oscilación que se repite, $T$ mide cuánto dura un ciclo y $f = 1/T$ cuántos ciclos ocurren por segundo. En el ejemplo, $f = 200$ Hz equivale a $T = 5$ ms.](../figuras/s01_frecuencia_periodo.svg)
+![**Figura 2.** Frecuencia y período, el mismo dato de dos maneras: sobre una oscilación que se repite, $T$ mide cuánto dura un ciclo y $f = 1/T$ cuántos ciclos ocurren por segundo. En el ejemplo, $f = 200$ Hz equivale a $T = 5$ ms.](../assets/figuras/s01_frecuencia_periodo.svg)
 
 Si una cuerda vibra a 100 Hz, cada vaivén dura 1/100 de segundo. Si
 vibra al doble, cada vaivén dura la mitad. Este razonamiento por

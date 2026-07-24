@@ -16,7 +16,7 @@ profesor trae recopilado. Los estudiantes traen: (a) su **entrega del hito
 1** (2 págs + bitácora firmada) impresa o digital; (b) audífonos
 personales; (c) el celular; (d) leída la **lectura previa**
 [`libro/cap05_la_altura_percibida.md`](../../libro/cap05_la_altura_percibida.md); (e) haber podido explorar en casa la
-[`demo_sintesis_aditiva.html`](../s04/demos/demo_sintesis_aditiva.html) de s04 (enlace publicado en s04).
+[`demo_sintesis_aditiva.html`](../../demos/demo_sintesis_aditiva.html) de s04 (enlace publicado en s04).
 **Posición en la progresión**: abre el bloque B (el sonido percibido).
 Convierte el espectro-receta de s04 en su consecuencia perceptual: la
 altura no se lee del espectro componente a componente, sino que el oído
@@ -30,7 +30,7 @@ previa se consume visiblemente en la mini-lección del módulo 1
 (principio 6); las dos **hojas de registro psicoacústico** (formato 3) se
 cierran en aula con puesta en común por grupo y cuentan juntas como el
 taller de la semana (principio 5). **Punto de control metodológico** de
-diseno/02 §7 (riesgos 2 y 5) al cierre del módulo 2, con decisión
+`METODOLOGIA.md` §7 (riesgos 2 y 5) al cierre del módulo 2, con decisión
 documentada.
 
 ## Módulo 1 — ¿Dónde está el bajo que no está? (variante: audición)
@@ -39,7 +39,7 @@ documentada.
 |---|---|---|---|---|
 | 0–5′ | **Recepción del hito 1 (OA5.1)** + instalación | Entrega su documento (2 págs) con la bitácora firmada por los 4; verifica en la lista que quedó recibido | Recibe contra checklist (documento + bitácora firmada); NO corrige hoy (devolución en s06); si falta bitácora firmada, lo anota para regularizar (regla del enunciado) | Lista de recepción; caja/carpeta de entregas; los tickets de s04 recopilados |
 | 5–20′ | **Escucha del día (OA3.1, con nota)**: el bajo del parlante chico | Escucha una línea de bajo reproducida en el parlante diminuto del celular (sin graves físicos) y luego en el parlante de sala (3′); todos anotan diagnóstico en 3 líneas (describir → hipotetizar → verificar) (2′): ¿oye el bajo aunque el parlante "no puede" darlo?; **4 sorteados** exponen (**2,5′ c/u, cronómetro visible**) | Reproduce el mismo fragmento en el celular (a la vista, parlante propio) y en la sala dentro de los 3′ de estímulo; cronometra la ronda (4 × 2,5′ = 10′); exige vocabulario de s03–s04 (parcial, armónico, espectro) al evaluar con la planilla OA3; NO resuelve el misterio aún, lo deja abierto | Celular con parlante propio + fragmento de bajo; audio de sala; planilla de rúbrica con sorteo; cronómetro visible |
-| 20–38′ | **Cobro del ticket de s04 + mini-lección: la altura es un patrón (OA2.2, OA2.1)** — consume lectura previa | Vota a mano alzada su predicción del ticket de s04 (¿baja una octava / desaparece / sigue igual al apagar $f_1$?); ve la demo apagar $f_1$ en vivo y contrasta; responde 2–3 votaciones de la mini-lección ("si dejo solo 300–400–500 Hz, ¿qué nota oigo?", "¿el bajo del celular usa el mismo truco?") | Con [`demo_fundamental_ausente.html`](demos/demo_fundamental_ausente.html) proyectada: apaga $f_1$, luego $f_1+f_2$, con un espectro armónico completo sonando; devela que la altura **no cambia** (o casi) aunque la frecuencia física más grave desaparezca; nombra el fenómeno: **fundamental ausente / altura virtual**; conecta con el parlante chico (radia los armónicos, el oído reconstruye el bajo); instala la tesis: la altura es el período del patrón, no una línea del espectro | [`demo_fundamental_ausente.html`](demos/demo_fundamental_ausente.html) + proyector + audio de sala; pizarrón; tickets de s04 |
+| 20–38′ | **Cobro del ticket de s04 + mini-lección: la altura es un patrón (OA2.2, OA2.1)** — consume lectura previa | Vota a mano alzada su predicción del ticket de s04 (¿baja una octava / desaparece / sigue igual al apagar $f_1$?); ve la demo apagar $f_1$ en vivo y contrasta; responde 2–3 votaciones de la mini-lección ("si dejo solo 300–400–500 Hz, ¿qué nota oigo?", "¿el bajo del celular usa el mismo truco?") | Con [`demo_fundamental_ausente.html`](../../demos/demo_fundamental_ausente.html) proyectada: apaga $f_1$, luego $f_1+f_2$, con un espectro armónico completo sonando; devela que la altura **no cambia** (o casi) aunque la frecuencia física más grave desaparezca; nombra el fenómeno: **fundamental ausente / altura virtual**; conecta con el parlante chico (radia los armónicos, el oído reconstruye el bajo); instala la tesis: la altura es el período del patrón, no una línea del espectro | [`demo_fundamental_ausente.html`](../../demos/demo_fundamental_ausente.html) + proyector + audio de sala; pizarrón; tickets de s04 |
 | 38–60′ | **Experiencia guiada I en PAREJAS con registro individual (OA2.2, OA2.1)** — formato 3 | **En parejas (2 parejas por grupo)**: cada uno PREDICE en su hoja (2′, antes de tocar la demo); luego, dentro de la pareja, uno **manipula** la demo y el otro **registra** lo que ambos escuchan, y se **intercambian a mitad del protocolo** (tras apagar $f_1$, antes del filtro progresivo): (1) apagar $f_1$ y anotar; (2) subir el **filtro pasa-altos progresivo** quitando $f_1, f_2, f_3\dots$ hasta que la altura se "rompa"; (3) cada uno registra SU umbral personal en SU hoja. Si el grupo tiene un notebook/audífonos por pareja, las 2 parejas trabajan en paralelo (~18′); si hay uno solo, turnos de pareja de ~9′ c/u. Puesta en común del grupo al final (2′) | Rota por los grupos; verifica al pasar que las parejas se intercambiaron los roles; provoca: "¿la altura se rompió cuando quitó el segundo o el tercer parcial? ¿por qué el patrón aguanta tanto?"; vigila que la predicción esté escrita antes de escuchar | 5 notebooks con la demo (ideal: +1 notebook o celular por pareja); audífonos personales; hoja de registro "el bajo que no está" (1 por estudiante) |
 | 60–70′ | Puesta en común y síntesis (OA2.1) | Un vocero por grupo reporta el umbral del grupo (cuántos parciales aguanta el patrón); todos anotan la moraleja: **la misma altura puede oírse sin que exista la frecuencia que la nombra**; por eso el parlante chico "da" el bajo | Superpone en el pizarrón los umbrales de los 5 grupos; cierra: la altura la pone el oído reconstruyendo el patrón armónico, no una frecuencia presente; anuncia que el módulo 2 abre la caja: ¿con qué máquina hace el oído esto? | Pizarrón; hojas de registro (se cierran junto con la del módulo 2) |
 
@@ -51,7 +51,7 @@ documentada.
 | 8–25′ | **Mini-lección interactiva: el oído en una pasada (OA2.1)** — consume lectura previa | Sigue el recorrido oído externo → medio → interno; responde votaciones ("¿dónde se separan las frecuencias: en el tímpano o más adentro?", "¿un tono agudo y uno grave mueven el mismo lugar de la cóclea?") | Mini-lección (formato 7) honesta y acotada: pabellón y canal (captan y resuenan), tímpano y huesecillos (adaptan y transmiten), cóclea y **membrana basilar como analizador de frecuencia por lugar** (grave→lejos, agudo→cerca de la entrada); explícitamente **solo lo necesario** para banda crítica (s08); menciona que hay dos pistas para la altura —el lugar y el ritmo del patrón (s05 m1)— sin cerrar la discusión | Proyector; esquema del oído en 1 lámina; pizarrón |
 | 25–48′ | **Experiencia guiada II con registro individual (OA2.1)** — formato 3 | Con la hoja de registro: (a) PREDICE y luego empareja de oído la octava de un tono dado (subir hasta que "sea la misma nota más arriba") y compara con la duplicación exacta $2f$; (b) escucha dos octavas del piano —una grave, una aguda— y anota si el afinador exacto "suena" perfectamente afinado o un pelín estrecho (curiosidad: **octavas estiradas**); registra qué le sorprendió | Rota; formaliza en el pizarrón solo la proporción: **octava = duplicación de $f$ (2:1)**; presenta las octavas estiradas como curiosidad honesta (el piano se afina con octavas un poco más anchas que 2:1; la propia octava percibida se estira algo) — se retoma en s09 (temperamentos) | Demo/generador de tonos + afinador (app); grabación de octavas de piano; hoja de registro "el oído y la octava" (1 por estudiante) |
 | 48–58′ | Cierre conceptual y síntesis (OA2.1, OA2.2) | Anota la síntesis del día en su hoja: altura ≠ frecuencia línea a línea; el oído reconstruye un patrón (fundamental ausente) y mapea frecuencia a lugar, pero la relación con la altura tiene pliegues (octava, octavas estiradas) | Cierra las dos ideas del día en el pizarrón; conecta: mañana el mismo par no lineal aparece en la **sonoridad** (s06: ¿por qué el volumen depende de la frecuencia?); recoge las dos hojas de registro (cuentan juntas como taller de la semana, rúbrica rápida) | Pizarrón; hojas de registro |
-| 58–65′ | **Punto de control metodológico (diseno/02 §7, riesgos 2 y 5)** | Responde una **encuesta relámpago** anónima (30 s, papelito o mano alzada): (1) ¿hizo la lectura previa? sí/no; (2) ¿le sirvió para la clase? mucho/algo/nada; (3) ¿la ronda oral se siente demasiado larga? sí/no | Cuenta en vivo y ANOTA la decisión: **balance de ronda oral** — si en s02–s05 la ronda de 15′ se está comiendo sistemáticamente el cierre de los talleres → propone en ESTADO_LOOP.md pasar a **ronda quincenal** desde s07 (degrada principio 4, se documenta); **lectura previa** — si <60 % la hizo o <½ la halló útil → activa **plan B: tareas de escucha ≤30 min** en vez de lectura de capítulo desde s06 | Papelitos o conteo a mano alzada; cuaderno de decisiones del curso |
+| 58–65′ | **Punto de control metodológico (`METODOLOGIA.md` §7, riesgos 2 y 5)** | Responde una **encuesta relámpago** anónima (30 s, papelito o mano alzada): (1) ¿hizo la lectura previa? sí/no; (2) ¿le sirvió para la clase? mucho/algo/nada; (3) ¿la ronda oral se siente demasiado larga? sí/no | Cuenta en vivo y ANOTA la decisión: **balance de ronda oral** — si en s02–s05 la ronda de 15′ se está comiendo sistemáticamente el cierre de los talleres → propone en ESTADO_LOOP.md pasar a **ronda quincenal** desde s07 (degrada principio 4, se documenta); **lectura previa** — si <60 % la hizo o <½ la halló útil → activa **plan B: tareas de escucha ≤30 min** en vez de lectura de capítulo desde s06 | Papelitos o conteo a mano alzada; cuaderno de decisiones del curso |
 | 65–70′ | Ticket de salida + anuncios | Completa el ticket hacia s06: "dos sonidos de la MISMA frecuencia, ¿pueden oírse a distinto volumen? y ¿un grave y un agudo con la misma energía física suenan igual de fuertes? escriba su predicción"; anota anuncios | Recoge tickets; anuncia s06 (sonoridad, decibel, isofónicas; medición de niveles con el celular) y que en s06 devuelve el hito 1 corregido | Tickets de salida |
 
 ## Verificación de aprendizaje
@@ -80,21 +80,21 @@ documentada.
 
 ## Pendientes de producción
 
-- **Demo** (skill /demo-interactiva): [`demo_fundamental_ausente.html`](demos/demo_fundamental_ausente.html) —
+- **Demo** (skill /demo-interactiva): [`demo_fundamental_ausente.html`](../../demos/demo_fundamental_ausente.html) —
   tono armónico completo (8 parciales conmutables individualmente),
   apagado individual de $f_1$ y los primeros, **filtro pasa-altos
   progresivo** que quita parciales de abajo hacia arriba, forma de onda +
   espectro con ejes en Hz, casilla de predicción y lectura de la altura
   virtual. [Única demo nueva de la sesión.]
-- **Apuntes**: [`sesiones/s05/apuntes/apunte_s05_la_altura_percibida.md`](apuntes/apunte_s05_la_altura_percibida.md).
+- **Apuntes**: [`apunte_s05_la_altura_percibida.md`](apunte_s05_la_altura_percibida.md).
 - **Capítulo (lectura previa)**:
   [`libro/cap05_la_altura_percibida.md`](../../libro/cap05_la_altura_percibida.md) (referido desde el cierre de cap04).
 - **Actividades**: hoja de registro psicoacústico "el bajo que no está"
   (fundamental ausente) + hoja de registro "el oído y la octava" — en
-  `sesiones/s05/actividades/`.
+  `actividades/`.
 - **Demo reusada / pequeña para el módulo 2**: para el gancho y la
   experiencia II bastan tonos puros y su octava; se puede reusar
-  [`demo_sintesis_aditiva.html`](../s04/demos/demo_sintesis_aditiva.html) de s04 (un seno y su doble) o un generador
+  [`demo_sintesis_aditiva.html`](../../demos/demo_sintesis_aditiva.html) de s04 (un seno y su doble) o un generador
   de tonos de app. Si se quiere una demo propia de **octava (2:1) y octava
   estirada**, queda como pendiente opcional `demo_octava.html` (NO se
   produce en esta sesión). [Declarado pendiente opcional.]
@@ -148,7 +148,7 @@ documentada.
 ## Demo de la sesión (embebida)
 
 Para proyectar en clase conviene abrir la demo en su propia pestaña:
-[`demo_fundamental_ausente.html`](demos/demo_fundamental_ausente.html).
+[`demo_fundamental_ausente.html`](../../demos/demo_fundamental_ausente.html).
 Aquí embebida para revisión rápida.
 
-<iframe class="demo" src="demos/demo_fundamental_ausente.html" title="Demo: fundamental ausente"></iframe>
+<iframe class="demo" src="../../demos/demo_fundamental_ausente.html" title="Demo: fundamental ausente"></iframe>

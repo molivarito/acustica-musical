@@ -25,23 +25,25 @@ jobs:
           version: "1.9.38"
 
       - name: Render sitio
+        working-directory: material
         run: quarto render
 
       - name: Render perfil canvas (páginas sin sidebar para los módulos de Canvas)
+        working-directory: material
         run: |
           quarto render --profile canvas
-          cp -r _canvas _site/canvas
+          cp -r _render/canvas _render/site/canvas
 
       - name: Filtrar material solo-profesor del deploy (patrón SyS)
         run: |
           # las slides se renderizan junto a su clase (para el render
           # local del profesor), pero NO se publican en el sitio
-          find _site -type d -name slides -path "*/sesiones/*" -exec rm -rf {} +
-          echo "slides restantes en _site: $(find _site -name 'slides_*.html' | wc -l)"
+          find material/_render/site -name 'slides_s*.html' -delete
+          echo "slides restantes en material/_render/site: $(find material/_render/site -name 'slides_s*.html' | wc -l)"
 
       - uses: actions/upload-pages-artifact@v3
         with:
-          path: _site
+          path: material/_render/site
 
   deploy:
     needs: build

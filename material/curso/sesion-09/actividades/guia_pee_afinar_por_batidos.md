@@ -11,7 +11,7 @@ turnos): el **afinador** (con audífonos) afina de oído; el
 cents) y anota lo que el afinador dicte. Intercambien roles al
 terminar cada turno. La pareja en espera resuelve la sección 3 (papel)
 — nadie mira sin hacer.
-**Materiales**: notebook con [`demo_temperamentos.html`](../demos/demo_temperamentos.html) en **modo
+**Materiales**: notebook con [`demo_temperamentos.html`](../../../demos/demo_temperamentos.html) en **modo
 afinar** (casilla "ocultar cents" activada), audífonos, esta guía
 (1 por pareja), reloj o cronómetro para contar batidos.
 

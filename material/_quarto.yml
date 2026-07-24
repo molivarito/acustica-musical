@@ -1,5 +1,5 @@
 # Sitio del curso Acústica Musical (UC) — proyecto Quarto
-# Renderizar:  conda run -n base quarto render        (desde la raíz)
+# Renderizar:  conda run -n base quarto render        (desde material/)
 # Previsualizar mientras se edita:  conda run -n base quarto preview
 #
 # Para agregar una sesión/capítulo nuevo: crear el .md y agregar su ruta
@@ -8,27 +8,26 @@
 
 project:
   type: website
-  output-dir: _site
+  output-dir: _render/site
   # El sitio es el artefacto PARA ESTUDIANTES. Material solo-profesor
   # (planes de sesión, pautas, pruebas, banco de estímulos, planilla,
   # documentos de diseño y bitácora) queda fuera del render y NUNCA se
   # enlaza con links Markdown desde páginas públicas (Quarto copiaría
-  # el .md crudo a _site): mencionarlo solo en backticks.
+  # el .md crudo a _render/site): mencionarlo solo en backticks.
   render:
     - index.qmd
-    - sesiones/**/*.md
-    - sesiones/**/slides_*.qmd
-    - "!sesiones/**/plan.md"
-    - "!sesiones/**/*pauta*.md"
-    - "!sesiones/**/guion_profesor*.md"
-    - "!sesiones/**/prueba*.md"
+    - programa_curso.md
+    - curso/**/*.md
+    - curso/**/slides_*.qmd
+    - "!curso/**/plan.md"
+    - "!curso/**/*pauta*.md"
+    - "!curso/**/guion_profesor*.md"
     - libro/*.md
-    - materiales/apps_recomendadas.md
-    - Admin/programa_curso.md
+    - apps_recomendadas.md
   resources:
-    - "sesiones/*/demos/*.html"
-    - "figuras/*.svg"
-    - "figuras/libros/*.png"
+    - "demos/*.html"
+    - "assets/figuras/*.svg"
+    - "assets/figuras/libros/*.png"
     - "libro/LIBRO_CURSO.pdf"
 
 lang: es
@@ -43,131 +42,131 @@ website:
     contents:
       - text: "Mapa del curso"
         href: index.qmd
-      - Admin/programa_curso.md
+      - programa_curso.md
       - section: "Sesión 01 — Escuchar como científico"
         contents:
-          - sesiones/s01/apuntes/apunte_s01_del_golpe_al_tono.md
+          - curso/sesion-01/apunte_s01_del_golpe_al_tono.md
           - section: "Actividades"
             contents:
-              - sesiones/s01/actividades/acta_grupo_y_linea_base.md
-              - sesiones/s01/actividades/guia_pee_regla.md
-              - sesiones/s01/actividades/guia_pee_zona_gris.md
+              - curso/sesion-01/actividades/acta_grupo_y_linea_base.md
+              - curso/sesion-01/actividades/guia_pee_regla.md
+              - curso/sesion-01/actividades/guia_pee_zona_gris.md
           - text: "Demo — tren de pulsos"
-            href: sesiones/s01/demos/demo_tren_pulsos.html
+            href: demos/demo_tren_pulsos.html
       - section: "Sesión 02 — Ondas y representación"
         contents:
-          - sesiones/s02/apuntes/apunte_s02_ondas_y_representacion.md
+          - curso/sesion-02/apunte_s02_ondas_y_representacion.md
           - section: "Actividades"
             contents:
-              - sesiones/s02/actividades/guia_pee_microscopio.md
-              - sesiones/s02/actividades/guia_pee_retratos_de_sonido.md
+              - curso/sesion-02/actividades/guia_pee_microscopio.md
+              - curso/sesion-02/actividades/guia_pee_retratos_de_sonido.md
           - text: "Demo — forma de onda y espectro"
-            href: sesiones/s02/demos/demo_forma_onda_espectro.html
+            href: demos/demo_forma_onda_espectro.html
       - section: "Sesión 03 — Modos de vibración"
         contents:
-          - sesiones/s03/apuntes/apunte_s03_modos_de_vibracion.md
+          - curso/sesion-03/apunte_s03_modos_de_vibracion.md
           - section: "Actividades"
             contents:
-              - sesiones/s03/actividades/enunciado_proyecto.md
-              - sesiones/s03/actividades/guia_pee_sarten.md
+              - curso/sesion-03/actividades/enunciado_proyecto.md
+              - curso/sesion-03/actividades/guia_pee_sarten.md
           - text: "Demo — modos de una cuerda"
-            href: sesiones/s03/demos/demo_modos_cuerda.html
+            href: demos/demo_modos_cuerda.html
       - section: "Sesión 04 — La receta del timbre"
         contents:
-          - sesiones/s04/apuntes/apunte_s04_la_receta_del_timbre.md
+          - curso/sesion-04/apunte_s04_la_receta_del_timbre.md
           - section: "Actividades"
             contents:
-              - sesiones/s04/actividades/guia_pee_estirar_acortar.md
-              - sesiones/s04/actividades/guia_pee_mapa_cuerda.md
+              - curso/sesion-04/actividades/guia_pee_estirar_acortar.md
+              - curso/sesion-04/actividades/guia_pee_mapa_cuerda.md
           - text: "Demo — síntesis aditiva"
-            href: sesiones/s04/demos/demo_sintesis_aditiva.html
+            href: demos/demo_sintesis_aditiva.html
       - section: "Sesión 05 — La altura percibida"
         contents:
-          - sesiones/s05/apuntes/apunte_s05_la_altura_percibida.md
+          - curso/sesion-05/apunte_s05_la_altura_percibida.md
           - section: "Actividades"
             contents:
-              - sesiones/s05/actividades/registro_el_bajo_que_no_esta.md
-              - sesiones/s05/actividades/registro_el_oido_y_la_octava.md
+              - curso/sesion-05/actividades/registro_el_bajo_que_no_esta.md
+              - curso/sesion-05/actividades/registro_el_oido_y_la_octava.md
           - text: "Demo — fundamental ausente"
-            href: sesiones/s05/demos/demo_fundamental_ausente.html
+            href: demos/demo_fundamental_ausente.html
       - section: "Sesión 06 — Sonoridad y decibel"
         contents:
-          - sesiones/s06/apuntes/apunte_s06_sonoridad_y_decibel.md
+          - curso/sesion-06/apunte_s06_sonoridad_y_decibel.md
           - section: "Actividades"
             contents:
-              - sesiones/s06/actividades/guia_estaciones_niveles.md
-              - sesiones/s06/actividades/hoja_registro_isofonica.md
+              - curso/sesion-06/actividades/guia_estaciones_niveles.md
+              - curso/sesion-06/actividades/hoja_registro_isofonica.md
           - text: "Demo — decibel y sonoridad"
-            href: sesiones/s06/demos/demo_decibel_sonoridad.html
+            href: demos/demo_decibel_sonoridad.html
       - section: "Sesión 07 — Prueba 1 + batidos"
         contents:
-          - sesiones/s07/apuntes/apunte_s07_batidos.md
+          - curso/sesion-07/apunte_s07_batidos.md
           - text: "Demo — batidos"
-            href: sesiones/s07/demos/demo_batidos.html
+            href: demos/demo_batidos.html
       - section: "Sesión 08 — Psicoacústica de la superposición"
         contents:
-          - sesiones/s08/apuntes/apunte_s08_banda_critica_y_consonancia.md
+          - curso/sesion-08/apunte_s08_banda_critica_y_consonancia.md
           - section: "Actividades"
             contents:
-              - sesiones/s08/actividades/guia_pee_radiografia_espectral.md
-              - sesiones/s08/actividades/registro_mapa_del_choque.md
+              - curso/sesion-08/actividades/guia_pee_radiografia_espectral.md
+              - curso/sesion-08/actividades/registro_mapa_del_choque.md
           - text: "Demo — banda crítica"
-            href: sesiones/s08/demos/demo_banda_critica.html
+            href: demos/demo_banda_critica.html
       - section: "Sesión 09 — Escalas y temperamentos"
         contents:
-          - sesiones/s09/apuntes/apunte_s09_escalas_y_temperamentos.md
+          - curso/sesion-09/apunte_s09_escalas_y_temperamentos.md
           - section: "Actividades"
             contents:
-              - sesiones/s09/actividades/guia_medicion_escala_objeto.md
-              - sesiones/s09/actividades/guia_pee_afinar_por_batidos.md
+              - curso/sesion-09/actividades/guia_medicion_escala_objeto.md
+              - curso/sesion-09/actividades/guia_pee_afinar_por_batidos.md
           - text: "Demo — temperamentos"
-            href: sesiones/s09/demos/demo_temperamentos.html
+            href: demos/demo_temperamentos.html
       - section: "Sesión 10 — Resonancia, impedancia y acoplamiento"
         contents:
-          - sesiones/s10/apuntes/apunte_s10_resonancia_e_impedancia.md
+          - curso/sesion-10/apunte_s10_resonancia_e_impedancia.md
           - section: "Actividades"
             contents:
-              - sesiones/s10/actividades/guia_pee_resonancia_botellas.md
+              - curso/sesion-10/actividades/guia_pee_resonancia_botellas.md
           - text: "Demo — resonancia"
-            href: sesiones/s10/demos/demo_resonancia.html
+            href: demos/demo_resonancia.html
       - section: "Sesión 11 — Cuerdas frotadas y el cuerpo"
         contents:
-          - sesiones/s11/apuntes/apunte_s11_cuerdas_frotadas_y_cuerpo.md
+          - curso/sesion-11/apunte_s11_cuerdas_frotadas_y_cuerpo.md
           - section: "Actividades"
             contents:
-              - sesiones/s11/actividades/guia_acoplamiento_objeto.md
-              - sesiones/s11/actividades/guia_pee_punto_de_frotado.md
+              - curso/sesion-11/actividades/guia_acoplamiento_objeto.md
+              - curso/sesion-11/actividades/guia_pee_punto_de_frotado.md
           - text: "Demo — movimiento de Helmholtz"
-            href: sesiones/s11/demos/demo_helmholtz.html
+            href: demos/demo_helmholtz.html
       - section: "Sesión 12 — Vientos y lutería"
         contents:
-          - sesiones/s12/apuntes/apunte_s12_vientos_y_luteria.md
+          - curso/sesion-12/apunte_s12_vientos_y_luteria.md
           - section: "Actividades"
             contents:
-              - sesiones/s12/actividades/guia_pee_construccion_tubo.md
+              - curso/sesion-12/actividades/guia_pee_construccion_tubo.md
           - text: "Demo — tubo con agujeros"
-            href: sesiones/s12/demos/demo_tubo_agujeros.html
+            href: demos/demo_tubo_agujeros.html
       - section: "Sesión 13 — Prueba 2 + la voz"
         contents:
-          - sesiones/s13/apuntes/apunte_s13_la_voz.md
+          - curso/sesion-13/apunte_s13_la_voz.md
           - text: "Demo — formantes de la voz"
-            href: sesiones/s13/demos/demo_formantes_voz.html
+            href: demos/demo_formantes_voz.html
       - section: "Sesión 14 — La sala como instrumento"
         contents:
-          - sesiones/s14/apuntes/apunte_s14_la_sala_como_instrumento.md
+          - curso/sesion-14/apunte_s14_la_sala_como_instrumento.md
           - section: "Actividades"
             contents:
-              - sesiones/s14/actividades/guia_salida_medicion_t60.md
-              - sesiones/s14/actividades/rutas_salida_medicion.md
+              - curso/sesion-14/actividades/guia_salida_medicion_t60.md
+              - curso/sesion-14/actividades/rutas_salida_medicion.md
           - text: "Demo — modos de sala"
-            href: sesiones/s14/demos/demo_modos_sala.html
+            href: demos/demo_modos_sala.html
       - section: "Sesión 15 — Presentaciones finales"
         contents:
-          - sesiones/s15/apuntes/apunte_s15_como_defender_un_proyecto_acustico.md
+          - curso/sesion-15/apunte_s15_como_defender_un_proyecto_acustico.md
           - section: "Actividades"
             contents:
-              - sesiones/s15/actividades/hoja_coevaluacion_final.md
-              - sesiones/s15/actividades/hoja_escucha_presentaciones.md
+              - curso/sesion-15/actividades/hoja_coevaluacion_final.md
+              - curso/sesion-15/actividades/hoja_escucha_presentaciones.md
       - section: "Libro — Escuchar como científico"
         contents:
           - libro/00_prologo.md
@@ -188,7 +187,7 @@ website:
           - libro/cap15_explicar_es_la_prueba.md
       - section: "Materiales"
         contents:
-          - materiales/apps_recomendadas.md
+          - apps_recomendadas.md
 
 format:
   html:

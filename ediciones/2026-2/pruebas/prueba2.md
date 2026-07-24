@@ -358,7 +358,7 @@ y las imprime en UNA hoja aparte (tamaño carta, una cara, figuras
 grandes y en escala de grises legible).
 
 - **Figura 1 — Curvas de respuesta de dos resonadores** (generar con
-  [`demo_resonancia.html`](../../s10/demos/demo_resonancia.html) de s10 en dos amortiguamientos, o redibujar):
+  [`demo_resonancia.html`](../../../material/demos/demo_resonancia.html) de s10 en dos amortiguamientos, o redibujar):
   ejes — horizontal: frecuencia de excitación, 0–400 Hz, rotulada cada
   50 Hz; vertical: amplitud de respuesta (unidades relativas, sin
   cifras). Dos curvas rotuladas **R1** y **R2**, ambas con máximo en
@@ -369,7 +369,7 @@ grandes y en escala de grises legible).
   sigue cerca de su máximo) — el ítem B.1c depende de eso. Marcar una
   línea vertical punteada en 190 Hz para guiar la lectura.
 - **Figura 2 — Espectros del tubo en sus dos configuraciones**
-  (generar con [`demo_tubo_agujeros.html`](../../s12/demos/demo_tubo_agujeros.html) de s12 o redibujar): dos
+  (generar con [`demo_tubo_agujeros.html`](../../../material/demos/demo_tubo_agujeros.html) de s12 o redibujar): dos
   paneles apilados con los mismos ejes — frecuencia 0–1600 Hz lineal,
   rotulada cada 250 Hz; nivel en dB relativos (sin cifras). *Espectro
   X*: picos en **250, 750 y 1250 Hz** (solo impares de 250 — el tubo

@@ -62,7 +62,7 @@ de oírlas como ecos separados. Es el **efecto precedencia** (BEN 12.2).
 Queda como cultura general del curso: sin él, cada sala sería una
 cámara de ecos inhabitable. La figura 1 ordena a los tres personajes.
 
-![**Figura 1.** Lo que llega al oído tras un impulso en una sala (esquemático): primero el sonido directo, luego unas pocas reflexiones tempranas — que el efecto precedencia funde con el directo — y después la cola reverberante, densa y decayendo exponencialmente. La pendiente de esa cola es la que el $T_{60}$ convierte en número.](../../../figuras/s14_respuesta_impulsiva.svg)
+![**Figura 1.** Lo que llega al oído tras un impulso en una sala (esquemático): primero el sonido directo, luego unas pocas reflexiones tempranas — que el efecto precedencia funde con el directo — y después la cola reverberante, densa y decayendo exponencialmente. La pendiente de esa cola es la que el $T_{60}$ convierte en número.](../../assets/figuras/s14_respuesta_impulsiva.svg)
 
 ## ¿Cuánto dura una sala? El tiempo de reverberación
 
@@ -118,7 +118,7 @@ resonancia de s10, con la sala como resonador y su voz como excitador.
 Entre modo y modo, en cambio, la sala responde poco: por eso *algunas*
 notas engordan y otras no (figura 2).
 
-![**Figura 2.** Modos axiales del aire entre dos paredes paralelas separadas $L = 2$ m (la ducha): $f = v\,n/2L \approx 86$, 171 y 257 Hz. En una pared rígida el aire no puede moverse y la presión es máxima — al revés que en el extremo abierto de un tubo de s12. Cuando la nota cantada cae cerca de una de estas frecuencias, la sala resuena con usted.](../../../figuras/s14_modos_sala.svg)
+![**Figura 2.** Modos axiales del aire entre dos paredes paralelas separadas $L = 2$ m (la ducha): $f = v\,n/2L \approx 86$, 171 y 257 Hz. En una pared rígida el aire no puede moverse y la presión es máxima — al revés que en el extremo abierto de un tubo de s12. Cuando la nota cantada cae cerca de una de estas frecuencias, la sala resuena con usted.](../../assets/figuras/s14_modos_sala.svg)
 
 ¿Y por qué la catedral no hace esto? Sí lo hace — pero sus modos
 empiezan tan abajo y se apilan tan densamente que en la zona musical
@@ -148,7 +148,7 @@ que pide OA4.3 — es perfectamente competente, igual que en s06: las
 comparaciones con el mismo aparato valen más que los valores absolutos.
 La figura 3 muestra la medición completa, con su trampa incluida.
 
-![**Figura 3.** La medición del $T_{60}$ (números del ejemplo del recuadro: sala de clases, $T_{60} \approx 1{,}1$ s). Desde que la fuente calla, el nivel cae en línea recta en dB, y el $T_{60}$ es el tiempo en bajar 60 dB — la millonésima parte de la intensidad. En una medición real la cola se funde con el ruido de fondo antes de completar la caída: se lee la pendiente inicial y se extrapola, anotándolo.](../../../figuras/s14_caida_t60.svg)
+![**Figura 3.** La medición del $T_{60}$ (números del ejemplo del recuadro: sala de clases, $T_{60} \approx 1{,}1$ s). Desde que la fuente calla, el nivel cae en línea recta en dB, y el $T_{60}$ es el tiempo en bajar 60 dB — la millonésima parte de la intensidad. En una medición real la cola se funde con el ruido de fondo antes de completar la caída: se lee la pendiente inicial y se extrapola, anotándolo.](../../assets/figuras/s14_caida_t60.svg)
 
 ## Síntesis
 

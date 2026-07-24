@@ -58,7 +58,7 @@ la boca. Por eso, y solo por eso, usted puede cantar cualquier vocal
 en cualquier nota: el modelo **fuente-filtro** (figura 1), la pieza
 central de la acústica de la voz.
 
-![**Figura 1.** El modelo fuente-filtro en tres pasos (esquemático; vocal /a/ con $f_0 = 200$ Hz). La fuente pone el peine de armónicos — la altura; el tracto pone la envolvente de formantes — la vocal; el sonido radiado es el producto de ambos: los armónicos que caen cerca de un formante sobresalen.](../../../figuras/s13_fuente_filtro.svg)
+![**Figura 1.** El modelo fuente-filtro en tres pasos (esquemático; vocal /a/ con $f_0 = 200$ Hz). La fuente pone el peine de armónicos — la altura; el tracto pone la envolvente de formantes — la vocal; el sonido radiado es el producto de ambos: los armónicos que caen cerca de un formante sobresalen.](../../assets/figuras/s13_fuente_filtro.svg)
 
 ## La vocal es un lugar en el mapa de formantes
 
@@ -83,11 +83,11 @@ literatura fonética; varían con el hablante y el dialecto — cf. Quilis
 No le pedimos memorizar la tabla: le pedimos la idea — F1 baja cuando
 la boca se cierra, F2 sube cuando la lengua avanza, y cada vocal es
 una **esquina de ese mapa** (figura 2). La demo de la sesión
-([`demo_formantes_voz.html`](../demos/demo_formantes_voz.html)) tiene el mapa en dos perillas: mueva F1 y
+([`demo_formantes_voz.html`](../../demos/demo_formantes_voz.html)) tiene el mapa en dos perillas: mueva F1 y
 F2 y la vocal cambia sin que la altura se inmute; mueva $f_0$ y pasa
 lo contrario.
 
-![**Figura 2.** El mapa de las vocales en el plano $F_1$–$F_2$, con los valores típicos aproximados de la tabla (voz adulta; las zonas reales varían entre hablantes y las elipses son solo orientativas). Las dos reglas del mapa: abrir la boca sube $F_1$; adelantar la lengua sube $F_2$.](../../../figuras/s13_mapa_vocales.svg)
+![**Figura 2.** El mapa de las vocales en el plano $F_1$–$F_2$, con los valores típicos aproximados de la tabla (voz adulta; las zonas reales varían entre hablantes y las elipses son solo orientativas). Las dos reglas del mapa: abrir la boca sube $F_1$; adelantar la lengua sube $F_2$.](../../assets/figuras/s13_mapa_vocales.svg)
 
 ## El susurro: el filtro sin la fuente
 

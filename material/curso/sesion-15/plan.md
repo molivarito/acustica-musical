@@ -22,7 +22,7 @@ nuevo, no hay demo, no hay ticket de salida: ambos módulos son las
 presentaciones finales (5 grupos × bloque cronometrado) y los últimos
 24′ son el cierre del semestre. La regla que gobierna la sesión es la
 del curso desde s03: **la calidad de la explicación pesa más que el
-éxito sonoro** (diseno/01, OA5.3; pauta del hito 3).
+éxito sonoro** (`OBJETIVOS_APRENDIZAJE.md`, OA5.3; pauta del hito 3).
 **Reglas aplicadas y decisiones de carga (declaradas)**:
 (1) **No hay escucha del día con ronda**: la última ronda oral fue s14
 (así se anunció: "en s15, el estímulo son ustedes"). Su lugar lo ocupa
@@ -97,7 +97,7 @@ s01 ni la coevaluación. Recuperación máxima: ~9′.
 ## Verificación de aprendizaje
 
 - **Hito 3 (OA5.3 + OA3.2, 14 %)**: rúbrica R1–R4 de la pauta
-  (`sesiones/s14/actividades/pauta_hito3_presentacion_final.md`)
+  (`material/curso/sesion-14/actividades/pauta_hito3_presentacion_final.md`)
   registrada EN VIVO en la planilla del guion, grupo por grupo; R1
   (explicación acústica) desempata, según la pauta. El informe ≤6 págs
   se corrige contra la misma rúbrica esta semana (pico final declarado,
@@ -144,10 +144,10 @@ s01 ni la coevaluación. Recuperación máxima: ~9′.
   (ficha + sobres, formato hito 2) · `actividades/guion_profesor_s15.md`
   (cronograma, protocolo de preguntas, planilla de rúbrica en vivo,
   plantilla de la media hoja "hoy").
-- **Apuntes**: `apuntes/apunte_s15_como_defender_un_proyecto_acustico.md`
+- **Apuntes**: `apunte_s15_como_defender_un_proyecto_acustico.md`
   (breve: no hay contenido nuevo).
 - **Capítulo (lectura previa)**: [`libro/cap15_explicar_es_la_prueba.md`](../../libro/cap15_explicar_es_la_prueba.md).
-- **Demo**: no hay (diseno/03: "—"). Única sesión del curso sin demo.
+- **Demo**: no hay (`PLAN_SEMESTRE.md`: "—"). Única sesión del curso sin demo.
 - **Trabajo físico del profesor (semana previa)**: recuperar del
   archivo las 20 hojas de línea base de s01, meterlas en sobres
   nominados (~30′); tener el estímulo #1 del banco (el MISMO archivo

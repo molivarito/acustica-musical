@@ -1,11 +1,12 @@
 # Perfil "canvas": segundo render del sitio SIN sidebar ni navegación
 # prev/próximo, para las páginas que se enlazan desde los módulos de
 # Canvas (así el orden lo pone Canvas, no la barra lateral del sitio).
-# Se activa con:  quarto render --profile canvas
-# Sale a `_canvas/` y el CI lo copia a `_site/canvas/` al desplegar.
+# Se activa con:  quarto render --profile canvas   (desde material/)
+# Sale a `_render/canvas/` y el CI lo copia a `_render/site/canvas/` al
+# desplegar.
 
 project:
-  output-dir: _canvas
+  output-dir: _render/canvas
 
 website:
   page-navigation: false

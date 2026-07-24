@@ -1,8 +1,8 @@
 # Calendario 2026-2 — MUC860 Acústica Musical (solo profesor)
 
-Instancia el mapa de 15 sesiones (`diseno/03_estructura_curso.md`) con
+Instancia el mapa de 15 sesiones (`PLAN_SEMESTRE.md`) con
 las fechas reales del segundo semestre 2026. Fuente de las restricciones:
-`../SyS/ediciones/2026/PLAN_2026-2.md` (que a su vez cita el calendario
+`../../SyS/ediciones/2026/PLAN_2026-2.md` (que a su vez cita el calendario
 oficial de Dirección Académica, `fechas-importantes-2026-2.pdf`).
 
 **Horario del curso**: viernes, dos módulos seguidos — **14:50–16:00 y
@@ -90,4 +90,4 @@ s02 para anunciarlo con las reglas del curso.
   extra; el anuncio de "objeto del proyecto en s08" (hecho en s07)
   gana una semana de margen para los grupos.
 - La sesión de grabación pre-s01 y todo el checklist "antes de s01"
-  (ver `RESUMEN_PARA_PATO.md`) tienen fecha tope real: **vie 07-ago**.
+  (ver `../../_archivo/bitacora/RESUMEN_PARA_PATO_2026-07.md`) tienen fecha tope real: **vie 07-ago**.

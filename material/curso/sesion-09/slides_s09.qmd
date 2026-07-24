@@ -30,7 +30,7 @@ Protocolo (15′): **describir → hipotetizar → verificar**
 
 Hoy, además, se cobra su **ticket de salida de s08**.
 
-## Escuchemos {background-iframe="../demos/demo_temperamentos.html" background-interactive=true}
+## Escuchemos {background-iframe="../../demos/demo_temperamentos.html" background-interactive=true}
 
 ## Intervalos son razones — ¿y si las apilamos doce veces?
 
@@ -80,7 +80,7 @@ Un [**cuarto de semitono**]{style="color:#0f766e"} (23,5 cents exactos):
 la **coma pitagórica**.
 
 ![Dos escaleras que no cierran: doce quintas justas versus siete
-octavas.](../../../figuras/s09_coma_pitagorica.svg)
+octavas.](../../assets/figuras/s09_coma_pitagorica.svg)
 
 ## Afinar es elegir un compromiso
 
@@ -96,7 +96,7 @@ octavas.](../../../figuras/s09_coma_pitagorica.svg)
 2 cents no se "oyen"… pero se **cuentan**: la quinta de Do4 late ~1 vez
 por segundo. Van a afinar de oído, como un afinador de pianos.
 
-## Afinemos, de oído {background-iframe="../demos/demo_temperamentos.html" background-interactive=true}
+## Afinemos, de oído {background-iframe="../../demos/demo_temperamentos.html" background-interactive=true}
 
 ## El taller: contando batidos
 
@@ -125,7 +125,7 @@ El mismo acorde mayor, **tres afinaciones**, orden al azar.
 
 Voten por escrito antes de que digamos nada.
 
-## Escuchen las tres versiones {background-iframe="../demos/demo_temperamentos.html" background-interactive=true}
+## Escuchen las tres versiones {background-iframe="../../demos/demo_temperamentos.html" background-interactive=true}
 
 ## ¿Afinado es un hecho físico, o una decisión?
 
@@ -143,7 +143,7 @@ regla.
 | Temperamento igual | 700 (−2) | 400 (+14, muele ~10/s) |
 
 ![Qué sacrifica cada temperamento, en cents respecto del intervalo
-justo.](../../../figuras/s09_desviaciones.svg)
+justo.](../../assets/figuras/s09_desviaciones.svg)
 
 ## El color de las tonalidades — y el piano que se estira
 

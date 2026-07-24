@@ -76,7 +76,7 @@ apaga o sobrevive? ¿Y si apoya el dedo donde ese modo se mueve al
 máximo? Piense qué haría el dedo con la energía del movimiento. La
 respuesta convierte un dedo en una herramienta de edición de espectros.
 
-![**Figura 2.** Los modos de un objeto golpeado no mueren juntos: en general los agudos se apagan antes que los graves. Como la mezcla de parciales cambia con el tiempo, el timbre de un golpe es una película —brillante al principio, más simple hacia la cola—, no una foto. Curvas esquemáticas.](../figuras/s03_decaimiento_multimodo.svg)
+![**Figura 2.** Los modos de un objeto golpeado no mueren juntos: en general los agudos se apagan antes que los graves. Como la mezcla de parciales cambia con el tiempo, el timbre de un golpe es una película —brillante al principio, más simple hacia la cola—, no una foto. Curvas esquemáticas.](../assets/figuras/s03_decaimiento_multimodo.svg)
 
 Segundo: los modos no mueren juntos. Cada uno pierde su energía a su
 propio ritmo, así que la mezcla cambia mientras el sonido se apaga — el
@@ -102,7 +102,7 @@ tres, *exactamente el triple*:
 
 $$f_n = n \, f_1 \qquad n = 1, 2, 3, \dots$$
 
-![**Figura 1.** Las cuatro primeras formas de vibrar de una cuerda fija en ambos extremos: una barriga, dos, tres, cuatro. Los puntos negros (●) marcan los **nodos**, que no se mueven. Lo extraordinario no son las formas sino las frecuencias: el modo de $n$ barrigas vibra a $n$ veces la frecuencia del fundamental.](../figuras/s03_modos_cuerda.svg)
+![**Figura 1.** Las cuatro primeras formas de vibrar de una cuerda fija en ambos extremos: una barriga, dos, tres, cuatro. Los puntos negros (●) marcan los **nodos**, que no se mueven. Lo extraordinario no son las formas sino las frecuencias: el modo de $n$ barrigas vibra a $n$ veces la frecuencia del fundamental.](../assets/figuras/s03_modos_cuerda.svg)
 
 Números enteros. La cuerda es el objeto cuya familia de frecuencias cae
 en razones perfectas 1 : 2 : 3 : 4… — y el oído humano, por razones que

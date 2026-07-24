@@ -25,8 +25,8 @@ riesgo 1). La escucha del día de hoy es la **línea base sin nota**.
 
 | Tiempo | Bloque | Actividad del estudiante | Rol del profesor | Materiales |
 |---|---|---|---|---|
-| 0–10′ | Gancho sonoro: el tarareo de la red | Escucha un golpe único, luego golpes a 2, 8, 20 por segundo (demo); vota a mano alzada: ¿cuándo deja de ser ritmo y empieza a ser nota? | Opera la demo [`demo_tren_pulsos.html`](demos/demo_tren_pulsos.html); registra los umbrales votados | Demo tren de pulsos, audio de sala |
-| 10–25′ | Mini-lección: frecuencia, período, altura | Calcula 2 casos con aritmética (T = 1/f); responde votaciones (¿duplicar f = duplicar altura percibida?) | Define f y T (notación de diseno/03); planta la distinción física↔percepción (OA2.1) sin resolverla aún | Pizarrón; demo como apoyo |
+| 0–10′ | Gancho sonoro: el tarareo de la red | Escucha un golpe único, luego golpes a 2, 8, 20 por segundo (demo); vota a mano alzada: ¿cuándo deja de ser ritmo y empieza a ser nota? | Opera la demo [`demo_tren_pulsos.html`](../../demos/demo_tren_pulsos.html); registra los umbrales votados | Demo tren de pulsos, audio de sala |
+| 10–25′ | Mini-lección: frecuencia, período, altura | Calcula 2 casos con aritmética (T = 1/f); responde votaciones (¿duplicar f = duplicar altura percibida?) | Define f y T (notación de `PLAN_SEMESTRE.md`); planta la distinción física↔percepción (OA2.1) sin resolverla aún | Pizarrón; demo como apoyo |
 | 25–60′ | Taller PEE: la zona gris ritmo–tono (OA1.1, OA2.1) | En grupo, con la demo en un notebook: predice su umbral personal ritmo→tono, lo mide para 2 timbres de pulso distintos, registra en la guía; compara entre integrantes y con BEN cap. 2 (~20 Hz) | Rota por los grupos (~6′ c/u); provoca: "¿el umbral es del sonido o del oyente?" | 5 notebooks con la demo; guía PEE; audífonos personales |
 | 60–70′ | Cierre y contraste | UN grupo expone su curva; todos anotan 1 predicción para s02: "¿cómo se vería este pulso dibujado?" | Sintetiza: el tono nace de la repetición; anuncia s02 (representación y espectrograma) y pide traer celular con app instalada | Pizarrón |
 
@@ -40,10 +40,10 @@ riesgo 1). La escucha del día de hoy es la **línea base sin nota**.
 
 ## Pendientes de producción
 
-- **Demo** (skill /demo-interactiva): [`demo_tren_pulsos.html`](demos/demo_tren_pulsos.html) — LA demo
+- **Demo** (skill /demo-interactiva): [`demo_tren_pulsos.html`](../../demos/demo_tren_pulsos.html) — LA demo
   de esta sesión (tasa de repetición 1–100 Hz, timbre del pulso). [en
   esta sesión se construye esta; no se requieren otras]
-- **Apuntes**: `sesiones/s01/apuntes/` — del golpe al tono; f y T;
+- **Apuntes**: `apunte_s01_del_golpe_al_tono.md` — del golpe al tono; f y T;
   vocabulario de la rúbrica.
 - **Actividades**: guía PEE "regla en la mesa" + guía PEE "zona gris
   ritmo–tono" + acta de grupo + pauta de línea base.

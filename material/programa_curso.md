@@ -1,7 +1,7 @@
 # Programa del curso — Acústica Musical
 
 > Borrador generado el 2026-07-13 a partir del diseño aprobado
-> (diseno/01–03). Sigue la estructura del programa 2019 (MUC860).
+> (`OBJETIVOS_APRENDIZAJE.md`, `METODOLOGIA.md`, `PLAN_SEMESTRE.md`). Sigue la estructura del programa 2019 (MUC860).
 > Los campos administrativos del semestre están marcados
 > **[COMPLETAR]**; el resto refleja decisiones ya tomadas y aprobadas.
 
@@ -71,7 +71,7 @@ Al terminar este curso el o la estudiante será capaz de:
    acústicamente su comportamiento — funcione o no como se esperaba.
 
 El detalle completo de los resultados de aprendizaje específicos y su
-mapeo sesión a sesión está en el [mapa del curso](../index.qmd) y `diseno/01`.
+mapeo sesión a sesión está en el [mapa del curso](index.qmd) y `OBJETIVOS_APRENDIZAJE.md`.
 
 ## III. Contenidos
 
@@ -101,7 +101,7 @@ salas reales; modos de sala; presentación y defensa del proyecto.
 
 ## IV. Metodología
 
-Aprendizaje activo estructurado (detalle en `diseno/02`):
+Aprendizaje activo estructurado (detalle en `METODOLOGIA.md`):
 
 - **Primero suena, después se explica**: cada módulo abre con sonido
   real; la exposición nunca supera 15 min continuos.
@@ -186,5 +186,5 @@ estas fuentes lo respaldan y se citan como lectura complementaria):
 ---
 
 *Materiales del curso: libro de lecturas (`libro/LIBRO_CURSO.pdf`),
-demos interactivas y guías de trabajo por sesión (`sesiones/`), mapa
+demos interactivas y guías de trabajo por sesión (`curso/`), mapa
 navegable del curso (página de inicio del sitio).*

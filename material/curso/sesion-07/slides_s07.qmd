@@ -50,7 +50,7 @@ Cada estímulo suena por el equipo de sala, igual para todos.
 Antes de mirar cualquier número: **cuenten en voz alta** las
 ondulaciones por segundo.
 
-## Demo: contar el batido {background-iframe="../demos/demo_batidos.html" background-interactive=true}
+## Demo: contar el batido {background-iframe="../../demos/demo_batidos.html" background-interactive=true}
 
 ## ¿Cuántas contaron?
 
@@ -77,7 +77,7 @@ Dos trenes de empujones al aire, casi al mismo ritmo:
 - Ese ciclo refuerzo–silencio se repite $|f_2-f_1|$ veces por segundo
 :::
 
-![Envolvente del batido: refuerzo y cancelación alternados.](../../../figuras/s07_fases_batido.svg)
+![Envolvente del batido: refuerzo y cancelación alternados.](../../assets/figuras/s07_fases_batido.svg)
 
 ## Votación
 
@@ -91,7 +91,7 @@ $f_1=440$, $f_2=443$. ¿Cuántos batidos por segundo predice la regla?
 
 Un voluntario lleva $f_2$ al unísono **sin mirar los números**.
 
-## Demo: modo afinación {background-iframe="../demos/demo_batidos.html" background-interactive=true}
+## Demo: modo afinación {background-iframe="../../demos/demo_batidos.html" background-interactive=true}
 
 ## La receta del afinador
 
@@ -111,7 +111,7 @@ Así afinan los pianos desde hace dos siglos — en s09 lo hacemos en serio.
 
 Anoten: ¿dónde dejan de poder contar? ¿qué oyen ahí?
 
-## Demo: barriendo Δf hacia arriba {background-iframe="../demos/demo_batidos.html" background-interactive=true}
+## Demo: barriendo Δf hacia arriba {background-iframe="../../demos/demo_batidos.html" background-interactive=true}
 
 ## Síntesis del día
 

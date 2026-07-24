@@ -100,7 +100,7 @@ y la guitarra no.
 Activamos 🔮 **Modo predicción** en la demo — paneles ocultos hasta
 "Revelar" — y miramos el contador **vueltas de la esquina = sueltas**.
 
-## Demo: la esquina de Helmholtz {background-iframe="../demos/demo_helmholtz.html" background-interactive=true}
+## Demo: la esquina de Helmholtz {background-iframe="../../demos/demo_helmholtz.html" background-interactive=true}
 
 ## Taller evaluado: el punto de frotado
 

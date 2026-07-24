@@ -1,5 +1,7 @@
 # ESTADO DEL LOOP — Fase 3–4 autónoma
 
+*(bitácora histórica: las rutas mencionadas corresponden a la estructura previa a la migración de 2026-07-24)*
+
 > **Registro histórico (cerrado).** La producción que este archivo
 > gobernaba terminó el 2026-07-13 con las 15 sesiones listas; se
 > conserva por su registro de decisiones (D0–D9) y de pendientes

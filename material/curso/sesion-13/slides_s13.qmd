@@ -122,7 +122,7 @@ Con $f_0$ fija, recorran las vocales /a/ /e/ /i/ /o/ /u/ — ¿se mueve la altur
 
 Con la vocal fija, suban y bajen $f_0$ — ¿sobrevive la vocal?
 
-## Demo: altura vs. vocal {background-iframe="../demos/demo_formantes_voz.html" background-interactive=true}
+## Demo: altura vs. vocal {background-iframe="../../demos/demo_formantes_voz.html" background-interactive=true}
 
 ## El juego: ¿qué vocal es?
 
@@ -130,7 +130,7 @@ $F_1$ y $F_2$ quedan **ocultos**. El curso vota por las bandas — sin ver los v
 
 En cada ronda: "¿qué banda lo delató?"
 
-## Demo: adivine la vocal (F1/F2 ocultos) {background-iframe="../demos/demo_formantes_voz.html" background-interactive=true}
+## Demo: adivine la vocal (F1/F2 ocultos) {background-iframe="../../demos/demo_formantes_voz.html" background-interactive=true}
 
 ## ¿Y sin cuerdas vibrando?
 
@@ -140,7 +140,7 @@ Cambiemos la fuente de **tono** a **soplo** — el susurro sintético.
 
 ¿Sigue reconociéndose la vocal sin ninguna altura?
 
-## Demo: la fuente en modo soplo {background-iframe="../demos/demo_formantes_voz.html" background-interactive=true}
+## Demo: la fuente en modo soplo {background-iframe="../../demos/demo_formantes_voz.html" background-interactive=true}
 
 ## El salto de la soprano
 
@@ -150,7 +150,7 @@ Volvamos a tono glotal y saltemos a $f_0 \approx 880$ Hz.
 
 ¿Alguien distingue /e/ de /i/ ahí arriba?
 
-## Demo: f₀ ≈ 880 Hz — registro de soprano {background-iframe="../demos/demo_formantes_voz.html" background-interactive=true}
+## Demo: f₀ ≈ 880 Hz — registro de soprano {background-iframe="../../demos/demo_formantes_voz.html" background-interactive=true}
 
 ## Curiosidad 1: el formante del cantante
 

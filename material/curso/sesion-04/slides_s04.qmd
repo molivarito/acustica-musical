@@ -118,7 +118,7 @@ Ahora al derecho. Misma receta de parciales, otra envolvente.
 - ¿Cuál de los dos se parece a lo que midieron en el taller?
 :::
 
-## Demo: cocinar el timbre desde cero {background-iframe="../demos/demo_sintesis_aditiva.html" background-interactive=true}
+## Demo: cocinar el timbre desde cero {background-iframe="../../demos/demo_sintesis_aditiva.html" background-interactive=true}
 
 ## Espectro↔timbre: la relación no es unívoca
 

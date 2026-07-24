@@ -107,19 +107,19 @@ otra $A$.
 Con la sala de clases dibujada y la curva **oculta**: si barro un tono
 de grave a agudo, ¿sonará parejo o habrá notas que "engordan"?
 
-## Demo: la sala de clases {background-iframe="../demos/demo_modos_sala.html" background-interactive="true"}
+## Demo: la sala de clases {background-iframe="../../demos/demo_modos_sala.html" background-interactive="true"}
 
 ## Achicamos la sala a una ducha (2 m) {.center}
 
 ¿Qué le pasa a esas frecuencias favoritas?
 
-## Demo: la ducha {background-iframe="../demos/demo_modos_sala.html" background-interactive="true"}
+## Demo: la ducha {background-iframe="../../demos/demo_modos_sala.html" background-interactive="true"}
 
 ## Ahora, una catedral {.center}
 
 ¿Todavía se distinguen protagonistas, o pasa otra cosa?
 
-## Demo: la catedral {background-iframe="../demos/demo_modos_sala.html" background-interactive="true"}
+## Demo: la catedral {background-iframe="../../demos/demo_modos_sala.html" background-interactive="true"}
 
 ## Un resonador hecho de aire y paredes
 

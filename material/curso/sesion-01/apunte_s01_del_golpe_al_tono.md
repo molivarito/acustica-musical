@@ -22,7 +22,7 @@ deja de oír *muchos golpes* y empieza a oír *una nota*. Ese tránsito —
 de la secuencia de eventos al tono sostenido — es la puerta de entrada
 del curso, y es un experimento que usted mismo hizo en la sesión.
 
-![**Figura 1.** Un mismo pulso repetido a tres tasas crecientes sobre el mismo eje de tiempo. A 10 pulsos/s el oído cuenta golpes separados (ritmo); hacia ~28 pulsos/s entra en una zona ambigua; a 120 pulsos/s los golpes se funden en un tono con altura. La frontera ritmo–tono es una *zona*, no un umbral nítido.](../../../figuras/s01_pulsos_ritmo_tono.svg)
+![**Figura 1.** Un mismo pulso repetido a tres tasas crecientes sobre el mismo eje de tiempo. A 10 pulsos/s el oído cuenta golpes separados (ritmo); hacia ~28 pulsos/s entra en una zona ambigua; a 120 pulsos/s los golpes se funden en un tono con altura. La frontera ritmo–tono es una *zona*, no un umbral nítido.](../../assets/figuras/s01_pulsos_ritmo_tono.svg)
 
 La observación central es esta: **un tono es una vibración que se repite
 lo bastante rápido como para que el oído renuncie a contar los eventos y
@@ -45,7 +45,7 @@ centésimo de segundo:
 
 $$T = \frac{1}{f}$$
 
-![**Figura 2.** Frecuencia y período son el mismo dato mirado de dos maneras: sobre una oscilación periódica, $T$ es la duración de un ciclo (de cresta a cresta) y $f = 1/T$ cuenta cuántos ciclos caben en un segundo. Aquí $f = 200$ Hz $\Rightarrow$ $T = 5$ ms.](../../../figuras/s01_frecuencia_periodo.svg)
+![**Figura 2.** Frecuencia y período son el mismo dato mirado de dos maneras: sobre una oscilación periódica, $T$ es la duración de un ciclo (de cresta a cresta) y $f = 1/T$ cuenta cuántos ciclos caben en un segundo. Aquí $f = 200$ Hz $\Rightarrow$ $T = 5$ ms.](../../assets/figuras/s01_frecuencia_periodo.svg)
 
 Esa es toda la matemática de esta sesión, y no es poca: con ella usted
 ya puede razonar en proporciones. ¿La cuerda vibra el doble de rápido?

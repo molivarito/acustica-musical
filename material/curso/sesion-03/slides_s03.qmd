@@ -118,7 +118,7 @@ respecto del modo 2? ¿Qué forma tiene el modo 3?
 Activen "modo predicción" y verifiquen escuchando cada modo, uno por
 uno.
 
-## Demo: modos de una cuerda {background-iframe="../demos/demo_modos_cuerda.html" background-interactive=true}
+## Demo: modos de una cuerda {background-iframe="../../demos/demo_modos_cuerda.html" background-interactive=true}
 
 ## Parcial ≠ armónico
 

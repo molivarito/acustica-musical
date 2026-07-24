@@ -100,7 +100,7 @@ En vez de *sumar* energía, el oído (y el dB) **comparan multiplicando**.
 Para sonar **igual de fuerte** que un tono de 1000 Hz, uno de 125 Hz
 ¿va a necesitar más, igual o menos nivel?
 
-## Demo: dibuje su curva isofónica {background-iframe="../demos/demo_decibel_sonoridad.html" background-interactive=true}
+## Demo: dibuje su curva isofónica {background-iframe="../../demos/demo_decibel_sonoridad.html" background-interactive=true}
 
 ## Lo que dibujaron las curvas {.center}
 

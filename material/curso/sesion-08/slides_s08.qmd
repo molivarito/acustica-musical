@@ -50,7 +50,7 @@ Va a sonar algo que **cambia** en el tiempo.
 
 Diagnostiquen las etapas — no busquen nombres técnicos todavía.
 
-## Demo: escucha del día {background-iframe="../demos/demo_banda_critica.html" background-interactive=true}
+## Demo: escucha del día {background-iframe="../../demos/demo_banda_critica.html" background-interactive=true}
 
 ## El mapa del choque
 
@@ -110,7 +110,7 @@ Después del descanso: música de verdad.
 
 Voten su ranking del más liso al más áspero.
 
-## Demo: ranking de lisura {background-iframe="../demos/demo_banda_critica.html" background-interactive=true}
+## Demo: ranking de lisura {background-iframe="../../demos/demo_banda_critica.html" background-interactive=true}
 
 ## ¿Es física, es oído, o es costumbre? {.center}
 
@@ -126,7 +126,7 @@ Cada nota aporta su familia de **parciales**.
 
 Vean qué pares **coinciden**, cuáles se **esquivan** y cuáles **rozan**.
 
-## Demo: vista de parciales {background-iframe="../demos/demo_banda_critica.html" background-interactive=true}
+## Demo: vista de parciales {background-iframe="../../demos/demo_banda_critica.html" background-interactive=true}
 
 ## Coincidencia y esquive
 

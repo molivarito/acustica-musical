@@ -9,8 +9,8 @@ turnos de ~10′ por pareja). Roles en cada turno: **oyente** (audífonos,
 dicta SUS fronteras — no se negocian) y **operador** (mueve Δf despacio
 y anota lo que el oyente dicte). Luego intercambian. La pareja que
 espera trabaja los ítems 1 y 4 de esta hoja.
-**Materiales**: notebook con [`demo_banda_critica.html`](../demos/demo_banda_critica.html) (tonos puros,
-f₁ = 440 Hz; si quieren contar batidos finos, [`demo_batidos.html`](../../s07/demos/demo_batidos.html) de
+**Materiales**: notebook con [`demo_banda_critica.html`](../../../demos/demo_banda_critica.html) (tonos puros,
+f₁ = 440 Hz; si quieren contar batidos finos, [`demo_batidos.html`](../../../demos/demo_batidos.html) de
 s07 sirve igual), audífonos personales, esta hoja (una POR PERSONA).
 
 Nombre: ____________________ Pareja: ____________________

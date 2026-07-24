@@ -9,7 +9,7 @@
 # navegación; un book-HTML paralelo duplicaría contenido. El PDF es el
 # artefacto imprimible/descargable que el sitio publica como recurso.
 #
-# Las figuras (../figuras/*.svg) requieren rsvg-convert instalado.
+# Las figuras (../assets/figuras/*.svg) requieren rsvg-convert instalado.
 
 project:
   type: book

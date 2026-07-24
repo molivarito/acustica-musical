@@ -134,7 +134,7 @@ igual desde cualquier ángulo? Ninguna de estas preguntas necesita
 fórmulas — necesitan el vocabulario de s03 (modos, líneas nodales) y de
 s10 (resonancia, impedancia, acoplamiento), que usted ya tiene.
 
-![**Figura 1.** La cadena que hace audible a la cuerda (la misma figura del apunte de la sesión 10): la cuerda vibra fuerte pero mueve poco aire; el puente transforma la impedancia; la tapa y la caja sí empujan aire y radian. Las preguntas del párrafo anterior son, todas, preguntas sobre qué hace cada eslabón — y se responden midiendo.](../figuras/s10_acoplamiento.svg)
+![**Figura 1.** La cadena que hace audible a la cuerda (la misma figura del apunte de la sesión 10): la cuerda vibra fuerte pero mueve poco aire; el puente transforma la impedancia; la tapa y la caja sí empujan aire y radian. Las preguntas del párrafo anterior son, todas, preguntas sobre qué hace cada eslabón — y se responden midiendo.](../assets/figuras/s10_acoplamiento.svg)
 
 Hay, por último, un personaje legendario que aparece cuando esta cadena
 funciona *demasiado* bien: la **nota lobo**, una nota puntual que en

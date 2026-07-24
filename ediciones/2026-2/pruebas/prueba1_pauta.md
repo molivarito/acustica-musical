@@ -91,8 +91,8 @@ el "canto" agudo del vaso); la altura aproximada del golpe se mantiene
 o se empobrece, la sonoridad del ataque es similar.
 
 Se corrige marcando **un nivel (1–4) por dimensión** con la rúbrica
-del curso (diseno/02 §5, versión de bolsillo en
-[`materiales/planilla_rubrica_oa3.md`](../../../materiales/planilla_rubrica_oa3.md)); puntaje de la parte = suma de
+del curso (`../../../METODOLOGIA.md` §5, versión de bolsillo en
+[`material/profesor/planilla_rubrica_oa3.md`](../../../material/profesor/planilla_rubrica_oa3.md)); puntaje de la parte = suma de
 las cuatro dimensiones (4–16). Anclas específicas para ESTE estímulo:
 
 | Dim. | 4 (experto) — ejemplo | 2 (en desarrollo) — ejemplo |

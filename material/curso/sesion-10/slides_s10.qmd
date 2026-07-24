@@ -42,7 +42,7 @@ Dos módulos, un puente hacia los instrumentos.
 
 *Separen bien lo que sube parejo de lo que se infla — son cosas distintas.*
 
-## Demo — modo presentación {background-iframe="../demos/demo_resonancia.html" background-interactive=true}
+## Demo — modo presentación {background-iframe="../../demos/demo_resonancia.html" background-interactive=true}
 
 ## ¿Por qué el columpio solo acepta su ritmo? {.center}
 
@@ -91,19 +91,19 @@ Más — el transiente dura lo que dura su ping libre. Dos caras de la misma mon
 
 Frecuencia de excitación subiendo lento y pareja — observen la curva.
 
-## Demo — barrido {background-iframe="../demos/demo_resonancia.html" background-interactive=true}
+## Demo — barrido {background-iframe="../../demos/demo_resonancia.html" background-interactive=true}
 
 ## Ahora muevan el amortiguamiento {.center}
 
 Un extremo, luego el otro. Repitan barrido y golpe en cada uno.
 
-## Demo — amortiguamiento {background-iframe="../demos/demo_resonancia.html" background-interactive=true}
+## Demo — amortiguamiento {background-iframe="../../demos/demo_resonancia.html" background-interactive=true}
 
 ## El golpe: la oscilación libre pura {.center}
 
 Sin excitación externa que siga sonando — solo el ping en $f_0$.
 
-## Demo — golpe {background-iframe="../demos/demo_resonancia.html" background-interactive=true}
+## Demo — golpe {background-iframe="../../demos/demo_resonancia.html" background-interactive=true}
 
 ## La botella: un resonador de aire con $f_0$ medible
 

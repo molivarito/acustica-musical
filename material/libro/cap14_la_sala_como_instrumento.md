@@ -71,7 +71,7 @@ intensidad) son seis pisos de ×10 — la energía cayó a la millonésima
 parte, más o menos el viaje de un fortissimo hasta perderse en el
 ruido de fondo. La figura 1 lo dibuja.
 
-![**Figura 1.** El $T_{60}$ en una gráfica (esquemática): cuando la fuente calla, el nivel cae en línea recta en dB, y el $T_{60}$ es el tiempo en bajar 60 dB — seis pisos de ×10. En una medición real la cola se funde con el ruido de fondo antes de completar la caída: se lee la pendiente inicial y se extrapola. Exactamente lo que haremos en la salida.](../figuras/s14_caida_t60.svg)
+![**Figura 1.** El $T_{60}$ en una gráfica (esquemática): cuando la fuente calla, el nivel cae en línea recta en dB, y el $T_{60}$ es el tiempo en bajar 60 dB — seis pisos de ×10. En una medición real la cola se funde con el ruido de fondo antes de completar la caída: se lee la pendiente inicial y se extrapola. Exactamente lo que haremos en la salida.](../assets/figuras/s14_caida_t60.svg)
 
 Wallace Sabine, el fundador de este oficio, midió hacia 1900 decenas
 de salas de Harvard con un tubo de órgano, un cronómetro y paciencia
@@ -134,7 +134,7 @@ empareja, y lo que queda como firma de la sala es la cola. Regla
 general para llevarse: **sala chica = modos ralos y audibles; sala
 grande = modos densos y reverberación al mando.**
 
-![**Figura 2.** Los tres primeros modos axiales entre dos paredes separadas $L = 2$ m: $f = v\,n/2L \approx 86$, 171 y 257 Hz. En la pared rígida el aire no puede moverse y la presión es máxima — al revés que en el extremo abierto de los tubos de s12. Pocos modos, bien separados, en plena zona de la voz: por eso la ducha tiene favoritas.](../figuras/s14_modos_sala.svg)
+![**Figura 2.** Los tres primeros modos axiales entre dos paredes separadas $L = 2$ m: $f = v\,n/2L \approx 86$, 171 y 257 Hz. En la pared rígida el aire no puede moverse y la presión es máxima — al revés que en el extremo abierto de los tubos de s12. Pocos modos, bien separados, en plena zona de la voz: por eso la ducha tiene favoritas.](../assets/figuras/s14_modos_sala.svg)
 
 ## Ponerle número a una sala (lo que haremos)
 

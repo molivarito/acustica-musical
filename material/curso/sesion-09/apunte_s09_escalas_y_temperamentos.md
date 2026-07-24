@@ -47,7 +47,7 @@ razón de 129,75 a 128 — se llama **coma pitagórica**, y es la grieta
 estructural de todo sistema de 12 notas: **es aritméticamente imposible
 que las 12 quintas sean justas y las octavas también**.
 
-![**Figura 1.** Dos escaleras que no cierran: apilar doce quintas justas (×3/2, en cents $12\times702 = 8424$) llega más arriba que siete octavas ($7\times1200 = 8400$). La diferencia — la **coma pitagórica**, ≈ 23,5 cents, un cuarto de semitono — es la razón por la que ningún sistema de 12 notas puede tener todas las quintas justas y las octavas puras a la vez.](../../../figuras/s09_coma_pitagorica.svg) La respuesta al ticket es
+![**Figura 1.** Dos escaleras que no cierran: apilar doce quintas justas (×3/2, en cents $12\times702 = 8424$) llega más arriba que siete octavas ($7\times1200 = 8400$). La diferencia — la **coma pitagórica**, ≈ 23,5 cents, un cuarto de semitono — es la razón por la que ningún sistema de 12 notas puede tener todas las quintas justas y las octavas puras a la vez.](../../assets/figuras/s09_coma_pitagorica.svg) La respuesta al ticket es
 no; algo hay que sacrificar. Las distintas maneras de elegir el
 sacrificio son, precisamente, los **temperamentos**.
 
@@ -132,7 +132,7 @@ pero el precio es que algunas quintas y algunos transportes quedan
 inutilizables: sirve para un coro que ajusta en tiempo real, no para
 un teclado de afinación fija.
 
-![**Figura 2.** Qué sacrifica cada temperamento, en cents respecto del intervalo justo. La entonación justa deja quinta y tercera perfectas (0 cents), pero solo en la tonalidad para la que se construyó. La pitagórica conserva la quinta justa a costa de una tercera muy ancha (+22 cents). El temperamento igual reparte el compromiso: estrecha cada quinta apenas 2 cents (un batido lento) pero ensancha cada tercera mayor 14 cents (una vibración áspera).](../../../figuras/s09_desviaciones.svg) Y los **temperamentos circulantes** del
+![**Figura 2.** Qué sacrifica cada temperamento, en cents respecto del intervalo justo. La entonación justa deja quinta y tercera perfectas (0 cents), pero solo en la tonalidad para la que se construyó. La pitagórica conserva la quinta justa a costa de una tercera muy ancha (+22 cents). El temperamento igual reparte el compromiso: estrecha cada quinta apenas 2 cents (un batido lento) pero ensancha cada tercera mayor 14 cents (una vibración áspera).](../../assets/figuras/s09_desviaciones.svg) Y los **temperamentos circulantes** del
 barroco — Werckmeister es el ejemplo clásico — reparten la coma en
 partes *desiguales*: todas las tonalidades funcionan, pero cada una
 queda con proporciones levemente distintas, con su "color"

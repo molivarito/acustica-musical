@@ -110,7 +110,7 @@ fino de Benade — hoy queda solo mencionado.*
 Activamos **modo predicción**, alternamos el conmutador
 abierto/cerrado y movemos el largo (cm): escuchen cambiar el timbre.
 
-## Demo: el tubo virtual como pizarra sonora {background-iframe="../demos/demo_tubo_agujeros.html" background-interactive=true}
+## Demo: el tubo virtual como pizarra sonora {background-iframe="../../demos/demo_tubo_agujeros.html" background-interactive=true}
 
 ## Ahora la lutería la hacen ustedes {.center}
 

@@ -40,7 +40,7 @@ juntas como el taller de la semana (principio 5).
 | Tiempo | Bloque | Actividad del estudiante | Rol del profesor | Materiales |
 |---|---|---|---|---|
 | 0–8′ | Gancho sonoro: la nota al revés | Escucha una grabación misteriosa y anota en 1 línea qué instrumento cree que es; luego la oye al derecho: era una nota de guitarra reproducida al revés — misma receta de parciales, otra envolvente, timbre irreconocible | Reproduce la grabación invertida (preparada en casa) sin explicar; revela; deja plantada la pregunta: "si el espectro es el mismo, ¿qué cambió?" | Grabación de nota de guitarra normal e invertida; audio de sala |
-| 8–28′ | **Demo predictiva: síntesis aditiva (OA2.1, OA1.1)** — formato 1 | Predice a mano alzada ANTES de cada paso: "si al seno le sumo el parcial 2, ¿cambia la nota o el timbre?", "¿cuál preset sonará más brillante: pulsada al medio o cerca del puente?", "¿cuál de los dos se parece a lo que midieron en el taller?"; verifica oyendo y viendo forma de onda y espectro | Opera [`demo_sintesis_aditiva.html`](demos/demo_sintesis_aditiva.html) proyectada: parte de un seno (solo parcial 1), suma parciales de a uno, luego presets "pulsada al medio" / "pulsada cerca del puente" / "diente de sierra"; activa la envolvente de pulsación al final (la receta suena "a cuerda" recién con su envolvente → cierra el gancho); instala la idea: **el espectro es la receta del timbre, y la envolvente es el resto de la receta** | [`demo_sintesis_aditiva.html`](demos/demo_sintesis_aditiva.html) + proyector + audio de sala |
+| 8–28′ | **Demo predictiva: síntesis aditiva (OA2.1, OA1.1)** — formato 1 | Predice a mano alzada ANTES de cada paso: "si al seno le sumo el parcial 2, ¿cambia la nota o el timbre?", "¿cuál preset sonará más brillante: pulsada al medio o cerca del puente?", "¿cuál de los dos se parece a lo que midieron en el taller?"; verifica oyendo y viendo forma de onda y espectro | Opera [`demo_sintesis_aditiva.html`](../../demos/demo_sintesis_aditiva.html) proyectada: parte de un seno (solo parcial 1), suma parciales de a uno, luego presets "pulsada al medio" / "pulsada cerca del puente" / "diente de sierra"; activa la envolvente de pulsación al final (la receta suena "a cuerda" recién con su envolvente → cierra el gancho); instala la idea: **el espectro es la receta del timbre, y la envolvente es el resto de la receta** | [`demo_sintesis_aditiva.html`](../../demos/demo_sintesis_aditiva.html) + proyector + audio de sala |
 | 28–42′ | **PEE relámpago con instrumentos: estirar, acortar, engordar (OA1.2)** | En grupo, con la media guía: predice por proporciones y verifica con el afinador — (a) dedo en el traste 12 = mitad del largo: ¿la frecuencia se duplica exactamente?; (b) razona sin medir: para subir un semitono con la clavija, ¿la tensión sube ~1 %, ~12 % o ~100 %? (la comparación "misma nota en dos cuerdas ≠ mismo timbre" ya quedó cubierta por los presets de la demo de síntesis) | Rota; formaliza en el pizarrón SOLO proporciones: $f_1 \propto 1/L$, $f_1 \propto \sqrt{F_T}$, $f_1 \propto 1/\sqrt{\mu}$ (la fórmula completa queda en el recuadro del apunte); conecta: por eso la guitarra afina con 3 palancas — clavija, traste, grosor de cuerda | Instrumentos + afinadores (app); media guía PEE "estirar, acortar, engordar"; pizarrón |
 | 42–62′ | **Proyecto: devolución de ideas + pauta del hito 1 (OA5.1)** | Recibe su media hoja de s03 comentada; lee la pauta del hito 1 (entrega s05, 8 %) mientras se presenta; en grupo: elige su idea definitiva, nombra el parámetro modificable y esboza QUÉ va a predecir (la sesión de hoy le dio el modelo cuerda completo); anota dudas y las pregunta | Presenta la pauta (estructura de 2 págs, rúbrica, bitácora firmada, fecha); devuelve las medias hojas comentadas; rota por los 5 grupos empujando de la idea a la predicción ("¿qué número van a atreverse a escribir?") | Pauta del hito 1 impresa (1 por grupo) + proyectada; medias hojas comentadas |
 | 62–70′ | Cierre + ticket de salida + anuncios | Completa el ticket: "en la demo (queda publicada), apague del todo el parcial 1 — la fundamental: ¿la nota baja una octava, desaparece o sigue igual? escriba su predicción"; entrega las dos guías del día; anota anuncios | Recoge guías (rúbrica rápida: cuentan juntas como el taller de la semana) y tickets; anuncia s05: **entrega del hito 1 al inicio** + se responde el ticket; publica el enlace de la demo para explorar en casa | Tickets de salida; guías |
@@ -69,7 +69,7 @@ juntas como el taller de la semana (principio 5).
 
 ## Pendientes de producción
 
-- **Demo** (skill /demo-interactiva): [`demo_sintesis_aditiva.html`](demos/demo_sintesis_aditiva.html) —
+- **Demo** (skill /demo-interactiva): [`demo_sintesis_aditiva.html`](../../demos/demo_sintesis_aditiva.html) —
   8 sliders de amplitud por parcial, presets (seno / diente de sierra
   suave / pulsada al medio / pulsada cerca del puente), forma de onda +
   espectro-receta, envolvente de pulsación opcional. [Única demo nueva.]
@@ -78,7 +78,7 @@ juntas como el taller de la semana (principio 5).
   (referido desde el cierre de cap03).
 - **Actividades**: guía PEE "el mapa de la cuerda" + media guía PEE
   "estirar, acortar, engordar" + **pauta detallada del hito 1** (con
-  rúbrica; se publica hoy) — en `sesiones/s04/actividades/`.
+  rúbrica; se publica hoy) — en `actividades/`.
 - **Trabajo previo del profesor (esta semana)**: comentar las 5 medias
   hojas de s03 (~30–45 min; foco: ¿es medible?, ¿tiene parámetro?);
   grabar la nota de guitarra e invertirla (cualquier editor de audio);
@@ -110,7 +110,7 @@ juntas como el taller de la semana (principio 5).
   consulta; lo innegociable hoy: pauta entendida, fecha clara (s05) y
   parámetro nombrado por grupo.
 - **La demo falla en el proyector** → plan B: la síntesis aditiva se
-  muestra con [`demo_modos_cuerda.html`](../s03/demos/demo_modos_cuerda.html) de s03 (suma de modos con
+  muestra con [`demo_modos_cuerda.html`](../../demos/demo_modos_cuerda.html) de s03 (suma de modos con
   amplitudes ajustables cubre el núcleo); la exploración fina queda de
   tarea con el enlace publicado.
 - **El módulo 1 se atrasa por afinar/instalar instrumentos** → la

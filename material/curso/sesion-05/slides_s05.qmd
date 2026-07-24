@@ -68,7 +68,7 @@ Vote a mano alzada. Veámoslo.
 
 Miren la forma de onda y el espectro. Predigan antes de que apague nada.
 
-## Demo: apagar la fundamental {background-iframe="../demos/demo_fundamental_ausente.html" background-interactive=true}
+## Demo: apagar la fundamental {background-iframe="../../demos/demo_fundamental_ausente.html" background-interactive=true}
 
 ## Fundamental ausente / altura virtual
 
@@ -104,7 +104,7 @@ La respuesta es **personal** — por eso la vamos a registrar, uno por uno.
 Uno predice, el otro manipula y registra. Se intercambian a mitad del
 protocolo.
 
-## Demo: suba el filtro pasa-altos {background-iframe="../demos/demo_fundamental_ausente.html" background-interactive=true}
+## Demo: suba el filtro pasa-altos {background-iframe="../../demos/demo_fundamental_ausente.html" background-interactive=true}
 
 ## Taller — "el bajo que no está" {.center}
 

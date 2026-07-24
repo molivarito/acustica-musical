@@ -104,7 +104,7 @@ El navegador va a pedir permiso — **autorícenlo** cuando aparezca el
 aviso. ¿No hay micrófono o lo niegan? La demo tiene un **oscilador
 interno** como fuente alternativa.
 
-## Demo: forma de onda y espectro en vivo {background-iframe="../demos/demo_forma_onda_espectro.html" background-interactive=true}
+## Demo: forma de onda y espectro en vivo {background-iframe="../../demos/demo_forma_onda_espectro.html" background-interactive=true}
 
 ## Taller PEE — retratos de sonido {.center}
 

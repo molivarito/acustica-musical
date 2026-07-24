@@ -106,7 +106,7 @@ Un golpe. Luego, muchos golpes por segundo.
 
 Voten a mano alzada.
 
-## Demo: tasa de repetición {background-iframe="../demos/demo_tren_pulsos.html" background-interactive="true"}
+## Demo: tasa de repetición {background-iframe="../../demos/demo_tren_pulsos.html" background-interactive="true"}
 
 ## ¿El mismo dato, dos caras?
 
@@ -156,7 +156,7 @@ sonar a nota?
 
 Predigan en grupo antes de tocar la demo.
 
-## Demo: midan su umbral {background-iframe="../demos/demo_tren_pulsos.html" background-interactive="true"}
+## Demo: midan su umbral {background-iframe="../../demos/demo_tren_pulsos.html" background-interactive="true"}
 
 ## Síntesis del día
 

@@ -86,7 +86,7 @@ G-String — 18.750 fps High-Speed Visualization", canal peteroshkai,
 slow motion", canal ViolinB0W, <https://www.youtube.com/watch?v=6JeyiM0YNo4>).
 La figura 1 congela seis instantes de una vuelta.
 
-![**Figura 1.** Seis instantáneas de un período del movimiento de Helmholtz (esquemático; el arco se dibuja a $2/10$ del largo desde el puente, más lejos que en un violín real, para que se vea). En cada instante la cuerda son dos rectas unidas en una esquina que recorre la envolvente punteada — el óvalo que el ojo ve borroso — una vuelta completa por período. El punto azul es el punto frotado: va pegado al arco mientras la esquina viaja por el lado del dedo, y desliza solo mientras ella pasa por el lado del puente.](../../../figuras/s11_helmholtz_esquina.svg)
+![**Figura 1.** Seis instantáneas de un período del movimiento de Helmholtz (esquemático; el arco se dibuja a $2/10$ del largo desde el puente, más lejos que en un violín real, para que se vea). En cada instante la cuerda son dos rectas unidas en una esquina que recorre la envolvente punteada — el óvalo que el ojo ve borroso — una vuelta completa por período. El punto azul es el punto frotado: va pegado al arco mientras la esquina viaja por el lado del dedo, y desliza solo mientras ella pasa por el lado del puente.](../../assets/figuras/s11_helmholtz_esquina.svg)
 
 El movimiento de Helmholtz une las dos mitades de la historia. En el
 punto donde el arco toca la cuerda, el paso de la esquina es exactamente
@@ -108,7 +108,7 @@ reloj visto desde dos lados.
 > agregó al modelo de Helmholtz a comienzos del siglo XX (deslizamientos
 > múltiples, efecto de la presión del arco).
 
-![**Figura 2.** El mismo reloj visto desde dos lados (esquemático). Arriba: desplazamiento del punto frotado — sube lento mientras va pegado al arco (la pendiente es la velocidad del arco) y cae rápido al deslizar, con desplazamiento neto cero en cada ciclo. Abajo: fuerza de la cuerda sobre el puente — un diente de sierra que cae bruscamente cada vez que la esquina pasa por el puente, una vez por período $T = 1/f_1$.](../../../figuras/s11_stick_slip.svg)
+![**Figura 2.** El mismo reloj visto desde dos lados (esquemático). Arriba: desplazamiento del punto frotado — sube lento mientras va pegado al arco (la pendiente es la velocidad del arco) y cae rápido al deslizar, con desplazamiento neto cero en cada ciclo. Abajo: fuerza de la cuerda sobre el puente — un diente de sierra que cae bruscamente cada vez que la esquina pasa por el puente, una vez por período $T = 1/f_1$.](../../assets/figuras/s11_stick_slip.svg)
 
 La esquina también explica el espectro (figura 2, panel inferior). Cada vez que pasa por el puente,
 la fuerza que la cuerda ejerce sobre él cae bruscamente y vuelve a
@@ -150,9 +150,9 @@ mande. Y el aire encerrado en la caja aporta su propia resonancia, que
 respira por las efes y ayuda a radiar los graves que una tapa de ese
 tamaño no podría empujar sola: la botella de s10 vive dentro del violín.
 
-![**Figura 3.** La cadena de acoplamiento completa (la misma figura del apunte de s10): la cuerda vibra fuerte pero mueve poco aire; el puente transforma la impedancia; la tapa y la caja, de baja impedancia, sí mueven aire y radian. La caja no agrega energía — convierte más rápido la que la cuerda le entrega.](../../../figuras/s10_acoplamiento.svg)
+![**Figura 3.** La cadena de acoplamiento completa (la misma figura del apunte de s10): la cuerda vibra fuerte pero mueve poco aire; el puente transforma la impedancia; la tapa y la caja, de baja impedancia, sí mueven aire y radian. La caja no agrega energía — convierte más rápido la que la cuerda le entrega.](../../assets/figuras/s10_acoplamiento.svg)
 
-![**Figura 4.** Vibrar "por modos" en una caja real: interferogramas holográficos de los seis primeros modos de la tapa de una guitarra, medidos por B. Richardson — (i) a (vi): 216, 268, 431, 553, 628 y 672 Hz. Cada franja oscura une puntos que vibran con la misma amplitud (≈ 1 µm entre franjas); las zonas claras y anchas casi no se mueven: son las líneas nodales. En el violín el principio es el mismo, con otras formas. Reproducida de Campbell & Greated (1987), fig. 6.14, p. 225 (© Oxford University Press), con fines docentes.](../../../figuras/libros/campbell_greated_hologramas_guitarra.png)
+![**Figura 4.** Vibrar "por modos" en una caja real: interferogramas holográficos de los seis primeros modos de la tapa de una guitarra, medidos por B. Richardson — (i) a (vi): 216, 268, 431, 553, 628 y 672 Hz. Cada franja oscura une puntos que vibran con la misma amplitud (≈ 1 µm entre franjas); las zonas claras y anchas casi no se mueven: son las líneas nodales. En el violín el principio es el mismo, con otras formas. Reproducida de Campbell & Greated (1987), fig. 6.14, p. 225 (© Oxford University Press), con fines docentes.](../../assets/figuras/libros/campbell_greated_hologramas_guitarra.png)
 
 Dos detalles cierran la cadena. La **radiación es direccional**: los
 graves salen parejos en todas direcciones, pero los parciales agudos

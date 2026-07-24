@@ -26,7 +26,7 @@ separando los tonos lentamente, tiene cuatro estaciones:
 4. **Dos notas lisas**: pasada la última frontera — su F3 —, la
    aspereza desaparece y quedan dos tonos limpios y separados.
 
-![**Figura 1.** El recorrido perceptual al separar dos tonos desde el unísono: batido contable → aspereza fusionada (una nota) → dos notas todavía ásperas → dos notas lisas. Las fronteras son personales (el eje $\Delta f$ es esquemático); el orden es universal. La última frontera (F3) marca el ancho de la banda crítica, del orden de un tercio de octava en el rango medio.](../../../figuras/s08_recorrido_deltaf.svg)
+![**Figura 1.** El recorrido perceptual al separar dos tonos desde el unísono: batido contable → aspereza fusionada (una nota) → dos notas todavía ásperas → dos notas lisas. Las fronteras son personales (el eje $\Delta f$ es esquemático); el orden es universal. La última frontera (F3) marca el ancho de la banda crítica, del orden de un tercio de octava en el rango medio.](../../assets/figuras/s08_recorrido_deltaf.svg)
 
 Lo notable del taller no es el orden de las estaciones (es el mismo
 para todos) sino dónde caen las fronteras: son **personales**, varían
@@ -103,7 +103,7 @@ armónicos es la ausencia de rugosidad entre sus parciales, y por eso
 las razones simples (2:1, 3:2, 4:3) producen los intervalos más lisos
 (ROE 5.2; C&G cap. 4) (figura 2).
 
-![**Figura 2.** Por qué la quinta suena lisa y el tritono áspero. Cada nota aporta su familia de parciales (grave en azul, aguda en rojo). En la quinta justa 3:2 los parciales *coinciden* (○) y los demás se esquivan; en el tritono varios pares caen dentro de una misma banda crítica y *rozan* (×). La aspereza vive en los armónicos: con tonos puros, el mismo tritono casi no roza.](../../../figuras/s08_coincidencia_parciales.svg)
+![**Figura 2.** Por qué la quinta suena lisa y el tritono áspero. Cada nota aporta su familia de parciales (grave en azul, aguda en rojo). En la quinta justa 3:2 los parciales *coinciden* (○) y los demás se esquivan; en el tritono varios pares caen dentro de una misma banda crítica y *rozan* (×). La aspereza vive en los armónicos: con tonos puros, el mismo tritono casi no roza.](../../assets/figuras/s08_coincidencia_parciales.svg)
 
 La demostración más elegante de la sesión fue el contraejemplo: el
 mismo tritono, tocado con **tonos puros**, casi no roza. Si la

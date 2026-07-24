@@ -52,7 +52,7 @@ compara. La referencia universal es una presión de **20 µPa**
 con el umbral de audición a 1000 Hz — Benade la recuerda como
 "1/3.530.000.000 de la presión atmosférica" (sec. 13.1). El **nivel de
 presión sonora** se anota entonces $L_p$ en **dB SPL re 20 µPa**
-(notación de diseno/03), y con la referencia puesta en el umbral, la
+(notación de `PLAN_SEMESTRE.md`), y con la referencia puesta en el umbral, la
 escala queda humana: 0 dB SPL es apenas audible y unos 120 dB SPL
 rozan el dolor (Benade 1990, sec. 13.8). Entre medio caben, en rangos
 aproximados, un susurro (~30 dB), una conversación (~60 dB), y una
@@ -60,7 +60,7 @@ orquesta o una banda en fortissimo (~95–110 dB) (ROS cap. 6; valores
 típicos, no medidos en nuestras salas — los de nuestras salas los está
 midiendo usted).
 
-![**Figura 1.** La escala de niveles de presión sonora con hitos musicales, del umbral de audición al umbral del dolor. Los valores son típicos y redondeados (no medidos en nuestras salas). A la derecha, la gramática del decibel: +10 dB multiplican por diez la intensidad (y suenan como el doble), +3 dB la duplican (cambio chico).](../../../figuras/s06_escala_decibel.svg)
+![**Figura 1.** La escala de niveles de presión sonora con hitos musicales, del umbral de audición al umbral del dolor. Los valores son típicos y redondeados (no medidos en nuestras salas). A la derecha, la gramática del decibel: +10 dB multiplican por diez la intensidad (y suenan como el doble), +3 dB la duplican (cambio chico).](../../assets/figuras/s06_escala_decibel.svg)
 
 > **Recuadro opcional (para quienes quieren la fórmula).** El nivel se
 > define como $L_p = 20\log_{10}(p/p_0)$ con $p_0 = 20\ \mu$Pa, o
@@ -83,7 +83,7 @@ musical es fuerte: **se necesitan unas diez fuentes iguales para que
 algo suene el doble de fuerte, y unas cien para el cuádruple** (Benade
 1990, sec. 13.5) (figura 2).
 
-![**Figura 2.** El nivel crece como $10\log_{10}N$ al sumar $N$ fuentes iguales: duplicarlas agrega solo +3 dB (un cambio chico), y hacen falta diez para el doble de sonoridad (+10 dB) y cien para el cuádruple (+20 dB).](../../../figuras/s06_suma_fuentes.svg) Por eso duplicar los violines de una orquesta engorda
+![**Figura 2.** El nivel crece como $10\log_{10}N$ al sumar $N$ fuentes iguales: duplicarlas agrega solo +3 dB (un cambio chico), y hacen falta diez para el doble de sonoridad (+10 dB) y cien para el cuádruple (+20 dB).](../../assets/figuras/s06_suma_fuentes.svg) Por eso duplicar los violines de una orquesta engorda
 el sonido mucho más de lo que lo agranda, y por eso el crescendo de
 verdad se hace tocando más fuerte, no sumando atriles.
 
@@ -99,7 +99,7 @@ relativamente sordos a los graves (y a los muy agudos), y que esa
 sordera **se agrava a niveles bajos** (Benade 1990, secs. 13.3–13.4;
 C&G cap. 3, sección *Loudness*; ROE sec. 3.4) (figura 3).
 
-![**Figura 3.** Curvas de igual sonoridad (esquema cualitativo, según las curvas normalizadas). Cada curva marca cuántos dB SPL hacen falta en cada frecuencia para igualar la sonoridad de un tono de 1000 Hz. Cuanto más bajo el nivel (curva de 20 fon), más empinada es la subida hacia los graves: por eso una mezcla suave "pierde" el bajo primero.](../../../figuras/s06_isofonicas_esquema.svg)
+![**Figura 3.** Curvas de igual sonoridad (esquema cualitativo, según las curvas normalizadas). Cada curva marca cuántos dB SPL hacen falta en cada frecuencia para igualar la sonoridad de un tono de 1000 Hz. Cuanto más bajo el nivel (curva de 20 fon), más empinada es la subida hacia los graves: por eso una mezcla suave "pierde" el bajo primero.](../../assets/figuras/s06_isofonicas_esquema.svg)
 
 Eso resuelve la escucha del día: al bajar el volumen, todos los
 componentes bajan los mismos dB, pero los graves caen más rápido hacia
@@ -129,7 +129,7 @@ oído descuenta; la teoría del filtro no es materia del curso. Las
 reglas de higiene de la medición salieron solas en las estaciones:
 
 - El micrófono del celular **no está calibrado**: los valores absolutos
-  pueden errar en varios dB ([`materiales/apps_recomendadas.md`](../../../materiales/apps_recomendadas.md)), y dos
+  pueden errar en varios dB ([`material/apps_recomendadas.md`](../../apps_recomendadas.md)), y dos
   celulares lado a lado pueden discrepar. Las **comparaciones relativas
   con el mismo aparato** — ¿cuánto subió?, ¿cuál punto de la sala es
   más ruidoso? — sí son confiables.
