@@ -1,14 +1,17 @@
+# --- Sistema ---
 .DS_Store
 CLAUDE.local.md
 .claude/settings.local.json
-referencias/libros/
 
-/.quarto/
+# --- Bibliografía de terceros (solo en Drive, nunca en git) ---
+_archivo/bibliografia/libros/
+
+# --- Salidas generadas por Quarto ---
+/material/_render/
+/material/.quarto/
 **/*.quarto_ipynb
-/_site/
-libro/.quarto/
-libro/index.log
-libro/*.tex
+material/libro/.quarto/
+material/libro/index.log
+material/libro/*.tex
+/material/libro/index_files/
 __pycache__/
-/libro/index_files/
-/_canvas/
