@@ -2,7 +2,7 @@
 
 Fase 3 del diseño — versión de trabajo generada en el loop autónomo
 (2026-07-12). Mapa de sesiones: cada sesión indica tema, objetivos que
-cubre (códigos de [`diseno/01_objetivos_aprendizaje.md`](01_objetivos_aprendizaje.md)), dependencias
+cubre (códigos de `OBJETIVOS_APRENDIZAJE.md`), dependencias
 conceptuales e hitos de evaluación. **Este mapa gobierna el desarrollo
 sesión por sesión (fase 4).**
 
@@ -11,7 +11,7 @@ sesión por sesión (fase 4).**
 Se adopta la secuencia didáctica de Benade (1990, sec. 1.2) — del sonido
 impulsivo al sostenido, de la física a la percepción, y de los principios
 a los instrumentos — cruzada con las restricciones del calendario de
-evaluación de [`diseno/02_metodologia.md`](02_metodologia.md), sección 4:
+evaluación de `METODOLOGIA.md`, sección 4:
 
 1. **Bloque A (s01–s04): el sonido como objeto físico.** Vibración,
    ondas, modos, espectro. Herramientas de medición desde la semana 2
@@ -35,20 +35,20 @@ metodología, sección 4).
 
 | Sesión | Tema | Objetivos (OA) | Depende de | Hitos / formatos especiales | Demo principal |
 |--------|------|----------------|------------|------------------------------|----------------|
-| s01 | Escuchar como científico: del golpe al tono (sonido impulsivo, repetición, frecuencia y altura) | OA3.1 (se instala), OA1.1 (intro), OA2.1 (intro) | — | Formación de 5 grupos estables; presentación de la rúbrica OA3; línea base de escucha (sin nota) | [`demo_tren_pulsos.html`](../sesiones/s01/demos/demo_tren_pulsos.html) |
-| s02 | Ondas y representación: forma de onda, espectro y espectrograma; propagación y velocidad del sonido | OA4.1, OA1.1 | s01 (frecuencia/altura) | Alfabetización digital (material propio); primer uso de apps de análisis en celular | [`demo_forma_onda_espectro.html`](../sesiones/s02/demos/demo_forma_onda_espectro.html) (micrófono en vivo) |
-| s03 | Modos de vibración: por qué cada objeto suena como suena (frecuencias características, modos 1D y 2D, decaimiento) | OA1.1, OA1.2, OA5.1 (intro) | s02 (espectro) | **Lanzamiento del proyecto** (grupos = grupos de proyecto) | [`demo_modos_cuerda.html`](../sesiones/s03/demos/demo_modos_cuerda.html) |
-| s04 | La receta del timbre: cuerda pulsada, punto de excitación, síntesis aditiva | OA1.1, OA1.2, OA2.1 | s03 (modos) | Instrumentos de estudiantes #1 (cuerdas pulsadas; avisar en s03) | [`demo_sintesis_aditiva.html`](../sesiones/s04/demos/demo_sintesis_aditiva.html) |
-| s05 | La altura percibida: fundamental ausente, reconocimiento de patrones, el oído en una pasada | OA2.1, OA2.2 | s04 (parciales, espectro) | **Hito 1 del proyecto** (diseño con predicción, 8%); punto de control metodológico (ronda oral y lectura previa) | [`demo_fundamental_ausente.html`](../sesiones/s05/demos/demo_fundamental_ausente.html) |
-| s06 | Sonoridad y decibel: intensidad, niveles, isofónicas; medir lo fuerte | OA2.1, OA4.2 | s02 (ondas), s05 (percepción no lineal) | Estaciones de medición de niveles (formato 5); mini-informe SPL | [`demo_decibel_sonoridad.html`](../sesiones/s06/demos/demo_decibel_sonoridad.html) |
-| s07 | **Prueba 1** (módulo 1) + audición liviana: batidos, primera escucha (módulo 2) | evalúa OA1.1–1.2, OA2.1–2.2, OA4.1–4.2; siembra OA2.2 | s01–s06 | Prueba 1 (módulo 1 completo); módulo 2 liviano por regla de metodología §3 | [`demo_batidos.html`](../sesiones/s07/demos/demo_batidos.html) |
-| s08 | Psicoacústica de la superposición: batidos, banda crítica, rugosidad y consonancia | OA2.2, OA2.3, OA5.2 | s07 m2 (batidos oídos) | Taller psicoacústico con registro individual; **comienzan talleres de medición sobre el objeto del proyecto (s08–s12)** | [`demo_banda_critica.html`](../sesiones/s08/demos/demo_banda_critica.html) |
-| s09 | Escalas y temperamentos: afinar de oído (batidos como herramienta) | OA2.3, OA1.2 | s08 (batidos, consonancia) | Actividad de afinación por conteo de batidos (BEN 16.2) | [`demo_temperamentos.html`](../sesiones/s09/demos/demo_temperamentos.html) |
-| s10 | Resonancia, impedancia y acoplamiento: el puente hacia los instrumentos; panorama de mecanismos de excitación | OA1.2, OA1.3, OA5.2, OA3.2 | s03 (modos), s06 (energía/niveles) | **Hito 2 del proyecto** (avance, 8%); clínica de proyecto (formato 6) en módulo 2; revisar coevaluaciones | [`demo_resonancia.html`](../sesiones/s10/demos/demo_resonancia.html) |
-| s11 | Cuerdas frotadas y el cuerpo del instrumento: stick-slip, movimiento de Helmholtz, puente, caja y radiación | OA1.3, OA1.1, OA1.2 | s10 (resonancia, régimen de oscilación) | Instrumentos de estudiantes #2 (cuerdas frotadas; avisar en s10) | [`demo_helmholtz.html`](../sesiones/s11/demos/demo_helmholtz.html) |
-| s12 | Vientos y lutería: columnas de aire, agujeros, regímenes; construcción y medición de flautas/tubos | OA1.2, OA1.3, OA5.2 | s10 (resonancia, impedancia) | **Sesión-taller completa de lutería (formato 9, 140 min)**; flautas del profesor como caso | [`demo_tubo_agujeros.html`](../sesiones/s12/demos/demo_tubo_agujeros.html) |
-| s13 | **Prueba 2** (módulo 1) + la voz cantada: fuente-filtro y formantes en audición liviana (módulo 2) | evalúa OA1.2–1.3, OA2.2–2.3; OA1.3 (voz) | s08–s12 | Prueba 2 (módulo 1); módulo 2 liviano por regla de metodología §3 | [`demo_formantes_voz.html`](../sesiones/s13/demos/demo_formantes_voz.html) |
-| s14 | La sala como instrumento: reflexión, absorción, reverberación, modos de sala; salida de medición de RT | OA1.4, OA4.3, OA3.2 | s03 (modos), s06 (dB), s10 (resonancia) | **Salida de medición (formato 8)** en módulo 2; puesta en común comprimida al cierre de la propia salida (ver decisión D3) | [`demo_modos_sala.html`](../sesiones/s14/demos/demo_modos_sala.html) |
+| s01 | Escuchar como científico: del golpe al tono (sonido impulsivo, repetición, frecuencia y altura) | OA3.1 (se instala), OA1.1 (intro), OA2.1 (intro) | — | Formación de 5 grupos estables; presentación de la rúbrica OA3; línea base de escucha (sin nota) | `material/demos/demo_tren_pulsos.html` |
+| s02 | Ondas y representación: forma de onda, espectro y espectrograma; propagación y velocidad del sonido | OA4.1, OA1.1 | s01 (frecuencia/altura) | Alfabetización digital (material propio); primer uso de apps de análisis en celular | `material/demos/demo_forma_onda_espectro.html` (micrófono en vivo) |
+| s03 | Modos de vibración: por qué cada objeto suena como suena (frecuencias características, modos 1D y 2D, decaimiento) | OA1.1, OA1.2, OA5.1 (intro) | s02 (espectro) | **Lanzamiento del proyecto** (grupos = grupos de proyecto) | `material/demos/demo_modos_cuerda.html` |
+| s04 | La receta del timbre: cuerda pulsada, punto de excitación, síntesis aditiva | OA1.1, OA1.2, OA2.1 | s03 (modos) | Instrumentos de estudiantes #1 (cuerdas pulsadas; avisar en s03) | `material/demos/demo_sintesis_aditiva.html` |
+| s05 | La altura percibida: fundamental ausente, reconocimiento de patrones, el oído en una pasada | OA2.1, OA2.2 | s04 (parciales, espectro) | **Hito 1 del proyecto** (diseño con predicción, 8%); punto de control metodológico (ronda oral y lectura previa) | `material/demos/demo_fundamental_ausente.html` |
+| s06 | Sonoridad y decibel: intensidad, niveles, isofónicas; medir lo fuerte | OA2.1, OA4.2 | s02 (ondas), s05 (percepción no lineal) | Estaciones de medición de niveles (formato 5); mini-informe SPL | `material/demos/demo_decibel_sonoridad.html` |
+| s07 | **Prueba 1** (módulo 1) + audición liviana: batidos, primera escucha (módulo 2) | evalúa OA1.1–1.2, OA2.1–2.2, OA4.1–4.2; siembra OA2.2 | s01–s06 | Prueba 1 (módulo 1 completo); módulo 2 liviano por regla de metodología §3 | `material/demos/demo_batidos.html` |
+| s08 | Psicoacústica de la superposición: batidos, banda crítica, rugosidad y consonancia | OA2.2, OA2.3, OA5.2 | s07 m2 (batidos oídos) | Taller psicoacústico con registro individual; **comienzan talleres de medición sobre el objeto del proyecto (s08–s12)** | `material/demos/demo_banda_critica.html` |
+| s09 | Escalas y temperamentos: afinar de oído (batidos como herramienta) | OA2.3, OA1.2 | s08 (batidos, consonancia) | Actividad de afinación por conteo de batidos (BEN 16.2) | `material/demos/demo_temperamentos.html` |
+| s10 | Resonancia, impedancia y acoplamiento: el puente hacia los instrumentos; panorama de mecanismos de excitación | OA1.2, OA1.3, OA5.2, OA3.2 | s03 (modos), s06 (energía/niveles) | **Hito 2 del proyecto** (avance, 8%); clínica de proyecto (formato 6) en módulo 2; revisar coevaluaciones | `material/demos/demo_resonancia.html` |
+| s11 | Cuerdas frotadas y el cuerpo del instrumento: stick-slip, movimiento de Helmholtz, puente, caja y radiación | OA1.3, OA1.1, OA1.2 | s10 (resonancia, régimen de oscilación) | Instrumentos de estudiantes #2 (cuerdas frotadas; avisar en s10) | `material/demos/demo_helmholtz.html` |
+| s12 | Vientos y lutería: columnas de aire, agujeros, regímenes; construcción y medición de flautas/tubos | OA1.2, OA1.3, OA5.2 | s10 (resonancia, impedancia) | **Sesión-taller completa de lutería (formato 9, 140 min)**; flautas del profesor como caso | `material/demos/demo_tubo_agujeros.html` |
+| s13 | **Prueba 2** (módulo 1) + la voz cantada: fuente-filtro y formantes en audición liviana (módulo 2) | evalúa OA1.2–1.3, OA2.2–2.3; OA1.3 (voz) | s08–s12 | Prueba 2 (módulo 1); módulo 2 liviano por regla de metodología §3 | `material/demos/demo_formantes_voz.html` |
+| s14 | La sala como instrumento: reflexión, absorción, reverberación, modos de sala; salida de medición de RT | OA1.4, OA4.3, OA3.2 | s03 (modos), s06 (dB), s10 (resonancia) | **Salida de medición (formato 8)** en módulo 2; puesta en común comprimida al cierre de la propia salida (ver decisión D3) | `material/demos/demo_modos_sala.html` |
 | s15 | Presentaciones finales del proyecto: explicar es la prueba | OA5.3, OA3.2 | todo el curso | **Presentación final + informe (14%)**; ambos módulos; ~25 min por grupo, preguntas individuales | — (sin demo nueva) |
 
 ## Verificación de cobertura de OA
@@ -67,7 +67,7 @@ metodología, sección 4).
 
 Ningún OA queda sin sesión; ninguna sesión queda sin OA.
 
-## Calendario de evaluación (fijado por diseno/02 §4)
+## Calendario de evaluación (fijado por METODOLOGIA.md §4)
 
 s01 línea base sin nota · s03 lanzamiento proyecto · s05 hito 1 (8%) ·
 s07 prueba 1 (12,5%) · s08–s12 talleres de medición = avance de proyecto ·
@@ -127,6 +127,6 @@ Definidas una vez aquí; todo apunte, demo y evaluación las respeta.
   tratan como caso principal de s03 (modos 2D, sartén de BEN 4) y
   reaparecen en la prueba 1; no hay sesión dedicada.
 - **D5 — Electroacústica y audio digital fuera del programa**: coherente
-  con el alcance declarado en diseno/01 ("fuera del alcance"); solo la
+  con el alcance declarado en OBJETIVOS_APRENDIZAJE.md ("fuera del alcance"); solo la
   alfabetización digital instrumental de s02 (muestreo mínimo para leer
   espectrogramas).

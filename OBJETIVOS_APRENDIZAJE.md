@@ -7,7 +7,7 @@ OA1.2, … para resultados de aprendizaje específicos. **Toda actividad,
 contenido y evaluación del curso debe mapearse explícitamente a al menos
 uno de estos códigos.**
 
-Abreviaturas bibliográficas según `referencias/notas/indice-fuentes.md`:
+Abreviaturas bibliográficas según `_archivo/bibliografia/notas/indice-fuentes.md`:
 C&G (Campbell & Greated 1987), BEN (Benade 1990), ROE (Roederer 1997),
 ROS (Rossing et al. 2002).
 
@@ -166,7 +166,7 @@ proyecto]**.
 
 ## Contraste con los objetivos 2019
 
-Referencia: `referencias/notas/programa_2019.md` (antecedente, no
+Referencia: `_archivo/bibliografia/notas/programa_2019.md` (antecedente, no
 plantilla).
 
 | Objetivo 2019 | Destino en el diseño nuevo | Por qué |
@@ -208,7 +208,7 @@ aprobar esta versión:
 
 ## Conexión con la fase siguiente
 
-La fase 2 (metodología, [`diseno/02_metodologia.md`](02_metodologia.md)) debe definir los
+La fase 2 (metodología, `METODOLOGIA.md`) debe definir los
 formatos de aprendizaje activo que estos objetivos exigen — en particular
 el ciclo predicción→experimento→explicación (OA1.2, OA5), las
 evaluaciones de escucha argumentada con su rúbrica (OA3) y los talleres
@@ -225,4 +225,4 @@ metodológica y equipamiento).
   Ricordi. — caps. 2–5 y Apéndice III.
 - Rossing, T. D., Moore, F. R. & Wheeler, P. A. (2002). *The Science of
   Sound*, 3.ª ed. Addison-Wesley. — banco de ejercicios.
-- Detalle completo: `referencias/notas/indice-fuentes.md`.
+- Detalle completo: `_archivo/bibliografia/notas/indice-fuentes.md`.

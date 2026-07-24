@@ -1,7 +1,7 @@
 # Metodología de aprendizaje activo — Acústica Musical
 
 Fase 2 del diseño — **versión aprobada** (2026-07-12). Operacionaliza los
-objetivos de [`diseno/01_objetivos_aprendizaje.md`](01_objetivos_aprendizaje.md) y resuelve sus riesgos
+objetivos de `OBJETIVOS_APRENDIZAJE.md` y resuelve sus riesgos
 aceptados 1 (rúbrica de OA3, sección 5) y 2 (proyecto que reutiliza
 talleres, sección 4). **Dimensionada para el cupo del semestre actual: 20
 estudiantes, organizados en 5 grupos estables de 4** (formados en la
@@ -107,7 +107,7 @@ de corrección y sin ayudante garantizado:
 | Instrumento | % | Diseño y justificación |
 |---|---|---|
 | **Pruebas** (2) | 25 | Con audio: casos sonoros, interpretación de espectros/espectrogramas (OA1, OA2, OA4.1). Respuesta corta y formato estructurado para corrección acotada (~15 min por prueba por estudiante). Baja de 30→25 porque parte de la comprensión se evalúa ahora en la escucha oral. |
-| **Talleres** | 25 | Cerrados EN clase, por grupo, con rúbrica rápida (logrado/parcial/incipiente) al vuelo → 0 h de corrección externa. Cuentan las mejores 8 de ~10 guías (tolera ausencias). **Los talleres de medición de las semanas 8–12 usan el objeto del proyecto de cada grupo: son a la vez avance del proyecto (resuelve el riesgo 2 de diseno/01).** |
+| **Talleres** | 25 | Cerrados EN clase, por grupo, con rúbrica rápida (logrado/parcial/incipiente) al vuelo → 0 h de corrección externa. Cuentan las mejores 8 de ~10 guías (tolera ausencias). **Los talleres de medición de las semanas 8–12 usan el objeto del proyecto de cada grupo: son a la vez avance del proyecto (resuelve el riesgo 2 de OBJETIVOS_APRENDIZAJE.md).** |
 | **Proyecto** (grupos de 4) | 30 | 3 hitos: diseño con predicción (8%), avance (8%; compila los talleres ya hechos sobre el objeto + bitácora — corrección mínima), presentación final + informe ≤6 págs (14%). **Mitigación de pasajeros**: bitácora con roles firmados por hito, coevaluación intra-grupo que ajusta la nota individual hasta ±0,5, y preguntas individuales en la defensa final. |
 | **Escucha argumentada (OA3)** | 20 | Ronda oral de la escucha del día, evaluada en vivo con la rúbrica de la sección 5 (planilla). Cada estudiante pasa ~3 veces; cuentan sus mejores 2. Además, cada prueba incluye una escucha escrita corta (cuenta en la nota de la prueba). 0 h de corrección externa. |
 | **Participación** | 0 | Se elimina como nota separada (en 2019 era un proxy vago); su función la absorben la ronda oral y los talleres presenciales. |
@@ -148,7 +148,7 @@ esa sesión.
 ## 6. Pendientes de producción que esta metodología genera
 
 1. Material propio de **alfabetización digital** para OA4.1 (apunte breve
-   + demo de espectrograma) **[POR VERIFICAR]** — ya anotado en diseno/01.
+   + demo de espectrograma) **[POR VERIFICAR]** — ya anotado en OBJETIVOS_APRENDIZAJE.md.
 2. **Demos web** iniciales (con la skill `/demo-interactiva`): tren de
    pulsos, batidos/banda crítica, fundamental ausente, modos de cuerda,
    temperamentos comparados, modos de sala.
@@ -162,7 +162,7 @@ esa sesión.
 7. **Banco de estímulos** para la escucha del día (grabaciones propias +
    extractos; ~15 estímulos para el semestre).
 8. **Guías de lectura breve** por sesión (páginas exactas de C&G/ROE
-   según `referencias/notas/indice-fuentes.md`).
+   según `_archivo/bibliografia/notas/indice-fuentes.md`).
 9. Verificar disponibilidad de **sonómetro** de referencia
    **[POR VERIFICAR]**.
 
@@ -190,7 +190,7 @@ versión; las fases 3–4 deben vigilarlos:
 
 ## Conexión con la fase siguiente
 
-La fase 3 ([`diseno/03_estructura_curso.md`](03_estructura_curso.md)) debe distribuir las 15
+La fase 3 (`PLAN_SEMESTRE.md`) debe distribuir las 15
 sesiones respetando: el calendario grueso de evaluación (sección 4), la
 regla de sesiones con prueba, las 2–3 sesiones con instrumentos de
 estudiantes (avisadas), la sesión dedicada de lutería (formato 9), la
@@ -206,4 +206,4 @@ Definir además ahí la notación física unificada del curso.
 - Rossing et al. (2002) — "Experiments for Home, Laboratory, and
   Classroom Demonstration" de cada capítulo, como complemento de los
   kits.
-- Detalle de fuentes: `referencias/notas/indice-fuentes.md`.
+- Detalle de fuentes: `_archivo/bibliografia/notas/indice-fuentes.md`.
