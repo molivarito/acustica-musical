@@ -1,21 +1,29 @@
 # Pauta de corrección — Prueba 1 (s07)
 
-**Uso del profesor.** Puntaje total 64. Presupuesto de corrección:
-**~6′ por estudiante** (A: ~4′ con rúbrica · B–D: ~2′ por cotejo
-directo con la clave rápida, ya no por lectura de respuesta abierta),
-20 estudiantes ≈ 2 h (pico declarado en metodología §4, bajado desde
-las ~4,5–5 h de la versión de respuesta abierta). Corregir por PARTE
-(todos los A, luego todos los B…), no por estudiante: mantiene el
-criterio parejo y es más rápido.
+**Uso del profesor.** Puntaje total **48** (Partes B, C y D; verificado
+18+20+10=48). La Parte A (16 puntos) se aplica dentro del cuadernillo
+pero **se califica aparte** con la rúbrica OA3 — no suma a estos 48 —
+y tiene su propia conversión a nota en la sección "Parte A" más abajo.
+Presupuesto de corrección: **~6′ por estudiante** (A: ~4′ con rúbrica
+· B–D: ~2′ por cotejo directo con la clave rápida, ya no por lectura
+de respuesta abierta), 20 estudiantes ≈ 2 h (pico declarado en
+metodología §4, bajado desde las ~4,5–5 h de la versión de respuesta
+abierta). Corregir por PARTE (todos los A, luego todos los B…), no por
+estudiante: mantiene el criterio parejo y es más rápido.
 
-## Conversión puntaje → nota (exigencia 60 %)
+## Conversión puntaje → nota de la prueba (Partes B+C+D, exigencia 60 %)
 
-- Si $p \ge 38{,}4$: nota $= 4 + 3\,(p - 38{,}4)/25{,}6$.
-- Si $p < 38{,}4$: nota $= 1 + 3\,p/38{,}4$.
+Puntaje máximo 48; exigencia 60 % = 28,8 puntos = nota 4,0. Misma
+lógica lineal por tramos que la versión anterior, reescalada a 48:
 
-| Puntaje | 0 | 13 | 26 | 38,4 | 45 | 51 | 58 | 64 |
+- Si $p \ge 28{,}8$: nota $= 4 + 3\,(p - 28{,}8)/19{,}2$.
+- Si $p < 28{,}8$: nota $= 1 + 3\,p/28{,}8$.
+
+| Puntaje | 0 | 9,6 | 19,2 | 28,8 | 33,6 | 38,4 | 43,2 | 48 |
 |---|---|---|---|---|---|---|---|---|
 | Nota | 1,0 | 2,0 | 3,0 | **4,0** | 4,8 | 5,5 | 6,3 | 7,0 |
+
+(La Parte A se convierte aparte: ver sección "Parte A" más abajo.)
 
 ## Tabla de mapeo ítem → OA → puntaje
 
@@ -81,7 +89,14 @@ cambió el formato de respuesta.)
 letra), salvo B.1b (evento + rasgos, 1+1) y B.2a (altura + timbre,
 1+1), que califican sus dos componentes por separado.
 
-## Parte A — Escucha escrita (16 pts, rúbrica OA3)
+## Parte A — Escucha escrita (16 pts, rúbrica OA3, se corrige y convierte aparte)
+
+**Conversión a nota**: puntaje = suma de las cuatro dimensiones (4–16);
+nota $= 1 + (puntaje - 4)/2$ (4 → 1,0 · 10 → 4,0 · 16 → 7,0). Este
+puntaje **no se suma a los 48 puntos de la prueba**: es uno de los
+tres eventos de "escucha argumentada escrita" (10 % del curso), que
+**cuenta las mejores 2 de 3**: Parte A de esta prueba (E1), Parte A de
+la Prueba 2 (E2) y el bloque ★ de la hoja de escucha de s15 (E3).
 
 **El estímulo** (banco #10): el mismo vaso, golpeado igual dos veces —
 la segunda vez con un dedo apoyado en el borde. Cambios audibles
@@ -101,6 +116,15 @@ las cuatro dimensiones (4–16). Anclas específicas para ESTE estímulo:
 | D2 hipótesis | "Algo en contacto con el vaso (mano, dedo, apoyo) amortigua los modos: los que tienen antinodo en el punto tocado pierden su energía rápido, por eso mueren antes los agudos" | "Es por los modos" (sin causa–efecto) |
 | D3 verificación | "Espectrograma de ambos golpes: espero mismas líneas al inicio, pero en la 2.ª las líneas superiores desaparecen antes / no aparecen" | "Lo mediría con la app" |
 | D4 argumentación | Separa "oigo que decae antes" de "interpreto que algo lo toca"; reconoce que no puede saber QUÉ lo toca | Afirma "le pusieron un dedo" como hecho oído |
+
+**Sobre el rasgo que A.2 regala**: A.2 y A.3 entregan explícitamente el
+rasgo "decae mucho más rápido" para que quien no alcanzó a captarlo
+pueda igual razonar el mecanismo (D2–D4) con puntaje completo — ese es
+el objetivo de equidad del formato. En consecuencia, una respuesta de
+A.1 que **solo repita ese rasgo** no puede superar el **nivel 2 en D1**:
+para 3 o 4 debe aportar algo que el enunciado no dio (qué se mantuvo,
+qué pasó con los parciales agudos, separación de dimensiones, orden de
+magnitud del decaimiento).
 
 **Importante**: NO se exige adivinar "un dedo en el borde". Cualquier
 mecanismo de amortiguamiento por contacto (apoyarlo en la mesa,
@@ -296,8 +320,9 @@ además, algunos instrumentos sí tienen energía sobre 20 000 Hz).
 ## Registro y devolución
 
 - Anotar el puntaje de la Parte A también en la columna de seguimiento
-  OA3 (comparable con la línea base de s01 y la ronda oral; NO
-  reemplaza notas de la ronda: cuenta solo dentro de la prueba).
+  OA3 (comparable con la línea base de s01 y, más adelante, con la
+  Parte A de la Prueba 2: son dos de los tres eventos de la escucha
+  argumentada escrita, de los que cuentan las mejores 2).
 - Devolución en s08 (10′ del cierre del módulo 1 o al inicio del
   módulo 2, a criterio): comentar los 2 errores más repetidos por
   parte, sin resolver ítem por ítem en aula; apelaciones por escrito

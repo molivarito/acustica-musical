@@ -12,7 +12,7 @@
 
 ## Formato (Markdown)
 - Un archivo por documento, encabezado con: título, sesión, objetivos de
-  aprendizaje que cubre (códigos de diseno/01).
+  aprendizaje que cubre (códigos de `OBJETIVOS_APRENDIZAJE.md`).
 - Estética editorial/científica: prosa clara, sin listas de viñetas
   excesivas; figuras con leyenda numerada; ecuaciones en LaTeX
   (`$...$` y `$$...$$`).
@@ -24,9 +24,9 @@
 ## Publicación
 
 - Los documentos se publican con Quarto: tras editar un `.md`, correr
-  `conda run -n base quarto render` (o `quarto preview` mientras se
-  trabaja). Documento nuevo → agregarlo a la `sidebar` de `_quarto.yml`.
-- Las figuras van como SVG generados por script en `figuras/`
+  desde `material/` `conda run -n base quarto render` (o `quarto preview` mientras se
+  trabaja). Documento nuevo → agregarlo a la `sidebar` de `material/_quarto.yml`.
+- Las figuras van como SVG generados por script en `material/assets/figuras/`
   (`gen_sXX.py`), insertadas con `![**Figura N.** leyenda](ruta)` y
   numeradas por documento.
 
@@ -34,4 +34,4 @@
 - Toda afirmación cuantitativa (frecuencias, velocidades, rangos) debe ser
   verificable en las fuentes o marcada [POR VERIFICAR].
 - Usar unidades SI y notación consistente en todo el curso (definir la
-  notación una vez en diseno/03 y respetarla).
+  notación una vez en `PLAN_SEMESTRE.md` y respetarla).

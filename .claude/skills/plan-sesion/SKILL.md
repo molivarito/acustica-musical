@@ -7,28 +7,30 @@ Planificar la sesión $ARGUMENTS del curso.
 
 ## Pasos
 
-1. Leer `diseno/01_objetivos_aprendizaje.md` y `diseno/03_estructura_curso.md`
+1. Leer `OBJETIVOS_APRENDIZAJE.md` y `PLAN_SEMESTRE.md`
    e identificar los objetivos de aprendizaje que cubre esta sesión y su
    posición en la progresión del curso (qué saben ya los estudiantes, qué
    viene después).
-2. Leer `diseno/02_metodologia.md` y proponer la estructura de **cada uno
+2. Leer `METODOLOGIA.md` y proponer la estructura de **cada uno
    de los 2 módulos de 70 minutos** con bloques de tiempo explícitos.
    Elegir para cada módulo la variante de la anatomía de referencia de
-   `diseno/02_metodologia.md`, sección 3 (experimental, audición,
+   `METODOLOGIA.md`, sección 3 (experimental, audición,
    medición, discusión de proyecto) y adaptarla, no copiarla
-   mecánicamente. Reglas fijas: la escucha del día (15 min, ronda oral
-   con rúbrica OA3) va en el primer bloque del módulo 1 de cada sesión;
+   mecánicamente. Reglas fijas: la escucha del día (10 min, **sin nota**:
+   estímulo → 3 líneas escritas por cada estudiante → discusión en la
+   mesa → pregunta selectiva del profesor a una o dos mesas) va en el
+   primer bloque del módulo 1 de cada sesión;
    en sesiones con prueba, la prueba ocupa el módulo 1 y el módulo 2 es
    de audición liviana; las sesiones s1–s3 se planifican con menos
    contenido (riesgo 1 de la sección 7 de la metodología).
-3. Para cada bloque especificar: objetivo específico (código de diseno/01),
+3. Para cada bloque especificar: objetivo específico (código de `OBJETIVOS_APRENDIZAJE.md`),
    qué hace el **estudiante** (no solo el profesor), actividad concreta,
    materiales necesarios, y cómo se verifica que hubo aprendizaje.
 4. Privilegiar actividades con sonido real: audición dirigida, medición,
    experimento con instrumentos, uso de demos interactivas.
 5. Listar al final los **pendientes de producción**: demos por construir
    (con la skill /demo-interactiva), apuntes por escribir, material físico.
-6. Guardar en `sesiones/sXX/plan.md` (usar el número de sesión con dos
+6. Guardar en `material/curso/sesion-NN/plan.md` (usar el número de sesión con dos
    dígitos). Si el archivo ya existe, reportar específicamente qué se va a
    cambiar y esperar confirmación antes de sobreescribir.
 

@@ -1,20 +1,28 @@
 # Pauta de corrección — Prueba 2 (s13)
 
-**Uso del profesor.** Puntaje total 64. Desde 2026-07 las Partes B, C
-y D son de alternativas (Parte A sigue siendo de desarrollo, con
-rúbrica). Presupuesto de corrección: **~6′ por estudiante** (A: ~4′
-con rúbrica · B–D: ~2′ de cotejo directo contra la clave), 20
-estudiantes ≈ 2 h. Corregir por PARTE (todos los A, luego todos los
-B…), no por estudiante: mantiene el criterio parejo y es más rápido.
+**Uso del profesor.** Puntaje total **48** (Partes B, C y D;
+verificado 18+20+10=48). Desde 2026-07 las Partes B, C y D son de
+alternativas; la Parte A sigue siendo de desarrollo, con rúbrica, pero
+**se califica aparte** — no suma a estos 48 — y tiene su propia
+conversión a nota en la sección "Parte A" más abajo. Presupuesto de
+corrección: **~6′ por estudiante** (A: ~4′ con rúbrica · B–D: ~2′ de
+cotejo directo contra la clave), 20 estudiantes ≈ 2 h. Corregir por
+PARTE (todos los A, luego todos los B…), no por estudiante: mantiene
+el criterio parejo y es más rápido.
 
-## Conversión puntaje → nota (exigencia 60 %)
+## Conversión puntaje → nota de la prueba (Partes B+C+D, exigencia 60 %)
 
-- Si $p \ge 38{,}4$: nota $= 4 + 3\,(p - 38{,}4)/25{,}6$.
-- Si $p < 38{,}4$: nota $= 1 + 3\,p/38{,}4$.
+Puntaje máximo 48; exigencia 60 % = 28,8 puntos = nota 4,0. Misma
+lógica lineal por tramos que la versión anterior, reescalada a 48:
 
-| Puntaje | 0 | 13 | 26 | 38,4 | 45 | 51 | 58 | 64 |
+- Si $p \ge 28{,}8$: nota $= 4 + 3\,(p - 28{,}8)/19{,}2$.
+- Si $p < 28{,}8$: nota $= 1 + 3\,p/28{,}8$.
+
+| Puntaje | 0 | 9,6 | 19,2 | 28,8 | 33,6 | 38,4 | 43,2 | 48 |
 |---|---|---|---|---|---|---|---|---|
 | Nota | 1,0 | 2,0 | 3,0 | **4,0** | 4,8 | 5,5 | 6,3 | 7,0 |
+
+(La Parte A se convierte aparte: ver sección "Parte A" más abajo.)
 
 ## Clave rápida (Partes B–D, cotejo directo)
 
@@ -79,7 +87,14 @@ en la Prueba 1, ítems B.2 y C.2c) · OA2.3 = 9 (C.2 + D.2). Lo de s12
 s12: nada de corrección de extremo, frecuencia de corte ni material de
 paredes.
 
-## Parte A — Escucha escrita (16 pts, rúbrica OA3)
+## Parte A — Escucha escrita (16 pts, rúbrica OA3, se corrige y convierte aparte)
+
+**Conversión a nota**: puntaje = suma de las cuatro dimensiones (4–16);
+nota $= 1 + (puntaje - 4)/2$ (4 → 1,0 · 10 → 4,0 · 16 → 7,0). Este
+puntaje **no se suma a los 48 puntos de la prueba**: es uno de los
+tres eventos de "escucha argumentada escrita" (10 % del curso), que
+**cuenta las mejores 2 de 3**: Parte A de la Prueba 1 (E1), Parte A de
+esta prueba (E2) y el bloque ★ de la hoja de escucha de s15 (E3).
 
 **El estímulo** (banco #13): dos tonos complejos sintetizados (6
 armónicos, amplitudes decrecientes) formando una quinta La3–Mi4
@@ -104,6 +119,15 @@ las cuatro dimensiones (4–16). Anclas específicas para ESTE estímulo:
 | D2 hipótesis | "Una de las dos notas quedó apenas desafinada: dos parciales que antes coincidían (p. ej. el 3.º de la grave con el 2.º de la aguda) ahora difieren en unos pocos Hz y baten; la desafinación es demasiado chica para oírse como cambio de altura, pero el batido la delata" | "Está desafinado" o "son los batidos" sin cadena causa–efecto (qué chocó con qué) |
 | D3 verificación | "Contar los batidos por segundo y compararlos con la diferencia en Hz de los parciales; o espectro/espectrograma: en la versión 2 espero dos líneas casi superpuestas cerca del parcial común (una sola línea en la versión 1); o reafinar hasta detener el batido" | "Lo mediría con la app" (sin decir qué esperaría ver) |
 | D4 argumentación | Separa "oigo una ondulación de ~4 por segundo" de "interpreto que algo se desafinó"; reconoce que no puede saber CUÁL de las dos notas se movió, ni hacia dónde, solo con el oído | Afirma "bajaron la segunda nota 10 cents" como hecho oído |
+
+**Sobre el rasgo que A.2 regala**: A.2 y A.3 entregan explícitamente el
+rasgo "late ~4 veces por segundo" para que quien no alcanzó a captarlo
+pueda igual razonar el mecanismo (D2–D4) con puntaje completo — ese es
+el objetivo de equidad del formato. En consecuencia, una respuesta de
+A.1 que **solo repita ese rasgo** no puede superar el **nivel 2 en D1**:
+para 3 o 4 debe aportar algo que el enunciado no dio (que las alturas y
+la sonoridad se mantienen, que la primera versión es lisa, la
+velocidad del batido, o la separación de dimensiones).
 
 **Importante**: NO se exige identificar que el intervalo es una quinta
 ni estimar los cents. Cualquier mecanismo de interferencia entre
@@ -318,10 +342,11 @@ ruptura del régimen.
 ## Registro y devolución
 
 - Anotar el puntaje de la Parte A también en la columna de seguimiento
-  OA3 (comparable con la línea base de s01, la ronda oral y la Parte A
-  de la Prueba 1; NO reemplaza notas de la ronda: cuenta solo dentro
-  de la prueba). Con este registro, cada estudiante queda con ≥2
-  escuchas escritas comparables para el cierre del semestre.
+  OA3 (comparable con la línea base de s01 y con la Parte A de la
+  Prueba 1: son dos de los tres eventos de la escucha argumentada
+  escrita, de los que cuentan las mejores 2). Con este registro, cada
+  estudiante queda con ≥2 escuchas escritas comparables para el cierre
+  del semestre.
 - Devolución en s14 **en la puerta al entrar** (precedente P2 de la
   revisión 2026-07-12, validado en s08): pruebas corregidas entregadas
   al ingresar, lámina con los 2 errores más repetidos por parte

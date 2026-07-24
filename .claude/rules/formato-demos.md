@@ -11,7 +11,7 @@
 ## Estructura del archivo
 - Un solo archivo `.html` autocontenido (CSS y JS embebidos).
 - Nombre: `demo_<tema>.html` en minúsculas con guiones bajos
-  (ej: `demo_modos_cuerda.html`), guardado en `sesiones/sXX/demos/`.
+  (ej: `demo_modos_cuerda.html`), guardado en `material/demos/`.
 - Encabezado visible: título, sesión y una frase que diga qué explorar.
 - Panel de controles (sliders, botones) claramente rotulados con unidades.
 - Incluir un bloque breve "¿Qué observar?" con 2-3 preguntas guía para el

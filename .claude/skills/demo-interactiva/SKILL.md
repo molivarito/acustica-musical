@@ -10,13 +10,13 @@ Construir una demo interactiva sobre: $ARGUMENTS
 1. Leer `.claude/rules/formato-demos.md` y respetar todas sus convenciones
    (archivo único, estética editorial, audio con Web Audio API, bloque
    "¿Qué observar?").
-2. Identificar en `sesiones/` a qué sesión pertenece la demo; si no está
+2. Identificar en `material/curso/` a qué sesión pertenece la demo; si no está
    claro, preguntar antes de asumir. Revisar el `plan.md` de esa sesión
    para alinear la demo con la actividad donde se usará.
 3. Definir el concepto único que ilustra la demo y los 2-4 parámetros que
    el estudiante podrá manipular. Si el concepto requiere más de eso,
    proponer dividir en dos demos.
-4. Implementar el HTML autocontenido en `sesiones/sXX/demos/`.
+4. Implementar el HTML autocontenido en `material/demos/`.
 5. Verificar mentalmente los casos límite de los controles (valores
    extremos de sliders, audio detenido/iniciado, redimensionar ventana) y
    corregir antes de entregar.

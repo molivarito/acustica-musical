@@ -3,16 +3,24 @@
 **Sesión 07, módulo 1.** Evalúa OA1.1, OA1.2, OA2.1, OA2.2
 (fundamental ausente: ítems B.2 y C.2c), OA4.1, OA4.2 y
 OA3.1 (escucha escrita), sobre el contenido de las sesiones 01–06.
-Este archivo es el **cuadernillo del estudiante** (imprimir 22 copias)
-más, al final, la especificación de la hoja de figuras. La pauta de
-corrección con puntajes y mapeo ítem→OA está en `prueba1_pauta.md`.
+La Parte A (OA3.1) se aplica dentro de esta prueba pero se califica
+aparte, como uno de los tres eventos de la escucha argumentada escrita
+del curso (10 %); las Partes B, C y D son las que determinan la nota
+de la prueba. Este archivo es el **cuadernillo del estudiante**
+(imprimir 22 copias) más, al final, la especificación de la hoja de
+figuras. La pauta de corrección con puntajes y mapeo ítem→OA está en
+`prueba1_pauta.md`.
 
 ---
 
 **Nombre:** ________________________________ **Fecha:** ____________
 
-**Puntaje total: 64 puntos · Tiempo: 60 minutos · Nota 4,0 con 38,4
-puntos (exigencia 60 %).**
+**Puntaje de la prueba (Partes B, C y D): 48 puntos · Tiempo: 60
+minutos · Nota 4,0 con 28,8 puntos (exigencia 60 %).** La Parte A
+(escucha escrita, 16 puntos) se aplica en este cuadernillo, con el
+mismo audio y la misma mecánica de reproducción, pero **se califica
+aparte**, con la rúbrica de escucha argumentada del curso: no suma a
+los 48 puntos de la prueba.
 
 **Instrucciones**
 
@@ -36,14 +44,16 @@ puntos (exigencia 60 %).**
 
 ---
 
-## Parte A — Escucha escrita (16 puntos, ~10 minutos)
+## Parte A — Escucha escrita (16 puntos, ~10 minutos, se califica aparte)
 
 **Estímulo 1** (minuto 10, dos reproducciones). Escuchará **el mismo
 objeto, golpeado de la misma manera, dos veces seguidas, en dos
 condiciones distintas**. Su tarea es diagnosticar la diferencia como
 lo hacemos cada semana en la escucha del día. Se evalúa con la rúbrica
 del curso (las cuatro dimensiones, incluida la distinción entre lo que
-usted *oye* y lo que usted *interpreta*).
+usted *oye* y lo que usted *interpreta*). Este puntaje no suma a los
+48 puntos de la prueba: cuenta como uno de los tres eventos de la
+escucha argumentada escrita del semestre.
 
 **A.1 — Describa** lo que oyó, con vocabulario técnico, separando
 dimensiones (altura, sonoridad, timbre, evolución temporal): ¿qué
@@ -54,19 +64,22 @@ _________________________________________________________________
 _________________________________________________________________
 _________________________________________________________________
 
-**A.2 — Hipótesis**: proponga un mecanismo físico que produzca
-exactamente eso que describió (cadena causa–efecto: "cambió X, y eso
-apaga/enciende Y, por eso se oye Z").
+**A.2 — Hipótesis**: independiente de lo que haya alcanzado a
+describir en A.1, en la segunda ejecución **el sonido decae mucho más
+rápido que en la primera**. Proponga un mecanismo físico que produzca
+exactamente eso (cadena causa–efecto: "cambió X, y eso apaga/enciende
+Y, por eso se oye Z").
 
 _________________________________________________________________
 _________________________________________________________________
 _________________________________________________________________
 _________________________________________________________________
 
-**A.3 — Verificación**: proponga una medición concreta, factible con
-los medios del curso (celular, app, notebook), que confirmaría o
-refutaría su hipótesis. Indique **qué esperaría ver** si su hipótesis
-es correcta.
+**A.3 — Verificación**: con esa misma pista (el sonido decae mucho más
+rápido en la segunda ejecución), proponga una medición concreta,
+factible con los medios del curso (celular, app, notebook), que
+confirmaría o refutaría su hipótesis. Indique **qué esperaría ver** si
+su hipótesis es correcta.
 
 _________________________________________________________________
 _________________________________________________________________

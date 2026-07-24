@@ -6,17 +6,24 @@ regímenes de oscilación), OA2.2 (batidos, banda crítica, rugosidad),
 OA2.3 (escalas, temperamentos y cents) y OA3.1 (escucha escrita),
 sobre el contenido de las sesiones 08–12. **Lo de s12 entra solo en
 versión básica** (tubo abierto/cerrado, $v/2L$–$v/4L$, registros),
-según lo anunciado en s12. Este archivo es el **cuadernillo del
-estudiante** (imprimir 22 copias) más, al final, la especificación de
-la hoja de figuras. La pauta de corrección con puntajes y mapeo
-ítem→OA está en `prueba2_pauta.md`.
+según lo anunciado en s12. La Parte A (OA3.1) se aplica dentro de esta
+prueba pero se califica aparte, como uno de los tres eventos de la
+escucha argumentada escrita del curso (10 %); las Partes B, C y D son
+las que determinan la nota de la prueba. Este archivo es el
+**cuadernillo del estudiante** (imprimir 22 copias) más, al final, la
+especificación de la hoja de figuras. La pauta de corrección con
+puntajes y mapeo ítem→OA está en `prueba2_pauta.md`.
 
 ---
 
 **Nombre:** ________________________________ **Fecha:** ____________
 
-**Puntaje total: 64 puntos · Tiempo: 60 minutos · Nota 4,0 con 38,4
-puntos (exigencia 60 %).**
+**Puntaje de la prueba (Partes B, C y D): 48 puntos · Tiempo: 60
+minutos · Nota 4,0 con 28,8 puntos (exigencia 60 %).** La Parte A
+(escucha escrita, 16 puntos) se aplica en este cuadernillo, con el
+mismo audio y la misma mecánica de reproducción, pero **se califica
+aparte**, con la rúbrica de escucha argumentada del curso: no suma a
+los 48 puntos de la prueba.
 
 **Instrucciones**
 
@@ -38,7 +45,7 @@ puntos (exigencia 60 %).**
 
 ---
 
-## Parte A — Escucha escrita (16 puntos, ~10 minutos)
+## Parte A — Escucha escrita (16 puntos, ~10 minutos, se califica aparte)
 
 **Estímulo 1** (minuto 10, dos reproducciones). Escuchará **el mismo
 par de notas sostenidas — el mismo intervalo, tocado por las mismas
@@ -46,7 +53,9 @@ fuentes — dos veces seguidas, en dos condiciones distintas**. Su tarea
 es diagnosticar la diferencia como lo hacemos cada semana en la
 escucha del día. Se evalúa con la rúbrica del curso (las cuatro
 dimensiones, incluida la distinción entre lo que usted *oye* y lo que
-usted *interpreta*).
+usted *interpreta*). Este puntaje no suma a los 48 puntos de la
+prueba: cuenta como uno de los tres eventos de la escucha argumentada
+escrita del semestre.
 
 **A.1 — Describa** lo que oyó, con vocabulario técnico, separando
 dimensiones (altura, sonoridad, timbre, evolución temporal): ¿qué
@@ -57,19 +66,22 @@ _________________________________________________________________
 _________________________________________________________________
 _________________________________________________________________
 
-**A.2 — Hipótesis**: proponga un mecanismo físico que produzca
-exactamente eso que describió (cadena causa–efecto: "cambió X, y eso
-hace que Y, por eso se oye Z").
+**A.2 — Hipótesis**: independiente de lo que haya alcanzado a
+describir en A.1, en la segunda versión **el sonido late/ondula
+periódicamente, unas 4 veces por segundo**. Proponga un mecanismo
+físico que produzca exactamente eso (cadena causa–efecto: "cambió X,
+y eso hace que Y, por eso se oye Z").
 
 _________________________________________________________________
 _________________________________________________________________
 _________________________________________________________________
 _________________________________________________________________
 
-**A.3 — Verificación**: proponga una medición concreta, factible con
-los medios del curso (celular, app, notebook), que confirmaría o
-refutaría su hipótesis. Indique **qué esperaría ver (u oír, contando)**
-si su hipótesis es correcta.
+**A.3 — Verificación**: con esa misma pista (el sonido late ~4 veces
+por segundo en la segunda versión), proponga una medición concreta,
+factible con los medios del curso (celular, app, notebook), que
+confirmaría o refutaría su hipótesis. Indique **qué esperaría ver (u
+oír, contando)** si su hipótesis es correcta.
 
 _________________________________________________________________
 _________________________________________________________________
