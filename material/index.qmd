@@ -185,8 +185,8 @@ desaparecen.
   <span style="background:var(--bloqueC)"></span> C · los instrumentos como sistemas (s10–s13)
   <span style="background:var(--bloqueD)"></span> D · la sala y la síntesis final (s14–s15).
   En <b>negrita</b>, sesiones con nota de hito o prueba. La escucha del día
-  (ronda oral, rúbrica OA3) corre transversal de s02 a s14 y no se repite
-  en la tabla.</p>
+  (práctica de OA3, sin nota) corre transversal de s02 a s14 y no se
+  repite en la tabla.</p>
 
 <div class="envoltorio">
 <table class="mapa-tabla">

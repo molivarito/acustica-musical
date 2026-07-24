@@ -35,21 +35,21 @@ metodología, sección 4).
 
 | Sesión | Tema | Objetivos (OA) | Depende de | Hitos / formatos especiales | Demo principal |
 |--------|------|----------------|------------|------------------------------|----------------|
-| s01 | Escuchar como científico: del golpe al tono (sonido impulsivo, repetición, frecuencia y altura) | OA3.1 (se instala), OA1.1 (intro), OA2.1 (intro) | — | Formación de 5 grupos estables; presentación de la rúbrica OA3; línea base de escucha (sin nota) | `material/demos/demo_tren_pulsos.html` |
+| s01 | Escuchar como científico: del golpe al tono (sonido impulsivo, repetición, frecuencia y altura) | OA3.1 (se instala), OA1.1 (intro), OA2.1 (intro) | — | Formación de 5 grupos estables; presentación de la rúbrica OA3 (se usará en las escuchas escritas, no en clase); línea base de escucha (sin nota) | `material/demos/demo_tren_pulsos.html` |
 | s02 | Ondas y representación: forma de onda, espectro y espectrograma; propagación y velocidad del sonido | OA4.1, OA1.1 | s01 (frecuencia/altura) | Alfabetización digital (material propio); primer uso de apps de análisis en celular | `material/demos/demo_forma_onda_espectro.html` (micrófono en vivo) |
 | s03 | Modos de vibración: por qué cada objeto suena como suena (frecuencias características, modos 1D y 2D, decaimiento) | OA1.1, OA1.2, OA5.1 (intro) | s02 (espectro) | **Lanzamiento del proyecto** (grupos = grupos de proyecto) | `material/demos/demo_modos_cuerda.html` |
 | s04 | La receta del timbre: cuerda pulsada, punto de excitación, síntesis aditiva | OA1.1, OA1.2, OA2.1 | s03 (modos) | Instrumentos de estudiantes #1 (cuerdas pulsadas; avisar en s03) | `material/demos/demo_sintesis_aditiva.html` |
-| s05 | La altura percibida: fundamental ausente, reconocimiento de patrones, el oído en una pasada | OA2.1, OA2.2 | s04 (parciales, espectro) | **Hito 1 del proyecto** (diseño con predicción, 8%); punto de control metodológico (ronda oral y lectura previa) | `material/demos/demo_fundamental_ausente.html` |
+| s05 | La altura percibida: fundamental ausente, reconocimiento de patrones, el oído en una pasada | OA2.1, OA2.2 | s04 (parciales, espectro) | **Hito 1 del proyecto** (diseño con predicción, 10%); punto de control metodológico (escucha del día y lectura previa) | `material/demos/demo_fundamental_ausente.html` |
 | s06 | Sonoridad y decibel: intensidad, niveles, isofónicas; medir lo fuerte | OA2.1, OA4.2 | s02 (ondas), s05 (percepción no lineal) | Estaciones de medición de niveles (formato 5); mini-informe SPL | `material/demos/demo_decibel_sonoridad.html` |
 | s07 | **Prueba 1** (módulo 1) + audición liviana: batidos, primera escucha (módulo 2) | evalúa OA1.1–1.2, OA2.1–2.2, OA4.1–4.2; siembra OA2.2 | s01–s06 | Prueba 1 (módulo 1 completo); módulo 2 liviano por regla de metodología §3 | `material/demos/demo_batidos.html` |
 | s08 | Psicoacústica de la superposición: batidos, banda crítica, rugosidad y consonancia | OA2.2, OA2.3, OA5.2 | s07 m2 (batidos oídos) | Taller psicoacústico con registro individual; **comienzan talleres de medición sobre el objeto del proyecto (s08–s12)** | `material/demos/demo_banda_critica.html` |
 | s09 | Escalas y temperamentos: afinar de oído (batidos como herramienta) | OA2.3, OA1.2 | s08 (batidos, consonancia) | Actividad de afinación por conteo de batidos (BEN 16.2) | `material/demos/demo_temperamentos.html` |
-| s10 | Resonancia, impedancia y acoplamiento: el puente hacia los instrumentos; panorama de mecanismos de excitación | OA1.2, OA1.3, OA5.2, OA3.2 | s03 (modos), s06 (energía/niveles) | **Hito 2 del proyecto** (avance, 8%); clínica de proyecto (formato 6) en módulo 2; revisar coevaluaciones | `material/demos/demo_resonancia.html` |
+| s10 | Resonancia, impedancia y acoplamiento: el puente hacia los instrumentos; panorama de mecanismos de excitación | OA1.2, OA1.3, OA5.2, OA3.2 | s03 (modos), s06 (energía/niveles) | **Hito 2 del proyecto** (avance, 10%); clínica de proyecto (formato 6) en módulo 2; revisar coevaluaciones | `material/demos/demo_resonancia.html` |
 | s11 | Cuerdas frotadas y el cuerpo del instrumento: stick-slip, movimiento de Helmholtz, puente, caja y radiación | OA1.3, OA1.1, OA1.2 | s10 (resonancia, régimen de oscilación) | Instrumentos de estudiantes #2 (cuerdas frotadas; avisar en s10) | `material/demos/demo_helmholtz.html` |
 | s12 | Vientos y lutería: columnas de aire, agujeros, regímenes; construcción y medición de flautas/tubos | OA1.2, OA1.3, OA5.2 | s10 (resonancia, impedancia) | **Sesión-taller completa de lutería (formato 9, 140 min)**; flautas del profesor como caso | `material/demos/demo_tubo_agujeros.html` |
 | s13 | **Prueba 2** (módulo 1) + la voz cantada: fuente-filtro y formantes en audición liviana (módulo 2) | evalúa OA1.2–1.3, OA2.2–2.3; OA1.3 (voz) | s08–s12 | Prueba 2 (módulo 1); módulo 2 liviano por regla de metodología §3 | `material/demos/demo_formantes_voz.html` |
 | s14 | La sala como instrumento: reflexión, absorción, reverberación, modos de sala; salida de medición de RT | OA1.4, OA4.3, OA3.2 | s03 (modos), s06 (dB), s10 (resonancia) | **Salida de medición (formato 8)** en módulo 2; puesta en común comprimida al cierre de la propia salida (ver decisión D3) | `material/demos/demo_modos_sala.html` |
-| s15 | Presentaciones finales del proyecto: explicar es la prueba | OA5.3, OA3.2 | todo el curso | **Presentación final + informe (14%)**; ambos módulos; ~25 min por grupo, preguntas individuales | — (sin demo nueva) |
+| s15 | Presentaciones finales del proyecto: explicar es la prueba | OA5.3, OA3.2 | todo el curso | **Presentación final + informe (15%)**; hoja de escucha argumentada (escucha escrita 3); ambos módulos; ~25 min por grupo, preguntas individuales | — (sin demo nueva) |
 
 ## Verificación de cobertura de OA
 
@@ -57,9 +57,10 @@ metodología, sección 4).
   s10–s13 (mecanismos: impulsivo s03–s04, frotado s11, soplado s12,
   cantado s13) · **OA1.4** s14.
 - **OA2.1** s01, s04–s06 · **OA2.2** s05, s07(m2), s08 · **OA2.3** s08, s09.
-- **OA3.1–3.2** transversal: escucha del día en todas las sesiones
-  s02–s14; línea base en s01; OA3.2 explícito en clínicas (s10) y
-  defensa final (s15).
+- **OA3.1–3.2** transversal: escucha del día (práctica sin nota) en
+  todas las sesiones s02–s14; línea base en s01 y su repetición en s14;
+  evaluado por escrito en s07, s13 y s15; OA3.2 explícito en clínicas
+  (s10) y defensa final (s15).
 - **OA4.1** s02 y transversal (espectrogramas en talleres) · **OA4.2**
   s06 · **OA4.3** s14.
 - **OA5.1** s03, s05 (hito 1) · **OA5.2** s08–s12 (talleres de medición
@@ -69,11 +70,14 @@ Ningún OA queda sin sesión; ninguna sesión queda sin OA.
 
 ## Calendario de evaluación (fijado por METODOLOGIA.md §4)
 
-s01 línea base sin nota · s03 lanzamiento proyecto · s05 hito 1 (8%) ·
-s07 prueba 1 (12,5%) · s08–s12 talleres de medición = avance de proyecto ·
-s10 hito 2 (8%) · s13 prueba 2 (12,5%) · s15 presentación final + informe
-(14%). Ronda oral de escucha (20%) corre de s02 a s14. Talleres (25%):
-cuentan las mejores 8 de ~10 guías.
+s01 línea base sin nota · s03 lanzamiento proyecto · s05 hito 1 (10%) ·
+s07 prueba 1 (10%) + escucha escrita 1 · s08–s12 talleres de medición =
+avance de proyecto · s10 hito 2 (10%) · s13 prueba 2 (10%) + escucha
+escrita 2 · s14 repetición de la línea base (sin nota) · s15
+presentación final + informe (15%) + hoja de escucha (escucha escrita 3).
+**Escucha argumentada escrita (10%)**: los tres eventos anteriores,
+cuentan las mejores 2. Talleres (35%): cuentan las mejores 8 de ~10
+guías. La **escucha del día corre de s02 a s14 sin nota** (práctica).
 
 ## Notación y convenciones del curso
 

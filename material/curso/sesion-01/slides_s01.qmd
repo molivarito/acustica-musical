@@ -41,16 +41,32 @@ Todo diagnóstico de este curso conecta las tres.
 ## Cómo se evalúa
 
 ::: {.incremental}
-- **Escucha argumentada** (ronda oral, en vivo) — 20%
-- **Talleres** (cerrados en clase, mejores 8 de ~10) — 25%
-- **Pruebas** (2, con audio) — 12,5% c/u = 25%
-- **Proyecto** (grupos de 4): hito diseño 8% + hito avance 8% +
-  presentación final 14% = 30%
+- **Talleres** (cerrados en clase, mejores 8 de ~10) — 35%
+- **Proyecto** (grupos de 4): hito diseño 10% + hito avance 10% +
+  presentación final 15% = 35%
+- **Pruebas** (2, con audio) — 10% c/u = 20%
+- **Escucha argumentada escrita** (Parte A de cada prueba + hoja de
+  s15; cuentan las mejores 2 de 3) — 10%
 :::
 
 . . .
 
-**0% participación separada** — la absorben la ronda y los talleres.
+**0% participación separada.**
+
+## Lo que suena en clase no lleva nota {.center}
+
+La **escucha del día** abre cada sesión: escriben 3 líneas, discuten en
+su mesa, respondo preguntas a una o dos mesas.
+
+. . .
+
+**No se califica. Nunca.**
+
+. . .
+
+Se aprende a escuchar equivocándose en voz alta y sin costo. Lo que sí
+se califica es la escucha **escrita**: mismo audio para todos, varias
+pasadas, tiempo para pensar.
 
 ## Los cinco grupos {.center}
 

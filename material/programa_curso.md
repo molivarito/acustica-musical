@@ -61,7 +61,8 @@ Al terminar este curso el o la estudiante será capaz de:
 3. **OA3 — Escuchar como científico** (transversal): diagnosticar
    auditivamente fenómenos acústicos — describir técnicamente lo oído,
    formular hipótesis sobre su causa física y proponer cómo
-   verificarlas. Se practica y evalúa en todas las sesiones.
+   verificarlas. Se practica en todas las sesiones (sin nota) y se
+   evalúa por escrito en tres instancias del semestre.
 4. **OA4 — Medir y analizar sonido real**: capturar, medir y analizar
    sonido con herramientas accesibles e interpretar los resultados.
    *(OA4.1 análisis espectral; OA4.2 niveles y decibel; OA4.3 tiempo de
@@ -108,8 +109,10 @@ Aprendizaje activo estructurado (detalle en `METODOLOGIA.md`):
 - **Ciclo predicción → experimento → explicación (PEE)**: toda
   actividad experimental exige predicción escrita antes de sonar y
   cierra contrastando predicción y resultado.
-- **Escucha del día**: cada sesión abre con un diagnóstico auditivo
-  oral evaluado con rúbrica pública (OA3).
+- **Escucha del día (sin nota)**: cada sesión abre con un diagnóstico
+  auditivo — usted lo escribe, lo discute con su grupo y el profesor
+  pregunta a una o dos mesas. Se evalúa por escrito más adelante, no
+  ahí (OA3).
 - **Trabajo en 5 grupos estables de 4** con roles rotativos, kits
   caseros de experimentación, demos interactivas con audio, estaciones
   de medición con celular y micrófono, una salida de medición de salas
@@ -125,13 +128,21 @@ Aprendizaje activo estructurado (detalle en `METODOLOGIA.md`):
 
 | Instrumento | % | Detalle |
 |---|---|---|
-| Pruebas (2) | 25 | Con audio y casos sonoros; s07 y s13 (12,5 % c/u). Incluyen una escucha argumentada escrita. |
-| Talleres | 25 | Cerrados y evaluados en clase, por grupo; cuentan las mejores 8 de ~10 guías. |
-| Proyecto | 30 | Hito 1: diseño con predicción (8 %, s05) · Hito 2: avance con evidencia (8 %, s10) · Presentación final + informe ≤6 págs (14 %, s15). Bitácora con roles firmados; coevaluación intra-grupo ajusta la nota individual hasta ±0,5; preguntas individuales en la defensa. La calidad de la explicación acústica pesa más que el éxito sonoro. |
-| Escucha argumentada (OA3) | 20 | Ronda oral con rúbrica pública (~3 pasadas por estudiante; cuentan las mejores 2) + escucha escrita en cada prueba. |
+| Talleres | 35 | Cerrados y evaluados en clase, por grupo; cuentan las mejores 8 de ~10 guías. |
+| Proyecto | 35 | Hito 1: diseño con predicción (10 %, s05) · Hito 2: avance con evidencia (10 %, s10) · Presentación final + informe ≤6 págs (15 %, s15). Bitácora con roles firmados; coevaluación intra-grupo ajusta la nota individual hasta ±0,5; preguntas individuales en la defensa. La calidad de la explicación acústica pesa más que el éxito sonoro. |
+| Pruebas (2) | 20 | Con audio y casos sonoros; s07 y s13 (10 % c/u, 48 puntos cada una). |
+| Escucha argumentada escrita (OA3) | 10 | Tres escuchas escritas con rúbrica pública: Parte A de la Prueba 1, Parte A de la Prueba 2 y la hoja de escucha de s15. **Cuentan las mejores 2 de las 3.** |
 
-Sin nota de participación (su función la cumplen la ronda oral y los
-talleres presenciales). Asistencia: la evaluación es mayoritariamente
+**La escucha del día no lleva nota.** Cada sesión abre escuchando: usted
+escribe su diagnóstico en tres líneas, lo discute en su grupo y el
+profesor pregunta a una o dos mesas. Es la práctica central del curso y
+es deliberadamente sin calificación — se aprende a escuchar
+equivocándose en voz alta sin costo. Lo que sí se califica es la escucha
+**escrita**, donde todos tienen el mismo audio, varias pasadas y tiempo
+para pensar.
+
+Sin nota de participación (su función la cumplen la escucha del día y
+los talleres presenciales). Asistencia: la evaluación es mayoritariamente
 presencial en clase; los talleres toleran hasta ~2 ausencias
 (mejores 8 de ~10). Exigencia de asistencia mínima formal:
 **[COMPLETAR según normativa vigente; en 2019 era 85 %]**.
@@ -141,20 +152,20 @@ presencial en clase; los talleres toleran hasta ~2 ausencias
 | Semana | Fecha (vie) | Tema | Proyecto / evaluación |
 |---|---|---|---|
 | 1 | 07-ago | Escuchar como científico: del golpe al tono | Formación de grupos; línea base de escucha (sin nota) |
-| 2 | 14-ago | Ondas: forma de onda, espectro y espectrograma | Parte la ronda oral evaluada (OA3) |
+| 2 | 14-ago | Ondas: forma de onda, espectro y espectrograma | Parte la escucha del día (práctica semanal, sin nota) |
 | 3 | 21-ago | Modos de vibración (cuerdas, placas, membranas) | **Lanzamiento del proyecto** |
 | 4 | 28-ago | La receta del timbre: cuerda pulsada y síntesis aditiva | Traer instrumentos de cuerda pulsada |
-| 5 | 04-sep | La altura percibida: fundamental ausente y el oído | **Hito 1: diseño con predicción (8 %)** |
+| 5 | 04-sep | La altura percibida: fundamental ausente y el oído | **Hito 1: diseño con predicción (10 %)** |
 | 6 | 11-sep | Sonoridad y decibel; estaciones de medición de niveles | Mini-informe SPL |
-| 7 | 25-sep | **Prueba 1** + batidos (audición liviana) | **Prueba 1 (12,5 %)** |
+| 7 | 25-sep | **Prueba 1** + batidos (audición liviana) | **Prueba 1 (10 %)** + escucha escrita 1 |
 | 8 | 09-oct | Banda crítica, rugosidad y consonancia | Parten los talleres de medición sobre el objeto del proyecto |
 | 9 | 16-oct | Escalas y temperamentos: afinar de oído | Medición: la escala del objeto |
-| 10 | 23-oct | Resonancia, impedancia y acoplamiento | **Hito 2: avance (8 %)** + clínicas de proyecto |
+| 10 | 23-oct | Resonancia, impedancia y acoplamiento | **Hito 2: avance (10 %)** + clínicas de proyecto |
 | 11 | 30-oct | Cuerdas frotadas y el cuerpo del instrumento | Traer instrumentos de cuerda frotada |
 | 12 | 06-nov | Vientos y lutería (sesión-taller completa) | Construcción de tubos; cierre de mediciones del objeto |
-| 13 | 13-nov | **Prueba 2** + la voz cantada (audición liviana) | **Prueba 2 (12,5 %)** |
-| 14 | 20-nov | La sala como instrumento; salida de medición de T60 | Informe de salas (último taller); se publica pauta final |
-| 15 | 27-nov | Presentaciones finales | **Presentación + informe (14 %)**; coevaluación; cierre |
+| 13 | 13-nov | **Prueba 2** + la voz cantada (audición liviana) | **Prueba 2 (10 %)** + escucha escrita 2 |
+| 14 | 20-nov | La sala como instrumento; salida de medición de T60 | Informe de salas (último taller); se repite la línea base de escucha (sin nota); se publica pauta final |
+| 15 | 27-nov | Presentaciones finales | **Presentación + informe (15 %)**; hoja de escucha (escucha escrita 3); coevaluación; cierre |
 
 **Calendario 2026-2**: clases los **viernes, 14:50–16:00 y
 16:10–17:20** (10 min de descanso entre módulos), del 07-ago al 27-nov.

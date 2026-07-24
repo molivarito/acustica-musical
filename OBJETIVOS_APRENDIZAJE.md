@@ -96,20 +96,25 @@ verificarlas.*
 - **OA3.1** Ante un estímulo sonoro (instrumento, sala o grabación),
   describir lo oído con vocabulario técnico preciso y formular hipótesis
   acústicas plausibles sobre su causa.
-  *Evaluación posible*: evaluaciones de escucha argumentada (audio +
-  preguntas abiertas), repetidas durante el semestre.
+  *Evaluación*: escuchas argumentadas **escritas** (audio + preguntas
+  abiertas con rúbrica): Parte A de cada prueba y hoja de escucha de
+  s15. La práctica es semanal y sin nota (escucha del día).
 - **OA3.2** Conectar, para un mismo fenómeno, las tres capas: la
   sensación auditiva, el mecanismo físico que la produce y la medición
   que confirma o refuta la hipótesis.
-  *Evaluación posible*: talleres integradores; defensa oral del proyecto
-  (con OA5.3).
+  *Evaluación*: hoja de escucha argumentada de s15 (diagnóstico de los
+  instrumentos de los otros grupos); talleres integradores; defensa oral
+  del proyecto (con OA5.3).
 
 **Respaldo bibliográfico**: metodológico más que bibliográfico — ningún
 libro enseña "diagnóstico auditivo" como tal. Se apoya en las secciones
 EEQ de BEN y en las demos propias del curso.
 **Advertencia de diseño**: este objetivo exige construir temprano una
 rúbrica de escucha argumentada y usarla en todas las evaluaciones; sin
-esa rúbrica, queda decorativo (ver "Riesgos aceptados").
+esa rúbrica, queda decorativo (ver "Riesgos aceptados"). La rúbrica
+existe (`METODOLOGIA.md` §5) y se aplica a las tres escuchas escritas
+del semestre; **no** se aplica a la escucha del día, que es práctica sin
+nota, para no calificar el oído con que cada estudiante llega al curso.
 
 ### OA4 — Medir y analizar sonido real
 
@@ -189,7 +194,13 @@ aprobar esta versión:
 1. **OA3 se mantiene como objetivo** (no como mero criterio transversal),
    a condición de construir su rúbrica de escucha argumentada al diseñar
    la evaluación (fase 2–4). Si la rúbrica no se materializa, degradarlo
-   a criterio transversal.
+   a criterio transversal. *Resuelto*: la rúbrica existe
+   (`METODOLOGIA.md` §5) y en la recalibración del 2026-07-24 se decidió
+   aplicarla **solo por escrito** (10 % de la nota, tres eventos,
+   mejores 2) y no en ronda oral calificada — porque el diagnóstico
+   oral en vivo medía la formación auditiva de entrada, asimétrica
+   entre música e ingeniería, y no lo que el curso enseña. Riesgo
+   residual declarado en `METODOLOGIA.md` §7.7.
 2. **Carga de OA5**: con aprendizaje activo en cada sesión, el proyecto
    no debe *sumarse* a los talleres sino reutilizarlos — las mediciones
    del proyecto son talleres de OA4. Vigilar la carga total (10 créditos)
