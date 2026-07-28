@@ -507,6 +507,40 @@ def _editor():
     return None
 
 
+def _detener():
+    """Mata el panel de ESTE curso que esté corriendo, menos este proceso.
+
+    Existe porque la app del Dock deja el servidor desacoplado: sin esto habría
+    que ir al terminal justo para lo que la app venía a evitar.
+
+    Se compara contra la **ruta absoluta** de este script, no contra el patrón
+    "panel/panel.py": el curso de Señales y Sistemas tiene un panel gemelo en
+    la misma ruta relativa, y buscar por patrón detendría el del otro curso.
+    """
+    yo = os.path.abspath(__file__)
+    # -ww: que ps no trunque la línea de comando (la ruta es larga).
+    r = subprocess.run(["/bin/ps", "-Awwo", "pid=,command="],
+                       capture_output=True, text=True)
+    pids = []
+    for linea in r.stdout.splitlines():
+        partes = linea.strip().split(None, 1)
+        if len(partes) != 2 or not partes[0].isdigit():
+            continue
+        pid, cmd = int(partes[0]), partes[1]
+        if yo in cmd and pid != os.getpid():
+            pids.append(pid)
+    if not pids:
+        print("no hay ningún panel corriendo.")
+        return 0
+    for pid in pids:
+        try:
+            os.kill(pid, 15)
+            print(f"detenido (pid {pid})")
+        except OSError as e:
+            print(f"no se pudo detener {pid}: {e}", file=sys.stderr)
+    return 0
+
+
 def _servir(puerto, abrir):
     ultimo = None
     for p in range(puerto, puerto + 10):
@@ -540,7 +574,12 @@ def main():
     p.add_argument("--editor", metavar="APP",
                    help="app con la que abrir el plan (p. ej. 'Cursor'); "
                         "por omisión, el primer editor instalado que se encuentre")
+    p.add_argument("--detener", action="store_true",
+                   help="detiene el panel que esté corriendo y sale")
     args = p.parse_args()
+
+    if args.detener:
+        return _detener()
 
     _ESTADO["edicion"] = args.edicion
     _ESTADO["sin_cache"] = args.sin_cache

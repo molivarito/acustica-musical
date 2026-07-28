@@ -15,6 +15,50 @@ Sirve en `127.0.0.1:8767` (si está ocupado prueba hasta el 8776). Solo stdlib +
 El puerto no es casual: el panel de SyS usa el 8766 y el armador de su banco el 8765, así
 los tres conviven.
 
+## Abrirlo sin terminal
+
+```
+python3 panel/instalar_lanzador.py       # crea ~/Applications/Panel MUC860.app
+```
+
+Arrástrala al Dock: un clic arranca el panel y abre el navegador. Es **idempotente** — si
+ya está corriendo, solo abre la pestaña, sin levantar una segunda instancia en otro puerto.
+Tiene **icono propio** (verde azulado con ondas irradiando) para distinguirla de un vistazo
+del panel de SyS (azul con una sinusoide amortiguada).
+
+Para detenerlo:
+
+```
+python3 panel/panel.py --detener
+```
+
+`--detener` compara contra la **ruta absoluta** de este `panel.py`, no contra el patrón
+`panel/panel.py`: el curso de Señales y Sistemas tiene un panel gemelo en la misma ruta
+relativa, y buscar por patrón detendría el del otro curso.
+
+El marcador del navegador es `http://127.0.0.1:8767/`, pero por sí solo no arranca nada.
+Variantes del instalador: `--publicar` (la app arranca con `--permitir-publicar`) y
+`--quitar`.
+
+### Cómo está armado, y por qué
+
+La lógica vive en **`panel/abrir-panel.sh`**, versionado con el repo y probable desde el
+terminal. La app es un applet de AppleScript de tres líneas que solo lo invoca. Dos
+decisiones vienen de fallas reales encontradas en el panel de SyS:
+
+- **La app no queda residente.** Meter el servidor como ejecutable del bundle hace que
+  macOS lo registre como aplicación en ejecución, pero un ejecutable pelado no tiene bucle
+  de eventos de Cocoa: al volver a hacer clic en el Dock nadie contesta el evento `reopen`
+  y el icono se queda rebotando, como colgado. Aquí el applet abre la pestaña y **termina**,
+  así que cada clic es un arranque limpio. Por lo mismo el guion define solo `on run`:
+  declarar `on reopen` lo volvería stay-open y reintroduciría el problema.
+- **El servidor va desacoplado** (`nohup … &`) y sobrevive a que la app termine — de ahí
+  que exista `--detener`.
+
+Una app lanzada desde el Finder no hereda el `PATH` del shell, así que el script fija la
+ruta absoluta del Python de miniforge. La raíz del repo se deduce de la ubicación del
+script: si mueves la carpeta del curso, basta reinstalar la app.
+
 ## Es de solo lectura
 
 El panel **nunca escribe en las fuentes** (`.md`, `.qmd`, `.yml`). Lo único que genera es:
