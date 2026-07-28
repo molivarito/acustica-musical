@@ -1,0 +1,871 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<title>Panel de sesión · MUC860 Acústica Musical</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"></script>
+<style>
+:root{
+  --bg:#f6f7f9; --panel:#fff; --border:#dfe3e8; --text:#1c2530; --muted:#6b7280;
+  --accent:#1f3a5f; --ambar:#b8860b; --ok:#2e6b4f; --err:#a33b2a;
+  --chip:#eef1f5; --sombra:0 1px 2px rgba(16,24,40,.06);
+}
+@media (prefers-color-scheme: dark){
+  :root{
+    --bg:#12161c; --panel:#1a1f27; --border:#2b323d; --text:#e6e9ee; --muted:#98a2b3;
+    --accent:#8fb3dd; --ambar:#d9a520; --ok:#6cc39a; --err:#e08a78;
+    --chip:#242b35; --sombra:none;
+  }
+}
+*{box-sizing:border-box}
+html,body{height:100%}
+body{margin:0;background:var(--bg);color:var(--text);overflow:hidden;
+  font:14px/1.45 -apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif}
+button{font:inherit;color:inherit;background:var(--panel);border:1px solid var(--border);
+  border-radius:6px;padding:.24rem .55rem;cursor:pointer}
+button:hover{border-color:var(--accent)}
+button.on{background:var(--accent);border-color:var(--accent);color:#fff}
+button.mini{padding:.1rem .4rem;font-size:12px}
+button:disabled{opacity:.45;cursor:not-allowed}
+a{color:var(--accent)}
+
+/* ---- estructura ---- */
+#app{display:flex;flex-direction:column;height:100vh}
+#barra{flex:0 0 auto;background:var(--panel);border-bottom:1px solid var(--border);
+  padding:.45rem .7rem;display:flex;flex-direction:column;gap:.4rem}
+#barra-1,#barra-2{display:flex;align-items:center;gap:.5rem;flex-wrap:wrap}
+#cuerpo{flex:1 1 auto;display:flex;gap:8px;padding:8px;min-height:0}
+#col-centro,#col-der{display:flex;flex-direction:column;gap:8px;min-width:0;min-height:0}
+#col-centro{flex:1 1 46%}
+#col-der{flex:1 1 54%}
+#z-riel{flex:0 0 214px;overflow-y:auto}
+.zona{background:var(--panel);border:1px solid var(--border);border-radius:9px;
+  box-shadow:var(--sombra);display:flex;flex-direction:column;min-height:0;overflow:hidden}
+.zona>header{flex:0 0 auto;display:flex;align-items:center;gap:.45rem;
+  padding:.3rem .6rem;border-bottom:1px solid var(--border);font-size:12px;
+  color:var(--muted);text-transform:uppercase;letter-spacing:.04em}
+.zona>header .der{margin-left:auto;display:flex;gap:.3rem;align-items:center;
+  text-transform:none;letter-spacing:0}
+.cont{flex:1 1 auto;overflow:auto;padding:.6rem .75rem;min-height:0}
+.cont.sin-pad{padding:0}
+iframe{width:100%;height:100%;border:0;display:block;background:#fff}
+#z-plan{flex:1 1 62%} #z-materiales{flex:1 1 38%}
+#z-slides{flex:1 1 44%} #z-grande{flex:1 1 56%}
+#z-abajo{flex:0 0 auto;max-height:28vh;margin:0 8px 8px}
+#abajo-cols{display:flex;gap:1.2rem;align-items:flex-start}
+#abajo-cols>div{flex:1 1 50%;min-width:0}
+
+/* ---- piezas ---- */
+.chip{display:inline-block;background:var(--chip);border:1px solid var(--border);
+  border-radius:999px;padding:.05rem .5rem;font-size:12px;white-space:nowrap}
+.chip.acc{background:var(--accent);color:#fff;border-color:var(--accent)}
+.chip.amb{background:var(--ambar);color:#fff;border-color:var(--ambar)}
+.chip.err{background:var(--err);color:#fff;border-color:var(--err)}
+.pt{width:9px;height:9px;border-radius:50%;display:inline-block;flex:0 0 auto}
+.pt.ok{background:var(--ok)} .pt.sospechoso{background:var(--ambar)}
+.pt.viejo{background:var(--err)} .pt.falta{background:var(--muted)}
+.pt.sin-fuente{background:transparent;border:1px solid var(--muted)}
+#titulo{font-size:16px;font-weight:600}
+#sub{color:var(--muted)}
+
+/* riel */
+.riel-i{display:block;width:100%;text-align:left;border:0;border-radius:6px;
+  background:transparent;padding:.2rem .4rem;margin-bottom:1px;line-height:1.25}
+.riel-i:hover{background:var(--chip)}
+.riel-i.act{background:var(--accent);color:#fff}
+.riel-i small{color:var(--muted);font-size:11px}
+.riel-i.act small{color:#dbe6f3}
+/* dependencias declaradas en PLAN_SEMESTRE.md: ámbar = de esta depende la
+   sesión elegida; verde = esta depende de la elegida */
+.riel-i.dep{box-shadow:inset 3px 0 0 var(--ambar)}
+.riel-i.req{box-shadow:inset 3px 0 0 var(--ok)}
+.riel-sep{padding:.25rem .4rem;color:var(--muted);font-size:11.5px;font-style:italic;
+  border-top:1px dashed var(--border);border-bottom:1px dashed var(--border);margin:.25rem 0}
+
+/* guion */
+table.guion{width:100%;border-collapse:collapse}
+table.guion td{padding:.3rem .4rem;vertical-align:top;border-bottom:1px solid var(--border)}
+table.guion td.m{white-space:nowrap;color:var(--muted);font-variant-numeric:tabular-nums;width:1%}
+.barra-min{height:4px;background:var(--accent);border-radius:2px;opacity:.45;margin-top:3px}
+.mod-tit{font-size:12px;color:var(--muted);text-transform:uppercase;letter-spacing:.04em;
+  margin:.7rem 0 .3rem;display:flex;gap:.4rem;align-items:center}
+.extra{margin-top:.35rem;border-left:2px solid var(--border);padding-left:.5rem}
+.extra>summary{cursor:pointer;color:var(--muted);font-size:12.5px}
+.extra b{color:var(--accent)}
+
+/* materiales: lista de chequeo */
+.mat{display:flex;gap:.45rem;align-items:flex-start;padding:.16rem .2rem;border-radius:5px}
+.mat:hover{background:var(--chip)}
+.mat input{margin-top:.3rem;flex:0 0 auto}
+.mat.hecho span.t{text-decoration:line-through;color:var(--muted)}
+.mat small{color:var(--muted);font-size:11px}
+.mat p{margin:0;display:inline}
+
+/* actividades y objetivos */
+.act{border:1px solid var(--border);border-radius:7px;margin-bottom:.35rem;overflow:hidden}
+.act>summary{cursor:pointer;padding:.28rem .5rem;display:flex;gap:.4rem;align-items:center;
+  flex-wrap:wrap;list-style:none}
+.act>summary::-webkit-details-marker{display:none}
+.act .cuerpo{padding:.3rem .6rem .6rem;border-top:1px solid var(--border)}
+.obj{margin-bottom:.45rem;padding-bottom:.45rem;border-bottom:1px solid var(--border)}
+.obj:last-child{border:0}
+img{max-width:100%;height:auto}
+.vacio{color:var(--muted);font-style:italic;padding:.6rem}
+.cuerpo table{border-collapse:collapse;width:100%}
+.cuerpo table td,.cuerpo table th{border:1px solid var(--border);padding:.2rem .4rem;
+  vertical-align:top;font-size:13px}
+#log{position:fixed;right:10px;bottom:10px;width:540px;max-height:44vh;overflow:auto;
+  background:var(--panel);border:1px solid var(--border);border-radius:9px;padding:.6rem;
+  font:12px/1.4 ui-monospace,SFMono-Regular,Menlo,monospace;white-space:pre-wrap;
+  box-shadow:0 8px 30px rgba(0,0,0,.18);display:none;z-index:9}
+</style>
+</head>
+<body>
+<div id="app">
+  <div id="barra">
+    <div id="barra-1">
+      <button id="prev" title="Sesión anterior (←)">◀</button>
+      <span id="titulo">…</span>
+      <button id="next" title="Sesión siguiente (→)">▶</button>
+      <span id="sub"></span>
+      <span id="chips"></span>
+      <span style="margin-left:auto"></span>
+      <input id="ir" list="ses-lista" placeholder="ir a s…" size="7">
+      <datalist id="ses-lista"></datalist>
+      <button id="btn-frescura" title="Estado de los renders">…</button>
+      <button id="btn-libro" title="Estado del PDF del libro">…</button>
+      <button id="btn-avisos" title="Avisos de parseo"></button>
+      <button id="btn-pub" title="Estado de publicación">…</button>
+      <button id="btn-abrir"
+        title="Abrir plan.md en el editor para corregirlo — no para leerlo: el plan ya se ve completo en este panel">✎ editar</button>
+    </div>
+    <div id="barra-2">
+      <span style="color:var(--muted);font-size:12px">Paneles:</span>
+      <span id="toggles"></span>
+      <span style="margin-left:1rem;color:var(--muted);font-size:12px">Vistas:</span>
+      <span id="presets"></span>
+    </div>
+  </div>
+
+  <div id="cuerpo">
+    <section class="zona" id="z-riel">
+      <header>Semestre</header>
+      <div class="cont" id="riel"></div>
+    </section>
+
+    <div id="col-centro">
+      <section class="zona" id="z-plan">
+        <header>Plan de sesión
+          <span class="der">
+            <span id="mods"></span>
+            <button class="mini" id="btn-extra"
+              title="Abrir en todas las filas el rol del profesor y los materiales">expandir</button>
+          </span>
+        </header>
+        <div class="cont" id="plan"></div>
+      </section>
+      <section class="zona" id="z-materiales">
+        <header>Materiales para la sala <span class="der" id="mat-der"></span></header>
+        <div class="cont" id="materiales"></div>
+      </section>
+    </div>
+
+    <div id="col-der">
+      <section class="zona" id="z-slides">
+        <header>Slides
+          <span class="der">
+            <span id="slides-pos" style="color:var(--muted)"></span>
+            <span class="pt" id="pt-slides"></span>
+            <button class="mini" id="sl-prev">◀</button>
+            <button class="mini" id="sl-next">▶</button>
+            <button class="mini" id="sl-vista" title="Vista general (o)">⤢</button>
+            <button class="mini" id="sl-abrir" title="Abrir en pestaña">↗</button>
+          </span>
+        </header>
+        <div class="cont sin-pad"><iframe id="if-slides" title="slides"></iframe></div>
+      </section>
+      <section class="zona" id="z-grande">
+        <header>
+          <span id="tabs"></span>
+          <span class="der">
+            <span class="pt" id="pt-grande"></span>
+            <button class="mini" id="gr-abrir" title="Abrir en pestaña">↗</button>
+            <button class="mini" id="gr-render" title="Renderizar esta sesión">⟳</button>
+          </span>
+        </header>
+        <div class="cont sin-pad" style="position:relative">
+          <iframe id="if-apunte" title="apunte"></iframe>
+          <iframe id="if-capitulo" title="capítulo" style="display:none"></iframe>
+          <iframe id="if-demo" title="demo" style="display:none"></iframe>
+        </div>
+      </section>
+    </div>
+  </div>
+
+  <section class="zona" id="z-abajo">
+    <header>Actividades y objetivos <span class="der" id="abajo-der"></span></header>
+    <div class="cont">
+      <div id="abajo-cols">
+        <div id="actividades"></div>
+        <div id="objetivos"></div>
+      </div>
+    </div>
+  </section>
+</div>
+
+<div id="log"></div>
+
+<div id="modal" style="position:fixed;inset:0;background:rgba(0,0,0,.45);display:none;
+     align-items:center;justify-content:center;z-index:20">
+  <div style="background:var(--panel);border:1px solid var(--border);border-radius:11px;
+       width:min(660px,92vw);max-height:86vh;overflow:auto;padding:1.1rem 1.3rem">
+    <h2 style="margin:.1rem 0 .7rem;font-size:17px">Publicación</h2>
+    <div id="pub-cuerpo"></div>
+    <div style="margin-top:1rem;display:flex;gap:.5rem;justify-content:flex-end">
+      <button id="pub-cerrar">Cerrar</button>
+    </div>
+  </div>
+</div>
+
+<script>
+'use strict';
+// ---------------------------------------------------------------- utilidades
+async function llamar(metodo, ruta, body){
+  const opts = {method: metodo, headers: {'Content-Type': 'application/json'}};
+  if (body !== undefined) opts.body = JSON.stringify(body);
+  const r = await fetch(ruta, opts);
+  let data;
+  try { data = await r.json(); } catch (e) { data = {error: 'respuesta no JSON'}; }
+  if (!r.ok) throw new Error(data.error || ('error ' + r.status));
+  return data;
+}
+function esc(s){
+  return String(s == null ? '' : s)
+    .replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
+}
+
+// Markdown mínimo para el CONTENIDO DE UNA CELDA del guion: negritas,
+// cursivas, código, enlaces y matemática. Aquí no se procesan tablas — el
+// guion ya llega como datos estructurados desde indice.py, y los documentos
+// completos (guías, capítulos) los convierte pandoc en /api/md.
+//
+// La matemática se aparta ANTES de tocar nada y se repone al final, para que
+// ninguna regla de Markdown le meta mano. El centinela va en el área de uso
+// privado de Unicode y lleva delimitadores explícitos: un marcador numérico
+// pelado chocaría con los números del propio texto y una celda como
+// "pulsa 5 veces" saldría rota.
+// Escapes explícitos, NO los caracteres literales: son invisibles en el
+// editor y cualquier normalización que se los comiera dejaría el centinela en
+// "", con lo que el reemplazo final se tragaría todos los números del texto.
+const S0 = '\uE000', S1 = '\uE001';
+function md(t){
+  if (!t) return '';
+  const formulas = [];
+  let s = String(t).replace(/\$\$[\s\S]*?\$\$|\$[^$\n]+\$/g, m => {
+    formulas.push(m); return S0 + (formulas.length - 1) + S1;
+  });
+  s = esc(s);
+  // Los enlaces del plan apuntan a rutas relativas del repo (../../demos/…):
+  // como texto son útiles, como <a> serían 404. Se dejan en cursiva.
+  s = s.replace(/!\[([^\]]*)\]\(([^)]+)\)/g, '<i>$1</i>');
+  s = s.replace(/\[`?([^\]`]+)`?\]\(([^)]+)\)/g, '<i>$1</i>');
+  s = s.replace(/`([^`]+)`/g, '<code>$1</code>');
+  s = s.replace(/\*\*([^*]+)\*\*/g, '<b>$1</b>');
+  s = s.replace(/(^|[^*])\*([^*\n]+)\*/g, '$1<i>$2</i>');
+  const out = [];
+  let lista = false;
+  for (const linea of s.split('\n')){
+    const m = linea.match(/^\s*[-*]\s+(.*)$/);
+    if (m){ if(!lista){out.push('<ul>');lista=true;} out.push('<li>'+m[1]+'</li>'); }
+    else { if(lista){out.push('</ul>');lista=false;} out.push(linea.trim()?'<p>'+linea+'</p>':''); }
+  }
+  if (lista) out.push('</ul>');
+  const re = new RegExp(S0 + '(\\d+)' + S1, 'g');
+  return out.join('').replace(re, (m,i) => formulas[+i]);
+}
+function mates(el){
+  if (!el || !window.renderMathInElement) return;
+  try {
+    renderMathInElement(el, {throwOnError:false, delimiters:[
+      {left:'$$',right:'$$',display:true},{left:'$',right:'$',display:false},
+      {left:'\\[',right:'\\]',display:true},{left:'\\(',right:'\\)',display:false}]});
+  } catch(e){}
+}
+const $ = s => document.querySelector(s);
+function logear(txt, mostrar){
+  const l = $('#log'); l.textContent = txt;
+  l.style.display = mostrar === false ? 'none' : 'block';
+}
+const fmtT = s => s ? new Date(s*1000).toLocaleString('es-CL') : '—';
+function tituloFrescura(x){
+  if (!x || !x.estado) return '';
+  return x.estado + '\nfuente: ' + fmtT(x.fuente) + '\nrender: ' + fmtT(x.render);
+}
+const sinNegrita = s => String(s == null ? '' : s).replace(/\*/g,'');
+
+// ------------------------------------------------------------------- estado
+const ZONAS = [
+  ['riel','Riel'], ['plan','Plan'], ['materiales','Materiales'],
+  ['slides','Slides'], ['grande','Contenido'], ['abajo','Actividades'],
+];
+const PRESETS = {
+  'Todo':      ['riel','plan','materiales','slides','grande','abajo'],
+  'Preparar':  ['riel','plan','materiales'],
+  'Dictar':    ['riel','plan','slides'],
+  'Contenido': ['riel','grande','slides'],
+};
+let IND = null, FRESC = null, PUB = null, N = 1;
+let vistas = {}, pestana = 'apunte', modulo = 'ambos', extra = false;
+let marcados = {};          // materiales tildados, por sesión
+
+function guardar(){
+  localStorage.setItem('panel-am',
+    JSON.stringify({N, vistas, pestana, modulo, extra, marcados}));
+}
+function cargarEstado(){
+  try{
+    const e = JSON.parse(localStorage.getItem('panel-am') || '{}');
+    if (e.N) N = e.N;
+    if (e.pestana) pestana = e.pestana;
+    if (e.modulo) modulo = e.modulo;
+    extra = !!e.extra;
+    vistas = e.vistas || {};
+    marcados = e.marcados || {};
+  }catch(e){}
+  for (const [k] of ZONAS) if (!(k in vistas)) vistas[k] = true;
+}
+const ses = () => IND.sesiones[N-1];
+
+// ------------------------------------------------------------------- vistas
+function aplicarVistas(){
+  for (const [k] of ZONAS){
+    const el = $('#z-'+k);
+    if (el) el.style.display = vistas[k] ? '' : 'none';
+  }
+  $('#col-centro').style.display = (vistas.plan || vistas.materiales) ? '' : 'none';
+  $('#col-der').style.display    = (vistas.slides || vistas.grande) ? '' : 'none';
+  document.querySelectorAll('#toggles button').forEach(b => {
+    b.classList.toggle('on', !!vistas[b.dataset.z]);
+  });
+  guardar();
+}
+function pintarControles(){
+  $('#toggles').innerHTML = ZONAS.map(([k,n]) =>
+    '<button class="mini" data-z="'+k+'">'+n+'</button>').join(' ');
+  $('#toggles').onclick = e => {
+    const b = e.target.closest('button'); if (!b) return;
+    vistas[b.dataset.z] = !vistas[b.dataset.z]; aplicarVistas();
+  };
+  $('#presets').innerHTML = Object.keys(PRESETS).map(n =>
+    '<button class="mini" data-p="'+n+'">'+n+'</button>').join(' ');
+  $('#presets').onclick = e => {
+    const b = e.target.closest('button'); if (!b) return;
+    const on = PRESETS[b.dataset.p];
+    for (const [k] of ZONAS) vistas[k] = on.includes(k);
+    aplicarVistas();
+  };
+  $('#ses-lista').innerHTML = IND.sesiones.map(s =>
+    '<option value="'+s.id+'">'+esc(s.titulo)+'</option>').join('');
+}
+
+// -------------------------------------------------------------------- riel
+function pintarRiel(){
+  const c = ses();
+  const dep = new Set(c.depende_de || []);
+  const req = new Set((c.requerida_por || []).map(x => +String(x).slice(1)));
+  const items = IND.sesiones.map(s => ({
+    k: (s.fecha && s.fecha.iso) ? s.fecha.iso : '9-'+String(s.n).padStart(2,'0'),
+    tipo:'s', s}));
+  for (const i of (IND.meta.interrupciones || [])){
+    items.push({k: (i.fecha && i.fecha.iso) ? i.fecha.iso : 'zz', tipo:'int', i});
+  }
+  items.sort((x,y) => String(x.k).localeCompare(String(y.k)));
+
+  $('#riel').innerHTML = items.map(it => {
+    if (it.tipo === 'int'){
+      const i = it.i;
+      return '<div class="riel-sep">' + esc(sinNegrita(i.nota || i.crudo))
+        + (i.fecha ? ' · ' + esc(i.fecha.crudo) : '') + '</div>';
+    }
+    const s = it.s, fr = FRESC && FRESC.sesiones[s.id];
+    const est = fr ? fr.apunte.estado : '';
+    const cls = s.n===N ? 'act' : (dep.has(s.n) ? 'dep' : (req.has(s.n) ? 'req' : ''));
+    const tit = s.n===N ? '' : (dep.has(s.n) ? c.id + ' depende de esta sesión'
+                                             : (req.has(s.n) ? 'depende de ' + c.id : ''));
+    return '<button class="riel-i ' + cls + '" data-n="' + s.n + '" title="' + esc(tit) + '">'
+      + '<span class="pt ' + est + '" style="margin-right:.3rem"></span><b>' + s.id + '</b>'
+      + (s.hito ? ' <span class="chip err" style="font-size:10.5px">'
+                  + esc(sinNegrita(s.hito).slice(0,22)) + '</span>' : '')
+      + '<br><small>' + (s.fecha ? esc(s.fecha.crudo) : 'sin fecha') + ' · '
+      + esc(s.titulo.slice(0,30)) + '</small></button>';
+  }).join('');
+  $('#riel').onclick = e => {
+    const b = e.target.closest('button[data-n]');
+    if (b) irA(+b.dataset.n);
+  };
+  const act = $('#riel .act');
+  if (act) act.scrollIntoView({block:'nearest'});
+}
+
+// ------------------------------------------------------------------ barra
+function pintarBarra(){
+  const c = ses();
+  $('#titulo').textContent = c.id + ' · ' + c.titulo;
+  $('#sub').textContent = c.fecha
+    ? c.fecha.crudo + (c.fecha.anio_supuesto && IND.meta.anio ? '-' + IND.meta.anio : '')
+    : 'sin fecha';
+  const ch = [];
+  for (const o of c.objetivos) ch.push('<span class="chip acc">' + esc(o) + '</span>');
+  if (c.hito) ch.push('<span class="chip err">' + esc(sinNegrita(c.hito)) + '</span>');
+  for (const m of c.modulos)
+    if (m.variante) ch.push('<span class="chip" title="Variante del módulo ' + m.n
+      + '">m' + m.n + ': ' + esc(m.variante) + '</span>');
+  $('#chips').innerHTML = ch.join(' ');
+
+  const av = IND.meta.avisos.length, ba = $('#btn-avisos');
+  ba.textContent = av ? ('⚠ ' + av) : '';
+  ba.style.display = av ? '' : 'none';
+}
+
+// ------------------------------------------------------------------- plan
+function pintarPlan(){
+  const c = ses();
+  $('#mods').innerHTML = ['ambos','1','2'].map(k =>
+    '<button class="mini ' + (modulo===k?'on':'') + '" data-m="' + k + '">'
+    + (k==='ambos' ? 'ambos' : 'Mód ' + k) + '</button>').join(' ');
+  $('#mods').onclick = e => {
+    const b = e.target.closest('button'); if (!b) return;
+    modulo = b.dataset.m; guardar(); pintarPlan();
+  };
+  $('#btn-extra').classList.toggle('on', extra);
+
+  const h = [];
+  if (Object.keys(c.campos || {}).length){
+    h.push('<details class="extra" style="margin:0 0 .5rem;border-left:0;padding-left:0">'
+      + '<summary><b>Cabecera del plan</b> — objetivos, requisitos, posición, reglas</summary>');
+    for (const k of c.orden_campos)
+      h.push('<div style="margin:.35rem 0"><b style="color:var(--accent)">' + esc(k)
+             + '</b> ' + md(c.campos[k]) + '</div>');
+    h.push('</details>');
+  }
+
+  const mods = (c.modulos || []).filter(m => modulo==='ambos' || String(m.n)===modulo);
+  if (!mods.length) h.push('<div class="vacio">Sin módulos parseados.</div>');
+  for (const m of mods){
+    const tot = m.filas.reduce((a,f) => a + (f.dur||0), 0);
+    h.push('<div class="mod-tit"><b>Módulo ' + m.n + '</b> — ' + esc(m.titulo)
+      + (m.variante ? ' <span class="chip">' + esc(m.variante) + '</span>' : '')
+      + '<span style="margin-left:auto">' + tot + '′</span></div>');
+    if (!m.filas.length){ h.push('<div class="vacio">Sin tabla en este módulo.</div>'); continue; }
+    const max = Math.max.apply(null, m.filas.map(f => f.dur || 0)) || 1;
+    h.push('<table class="guion">' + m.filas.map(f =>
+      '<tr><td class="m">' + esc(f.tiempo) + '</td><td>'
+      + '<div>' + md(f.bloque) + '</div>'
+      + (f.dur ? '<div class="barra-min" style="width:' + (100*f.dur/max) + '%"></div>' : '')
+      + '<div style="color:var(--muted);margin-top:.15rem">' + md(f.actividad) + '</div>'
+      + ((f.profesor || f.materiales)
+          ? '<details class="extra" ' + (extra?'open':'') + '>'
+            + '<summary>rol del profesor · materiales</summary>'
+            + (f.profesor ? '<div><b>Profesor.</b> ' + md(f.profesor) + '</div>' : '')
+            + (f.materiales ? '<div><b>Materiales.</b> ' + md(f.materiales) + '</div>' : '')
+            + '</details>'
+          : '')
+      + '</td></tr>').join('') + '</table>');
+  }
+
+  for (const s of (c.cierre || [])){
+    h.push('<details class="extra" style="margin-top:.6rem"><summary><b>'
+      + esc(s.titulo) + '</b></summary>' + md(s.cuerpo) + '</details>');
+  }
+  $('#plan').innerHTML = h.join('');
+  mates($('#plan'));
+}
+
+// -------------------------------------------------------------- materiales
+function pintarMateriales(){
+  const c = ses(), lista = c.materiales || [];
+  const st = marcados[c.id] || {};
+  if (!lista.length){
+    $('#materiales').innerHTML = '<div class="vacio">El plan no declara materiales.</div>';
+    $('#mat-der').textContent = ''; return;
+  }
+  $('#materiales').innerHTML = lista.map((m,i) =>
+    '<label class="mat ' + (st[i]?'hecho':'') + '" data-i="' + i + '">'
+    + '<input type="checkbox" ' + (st[i]?'checked':'') + '>'
+    + '<span class="t">' + md(m.texto) + '<small> · mód ' + m.modulos.join(' y ')
+    + '</small></span></label>').join('');
+  $('#materiales').onchange = e => {
+    const lab = e.target.closest('.mat'); if (!lab) return;
+    const st2 = marcados[c.id] = marcados[c.id] || {};
+    st2[lab.dataset.i] = e.target.checked;
+    lab.classList.toggle('hecho', e.target.checked);
+    guardar(); contarMat();
+  };
+  mates($('#materiales'));
+  contarMat();
+}
+function contarMat(){
+  const c = ses(), st = marcados[c.id] || {}, lista = c.materiales || [];
+  $('#mat-der').textContent = lista.filter((_,i) => st[i]).length + '/' + lista.length + ' listos';
+}
+
+// ------------------------------------------------- actividades y objetivos
+function pintarAbajo(){
+  const c = ses();
+  const acts = c.archivos.actividades || [];
+  const h = ['<div style="font-size:12px;color:var(--muted);text-transform:uppercase;'
+    + 'letter-spacing:.04em;margin-bottom:.35rem">Actividades</div>'];
+  if (!acts.length){
+    // s07 y s13 son las sesiones de prueba: legítimamente no tienen guías.
+    h.push('<div class="vacio">Esta sesión no tiene carpeta <code>actividades/</code>'
+      + ' — es una de las dos sesiones de prueba.</div>');
+  }
+  for (const ruta of acts){
+    const base = ruta.split('/').pop();
+    const pauta = /^pauta_/.test(base);
+    h.push('<details class="act" data-ruta="' + esc(ruta) + '"><summary>'
+      + (pauta ? '<span class="chip err" title="Material solo-profesor: '
+                 + 'no se entrega a estudiantes">solo profesor</span> ' : '')
+      + '<b>' + esc(base.replace(/\.md$/,'')) + '</b></summary>'
+      + '<div class="cuerpo"><span style="color:var(--muted)">cargando…</span></div></details>');
+  }
+  $('#actividades').innerHTML = h.join('');
+  $('#actividades').querySelectorAll('details.act').forEach(d => {
+    d.addEventListener('toggle', async () => {
+      if (!d.open || d.dataset.cargado) return;
+      d.dataset.cargado = '1';
+      const cu = d.querySelector('.cuerpo');
+      try {
+        const r = await llamar('GET','/api/md?ruta=' + encodeURIComponent(d.dataset.ruta));
+        cu.innerHTML = r.html; mates(cu);
+      } catch(e){
+        d.dataset.cargado = '';
+        cu.innerHTML = '<span style="color:var(--err)">' + esc(e.message) + '</span>';
+      }
+    });
+  });
+
+  const ho = ['<div style="font-size:12px;color:var(--muted);text-transform:uppercase;'
+    + 'letter-spacing:.04em;margin-bottom:.35rem">Objetivos</div>'];
+  if (!c.objetivos.length) ho.push('<div class="vacio">El plan no cita OA.</div>');
+  for (const cod of c.objetivos){
+    const o = IND.objetivos[cod];
+    if (!o){
+      ho.push('<div class="obj"><b class="chip acc">' + esc(cod) + '</b>'
+        + '<small style="color:var(--err)"> no está en OBJETIVOS_APRENDIZAJE.md</small></div>');
+      continue;
+    }
+    const otras = (o.sesiones||[]).filter(x => x !== c.id);
+    ho.push('<div class="obj"><b class="chip acc">' + esc(cod) + '</b> '
+      + '<span class="chip" title="' + esc(IND.familias[o.familia] || '') + '">'
+      + esc(o.familia) + '</span>'
+      + '<div style="margin-top:.2rem">' + md(o.texto) + '</div>'
+      + (otras.length ? '<small style="color:var(--muted)">también en '
+                        + otras.join(', ') + '</small>' : '')
+      + '</div>');
+  }
+  $('#objetivos').innerHTML = ho.join('');
+  mates($('#objetivos'));
+  $('#abajo-der').textContent = acts.length + ' actividades · ' + c.objetivos.length + ' OA';
+}
+
+// ------------------------------------------------------------------ grande
+function srcDe(k){
+  const c = ses(), a = c.archivos;
+  const site = r => r ? '/r/site/' + r.replace('material/_render/site/','') : '';
+  if (k === 'apunte')   return a.apunte_html   ? site(a.apunte_html) + '?desnudo=1' : '';
+  if (k === 'capitulo') return a.capitulo_html ? site(a.capitulo_html) + '?desnudo=1' : '';
+  if (k === 'demo')     return c.demo ? '/r/demos/' + c.demo : '';
+  if (k === 'slides')   return site(a.slides_html);
+  return '';
+}
+function pintarGrande(){
+  $('#tabs').innerHTML = [['apunte','Apunte'],['capitulo','Capítulo'],['demo','Demo']]
+    .map(([k,n]) => '<button class="mini ' + (pestana===k?'on':'') + '" data-t="' + k
+                    + '">' + n + '</button>').join(' ');
+  $('#tabs').onclick = e => {
+    const b = e.target.closest('button'); if (!b) return;
+    pestana = b.dataset.t; guardar(); pintarGrande(); cargarIframes();
+  };
+  for (const k of ['apunte','capitulo','demo'])
+    $('#if-'+k).style.display = pestana===k ? '' : 'none';
+  actualizarPuntos();
+}
+// Un iframe en blanco parece un panel roto: cuando no hay nada que mostrar se
+// dice por qué (s15, por ejemplo, no tiene demo nueva).
+function vacio(msg){
+  return '<!doctype html><meta charset="utf-8"><body style="margin:0;'
+    + 'font:14px -apple-system,BlinkMacSystemFont,\'Segoe UI\',sans-serif;'
+    + 'color:#6b7280;display:flex;align-items:center;justify-content:center;'
+    + 'height:100vh;text-align:center;padding:2rem">' + msg + '</body>';
+}
+function poner(el, s, msg){
+  if (el.dataset.src === s) return;
+  el.dataset.src = s;
+  if (s){ el.removeAttribute('srcdoc'); el.src = s; }
+  else { el.removeAttribute('src'); el.srcdoc = vacio(msg); }
+}
+function cargarIframes(){
+  const c = ses();
+  poner($('#if-apunte'), srcDe('apunte'),
+        'Sin apunte renderizado. Pulsa ⟳ para generarlo.');
+  poner($('#if-capitulo'), srcDe('capitulo'),
+        'Sin capítulo renderizado. Pulsa ⟳ para generarlo.');
+  poner($('#if-demo'), srcDe('demo'),
+        c.demo_crudo ? 'Esta sesión no tiene demo propia: <b>' + esc(c.demo_crudo) + '</b>'
+                     : 'Esta sesión no declara demo.');
+  poner($('#if-slides'), srcDe('slides'), 'Sin slides renderizadas.');
+}
+function actualizarPuntos(){
+  const c = ses(), fr = FRESC && FRESC.sesiones[c.id];
+  if (!fr) return;
+  const p = $('#pt-grande');
+  if (pestana === 'demo'){
+    p.className = 'pt';
+    p.title = 'la demo es fuente, no render: siempre está al día';
+  } else {
+    const g = fr[pestana] || {};
+    p.className = 'pt ' + (g.estado || '');
+    p.title = tituloFrescura(g);
+  }
+  const s = fr.slides || {};
+  $('#pt-slides').className = 'pt ' + (s.estado||'');
+  $('#pt-slides').title = tituloFrescura(s);
+}
+
+// -------------------------------------------------------------- navegación
+function irA(n){
+  if (!IND || n < 1 || n > IND.sesiones.length) return;
+  N = n; guardar();
+  pintarBarra(); pintarPlan(); pintarMateriales(); pintarAbajo();
+  pintarGrande(); cargarIframes(); pintarRiel();
+}
+
+// ------------------------------------------------------------------ Reveal
+function reveal(){
+  try { return $('#if-slides').contentWindow.Reveal; } catch(e){ return null; }
+}
+setInterval(() => {
+  const R = reveal();
+  if (!R || !R.getIndices) { $('#slides-pos').textContent=''; return; }
+  try{
+    const i = R.getIndices();
+    $('#slides-pos').textContent = ((i.h||0)+1) + '/' + R.getTotalSlides();
+  }catch(e){}
+}, 1000);
+
+// -------------------------------------------------------------------- init
+async function arrancar(){
+  cargarEstado();
+  IND = await llamar('GET','/api/indice');
+  if (N > IND.sesiones.length) N = 1;
+  pintarControles(); aplicarVistas();
+  try { FRESC = await llamar('GET','/api/frescura'); } catch(e){}
+  irA(N);
+  pintarFrescuraBoton();
+  await cargarPub();
+  setInterval(refrescarFrescura, 20000);
+}
+async function refrescarFrescura(){
+  try{
+    FRESC = await llamar('GET','/api/frescura');
+    actualizarPuntos(); pintarFrescuraBoton(); pintarRiel();
+  }catch(e){}
+}
+function pintarFrescuraBoton(){
+  if (!FRESC) return;
+  const b = $('#btn-frescura');
+  b.textContent = FRESC.viejos ? ('⚠ ' + FRESC.viejos + '/' + FRESC.total + ' sin renderizar')
+                               : '✓ renders al día';
+  b.style.color = FRESC.viejos ? 'var(--err)' : 'var(--ok)';
+  // Semáforo propio de AM: el CI no reconstruye el PDF del libro, así que
+  // puede quedarse atrás en silencio al editar un capítulo.
+  const L = FRESC.libro || {}, bl = $('#btn-libro');
+  const mal = L.estado === 'viejo' || L.estado === 'falta';
+  bl.textContent = mal ? '⚠ PDF del libro' : '✓ PDF del libro';
+  bl.style.color = mal ? 'var(--err)' : 'var(--ok)';
+  bl.title = (mal ? 'El PDF es más viejo que ' + (L.archivo || 'sus capítulos')
+                  : 'El PDF va al día con sus capítulos')
+    + '\nfuente: ' + fmtT(L.fuente) + '\nPDF: ' + fmtT(L.render)
+    + '\n\nPúlsalo para regenerarlo (quarto render libro).';
+}
+
+// eventos
+$('#prev').onclick = () => irA(N-1);
+$('#next').onclick = () => irA(N+1);
+$('#ir').onchange = e => {
+  const m = String(e.target.value).match(/(\d+)/);
+  if (m) irA(+m[1]);
+  e.target.value = '';
+};
+$('#btn-extra').onclick = () => { extra = !extra; guardar(); pintarPlan(); };
+$('#btn-avisos').onclick = () => {
+  const l = $('#log');
+  const vis = l.style.display === 'block' && l.dataset.tipo === 'avisos';
+  l.dataset.tipo = 'avisos';
+  logear('AVISOS DE PARSEO\n\n' + IND.meta.avisos.join('\n'), !vis);
+};
+// Única salida del panel hacia la edición. No duplica la lectura —el plan ya
+// se muestra entero más abajo—: sirve para ir al archivo cuando, preparando,
+// aparece una errata o un material que falta. El panel sigue sin escribir
+// nada; el cambio lo recoge solo el caché por mtime.
+//
+// Confirma en el log qué se abrió y con qué app: sin esta señal el botón
+// parece muerto cuando el editor arranca detrás del navegador.
+$('#btn-abrir').onclick = async () => {
+  try {
+    const r = await llamar('POST','/api/abrir',{ruta: ses().archivos.plan});
+    logear('Abierto ' + r.ruta + (r.con ? '\ncon ' + r.con : ''));
+    setTimeout(() => logear('', false), 3000);
+  } catch(e){ logear('ERROR al abrir: ' + e.message); }
+};
+$('#sl-prev').onclick = () => { const R=reveal(); if(R) R.left(); };
+$('#sl-next').onclick = () => { const R=reveal(); if(R) R.right(); };
+$('#sl-vista').onclick = () => { const R=reveal(); if(R) R.toggleOverview(); };
+$('#sl-abrir').onclick = () => { const s=srcDe('slides'); if(s) window.open(s,'_blank'); };
+$('#gr-abrir').onclick = () => { const s=srcDe(pestana); if(s) window.open(s,'_blank'); };
+$('#btn-frescura').onclick = () => lanzarRender({todo:true});
+$('#gr-render').onclick = () => lanzarRender({sesion: N});
+$('#btn-libro').onclick = () => lanzarRender({libro:true});
+
+async function lanzarRender(cuerpo){
+  const q = cuerpo.libro
+    ? 'Regenerar el PDF del libro (quarto render libro). Tarda ~1 min. ¿Seguir?'
+    : cuerpo.todo
+      ? 'Renderizar el sitio completo puede tardar varios minutos. ¿Seguir?'
+      : '¿Renderizar el apunte, las slides y el capítulo de s'
+        + String(N).padStart(2,'0') + '?';
+  if (!confirm(q)) return;
+  try { await llamar('POST','/api/render',cuerpo); }
+  catch(e){ return logear('ERROR: ' + e.message); }
+  seguirTrabajo(async () => {
+    IND = await llamar('GET','/api/indice');
+    await refrescarFrescura();
+    cargarIframes();
+    for (const k of ['apunte','capitulo','slides']){
+      const el = $('#if-'+k);
+      if (el.dataset.src){ try { el.contentWindow.location.reload(); } catch(e){} }
+    }
+    setTimeout(() => logear('', false), 4000);
+  });
+}
+
+// ------------------------------------------------------------- publicación
+async function cargarPub(){
+  try { PUB = await llamar('GET','/api/publicacion'); } catch(e){ return; }
+  const b = $('#btn-pub');
+  const sucio = (PUB.sucio || []).length, sin = PUB.sin_push;
+  if (PUB.error){ b.textContent = 'git ?'; b.style.color = 'var(--ambar)'; }
+  else if (sucio || sin){
+    b.textContent = '↑ ' + (sin||0) + ' sin push' + (sucio ? ' · ' + sucio + ' sin commit' : '');
+    b.style.color = 'var(--err)';
+  } else { b.textContent = '✓ sitio al día'; b.style.color = 'var(--ok)'; }
+  b.title = 'Estado de publicación (el sitio se reconstruye solo con cada push a main)';
+}
+function pintarPub(){
+  const fila = (k,v) => '<tr><td style="color:var(--muted);padding:.15rem .5rem .15rem 0;'
+    + 'white-space:nowrap;vertical-align:top">' + k + '</td><td>' + v + '</td></tr>';
+  const L = (FRESC && FRESC.libro) || {};
+  const h = [];
+  h.push('<p style="margin:.1rem 0 .7rem;color:var(--muted)">En Acústica Musical no hay '
+    + 'nada que «liberar»: cada <code>git push</code> a <code>main</code> dispara el '
+    + 'workflow y el sitio se reconstruye solo. Lo que importa aquí es si lo que tienes '
+    + 'en el disco ya salió.</p>');
+  h.push('<table style="width:100%;border-collapse:collapse">');
+  h.push(fila('Rama', esc(PUB.rama || '—')));
+  h.push(fila('Último commit', esc(PUB.ultimo || '—')));
+  h.push(fila('Sin pushear', PUB.sin_push === null ? '<i>no se pudo saber</i>'
+    : (PUB.sin_push
+        ? '<b style="color:var(--err)">' + PUB.sin_push + ' commit(s)</b>'
+          + ' — el sitio publicado está atrasado'
+        : '<b style="color:var(--ok)">nada pendiente</b>')));
+  const sucio = PUB.sucio || [];
+  h.push(fila('Sin commitear', sucio.length
+    ? '<b style="color:var(--ambar)">' + sucio.length + ' archivo(s)</b><br>'
+      + '<code style="font-size:12px;white-space:pre-wrap">'
+      + esc(sucio.slice(0,8).join('\n')) + '</code>'
+    : '<b style="color:var(--ok)">árbol limpio</b>'));
+  h.push(fila('PDF del libro', (L.estado === 'ok'
+      ? '<b style="color:var(--ok)">al día</b>'
+      : '<b style="color:var(--err)">' + esc(L.estado||'?') + '</b> — más nuevo: <code>'
+        + esc(L.archivo||'') + '</code>')
+    + '<br><small style="color:var(--muted)">el CI no lo reconstruye: '
+    + 'es un insumo del build, no una salida</small>'));
+  h.push(fila('Hook pre-commit', PUB.hook
+    ? '<b style="color:var(--ok)">activo</b>'
+    : '<b style="color:var(--err)">NO configurado</b><br>'
+      + '<code>git config core.hooksPath .githooks</code>'));
+  h.push(fila('Sitio', '<a href="' + esc(PUB.sitio||'') + '" target="_blank">'
+    + esc(PUB.sitio||'—') + '</a>'));
+  h.push('</table>');
+  h.push('<div style="margin:.9rem 0;display:flex;gap:.5rem;flex-wrap:wrap">'
+    + '<button id="pub-ci">Consultar GitHub Actions</button>'
+    + '<button id="pub-canvas" ' + (PUB.permitir?'':'disabled') + '>Consultar Canvas</button>'
+    + '<span style="color:var(--muted);font-size:12px;align-self:center">'
+    + '— ambas de solo lectura</span></div>');
+  if (!PUB.permitir){
+    h.push('<div style="border-left:3px solid var(--ambar);padding:.5rem .7rem;'
+      + 'background:var(--chip);border-radius:6px">La consulta a Canvas está '
+      + '<b>desactivada</b> en esta sesión. Arranca el panel con '
+      + '<code>python3 panel/panel.py --permitir-publicar</code> para habilitarla. '
+      + '(<code>publicar_canvas.py</code> nunca publica ni borra, pero es la única '
+      + 'acción del panel que sale a la red del curso.)</div>');
+  }
+  $('#pub-cuerpo').innerHTML = h.join('');
+  $('#pub-ci').onclick = async () => {
+    try { await llamar('POST','/api/ci'); cerrarModal(); seguirTrabajo(); }
+    catch(e){ logear('ERROR: ' + e.message); }
+  };
+  if (PUB.permitir) $('#pub-canvas').onclick = async () => {
+    try { await llamar('POST','/api/canvas-estado'); cerrarModal(); seguirTrabajo(); }
+    catch(e){ logear('ERROR: ' + e.message); }
+  };
+}
+function cerrarModal(){ $('#modal').style.display = 'none'; }
+$('#pub-cerrar').onclick = cerrarModal;
+$('#modal').onclick = e => { if (e.target.id === 'modal') cerrarModal(); };
+$('#btn-pub').onclick = async () => {
+  await cargarPub();
+  if (!PUB) return logear('no se pudo leer el estado de publicación');
+  pintarPub();
+  $('#modal').style.display = 'flex';
+};
+
+function seguirTrabajo(alTerminar){
+  const t = setInterval(async () => {
+    let j;
+    try { j = await llamar('GET','/api/render-estado'); } catch(e){ return; }
+    logear(j.titulo + '\n\n' + j.lineas.slice(-40).join('\n')
+           + (j.error ? '\n\nERROR: ' + j.error : ''));
+    if (!j.activo && j.terminado){
+      clearInterval(t);
+      if (alTerminar) alTerminar();
+    }
+  }, 1200);
+}
+
+document.addEventListener('keydown', e => {
+  if (e.key === 'Escape'){ cerrarModal(); logear('', false); return; }
+  if (['INPUT','TEXTAREA'].includes(e.target.tagName)) return;
+  if ($('#modal').style.display === 'flex') return;
+  if (e.key === 'ArrowLeft')  { irA(N-1); e.preventDefault(); }
+  if (e.key === 'ArrowRight') { irA(N+1); e.preventDefault(); }
+  if (e.key === 'a'){ pestana='apunte';   guardar(); pintarGrande(); cargarIframes(); }
+  if (e.key === 'c'){ pestana='capitulo'; guardar(); pintarGrande(); cargarIframes(); }
+  if (e.key === 'd'){ pestana='demo';     guardar(); pintarGrande(); cargarIframes(); }
+  if (e.key === 'o'){ const R=reveal(); if(R) R.toggleOverview(); }
+  if (e.key === 'm'){ modulo = modulo==='ambos' ? '1' : (modulo==='1' ? '2' : 'ambos');
+                      guardar(); pintarPlan(); }
+  const i = ['1','2','3','4','5','6'].indexOf(e.key);
+  if (i >= 0){ vistas[ZONAS[i][0]] = !vistas[ZONAS[i][0]]; aplicarVistas(); }
+});
+
+arrancar().catch(e => {
+  document.body.innerHTML = '<pre style="padding:2rem">No se pudo arrancar: '
+    + esc(e.message) + '</pre>';
+});
+</script>
+</body>
+</html>

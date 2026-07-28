@@ -64,6 +64,15 @@ formación matemática y musical.
   Canvas (curso MUC860-1, id 112005): estructura en
   `canvas/canvas.yml`, se aplica con `python3 canvas/publicar_canvas.py
   sync` (nunca publica ni borra).
+- **Panel de sesión** (`panel/`, 2026-07-28): mesa de trabajo local para
+  preparar una sesión — `python3 panel/panel.py` (127.0.0.1:8767). Vive
+  FUERA de `material/` a propósito: muestra material solo-profesor
+  (planes, pautas, rol del profesor) y dentro del proyecto Quarto correría
+  riesgo de publicarse. Es de solo lectura sobre las fuentes; convierte
+  `plan.md` con pandoc porque la regla de visibilidad lo excluye del
+  render. Qué parsea de dónde y qué convenciones lo romperían:
+  `panel/README.md`; tras editar planes o documentos rectores,
+  `python3 panel/indice.py --verificar`.
 - **Regla de visibilidad (2026-07-22)**: el sitio y Canvas contienen
   SOLO material para estudiantes (apuntes, guías/hojas, demos, libro,
   programa, apps). Material solo-profesor — planes de sesión

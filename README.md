@@ -40,6 +40,9 @@ AM/
 │
 ├── canvas/                    ← integración Canvas (MUC860-1): canvas.yml + publicar_canvas.py
 │
+├── panel/                     ← mesa de trabajo local para preparar una sesión (solo-profesor)
+│   └── panel.py               ← `python3 panel/panel.py` → 127.0.0.1:8767
+│
 ├── ediciones/2026-2/          ← lo fechado de ESTE semestre
 │   ├── CALENDARIO_2026-2.md   ← fechas reales
 │   └── pruebas/               ← prueba1/prueba2 + pautas (generadas, solo-profesor)
@@ -54,7 +57,7 @@ AM/
 
 | Quiero… | Voy a… |
 |---|---|
-| preparar la clase de la semana | `material/curso/sesion-NN/plan.md` |
+| preparar la clase de la semana | `python3 panel/panel.py` — plan, materiales, slides, apunte, capítulo y guías en una sola pantalla ([`panel/README.md`](panel/README.md)); la fuente es `material/curso/sesion-NN/plan.md` |
 | ver/editar el **apunte** de una sesión | `material/curso/sesion-NN/apunte_sNN_*.md` |
 | las **diapositivas** de una clase | `material/curso/sesion-NN/slides_sNN.qmd`; para verlas, `quarto preview` (el CI las filtra del sitio público — ver `GUIA_QUARTO_YML.md`) |
 | el **libro** de lecturas previas (o su PDF) | `material/libro/` → PDF en `material/libro/LIBRO_CURSO.pdf` |
