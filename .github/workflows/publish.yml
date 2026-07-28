@@ -33,6 +33,12 @@ jobs:
         run: |
           quarto render --profile canvas
           cp -r _render/canvas _render/site/canvas
+          # El libro se publica UNA sola vez, en /libro/. El perfil canvas
+          # arrastra el PDF como recurso heredado de _quarto.yml y el cp lo
+          # dejaría otra vez en /canvas/libro/ (1,1 MB duplicados). Canvas
+          # enlaza capítulos sueltos, nunca la portada, así que nada bajo
+          # /canvas/ apunta a este archivo.
+          rm -f _render/site/canvas/libro/LIBRO_CURSO.pdf
 
       - name: Filtrar material solo-profesor del deploy (patrón SyS)
         run: |

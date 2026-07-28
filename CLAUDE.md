@@ -56,7 +56,12 @@ formación matemática y musical.
   (molivarito.github.io/acustica-musical) vía GitHub Actions; para
   previsualizar localmente, `cd material && conda run -n base quarto
   preview`. El PDF del libro: `cd material && conda run -n base quarto
-  render libro`. Canvas (curso MUC860-1, id 112005): estructura en
+  render libro`. Ese PDF (`material/libro/LIBRO_CURSO.pdf`) es la única
+  copia del libro y el CI no lo reconstruye — lo copia como recurso —,
+  así que un hook versionado en `.githooks/` rechaza los commits que
+  cambien capítulos o figuras del libro sin incluirlo regenerado
+  (activar una vez por clon: `git config core.hooksPath .githooks`).
+  Canvas (curso MUC860-1, id 112005): estructura en
   `canvas/canvas.yml`, se aplica con `python3 canvas/publicar_canvas.py
   sync` (nunca publica ni borra).
 - **Regla de visibilidad (2026-07-22)**: el sitio y Canvas contienen

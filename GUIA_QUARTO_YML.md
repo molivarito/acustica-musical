@@ -49,6 +49,19 @@ La única salida que SÍ se versiona es `material/libro/LIBRO_CURSO.pdf`: es
 un entregable, no un artefacto intermedio, y no se regenera en el CI (el
 PDF del libro se arma a mano, cuando corresponda, con `quarto render libro`).
 
+Ese PDF es **la única copia del libro** y es un *insumo* del build, no una
+salida de él: el CI lo copia tal cual como recurso. Como nada lo reconstruye
+automáticamente, puede quedarse atrás en silencio cuando se edita un
+capítulo — pasó una vez con los pesos del hito 2 (8 % en el PDF, 10 % en el
+capítulo). Para cerrar esa grieta hay un hook versionado en `.githooks/` que
+rechaza el commit si se toca una fuente del libro sin incluir el PDF
+regenerado. `core.hooksPath` es configuración local, así que **en cada clon
+nuevo hay que activarlo una vez**:
+
+```bash
+git config core.hooksPath .githooks
+```
+
 ---
 
 ## Parte 3 · Anatomía de `material/_quarto.yml`

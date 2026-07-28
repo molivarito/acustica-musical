@@ -1,0 +1,68 @@
+#!/bin/sh
+# ---------------------------------------------------------------------
+# pre-commit — el PDF del libro al día con sus fuentes.
+#
+# `material/libro/LIBRO_CURSO.pdf` es la ÚNICA copia versionada del
+# libro y, a diferencia del resto del sitio, no la reconstruye el CI:
+# el workflow solo corre `quarto render` (sitio) y `--profile canvas`,
+# nunca `quarto render libro`. El PDF es un INSUMO del build, no una
+# salida — por eso puede quedarse atrás en silencio, como pasó con los
+# pesos del hito 2 (8 % en el PDF vs. 10 % en el capítulo).
+#
+# Este hook corta ese modo de falla: si el commit toca una fuente del
+# libro, el PDF regenerado tiene que ir en el MISMO commit.
+#
+# Regenerar:   cd material && conda run -n base quarto render libro
+# Saltarse el hook (a conciencia):   git commit --no-verify
+# ---------------------------------------------------------------------
+
+set -u
+
+PDF="material/libro/LIBRO_CURSO.pdf"
+
+staged=$(git diff --cached --name-only --diff-filter=ACMR)
+[ -z "$staged" ] && exit 0
+
+# 1. Capítulos, portada y configuración del libro.
+fuentes=$(printf '%s\n' "$staged" |
+  grep -E '^material/libro/.*\.(md|qmd|yml)$' || true)
+
+# 2. Figuras SVG que el libro efectivamente cita (las de las sesiones
+#    que el libro no usa no deberían obligar a recompilarlo).
+figs=$(printf '%s\n' "$staged" |
+  grep -E '^material/assets/figuras/.*\.svg$' || true)
+usadas=""
+for f in $figs; do
+  if grep -rqF --include='*.md' --include='*.qmd' \
+      "${f##*/}" material/libro/ 2>/dev/null; then
+    usadas="${usadas}${f}
+"
+  fi
+done
+
+# Sin fuentes del libro tocadas, no hay nada que verificar.
+[ -z "$fuentes" ] && [ -z "$usadas" ] && exit 0
+
+# Fuentes tocadas: el PDF debe venir en el mismo commit.
+printf '%s\n' "$staged" | grep -qxF "$PDF" && exit 0
+
+{
+  echo
+  echo "  ✗ El PDF del libro quedaría desactualizado."
+  echo
+  echo "  Este commit cambia fuentes del libro:"
+  printf '%s\n' "$fuentes" | sed '/^$/d;s/^/      /'
+  printf '%s' "$usadas"    | sed '/^$/d;s/^/      /'
+  echo
+  echo "  ...pero no incluye $PDF."
+  echo
+  echo "  Regenerar el PDF y agregarlo al commit:"
+  echo
+  echo "      (cd material && conda run -n base quarto render libro)"
+  echo "      git add $PDF"
+  echo
+  echo "  Si el cambio de verdad no afecta al PDF:  git commit --no-verify"
+  echo
+} >&2
+
+exit 1
