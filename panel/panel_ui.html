@@ -120,6 +120,25 @@ img{max-width:100%;height:auto}
   background:var(--panel);border:1px solid var(--border);border-radius:9px;padding:.6rem;
   font:12px/1.4 ui-monospace,SFMono-Regular,Menlo,monospace;white-space:pre-wrap;
   box-shadow:0 8px 30px rgba(0,0,0,.18);display:none;z-index:9}
+
+/* agenda */
+#ag-cols{display:flex;gap:10px;align-items:flex-start}
+.ag-col{flex:1 1 0;min-width:0}
+.ag-col>h3{margin:.1rem 0 .4rem;font-size:12px;color:var(--muted);
+  text-transform:uppercase;letter-spacing:.04em}
+.ag-col.atr>h3{color:var(--err)}
+.ag-t{display:flex;gap:.45rem;align-items:flex-start;border:1px solid var(--border);
+  border-radius:7px;padding:.35rem .5rem;margin-bottom:.35rem}
+.ag-t input{margin-top:.2rem;flex:0 0 auto}
+.ag-t.hecha{opacity:.55}
+.ag-t.hecha .ag-tit{text-decoration:line-through}
+.ag-f{color:var(--muted);font-size:11.5px;white-space:nowrap}
+.ag-t.atr .ag-f{color:var(--err);font-weight:600}
+.ag-det{color:var(--muted);font-size:12px;margin-top:.1rem}
+.ag-grupo{font-size:10.5px;color:var(--muted);border:1px solid var(--border);
+  border-radius:999px;padding:0 .4rem;white-space:nowrap}
+details.ag-extra{margin-top:.7rem}
+details.ag-extra>summary{cursor:pointer;color:var(--muted);font-size:12.5px}
 </style>
 </head>
 <body>
@@ -138,6 +157,7 @@ img{max-width:100%;height:auto}
       <button id="btn-libro" title="Estado del PDF del libro">…</button>
       <button id="btn-avisos" title="Avisos de parseo"></button>
       <button id="btn-pub" title="Estado de publicación">…</button>
+      <button id="btn-agenda" title="Agenda administrativa del semestre">…</button>
       <button id="btn-abrir"
         title="Abrir plan.md en el editor para corregirlo — no para leerlo: el plan ya se ve completo en este panel">✎ editar</button>
     </div>
@@ -225,6 +245,23 @@ img{max-width:100%;height:auto}
     <div id="pub-cuerpo"></div>
     <div style="margin-top:1rem;display:flex;gap:.5rem;justify-content:flex-end">
       <button id="pub-cerrar">Cerrar</button>
+    </div>
+  </div>
+</div>
+
+<div id="modal-ag" style="position:fixed;inset:0;background:rgba(0,0,0,.45);display:none;
+     align-items:center;justify-content:center;z-index:20">
+  <div style="background:var(--panel);border:1px solid var(--border);border-radius:11px;
+       width:min(1150px,95vw);max-height:88vh;overflow:auto;padding:1.1rem 1.3rem">
+    <h2 style="margin:.1rem 0 .2rem;font-size:17px">Agenda del semestre
+      <span id="ag-sub" style="font-size:12.5px;font-weight:400;color:var(--muted)"></span></h2>
+    <div id="ag-avisos" style="color:var(--ambar);font-size:12.5px;margin-bottom:.5rem"></div>
+    <div id="ag-cuerpo"></div>
+    <div style="margin-top:1rem;display:flex;gap:.5rem;justify-content:flex-end;align-items:center">
+      <span style="color:var(--muted);font-size:12px;margin-right:auto">
+        Fechas: <code>CALENDARIO</code> de la edición · reglas: <code>panel/agenda_reglas.yml</code>
+        · también por terminal: <code>python3 panel/agenda.py</code></span>
+      <button id="ag-cerrar">Cerrar</button>
     </div>
   </div>
 </div>
@@ -666,6 +703,7 @@ async function arrancar(){
   irA(N);
   pintarFrescuraBoton();
   await cargarPub();
+  await cargarAgenda();
   setInterval(refrescarFrescura, 20000);
 }
 async function refrescarFrescura(){
@@ -833,6 +871,87 @@ $('#btn-pub').onclick = async () => {
   $('#modal').style.display = 'flex';
 };
 
+// ------------------------------------------------------------------ agenda
+let AG = null;
+async function cargarAgenda(){
+  try { AG = await llamar('GET','/api/agenda'); } catch(e){ AG = null; }
+  pintarAgendaBoton();
+}
+function pintarAgendaBoton(){
+  const b = $('#btn-agenda');
+  if (!AG){ b.textContent = 'agenda'; b.style.color = ''; return; }
+  const atr = AG.resumen['atrasada'] || 0, sem = AG.resumen['esta-semana'] || 0;
+  if (atr){ b.textContent = '⚑ ' + atr + ' atrasada' + (atr>1?'s':''); b.style.color = 'var(--err)'; }
+  else if (sem){ b.textContent = '⚑ ' + sem + ' esta semana'; b.style.color = 'var(--ambar)'; }
+  else { b.textContent = '✓ agenda al día'; b.style.color = 'var(--ok)'; }
+}
+function tareaHTML(t){
+  const cl = 'ag-t' + (t.estado === 'hecha' ? ' hecha' : '')
+                    + (t.estado === 'atrasada' ? ' atr' : '');
+  return '<div class="' + cl + '">'
+    + '<input type="checkbox" data-id="' + esc(t.id) + '"' + (t.hecho ? ' checked' : '') + '>'
+    + '<div style="min-width:0">'
+    + '<div><span class="ag-f">' + esc(t.fecha || 'sin fecha') + '</span> '
+    + '<span class="ag-grupo">' + esc(t.grupo) + '</span></div>'
+    + '<div class="ag-tit">' + esc(t.titulo) + '</div>'
+    + (t.detalle ? '<div class="ag-det">' + esc(t.detalle) + '</div>' : '')
+    + (t.ruta ? '<button class="mini" data-ruta="' + esc(t.ruta)
+                + '" style="margin-top:.2rem">↗ abrir</button>' : '')
+    + '</div></div>';
+}
+function pintarAgenda(){
+  if (!AG){ $('#ag-cuerpo').innerHTML = '<div class="vacio">No se pudo leer la agenda.</div>'; return; }
+  $('#ag-sub').textContent = '· edición ' + AG.edicion + ' · hoy ' + AG.hoy;
+  $('#ag-avisos').innerHTML = (AG.avisos||[]).map(a => '⚠ ' + esc(a)).join('<br>');
+  const por = e => AG.tareas.filter(t => t.estado === e);
+  const col = (rot, cls, ts) => '<div class="ag-col ' + cls + '">'
+    + '<h3>' + rot + ' (' + ts.length + ')</h3>'
+    + (ts.length ? ts.map(tareaHTML).join('') : '<div class="vacio">nada</div>') + '</div>';
+  const futuras = por('futura'), hechas = por('hecha');
+  $('#ag-cuerpo').innerHTML =
+    '<div id="ag-cols">'
+    + col('Atrasado','atr',por('atrasada'))
+    + col('Esta semana','',por('esta-semana'))
+    + col('Próximas 2 semanas','',por('proxima'))
+    + '</div>'
+    + '<details class="ag-extra"><summary>Más adelante (' + futuras.length + ')</summary>'
+    + '<div style="columns:2;gap:10px;margin-top:.4rem">' + futuras.map(tareaHTML).join('') + '</div>'
+    + '</details>'
+    + '<details class="ag-extra"><summary>Hechas (' + hechas.length + ')</summary>'
+    + '<div style="columns:2;gap:10px;margin-top:.4rem">' + hechas.map(tareaHTML).join('') + '</div>'
+    + '</details>';
+  $('#ag-cuerpo').onclick = async e => {
+    const ab = e.target.closest('button[data-ruta]');
+    if (ab){
+      try {
+        const r = await llamar('POST','/api/abrir',{ruta: ab.dataset.ruta});
+        logear('Abierto ' + r.ruta + (r.con ? '\ncon ' + r.con : ''));
+        setTimeout(() => logear('', false), 3000);
+      }
+      catch(err){ logear('No se pudo abrir ' + ab.dataset.ruta + '\n\n' + err.message); }
+      return;
+    }
+    const cb = e.target.closest('input[data-id]');
+    if (cb){
+      cb.disabled = true;
+      try {
+        const r = await llamar('POST','/api/agenda',{ids:[cb.dataset.id], hecho: cb.checked});
+        AG = r.agenda; pintarAgendaBoton(); pintarAgenda();
+      } catch(err){
+        cb.checked = !cb.checked; cb.disabled = false;
+        logear('ERROR: ' + err.message);
+      }
+    }
+  };
+}
+$('#btn-agenda').onclick = async () => {
+  await cargarAgenda();
+  pintarAgenda();
+  $('#modal-ag').style.display = 'flex';
+};
+$('#ag-cerrar').onclick = () => { $('#modal-ag').style.display = 'none'; };
+$('#modal-ag').onclick = e => { if (e.target.id === 'modal-ag') $('#modal-ag').style.display = 'none'; };
+
 function seguirTrabajo(alTerminar){
   const t = setInterval(async () => {
     let j;
@@ -847,9 +966,11 @@ function seguirTrabajo(alTerminar){
 }
 
 document.addEventListener('keydown', e => {
-  if (e.key === 'Escape'){ cerrarModal(); logear('', false); return; }
+  if (e.key === 'Escape'){ cerrarModal(); $('#modal-ag').style.display='none';
+    logear('', false); return; }
   if (['INPUT','TEXTAREA'].includes(e.target.tagName)) return;
-  if ($('#modal').style.display === 'flex') return;
+  if ($('#modal').style.display === 'flex'
+      || $('#modal-ag').style.display === 'flex') return;   // el modal manda
   if (e.key === 'ArrowLeft')  { irA(N-1); e.preventDefault(); }
   if (e.key === 'ArrowRight') { irA(N+1); e.preventDefault(); }
   if (e.key === 'a'){ pestana='apunte';   guardar(); pintarGrande(); cargarIframes(); }

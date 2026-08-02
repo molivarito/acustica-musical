@@ -35,6 +35,7 @@ import webbrowser
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 import indice as idx                                       # noqa: E402
+import agenda as agd                                       # noqa: E402
 
 REPO = idx.REPO
 MATERIAL = idx.MATERIAL
@@ -334,6 +335,8 @@ class Handler(http.server.BaseHTTPRequestHandler):
                 return self._json(200, dict(_JOB))
             if ruta == "/api/publicacion":
                 return self._json(200, estado_publicacion())
+            if ruta == "/api/agenda":
+                return self._json(200, agd.generar(edicion=_ESTADO["edicion"]))
             if ruta.startswith("/r/"):
                 return self._estatico(ruta, q)
             return self._json(404, {"error": "ruta desconocida"})
@@ -400,6 +403,8 @@ class Handler(http.server.BaseHTTPRequestHandler):
                 return self._json(200, self.api_ci())
             if ruta == "/api/canvas-estado":
                 return self._json(200, self.api_canvas_estado())
+            if ruta == "/api/agenda":
+                return self._json(200, self.api_agenda(cuerpo))
             return self._json(404, {"error": "ruta desconocida"})
         except BrokenPipeError:
             pass
@@ -456,6 +461,23 @@ class Handler(http.server.BaseHTTPRequestHandler):
             _correr(_comandos_sesion(n), f"Actualizando s{n:02d}",
                     al_terminar=lambda: indice_actual(refrescar=True))
         return {"ok": True, "titulo": _JOB["titulo"]}
+
+    def api_agenda(self, cuerpo):
+        """Marca o desmarca tareas de la agenda; lo único que escribe es
+        ediciones/<ed>/agenda_estado.yml (nunca el calendario ni las reglas)."""
+        ids = cuerpo.get("ids")
+        if not isinstance(ids, list) or not all(
+                isinstance(i, str) and i for i in ids):
+            raise ValueError("'ids' debe ser una lista de strings")
+        conocidos = {t["id"] for t in
+                     agd.generar(edicion=_ESTADO["edicion"])["tareas"]}
+        raros = [i for i in ids if i not in conocidos]
+        if raros:
+            raise ValueError(f"ids desconocidos: {', '.join(raros[:5])}")
+        agd.marcar(ids, hecho=bool(cuerpo.get("hecho", True)),
+                   edicion=_ESTADO["edicion"])
+        return {"ok": True,
+                "agenda": agd.generar(edicion=_ESTADO["edicion"])}
 
     def api_ci(self):
         """Último workflow de GitHub Actions. Necesita red y `gh`."""

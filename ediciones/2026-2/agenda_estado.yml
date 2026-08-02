@@ -1,0 +1,2 @@
+# agenda_estado.yml — qué tareas de la agenda están hechas (lo escribe panel/agenda.py).
+hecho: {}

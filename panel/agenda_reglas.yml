@@ -1,0 +1,118 @@
+# agenda_reglas.yml — qué tareas administrativas genera cada evento del semestre.
+#
+# Lo lee panel/agenda.py. Las FECHAS no viven aquí: salen del CALENDARIO de la
+# edición (ediciones/<ed>/CALENDARIO_*.md), así que si una sesión o evaluación
+# se mueve, la agenda entera se recalcula sola. Aquí solo se declara qué hay
+# que hacer y cuántos días antes/después del ancla (`dias` negativo = antes).
+#
+# Placeholders en `titulo`/`detalle`/`ruta`: {ses} sesión con dos dígitos
+# (01…15), {ev} nombre de la evaluación (Prueba 1, Hito 2…), {n} su número,
+# {ed} edición (2026-2). `ruta` es relativa al repo y pinta un botón "abrir"
+# en el panel; `detalle` es texto libre (un comando, una aclaración).
+#
+# El estado (qué está hecho) NO vive aquí: ediciones/<ed>/agenda_estado.yml.
+
+# Cada sesión N=1..15 — ancla: su viernes según el calendario. La regla con
+# `cuando: taller` solo aplica a sesiones con taller evaluado (no s01, que es
+# formativa por diseño, ni las sesiones de prueba o de presentaciones).
+sesion:
+  - id: "plan-{ses}"
+    dias: -4
+    titulo: "Revisar el plan de la s{ses} y su lista de materiales para la sala"
+    detalle: "Los dos módulos, tiempos y kits; el panel muestra la lista de chequeo"
+    ruta: "material/curso/sesion-{ses}/plan.md"
+  - id: "imprimir-{ses}"
+    dias: -1
+    titulo: "Imprimir guías y hoja de escucha de la s{ses}; probar demos y audio"
+    detalle: "La escucha del día abre la sesión: el audio se prueba EN la sala, no en la oficina"
+    ruta: "material/curso/sesion-{ses}"
+  - id: "taller-{ses}"
+    dias: 0
+    cuando: taller
+    titulo: "Registrar en Canvas la nota del taller de la s{ses} (logrado/parcial/incipiente)"
+    detalle: "Rúbrica rápida al vuelo, cerrada EN clase; cuentan las mejores 8"
+
+# Sesiones con prueba — ancla: el viernes de la prueba, detectada en la
+# columna hito del calendario ("Prueba 1", "Prueba 2").
+prueba:
+  - id: "prueba{n}-armar"
+    dias: -10
+    titulo: "Armar/revisar enunciado y pauta de la {ev} (48 pts, con casos sonoros)"
+    detalle: "Partes B–D de selección única; la Parte A entrega un rasgo saliente ya descrito"
+    ruta: "ediciones/{ed}/pruebas/prueba{n}.md"
+  - id: "prueba{n}-resolver"
+    dias: -5
+    titulo: "Resolver la {ev} completa de corrido (tiempos y puntajes realistas)"
+    ruta: "ediciones/{ed}/pruebas/prueba{n}_pauta.md"
+  - id: "prueba{n}-imprimir"
+    dias: -3
+    titulo: "Imprimir la {ev} y dejar probado el audio en la sala"
+    detalle: "Los casos sonoros son parte del enunciado: sin audio verificado no hay prueba"
+    ruta: "ediciones/{ed}/pruebas"
+  - id: "prueba{n}-notas"
+    dias: 5
+    titulo: "Publicar las notas de la {ev} en Canvas"
+    detalle: "La Parte A (escucha escrita) se califica aparte, con la rúbrica de 16 pts, en su propia línea"
+
+# Hitos del proyecto (Hito 1 y Hito 2) — ancla: el viernes del hito, detectado
+# en la columna hito del calendario. El hito 3 (presentaciones finales) tiene
+# su propio paquete en `hitos`, porque su logística es distinta.
+hito:
+  - id: "hito{n}-pauta"
+    dias: -7
+    titulo: "Recordar a los grupos la pauta y las expectativas del {ev}"
+  - id: "hito{n}-recibir"
+    dias: 0
+    titulo: "Recibir las entregas del {ev} con su bitácora (roles firmados)"
+  - id: "hito{n}-notas"
+    dias: 7
+    titulo: "Publicar las notas del {ev} y leer las coevaluaciones (ajuste ±0,5)"
+
+# Hitos únicos — ancla: "inicio" (la s01), "sNN" (una sesión concreta) o una
+# evaluación detectada en el calendario (P1, P2, H1, H2, Final).
+hitos:
+  - id: "pre-s01"
+    ancla: inicio
+    dias: -3
+    titulo: "Cerrar el checklist pre-s01: sesión de grabación de línea base, kits y sala"
+    detalle: "Fecha tope real: la propia s01 (ver bitácora jul-2026 en _archivo)"
+  - id: "f1-decidir"
+    ancla: s02
+    dias: -1
+    titulo: "F1: decidir si el taller de la s03 corre formativo (semana universitaria)"
+    detalle: "Recomendación del calendario: formativo → 'mejores 8 de 9'; anunciar con las reglas del curso"
+    ruta: "ediciones/{ed}/CALENDARIO_{ed}.md"
+  - id: "proyecto-lanzar"
+    ancla: s03
+    dias: 0
+    titulo: "Lanzar el proyecto en la s03 (grupos de 4, los 3 hitos, bitácora con roles)"
+    detalle: "La defensa final se conoce desde hoy; hito 1 = diseño con predicción"
+  - id: "receso-recordatorio"
+    ancla: P1
+    dias: -8
+    titulo: "Recordatorio por Canvas en la semana de receso: la Prueba 1 es al volver"
+    detalle: "El receso deja 14 días sin contacto antes de la prueba"
+  - id: "coeval-h2-cerrar"
+    ancla: H2
+    dias: 13
+    titulo: "Cerrar las conversaciones por coevaluación asimétrica del hito 2"
+    detalle: "Ventana 24-oct → 05-nov; la nota del hito 2 se publica antes de la s12"
+  - id: "t60-logistica"
+    ancla: s14
+    dias: -4
+    titulo: "Logística de la salida de medición T60 de la s14 (lugar, equipos, permisos)"
+  - id: "hito3-pauta"
+    ancla: s14
+    dias: 0
+    titulo: "Publicar la pauta del hito 3 (presentación final + informe ≤6 págs)"
+    detalle: "Incluye la regla de envío: presentaciones hasta las 20:00 del jueves previo a la s15"
+  - id: "presentaciones-envio"
+    ancla: s15
+    dias: -1
+    titulo: "Cierre de recepción de presentaciones (20:00) y armado del orden de defensa"
+    detalle: "~25 min por grupo cronometrados; preparar las preguntas individuales"
+  - id: "final-notas"
+    ancla: Final
+    dias: 5
+    titulo: "Publicar las notas del proyecto final y la escucha E3; leer coevaluaciones"
+    detalle: "Cierre del semestre — pico declarado ≈ 4 h; E3 = bloque ★ de la hoja de s15"

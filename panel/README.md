@@ -9,11 +9,42 @@ python3 panel/panel.py                     # abre el panel en el navegador
 python3 panel/panel.py --permitir-publicar # además habilita la consulta a Canvas
 python3 panel/indice.py --verificar        # qué no se pudo parsear
 python3 panel/indice.py --json s04         # los datos crudos de una sesión
+python3 panel/agenda.py                    # agenda administrativa, por terminal
 ```
 
 Sirve en `127.0.0.1:8767` (si está ocupado prueba hasta el 8776). Solo stdlib + PyYAML.
 El puerto no es casual: el panel de SyS usa el 8766 y el armador de su banco el 8765, así
 los tres conviven.
+
+## Agenda administrativa
+
+El botón **⚑ agenda** de la barra (rojo si hay atrasadas, ámbar si hay tareas esta
+semana) abre la agenda del semestre: qué revisar, imprimir, probar y registrar, en
+tres columnas (Atrasado / Esta semana / Próximas 2 semanas), con checkbox por tarea
+y botón para abrir el archivo asociado.
+
+Las tareas **se derivan, no se escriben a mano**: las fechas salen del CALENDARIO de
+la edición (`ediciones/<ed>/CALENDARIO_*.md`, el mismo que parsea `indice.py`) y las
+reglas de `panel/agenda_reglas.yml` (qué genera cada sesión, cada prueba, cada hito
+del proyecto y los hitos únicos, con sus días de anticipación). Las evaluaciones no
+tienen tabla propia: se **detectan en la columna `Hito / nota`** del calendario
+("Hito 1", "Prueba 2", "Presentaciones…"), ancladas a su comienzo — así "se publica
+pauta del hito 3" en la nota de s14 no inventa un hito. Si una sesión o evaluación
+se mueve en el calendario, la agenda entera se recalcula sola.
+
+Dos huellas de AM en las reglas: las pruebas llevan **audio** (los casos sonoros son
+parte del enunciado, y probarlo en la sala es una tarea con fecha), y el registro
+semanal de **notas de taller** solo se genera para sesiones con taller evaluado
+(no s01, ni las de prueba, ni la de presentaciones).
+
+Lo único que se escribe es `ediciones/<ed>/agenda_estado.yml` (qué está hecho y
+cuándo se marcó) — nunca el calendario ni las reglas. Por terminal:
+
+```
+python3 panel/agenda.py                     # atrasadas + esta semana + próximas
+python3 panel/agenda.py --todo              # el semestre completo, incl. hechas
+python3 panel/agenda.py --marcar plan-01    # marca una tarea (ids en el listado)
+```
 
 ## Abrirlo sin terminal
 
