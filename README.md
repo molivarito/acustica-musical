@@ -40,11 +40,13 @@ AM/
 │
 ├── canvas/                    ← integración Canvas (MUC860-1): canvas.yml + publicar_canvas.py
 │
-├── panel/                     ← mesa de trabajo local para preparar una sesión (solo-profesor)
-│   └── panel.py               ← `python3 panel/panel.py` → 127.0.0.1:8767
+├── panel/                     ← mesa de trabajo local (solo-profesor): preparar una sesión
+│   ├── panel.py               ← `python3 panel/panel.py` → 127.0.0.1:8767
+│   └── agenda.py              ← agenda administrativa del semestre (botón ⚑ del panel)
 │
 ├── ediciones/2026-2/          ← lo fechado de ESTE semestre
 │   ├── CALENDARIO_2026-2.md   ← fechas reales
+│   ├── agenda_estado.yml      ← qué tareas de la agenda están hechas
 │   └── pruebas/               ← prueba1/prueba2 + pautas (generadas, solo-profesor)
 │
 └── _archivo/                  ← pasado del curso (solo lectura; nada nuevo nace aquí)
@@ -65,10 +67,12 @@ AM/
 | una **demo** interactiva | `material/demos/` |
 | las **pruebas** (enunciado + pauta) | `ediciones/2026-2/pruebas/` (solo-profesor) |
 | las **fechas reales** de este semestre | `ediciones/2026-2/CALENDARIO_2026-2.md` |
+| saber **qué me toca hacer esta semana** (armar, imprimir, registrar…) | botón ⚑ del panel, o `python3 panel/agenda.py` (guía: [`panel/README.md`](panel/README.md)) |
+| las **reglas de autoría** (estilo de apuntes, formato de demos) | `.claude/rules/estilo-materiales.md`, `.claude/rules/formato-demos.md` |
 | el **programa oficial** del curso | `material/programa_curso.md` (página del sitio) |
 | las **decisiones de diseño** del curso | `OBJETIVOS_APRENDIZAJE.md`, `METODOLOGIA.md`, `PLAN_SEMESTRE.md` |
 | **publicar una semana** en Canvas | módulo correspondiente en la interfaz de Canvas (a mano — ver "Cómo trabajar") |
-| **verificar enlaces** del sitio publicado en Canvas | `canvas/` → `python3 publicar_canvas.py verificar` |
+| **verificar enlaces** del sitio publicado en Canvas | `canvas/` → `python3 publicar_canvas.py verificar` (guía: [`canvas/README.md`](canvas/README.md)) |
 | aprender a **usar Quarto y los YAML** de este repo | [`GUIA_QUARTO_YML.md`](GUIA_QUARTO_YML.md) |
 
 ## Fuente → salida generada → comando
@@ -145,6 +149,24 @@ grabaciones pendientes, decisiones abiertas) vive en
 puedes hacer" — es histórico (rutas de la estructura previa a esta
 migración) pero la lista de pendientes sigue vigente. Las fechas reales del
 semestre están en `ediciones/2026-2/CALENDARIO_2026-2.md`.
+
+## El curso hermano (SyS)
+
+El curso de Señales y Sistemas (`../SyS`) es un repo gemelo: misma arquitectura, mismos
+nombres de documentos rectores, panel y agenda equivalentes. Tabla de equivalencias para
+pasar de uno a otro sin fricción (idéntica en ambos READMEs):
+
+| | SyS (IEE2103) | AM (MUC860) |
+|---|---|---|
+| Unidad de tiempo | `semana-NN` (C1–C30 + Ay1–Ay15) | `sesion-NN` (s01–s15, 2 módulos) |
+| Fechas del año | `ediciones/2026/PLAN_2026-2.md` | `ediciones/2026-2/CALENDARIO_2026-2.md` |
+| Guion docente | dentro del `cXX.qmd` (`.ficha-profesor`) | `sesion-NN/plan.md` aparte |
+| Guías de autoría | `material/GUIA_*.md` | `.claude/rules/*.md` |
+| "banco" | `banco/` = ejercicios (CLI `banco`) | `material/profesor/banco_estimulos.md` = audios |
+| Publicar | `canvas/publicar_sitio.py liberar --semana N` | `git push` (CI) + módulos Canvas a mano |
+| Panel | `panel/panel.py` · puerto **8766** | `panel/panel.py` · puerto **8767** |
+| Agenda administrativa | botón ⚑ del panel · `panel/agenda.py` | ídem |
+| Canvas en producción | curso **105481** | curso **112005** |
 
 ## Principio rector de la arquitectura
 

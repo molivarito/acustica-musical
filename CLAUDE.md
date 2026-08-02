@@ -72,7 +72,13 @@ formación matemática y musical.
   `plan.md` con pandoc porque la regla de visibilidad lo excluye del
   render. Qué parsea de dónde y qué convenciones lo romperían:
   `panel/README.md`; tras editar planes o documentos rectores,
-  `python3 panel/indice.py --verificar`.
+  `python3 panel/indice.py --verificar`. El panel incluye además la
+  **agenda administrativa** del semestre (botón ⚑, o `python3
+  panel/agenda.py`): tareas derivadas del CALENDARIO de la edición +
+  reglas en `panel/agenda_reglas.yml`; estado en
+  `ediciones/<ed>/agenda_estado.yml`. El curso hermano SyS (`../SyS`)
+  tiene panel y agenda gemelos (equivalencias en `README.md` §"El curso
+  hermano").
 - **Regla de visibilidad (2026-07-22)**: el sitio y Canvas contienen
   SOLO material para estudiantes (apuntes, guías/hojas, demos, libro,
   programa, apps). Material solo-profesor — planes de sesión
