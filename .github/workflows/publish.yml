@@ -46,6 +46,10 @@ jobs:
           # local del profesor), pero NO se publican en el sitio
           find material/_render/site -name 'slides_s*.html' -delete
           echo "slides restantes en material/_render/site: $(find material/_render/site -name 'slides_s*.html' | wc -l)"
+          # fotos de archivo con personas identificables: SOLO para
+          # proyectar en clase, jamás al sitio público
+          rm -rf material/_render/site/assets/proyectos_antiguos
+          rm -rf material/_render/site/canvas/assets/proyectos_antiguos
 
       - name: Auditar fugas de material solo-profesor (patrón SyS)
         run: python3 canvas/auditar_sitio.py --sin-slides material/_render/site

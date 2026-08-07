@@ -37,6 +37,11 @@ NOMBRES_PROHIBIDOS = [
 # Extensiones de fuente cruda que jamás deberían llegar al sitio.
 EXTENSIONES_PROHIBIDAS = {".qmd", ".md"}
 
+# Directorios que jamás deberían llegar al sitio (cualquier segmento
+# de la ruta). proyectos_antiguos: fotos de archivo con personas
+# identificables — solo para proyectar en clase (2026-08-07).
+DIRECTORIOS_PROHIBIDOS = {"proyectos_antiguos", "estimulos"}
+
 
 def auditar(raiz: Path, sin_slides: bool) -> list[str]:
     fugas = []
@@ -45,7 +50,12 @@ def auditar(raiz: Path, sin_slides: bool) -> list[str]:
             continue
         rel = p.relative_to(raiz)
         nombre = p.name.lower()
-        if any(patron in nombre for patron in NOMBRES_PROHIBIDOS):
+        if sin_slides and any(seg in DIRECTORIOS_PROHIBIDOS
+                              for seg in rel.parts[:-1]):
+            # solo en modo CI: localmente estos directorios existen en el
+            # render (los usan las slides); el CI los borra antes del deploy
+            fugas.append(f"directorio solo-profesor copiado al sitio: {rel}")
+        elif any(patron in nombre for patron in NOMBRES_PROHIBIDOS):
             fugas.append(f"nombre solo-profesor: {rel}")
         elif p.suffix.lower() in EXTENSIONES_PROHIBIDAS:
             fugas.append(f"fuente cruda copiada al sitio: {rel}")

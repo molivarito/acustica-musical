@@ -156,21 +156,43 @@ aparece altura.
 
 ## El proyecto del curso queda lanzado {.center}
 
-En grupos de 3: **construir o modificar** un instrumento o instalación
-sonora, y **explicar acústicamente** su comportamiento.
+**Individual**: construir o modificar un objeto que suene — o estudiar
+a fondo un instrumento — y **explicar acústicamente** su
+comportamiento.
 
 > [La calidad de la explicación vale más que el éxito
 > sonoro.]{style="color:#0f766e"}
 
 Vale **35 %** de la nota final.
 
+## Así se ve: proyectos de otras generaciones {.center}
+
+![](../../assets/proyectos_antiguos/p1.jpg){height=340} ![](../../assets/proyectos_antiguos/p4.jpg){height=340} ![](../../assets/proyectos_antiguos/p2.jpg){height=340}
+
+Copófono en arco · tambor de balón de gas · flauta de PVC
+
+::: {.notes}
+Fotos del archivo del curso con personas identificables: solo para
+proyectar en clase; excluidas del sitio público por el CI.
+:::
+
+## Y más {.center}
+
+![](../../assets/proyectos_antiguos/p5.jpg){height=300} ![](../../assets/proyectos_antiguos/p6.jpg){height=300} ![](../../assets/proyectos_antiguos/p7.jpg){height=300} ![](../../assets/proyectos_antiguos/p8.jpg){height=300}
+
+Monocordio con contrapesos · cordófonos artesanales · salterio
+
+. . .
+
+**Todos empezaron igual: un objeto, una pregunta, un celular.**
+
 ## Tres hitos, todo el semestre
 
-| Hito | Fecha | Entrega | % |
+| Hito | Sesión | Entrega | % |
 |---|---|---|---|
-| 1 — Diseño con predicción | vie 04-sep (s05) | predicción escrita + modelo del curso | 10 % |
-| 2 — Avance | vie 23-oct (s10) | mediciones + evidencia sonora | 10 % |
-| Final | vie 27-nov (s15) | defensa (~11′) + informe ≤ 6 págs | 15 % |
+| 1 — Diseño con predicción | s05 | predicción escrita + modelo del curso | 10 % |
+| 2 — Avance | s10 | mediciones + evidencia sonora | 10 % |
+| Final | s15 | defensa (~11′) + informe ≤ 6 págs | 15 % |
 
 ## Cómo se juega
 
@@ -218,5 +240,5 @@ Si pulsa la MISMA cuerda en el medio, o muy cerca del puente...
 - **Traer instrumentos de cuerda pulsada** (guitarra, charango,
   ukelele — 1 o 2 por grupo)
 - Bitácora del proyecto al día
-- Hito 1 en s05 (vie 04-sep)
+- Hito 1 en s05
 :::

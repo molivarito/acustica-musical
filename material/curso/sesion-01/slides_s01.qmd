@@ -122,6 +122,28 @@ Dos módulos de 70′. Y siempre:
   dentro de la clase, no les roba fines de semana
 :::
 
+## Así se ve: proyectos de otras generaciones {.center}
+
+![](../../assets/proyectos_antiguos/p1.jpg){height=340} ![](../../assets/proyectos_antiguos/p4.jpg){height=340} ![](../../assets/proyectos_antiguos/p2.jpg){height=340}
+
+Copófono en arco · tambor de balón de gas · flauta de PVC
+
+::: {.notes}
+Fotos del archivo del curso con personas identificables: se proyectan
+en clase, pero están EXCLUIDAS del sitio público (el CI filtra la
+carpeta proyectos_antiguos y la auditoría lo vigila).
+:::
+
+## Y más {.center}
+
+![](../../assets/proyectos_antiguos/p5.jpg){height=300} ![](../../assets/proyectos_antiguos/p6.jpg){height=300} ![](../../assets/proyectos_antiguos/p7.jpg){height=300} ![](../../assets/proyectos_antiguos/p8.jpg){height=300}
+
+Monocordio con contrapesos · cordófonos artesanales · salterio
+
+. . .
+
+**Todos empezaron igual: un objeto, una pregunta, un celular.**
+
 ## Fuera del aula
 
 ::: {.incremental}
