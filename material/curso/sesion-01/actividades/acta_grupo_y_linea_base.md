@@ -1,6 +1,6 @@
-# Acta de grupo + pauta de línea base (s01)
+# Acta de mesa + pauta de línea base (s01)
 
-## A. Acta de formación de grupo (módulo 1, 15 min)
+## A. Acta de formación de la mesa (módulo 1, 15 min)
 
 Las mesas de trabajo duran un tramo del semestre (esta acta cubre el
 tramo 1: s01–s05) y se rearman dos veces (tras s05 y tras s10) para

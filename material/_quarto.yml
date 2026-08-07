@@ -49,6 +49,7 @@ website:
           - section: "Actividades"
             contents:
               - curso/sesion-01/actividades/acta_grupo_y_linea_base.md
+              - curso/sesion-01/actividades/rubrica_oa3_hoja.md
               - curso/sesion-01/actividades/guia_pee_regla.md
               - curso/sesion-01/actividades/guia_pee_zona_gris.md
           - text: "Demo — tren de pulsos"
