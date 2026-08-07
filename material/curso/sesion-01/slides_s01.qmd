@@ -11,7 +11,18 @@ format:
     transition: fade
 ---
 
+```{=html}
+<style>
+/* chip de coordinación con el plan de sesión (bloque · minutos) */
+.reveal .tiempo{position:absolute;top:0;right:0;font-size:15px;
+  font-family:sans-serif;color:#6b7280;background:#f1f3f5;
+  border-radius:999px;padding:2px 12px;letter-spacing:.02em}
+</style>
+```
+
 ## Escuchen {.center}
+
+[M1 · 0–10′]{.tiempo}
 
 *(golpe seco en la mesa — luego una nota larga de flauta)*
 
@@ -21,12 +32,16 @@ format:
 
 ## Bienvenidos a [Acústica Musical]{style="color:#0f766e"}
 
+[M1 · 10–25′]{.tiempo}
+
 > Al terminar el semestre, ustedes no van a poder oír un instrumento, una
 > sala o una grabación de la misma manera que antes.
 
 Este curso es sobre **escuchar como científico**.
 
 ## Un mismo fenómeno, tres capas
+
+[M1 · 10–25′]{.tiempo}
 
 | Capa | Pregunta |
 |---|---|
@@ -39,6 +54,8 @@ Este curso es sobre **escuchar como científico**.
 Todo diagnóstico de este curso conecta las tres.
 
 ## ¿Quiénes somos? — a mano alzada
+
+[M1 · 10–25′]{.tiempo}
 
 ::: {.incremental}
 - ¿De qué **familia** es su instrumento principal — cuerdas, vientos,
@@ -65,6 +82,8 @@ formación de grupos, 40–55′).
 
 ## El mapa del semestre
 
+[M1 · 10–25′]{.tiempo}
+
 | Bloque | Sesiones | Pregunta |
 |---|---|---|
 | **A. El sonido como objeto físico** | s01–s04 | ¿qué vibra y cómo? |
@@ -85,6 +104,8 @@ en Canvas, hoy quédense con la forma del semestre".
 
 ## Cómo es cada sesión
 
+[M1 · 10–25′]{.tiempo}
+
 Dos módulos de 70′. Y siempre:
 
 ::: {.incremental}
@@ -102,6 +123,8 @@ Dos módulos de 70′. Y siempre:
 
 ## Tres reglas del juego
 
+[M1 · 10–25′]{.tiempo}
+
 ::: {.incremental}
 1. **Primero suena, después se explica.**
 2. **Nada suena sin predicción** — escrita, antes, aunque salga mala.
@@ -110,6 +133,8 @@ Dos módulos de 70′. Y siempre:
 :::
 
 ## El proyecto: SU objeto que suena
+
+[M1 · 10–25′]{.tiempo}
 
 ::: {.incremental}
 - **Cada uno elige un objeto sonoro propio** (s03): su instrumento,
@@ -124,6 +149,8 @@ Dos módulos de 70′. Y siempre:
 
 ## Así se ve: proyectos de otras generaciones {.center}
 
+[M1 · 10–25′]{.tiempo}
+
 ![](../../assets/proyectos_antiguos/p1.jpg){height=340} ![](../../assets/proyectos_antiguos/p4.jpg){height=340} ![](../../assets/proyectos_antiguos/p2.jpg){height=340}
 
 Copófono en arco · tambor de balón de gas · flauta de PVC
@@ -136,6 +163,8 @@ carpeta proyectos_antiguos y la auditoría lo vigila).
 
 ## Y más {.center}
 
+[M1 · 10–25′]{.tiempo}
+
 ![](../../assets/proyectos_antiguos/p5.jpg){height=300} ![](../../assets/proyectos_antiguos/p6.jpg){height=300} ![](../../assets/proyectos_antiguos/p7.jpg){height=300} ![](../../assets/proyectos_antiguos/p8.jpg){height=300}
 
 Monocordio con contrapesos · cordófonos artesanales · salterio
@@ -145,6 +174,8 @@ Monocordio con contrapesos · cordófonos artesanales · salterio
 **Todos empezaron igual: un objeto, una pregunta, un celular.**
 
 ## Fuera del aula
+
+[M1 · 10–25′]{.tiempo}
 
 ::: {.incremental}
 - Preparación **breve y dirigida** (≤1 h): páginas exactas o una demo,
@@ -157,6 +188,8 @@ Monocordio con contrapesos · cordófonos artesanales · salterio
 
 ## Cómo se evalúa
 
+[M1 · 10–25′]{.tiempo}
+
 ::: {.incremental}
 - **Talleres** (cerrados en clase, mejores 8 de ~10) — 35%
 - **Proyecto** (individual): hito diseño 10% + hito avance 10% +
@@ -167,6 +200,8 @@ Monocordio con contrapesos · cordófonos artesanales · salterio
 :::
 
 ## Lo que suena en clase no lleva nota {.center}
+
+[M1 · 10–25′]{.tiempo}
 
 La **escucha del día** abre cada sesión: escriben 3 líneas, discuten en
 su mesa, respondo preguntas a una o dos mesas.
@@ -181,24 +216,9 @@ Se aprende a escuchar equivocándose en voz alta y sin costo. Lo que sí
 se califica es la escucha **escrita**: mismo audio para todos, varias
 pasadas, tiempo para pensar.
 
-## Las tres mesas de trabajo {.center}
-
-Mesas de 3, mezclando instrumentos y afinidades (ninguna homogénea).
-
-::: {.incremental}
-- Se nombran y reparten roles: **ejecuta / mide y registra / vocero**
-- Firman un acta de mesa
-- Se **rearman dos veces** en el semestre (tras s05 y tras s10):
-  van a trabajar con todo el curso
-:::
-
-::: {.notes}
-Anunciar la rotación de mesas HOY, como parte del diseño ("conocer
-cómo trabaja todo el curso"), no como amenaza. El proyecto es
-individual, así que rearmar mesas no rompe nada.
-:::
-
 ## La línea base de hoy (sin nota)
+
+[M1 · 25–40′]{.tiempo}
 
 El protocolo que vamos a repetir toda la sesión, toda la sesión, todo el
 semestre:
@@ -211,7 +231,9 @@ semestre:
 
 ## Mecánica de la línea base
 
-Van a escuchar un estímulo **una sola vez**.
+[M1 · 25–40′]{.tiempo}
+
+Van a escuchar un estímulo de ~30 s, **dos pasadas**.
 
 ::: {.incremental}
 - Todos escriben su diagnóstico en 3 líneas
@@ -223,6 +245,8 @@ Van a escuchar un estímulo **una sola vez**.
 semestre. Esta hoja es para que en noviembre vean cuánto cambiaron.*
 
 ## La rúbrica del curso (OA3)
+
+[M1 · 25–40′]{.tiempo}
 
 | Dimensión | La pregunta que responde |
 |---|---|
@@ -244,7 +268,28 @@ cada respuesta real — elogiar lo logrado, no sancionar lo inicial
 cada mesa.
 :::
 
+## Las tres mesas de trabajo {.center}
+
+[M1 · 40–55′]{.tiempo}
+
+Mesas de 3, mezclando instrumentos y afinidades (ninguna homogénea).
+
+::: {.incremental}
+- Se nombran y reparten roles: **ejecuta / mide y registra / vocero**
+- Firman un acta de mesa
+- Se **rearman dos veces** en el semestre (tras s05 y tras s10):
+  van a trabajar con todo el curso
+:::
+
+::: {.notes}
+Anunciar la rotación de mesas HOY, como parte del diseño ("conocer
+cómo trabaja todo el curso"), no como amenaza. El proyecto es
+individual, así que rearmar mesas no rompe nada.
+:::
+
 ## PEE relámpago: la regla en la mesa
+
+[M1 · 55–70′]{.tiempo}
 
 Una regla firme, apoyada en el borde de la mesa, vibrando.
 
@@ -256,6 +301,8 @@ Una regla firme, apoyada en el borde de la mesa, vibrando.
 pasa al sonido?
 
 ## Del golpe al tono {.center}
+
+[M2 · 0–10′]{.tiempo}
 
 Un golpe. Luego, muchos golpes por segundo.
 
@@ -269,6 +316,8 @@ Voten a mano alzada.
 
 ## ¿El mismo dato, dos caras?
 
+[M2 · 10–25′]{.tiempo}
+
 > **Frecuencia** $f$: repeticiones por segundo, en **hertz (Hz)**.
 > **Período** $T$: cuánto dura cada repetición.
 
@@ -281,6 +330,8 @@ veces.
 
 ## Votación: ¿duplicar $f$ duplica la altura?
 
+[M2 · 10–25′]{.tiempo}
+
 . . .
 
 **No.** Duplicar la frecuencia sube una **octava** — que es otra cosa.
@@ -289,6 +340,8 @@ Lo físico (frecuencia) no es lo percibido (altura): primera advertencia
 del curso.
 
 ## Dos números para calibrar
+
+[M2 · 10–25′]{.tiempo}
 
 ::: {.incremental}
 - El La con que afina la orquesta (La4): **440 Hz**
@@ -302,6 +355,8 @@ sonar a nota?
 
 ## Taller: la zona gris ritmo–tono
 
+[M2 · 25–60′]{.tiempo}
+
 ::: {.incremental}
 - **Prediga** por escrito su umbral personal ritmo→tono
 - **Mídalo** con la demo, para 2 timbres de pulso distintos
@@ -311,6 +366,8 @@ sonar a nota?
 
 ## Antes de medir {.center}
 
+[M2 · 25–60′]{.tiempo}
+
 **¿El umbral es del sonido, o del oyente?**
 
 Predigan en grupo antes de tocar la demo.
@@ -318,6 +375,8 @@ Predigan en grupo antes de tocar la demo.
 ## Demo: midan su umbral {background-iframe="../../demos/demo_tren_pulsos.html" background-interactive="true"}
 
 ## Síntesis del día
+
+[M2 · 60–70′]{.tiempo}
 
 ::: {.incremental}
 - Un tono nace de una vibración que se repite lo bastante rápido
@@ -327,11 +386,15 @@ Predigan en grupo antes de tocar la demo.
 
 ## Ticket de salida
 
+[M2 · 60–70′]{.tiempo}
+
 Escriban su predicción para la próxima sesión:
 
 > **¿Cómo se vería este pulso, si pudiéramos dibujarlo?**
 
 ## Para la próxima sesión
+
+[M2 · 60–70′]{.tiempo}
 
 - Traer **celular con app de espectrograma** instalada
 - s02: convertimos el sonido en imagen — forma de onda, espectro,
