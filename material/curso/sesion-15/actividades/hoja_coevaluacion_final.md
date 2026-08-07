@@ -1,3 +1,11 @@
+**OBSOLETA (2026-08-07)**: el proyecto pasó a individual; esta ficha no
+se usa en 2026-2. El hito 3 ya no tiene coevaluación (pauta
+`sesion-14/actividades/pauta_hito3_presentacion_final.md`, §5): la nota
+es directa, con la bitácora individual como respaldo. Se conserva este
+archivo como registro histórico del diseño grupal.
+
+---
+
 # Ficha de coevaluación final intra-grupo (s15, hito 3)
 
 **Objetivo**: nota individual del hito 3 (OA5.3) — la coevaluación
@@ -7,9 +15,10 @@ su nota individual del hito queda pendiente. Mismo formato de la
 ficha del hito 2 (así lo declara la pauta), extendida al semestre
 completo.
 
-**Cuándo**: se llena en el primer bloque del cierre de s15 (min 46–51
-del módulo 2) y se entrega en su sobre, en la caja, junto con las
-hojas de escucha (cajas separadas).
+**Cuándo**: se llena en el primer bloque del cierre de s15 (min 6–12
+del módulo 2, justo tras la re-escucha y ANTES del plenario) y se
+entrega en su sobre, en la caja, junto con las hojas de escucha (cajas
+separadas).
 
 **Alcance**: TODO el proyecto (del hito 1 a la presentación de hoy),
 con énfasis en el tramo desde el hito 2 — que es el que la
@@ -25,7 +34,6 @@ bitácora con roles firmados: la evidencia manda sobre la impresión.
 >
 > | Compañero/a | Aporte al trabajo del semestre (1–5) | Cumplimiento de sus roles firmados (1–5) | Aporte a la preparación del informe y la presentación final (1–5) | En una línea: su aporte concreto |
 > |---|---|---|---|---|
-> | | | | | |
 > | | | | | |
 > | | | | | |
 >

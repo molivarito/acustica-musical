@@ -15,28 +15,29 @@ format:
 
 | Módulo 1 (70′) | Módulo 2 (70′) |
 |---|---|
-| Grupo 1 → Grupo 2 → Grupo 3 | Grupo 4 → Grupo 5 → **Cierre del curso** (24′) |
+| Defensas 1 → 2 → 3 → 4 → 5 (5 de las 9) | Defensas 6 → 7 → 8 → 9 → **cierre del curso** |
 
-Cada bloque: **15′ de presentación** (el objeto suena en vivo) + preguntas individuales.
+Cada defensa: **8′ de presentación** (el objeto suena en vivo) + **3′ de preguntas** (2, dirigidas a usted). 9 defensas individuales — el proyecto es suyo desde s03.
 
 ## ¿Cómo corre el día?
 
 | | |
 |---|---|
-| **Orden** | sorteado en la sesión anterior, proyectado a la entrada |
-| **Tiempos** | 15′ presentación + preguntas individuales (7′; grupo 1: 5′) |
-| **Corte** | cronómetro visible — corte duro, igual para los 5 grupos |
-| **Transición** | el grupo siguiente pre-monta mientras el anterior responde |
+| **Orden** | sorteado en s14 (9 nombres), proyectado a la entrada |
+| **Tiempos** | 8′ presentación + 3′ preguntas = 11′, iguales para las 9 |
+| **Corte** | cronómetro visible — corte duro, igual para las 9 |
+| **Transición** | quien sigue pre-monta mientras el anterior responde |
 
-## Mientras el otro grupo defiende, ¿qué hace usted?
+## Mientras otro compañero defiende, ¿qué hace usted?
 
-> Un diagnóstico por cada instrumento que escuchan sonar (el propio, no)
+> Por sorteo previo, tiene **2 defensas asignadas** para diagnosticar (nunca la propia) — no las 9
 
 ::: {.incremental}
-- **4 bloques**: uno por cada presentación que observan
-- Se escriben durante las preguntas y la transición de ese grupo (~9′)
+- **2 bloques**: uno por cada defensa que le asignaron
+- Se escriben durante las preguntas y la transición de esa defensa
 - La misma tríada de siempre: **describir → hipotetizar → verificar**
-- Al cierre, marquen ★ su **mejor diagnóstico** del día
+- Sin re-escucha colectiva (no cabe con 9): apóyese en lo que oyó en vivo
+- Al pasar hacia el cierre, marque ★ su **mejor diagnóstico** y entregue la hoja
 :::
 
 ## La regla que gobierna todo desde la sesión 3 {.center}
@@ -57,15 +58,7 @@ Cada bloque: **15′ de presentación** (el objeto suena en vivo) + preguntas in
 
 Quedan ustedes con ustedes mismos.
 
-## Antes que nada: la coevaluación
-
-> Ficha individual, en sobre cerrado — mismo formato del hito 2, ahora sobre todo el semestre
-
-::: {.incremental}
-- Ajusta la nota individual hasta **±0,5** respecto de la nota del grupo
-- Se llena ahora y se entrega en su sobre, junto con sus hojas de escucha (cajas separadas)
-- Sin ella, su nota individual del hito queda pendiente
-:::
+> Nota directa, sin coevaluación: el proyecto es individual desde s03. Entreguen su hoja de escucha (con el ★ marcado) en la caja, al pasar hacia aquí.
 
 ## La línea base, otra vez {.center}
 
@@ -115,7 +108,7 @@ Ambas hojas son suyas: se las llevan.
 > Lo que se oye. El mecanismo que lo produce. La medición que arbitra.
 
 - **Describir → hipotetizar → verificar**, desde la sesión 1 hasta la defensa de hoy
-- Hoy cada grupo recorrió esa cadena completa — con su propio instrumento, en vivo
+- Hoy cada uno de ustedes recorrió esa cadena completa — con su propio instrumento, en vivo
 
 ## Desde hoy, ustedes ya no pueden des-oír {.center}
 

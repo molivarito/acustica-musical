@@ -4,114 +4,120 @@
 comportamiento obtenido — incluidas las desviaciones respecto de lo
 predicho — integrando modelo, medición y escucha; es el hito 3, 15 %),
 OA3.2 (conectar sensación–mecanismo–medición: en la defensa de cada
-grupo y en la hoja de escucha argumentada del público), OA3.1 (hoja de
-escucha del público + cierre del arco con la línea base de s01).
+estudiante y en la hoja de escucha argumentada del público), OA3.1 (hoja
+de escucha del público + cierre del arco con la línea base de s01).
 **Requisitos previos**: TODO el curso. En concreto: la pauta del hito 3
-publicada y entregada impresa en s14; el orden de presentación SORTEADO
-en vivo al cierre de s14 (lámina); los informes ≤6 págs que se entregan
-AL INICIO de hoy; la predicción del hito 1 (s05) que cada grupo debe
-confrontar; las mediciones de la serie s08–s12 sobre el objeto; las 20
-hojas de línea base archivadas desde s01 y el estímulo #1 del banco
-(guitarra con batidos) para el cierre. Lectura previa:
+publicada y entregada impresa en s14; el orden de las 9 defensas
+SORTEADO en vivo al cierre de s14; los informes ≤6 págs individuales
+que se entregan AL INICIO de hoy; la predicción del hito 1 (s05) que
+cada estudiante debe confrontar; las mediciones de la serie s08–s12
+sobre el objeto propio; las 9 hojas de línea base archivadas desde s01
+y el estímulo #1 del banco (guitarra con batidos) para el cierre.
+Lectura previa:
 [`libro/cap15_explicar_es_la_prueba.md`](../../libro/cap15_explicar_es_la_prueba.md) — se consume en la estructura
-misma de las defensas (los grupos la usaron para prepararse) y en la
+misma de las defensas (cada estudiante la usó para prepararse) y en la
 calidad de las hojas de escucha del público (el arsenal de preguntas
 del capítulo), principio 6.
 **Posición en la progresión**: cierre del curso. No hay contenido
-nuevo, no hay demo, no hay ticket de salida: ambos módulos son las
-presentaciones finales (5 grupos × bloque cronometrado) y los últimos
-24′ son el cierre del semestre. La regla que gobierna la sesión es la
-del curso desde s03: **la calidad de la explicación pesa más que el
+nuevo, no hay demo, no hay ticket de salida: ambos módulos son
+defensas individuales (9 en total, ~11′ cada una) y el tramo final del
+módulo 2 es el cierre del semestre. La regla que gobierna la sesión es
+la del curso desde s03: **la calidad de la explicación pesa más que el
 éxito sonoro** (`OBJETIVOS_APRENDIZAJE.md`, OA5.3; pauta del hito 3).
 **Reglas aplicadas y decisiones de carga (declaradas)**:
 (1) **No hay escucha del día** en s15: la práctica semanal (sin nota)
 terminó en s14 (así se anunció: "en s15, el estímulo son ustedes"). Su
-lugar lo ocupa la **escucha escrita 3**: cada estudiante escribe UN
-diagnóstico OA3 (describir/hipotetizar/verificar) del instrumento de
-CADA grupo que observa — el público no es espectador pasivo. Las hojas
-se recogen al cierre y son la evidencia final de OA3; el bloque que
-cada estudiante marque con ★ como su mejor diagnóstico se califica con
-la rúbrica OA3 (10 % del curso junto con la Parte A de la Prueba 1 y de
-la Prueba 2, metodología §4: cuentan las mejores 2 de 3).
-(2) **El módulo 2 no tiene gancho sonoro separado**: el gancho es el
-instrumento del grupo 4 sonando en vivo (regla §3 adaptada; precedente
-de excepción declarada: s07 con prueba).
-(3) **Aritmética del día**: bloque de presentación = **22′
-cronometrados (15′ presentación con el objeto sonando + 7′ preguntas
-individuales), corte duro e igual para los 5 grupos**; los ~3′ de
-transición de la pauta se SOLAPAN, no se suman: el grupo siguiente
-pre-monta durante las preguntas del anterior, todas las presentaciones
-corren en el **notebook único de sala** (enviadas por el canal del
-curso hasta las 20:00 de la víspera + USB de respaldo), y el público
-escribe su hoja de escucha durante esas mismas preguntas. Transición
-efectiva presupuestada: 2′.
-(4) **El grupo 1 tiene preguntas de 5′** (no 7′): es la compensación
-anunciada en s14 al sorteado primero ("preguntas individuales más
-cortas"). Su cronómetro de presentación (15′) es idéntico al resto.
-(5) **Recepción de informes EN LA PUERTA** al entrar (protocolo
-validado en s08 y s14): el vocero entrega informe + bitácora, el
-profesor marca 5/5 en su checklist y entrega a cada estudiante sus 2
-hojas de escucha. Informe ausente al inicio → regla del hito 2 (se
-recibe hasta 48 h después con −1,0; la presentación se hace igual);
-no se discute en aula.
-(6) **Orden de presentación**: el sorteado en vivo en s14, proyectado
-en la lámina de entrada. Plan B: si el sorteo no se hizo o falta un
-grupo, re-sorteo en el encuadre (2′, se come el margen de la primera
-transición).
-(7) **Coevaluación final intra-grupo en sobre cerrado al cierre**
-(pauta hito 3 §5, mismo formato del hito 2, ajuste ±0,5): se llena en
-el primer bloque del cierre, solapada con el reparto de los sobres de
-línea base (el profesor reparte mientras escriben).
-(8) **Fusibles**: los cortes duros existen para que nada se corra;
-el colchón real es el cierre (24′), que puede comprimir hasta 15′
-recortando "voces del antes/después" (3′→0) y síntesis (4′→2′) y
-migrando la evaluación del curso a formulario en línea (48 h). Nunca
-se recortan: el estímulo de línea base, la devolución de las hojas de
-s01 ni la coevaluación. Recuperación máxima: ~9′.
+lugar lo ocupa la **escucha escrita 3**: por **sorteo previo**, cada
+estudiante tiene asignadas **2 defensas** (nunca la propia) sobre las
+que escribe UN diagnóstico OA3 (describir/hipotetizar/verificar) —
+distribuido para que cada proyecto reciba ~2 diagnósticos. Las hojas se
+entregan al pasar hacia el cierre (después de la defensa 9) y son la
+evidencia final de OA3; el bloque que cada estudiante marque con ★ como
+su mejor diagnóstico se califica con la rúbrica OA3 (10 % del curso
+junto con la Parte A de la Prueba 1 y de la Prueba 2, metodología §4:
+cuentan las mejores 2 de 3).
+(2) **Con 9 defensas individuales no caben, y se declaran fuera de
+diseño (no son omisiones)**: la **coevaluación** (el proyecto es
+individual desde s03: no hay compañeros de proyecto que coevaluar), la
+**re-escucha colectiva** de los 9 objetos (existía cuando eran 3
+instrumentos; con 9 tomaría ~18′ que la sesión no tiene) y el
+**plenario comparado** (existía para cruzar 3 proyectos; con 9 ya
+expuestos individualmente, un plenario adicional duplicaría sin
+aportar). El público se apoya en lo que oyó y anotó DURANTE cada
+defensa — como hace toda la escucha del día del semestre.
+(3) **Aritmética del día**: cada defensa = **11′ cronometrados (8′
+presentación con el objeto sonando + 3′ preguntas), corte duro e igual
+para las 9**; entre defensas hay **1′ de transición solapada** (el
+siguiente estudiante pre-monta durante los 3′ de preguntas del
+anterior), salvo la defensa 1 del día, que no tiene Q&A previa de la
+que "robar" tiempo de montaje y por eso lleva 4′ de transición propia
+(bloque total 15′ en vez de 12′; aritmética completa en cada módulo).
+Todas las presentaciones corren en el **notebook único de sala**
+(enviadas por el canal del curso hasta las 20:00 de la víspera + USB de
+respaldo).
+(4) **Recepción de informes EN LA PUERTA** al entrar (protocolo
+validado en s08 y s14): cada estudiante que presenta entrega informe +
+bitácora, el profesor marca 9/9 en su checklist y entrega a cada
+estudiante del público su hoja de escucha ya pre-rotulada con sus 2
+defensas asignadas. Informe ausente al inicio → regla del hito 2 (se
+recibe hasta 48 h después con −1,0; la defensa se hace igual); no se
+discute en aula.
+(5) **Orden de las 9 defensas**: el sorteado en vivo en s14, proyectado
+en la lámina de entrada. Plan B: si el sorteo no se hizo o falta
+alguien, re-sorteo en el encuadre (2′, se come el margen del colchón).
+(6) **Fusibles**: los cortes de defensa NO se estiran por ningún
+motivo (equidad prometida en la pauta); el colchón de 4′ del módulo 1
+es la primera línea de defensa para cortes que se pasaron; el colchón
+real del módulo 2 es el cierre, que puede comprimir "voces" (5′→0), la
+síntesis (4′→2′) y migrar la evaluación del curso a formulario en línea
+(48 h). Nunca se recortan: las 9 defensas, el estímulo de línea base ni
+la devolución de sobres. Recuperación máxima: ~10′.
 
-## Módulo 1 — Tres defensas (formato: clínica ampliada de cierre, metodología §4; el módulo completo es evaluación del hito 3)
-
-| Tiempo | Bloque | Actividad del estudiante | Rol del profesor | Materiales |
-|---|---|---|---|---|
-| 0–2′ | Encuadre en frío (los informes ya entraron por la puerta; el grupo 1 montó ANTES de la hora — citado 15′ antes) | Verifica que tiene sus 2 hojas de escucha (4 bloques); lee en la lámina: orden sorteado en s14, reglas de corte (15′+7′, cronómetro visible), qué hace el público (un diagnóstico por presentación, se escribe durante las preguntas) | Confirma 5/5 informes recibidos; enciende el cronómetro de sala en cero; recuerda la regla del curso: "hoy no gana el instrumento más bonito: gana la mejor explicación"; da la palabra al grupo 1 | Lámina de entrada (orden + reglas); cronómetro visible; notebook de sala con las 5 presentaciones cargadas |
-| 2–22′ | **Grupo 1** (OA5.3 + OA3.2): presentación 15′ + preguntas individuales 5′ (regla anunciada en s14) | El grupo: presenta con el objeto **sonando en vivo**, la predicción del hito 1 proyectada TAL COMO SE ESCRIBIÓ y ≥1 medición propia (pauta §2); cada integrante responde SU pregunta, por nombre, sin relevo. El público: escucha la presentación; durante las preguntas escribe su bloque de diagnóstico (describir lo que oyó del instrumento / mecanismo que lo explica / qué medición del informe lo respalda o faltó) | Cronometra (aviso a los 12′, corte al 15′); registra la rúbrica R1–R4 en vivo en la planilla del guion; dirige UNA pregunta a CADA integrante, por nombre, desde su propio informe y bitácora (banco de preguntas en el guion); corta las preguntas al 5′ | Cronómetro; planilla de rúbrica hito 3 (guion); informe y bitácora del grupo 1 (leídos en la puerta por encima, anotados en vivo); hojas de escucha del público |
-| 22–24′ | Transición 1→2 | El grupo 2 (que pre-montó al costado durante las preguntas) conecta su archivo e instrumento; el público termina su bloque del grupo 1 | Cambia el archivo en el notebook de sala; resetea el cronómetro | Notebook de sala; instrumento del grupo 2 pre-instalado |
-| 24–46′ | **Grupo 2** (OA5.3 + OA3.2): presentación 15′ + preguntas 7′ | Ídem grupo 1, con 7′ de preguntas (~100″ por integrante: pregunta breve + respuesta) | Ídem; en las preguntas alterna dimensiones de la rúbrica (una de mecanismo R1, una de evidencia R2, una de contraste R3, una libre) | Ídem |
-| 46–48′ | Transición 2→3 | Ídem transición anterior | Ídem | Ídem |
-| 48–70′ | **Grupo 3** (OA5.3 + OA3.2): presentación 15′ + preguntas 7′ | Ídem grupo 2; al corte, el módulo termina — el grupo 4 montará durante el recreo | Ídem; al cerrar anuncia: "el módulo 2 parte puntual con el grupo 4 ya montado; el cierre del curso es a las [hora]: nadie se va antes — hay algo de ustedes de la semana 1 esperándolos" | Ídem |
-
-## Módulo 2 — Dos defensas y el cierre del arco (el gancho sonoro del módulo es el instrumento del grupo 4: regla §3 adaptada, decisión 2)
+## Módulo 1 — Cinco defensas (formato: clínica ampliada de cierre, metodología §4; el módulo completo es evaluación del hito 3)
 
 | Tiempo | Bloque | Actividad del estudiante | Rol del profesor | Materiales |
 |---|---|---|---|---|
-| 0–22′ | **Grupo 4** (OA5.3 + OA3.2): presentación 15′ + preguntas 7′ (montó en el recreo) | Ídem módulo 1; el público llena su tercer bloque de diagnóstico | Ídem módulo 1 | Ídem módulo 1 |
-| 22–24′ | Transición 4→5 | Ídem | Ídem | Ídem |
-| 24–46′ | **Grupo 5** (OA5.3 + OA3.2): presentación 15′ + preguntas 7′ | Ídem; el público llena su cuarto y último bloque | Ídem; al corte: "se acabó la última defensa del semestre — quedan ustedes con ustedes mismos" | Ídem |
-| 46–51′ | **Cierre 1: coevaluación final + entrega de hojas (OA5.3, nota individual; OA3, evidencia)** | Llena la ficha de coevaluación (mismo formato del hito 2), la cierra en su sobre; revisa sus 2 hojas de escucha, **marca la casilla ★ de su mejor diagnóstico del día** y deposita hojas + sobre en las dos cajas al pasar | Reparte sobres y recibe; MIENTRAS escriben, deja en cada puesto, boca abajo, el sobre nominado con la hoja de línea base de s01 y una media hoja en blanco "hoy" | Fichas de coevaluación (20) + sobres; cajas de recepción; sobres de línea base nominados (20) + medias hojas "hoy" |
-| 51–56′ | **Cierre 2: la línea base, de nuevo (OA3.1, sin nota — cierre del arco)** | SIN abrir el sobre: escucha de nuevo, en vivo en la sala, el MISMO estímulo de la semana 1 (guitarra con batidos, estímulo #1 del banco; dos pasadas) y escribe en la media hoja "hoy" su diagnóstico en 3 líneas: qué oye, qué lo produce, cómo lo comprobaría — exactamente la consigna de s01 | Reproduce el estímulo #1 dos veces (si además hay una guitarra a mano tras las presentaciones, la versión en vivo es bienvenida, pero el archivo es lo comparable); no adelanta nada | Estímulo #1 en el equipo de sala; medias hojas "hoy" |
-| 56–59′ | **Cierre 3: devolución simbólica** | Abre su sobre y lee, en silencio, su hoja de línea base de s01 al lado de lo que acaba de escribir: quién era en la semana 1, quién es hoy. Ambas hojas son suyas: se las lleva | Silencio deliberado; no comenta | Sobres de línea base |
-| 59–62′ | **Cierre 4: voces (fusible recortable)** | 2–3 voluntarios leen su "antes" y su "ahora" en voz alta | Modera sin corregir: el contraste habla solo | — |
-| 62–66′ | **Cierre 5: síntesis del semestre** | Escucha el arco completo en 4 minutos: del golpe de s01 al tono; el espectro como anteojos; los modos; el oído que no copia la física; la resonancia como puente; las tres válvulas (fricción, aire, pliegues); la sala que también suena — y las tres capas (oído, mecanismo, medición) que hoy usaron completas en cada defensa | Sintetiza con la lámina final; cierra con la tesis del curso: "escuchar como científico no se olvida: desde hoy, ustedes ya no pueden des-oír" | Lámina de síntesis (1) |
-| 66–70′ | **Cierre 6: evaluación del curso y despedida** | Responde la encuesta del curso (QR/enlace en pantalla; papel para quien prefiera; puede quedarse en la sala terminándola) | Proyecta el QR; agradece; recuerda: notas del hito 3 y del semestre por el canal del curso en [plazo que fija el profesor] | Encuesta (QR + copias en papel) [instrumento: el que defina el profesor o el institucional] |
+| 0–3′ | Encuadre (los informes ya entraron por la puerta; el estudiante 1 montó ANTES de la hora — citado 10′ antes) | Verifica que tiene su hoja de escucha (2 bloques, ya rotulados con sus 2 defensas asignadas); lee en la lámina: orden sorteado en s14, reglas de corte (8′+3′, 11′ cronometrados e iguales para los 9), qué hace el público (diagnostica por escrito SOLO sus 2 defensas asignadas, durante las preguntas y la transición de esa defensa) | Confirma 9/9 informes recibidos; enciende el cronómetro de sala en cero; recuerda la regla del curso: "hoy no gana el instrumento más bonito: gana la mejor explicación"; da la palabra al estudiante 1 | Lámina de entrada (orden + reglas); cronómetro visible; notebook de sala con las 9 presentaciones cargadas |
+| 3–18′ | **Defensa 1** (OA5.3 + OA3.2): 8′ presentación + 3′ preguntas + 4′ transición (sin Q&A previa de la que robar tiempo de montaje) | El estudiante presenta con el objeto **sonando en vivo**, la predicción del hito 1 proyectada TAL COMO SE ESCRIBIÓ y ≥1 medición propia (pauta §2); responde SUS 2 preguntas del profesor, por su nombre, sin ayuda. El público que lo tiene asignado escucha y, durante las preguntas y la transición, escribe su bloque de diagnóstico (describir lo que oyó del instrumento / mecanismo que lo explica / qué medición del informe lo respalda o faltó) | Cronometra (aviso a los 6′30″, corte a los 8′); registra la rúbrica R1–R4 en vivo en la planilla del guion; dirige 2 preguntas desde el propio informe y bitácora del estudiante (banco de preguntas en el guion); corta las preguntas a los 3′ | Cronómetro; planilla de rúbrica hito 3 (guion); informe y bitácora del estudiante 1 (leídos en la puerta por encima, anotados en vivo); hojas de escucha del público que lo tienen asignado |
+| 18–30′ | **Defensa 2** (OA5.3 + OA3.2): 8′ + 3′ + 1′ transición | Ídem defensa 1 (el estudiante 3 pre-montó durante las preguntas de la defensa 2) | Ídem | Ídem |
+| 30–42′ | **Defensa 3** (OA5.3 + OA3.2): 8′ + 3′ + 1′ transición | Ídem | Ídem | Ídem |
+| 42–54′ | **Defensa 4** (OA5.3 + OA3.2): 8′ + 3′ + 1′ transición | Ídem | Ídem | Ídem |
+| 54–66′ | **Defensa 5** (OA5.3 + OA3.2): 8′ + 3′ + 1′ transición | Ídem; al corte, el objeto del estudiante 5 queda montado hasta que el profesor lo retire | Ídem; anuncia el colchón: "si vamos a tiempo, respiramos; si no, aquí se recupera" | Ídem |
+| 66–70′ | **Colchón (4′)** | Espera o revisa su hoja de escucha de las defensas 1–5 | Absorbe cortes que se pasaron de los 11′ o problemas técnicos de conexión; si sobra, anuncia que el módulo 2 parte puntual con las defensas 6–9 | — |
+
+## Módulo 2 — Cuatro defensas y el cierre del arco (sin re-escucha colectiva, sin plenario comparado ni coevaluación — no caben con 9 defensas, decisión 2)
+
+| Tiempo | Bloque | Actividad del estudiante | Rol del profesor | Materiales |
+|---|---|---|---|---|
+| 0–12′ | **Defensa 6** (OA5.3 + OA3.2): 8′ + 3′ + 1′ transición | Ídem defensas del módulo 1 (el estudiante 7 pre-montó durante el colchón/transición) | Ídem | Cronómetro; planilla; informe y bitácora del estudiante 6; hojas de escucha del público que lo tiene asignado |
+| 12–24′ | **Defensa 7** (OA5.3 + OA3.2): 8′ + 3′ + 1′ transición | Ídem | Ídem | Ídem |
+| 24–36′ | **Defensa 8** (OA5.3 + OA3.2): 8′ + 3′ + 1′ transición | Ídem | Ídem | Ídem |
+| 36–48′ | **Defensa 9** (OA5.3 + OA3.2): 8′ + 3′ + 1′ transición | Ídem; al corte, las nueve defensas del semestre están completas | Ídem; al cerrar anuncia: "las nueve defensas están hechas; ahora entregan su hoja de escucha al pasar y cerramos el semestre" | Ídem |
+| 48–54′ | **Línea base, de nuevo (OA3.1, sin nota — cierre del arco)** | Al pasar hacia este bloque, entrega su hoja de escucha (con su ★ ya marcada) en la caja; SIN abrir ningún sobre: escucha de nuevo, en vivo en la sala, el MISMO estímulo de la semana 1 (guitarra con batidos, estímulo #1 del banco; dos pasadas) y escribe en la media hoja "hoy" su diagnóstico en 3 líneas: qué oye, qué lo produce, cómo lo comprobaría — exactamente la consigna de s01 | Recibe las hojas de escucha en la caja; reproduce el estímulo #1 dos veces; no adelanta nada | Caja de recepción; estímulo #1 en el equipo de sala; medias hojas "hoy" |
+| 54–58′ | **Devolución simbólica (OA3.1, sin nota)** | Abre su sobre y lee, en silencio, su hoja de línea base de s01 al lado de lo que acaba de escribir: quién era en la semana 1, quién es hoy. Ambas hojas son suyas: se las lleva | Reparte los sobres de línea base nominados (preparados de antemano); silencio deliberado; no comenta | Sobres de línea base (9, nominados) |
+| 58–63′ | **Voces (fusible recortable a 0)** | Voluntarios leen su "antes" y su "ahora" en voz alta; con 9 estudiantes alcanza para varios si el curso quiere (nadie obligado) | Modera sin corregir: el contraste habla solo | — |
+| 63–67′ | **Síntesis del semestre** | Escucha el arco completo: del golpe de s01 al tono; el espectro como anteojos; los modos; el oído que no copia la física; la resonancia como puente; las tres válvulas (fricción, aire, pliegues); la sala que también suena — y las tres capas (oído, mecanismo, medición) que hoy usaron completas en cada defensa | Sintetiza con la lámina final; cierra con la tesis del curso: "escuchar como científico no se olvida: desde hoy, ustedes ya no pueden des-oír" | Lámina de síntesis (1) |
+| 67–70′ | **Evaluación del curso y despedida** | Responde la encuesta del curso (QR/enlace en pantalla; papel para quien prefiera; puede quedarse en la sala terminándola) | Proyecta el QR; agradece; recuerda: notas del hito 3 y del semestre por el canal del curso en [plazo que fija el profesor] | Encuesta (QR + copias en papel) [instrumento: el que defina el profesor o el institucional] |
 
 ## Verificación de aprendizaje
 
 - **Hito 3 (OA5.3 + OA3.2, 15 %)**: rúbrica R1–R4 de la pauta
   (`material/curso/sesion-14/actividades/pauta_hito3_presentacion_final.md`)
-  registrada EN VIVO en la planilla del guion, grupo por grupo; R1
-  (explicación acústica) desempata, según la pauta. El informe ≤6 págs
-  se corrige contra la misma rúbrica esta semana (pico final declarado,
-  metodología §4). Nota individual = nota del grupo ± hasta 0,5 según
-  coevaluación y bitácora (pauta §5).
-- **Preguntas individuales dirigidas** (mitigación de pasajeros,
-  metodología §4): una por integrante, por nombre, sin relevo del
-  grupo; protocolo y banco de preguntas en el guion. Una respuesta
-  insolvente puede bajar R4 (pauta §5).
-- **Escucha escrita 3 (OA3.1–3.2, evidencia final)**: 4 diagnósticos
-  por estudiante (uno por presentación observada); el bloque marcado ★
-  se califica con la rúbrica OA3 (cuentan las mejores 2 de 3, junto con
-  las Partes A de las Pruebas 1 y 2). El resto se hojea como evidencia
-  del arco OA3.
+  registrada EN VIVO en la planilla del guion, estudiante por
+  estudiante; R1 (explicación acústica) desempata, según la pauta. El
+  informe ≤6 págs se corrige contra la misma rúbrica esta semana (pico
+  final declarado, metodología §4). Nota **directa**: sin coevaluación
+  (pauta §5) — la bitácora individual es el respaldo, no un ajustador.
+- **2 preguntas individuales dirigidas** por defensa (mitigación de
+  superficialidad, no de pasajeros: el proyecto ya es individual):
+  sobre el propio informe y bitácora del estudiante; protocolo y banco
+  de preguntas en el guion. Una respuesta insolvente puede bajar R4
+  (pauta §5).
+- **Escucha escrita 3 (OA3.1–3.2, evidencia final)**: 2 diagnósticos
+  por estudiante (de sus 2 defensas asignadas por sorteo), entregados
+  al pasar hacia el cierre. El bloque marcado ★ se califica con la
+  rúbrica OA3 (cuentan las mejores 2 de 3, junto con las Partes A de
+  las Pruebas 1 y 2). El otro se hojea como evidencia del arco OA3.
 - **Línea base (OA3.1, sin nota)**: el contraste s01/hoy es la
   verificación simbólica y personal del objetivo transversal del
   curso; no se recoge — el diseño de s01 lo prometió ("en s14–s15 se
@@ -122,78 +128,94 @@ s01 ni la coevaluación. Recuperación máxima: ~9′.
 
 ## Aritmética de tiempos declarada (regla 6b)
 
-- **Módulo 1**: 2 + 20 + 2 + 22 + 2 + 22 = 70′ ✓ (grupo 1: 15′+5′ por
-  la regla anunciada en s14; grupos 2 y 3: 15′+7′).
-- **Módulo 2**: 22 + 2 + 22 + 5 + 5 + 3 + 3 + 4 + 4 = 70′ ✓.
-- **Por persona, preguntas individuales**: 7′/4 ≈ 100″ por integrante
-  (pregunta ~20″ + respuesta ~80″); grupo 1: 5′/4 ≈ 75″ — suficiente
-  para una respuesta con mecanismo, no para un discurso.
-- **Por persona, hoja de escucha**: cada bloque se escribe durante los
-  5–7′ de preguntas + 2′ de transición del grupo observado (~9′ para 6
-  líneas: holgado, e impide el bloque escrito "de memoria" al final).
-- **Coevaluación**: 5′ para una tabla de 3 filas ya conocida del hito 2 ✓.
-- **Los 5 bloques de presentación suman** 20+22+22+22+22 = 108′ de los
-  140′ de la sesión (77 %): la sesión ES la evaluación; los 24′ de
-  cierre son el único bloque no evaluativo del día.
+- **Módulo 1**: 3 (encuadre) + 15 (defensa 1: 8′+3′+4′ transición, sin
+  Q&A previa de la que robar tiempo de montaje) + 12+12+12+12 (defensas
+  2–5: 8′+3′+1′ transición solapada c/u, 48′) + 4 (colchón) = 70′ ✓.
+  Las defensas 1–5 suman 15+48 = 63′, tal como se declaró en el
+  encabezado (decisión 3).
+- **Módulo 2**: defensas 6–9 (4 × 12′ = 48′) + línea base (6′) +
+  devolución simbólica (4′) + voces (5′) + síntesis (4′) + encuesta y
+  despedida (3′) = 48+6+4+5+4+3 = 70′ ✓.
+- **Por persona, defensa**: 8′ de presentación + 3′ de preguntas (2
+  preguntas ≈ 90″ c/u con espacio para una repregunta) = 11′
+  cronometrados, iguales para las 9 — el minuto de transición (o los 4′
+  de la defensa 1) no cuenta como tiempo del estudiante, es logística
+  de sala.
+- **Por persona, hoja de escucha**: cada uno de los 2 bloques
+  asignados se escribe durante los 3′ de preguntas + 1′ de transición
+  de esa defensa (~4′ hábiles, más lo que alcance a redactar mientras
+  escucha) — sin re-escucha colectiva que lo compense, por eso el
+  sorteo entrega defensas repartidas a lo largo de ambos módulos, no
+  todas seguidas.
+- **Las 9 defensas suman** 15+12+12+12+12+12+12+12+12 = 111′ de los
+  140′ de la sesión (79 %): la evaluación del hito 3 domina la sesión
+  casi por completo; el cierre (22′ del módulo 2) es el único tramo sin
+  nota.
 
 ## Pendientes de producción
 
 - **Actividades** (esta sesión): `actividades/hoja_escucha_presentaciones.md`
-  (hoja del público, 4 bloques) · `actividades/hoja_coevaluacion_final.md`
-  (ficha + sobres, formato hito 2) · `actividades/guion_profesor_s15.md`
-  (cronograma, protocolo de preguntas, planilla de rúbrica en vivo,
-  plantilla de la media hoja "hoy").
+  (hoja del público, 2 bloques pre-rotulados por sorteo) ·
+  `actividades/guion_profesor_s15.md` (cronograma de 9 defensas,
+  protocolo de 2 preguntas por autor, planilla de rúbrica en vivo por
+  estudiante, plantilla de la media hoja "hoy") ·
+  `actividades/hoja_coevaluacion_final.md` (marcada OBSOLETA
+  2026-08-07: se conserva como registro histórico, no se usa en 2026-2).
 - **Apuntes**: `apunte_s15_como_defender_un_proyecto_acustico.md`
   (breve: no hay contenido nuevo).
 - **Capítulo (lectura previa)**: [`libro/cap15_explicar_es_la_prueba.md`](../../libro/cap15_explicar_es_la_prueba.md).
 - **Demo**: no hay (`PLAN_SEMESTRE.md`: "—"). Única sesión del curso sin demo.
 - **Trabajo físico del profesor (semana previa)**: recuperar del
-  archivo las 20 hojas de línea base de s01, meterlas en sobres
-  nominados (~30′); tener el estímulo #1 del banco (el MISMO archivo
-  de s01) probado en el equipo de sala; recibir las 5 presentaciones
-  por el canal hasta las 20:00 de la víspera y cargarlas en el
-  notebook de sala (+ USB de respaldo); citar al grupo 1 15′ antes;
-  imprimir: 40 hojas de escucha (2 por estudiante) + repuestos, 20
-  fichas de coevaluación + sobres, 20 medias hojas "hoy", lámina de
-  entrada, lámina de síntesis, 1 guion con planilla; cronómetro grande
-  visible; 2 cajas de recepción; definir la encuesta del curso
-  (institucional o propia) y su QR [instrumento por definir por el
-  profesor].
-- **Trabajo del profesor (después de s15 — pico final ≈4 h declarado
-  en metodología §4)**: corregir 5 informes contra la rúbrica (~2 h);
-  calificar los 20 bloques ★ con la rúbrica OA3 (~40′); leer 20
-  coevaluaciones y aplicar ajustes ±0,5 con la bitácora a la vista
-  (~40′); cerrar acta de notas del curso (~40′).
+  archivo las 9 hojas de línea base de s01, meterlas en sobres
+  nominados (~15′); armar el **sorteo de la hoja de escucha** (9
+  estudiantes × 2 defensas asignadas, distribuido para que cada
+  proyecto reciba ~2 diagnósticos) e imprimir las hojas pre-rotuladas;
+  tener el estímulo #1 del banco (el MISMO archivo de s01) probado en
+  el equipo de sala; recibir las 9 presentaciones por el canal hasta
+  las 20:00 de la víspera y cargarlas en el notebook de sala (+ USB de
+  respaldo); citar al estudiante 1 10′ antes; imprimir: 9 hojas de
+  escucha pre-rotuladas + repuestos, 9 medias hojas "hoy", lámina de
+  entrada (9 nombres), lámina de síntesis, 1 guion con planilla de 9
+  filas; cronómetro grande visible; caja de recepción de hojas de
+  escucha; definir la encuesta del curso (institucional o propia) y su
+  QR [instrumento por definir por el profesor]. **Sin sobres de
+  coevaluación**: no aplica (decisión 2026-08-07).
+- **Trabajo del profesor (después de s15 — pico final ≈3 h declarado
+  en metodología §4)**: corregir 9 informes contra la rúbrica (~1,5 h);
+  calificar los 9 bloques ★ con la rúbrica OA3 (~30′); cerrar acta de
+  notas del curso (~30′) — sin coevaluación que leer.
 
 ## Riesgos y plan B
 
-- **Un grupo excede los 15′** → corte duro con el cronómetro (la pauta
-  lo declara y la regla es pareja); lo no dicho se defiende en las
-  preguntas. El aviso a los 12′ evita el corte a mitad de frase.
+- **Un estudiante excede los 8′ de presentación** → corte duro con el
+  cronómetro (la pauta lo declara y la regla es pareja para los 9); lo
+  no dicho se defiende en las preguntas. El aviso a los 6′30″ evita el
+  corte a mitad de frase.
 - **El instrumento no suena en escena** → la pauta exige plan B propio
   (grabación de respaldo, checklist §6); la rúbrica evalúa la
-  explicación (R1–R3), y R4 registra el incidente sin hundir al grupo
-  si la defensa es solvente.
-- **Falla notebook/proyector** → por eso el envío previo: las 5
+  explicación (R1–R3), y R4 registra el incidente sin hundir al
+  estudiante si la defensa es solvente.
+- **Falla notebook/proyector** → por eso el envío previo: las 9
   presentaciones también van en USB y en el notebook del profesor; sin
   proyector, las figuras existen impresas en el informe recién
   entregado (se muestran en mano) y el pizarrón hace el resto.
-- **Un integrante ausente** → sus preguntas se redistribuyen entre los
-  presentes (R4 se evalúa con los que están); su situación individual
-  se resuelve después con el profesor (certificado mediante), con la
-  coevaluación y la bitácora como evidencia. El grupo no paga la
-  ausencia.
-- **Atraso acumulado** → fusibles del cierre (decisión 8): voces 3′→0,
-  síntesis 4′→2′, encuesta migra a formulario en línea 48 h; recupera
-  hasta 9′. El estímulo de línea base, la devolución de sobres y la
-  coevaluación NO se recortan.
+- **Atraso acumulado en el módulo 1** → el colchón de 4′ (66–70′) es la
+  primera línea de defensa; si no alcanza, el fusible del módulo 2 es
+  el cierre (decisión de fusibles): voces 5′→0, síntesis 4′→2′,
+  encuesta migra a formulario en línea 48 h. Las 9 defensas, el
+  estímulo de línea base y la devolución de sobres NO se recortan.
 - **El sorteo de s14 quedó sin hacer o llega un reclamo** → re-sorteo
-  en el encuadre con testigos (2′); la pauta declara que el orden no
-  afecta la rúbrica.
-- **Un estudiante llegó tarde y perdió bloques de escucha** → hojas de
-  repuesto en la caja; para marcar ★ necesita al menos 3 de 4 bloques
-  propios; con menos, su evidencia OA3 queda con las escuchas escritas
-  de s07 y s13 que ya tiene (no se castiga: la hoja solo podía ayudar).
+  en el encuadre con testigos (2′, se come el colchón); la pauta
+  declara que el orden no afecta la rúbrica.
+- **Un estudiante llegó tarde y se perdió una defensa que tenía
+  asignada** → hojas de repuesto en la caja; sin re-escucha colectiva
+  que lo compense, ese bloque queda incompleto (no se castiga: la hoja
+  solo podía ayudarlo) y su evidencia OA3 se apoya en el otro bloque y
+  en las escuchas escritas de s07 y s13 que ya tiene.
+- **Un estudiante presentador falta** → se resuelve fuera de aula
+  (certificado, informe y bitácora como evidencia); al no haber grupo
+  que absorba la ausencia, la defensa se reprograma si el reglamento lo
+  permite — no se improvisa un reemplazo en la sesión.
 - **La emoción del cierre se desborda o se enfría** → las voces son
   voluntarias y el silencio de la devolución es deliberado; si nadie
   quiere leer, el profesor lee (anónima) UNA línea base de s01 junto a

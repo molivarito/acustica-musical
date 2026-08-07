@@ -3,7 +3,12 @@
 **Estado**: plantilla. Los espacios concretos, permisos y tiempos de
 tránsito **los fija el profesor** antes de imprimir [POR COMPLETAR:
 nombres reales de espacios UC del campus, según permisos y distancia a
-pie desde la sala]. Criterios de diseño que las rutas deben respetar:
+pie desde la sala]. **Este semestre (2026-2, 3 grupos)** se activan las
+**rutas 1–3** (mejor cobertura de contraste seco/vivo entre las cinco);
+las **rutas 4 y 5 quedan de reserva (no asignadas este semestre)** —se
+mantienen documentadas, sin gestionar espacios ni permisos, por si el
+curso crece en una futura edición. Criterios de diseño que las rutas
+deben respetar (plantilla general, pensada para hasta 5 rutas):
 
 - **Contraste garantizado**: cada ruta combina al menos un espacio
   SECO (sala de clases chica, sala de práctica/estudio, oficina) y uno
@@ -53,10 +58,10 @@ del informe se llena en el trayecto). **Punto de encuentro**:
 |---|---|---|---|
 | A ★ | [capilla / auditorio — requiere permiso] | muy vivo | palmada si hay gente; permiso [POR VERIFICAR] |
 | B ★ | [sala de clases mediana] | seco | |
-| C (opcional) | [hall de acceso] | vivo | ancla compartida con ruta 5 |
+| C (opcional) | [hall de acceso] | vivo | pensada como ancla compartida con ruta 5, pero esa ruta es reserva este semestre: sin par cruzado esta ronda |
 | Alternativa | [espacio cercano] | | |
 
-## Ruta 4 — [nombre]
+## Ruta 4 — [nombre] (reserva, no asignada este semestre)
 
 | Orden | Espacio | Tipo esperado | Notas |
 |---|---|---|---|
@@ -65,7 +70,7 @@ del informe se llena en el trayecto). **Punto de encuentro**:
 | C (opcional) | [pasillo del mismo edificio] | medio | |
 | Alternativa | [espacio cercano] | | |
 
-## Ruta 5 — [nombre]
+## Ruta 5 — [nombre] (reserva, no asignada este semestre)
 
 | Orden | Espacio | Tipo esperado | Notas |
 |---|---|---|---|
@@ -76,16 +81,19 @@ del informe se llena en el trayecto). **Punto de encuentro**:
 
 ## Checklist del profesor (semana previa)
 
-- [ ] Fijar los 15 espacios (5 rutas × 3) + alternativas; caminar las
-      rutas una vez cronometrando.
-- [ ] Permisos: capilla/auditorio, biblioteca, salas de práctica
-      [POR VERIFICAR cada uno].
+- [ ] Fijar los 9 espacios de las rutas activas este semestre (rutas
+      1–3 × 3) + alternativas; caminar las rutas una vez cronometrando.
+      (Rutas 4–5 quedan de reserva: no hace falta fijar sus espacios ni
+      permisos este semestre.)
+- [ ] Permisos: capilla/auditorio (ruta 3), salas de práctica (rutas
+      1–2) [POR VERIFICAR cada uno]. (El permiso de biblioteca de la
+      ruta 4 no aplica esta ronda.)
 - [ ] Medir el $T_{60}$ de UN espacio con la app elegida (ensayo del
       método y valor de control).
 - [ ] Crear la planilla compartida (1 fila por espacio × grupo:
       espacio, fondo, mediana $T_{60}$, V, impulso) y probar el enlace
       desde un celular.
-- [ ] Globos (bolsa de ~25: 4 por grupo + repuestos) e inflarlos con
+- [ ] Globos (bolsa de ~15: 4 por grupo + repuestos) e inflarlos con
       los grupos ANTES de salir (inflar en la calle quita tiempo).
-- [ ] Imprimir 5 guías + 5 rutas; escribir hora de corte y punto de
-      encuentro en ambas.
+- [ ] Imprimir 3 guías + 3 rutas (rutas activas 1–3); escribir hora de
+      corte y punto de encuentro en ambas.

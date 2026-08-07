@@ -34,9 +34,9 @@ sin nota) se retoma en s08.
 
 | Tiempo | Bloque | Actividad del estudiante | Rol del profesor | Materiales |
 |---|---|---|---|---|
-| 0–7′ | Instalación y reglas de la prueba | Se sienta en puesto individual (disposición en columnas separadas, preparada antes si la sala lo permite); guarda celular, apuntes y audífonos en la mochila; recibe el cuadernillo (boca abajo) y la hoja de figuras; escucha las reglas | Reparte cuadernillos; escribe en el pizarrón el **calendario de audio** (min 10, min 25, min 40) y las reglas: cada estímulo suena **2 veces** con ~45 s de pausa; en el min 40 hay una **pasada de repaso** (1 vez cada estímulo); no se necesita calculadora (aritmética de proporciones); preguntas solo de forma, a mano alzada | Cuadernillos impresos (20 + 2 de reserva); hoja de figuras aparte; pizarrón con calendario de audio; equipo de sala probado ANTES con los 3 archivos |
+| 0–7′ | Instalación y reglas de la prueba | Se sienta en puesto individual (disposición en columnas separadas, preparada antes si la sala lo permite); guarda celular, apuntes y audífonos en la mochila; recibe el cuadernillo (boca abajo) y la hoja de figuras; escucha las reglas | Reparte cuadernillos; escribe en el pizarrón el **calendario de audio** (min 10, min 25, min 40) y las reglas: cada estímulo suena **2 veces** con ~45 s de pausa; en el min 40 hay una **pasada de repaso** (1 vez cada estímulo); no se necesita calculadora (aritmética de proporciones); preguntas solo de forma, a mano alzada | Cuadernillos impresos (9 + 2 de reserva); hoja de figuras aparte; pizarrón con calendario de audio; equipo de sala probado ANTES con los 3 archivos |
 | 7–67′ | **Desarrollo de la Prueba 1** (diseñada para ≤60′; partes A–D de `ediciones/2026-2/pruebas/prueba1.md`) | Responde a su ritmo las partes B (casos sonoros con figuras), C (predicción numérica) y D (conceptual); en el **min 10** atiende la reproducción del estímulo 1 y responde la **Parte A (escucha escrita OA3)**; en el **min 25** atiende los estímulos 2 y 3 (Parte B); en el **min 40** puede revisar con la pasada de repaso | Reproduce los estímulos EXACTAMENTE según el calendario (2 veces c/u, cronómetro a la vista); entre reproducciones circula en silencio; **rezagados**: quien llega antes del min 25 alcanza todo (el repaso del min 40 le repone el estímulo 1); quien llega después del min 25 rinde igual y el caso se resuelve según reglamento de la unidad académica (no se detiene la prueba ni se repite audio fuera de calendario) | 3 estímulos de audio (banco #10, #11, #12) en el equipo de sala; cronómetro proyectado; calendario en pizarrón |
-| 67–70′ | Entrega y transición | Entrega cuadernillo Y hoja de figuras (se cuentan al recibir); sale a pausa | Recoge por filas, cuenta 20 cuadernillos; anuncia: "el módulo 2 es liviano y es con los oídos: vuelvan descansados" | — |
+| 67–70′ | Entrega y transición | Entrega cuadernillo Y hoja de figuras (se cuentan al recibir); sale a pausa | Recoge por filas, cuenta 9 cuadernillos; anuncia: "el módulo 2 es liviano y es con los oídos: vuelvan descansados" | — |
 
 **Logística de la prueba (resumen operativo)**: puestos separados en
 columnas; celulares y audífonos guardados (los estímulos suenan por el
@@ -63,7 +63,7 @@ estímulos). Duración diseñada ≤60′ dentro de 70′: 7′ de instalación 
 - **Prueba 1** (instrumento central de la semana, 10 % del curso, 48
   puntos): partes B–D corregidas con la pauta cerrada
   (`ediciones/2026-2/pruebas/prueba1_pauta.md`), ~15 min por estudiante, pico
-  declarado ≈5 h (metodología §4). La **Parte A (escucha escrita 1)** se
+  declarado ≈2,5 h (metodología §4). La **Parte A (escucha escrita 1)** se
   aplica dentro de la prueba pero se califica aparte con la rúbrica OA3
   (10 % del curso junto con s13 y s15, cuentan las mejores 2 de 3) — no
   entra en los 48 puntos; alimenta el seguimiento de OA3 comparable con
@@ -100,8 +100,9 @@ estímulos). Duración diseñada ≤60′ dentro de 70′: 7′ de instalación 
   sesión) **se graban/sintetizan en la sesión pre-s01** (no dependen
   de nada del semestre; P4 de la revisión 2026-07-12); esta semana
   solo PROBARLOS en el equipo de la sala.
-- **Impresión**: 22 cuadernillos + 22 hojas de figuras.
-- **Corrección**: pico declarado ≈5 h esta semana (20 × ~15 min).
+- **Impresión**: 11 cuadernillos + 11 hojas de figuras.
+- **Corrección**: pico declarado ≈2,5 h esta semana (9 × ~15 min, más
+  la escucha escrita).
 - **Demo**: [`demo_batidos.html`](../../demos/demo_batidos.html) ya producida con esta sesión (se
   reutiliza en s08 — no modificarla sin revisar el plan de s08).
 

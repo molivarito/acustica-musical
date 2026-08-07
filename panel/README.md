@@ -228,6 +228,17 @@ Todas las llamadas a `git` llevan **timeout**: este repo vive en Google Drive y 
 Los interruptores de **Paneles**, los presets de **Vistas** y los tildes de materiales se
 recuerdan entre sesiones.
 
+## Geometría ajustable
+
+Los tamaños de las partes se ajustan **arrastrando los divisores** que separan el riel,
+las dos columnas, las zonas dentro de cada columna y la franja inferior (el cursor
+cambia a ↔ / ↕ al pasar por encima). La geometría queda guardada en el navegador
+(`localStorage`, clave `panel-am-geom`, separada del resto del estado) y sobrevive
+recargas. **Doble clic sobre un divisor** restaura su proporción original; para volver
+todo a fábrica, borrar esa clave desde la consola del navegador
+(`localStorage.removeItem('panel-am-geom')`). Un divisor solo aparece cuando sus dos
+vecinos están visibles.
+
 ## Convenciones que romperían el panel
 
 Ninguna ruptura lo deja en blanco —cada parser degrada y anota un aviso, visible en el

@@ -11,27 +11,41 @@ estímulo", como se anunció en s14).
 
 **Mecánica** (también en la lámina de entrada):
 
-- Recibe **2 hojas con 2 bloques cada una** (4 bloques: uno por cada
-  presentación que observa; su propio grupo no se diagnostica).
-- El bloque se escribe **durante las preguntas individuales y la
-  transición** del grupo observado (~9 min): la presentación se
-  escucha, no se transcribe.
+- Con 9 defensas en la sesión, nadie puede escribir un diagnóstico de
+  calidad de las 9: por **sorteo previo** (hecho por el profesor antes
+  de s15, entregado impreso con la hoja), a cada estudiante se le
+  asignan **2 defensas** para diagnosticar por escrito — nunca la
+  propia. El sorteo está armado para que cada proyecto reciba
+  aproximadamente 2 diagnósticos del público.
+- Recibe **1 hoja con 2 bloques**, cada uno YA rotulado con el nombre
+  del compañero/a y el objeto que le tocó diagnosticar.
+- Escuche TODAS las defensas — es parte del curso —, pero escriba el
+  bloque de diagnóstico **solo de sus 2 defensas asignadas**, durante
+  los 3′ de preguntas y el 1′ de transición de esa defensa (~9 min
+  hábiles en total por bloque a lo largo de la sesión: se puede seguir
+  afinando la redacción durante la transición del siguiente).
 - Usted diagnostica **el instrumento, no la presentación**: qué oyó
   cuando sonó en vivo y qué física lo explica. Calificar a los
   compañeros es tarea del profesor.
-- Al cierre (min 46 del módulo 2) marque la casilla ★ de **su mejor
-  diagnóstico del día** y entregue las 2 hojas en la caja. El bloque
-  marcado se corrige con la rúbrica OA3 del curso y es la **tercera
-  escucha escrita (E3)**: cuentan las mejores 2 de las 3 del semestre
-  (E1, E2, E3) para el 10 % de OA3 — esta hoja solo puede ayudarlo.
+- No hay re-escucha colectiva en s15 (con 9 defensas no cabe en la
+  sesión): apóyese en lo que oyó y anotó durante la propia defensa —
+  igual que en la escucha del día de todo el semestre.
+- Al terminar la defensa 9, marque la casilla ★ de **su mejor
+  diagnóstico del día** (entre sus 2 bloques) y entregue la hoja en la
+  caja al pasar hacia el cierre — antes de que empiece el bloque de
+  línea base. El bloque marcado se corrige con la rúbrica OA3 del curso
+  y es la **tercera escucha escrita (E3)**: cuentan las mejores 2 de
+  las 3 del semestre (E1, E2, E3) para el 10 % de OA3 — esta hoja solo
+  puede ayudarlo.
 
-**Impresión**: 2 bloques por cara; 2 hojas por estudiante (40 + repuestos).
+**Impresión**: 2 bloques, uno por cara, cada uno pre-rotulado según el
+sorteo; 1 hoja por estudiante (9 + repuestos).
 
 ---
 
-## Bloque de diagnóstico (uno por presentación observada)
+## Bloque de diagnóstico (uno por defensa asignada)
 
-**Mi nombre**: ______________ · **Grupo que presenta**: ____________
+**Mi nombre**: ______________ · **Estudiante que presenta (asignado por sorteo)**: ____________
 **Instrumento/objeto**: ______________________ · **☐ ★ mi mejor
 diagnóstico del día**
 
@@ -47,16 +61,17 @@ curso + cadena causa–efecto: "suena ___ **porque** ___"):
 _____________________________________________________________________
 _____________________________________________________________________
 
-**3. Verifique**: ¿qué medición mostrada por el grupo respalda (o
-refuta) su hipótesis? Si no mostraron la medición que usted necesita,
-¿cuál pidió su hipótesis y qué resultado esperaría?
+**3. Verifique**: ¿qué medición mostrada respalda (o refuta) su
+hipótesis? Si no mostró la medición que usted necesita, ¿cuál pidió su
+hipótesis y qué resultado esperaría?
 _____________________________________________________________________
 _____________________________________________________________________
 
 ---
 
-**Cierre en aula**: las hojas se entregan al inicio del cierre del
-módulo 2, junto con el sobre de coevaluación (dos cajas separadas).
+**Cierre en aula**: la hoja se entrega al pasar hacia el cierre, al
+terminar la defensa 9 (antes del bloque de línea base) — sin re-escucha
+colectiva ni plenario comparado (no caben con 9 defensas).
 El profesor califica el bloque ★ con la rúbrica OA3 (D1–D4,
 metodología §5) durante la semana y hojea el resto como evidencia del
 arco del curso; los resultados se publican con las notas finales por

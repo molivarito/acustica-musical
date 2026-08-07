@@ -8,52 +8,60 @@ medición y escucha), OA3.2 (conectar oído, mecanismo y medición).
 
 ## Qué es
 
-En su grupo estable de 4, van a **construir un instrumento musical, o
-modificar uno existente, o montar una instalación sonora** — y van a
+Cada uno de ustedes va a **construir un instrumento musical, o
+modificar uno existente, o montar una instalación sonora** — y va a
 **explicar acústicamente su comportamiento** usando los modelos del
 curso (modos, resonancia, cuerdas, tubos, membranas). El objeto puede
-ser modesto; la explicación no.
+ser modesto; la explicación no. **El proyecto es individual**: cada
+estudiante persigue su propio objeto sonoro. Su **mesa de trabajo**
+(la que esté vigente en el tramo — se rearma tras s05 y tras s10) es su
+equipo de apoyo, no la dueña del proyecto: opina, presta manos y kit
+compartido, pero el objeto, la predicción, la bitácora y la defensa son
+suyos.
 
 **La regla de oro del proyecto: la calidad de la explicación vale más
-que el éxito sonoro.** Un instrumento que no logró lo que ustedes
-esperaban, pero cuyo grupo demuestra con mediciones y modelos *por qué*
+que el éxito sonoro.** Un instrumento que no logró lo que usted
+esperaba, pero que usted demuestra con mediciones y modelos *por qué*
 se comportó así, vale más que uno que suena bien sin que nadie sepa
 explicarlo. Las desviaciones respecto de lo predicho no se esconden: se
 analizan — son la parte más interesante del informe.
 
-Criterios para elegir el objeto (se revisan con el profesor entre s03 y
-s05): que **suene**, que tenga al menos un **parámetro modificable**
-(longitud, tensión, masa, agujeros, material…) sobre el cual predecir,
-y que sea **medible** con los medios del curso (celular, apps, el
-micrófono con interfaz del curso).
+Criterios para elegir el objeto (su mesa opina, usted decide; se revisa
+con el profesor entre s03 y s05): que **suene**, que tenga al menos un
+**parámetro modificable** (longitud, tensión, masa, agujeros,
+material…) sobre el cual predecir, y que sea **medible** con los medios
+del curso (celular propio, apps, el micrófono con interfaz del curso).
 
 ## Calendario e hitos
 
 | Hito | Sesión | Entrega | % |
 |---|---|---|---|
-| Lanzamiento | s03 | media hoja con 2 ideas candidatas (sin nota; feedback en s04) | — |
-| **Hito 1 — Diseño con predicción** | **s05** | 2 págs máx.: qué van a construir/modificar, qué modelo del curso aplica, y la **predicción escrita** del resultado sonoro esperado (qué parciales, qué altura, qué cambia al mover el parámetro — con números donde se pueda) + bitácora al día | **10 %** |
-| **Hito 2 — Avance** | **s10** | compilado de los talleres de medición s08–s12 ya hechos sobre SU objeto + evidencia sonora (grabación) + bitácora al día; clínica de pares en s10 | **10 %** |
-| **Presentación final + informe** | **s15** | presentación de ~25 min por grupo (con preguntas individuales) + informe escrito de **6 páginas máximo** | **15 %** |
+| Lanzamiento | s03 | media hoja individual con 2 ideas candidatas (sin nota; feedback en s04) | — |
+| **Hito 1 — Diseño con predicción** | **s05** | 1 página máx., individual: qué va a construir/modificar, qué modelo del curso aplica, y la **predicción escrita** del resultado sonoro esperado (qué parciales, qué altura, qué cambia al mover el parámetro — con números donde se pueda) + bitácora individual al día | **10 %** |
+| **Hito 2 — Avance** | **s10** | compilado individual de los talleres de medición s08–s12 ya hechos sobre SU objeto propio + evidencia sonora (grabación) + bitácora individual al día; clínica cruzada por mesas en s10 | **10 %** |
+| **Presentación final + informe** | **s15** | defensa individual de **8′ + 3′ de preguntas** (2 preguntas al autor) + informe escrito individual de **6 páginas máximo** | **15 %** |
 
 **Los talleres de medición de las sesiones s08–s12 se hacen sobre el
-objeto de su proyecto**: espectros, niveles, resonancias de *su*
-instrumento. El avance del proyecto no es trabajo extra fuera de aula —
-es la suma de esos talleres más lo que el grupo construya entre medio.
+objeto propio de cada estudiante**: espectros, niveles, resonancias de
+*su* instrumento, con la mesa como equipo de apoyo (kit compartido,
+manos extra, opinión). El avance del proyecto no es trabajo extra fuera
+de aula — es la suma de esos talleres más lo que usted construya entre
+medio.
 
-## Reglas de trabajo en grupo
+## Reglas de trabajo
 
-- **Bitácora**: cada grupo lleva una bitácora (cuaderno o documento
-  compartido) con fecha, qué se hizo, qué se midió y **quién hizo qué**.
-  En cada hito, la página de roles va **firmada por los 4 integrantes**.
-  Sin bitácora al día, el hito no se recibe.
-- **Coevaluación**: junto con los hitos 2 y final, cada integrante
-  evalúa confidencialmente el aporte de los demás; la coevaluación puede
-  ajustar la nota individual **hasta ±0,5** respecto de la nota grupal.
-- **Defensa individual**: en la presentación final (s15) el profesor
-  hace preguntas dirigidas a integrantes específicos; "eso lo hizo mi
-  compañero" no es una respuesta — todos deben poder explicar el
-  instrumento completo.
+- **Bitácora**: cada estudiante lleva su propia bitácora (cuaderno o
+  documento compartido) con fecha, qué hizo, qué midió y con qué apoyo
+  de la mesa. Sin bitácora al día, el hito no se recibe.
+- **La mesa como equipo de apoyo**: presta manos para medir, opina
+  sobre las decisiones de diseño y comparte el kit del curso — pero no
+  decide por usted ni comparte su nota. Las mesas se rearman dos veces
+  en el semestre (tras s05 y tras s10) para que trabaje con todo el
+  curso.
+- **Defensa individual**: en la presentación final (s15) usted expone y
+  responde solo — no hay reparto de preguntas entre compañeros porque
+  no hay compañeros de proyecto: el instrumento es suyo de principio a
+  fin.
 
 ## Qué se evalúa (síntesis de criterios)
 
@@ -61,7 +69,7 @@ es la suma de esos talleres más lo que el grupo construya entre medio.
   en un modelo del curso (no en el gusto)? ¿El parámetro a modificar
   está claro y la verificación es factible?
 - **Hito 2 (OA5.2)**: ¿hay mediciones reales del objeto (espectros,
-  frecuencias, niveles) e interpretación de ellas? ¿El grupo comparó lo
+  frecuencias, niveles) e interpretación de ellas? ¿Usted comparó lo
   medido con lo predicho, aunque no coincida?
 - **Final (OA5.3, OA3.2)**: ¿la explicación conecta las tres capas —
   lo que se **oye**, el **mecanismo** físico y la **medición** que lo
@@ -74,17 +82,19 @@ sesión 04).
 
 ## Para empezar hoy (sesión 03)
 
-En los 15 minutos de trabajo grupal del lanzamiento: lluvia de ideas y
-media hoja con **2 ideas candidatas**, cada una respondiendo en una
+En los 15 minutos de trabajo del lanzamiento: cada uno piensa y escribe
+SU media hoja con **2 ideas candidatas**, cada una respondiendo en una
 línea: (a) ¿qué es y qué suena?, (b) ¿qué modelo del curso permitiría
-*predecir* su sonido?, (c) ¿qué mediríamos con el celular para
-comprobarlo? Se entrega al salir; el profesor la devuelve comentada en
-s04. Ideas de arranque, solo para destrabar: monocordio con puente
-móvil, flauta de PVC, tambor afinable, kalimba de reglas, botellófono,
-modificación de un instrumento propio (sordinas, trastes, parches) —
-pero las mejores ideas de años anteriores fueron de los grupos.
+*predecir* su sonido?, (c) ¿qué mediría con el celular para
+comprobarlo? Comparta brevemente con su mesa — opina, no decide — y
+entregue su media hoja individual al salir; el profesor la devuelve
+comentada en s04. Ideas de arranque, solo para destrabar: monocordio
+con puente móvil, flauta de PVC, tambor afinable, kalimba de reglas,
+botellófono, modificación de un instrumento propio (sordinas, trastes,
+parches) — pero las mejores ideas de años anteriores fueron de
+estudiantes que se apropiaron de una idea simple y la llevaron lejos.
 
-**Referencia avanzada opcional** para grupos que quieran profundizar:
+**Referencia avanzada opcional** para quienes quieran profundizar:
 Fletcher, N. H. & Rossing, T. D., *The Physics of Musical Instruments*
 (Springer) **[POR VERIFICAR disponibilidad en biblioteca UC]**; para la
 mayoría de los proyectos bastan las fuentes del curso (BEN para

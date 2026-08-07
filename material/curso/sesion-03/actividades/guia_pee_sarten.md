@@ -3,9 +3,9 @@
 **Objetivos**: OA1.1 (los parciales del espectro son los modos del
 objeto), OA1.2 (predecir el efecto del punto de golpe y del punto de
 apagado), OA4.1 (medir frecuencias en el espectrograma).
-**Grupo**: 4 integrantes con roles: **ejecuta** (golpea y apaga) ·
-**mide** (opera la app y lee los Hz) · **registra** (llena esta hoja) ·
-**vocero**. Roten "ejecuta" y "mide" entre los dos objetos.
+**Grupo**: 3 integrantes con roles: **ejecuta** (golpea y apaga) ·
+**mide y registra** (opera la app, lee los Hz y llena esta hoja) ·
+**vocero**. Roten "ejecuta" y "mide y registra" entre los dos objetos.
 **Materiales**: kit de objetos metálicos (sartén u olla, tapa, taza),
 cuchara de palo, 2+ celulares con app de espectrograma, esta hoja.
 

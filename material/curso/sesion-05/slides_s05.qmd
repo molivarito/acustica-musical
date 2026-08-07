@@ -28,7 +28,7 @@ Dejen en la caja, al entrar:
 
 ::: {.incremental}
 - Su **documento** (2 páginas)
-- La **bitácora firmada** por los 4 integrantes
+- La **bitácora firmada** por los 3 integrantes
 :::
 
 . . .
@@ -100,10 +100,10 @@ luego $f_3\dots$— con un **filtro pasa-altos progresivo**:
 
 La respuesta es **personal** — por eso la vamos a registrar, uno por uno.
 
-## En parejas: predigan antes de subir el filtro
+## Por turnos: predigan antes de subir el filtro
 
-Uno predice, el otro manipula y registra. Se intercambian a mitad del
-protocolo.
+En cada turno: uno manipula, uno escucha (y mide su umbral), uno dicta
+y cronometra. Los roles rotan: tres turnos, tres umbrales.
 
 ## Demo: suba el filtro pasa-altos {background-iframe="../../demos/demo_fundamental_ausente.html" background-interactive=true}
 
@@ -111,10 +111,10 @@ protocolo.
 
 ::: {.incremental}
 - **Prediga** en su hoja (2′), antes de tocar la demo
-- En pareja: uno **manipula**, el otro **registra**; se intercambian tras
-  apagar $f_1$
+- Por turnos: uno **manipula**, uno **escucha**, uno **dicta y
+  cronometra** — los roles rotan al cerrar cada umbral
 - Suban el filtro pasa-altos hasta que la altura se "rompa"
-- Cada uno anota **su propio umbral** en su hoja
+- Cada uno anota **su propio umbral** en su hoja, en su turno
 - Puesta en común del grupo (2′)
 :::
 

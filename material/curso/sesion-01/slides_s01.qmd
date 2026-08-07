@@ -38,20 +38,111 @@ Este curso es sobre **escuchar como científico**.
 
 Todo diagnóstico de este curso conecta las tres.
 
+## ¿Quiénes somos? — a mano alzada
+
+::: {.incremental}
+- ¿De qué **familia** es su instrumento principal — cuerdas, vientos,
+  canto, teclado, percusión?
+- ¿Quién ha usado un **espectrograma**, un DAW o un afinador cromático
+  a conciencia?
+- ¿Quién ha **medido** alguna vez algo de un sonido — no oírlo:
+  ponerle un número?
+:::
+
+. . .
+
+Esa variedad es **a propósito**: los grupos van a mezclar instrumentos
+y afinidades. Lo que su oído ya sabe, hoy le vamos a poner física y
+números.
+
+::: {.notes}
+Votación 1 del plan. Curso 2026-2: los 9 son de música — el censo ya
+no separa carreras sino familias de instrumento y afinidad
+tecnológica. Anotar mentalmente quiénes levantan la mano en
+espectrograma/DAW: cada grupo necesita al menos uno (bloque de
+formación de grupos, 40–55′).
+:::
+
+## El mapa del semestre
+
+| Bloque | Sesiones | Pregunta |
+|---|---|---|
+| **A. El sonido como objeto físico** | s01–s04 | ¿qué vibra y cómo? |
+| **B. El sonido percibido** | s05–s09 | ¿qué hace el oído con eso? |
+| **C. Los instrumentos como sistemas** | s10–s13 | ¿cómo funciona un instrumento entero? |
+| **D. La sala y la síntesis final** | s14–s15 | ¿y el espacio donde suena? |
+
+. . .
+
+Hitos: proyecto parte en **s03** · pruebas en **s07** y **s13** ·
+defensa final en **s15**.
+
+::: {.notes}
+Fechas exactas: viven en Canvas y en el calendario del semestre — aquí
+solo números de sesión. Si preguntan por feriados/recesos: "está todo
+en Canvas, hoy quédense con la forma del semestre".
+:::
+
+## Cómo es cada sesión
+
+Dos módulos de 70′. Y siempre:
+
+::: {.incremental}
+- Parte **sonando** algo — antes de cualquier fórmula
+- **Escucha del día** (10′, sin nota): escribir, discutir en la mesa
+- Mini-lecciones de **15′ máximo** — a mano alzada: ¿cuántos minutos
+  seguidos creen que aguanta la atención en una clase expositiva?
+- **Taller en grupos**, con predicción escrita antes de tocar nada
+- Cierre: contrastar lo predicho con lo medido
+:::
+
+. . .
+
+**Los talleres se cierran en clase.** No van de tarea.
+
+## Tres reglas del juego
+
+::: {.incremental}
+1. **Primero suena, después se explica.**
+2. **Nada suena sin predicción** — escrita, antes, aunque salga mala.
+   Equivocarse con argumentos vale; anotar después de oír, no.
+3. **Nadie mira sin hacer** — roles rotativos en cada taller.
+:::
+
+## El proyecto: SU objeto que suena
+
+::: {.incremental}
+- **Cada uno elige un objeto sonoro propio** (s03): su instrumento,
+  una caja, una botella — lo que suene y le dé curiosidad
+- Lo persigue todo el semestre: diseño con predicción (**s05**),
+  avance (**s10**), defensa final con el objeto sonando en vivo
+  (**s15**)
+- Los talleres de medición de s08–s12 se hacen **sobre su propio
+  objeto**, con su mesa como equipo de apoyo: el proyecto avanza
+  dentro de la clase, no les roba fines de semana
+:::
+
+## Fuera del aula
+
+::: {.incremental}
+- Preparación **breve y dirigida** (≤1 h): páginas exactas o una demo,
+  y se usa visiblemente al empezar la clase
+- Celular con **apps gratuitas** (afinador, espectrograma) — son
+  nuestros instrumentos de medición
+- Instrumentos propios: solo en sesiones **avisadas con una semana**
+- Todo el material queda en el **sitio del curso** y en **Canvas**
+:::
+
 ## Cómo se evalúa
 
 ::: {.incremental}
 - **Talleres** (cerrados en clase, mejores 8 de ~10) — 35%
-- **Proyecto** (grupos de 4): hito diseño 10% + hito avance 10% +
+- **Proyecto** (individual): hito diseño 10% + hito avance 10% +
   presentación final 15% = 35%
 - **Pruebas** (2, con audio) — 10% c/u = 20%
 - **Escucha argumentada escrita** (Parte A de cada prueba + hoja de
   s15; cuentan las mejores 2 de 3) — 10%
 :::
-
-. . .
-
-**0% participación separada.**
 
 ## Lo que suena en clase no lleva nota {.center}
 
@@ -68,14 +159,21 @@ Se aprende a escuchar equivocándose en voz alta y sin costo. Lo que sí
 se califica es la escucha **escrita**: mismo audio para todos, varias
 pasadas, tiempo para pensar.
 
-## Los cinco grupos {.center}
+## Las tres mesas de trabajo {.center}
 
-Estables para todo el semestre — mezcla música/ingeniería.
+Mesas de 3, mezclando instrumentos y afinidades (ninguna homogénea).
 
 ::: {.incremental}
-- Se nombran y reparten roles: **ejecuta / mide / registra / vocero**
-- Firman un acta de grupo
-- Son también sus grupos de **proyecto**
+- Se nombran y reparten roles: **ejecuta / mide y registra / vocero**
+- Firman un acta de mesa
+- Se **rearman dos veces** en el semestre (tras s05 y tras s10):
+  van a trabajar con todo el curso
+:::
+
+::: {.notes}
+Anunciar la rotación de mesas HOY, como parte del diseño ("conocer
+cómo trabaja todo el curso"), no como amenaza. El proyecto es
+individual, así que rearmar mesas no rompe nada.
 :::
 
 ## La línea base de hoy (sin nota)
@@ -101,6 +199,28 @@ Van a escuchar un estímulo **una sola vez**.
 
 *No hay nota — ni hoy ni en las escuchas del día del resto del
 semestre. Esta hoja es para que en noviembre vean cuánto cambiaron.*
+
+## La rúbrica del curso (OA3)
+
+| Dimensión | La pregunta que responde |
+|---|---|
+| **D1. Descripción** | ¿Qué oye, con qué vocabulario? |
+| **D2. Hipótesis** | ¿Qué mecanismo físico lo produce? |
+| **D3. Verificación** | ¿Qué mediría para confirmarlo o refutarlo? |
+| **D4. Argumentación** | ¿Separa lo que **oye** de lo que **interpreta**? |
+
+. . .
+
+Cuatro niveles por dimensión — el detalle está en la hoja impresa.
+Califica solo las escuchas **escritas** (s07, s13, s15); hoy y cada
+semana, es una guía sin nota.
+
+::: {.notes}
+Presentarla DESPUÉS de oír a los voluntarios, mostrando dónde caería
+cada respuesta real — elogiar lo logrado, no sancionar lo inicial
+(pauta del acta §B). Si el proyector falla: la hoja impresa está en
+cada mesa.
+:::
 
 ## PEE relámpago: la regla en la mesa
 
@@ -189,7 +309,7 @@ Escriban su predicción para la próxima sesión:
 
 > **¿Cómo se vería este pulso, si pudiéramos dibujarlo?**
 
-## Para el miércoles
+## Para la próxima sesión
 
 - Traer **celular con app de espectrograma** instalada
 - s02: convertimos el sonido en imagen — forma de onda, espectro,

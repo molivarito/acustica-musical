@@ -125,12 +125,10 @@ herramientas:
 | Grupo | Nota | Frecuencia |
 |---|---|---|
 | 1 | Sol4 | 392 Hz |
-| 2 | La4 | 440 Hz |
-| 3 | Si4 | 494 Hz |
-| 4 | Re5 | 587 Hz |
-| 5 | Mi5 | 659 Hz |
+| 2 | Si4 | 494 Hz |
+| 3 | Re5 | 587 Hz |
 
-Al final, los 5 tubos tocan juntos la escala pentatónica.
+Al final, los 3 tubos tocan juntos el acorde de Sol mayor.
 
 ## Taller, fase 1: predecir y cortar
 
@@ -164,14 +162,14 @@ temperatura, y con ella $f_1 = v/4L$.
 | D — contraste y explicación | ¿por qué la desviación fue sistemática? | 8′ |
 | Bitácora | cierre de la serie del objeto s08–s12 | 4′ |
 
-*En paralelo, el profesor revisa las 5 bitácoras (10′).*
+*En paralelo, el profesor hojea las 9 bitácoras individuales (~1′ c/u, ≈9′).*
 
 ## Cierre plenario: la lutería como física experimental {.center}
 
 ::: {.incremental}
-- Contrastamos las 5 tablas del pizarrón — ¿por qué la desviación fue
+- Contrastamos las 3 tablas del pizarrón — ¿por qué la desviación fue
   sistemática?
-- Los 5 tubos tocan juntos la escala pentatónica: Sol–La–Si–Re–Mi
+- Los 3 tubos tocan juntos el acorde de Sol mayor: Sol–Si–Re
 - Debate relámpago (3′): **¿importa que el tubo sea PVC y no plata?**
 :::
 

@@ -23,9 +23,9 @@ Dos módulos, un puente hacia los instrumentos.
 ## Antes de nada: entrega del [Hito 2]{style="color:#0f766e"} (5′)
 
 ::: {.incremental}
-- Entreguen el **compilado del grupo** (radiografía + mapa de escala + bitácora + estado vs. hito 1)
-- Cada integrante deposita su **coevaluación en sobre cerrado**
-- Anoten la fecha de entrega en la bitácora
+- Entreguen SU **compilado individual** (radiografía + mapa de escala + bitácora + estado vs. hito 1)
+- Sin coevaluación: el proyecto es individual
+- Anoten la fecha de entrega en su bitácora
 :::
 
 > La clínica del módulo 2 trabaja **sobre lo que acaban de entregar** — guarden una copia o foto de su compilado.
@@ -168,18 +168,18 @@ Cuatro maneras de entregarle energía a un resonador (OA1.3):
 
 La botella soplada ya adelantó algo raro: nadie la empuja periódicamente y, aun así, suena estable — una **oscilación auto-sostenida**.
 
-## Clínica de proyecto entre pares (30′)
+## Clínica de proyecto entre pares (38′)
 
 ::: {.incremental}
-- Cada grupo **presenta** su avance (6′): objeto en mano, sonando al menos una vez, qué falta
-- El grupo receptor **retroalimenta** (5′) con la pauta:
+- En cada mesa presentan los **3 estudiantes, uno por uno** (~3′ c/u): objeto en mano, sonando al menos una vez, qué falta
+- La mesa receptora **retroalimenta** cada proyecto (~1′) con la pauta:
 :::
 
 > **2 fortalezas · 2 dudas · 1 sugerencia medible** (qué medir, con qué instrumento, qué resultado esperan)
 
 . . .
 
-Se invierten los roles. Firman y copian la pauta a ambas bitácoras.
+Rotación A→B→C. Firman y copian cada pauta a la bitácora individual del estudiante presentado.
 
 ## Plenario y compromisos {.center}
 
@@ -187,7 +187,7 @@ Dos proyectos al pizarrón: objeto sonando + la medición más informativa + la 
 
 . . .
 
-Cada grupo escribe 1–2 **compromisos verificables** antes de s12 — incluido el obligatorio: **el mapa de resonancias de su propio objeto**.
+Cada estudiante escribe 1–2 **compromisos verificables** antes de s12 — incluido el obligatorio: **el mapa de resonancias de su propio objeto**.
 
 ## Síntesis del día
 

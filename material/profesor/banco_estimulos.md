@@ -26,7 +26,7 @@ el ítem #16, la escucha del día de salas).
 
 | # | Estímulo | Sesión donde se usa (bloque) | Estado | Plazo sugerido |
 |---|---|---|---|---|
-| 1 | Guitarra con trémolo de batidos (nota larga, batidos audibles) | s01 — línea base de escucha OA3 (m1, 25–40′) | por grabar | **pre-s01** |
+| 1 | Guitarra con trémolo de batidos (nota larga, batidos audibles) | s01 — línea base de escucha OA3 (m1, 25–40′) | **3 candidatos generados** (2026-08-07) en `material/profesor/estimulos/`: dos desde sample real de guitarra (U. Iowa MIS, mezcla con copia desafinada; batido rápido y lento) + 1 respaldo sintético. Elegir de oído, PROBAR en el equipo de sala y usar EL MISMO archivo en s15 | **hoy, antes de s01** |
 | 2 | Nota larga de flauta con ataque soploso (capa impulsiva + capa sostenida) | s02 — escucha del día, la primera del semestre (m1, 0–10′) | por grabar | **pre-s01** (es la primera escucha del día: instala el hábito) |
 | 3 | Trueno con retardo (tormenta: relámpago descrito, trueno ~3 s después) | s02 — gancho sonoro $v$ del sonido (m2, 0–10′) | por grabar o conseguir con licencia | semana previa a s02 |
 | 4 | Timbal y tom, golpes cortos (par con/sin altura definida) | s03 — mini-lección modos 2D (m2, 25–40′) | por grabar o conseguir con licencia | semana previa a s03 |

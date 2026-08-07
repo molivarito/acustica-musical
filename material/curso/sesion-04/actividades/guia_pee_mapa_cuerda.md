@@ -3,8 +3,8 @@
 **Objetivos**: OA1.1 (la receta: qué modos enciende cada punto de
 pulsación), OA1.2 (predecir qué parciales suenan y cuáles quedan mudos),
 OA4.1 (medir frecuencias en el espectrograma).
-**Grupo**: 4 integrantes con roles: **ejecuta** (pulsa y toca armónicos)
-· **mide** (opera espectrograma y afinador) · **registra** (llena esta
+**Grupo**: 3 integrantes con roles: **ejecuta** (pulsa y toca armónicos)
+· **mide y registra** (opera espectrograma y afinador, llena esta
 hoja) · **vocero**. Roten "ejecuta" a la mitad de la fase 1 (y de nuevo
 si llegan a la fase 2 opcional).
 **Materiales**: 1–2 instrumentos de cuerda pulsada del grupo, huincha o

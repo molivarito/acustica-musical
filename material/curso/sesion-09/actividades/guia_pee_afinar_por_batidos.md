@@ -5,17 +5,17 @@ temperamentos: es SU evaluación declarada), OA2.2 (batidos como
 herramienta), OA1.2 (cents con aritmética).
 **Es el taller EVALUADO de la semana** (rúbrica rápida
 logrado/parcial/incipiente, cuenta en el 35 % de talleres).
-**Trabajo en parejas** dentro del grupo (2 parejas por notebook, por
-turnos): el **afinador** (con audífonos) afina de oído; el
-**operador** maneja la demo (desafina al azar, oculta y revela los
-cents) y anota lo que el afinador dicte. Intercambien roles al
-terminar cada turno. La pareja en espera resuelve la sección 3 (papel)
-— nadie mira sin hacer.
+**Turnos individuales** dentro del grupo (1 notebook, por turnos): el
+**afinador** (con audífonos) afina de oído; el **operador** maneja la
+demo (desafina al azar, oculta y revela los cents) y anota lo que el
+afinador dicte. Roten roles al terminar cada turno (afinador →
+operador → en espera → afinador). El integrante en espera resuelve la
+sección 3 (papel) — nadie mira sin hacer.
 **Materiales**: notebook con [`demo_temperamentos.html`](../../../demos/demo_temperamentos.html) en **modo
 afinar** (casilla "ocultar cents" activada), audífonos, esta guía
-(1 por pareja), reloj o cronómetro para contar batidos.
+(1 por grupo), reloj o cronómetro para contar batidos.
 
-Pareja: ______________________ y ______________________ · Grupo: ______
+Grupo: ______ · Integrantes: ______________________ / ______________________ / ______________________
 
 ## 1. Predicción individual (ANTES del primer turno — 3 min, por escrito)
 
@@ -38,6 +38,7 @@ revela y anota:
 |---|---|---|
 | 1. | | |
 | 2. | | |
+| 3. | | |
 
 **Fase B — la quinta del piano.** Desde su punto liso, el afinador
 **estrecha** el intervalo hasta contar **~1 batido por segundo**
@@ -47,12 +48,13 @@ revela y anota:
 |---|---|---|
 | 1. | | |
 | 2. | | |
+| 3. | | |
 
 **Fase C (solo si les sobra turno) — la 3ª mayor.** Repitan la fase A
 con la 3ª mayor. Anoten qué pasó y por qué costó lo que costó:
 __________________________________________________________________
 
-## 3. Ítems de papel (la pareja en espera; por escrito)
+## 3. Ítems de papel (el integrante en espera; por escrito)
 
 1. **La coma con sumas**: la quinta justa mide ~702 cents y la octava
    1200. Calculen: 12 quintas = ______ cents; 7 octavas = ______
@@ -79,9 +81,9 @@ __________________________________________________________________
 
 ## Cierre en aula
 
-Cada pareja pega sus puntos (fases A y B) en la recta de cents del
+Cada integrante pega sus puntos (fases A y B) en la recta de cents del
 pizarrón; el profesor superpone los del curso (¿se agrupan en ~702 y
 ~700?) y afina la guitarra por armónicos en vivo. Entreguen la guía al
 salir (se evalúa al vuelo). Criterios: predicción previa escrita ·
-fases A y B anotadas por AMBOS afinadores · la cuenta de la coma
+fases A y B anotadas por LOS TRES afinadores · la cuenta de la coma
 resuelta · contraste predicción–resultado honesto.

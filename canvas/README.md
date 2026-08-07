@@ -62,4 +62,7 @@ python3 publicar_canvas.py verificar
 Ver el README de `SyS/canvas/` para el detalle completo del
 funcionamiento del script (formato de `canvas.yml`, semántica de
 `sync`, etc.) — es el mismo script sin modificaciones más allá del
-texto de ayuda.
+texto de ayuda (re-sincronizado desde SyS el 2026-08-06: agrega ítems
+de módulo de tipo `quiz`/`assignment`/`file` enlazados por
+`content_id`, y deshace la publicación automática que hace Canvas al
+insertar esos objetos en un módulo).

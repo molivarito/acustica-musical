@@ -162,7 +162,7 @@ demasiado rápido: en la sesión se vota antes de medir.
    oscilación, quién entrega la energía y quién fija la frecuencia?
 2. ¿Qué largo de tubo tapado da la nota que le asignen a su grupo — y
    qué marcará el afinador cuando lo corten exactamente a esa medida?
-   ¿Le pasará lo mismo a los otros cuatro grupos?
+   ¿Les pasará lo mismo a los demás grupos?
 3. Soplando más fuerte, sin cambiar nada más: ¿a qué intervalo salta un
    tubo abierto, y a cuál uno tapado? ¿Qué tiene que ver eso con que el
    clarinete y la flauta se digiten tan distinto?

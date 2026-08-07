@@ -4,16 +4,16 @@
 propio oído). **Esta hoja se entrega al salir del módulo y NO lleva
 nota**: es su dato psicoacústico personal y evidencia del curso (se
 archiva; la reencontrará en s09 al afinar por batidos).
-**Formato**: en parejas dentro del grupo (2 parejas por notebook, por
-turnos de ~10′ por pareja). Roles en cada turno: **oyente** (audífonos,
-dicta SUS fronteras — no se negocian) y **operador** (mueve Δf despacio
-y anota lo que el oyente dicte). Luego intercambian. La pareja que
-espera trabaja los ítems 1 y 4 de esta hoja.
+**Formato**: turnos individuales dentro del grupo (1 notebook, ~8′ por
+turno). Roles en cada turno: **oyente** (audífonos, dicta SUS
+fronteras — no se negocian) y **operador** (mueve Δf despacio y anota
+lo que el oyente dicte). El tercer integrante, en espera, trabaja los
+ítems 1 y 4 de esta hoja. Rotan hasta que los tres hayan sido oyente.
 **Materiales**: notebook con [`demo_banda_critica.html`](../../../demos/demo_banda_critica.html) (tonos puros,
 f₁ = 440 Hz; si quieren contar batidos finos, [`demo_batidos.html`](../../../demos/demo_batidos.html) de
 s07 sirve igual), audífonos personales, esta hoja (una POR PERSONA).
 
-Nombre: ____________________ Pareja: ____________________
+Nombre: ____________________ Grupo: ____________________
 
 ## 1. Predicción individual (ANTES de su turno de oyente)
 
@@ -21,7 +21,7 @@ Nombre: ____________________ Pareja: ____________________
 - "Creo que la aspereza desaparecerá del todo alrededor de
   Δf ≈ ____ semitonos."
 
-## 2. Medición (su turno de oyente, ~5 min)
+## 2. Medición (su turno de oyente, ~6 min)
 
 El operador parte del unísono (Δf = 0) y sube MUY despacio. Usted
 dicta "alto" en cada frontera; el operador lee Δf en Hz y semitonos en
@@ -42,10 +42,10 @@ de zonas de la pantalla es su registro visual (captúrelo si alcanza).
 F3(220 Hz) = ____ Hz = ____ semitonos. ¿Se mantuvo en Hz o en
 semitonos? ______________________
 
-## 3. Contraste (al terminar los dos turnos de la pareja, 2 min)
+## 3. Contraste (al terminar los tres turnos del grupo, 2 min)
 
-- ¿Se cumplió F1 < F2 < F3? ¿Sus fronteras coinciden con las de su
-  pareja o hay diferencias claras? ¿En cuál frontera discreparon más?
+- ¿Se cumplió F1 < F2 < F3? ¿Sus fronteras coinciden con las de sus
+  compañeros de grupo o hay diferencias claras? ¿En cuál frontera discreparon más?
   ________________________________________________________________
 - Su predicción del ítem 1, ¿le achuntó al orden de magnitud?  Sí / No
 
@@ -61,10 +61,10 @@ semitonos? ______________________
 
 ## Cierre en aula
 
-**Último ítem del taller (antes de la síntesis)**: consoliden los 4
+**Último ítem del taller (antes de la síntesis)**: consoliden los 3
 F3 del grupo (en semitonos) en la **tira de frontera F3** del grupo —
 un punto por integrante, con nombre chico al lado. Solo el **vocero**
-pega la tira en la recta del pizarrón (el "mapa del curso"): 5 tiras,
-no 20 pegadas. Entregue esta hoja al salir
+pega la tira en la recta del pizarrón (el "mapa del curso"): 3 tiras,
+no 9 pegadas. Entregue esta hoja al salir
 del módulo: se archiva sin nota. El taller evaluado de esta semana es
 la radiografía espectral del módulo 2.

@@ -4,9 +4,9 @@
 desviación), OA1.3 (registros del tubo abierto y cerrado), OA5.2 (ciclo
 construir–medir–explicar), OA4.1 (afinador y espectrograma como
 instrumentos).
-**Grupo**: 4 integrantes con roles: **ejecuta** (corta y sopla; el
-soplo rota en las fases B–C) · **mide** (afinador, protocolo de 3
-lecturas) · **registra** (llena esta hoja) · **vocero** (tabla del
+**Grupo**: 3 integrantes con roles: **ejecuta** (corta y sopla; el
+soplo rota en las fases B–C) · **mide y registra** (afinador,
+protocolo de 3 lecturas, y llena esta hoja) · **vocero** (tabla del
 pizarrón y exposición). Todos corren el afinador en su propio celular
 durante los soplos; el registro oficial es esta hoja.
 **Materiales**: tubo PVC en bruto (~30 cm, Ø 20 mm), cortatubo, lija,

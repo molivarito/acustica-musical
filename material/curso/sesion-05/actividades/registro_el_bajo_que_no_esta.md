@@ -1,19 +1,20 @@
-# Hoja de registro psicoacústico — El bajo que no está (s05, módulo 1, 22 min)
+# Hoja de registro psicoacústico — El bajo que no está (s05, módulo 1, ~25 min)
 
 **Objetivos**: OA2.2 (demostrar y explicar la fundamental ausente), OA2.1
 (altura ≠ una frecuencia presente), OA3.1 (describir con precisión y
 distinguir lo oído de lo interpretado).
-**Formato 3 (experiencia guiada con registro individual), en PAREJAS.**
-El grupo se divide en **2 parejas**. Dentro de cada pareja hay dos
-roles que se **intercambian a mitad del protocolo** (al terminar la
-sección 2, antes de la 3): uno **manipula** la demo y el otro
-**registra**; ambos escuchan y cada uno llena SU propia hoja.
-**Logística**: lo ideal es un notebook (o celular) con audífonos POR
-PAREJA, trabajando las 2 parejas en paralelo (~18′); si el grupo tiene
-un solo notebook, las parejas se turnan (~9′ por pareja: la que espera
-va completando predicción y sección 4).
+**Formato 3 (experiencia guiada con registro individual), por TURNOS
+en el grupo de 3.** En cada turno hay tres roles que **rotan**: uno
+**manipula** la demo, uno **escucha** (es su turno de medir: llena las
+secciones 2 y 3 de SU hoja) y el tercero **dicta y cronometra**. Tres
+turnos de ~6–7′: todos pasan por el rol de escucha y cada uno llena SU
+propia hoja.
+**Logística**: un notebook (o celular) con audífonos por grupo; si hay
+un segundo dispositivo con audífonos, dos turnos corren en paralelo y
+sobra tiempo para repetir un umbral dudoso; quien espera su turno va
+completando predicción y sección 4.
 **Roles para la puesta en común del grupo**: **vocero** (reporta el
-umbral del grupo) · **registra** (anota la tabla del grupo en el
+umbral del grupo) · **mide y registra** (anota la tabla del grupo en el
 pizarrón si le toca). **Materiales**: notebook con
 [`demo_fundamental_ausente.html`](../../../demos/demo_fundamental_ausente.html), audífonos personales, esta hoja.
 
@@ -22,7 +23,7 @@ pizarrón si le toca). **Materiales**: notebook con
 
 ## 1. Predicción individual (ANTES de tocar la demo — 2 min)
 
-La pareja carga la demo con los 8 parciales encendidos (un tono armónico
+El grupo carga la demo con los 8 parciales encendidos (un tono armónico
 completo). Sin apagar nada todavía, **cada uno** predice y marca en su
 hoja:
 
@@ -32,11 +33,10 @@ hoja:
 - Escriba en una frase POR QUÉ predice eso: ____________________________
   _______________________________________________________________________
 
-## 2. Experimento: apagar la fundamental (7 min en paralelo; ~3 min si
-la pareja está en turno)
+## 2. Experimento: apagar la fundamental (en su turno: ~3 min)
 
-Quien **manipula** opera la demo; quien **registra** dicta y anota; los
-dos escuchan. Escuchen el tono completo. Canten mentalmente su altura.
+Quien **manipula** opera la demo; quien está en su turno **escucha**;
+el tercero dicta y anota. Escuchen el tono completo. Canten mentalmente su altura.
 Ahora apaguen el parcial 1 ($f_1$) y vuelvan a escuchar. Cada uno marca
 en su hoja:
 
@@ -45,15 +45,15 @@ en su hoja:
 - Descríbalo en sus palabras (separe altura de timbre): ________________
   _______________________________________________________________________
 
-## 3. Experimento: el filtro pasa-altos progresivo (8 min en paralelo;
-~5 min si la pareja está en turno)
+## 3. Experimento: el filtro pasa-altos progresivo (en su turno: ~4 min)
 
-**AQUÍ SE INTERCAMBIAN LOS ROLES de la pareja** (quien registraba ahora
-manipula). Suban el **filtro pasa-altos progresivo**: va quitando
-parciales de abajo hacia arriba —primero $f_1$, luego $f_2$, luego
-$f_3$…—. Deténganse en el punto donde la altura por fin **se rompe,
-salta o se vuelve ambigua**. El umbral es individual: cada uno anota el
-suyo aunque la pareja comparta la demo.
+Sin cambiar de turno (el mismo que escuchaba sigue escuchando), suban
+el **filtro pasa-altos progresivo**: va quitando parciales de abajo
+hacia arriba —primero $f_1$, luego $f_2$, luego $f_3$…—. Deténganse en
+el punto donde la altura por fin **se rompe, salta o se vuelve
+ambigua**. El umbral es individual: cada uno anota el suyo en su
+propio turno, aunque el grupo comparta la demo. **Al terminar la
+sección 3, rotan los tres roles y parte el turno siguiente.**
 
 | ¿Qué parciales quedan sonando? | ¿La altura sigue igual? (sí/no/dudosa) |
 |---|---|
@@ -69,7 +69,7 @@ suyo aunque la pareja comparta la demo.
   con la nota que usted venía cantando?   ☐ sí  ☐ no
 
 ## 4. Explicación y contraste (individual, 3 min; luego 2 min de puesta
-en común de las 2 parejas del grupo)
+en común del grupo)
 
 - ¿Su predicción del punto 1 le achuntó?   ☐ sí  ☐ no. Si no, ¿para qué
   lado se equivocó y por qué cree que fue? ______________________________
@@ -83,7 +83,7 @@ en común de las 2 parejas del grupo)
 ## Cierre en aula
 
 El vocero de cada grupo dice el umbral del grupo (cuántos parciales
-aguanta el patrón antes de romperse); el profesor superpone los 5 umbrales
+aguanta el patrón antes de romperse); el profesor superpone los 3 umbrales
 en el pizarrón (¿hay una "constante del curso" o cada oído es distinto?).
 Esta hoja se entrega junto con la del módulo 2 y cuentan **juntas** como el
 taller de la semana (rúbrica rápida logrado/parcial/incipiente).

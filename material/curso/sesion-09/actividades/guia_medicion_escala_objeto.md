@@ -7,18 +7,20 @@ OA4.1 (afinador y espectrograma bien leídos).
 individual: se registra en la **bitácora** y es insumo directo del
 **hito 2, que se entrega la PRÓXIMA sesión (s10)** junto con la
 radiografía de s08.
-**Grupo**: 4 integrantes con roles: **ejecuta** (hace sonar el objeto,
-mismo gesto que en s08) · **mide** (opera afinador y espectrograma) ·
-**registra** (llena esta guía y la bitácora) · **vocero**. Roten
-mide/ejecuta entre alturas: que cada integrante mida al menos una.
-**Materiales**: SU objeto, ≥2 celulares (afinador + espectrograma),
-esta guía, la bitácora, la radiografía de s08 a mano.
+**Mesa**: cada integrante mide **SU propio objeto** con **SU celular**;
+la mesa se turna para ayudar a sostener el celular, cronometrar y
+opinar sobre la lectura, pero la predicción, la medición y la bitácora
+son **individuales**. Que cada uno mida al menos una altura de SU
+objeto por sí mismo.
+**Materiales**: el objeto propio de cada integrante; celular propio
+(afinador + espectrograma) + los de apoyo de la mesa; esta guía (1 por
+estudiante); la bitácora individual; su radiografía de s08 a mano.
 
-Grupo: ____________ Objeto: ____________________________________
+Mesa: ____________ Estudiante: ____________ Objeto: ____________________________________
 
 ## 1. Predicción (ANTES de medir — 3 min, por escrito)
 
-- ¿Qué notas produce el objeto? (nómbrenlas de oído, sin apps):
+- ¿Qué notas produce su objeto? (nómbrelas de oído, sin apps):
   ________________________________________________________________
 - ¿Estarán a menos de ±10 cents de una nota del temperamento igual?
   SÍ / NO / algunas. ¿Cuál será la más corrida? ______
@@ -28,13 +30,13 @@ Grupo: ____________ Objeto: ____________________________________
 
 ## 2. Medición (~15 min)
 
-1. **Condiciones fijas** (deben ser las MISMAS de la radiografía de
-   s08; anótenlas igual): app afinador: ________ · app espectro:
+1. **Condiciones fijas** (deben ser las MISMAS de su radiografía de
+   s08; anótelas igual): app afinador: ________ · app espectro:
    ________ · distancia: ____ cm · gesto: ________________.
-2. Para CADA altura que el objeto ofrece (cada nota, cada tubo, cada
-   tecla, cada golpe distinto — hasta 5), midan **dos veces**: el
+2. Para CADA altura que su objeto ofrece (cada nota, cada tubo, cada
+   tecla, cada golpe distinto — hasta 5), mida **dos veces**: el
    afinador da nota + cents; el espectrograma da $f_1$ en Hz
-   (contrasten con la tabla de abajo):
+   (contraste con la tabla de abajo):
 
 | Sonido / gesto | $f_1$ (Hz, espectro) | Nota más cercana | Desvío (cents, afinador) | ¿Dentro de ±10? |
 |---|---|---|---|---|
@@ -45,7 +47,7 @@ Grupo: ____________ Objeto: ____________________________________
 | | | | | |
 
 3. **Intervalos internos** (si hay ≥2 alturas): entre alturas vecinas,
-   resten los cents totales (100 cents por semitono de distancia +
+   reste los cents totales (100 cents por semitono de distancia +
    los desvíos). ¿El intervalo resultante es el que la escala promete?
 
 | Par de alturas | Intervalo nominal | Medido (cents) | Diferencia |
@@ -53,14 +55,14 @@ Grupo: ____________ Objeto: ____________________________________
 | | | | |
 | | | | |
 
-4. **Si el afinador "duda"** (la nota salta o no fija): anótenlo — es
-   un dato, no un error. Miren la radiografía de s08: ¿el espectro era
+4. **Si el afinador "duda"** (la nota salta o no fija): anótelo — es
+   un dato, no un error. Mire su radiografía de s08: ¿el espectro era
    inarmónico? Un objeto sin parciales armónicos no ofrece una altura
-   nítida que afinar. Reporten la altura más plausible y la duda.
+   nítida que afinar. Reporte la altura más plausible y la duda.
 
 ## 3. Veredicto y contraste (5 min, por escrito)
 
-- **Veredicto argumentado**: nuestro objeto vive en la escala ______ /
+- **Veredicto argumentado**: mi objeto vive en la escala ______ /
   está corrido en promedio ______ cents / no vive en ninguna escala,
   porque _________________________________________________________
 - **La corrección física (OA1.2)**: para afinarlo habría que cambiar
@@ -68,25 +70,26 @@ Grupo: ____________ Objeto: ____________________________________
   dirección ______________, porque el modelo del curso dice que
   ________________________________________________________________
 - Contraste con la predicción: ¿qué coincidió y qué no? ¿A qué
-  atribuyen la discrepancia (objeto, gesto, app)?
+  atribuye la discrepancia (objeto, gesto, app)?
   ________________________________________________________________
 
 ## 4. A la bitácora (antes del cierre)
 
-Peguen/fotografíen: la tabla completa, las condiciones, el veredicto y
-la propuesta de corrección, con fecha y quién hizo qué. **La
+Pegue/fotografíe en su bitácora individual: la tabla completa, las
+condiciones, el veredicto y la propuesta de corrección, con fecha. **La
 radiografía (s08) + este mapa de escala (s09) son el corazón del
 hito 2 (s10): sin bitácora no hay hito.**
 
 ## Cierre en aula
 
-El vocero reporta en ≤1,5′: alturas medidas, peor desviación en cents,
-veredicto y UNA decisión de diseño que la medición sugiere para el
-hito 2.
+Un vocero por mesa reporta en ≤1,5′ UN objeto de su mesa: alturas
+medidas, peor desviación en cents, veredicto y UNA decisión de diseño
+que la medición sugiere para el hito 2; los otros 6 objetos quedan en
+las bitácoras individuales.
 
-**Si su objeto no vino o aún no suena**: midan la escala sobre la
-grabación más reciente de la bitácora o sobre el objeto de respaldo
-del profesor, y anoten el compromiso de repetir sobre el objeto real
+**Si su objeto no vino o aún no suena**: mida la escala sobre la
+grabación más reciente de su bitácora o sobre el objeto de respaldo
+del profesor, y anote el compromiso de repetir sobre el objeto real
 ANTES de s10 — el hito 2 no admite este reemplazo.
 
 ---

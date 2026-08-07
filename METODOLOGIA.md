@@ -3,10 +3,20 @@
 Fase 2 del diseño — **versión aprobada** (2026-07-12). Operacionaliza los
 objetivos de `OBJETIVOS_APRENDIZAJE.md` y resuelve sus riesgos
 aceptados 1 (rúbrica de OA3, sección 5) y 2 (proyecto que reutiliza
-talleres, sección 4). **Dimensionada para el cupo del semestre actual: 20
-estudiantes, organizados en 5 grupos estables de 4** (formados en la
-sesión 1, mezclando música/ingeniería; son también los grupos de
-proyecto).
+talleres, sección 4). **Dimensionada para la matrícula del semestre
+actual (2026-2, redimensionada el 2026-08-06): 9 estudiantes,
+organizados en 3 mesas de trabajo de 3** (formadas en la sesión 1;
+2026-2 llegó con 9 estudiantes de música, así que se mezcla por
+familia de instrumento y afinidad tecnológica, no por carrera). Las
+mesas duran un tramo y **se rearman dos veces** (tras s05 y tras s10:
+tramos s01–s05, s06–s10, s11–s15), para que cada estudiante trabaje
+con todo el curso — posible porque **el proyecto es individual**
+(decisión 2026-08-07): cada estudiante persigue su propio objeto
+sonoro y la mesa es su equipo de apoyo, no el dueño del proyecto. El
+diseño original (20 estudiantes = 5 grupos de 4, proyecto grupal)
+queda registrado en la bitácora; los kits comprados para 5 grupos
+dejan 2 de repuesto. (En este documento y en los planes de sesión,
+"grupo" y "mesa" son sinónimos: la mesa de trabajo vigente del tramo.)
 
 Condiciones de borde levantadas en la entrevista de diseño: 1–2
 micrófonos con interfaz (no uno por grupo); sala reconfigurable con
@@ -32,7 +42,8 @@ poder mostrarlos.
    OA1.2 y entrena OA5. *Verificación*: las guías de taller tienen
    casilla de predicción y bloque de contraste.
 3. **Nadie mira sin hacer.** En trabajo grupal, roles rotativos
-   (ejecuta, mide, registra, vocero) asignados en la guía.
+   (ejecuta, mide y registra, vocero — en grupos de 3, medir y
+   registrar es un solo rol) asignados en la guía.
    *Verificación*: la guía declara los roles.
 4. **La escucha se practica en cada sesión; se evalúa por escrito.**
    Cada sesión incluye la "escucha del día" (10 min, **sin nota**):
@@ -55,16 +66,16 @@ poder mostrarlos.
 
 ## 2. Repertorio de formatos de actividad
 
-Dimensionado a 20 estudiantes = 5 grupos de 4.
+Dimensionado a 9 estudiantes = 3 grupos de 3.
 
-| Formato | Rinde para | Duración | Logística y materiales (20 est.) |
+| Formato | Rinde para | Duración | Logística y materiales (9 est.) |
 |---|---|---|---|
 | **1. Demo predictiva en vivo** | OA1, OA2 | 10–20 min | Profesor con instrumento/objeto/demo HTML; los estudiantes escriben predicción (papel o mano alzada), se ejecuta, se discute la discrepancia. Sin materiales por grupo. Formato probado en 2019. |
-| **2. Taller experimental (estilo EEQ de Benade)** | OA1.1–1.3, OA5 | 30–35 min | 5 kits caseros idénticos (uno por grupo): botellas, mangueras, boquillas, elásticos, reglas, vasos, la sartén de BEN cap. 4. Guía PEE de 1 página con roles. Celular como instrumento (afinador, generador de tonos). Cantera: BEN EEQ caps. 2, 4–10, 16, 20–22. |
+| **2. Taller experimental (estilo EEQ de Benade)** | OA1.1–1.3, OA5 | 30–35 min | 3 kits caseros idénticos (uno por grupo; de los 5 comprados, 2 quedan de repuesto): botellas, mangueras, boquillas, elásticos, reglas, vasos, la sartén de BEN cap. 4. Guía PEE de 1 página con roles. Celular como instrumento (afinador, generador de tonos). Cantera: BEN EEQ caps. 2, 4–10, 16, 20–22. |
 | **3. Experiencia psicoacústica guiada** | OA2 | 15–25 min | Demos Web Audio propias proyectadas + audífonos personales en fases individuales; registro individual en hoja de respuesta, puesta en común por grupo. Cantera: ROE 2–3 y Ap. III; demos propias (batidos, banda crítica, fundamental ausente, enmascaramiento). |
-| **4. Escucha del día (práctica de OA3, SIN NOTA)** | OA3 (+OA1/OA2) | 10 min fijos | Un estímulo sonoro (grabación, instrumento, demo), dos pasadas (2′) → **cada estudiante escribe su diagnóstico en tres líneas** (describir / hipotetizar / verificar) (2′) → **discusión en la mesa del grupo** (3′): los 4 comparten y el vocero anota el diagnóstico consensuado → **plenario** (3′): el profesor pregunta selectivamente a una o dos mesas (responde el vocero **por el grupo**) y cierra con su propia versión experta, incluidas sus dudas. Nada de esto lleva nota, en ninguna sesión, y así se declara en s01. |
-| **5. Estaciones de medición** | OA4 | 35–40 min | El cuello es la interfaz + micrófonos (1–2): rotación por estaciones — E1: micrófono/interfaz + notebook (espectro fino); E2–E3: celulares con apps (SPL, afinador, espectrograma); E4: cálculo/registro. 5 grupos rotan ~8 min por estación. |
-| **6. Clínica de proyecto (pares)** | OA5, OA3.2 | 20–30 min | Cada grupo presenta avance a otro grupo con pauta estructurada (2 fortalezas, 2 dudas, 1 sugerencia medible); el profesor rota entre 2–3 clínicas simultáneas. Con 5 proyectos, un plenario de 2 proyectos por vez alcanza a todos en 2–3 sesiones. |
+| **4. Escucha del día (práctica de OA3, SIN NOTA)** | OA3 (+OA1/OA2) | 10 min fijos | Un estímulo sonoro (grabación, instrumento, demo), dos pasadas (2′) → **cada estudiante escribe su diagnóstico en tres líneas** (describir / hipotetizar / verificar) (2′) → **discusión en la mesa del grupo** (3′): los 3 comparten y el vocero anota el diagnóstico consensuado → **plenario** (3′): el profesor pregunta selectivamente a una o dos mesas (responde el vocero **por el grupo**) y cierra con su propia versión experta, incluidas sus dudas. Nada de esto lleva nota, en ninguna sesión, y así se declara en s01. |
+| **5. Estaciones de medición** | OA4 | 35–40 min | El cuello es la interfaz + micrófonos (1–2): rotación por estaciones — E1: micrófono/interfaz + notebook (espectro fino); E2–E3: celulares con apps (SPL, afinador, espectrograma); E4: cálculo/registro. 3 grupos rotan ~8 min por estación; con 4 estaciones y 3 grupos siempre hay una libre, lo que descomprime el cuello del micrófono. |
+| **6. Clínica de proyecto (pares)** | OA5, OA3.2 | 20–30 min | Cada estudiante presenta el avance de SU proyecto a la mesa receptora con pauta estructurada (2 fortalezas, 2 dudas, 1 sugerencia medible; ~3′ por estudiante + retroalimentación); con 3 mesas, las clínicas cruzadas se organizan en un solo trío de mesas con rotación A→B→C y el profesor asiste a las tres rondas. Un plenario de 2–3 proyectos por vez muestrea los 9 del curso en 2–3 sesiones. |
 | **7. Mini-lección interactiva** | soporte de todos | ≤15 min | Desarrollo conceptual breve con 2–3 preguntas de votación intercaladas; nunca cátedra >15 min seguidos. Usa la lectura previa cuando la hubo. |
 | **8. Salida de medición** | OA4.2–4.3, OA1.4 | 70 min (módulo completo) | Grupos con ruta asignada miden RT y niveles en 2–3 espacios UC (apps + palmas/globo como impulso); puesta en común la sesión siguiente. Sonómetro de referencia si existe **[POR VERIFICAR]**. |
 | **9. Taller de lutería (sesión dedicada)** | OA5.1–5.2, OA1.2–1.3 | 140 min (sesión completa) | Las flautas del profesor como caso: medición de una flauta real + construcción simple por grupo (tubo/PVC: efecto de longitud y agujeros, con predicción PEE). Materiales por grupo, compra única. |
@@ -75,6 +86,46 @@ funciona con kits y objetos cotidianos.
 
 **Cobertura de objetivos por formato**: OA1 ← 1, 2, 9 · OA2 ← 1, 3 ·
 OA3 ← 4 (y transversal en cierres) · OA4 ← 5, 8 · OA5 ← 2, 6, 9.
+
+**Micro-actividades de recambio** (heredadas del repertorio de
+ayudantías del curso hermano SyS y adaptadas a profesor solo con 9
+estudiantes, 2026-08-06). Sustituyen un bloque de taller o de
+discusión cuando la energía del grupo o el momento del semestre lo
+pide — nunca la escucha del día. Todas sin nota, de 10–25 min, y
+terminan con algo **escrito** por el estudiante (lo que no se escribe
+se evapora):
+
+1. **Galería de errores** (OA3; ideal tras la devolución de una
+   prueba, p. ej. s08): 3–4 diagnósticos de escucha ficticios pero
+   realistas, cada uno con un error típico de la rúbrica (describir
+   mezclado con interpretar, hipótesis sin cadena causa–efecto,
+   verificación genérica); las mesas encuentran el error y escriben la
+   corrección en una frase. Cierre: ¿cuál error es "el más peligroso"?
+2. **El estudiante al plumón** (OA1, OA5): un voluntario resuelve en
+   el pizarrón hablando en voz alta (un cálculo del curso: $L=v/4f_1$,
+   una conversión a cents…); el profesor solo interviene con
+   preguntas, nunca con afirmaciones. Máx. 10′ + 5′ de discusión. Para
+   procedimientos, no para demostraciones.
+3. **Relámpago en cadena** (calentamiento, 8′; OA1/OA2/OA4.1): 4–5
+   preguntas de 90″ proyectadas una a una, del calibre de las Partes
+   B–D de las pruebas; respuesta individual en papel y autocorrección
+   inmediata al revelar. Diagnostica sin costo; útil las semanas
+   previas a cada prueba (s06, s12).
+4. **Dominar la rúbrica** (OA3; previa a cada escucha escrita): las
+   mesas recorren la rúbrica OA3 (sección 5) y deciden qué distingue
+   el nivel 3 del 4 en cada dimensión, usando como caso un diagnóstico
+   anónimo de una escucha del día anterior; puesta en común de la
+   dimensión que más cuesta.
+5. **El abogado del diablo** (OA1–OA2): el profesor afirma algo falso
+   pero plausible ("el material del tubo fija la altura", "sin
+   fundamental, la nota baja una octava", "una sala más grande siempre
+   retumba más") y las mesas tienen 5′ para construir el contraejemplo
+   con lo visto en el curso — idealmente haciéndolo sonar.
+6. **Clínica de bitácora** (OA5.2; una vez, sugerida entre s09 y s11):
+   las mesas intercambian bitácoras de proyecto y buscan EN LA AJENA
+   una medición que el profesor nombra; quien no la encuentra rápido
+   aprende por qué la bitácora se organiza. Sin juicio: es logística
+   del hito 3.
 
 ## 3. Anatomía de referencia de los módulos de 70 min
 
@@ -106,13 +157,13 @@ sonoro breve (5–10 min) sin escucha del día.
 ## 4. Sistema de evaluación
 
 Punto de partida: estructura 2019 (pruebas 30 / talleres 30 / proyecto
-30 / participación 10). Propuesta ajustada a 20 estudiantes, ≤2 h/semana
+30 / participación 10). Propuesta ajustada a 9 estudiantes, ≤2 h/semana
 de corrección y sin ayudante garantizado:
 
 | Instrumento | % | Diseño y justificación |
 |---|---|---|
 | **Talleres** | 35 | Cerrados EN clase, por grupo, con rúbrica rápida (logrado/parcial/incipiente) al vuelo → 0 h de corrección externa. Cuentan las mejores 8 de ~10 guías (tolera ausencias). **Los talleres de medición de las semanas 8–12 usan el objeto del proyecto de cada grupo: son a la vez avance del proyecto (resuelve el riesgo 2 de OBJETIVOS_APRENDIZAJE.md).** Es el instrumento de mayor peso porque es donde ocurre, semana a semana, el ciclo predicción→experimento→explicación. |
-| **Proyecto** (grupos de 4) | 35 | 3 hitos: diseño con predicción (10%), avance (10%; compila los talleres ya hechos sobre el objeto + bitácora — corrección mínima), presentación final + informe ≤6 págs (15%). **Mitigación de pasajeros**: bitácora con roles firmados por hito, coevaluación intra-grupo que ajusta la nota individual hasta ±0,5, y preguntas individuales en la defensa final. |
+| **Proyecto** (individual) | 35 | 3 hitos: diseño con predicción (10%), avance (10%; compila los talleres ya hechos sobre el objeto propio + bitácora individual — corrección mínima), presentación final + informe ≤6 págs (15%). Al ser individual (2026-08-07) **desaparecen la coevaluación y el ajuste ±0,5**: la bitácora individual y la defensa personal son la evidencia directa. Los talleres de s08–s12 aplican cada protocolo al objeto propio (celular propio como instrumento), con la mesa como equipo de apoyo. |
 | **Pruebas** (2) | 20 | 10% cada una (s07 y s13), **48 puntos** cada una. Con audio: casos sonoros, interpretación de espectros/espectrogramas (OA1, OA2, OA4.1). Partes B–D de selección única para corrección acotada. La Parte A (escucha escrita) se aplica dentro de la prueba pero **se califica aparte**, en la línea siguiente. |
 | **Escucha argumentada escrita (OA3)** | 10 | Tres eventos, **cuentan las mejores 2**: Parte A de la Prueba 1 (s07), Parte A de la Prueba 2 (s13) y el bloque marcado ★ de la hoja de escucha de s15. Se califican con la rúbrica de la sección 5 (16 puntos → nota). Escrita y no oral **por equidad**: el diagnóstico oral en vivo premiaba el oído entrenado con que llega el estudiante de música, no lo que el curso enseña; por escrito, con el mismo audio, varias pasadas y tiempo para pensar, se evalúa la cadena hipótesis–verificación–argumento. |
 | **Participación** | 0 | Se elimina como nota separada (en 2019 era un proxy vago); su función la absorben la escucha del día y los talleres presenciales — ninguna de las dos con nota individual por hablar. |
@@ -123,24 +174,29 @@ clínicas de proyecto. La única instancia oral evaluada del curso son las
 preguntas individuales de la defensa final (s15), que es preparada,
 grupal y con fecha conocida desde s03.
 
-**Calendario grueso** (15 sesiones): s1 formación de grupos y línea base
-de escucha (sin nota) · s2–s14 escucha del día (sin nota) + talleres ·
-s3 lanzamiento del proyecto · s5 hito 1 · s7 prueba 1 + escucha escrita 1
-(módulo 2 liviano) · s8–s12 talleres de medición sobre el objeto del
-proyecto · s10 hito 2 · s13 prueba 2 + escucha escrita 2 · s15
-presentaciones finales (ambos módulos, clínica ampliada con preguntas
-individuales, ~25 min por grupo cronometrados) + informe + hoja de
-escucha (escucha escrita 3) + **repetición de la línea base de s01** en
-el cierre (mismo estímulo, sin nota: cada estudiante lee sus dos hojas
-juntas y se las lleva).
+**Calendario grueso** (15 sesiones): s1 formación de mesas (tramo 1) y
+línea base de escucha (sin nota) · s2–s14 escucha del día (sin nota) +
+talleres · s3 lanzamiento del proyecto individual · s5 hito 1 + rearme
+de mesas (tramo 2 desde s06) · s7 prueba 1 + escucha escrita 1 (módulo
+2 liviano) · s8–s12 talleres de medición sobre el objeto propio · s10
+hito 2 + rearme de mesas (tramo 3 desde s11) · s13 prueba 2 + escucha
+escrita 2 · s15 presentaciones finales individuales (ambos módulos,
+**9 defensas de ~11 min cronometrados**: 8′ de presentación con el
+objeto sonando + 3′ de preguntas) + informe + hoja de escucha (escucha
+escrita 3) + **repetición de la línea base de s01** en el cierre
+(mismo estímulo, sin nota: cada estudiante lee sus dos hojas juntas y
+se las lleva).
 
 **Carga docente fuera de aula**: semanas normales ≈ 0,5–1 h (preparar
-kits y estímulos; corrección regular = 0 por diseño). Picos declarados:
-hito 1 ≈ 3 h · prueba 1 ≈ 5 h · hito 2 ≈ 2 h · prueba 2 ≈ 5 h · final
-≈ 4 h. Promedio ≈ 1,4 h/semana. Los picos de prueba incluyen la escucha
-escrita de esa sesión (~2 min por estudiante con la rúbrica cerrada).
-Los picos se acotan con informes con tope de páginas y rúbricas
-cerradas; no hay forma honesta de evaluar a 20 estudiantes con menos. Si
+kits y estímulos; corrección regular = 0 por diseño). Picos declarados
+(9 estudiantes, proyecto individual): hito 1 ≈ 2 h · prueba 1 ≈ 2,5 h
+· hito 2 ≈ 1,5 h · prueba 2 ≈ 2,5 h · final ≈ 3 h (9 informes ≤6
+págs). Promedio ≈ 1,2 h/semana. Los
+picos de prueba incluyen la escucha escrita de esa sesión (~2 min por
+estudiante con la rúbrica cerrada). Los picos se acotan con informes
+con tope de páginas y rúbricas cerradas; con la matrícula chica los
+picos dan holgura, pero la rúbrica cerrada se mantiene: el sistema debe
+sobrevivir tal cual a un semestre con cupo lleno. Si
 aparece ayudante: destinarlo a la logística de estaciones y kits — no a
 corregir pruebas ni escuchas (el criterio de corrección debe ser uno
 solo).
@@ -180,7 +236,8 @@ lo enseña el curso.
 2. **Demos web** iniciales (con la skill `/demo-interactiva`): tren de
    pulsos, batidos/banda crítica, fundamental ausente, modos de cuerda,
    temperamentos comparados, modos de sala.
-3. **5 kits de taller** (inventario y compra única) + lista de qué EEQ de
+3. **Kits de taller** (inventario y compra única; se arman 3 y el
+   material de los otros 2 queda de repuesto) + lista de qué EEQ de
    BEN usa cada kit.
 4. **Plantilla de guía de taller PEE** (1 página: predicción, roles,
    procedimiento, contraste, cierre).
@@ -200,9 +257,10 @@ lo enseña el curso.
 Registrados en la autocrítica de fase 2 y aceptados al aprobar esta
 versión; las fases 3–4 deben vigilarlos:
 
-1. **Talleres PEE optimistas en tiempo**: con 5 grupos y un profesor,
-   ~6 min por grupo; el cierre se protege exponiendo UN grupo, no cinco.
-   Las sesiones s1–s3 deben planificarse con menos contenido.
+1. **Talleres PEE optimistas en tiempo**: con 3 grupos y un profesor,
+   ~8 min por grupo (el riesgo se destensó al bajar de 5 a 3 grupos,
+   pero no desaparece); el cierre se protege exponiendo UN grupo, no
+   tres. Las sesiones s1–s3 deben planificarse con menos contenido.
 2. **La escucha del día, sin nota, puede diluirse**: es el precio de
    sacarle la calificación (los estudiantes podrían dejar de escribir
    sus tres líneas). Cuesta 10 min por sesión (≈2,2 h de aula en el
@@ -213,8 +271,19 @@ versión; las fases 3–4 deben vigilarlos:
    azar y contarla como una de las ~10 guías de taller.
 3. **Picos de corrección** que exceden las 2 h en ~5 semanas del
    semestre (declarados en la sección 4).
-4. **Pasajeros en grupos de 4**: revisar las coevaluaciones del hito 2
-   (s10) y actuar antes de la final si hay asimetrías fuertes.
+4. **Mesas de 3 frágiles ante ausencias**: en un trío, una ausencia
+   deja una pareja sobrecargada y dos dejan a una persona sola. Plan B
+   operativo: quien queda solo se anexa a otra mesa ese día. El riesgo
+   de pasajeros desapareció con el proyecto individual (2026-08-07);
+   el riesgo nuevo es el inverso — **9 proyectos que supervisar**: se
+   mitiga porque los talleres s08–s12 aplican protocolos estándar al
+   objeto propio (la supervisión es por protocolo, no proyecto a
+   proyecto) y la bitácora individual registra la evidencia.
+4b. **Rearme de mesas (s06 y s11)**: dos sesiones parten con mesas
+   recién formadas — planificarlas con talleres de protocolo ya
+   conocido y re-asignar roles en los primeros 5′. El beneficio
+   (trabajar con todo el curso) se anuncia en s01 como parte del
+   diseño, no como corrección.
 5. **Lectura previa sin evidencia de funcionar** con esta audiencia:
    punto de control en s5; plan B: tareas de escucha ≤30 min.
 6. **Cuello de medición fina** (1 interfaz): aceptado — las apps de

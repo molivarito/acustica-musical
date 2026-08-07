@@ -5,12 +5,17 @@ Diseño y construcción de un curso nuevo de Acústica Musical, Pontificia
 Universidad Católica de Chile. Profesor: Patricio de la Cuadra (Instituto
 de Música + Departamento de Ingeniería Eléctrica). Audiencia esperada:
 mixta, estudiantes de música e ingeniería, con niveles heterogéneos de
-formación matemática y musical.
+formación matemática y musical. **Edición 2026-2: los 9 inscritos son
+estudiantes de música** — los grupos se mezclan por familia de
+instrumento y afinidad tecnológica, no por carrera; el diseño mixto se
+conserva para ediciones futuras.
 
 ## Formato del curso
 - 15 sesiones semanales; cada sesión tiene 2 módulos de 70 minutos.
-- Cupo: 20 estudiantes (semestre actual); la metodología está
-  dimensionada para ese número.
+- Matrícula 2026-2: 9 estudiantes = 3 grupos de 3 (ajuste 2026-08-06);
+  la metodología y todo el material operativo están dimensionados a ese
+  número. El cupo formal del programa sigue siendo 20; el diseño para 5
+  grupos de 4 queda en la bitácora.
 - Metodología basada en aprendizaje activo (definida en
   `METODOLOGIA.md`).
 - Los objetivos de aprendizaje viven en `OBJETIVOS_APRENDIZAJE.md`
@@ -141,3 +146,23 @@ formación matemática y musical.
   del curso promete nota por hablar en clase** (la única instancia oral
   evaluada es la defensa del proyecto en s15). El detalle vive en
   `METODOLOGIA.md` §§1–5 y §7.7.
+
+## Pendientes conocidos (no resueltos a propósito)
+
+Patrón heredado del CLAUDE.md de SyS: decisiones fechadas que se
+posponen conscientemente, para no re-litigarlas ni olvidarlas.
+
+- (2026-08-06) **Fusión plan+apunte con perfiles Quarto**
+  (`content-hidden`/`content-visible when-profile=`, patrón SyS):
+  reduciría la doble fuente de verdad plan/apunte, pero implica
+  refactorizar las 15 sesiones y el panel que parsea `plan.md`.
+  Pospuesta para el receso o la edición 2027.
+- (2026-08-06) **Cabeceras con tiempos inconsistentes** (anteriores al
+  redimensionamiento a 9 estudiantes): `hoja_registro_isofonica.md`
+  (s06) y `guia_pee_afinar_por_batidos.md` (s09) declaran duraciones
+  que no calzan con el bloque del plan. Corregir al preparar esas
+  sesiones.
+- (2026-08-06) **s15, preguntas del grupo 1**: conserva 5′ (vs. 7′ del
+  resto) como compensación por presentar primero. Con 3 grupos y
+  módulo 2 holgado podría igualarse — decisión del profesor antes de
+  anunciar las reglas en s14.

@@ -3,7 +3,7 @@
 **Objetivos**: OA4.3 (medir el tiempo de reverberación de salas reales
 y compararlas), OA1.4 (conectar materiales y volumen con lo medido),
 OA3.2 (oído → mecanismo → medición en cada espacio).
-**Grupo**: 4 integrantes con roles que ROTAN en cada espacio:
+**Grupo**: 3 integrantes con roles que ROTAN en cada espacio:
 **ejecuta** (revienta el globo / da la palmada) · **mide** (opera las
 apps) · **registra** (llena esta hoja Y la planilla compartida) ·
 **vocero** (habla en la puesta en común). En 2–3 espacios, todos pasan
@@ -93,7 +93,7 @@ antes de la puesta en común. Media página total.
 A la hora de corte, TODOS caminando al punto de encuentro (el
 traslado está presupuestado: 5′); en el trayecto o al llegar, el grupo
 cierra la casilla de comparación del dorso. En el punto de encuentro,
-la planilla compartida —ya llena— ordena los ~12 espacios del curso
+la planilla compartida —ya llena— ordena los ~7 espacios del curso
 por $T_{60}$; cada vocero defiende EN UNA FRASE su fila más llamativa
 contra su predicción. El grupo **entrega esta hoja completa (tabla +
 dorso)**: es el taller evaluado de la semana (rúbrica rápida

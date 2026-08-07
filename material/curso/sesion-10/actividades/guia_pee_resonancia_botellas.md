@@ -3,8 +3,8 @@
 **Objetivos**: OA1.2 (predecir el efecto de un parámetro sobre la
 afinación y contrastarlo), OA4.1 (afinador y espectrograma bien
 leídos), OA1.1 (¿quién vibra?).
-**Grupo**: 4 integrantes con roles rotativos: **ejecuta** (sopla o
-golpea) · **mide** (lee afinador/espectrograma) · **registra** (llena
+**Grupo**: 3 integrantes con roles rotativos: **ejecuta** (sopla o
+golpea) · **mide y registra** (lee afinador/espectrograma y llena
 esta hoja) · **vocero**. El rol "ejecuta" rota: cada integrante sopla
 y mide al menos un nivel de agua.
 **Materiales**: botella de vidrio del kit, jarra con agua, embudo,

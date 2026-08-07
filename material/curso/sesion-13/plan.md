@@ -58,9 +58,9 @@ de vocales con la demo; síntesis, ticket y anuncios NO se sacrifican.
 
 | Tiempo | Bloque | Actividad del estudiante | Rol del profesor | Materiales |
 |---|---|---|---|---|
-| 0–7′ | Instalación y reglas de la prueba | Se sienta en puesto individual (columnas separadas, preparadas antes si la sala lo permite); guarda celular, apuntes y audífonos en la mochila; recibe el cuadernillo (boca abajo) y la hoja de figuras; escucha las reglas | Reparte cuadernillos; escribe en el pizarrón el **calendario de audio** (min 10: Estímulo 1 · min 25: Estímulos 2 y 3 · min 40: pasada de repaso) y las reglas: cada estímulo suena **2 veces** con ~45 s de pausa; no se necesita calculadora (aritmética de proporciones y sumas de cents); preguntas solo de forma, a mano alzada | Cuadernillos impresos (20 + 2 de reserva); hoja de figuras aparte; pizarrón con calendario; equipo de sala probado ANTES con los 3 archivos (#13–#15) |
+| 0–7′ | Instalación y reglas de la prueba | Se sienta en puesto individual (columnas separadas, preparadas antes si la sala lo permite); guarda celular, apuntes y audífonos en la mochila; recibe el cuadernillo (boca abajo) y la hoja de figuras; escucha las reglas | Reparte cuadernillos; escribe en el pizarrón el **calendario de audio** (min 10: Estímulo 1 · min 25: Estímulos 2 y 3 · min 40: pasada de repaso) y las reglas: cada estímulo suena **2 veces** con ~45 s de pausa; no se necesita calculadora (aritmética de proporciones y sumas de cents); preguntas solo de forma, a mano alzada | Cuadernillos impresos (9 + 2 de reserva); hoja de figuras aparte; pizarrón con calendario; equipo de sala probado ANTES con los 3 archivos (#13–#15) |
 | 7–67′ | **Desarrollo de la Prueba 2** (diseñada para ≤60′; partes A–D de `ediciones/2026-2/pruebas/prueba2.md`) | Responde a su ritmo las partes B (casos sonoros y figura de resonancia), C (predicción con proporciones y cents) y D (mecanismos y vocabulario); en el **min 10** atiende la reproducción del Estímulo 1 y responde la **Parte A (escucha escrita OA3.1)**; en el **min 25** atiende los Estímulos 2 y 3 (Parte B); en el **min 40** puede revisar con la pasada de repaso | Reproduce los estímulos EXACTAMENTE según el calendario (2 veces c/u, cronómetro a la vista); entre reproducciones circula en silencio; **rezagados**: quien llega antes del min 25 alcanza todo (el repaso del min 40 le repone el Estímulo 1); quien llega después del min 25 rinde igual y el caso se resuelve según reglamento de la unidad académica (no se detiene la prueba ni se repite audio fuera de calendario) | 3 estímulos (banco #13, #14, #15) en el equipo de sala; cronómetro proyectado; calendario en pizarrón |
-| 67–70′ | Entrega y transición | Entrega cuadernillo Y hoja de figuras (se cuentan al recibir); sale a pausa | Recoge por filas, cuenta 20 cuadernillos; anuncia: "el módulo 2 es liviano y el instrumento ya lo traen puesto: vuelvan descansados" | — |
+| 67–70′ | Entrega y transición | Entrega cuadernillo Y hoja de figuras (se cuentan al recibir); sale a pausa | Recoge por filas, cuenta 9 cuadernillos; anuncia: "el módulo 2 es liviano y el instrumento ya lo traen puesto: vuelvan descansados" | — |
 
 **Logística de la prueba (resumen operativo)**: idéntica a la Prueba 1
 — puestos separados; celulares y audífonos guardados (los estímulos
@@ -88,7 +88,7 @@ Presupuesto interno del cuadernillo: A 10′ + B 15′ + C 20′ + D 8′ =
 - **Prueba 2** (instrumento central de la semana, 10 % del curso, 48
   puntos): partes B–D corregidas con la pauta cerrada
   (`ediciones/2026-2/pruebas/prueba2_pauta.md`), ~13–15 min por estudiante, pico
-  declarado ≈5 h (metodología §4). La **Parte A (escucha escrita 2)** se
+  declarado ≈2,5 h (metodología §4). La **Parte A (escucha escrita 2)** se
   aplica dentro de la prueba pero se califica aparte con la rúbrica OA3
   (10 % del curso junto con s07 y s15, cuentan las mejores 2 de 3) — no
   entra en los 48 puntos; alimenta el seguimiento de OA3 comparable con
@@ -116,11 +116,11 @@ Presupuesto interno del cuadernillo: A 10′ + B 15′ + C 20′ + D 8′ =
 - **Módulo 2**: 8 + 14 + 14 + 16 + 10 + 8 = 70′ ✓. Todo plenario con
   demo/app proyectada: no aplica cálculo por persona (no hay fases
   individuales con material limitado); las votaciones a mano alzada y
-  el susurro colectivo incluyen a los 20 sin cuello logístico.
+  el susurro colectivo incluyen a los 9 sin cuello logístico.
 - **Carga del profesor en la sesión**: reproducir 3 estímulos según
   calendario + cantar/susurrar los ejemplos del m2 (su propia voz, sin
   ensayo con terceros) + operar app y demo. Fuera de aula esta semana:
-  corrección de la Prueba 2 ≈5 h (pico declarado en metodología §4) +
+  corrección de la Prueba 2 ≈2,5 h (pico declarado en metodología §4) +
   generación de las 2 figuras (~1 h) + prueba de los 3 estímulos en el
   equipo de sala; los estímulos mismos pueden producirse en cualquier
   momento previo (no dependen de nada del semestre, ver banco #13–#15).
@@ -134,9 +134,9 @@ Presupuesto interno del cuadernillo: A 10′ + B 15′ + C 20′ + D 8′ =
   visible. Concepto único: fuente y filtro son independientes. Única
   demo de la sesión.
 - **Prueba 2 completa**: cuadernillo `ediciones/2026-2/pruebas/prueba2.md` (imprimir
-  22) + pauta `ediciones/2026-2/pruebas/prueba2_pauta.md` + hoja de figuras (2
+  11) + pauta `ediciones/2026-2/pruebas/prueba2_pauta.md` + hoja de figuras (2
   figuras, especificadas al final del cuadernillo; generar e imprimir
-  22).
+  11).
 - **Estímulos de audio** (#13, #14, #15 — filas agregadas a
   `material/profesor/banco_estimulos.md`): #13 quinta justa vs quinta
   estrechada (sintetizar), #14 barrido de unísono a tercera
@@ -148,8 +148,8 @@ Presupuesto interno del cuadernillo: A 10′ + B 15′ + C 20′ + D 8′ =
 - **Capítulo (lectura previa)**: [`libro/cap13_la_voz.md`](../../libro/cap13_la_voz.md) — mitad mapa
   de estudio de la Prueba 2 (sin resolver ítems), mitad fuente-filtro
   (sin revelar el resultado del susurro ni el enredo de las sopranos).
-- **Trabajo previo del profesor (esta semana)**: imprimir 22
-  cuadernillos + 22 hojas de figuras; generar Figura 1 (curvas de
+- **Trabajo previo del profesor (esta semana)**: imprimir 11
+  cuadernillos + 11 hojas de figuras; generar Figura 1 (curvas de
   respuesta: captura de la demo de s10 con dos amortiguamientos, o
   redibujo) y Figura 2 (espectros tubo abierto/tapado: captura de la
   demo de s12, o redibujo); probar app de espectrograma + micrófono en

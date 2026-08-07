@@ -1,8 +1,8 @@
 # Guía PEE — La regla en la mesa (s01, módulo 1, 15 min)
 
 **Objetivo**: OA1.2 (primer ciclo predicción→experimento→explicación).
-**Grupo**: 4 integrantes con roles: **ejecuta** (sostiene y suelta la
-regla) · **mide** (estima la parte libre en cm) · **registra** (llena
+**Grupo**: 3 integrantes con roles: **ejecuta** (sostiene y suelta la
+regla) · **mide y registra** (estima la parte libre en cm y llena
 esta hoja) · **vocero** (expone si el grupo sale sorteado).
 **Materiales**: 1 regla del kit, mesa firme.
 

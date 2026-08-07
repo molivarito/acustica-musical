@@ -6,7 +6,7 @@ alternativas; la Parte A sigue siendo de desarrollo, con rúbrica, pero
 **se califica aparte** — no suma a estos 48 — y tiene su propia
 conversión a nota en la sección "Parte A" más abajo. Presupuesto de
 corrección: **~6′ por estudiante** (A: ~4′ con rúbrica · B–D: ~2′ de
-cotejo directo contra la clave), 20 estudiantes ≈ 2 h. Corregir por
+cotejo directo contra la clave), 9 estudiantes ≈ 1 h. Corregir por
 PARTE (todos los A, luego todos los B…), no por estudiante: mantiene
 el criterio parejo y es más rápido.
 

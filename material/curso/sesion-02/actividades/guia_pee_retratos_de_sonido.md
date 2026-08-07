@@ -3,9 +3,9 @@
 **Objetivos**: OA4.1 (leer forma de onda y espectro con sus ejes),
 OA1.1 (conectar cómo vibra algo con qué espectro produce), OA3.1
 (describir con vocabulario técnico).
-**Grupo**: 4 integrantes con roles: **ejecuta** (produce el sonido al
-micrófono cuando toque el turno) · **mide** (lee la pantalla proyectada
-y dicta lo que ve) · **registra** (llena esta hoja) · **vocero**.
+**Grupo**: 3 integrantes con roles: **ejecuta** (produce el sonido al
+micrófono cuando toque el turno) · **mide y registra** (lee la pantalla
+proyectada, dicta lo que ve y llena esta hoja) · **vocero**.
 **Materiales**: esta hoja y un lápiz; la demo
 [`demo_forma_onda_espectro.html`](../../../demos/demo_forma_onda_espectro.html) corre en el proyector con micrófono.
 **Reparto**: el profesor marca con un círculo los **2 sonidos que su
@@ -35,7 +35,7 @@ Cuando el profesor llame al grupo, **ejecuta** produce **los 2 sonidos
 asignados** al micrófono (~2′ por sonido; su grupo está al micrófono
 ~4′ en total). Mientras pasan los demás grupos, sigan la pantalla: sus
 sonidos completan la tabla de ustedes. Para cada uno de los 4 sonidos
-(los propios y los de los demás), **registra** anota al lado del dibujo:
+(los propios y los de los demás), **mide y registra** anota al lado del dibujo:
 
 - ¿Le achuntaron a la *forma general*? (sí / a medias / no)
 - Una diferencia concreta entre lo dibujado y lo visto:

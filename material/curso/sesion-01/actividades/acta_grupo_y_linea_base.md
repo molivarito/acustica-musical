@@ -2,19 +2,24 @@
 
 ## A. Acta de formación de grupo (módulo 1, 15 min)
 
-Los grupos son estables todo el semestre y son también los grupos de
-proyecto (metodología §0). Criterio de armado: mezclar música e
-ingeniería/otras carreras; ningún grupo homogéneo.
+Las mesas de trabajo duran un tramo del semestre (esta acta cubre el
+tramo 1: s01–s05) y se rearman dos veces (tras s05 y tras s10) para
+que cada estudiante trabaje con todo el curso. El proyecto es
+**individual**: la mesa es el equipo de apoyo, no el dueño del
+proyecto. Criterio de armado (edición 2026-2, curso de estudiantes de
+música): mezclar familias de instrumento y afinidad con la tecnología
+de medición; ninguna mesa homogénea, y en cada mesa al menos una
+persona cómoda con apps/notebook.
 
-- **Nombre del grupo**: ______________________
-- **Integrantes y carrera**: 1. __________ 2. __________
-  3. __________ 4. __________
+- **Nombre de la mesa**: ______________________
+- **Integrantes e instrumento principal**: 1. __________ 2. __________
+  3. __________
 - **Roles de esta semana** (rotan cada sesión): ejecuta ________ ·
-  mide ________ · registra ________ · vocero ________
-- **Compromiso** (firman los 4): asistencia, rotación de roles, y
-  bitácora de proyecto al día desde s03.
+  mide y registra ________ · vocero ________
+- **Compromiso** (firman los 3): asistencia, rotación de roles, y
+  bitácora individual de proyecto al día desde s03.
 
-Firmas: ________ ________ ________ ________
+Firmas: ________ ________ ________
 
 ## B. Línea base de escucha argumentada (módulo 1, 15 min, SIN nota)
 
@@ -40,7 +45,7 @@ del curso (Parte A de la Prueba 1, Parte A de la Prueba 2 y el bloque ★
 de la hoja de s15), no la participación en clase: la escucha del día,
 todas las semanas, **nunca lleva nota**.
 
-**Después de clase**: archivar las 20 hojas rotuladas "s01 – línea
+**Después de clase**: archivar las 9 hojas rotuladas "s01 – línea
 base". En **s15** se repite el mismo estímulo y cada estudiante recibe
 sus dos hojas juntas como evidencia de su propio progreso en el
 semestre.

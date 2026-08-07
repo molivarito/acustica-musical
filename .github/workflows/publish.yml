@@ -47,6 +47,9 @@ jobs:
           find material/_render/site -name 'slides_s*.html' -delete
           echo "slides restantes en material/_render/site: $(find material/_render/site -name 'slides_s*.html' | wc -l)"
 
+      - name: Auditar fugas de material solo-profesor (patrón SyS)
+        run: python3 canvas/auditar_sitio.py --sin-slides material/_render/site
+
       - uses: actions/upload-pages-artifact@v3
         with:
           path: material/_render/site

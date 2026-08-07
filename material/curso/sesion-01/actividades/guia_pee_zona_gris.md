@@ -2,8 +2,8 @@
 
 **Objetivos**: OA1.1 (frecuencia como tasa de repetición), OA2.1 (la
 percepción no copia la física), OA3.1 (describir con precisión).
-**Grupo**: 4 integrantes con roles: **ejecuta** (opera la demo) ·
-**mide** (lee y anota los Hz) · **registra** (llena esta hoja) ·
+**Grupo**: 3 integrantes con roles: **ejecuta** (opera la demo) ·
+**mide y registra** (lee y anota los Hz, llena esta hoja) ·
 **vocero**. Roten "ejecuta" para que cada integrante mida su umbral.
 **Materiales**: notebook con [`demo_tren_pulsos.html`](../../../demos/demo_tren_pulsos.html), audífonos
 personales (para la fase individual), esta hoja.

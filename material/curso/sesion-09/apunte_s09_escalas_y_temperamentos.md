@@ -169,7 +169,7 @@ proyecto: medir las alturas que produce (afinador y espectrograma, con
 las mismas condiciones anotadas que la radiografía de s08),
 expresarlas como **nota + desviación en cents**, y decidir si el
 objeto "vive" en alguna escala — y qué habría que cambiar para
-afinarlo. La conclusión de los cinco grupos fue la misma y es el
+afinarlo. La conclusión de los tres grupos fue la misma y es el
 puente exacto hacia la próxima sesión: al objeto no se le puede
 *pedir* otra frecuencia; hay que cambiarle la física — longitud,
 tensión, masa, agujeros (OA1.2). Por qué un sistema vibrante insiste

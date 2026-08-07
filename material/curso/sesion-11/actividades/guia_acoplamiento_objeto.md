@@ -4,8 +4,10 @@
 efecto de tapar/apoyar y contrastar), OA4.1 (espectrograma y SPL),
 OA5.2 (protocolo transferible al objeto del proyecto).
 **Formato**: estación plenaria sobre los instrumentos presentes (frotado
-y guitarra). Esta guía NO lleva nota: es el eslabón s11 de la serie del
-objeto — su producto es el **compromiso de bitácora** del punto 4.
+y guitarra) — el objeto propio de cada estudiante descansa hasta s12.
+Esta guía NO lleva nota: es el eslabón s11 de la serie del objeto — su
+producto es el **compromiso de bitácora individual** del punto 4,
+donde cada uno aplica el protocolo a SU propio objeto.
 **Roles del grupo**: **mide-oficial** (espectrograma) · **registra** ·
 **condiciones** (app, distancia, incidentes) · **vocero**. Además, por
 grupo: 1 persona puede ser designada a un **puesto SPL** (fase A) o a la
@@ -58,22 +60,23 @@ __________________________________________________________________
 - La mesa de la fase B, ¿"regala" energía? Respondan con la moraleja del
   elástico de s10 (fuerte ↔ corto): _________________________________
 
-## 4. Compromiso de bitácora (2 min — OBLIGATORIO, se revisa en s12)
+## 4. Compromiso de bitácora (2 min — INDIVIDUAL, OBLIGATORIO, se revisa en s12)
 
-Escriban en la bitácora del grupo cómo aplicarán ESTE protocolo a su
-objeto de proyecto antes de s12, junto al mapa de resonancias
-comprometido en s10:
+Cada uno escribe EN SU PROPIA bitácora cómo aplicará ESTE protocolo a
+SU objeto de proyecto antes de s12, junto al mapa de resonancias
+comprometido en s10 (la mesa opina, pero el compromiso es individual):
 
-- ¿Cuál es la "caja" (la parte que radia) de nuestro objeto? Hipótesis:
+- ¿Cuál es la "caja" (la parte que radia) de mi objeto? Hipótesis:
   ____________________________________________________________________
-- Qué vamos a tapar/apoyar/amortiguar: ______________________________
-- Con qué mediremos el cambio (app, distancia, qué banda del espectro):
+- Qué voy a tapar/apoyar/amortiguar: _________________________________
+- Con qué mediré el cambio (app, distancia, qué banda del espectro):
   ____________________________________________________________________
-- Resultado que esperamos: __________________________________________
+- Resultado que espero: _____________________________________________
 
 ## Cierre en aula
 
-UN grupo expone su tabla; el profesor superpone los resultados de los 5
-grupos. Sin nota: la cosecha de esta guía se cobra en la revisión de
-bitácoras de s12 y en el hito 3 (los compromisos de s10–s11 son la vara
-del avance del proyecto).
+UN grupo expone su tabla demostrativa; el profesor superpone los
+resultados de las 3 mesas. Sin nota: la cosecha de esta guía se cobra
+en la revisión de bitácoras de s12 (9 bitácoras individuales) y en el
+hito 3 (los compromisos de s10–s11 son la vara del avance del
+proyecto).

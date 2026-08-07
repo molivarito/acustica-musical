@@ -91,7 +91,7 @@ calculen $f_2/f_1$ y $f_3/f_1$.
 **Editen** (fase 2): golpe en el centro vs. cerca del borde; un dedo en
 el centro mientras suena. Prediga primero, verifique después.
 
-> Roles: **ejecuta** · **mide** · **registra** · **vocero** — roten
+> Roles: **ejecuta** · **mide y registra** · **vocero** — roten
 > entre los dos objetos.
 
 ## ¿Algún objeto de la sala resultó armónico? {.center}
@@ -156,7 +156,7 @@ aparece altura.
 
 ## El proyecto del curso queda lanzado {.center}
 
-En grupos de 4: **construir o modificar** un instrumento o instalación
+En grupos de 3: **construir o modificar** un instrumento o instalación
 sonora, y **explicar acústicamente** su comportamiento.
 
 > [La calidad de la explicación vale más que el éxito
@@ -170,21 +170,21 @@ Vale **35 %** de la nota final.
 |---|---|---|---|
 | 1 — Diseño con predicción | vie 04-sep (s05) | predicción escrita + modelo del curso | 10 % |
 | 2 — Avance | vie 23-oct (s10) | mediciones + evidencia sonora | 10 % |
-| Final | vie 27-nov (s15) | presentación (~25′) + informe ≤ 6 págs | 15 % |
+| Final | vie 27-nov (s15) | defensa (~11′) + informe ≤ 6 págs | 15 % |
 
 ## Cómo se juega
 
 ::: {.incremental}
-- **Bitácora**: fecha, qué se hizo, quién lo hizo — firmada por los 4
-  integrantes en cada hito
-- **Coevaluación**: puede mover la nota individual hasta **±0,5**
-- **Defensa individual**: en s15 responde cada integrante, no solo
-  "el vocero"
+- **Proyecto individual**: cada uno construye SU objeto; la mesa es
+  equipo de apoyo, no dueña del proyecto
+- **Bitácora**: individual — fecha, qué hizo, qué midió
+- **Defensa individual**: en s15 responde usted solo, su propio objeto
 :::
 
 ## Para hoy: 15 minutos de ideas {.center}
 
-En grupo, 2 ideas candidatas — media hoja con, para cada una:
+Cada uno, 2 ideas candidatas propias — media hoja con, para cada una
+(la mesa opina, no decide):
 
 ::: {.incremental}
 1. ¿Qué es y qué suena?

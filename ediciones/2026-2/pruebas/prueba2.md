@@ -10,7 +10,7 @@ según lo anunciado en s12. La Parte A (OA3.1) se aplica dentro de esta
 prueba pero se califica aparte, como uno de los tres eventos de la
 escucha argumentada escrita del curso (10 %); las Partes B, C y D son
 las que determinan la nota de la prueba. Este archivo es el
-**cuadernillo del estudiante** (imprimir 22 copias) más, al final, la
+**cuadernillo del estudiante** (imprimir 11 copias) más, al final, la
 especificación de la hoja de figuras. La pauta de corrección con
 puntajes y mapeo ítem→OA está en `prueba2_pauta.md`.
 

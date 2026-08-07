@@ -131,8 +131,8 @@ Veámoslo.
 
 ## El mapa de las cinco estaciones
 
-**Formato 5 — debut de hoy.** 5 grupos, 5 estaciones, roles
-*ejecuta / mide / registra / vocero* que **rotan** al cambiar de
+**Formato 5 — debut de hoy.** 3 grupos, 5 estaciones, roles
+*ejecuta / mide y registra / vocero* que **rotan** al cambiar de
 estación.
 
 | Estación | Pregunta |

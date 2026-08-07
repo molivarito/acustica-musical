@@ -3,10 +3,10 @@
 **Objetivos**: OA2.1 (igual nivel físico ≠ igual sonoridad), OA4.2
 (leer y producir una curva de sonoridad). **Individual** (una hoja por
 estudiante), trabajando por turnos en el notebook del grupo
-(~5 min por persona) con **audífonos**.
+(~8 min por persona) con **audífonos**.
 **Roles mientras rotan los turnos** (como en el plan): uno mide con
-audífonos, otro registra la puesta en común del grupo y los otros dos
-resuelven el ítem de proyección de la sección 3.
+audífonos, otro registra la puesta en común del grupo y el otro
+resuelve el ítem de proyección de la sección 3.
 **Materiales**: notebook con [`demo_decibel_sonoridad.html`](../../../demos/demo_decibel_sonoridad.html), audífonos
 personales, esta hoja.
 
@@ -55,7 +55,7 @@ Con audífonos puestos y la ganancia de la demo en su valor por defecto:
 
 - ¿Su predicción de 125 Hz le achuntó? ¿Para qué lado se equivocó?
   ____________________________________________________________________
-- Compare con su grupo: ¿las 4 curvas tienen la misma FORMA? ¿los
+- Compare con su grupo: ¿las 3 curvas tienen la misma FORMA? ¿los
   mismos valores exactos? ¿Qué de eso es del oído y qué del aparato?
   ____________________________________________________________________
 - **Ítem de proyección** (discutan): la escucha del día perdió el bajo
@@ -66,7 +66,7 @@ Con audífonos puestos y la ganancia de la demo en su valor por defecto:
 ## Cierre en aula
 
 Un vocero por grupo describe la forma de la curva del grupo; el
-profesor superpone las 5 en el pizarrón. Esta hoja se entrega al final
+profesor superpone las 3 en el pizarrón. Esta hoja se entrega al final
 del módulo 2 junto con el mini-informe del grupo: **las dos piezas
 juntas son el taller de la semana** (rúbrica rápida
 logrado/parcial/incipiente).

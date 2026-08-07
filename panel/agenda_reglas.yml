@@ -60,13 +60,14 @@ prueba:
 hito:
   - id: "hito{n}-pauta"
     dias: -7
-    titulo: "Recordar a los grupos la pauta y las expectativas del {ev}"
+    titulo: "Recordar a los estudiantes la pauta y las expectativas del {ev}"
   - id: "hito{n}-recibir"
     dias: 0
-    titulo: "Recibir las entregas del {ev} con su bitácora (roles firmados)"
+    titulo: "Recibir las entregas individuales del {ev} con su bitácora al día"
   - id: "hito{n}-notas"
     dias: 7
-    titulo: "Publicar las notas del {ev} y leer las coevaluaciones (ajuste ±0,5)"
+    titulo: "Publicar las notas del {ev}"
+    detalle: "Sin coevaluación (proyecto individual, decisión 2026-08-07): la nota es directa"
 
 # Hitos únicos — ancla: "inicio" (la s01), "sNN" (una sesión concreta) o una
 # evaluación detectada en el calendario (P1, P2, H1, H2, Final).
@@ -85,18 +86,22 @@ hitos:
   - id: "proyecto-lanzar"
     ancla: s03
     dias: 0
-    titulo: "Lanzar el proyecto en la s03 (grupos de 4, los 3 hitos, bitácora con roles)"
+    titulo: "Lanzar el proyecto individual en la s03 (cada estudiante su objeto, mesa de apoyo, los 3 hitos, bitácora individual)"
     detalle: "La defensa final se conoce desde hoy; hito 1 = diseño con predicción"
   - id: "receso-recordatorio"
     ancla: P1
     dias: -8
     titulo: "Recordatorio por Canvas en la semana de receso: la Prueba 1 es al volver"
     detalle: "El receso deja 14 días sin contacto antes de la prueba"
-  - id: "coeval-h2-cerrar"
-    ancla: H2
-    dias: 13
-    titulo: "Cerrar las conversaciones por coevaluación asimétrica del hito 2"
-    detalle: "Ventana 24-oct → 05-nov; la nota del hito 2 se publica antes de la s12"
+  # - id: "coeval-h2-cerrar"
+  #   NO APLICA 2026-2 (decisión 2026-08-07): el proyecto pasó a individual,
+  #   ya no hay coevaluación en el hito 2 (mitigaba pasajeros de un proyecto
+  #   grupal que dejó de existir). Se conserva comentada como registro del
+  #   diseño anterior; no reactivar sin revisar METODOLOGIA.md §4/§7 primero.
+  #   ancla: H2
+  #   dias: 13
+  #   titulo: "Cerrar las conversaciones por coevaluación asimétrica del hito 2"
+  #   detalle: "Ventana 24-oct → 05-nov; la nota del hito 2 se publica antes de la s12"
   - id: "t60-logistica"
     ancla: s14
     dias: -4
@@ -109,10 +114,10 @@ hitos:
   - id: "presentaciones-envio"
     ancla: s15
     dias: -1
-    titulo: "Cierre de recepción de presentaciones (20:00) y armado del orden de defensa"
-    detalle: "~25 min por grupo cronometrados; preparar las preguntas individuales"
+    titulo: "Cierre de recepción de presentaciones (20:00) y armado del orden de las 9 defensas"
+    detalle: "~11 min por persona cronometrados (8′ presentación + 3′ preguntas); preparar las 2 preguntas por autor"
   - id: "final-notas"
     ancla: Final
     dias: 5
-    titulo: "Publicar las notas del proyecto final y la escucha E3; leer coevaluaciones"
-    detalle: "Cierre del semestre — pico declarado ≈ 4 h; E3 = bloque ★ de la hoja de s15"
+    titulo: "Publicar las notas del proyecto final y la escucha E3"
+    detalle: "Cierre del semestre — pico declarado ≈ 3 h (sin coevaluación que leer); E3 = bloque ★ de la hoja de s15"

@@ -90,12 +90,12 @@ Sus fronteras F1, F2, F3 son personales — ¿coinciden con las de su compañero
 
 ## Taller psicoacústico {.center}
 
-En parejas, con audífonos — **roles que rotan**.
+Turnos individuales, con audífonos — **roles que rotan**.
 
 ::: {.incremental}
 - **Oyente**: dicta 3 fronteras — F1 (cuento batidos), F2 (oigo dos notas), F3 (queda liso)
 - Registra en **Hz y semitonos**, predicción escrita **antes** de escuchar
-- Pareja en espera: ítems de papel + conversión Hz↔semitonos
+- Integrante en espera: ítems de papel + conversión Hz↔semitonos
 - Al final: la tira de frontera **F3** del grupo, al pizarrón
 :::
 

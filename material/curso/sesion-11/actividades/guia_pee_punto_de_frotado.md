@@ -62,7 +62,7 @@ __________________________________________________________________
 ## Cierre en aula (evaluación)
 
 UN grupo expone sus espectrogramas ponticello vs. tasto; el profesor
-superpone los resultados de los 5 grupos en el pizarrón (¿$f_1$ quieta
+superpone los resultados de los 3 grupos en el pizarrón (¿$f_1$ quieta
 en todos? ¿agudos hacia el puente en todos?). La guía se entrega al
 salir y se evalúa con rúbrica rápida (logrado / parcial / incipiente):
 predicciones escritas antes de sonar, tabla completa con condiciones,

@@ -180,6 +180,64 @@ def cmd_estado(args):
     return 0
 
 
+# Tipos de ítem soportados en canvas.yml -> tipo de Canvas.
+# Los de TIPOS_CONTENIDO no llevan URL: se enlazan por content_id, que se
+# resuelve buscando el objeto por su título/nombre en el curso (el objeto debe
+# existir antes: los quiz los crea crear_quiz.py y los buzones crear_buzones.py).
+TIPOS_CANVAS = {
+    "subheader": "SubHeader",
+    "external_url": "ExternalUrl",
+    "quiz": "Quiz",
+    "assignment": "Assignment",
+    "file": "File",
+}
+TIPOS_CONTENIDO = {"quiz", "assignment", "file"}
+
+
+def cargar_catalogos(base, curso, token):
+    """Mapas nombre -> id de quiz, assignment y file del curso."""
+    quizzes = api_get_all(base, f"/api/v1/courses/{curso}/quizzes", token,
+                          {"per_page": 100})
+    asigs = api_get_all(base, f"/api/v1/courses/{curso}/assignments", token,
+                        {"per_page": 100})
+    files = api_get_all(base, f"/api/v1/courses/{curso}/files", token,
+                        {"per_page": 100})
+    # se guarda (id, publicado_antes) para poder restaurar el estado: ver
+    # restaurar_publicacion()
+    return {
+        "quiz": {q["title"]: (q["id"], q["published"]) for q in quizzes},
+        # los quiz clásicos también aparecen como assignment (con quiz_id):
+        # se excluyen para que un ítem `assignment` nunca apunte a un quiz
+        "assignment": {a["name"]: (a["id"], a["published"]) for a in asigs
+                       if not a.get("quiz_id")},
+        "file": {f["display_name"]: (f["id"], not f.get("locked"))
+                 for f in files},
+    }
+
+
+def restaurar_publicacion(base, curso, token, tipo, content_id, publicado_antes):
+    """Deshace la publicación automática de Canvas.
+
+    Al agregar un quiz/tarea/archivo a un módulo, Canvas **publica el objeto
+    enlazado** (verificado en producción el 04-ago-2026: el sync publicó el
+    quiz y el buzón de la semana 1 y desbloqueó el PDF del programa). El ítem
+    de módulo no se puede despublicar por sí solo — su estado sigue al del
+    objeto —, así que si el objeto estaba sin publicar hay que volver a
+    dejarlo así. Esto preserva la regla de oro: sync nunca publica nada.
+    """
+    if publicado_antes:
+        return False
+    if tipo == "quiz":
+        api_put(base, f"/api/v1/courses/{curso}/quizzes/{content_id}", token,
+                {"quiz[published]": "false"})
+    elif tipo == "assignment":
+        api_put(base, f"/api/v1/courses/{curso}/assignments/{content_id}",
+                token, {"assignment[published]": "false"})
+    elif tipo == "file":
+        api_put(base, f"/api/v1/files/{content_id}", token, {"locked": "true"})
+    return True
+
+
 def cmd_sync(args):
     token = get_token()
     cfg = cargar_config(args.config)
@@ -187,6 +245,7 @@ def cmd_sync(args):
     curso = cfg["curso_id"]
     dry = args.dry_run
     prefijo = "[dry-run] " if dry else ""
+    catalogos = cargar_catalogos(base, curso, token)
 
     existentes = api_get_all(base, f"/api/v1/courses/{curso}/modules", token,
                               {"include[]": "items", "per_page": 100})
@@ -228,8 +287,24 @@ def cmd_sync(args):
             tipo = itcfg.get("tipo", "external_url")
             indent = itcfg.get("indent", 0)
             url = itcfg.get("url")
-            tipo_canvas = "SubHeader" if tipo == "subheader" else "ExternalUrl"
+            tipo_canvas = TIPOS_CANVAS.get(tipo)
+            if tipo_canvas is None:
+                print(f"  AVISO: tipo desconocido {tipo!r} en \"{titulo}\"; "
+                      "se salta.")
+                continue
             existente = items_actuales.get(titulo)
+
+            # los ítems de contenido se enlazan por id del objeto (que debe existir)
+            content_id = publicado_antes = None
+            if tipo in TIPOS_CONTENIDO:
+                # `recurso` permite que el ítem se llame distinto del objeto
+                clave = itcfg.get("recurso", titulo)
+                entrada = catalogos[tipo].get(clave)
+                if entrada is None:
+                    print(f"  AVISO: no existe {tipo} \"{clave}\" en el curso; "
+                          f"el ítem \"{titulo}\" se salta (créalo primero).")
+                    continue
+                content_id, publicado_antes = entrada
 
             if existente is None:
                 print(f"{prefijo}  CREAR ítem en \"{nombre}\": \"{titulo}\" "
@@ -241,14 +316,24 @@ def cmd_sync(args):
                         "module_item[position]": j,
                         "module_item[indent]": indent,
                         "module_item[type]": tipo_canvas,
-                        "module_item[published]": "false",
                     }
-                    if tipo != "subheader":
+                    if tipo in TIPOS_CONTENIDO:
+                        # su estado de publicación lo manda el objeto enlazado
+                        # (Canvas rechaza published=false en estos ítems)
+                        payload["module_item[content_id]"] = content_id
+                    else:
+                        payload["module_item[published]"] = "false"
+                    if tipo == "external_url":
                         payload["module_item[external_url]"] = url
                         payload["module_item[new_tab]"] = "true"
                     api_post(base,
                              f"/api/v1/courses/{curso}/modules/{m['id']}/items",
                              token, payload)
+                    if tipo in TIPOS_CONTENIDO and restaurar_publicacion(
+                            base, curso, token, tipo, content_id,
+                            publicado_antes):
+                        print(f"    -> {tipo} devuelto a sin publicar "
+                              "(Canvas lo había publicado solo)")
                 continue
 
             if existente.get("type") != tipo_canvas:
@@ -259,7 +344,7 @@ def cmd_sync(args):
                 continue
 
             diffs = []
-            if tipo != "subheader" and existente.get("external_url") != url:
+            if tipo == "external_url" and existente.get("external_url") != url:
                 diffs.append(f"url: {existente.get('external_url')!r} -> {url!r}")
             if (existente.get("indent") or 0) != indent:
                 diffs.append(f"indent: {existente.get('indent')} -> {indent}")
@@ -275,7 +360,7 @@ def cmd_sync(args):
                         "module_item[position]": j,
                         "module_item[indent]": indent,
                     }
-                    if tipo != "subheader":
+                    if tipo == "external_url":
                         payload["module_item[external_url]"] = url
                     api_put(base,
                             f"/api/v1/courses/{curso}/modules/{m['id']}/items/"

@@ -101,7 +101,7 @@ por segundo. Van a afinar de oído, como un afinador de pianos.
 
 ## El taller: contando batidos
 
-En parejas, con audífonos, cents ocultos:
+En turnos individuales, con audífonos, cents ocultos:
 
 ::: {.incremental}
 - **Fase A** — anulen el batido de la quinta, de oído; anoten
@@ -113,7 +113,7 @@ Predicción escrita ANTES de cada turno. Los roles rotan.
 
 ## Cierre: el mapa de cents (y la guitarra en vivo)
 
-Cada pareja aporta sus dos puntos a la recta del pizarrón.
+Cada integrante aporta sus dos puntos a la recta del pizarrón.
 
 . . .
 

@@ -36,8 +36,8 @@ a{color:var(--accent)}
 #barra{flex:0 0 auto;background:var(--panel);border-bottom:1px solid var(--border);
   padding:.45rem .7rem;display:flex;flex-direction:column;gap:.4rem}
 #barra-1,#barra-2{display:flex;align-items:center;gap:.5rem;flex-wrap:wrap}
-#cuerpo{flex:1 1 auto;display:flex;gap:8px;padding:8px;min-height:0}
-#col-centro,#col-der{display:flex;flex-direction:column;gap:8px;min-width:0;min-height:0}
+#cuerpo{flex:1 1 auto;display:flex;padding:8px 8px 0;min-height:0}
+#col-centro,#col-der{display:flex;flex-direction:column;min-width:0;min-height:0}
 #col-centro{flex:1 1 46%}
 #col-der{flex:1 1 54%}
 #z-riel{flex:0 0 214px;overflow-y:auto}
@@ -56,6 +56,22 @@ iframe{width:100%;height:100%;border:0;display:block;background:#fff}
 #z-abajo{flex:0 0 auto;max-height:28vh;margin:0 8px 8px}
 #abajo-cols{display:flex;gap:1.2rem;align-items:flex-start}
 #abajo-cols>div{flex:1 1 50%;min-width:0}
+
+/* ---- divisores arrastrables ----
+   La geometría de las partes se ajusta arrastrando estos divisores y
+   queda guardada (localStorage). Doble clic en un divisor = restaurar
+   su proporción original. */
+.split{flex:0 0 8px;position:relative;z-index:5;touch-action:none}
+.split.v{cursor:col-resize}
+.split.h{cursor:row-resize}
+.split::after{content:'';position:absolute;background:var(--accent);
+  border-radius:2px;opacity:0;transition:opacity .12s}
+.split.v::after{left:3px;right:3px;top:14px;bottom:14px}
+.split.h::after{top:3px;bottom:3px;left:14px;right:14px}
+.split:hover::after,.split.act::after{opacity:.85}
+#split-abajo{margin:0 8px}
+body.arrastrando{user-select:none}
+body.arrastrando iframe{pointer-events:none}
 
 /* ---- piezas ---- */
 .chip{display:inline-block;background:var(--chip);border:1px solid var(--border);
@@ -175,6 +191,9 @@ details.ag-extra>summary{cursor:pointer;color:var(--muted);font-size:12.5px}
       <div class="cont" id="riel"></div>
     </section>
 
+    <div class="split v" id="split-riel" data-split="riel"
+         title="Arrastrar para ajustar · doble clic restaura"></div>
+
     <div id="col-centro">
       <section class="zona" id="z-plan">
         <header>Plan de sesión
@@ -186,11 +205,16 @@ details.ag-extra>summary{cursor:pointer;color:var(--muted);font-size:12.5px}
         </header>
         <div class="cont" id="plan"></div>
       </section>
+      <div class="split h" id="split-centro" data-split="centro"
+           title="Arrastrar para ajustar · doble clic restaura"></div>
       <section class="zona" id="z-materiales">
         <header>Materiales para la sala <span class="der" id="mat-der"></span></header>
         <div class="cont" id="materiales"></div>
       </section>
     </div>
+
+    <div class="split v" id="split-cols" data-split="cols"
+         title="Arrastrar para ajustar · doble clic restaura"></div>
 
     <div id="col-der">
       <section class="zona" id="z-slides">
@@ -206,6 +230,8 @@ details.ag-extra>summary{cursor:pointer;color:var(--muted);font-size:12.5px}
         </header>
         <div class="cont sin-pad"><iframe id="if-slides" title="slides"></iframe></div>
       </section>
+      <div class="split h" id="split-der" data-split="der"
+           title="Arrastrar para ajustar · doble clic restaura"></div>
       <section class="zona" id="z-grande">
         <header>
           <span id="tabs"></span>
@@ -223,6 +249,9 @@ details.ag-extra>summary{cursor:pointer;color:var(--muted);font-size:12.5px}
       </section>
     </div>
   </div>
+
+  <div class="split h" id="split-abajo" data-split="abajo"
+       title="Arrastrar para ajustar · doble clic restaura"></div>
 
   <section class="zona" id="z-abajo">
     <header>Actividades y objetivos <span class="der" id="abajo-der"></span></header>
@@ -386,6 +415,7 @@ function aplicarVistas(){
   document.querySelectorAll('#toggles button').forEach(b => {
     b.classList.toggle('on', !!vistas[b.dataset.z]);
   });
+  actualizarSplits();
   guardar();
 }
 function pintarControles(){
@@ -982,6 +1012,101 @@ document.addEventListener('keydown', e => {
   const i = ['1','2','3','4','5','6'].indexOf(e.key);
   if (i >= 0){ vistas[ZONAS[i][0]] = !vistas[ZONAS[i][0]]; aplicarVistas(); }
 });
+
+// -------------------------------------------------- geometría ajustable
+// La geometría de las partes se cambia arrastrando los divisores
+// (.split) y persiste en localStorage bajo 'panel-am-geom' (clave
+// aparte de 'panel-am' para poder restaurarla sin tocar el resto del
+// estado). Doble clic en un divisor restaura su proporción original.
+let geom = {};
+try{ geom = JSON.parse(localStorage.getItem('panel-am-geom') || '{}'); }
+catch(e){ geom = {}; }
+const geomGuardar = () =>
+  localStorage.setItem('panel-am-geom', JSON.stringify(geom));
+
+const SPLITS = {
+  // frac: reparte el espacio entre las zonas a y b (valor 0–1)
+  // px-izq / px-abajo: fija en píxeles el riel / la franja inferior
+  riel:   {tipo:'px-izq',  min:140, max:440},
+  cols:   {tipo:'frac', a:'col-centro', b:'col-der',      min:.18, max:.82},
+  centro: {tipo:'frac', a:'z-plan',     b:'z-materiales', min:.15, max:.85},
+  der:    {tipo:'frac', a:'z-slides',   b:'z-grande',     min:.15, max:.85},
+  abajo:  {tipo:'px-abajo', min:70, max:.65},   // max: fracción de la ventana
+};
+
+function aplicarGeom(){
+  for (const [n, s] of Object.entries(SPLITS)){
+    const v = geom[n];
+    if (s.tipo === 'frac'){
+      const A = $('#'+s.a), B = $('#'+s.b);
+      if (v == null){ A.style.flex = ''; B.style.flex = ''; }
+      else {
+        A.style.flex = '1 1 ' + (v*100).toFixed(2) + '%';
+        B.style.flex = '1 1 ' + ((1-v)*100).toFixed(2) + '%';
+      }
+    } else if (s.tipo === 'px-izq'){
+      $('#z-riel').style.flex = (v == null) ? '' : '0 0 ' + v + 'px';
+    } else {
+      const z = $('#z-abajo');
+      if (v == null){ z.style.flex = ''; z.style.maxHeight = ''; }
+      else { z.style.flex = '0 0 ' + v + 'px'; z.style.maxHeight = 'none'; }
+    }
+  }
+}
+
+function actualizarSplits(){
+  // un divisor solo tiene sentido si sus dos vecinos están visibles
+  const vis = id => { const el = $('#'+id); return el && el.style.display !== 'none'; };
+  $('#split-riel').style.display   = (vistas.riel && (vis('col-centro') || vis('col-der'))) ? '' : 'none';
+  $('#split-cols').style.display   = (vis('col-centro') && vis('col-der')) ? '' : 'none';
+  $('#split-centro').style.display = (vistas.plan && vistas.materiales) ? '' : 'none';
+  $('#split-der').style.display    = (vistas.slides && vistas.grande) ? '' : 'none';
+  $('#split-abajo').style.display  = vistas.abajo ? '' : 'none';
+  $('#cuerpo').style.paddingBottom = vistas.abajo ? '' : '8px';
+}
+
+document.querySelectorAll('.split').forEach(sp => {
+  const n = sp.dataset.split, s = SPLITS[n];
+  sp.addEventListener('dblclick', () => {
+    delete geom[n]; geomGuardar(); aplicarGeom();
+  });
+  sp.addEventListener('pointerdown', ev => {
+    ev.preventDefault();
+    try{ sp.setPointerCapture(ev.pointerId); }catch(e){}
+    sp.classList.add('act'); document.body.classList.add('arrastrando');
+    const mover = e => {
+      if (s.tipo === 'frac'){
+        const A = $('#'+s.a).getBoundingClientRect();
+        const B = $('#'+s.b).getBoundingClientRect();
+        const esV = sp.classList.contains('v');
+        const pos = esV ? e.clientX : e.clientY;
+        const ini = esV ? A.left : A.top;
+        const fin = esV ? B.right : B.bottom;
+        geom[n] = Math.min(s.max, Math.max(s.min,
+          (pos - ini) / Math.max(1, fin - ini)));
+      } else if (s.tipo === 'px-izq'){
+        const r = $('#z-riel').getBoundingClientRect();
+        geom[n] = Math.round(Math.min(s.max, Math.max(s.min, e.clientX - r.left)));
+      } else {
+        const r = $('#z-abajo').getBoundingClientRect();
+        geom[n] = Math.round(Math.min(innerHeight * s.max,
+          Math.max(s.min, r.bottom - e.clientY)));
+      }
+      aplicarGeom();
+    };
+    const soltar = () => {
+      window.removeEventListener('pointermove', mover);
+      window.removeEventListener('pointerup', soltar);
+      window.removeEventListener('pointercancel', soltar);
+      sp.classList.remove('act'); document.body.classList.remove('arrastrando');
+      geomGuardar();
+    };
+    window.addEventListener('pointermove', mover);
+    window.addEventListener('pointerup', soltar);
+    window.addEventListener('pointercancel', soltar);
+  });
+});
+aplicarGeom();
 
 arrancar().catch(e => {
   document.body.innerHTML = '<pre style="padding:2rem">No se pudo arrancar: '

@@ -2,9 +2,9 @@
 
 **Objetivos**: OA4.1 (leer el espectrograma: ejes, unidades y
 limitaciones de la herramienta).
-**Grupo**: 4 integrantes con roles: **ejecuta** (produce los sonidos) ·
-**mide** (opera el espectrograma) · **registra** (llena esta hoja) ·
-**vocero**. Roten mide/ejecuta en cada fase: todos deben operar la app.
+**Grupo**: 3 integrantes con roles: **ejecuta** (produce los sonidos) ·
+**mide y registra** (opera el espectrograma y llena esta hoja) ·
+**vocero**. Roten "ejecuta" y "mide y registra" en cada fase: todos deben operar la app.
 **Materiales**: mínimo 2 celulares por grupo con app de espectrograma
 funcionando (anoten cuáles): app A: ____________ app B: ____________
 

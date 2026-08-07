@@ -32,8 +32,8 @@ evalúan juntas como el taller de la semana (principio 5).
 |---|---|---|---|---|
 | 0–10′ | **Escucha del día (OA3.1, práctica sin nota) = el ticket de s03 en vivo** | Todos anotan su diagnóstico en 3 líneas (describir → hipotetizar → verificar) (2′); discuten en la mesa y el vocero anota el diagnóstico del grupo (3′); en el plenario, el vocero de una o dos mesas responde por el grupo (3′) — la hipótesis natural es su propia respuesta del ticket de s03 | Ejecuta las dos pulsadas en vivo, **dos pasadas** (en el medio y pegado al puente, primero solo de oído, sin pantalla) (~2′); pregunta selectivamente a una o dos mesas en el plenario, exigiendo vocabulario de s03 (parcial, armónico, espectro vs. timbre); cierra con su propia versión experta y el suspenso: "¿cambió la nota o cambió el timbre? — lo dejaron escrito la semana pasada" | Guitarra (del profesor o de un grupo); tickets de s03 recopilados |
 | 10–25′ | Veredicto del espectrograma + mini-lección: la receta de vibración (consume lectura previa) | Ve proyectado el espectrograma de ambas pulsadas y contrasta con su ticket: mismas líneas (mismas frecuencias, misma nota) con distinto reparto de energía (otro timbre); vota a mano alzada las preguntas de la mini-lección: "¿pulsar donde el modo 2 tiene un nodo lo enciende o lo deja mudo?", "¿el dedo de la tapa de s03 y la púa hacen lo mismo o lo contrario?" | Pulsa al micrófono con el espectrograma proyectado; devuelve los tickets; mini-lección interactiva (formato 7) sobre el cap. 4 leído: **la regla de la receta** — pulsar en un punto enciende con fuerza los modos que se *mueven* en ese punto (antinodo) y deja mudos los que tienen un *nodo* ahí; el dedo apagador de s03 lee el mismo mapa con la palanca opuesta; anuncia que el taller es dibujar ese mapa en SU instrumento | Guitarra + micrófono + proyector (app o demo s02); pizarrón; tickets |
-| 25–62′ | **Taller PEE: el mapa de la cuerda (OA1.1, OA1.2, OA4.1)** — formato 2, con los instrumentos de los estudiantes | En grupo, con roles y la guía: elige UNA cuerda, mide su largo vibrante $L$ y marca con cinta de papel $L/2$, $L/4$ y ~$L/10$ del puente; ANTES de pulsar predice por escrito qué parciales dominarán en cada punto (aplicando la regla leída); pulsa, mira el espectrograma y registra; fase 2 (**opcional, solo grupos rápidos**): **armónicos naturales** — predice qué frecuencia sonará con el dedo suave sobre el traste 12 ($L/2$) y, si aún sobra tiempo, 7 ($L/3$) y 5 ($L/4$), verifica con app y calcula razones con la cuerda al aire | Rota por los grupos (~6′ c/u); provoca: "¿la pulsada en $L/2$ tiene el parcial 2 o no lo tiene?" y, a los grupos que llegan a la fase 2, "¿el armónico del traste 12 y la pulsada al medio dejan sonar los MISMOS modos… o los contrarios?"; vigila que la predicción esté escrita antes de tocar | Instrumentos de los estudiantes (mín. 1 por grupo); 5 huinchas o reglas largas; cinta de papel; celulares con espectrograma y afinador; guía PEE "mapa de la cuerda" (1 por grupo) |
-| 62–70′ | Cierre y contraste | UN grupo expone su mapa (tabla de puntos de pulsación; + armónicos si llegó a la fase 2); todos anotan la moraleja en la guía: púa y dedo leen el mismo mapa de nodos — pulsar enciende lo que se mueve, tocar apaga lo que se mueve | Sintetiza en el pizarrón el mapa de la cuerda con los hallazgos de los 5 grupos; pregunta relámpago a mano alzada (mínimo de OA1.1): "pulsé justo donde el modo 3 tiene un nodo: ¿suena el parcial 3?"; recoge las guías (se cierran con la guía del módulo 2) | Pizarrón; guías |
+| 25–62′ | **Taller PEE: el mapa de la cuerda (OA1.1, OA1.2, OA4.1)** — formato 2, con los instrumentos de los estudiantes | En grupo, con roles y la guía: elige UNA cuerda, mide su largo vibrante $L$ y marca con cinta de papel $L/2$, $L/4$ y ~$L/10$ del puente; ANTES de pulsar predice por escrito qué parciales dominarán en cada punto (aplicando la regla leída); pulsa, mira el espectrograma y registra; fase 2 (**opcional, solo grupos rápidos**): **armónicos naturales** — predice qué frecuencia sonará con el dedo suave sobre el traste 12 ($L/2$) y, si aún sobra tiempo, 7 ($L/3$) y 5 ($L/4$), verifica con app y calcula razones con la cuerda al aire | Rota por los grupos (~6′ c/u); provoca: "¿la pulsada en $L/2$ tiene el parcial 2 o no lo tiene?" y, a los grupos que llegan a la fase 2, "¿el armónico del traste 12 y la pulsada al medio dejan sonar los MISMOS modos… o los contrarios?"; vigila que la predicción esté escrita antes de tocar | Instrumentos de los estudiantes (mín. 1 por grupo); 3 huinchas o reglas largas; cinta de papel; celulares con espectrograma y afinador; guía PEE "mapa de la cuerda" (1 por grupo) |
+| 62–70′ | Cierre y contraste | UN grupo expone su mapa (tabla de puntos de pulsación; + armónicos si llegó a la fase 2); todos anotan la moraleja en la guía: púa y dedo leen el mismo mapa de nodos — pulsar enciende lo que se mueve, tocar apaga lo que se mueve | Sintetiza en el pizarrón el mapa de la cuerda con los hallazgos de los 3 grupos; pregunta relámpago a mano alzada (mínimo de OA1.1): "pulsé justo donde el modo 3 tiene un nodo: ¿suena el parcial 3?"; recoge las guías (se cierran con la guía del módulo 2) | Pizarrón; guías |
 
 ## Módulo 2 — La receta en el mezclador (variante: audición, adaptada)
 
@@ -42,7 +42,7 @@ evalúan juntas como el taller de la semana (principio 5).
 | 0–8′ | Gancho sonoro: la nota al revés | Escucha una grabación misteriosa y anota en 1 línea qué instrumento cree que es; luego la oye al derecho: era una nota de guitarra reproducida al revés — misma receta de parciales, otra envolvente, timbre irreconocible | Reproduce la grabación invertida (preparada en casa) sin explicar; revela; deja plantada la pregunta: "si el espectro es el mismo, ¿qué cambió?" | Grabación de nota de guitarra normal e invertida; audio de sala |
 | 8–28′ | **Demo predictiva: síntesis aditiva (OA2.1, OA1.1)** — formato 1 | Predice a mano alzada ANTES de cada paso: "si al seno le sumo el parcial 2, ¿cambia la nota o el timbre?", "¿cuál preset sonará más brillante: pulsada al medio o cerca del puente?", "¿cuál de los dos se parece a lo que midieron en el taller?"; verifica oyendo y viendo forma de onda y espectro | Opera [`demo_sintesis_aditiva.html`](../../demos/demo_sintesis_aditiva.html) proyectada: parte de un seno (solo parcial 1), suma parciales de a uno, luego presets "pulsada al medio" / "pulsada cerca del puente" / "diente de sierra"; activa la envolvente de pulsación al final (la receta suena "a cuerda" recién con su envolvente → cierra el gancho); instala la idea: **el espectro es la receta del timbre, y la envolvente es el resto de la receta** | [`demo_sintesis_aditiva.html`](../../demos/demo_sintesis_aditiva.html) + proyector + audio de sala |
 | 28–42′ | **PEE relámpago con instrumentos: estirar, acortar, engordar (OA1.2)** | En grupo, con la media guía: predice por proporciones y verifica con el afinador — (a) dedo en el traste 12 = mitad del largo: ¿la frecuencia se duplica exactamente?; (b) razona sin medir: para subir un semitono con la clavija, ¿la tensión sube ~1 %, ~12 % o ~100 %? (la comparación "misma nota en dos cuerdas ≠ mismo timbre" ya quedó cubierta por los presets de la demo de síntesis) | Rota; formaliza en el pizarrón SOLO proporciones: $f_1 \propto 1/L$, $f_1 \propto \sqrt{F_T}$, $f_1 \propto 1/\sqrt{\mu}$ (la fórmula completa queda en el recuadro del apunte); conecta: por eso la guitarra afina con 3 palancas — clavija, traste, grosor de cuerda | Instrumentos + afinadores (app); media guía PEE "estirar, acortar, engordar"; pizarrón |
-| 42–62′ | **Proyecto: devolución de ideas + pauta del hito 1 (OA5.1)** | Recibe su media hoja de s03 comentada; lee la pauta del hito 1 (entrega s05, 10 %) mientras se presenta; en grupo: elige su idea definitiva, nombra el parámetro modificable y esboza QUÉ va a predecir (la sesión de hoy le dio el modelo cuerda completo); anota dudas y las pregunta | Presenta la pauta (estructura de 2 págs, rúbrica, bitácora firmada, fecha); devuelve las medias hojas comentadas; rota por los 5 grupos empujando de la idea a la predicción ("¿qué número van a atreverse a escribir?") | Pauta del hito 1 impresa (1 por grupo) + proyectada; medias hojas comentadas |
+| 42–62′ | **Proyecto: devolución de ideas + pauta del hito 1 (OA5.1)** | Recibe su media hoja individual de s03 comentada; lee la pauta del hito 1 (entrega s05, 10 %, individual) mientras se presenta; elige SU idea definitiva, nombra el parámetro modificable y esboza QUÉ va a predecir (la sesión de hoy le dio el modelo cuerda completo); comparte brevemente con su mesa (opina, no decide); anota dudas y las pregunta | Presenta la pauta (estructura de 1 página, rúbrica, bitácora individual, fecha); devuelve las medias hojas comentadas; rota por las mesas empujando a cada estudiante de la idea a la predicción ("¿qué número va a atreverse a escribir?") | Pauta del hito 1 impresa (1 por estudiante) + proyectada; medias hojas comentadas (9) |
 | 62–70′ | Cierre + ticket de salida + anuncios | Completa el ticket: "en la demo (queda publicada), apague del todo el parcial 1 — la fundamental: ¿la nota baja una octava, desaparece o sigue igual? escriba su predicción"; entrega las dos guías del día; anota anuncios | Recoge guías (rúbrica rápida: cuentan juntas como el taller de la semana) y tickets; anuncia s05: **entrega del hito 1 al inicio** + se responde el ticket; publica el enlace de la demo para explorar en casa | Tickets de salida; guías |
 
 ## Verificación de aprendizaje
@@ -59,10 +59,10 @@ evalúan juntas como el taller de la semana (principio 5).
 - **Pregunta relámpago** al cerrar el módulo 1 (mínimo de OA1.1/OA1.2):
   "pulsé donde el modo 3 tiene un nodo: ¿suena el parcial 3?" — la sala
   completa debe responder "no" sin dudar.
-- **Proyecto (OA5.1)**: las 5 medias hojas devueltas con comentario; cada
-  grupo sale con idea elegida, parámetro nombrado y la pauta del hito 1
-  en la mano. Verificación: al rotar, el profesor pide a cada grupo decir
-  en una frase qué va a predecir.
+- **Proyecto (OA5.1)**: las 9 medias hojas individuales devueltas con
+  comentario; cada estudiante sale con su idea elegida, parámetro
+  nombrado y la pauta del hito 1 en la mano. Verificación: al rotar, el
+  profesor pide a cada estudiante decir en una frase qué va a predecir.
 - **Ticket de salida** hacia s05 (¿y sin fundamental?): siembra la
   fundamental ausente y se contrasta al abrir s05.
 
@@ -78,12 +78,12 @@ evalúan juntas como el taller de la semana (principio 5).
 - **Actividades**: guía PEE "el mapa de la cuerda" + media guía PEE
   "estirar, acortar, engordar" + **pauta detallada del hito 1** (con
   rúbrica; se publica hoy) — en `actividades/`.
-- **Trabajo previo del profesor (esta semana)**: comentar las 5 medias
-  hojas de s03 (~30–45 min; foco: ¿es medible?, ¿tiene parámetro?);
+- **Trabajo previo del profesor (esta semana)**: comentar las 9 medias
+  hojas individuales de s03 (~30–45 min; foco: ¿es medible?, ¿tiene parámetro?);
   grabar la nota de guitarra e invertirla (cualquier editor de audio);
   probar el espectrograma con una guitarra ANTES de clase.
 - **Material físico/logístico**: guitarra del profesor (respaldo por si
-  un grupo llega sin instrumento); 5 huinchas de medir o reglas largas;
+  un grupo llega sin instrumento); 3 huinchas de medir o reglas largas;
   cinta de papel (masking) para marcar puntos de pulsación; pauta del
   hito 1 impresa; publicación de la demo en el repositorio del curso al
   terminar la sesión.
@@ -92,8 +92,8 @@ evalúan juntas como el taller de la semana (principio 5).
 
 - **Grupos sin instrumento** (el aviso de s03 falla) → la guitarra del
   profesor + el monocordio de s03 rotan entre los grupos afectados; el
-  taller es viable con un mínimo de 3 instrumentos en sala (grupos de a
-  dos instrumentos comparten mediciones); plan B extremo: el mapa se hace
+  taller es viable con un mínimo de 2 instrumentos en sala (dos grupos
+  comparten uno y turnan las mediciones); plan B extremo: el mapa se hace
   demostrativo en una sola guitarra al proyector y los grupos predicen y
   registran igual (se pierde autonomía, no el ciclo PEE).
 - **El espectrograma no resuelve los parciales** (cuerdas de nylon graves,
@@ -104,10 +104,10 @@ evalúan juntas como el taller de la semana (principio 5).
   (ukelele, charango) → la fase 2 completa ya es opcional (solo grupos
   rápidos); si un grupo rápido la intenta, el del traste 12 sale siempre
   y basta.
-- **La devolución del proyecto se alarga** (grupos que quieren rediscutir
-  la idea completa) → la discusión fina sigue por bitácora y en horario de
-  consulta; lo innegociable hoy: pauta entendida, fecha clara (s05) y
-  parámetro nombrado por grupo.
+- **La devolución del proyecto se alarga** (estudiantes que quieren
+  rediscutir la idea completa) → la discusión fina sigue por bitácora y
+  en horario de consulta; lo innegociable hoy: pauta entendida, fecha
+  clara (s05) y parámetro nombrado por cada estudiante.
 - **La demo falla en el proyector** → plan B: la síntesis aditiva se
   muestra con [`demo_modos_cuerda.html`](../../demos/demo_modos_cuerda.html) de s03 (suma de modos con
   amplitudes ajustables cubre el núcleo); la exploración fina queda de

@@ -66,7 +66,7 @@ otra **se absorbe**.
 
 . . .
 
-¿Y 20 personas con ropa, comparadas con la sala vacía?
+¿Y 9 personas con ropa, comparadas con la sala vacía?
 
 ## ¿A quién le escucho: al instrumento o a la sala?
 
@@ -167,7 +167,7 @@ decirlo.)*
 
 Grupo con roles que **rotan** en cada espacio:
 
-**ejecuta** el impulso · **mide** con la app · **registra** · **vocero**
+**ejecuta** el impulso · **mide y registra** con la app · **vocero**
 
 . . .
 
@@ -193,16 +193,15 @@ planilla compartida.
 
 ## Al volver: sorteo y reglas de s15
 
-Sorteo **en vivo** del orden de exposición.
+Sorteo **en vivo** del orden de las **9 defensas individuales**.
 
 ::: {.incremental}
-- **15′** de exposición + **7′** de preguntas
-- El grupo sorteado **primero**: preguntas de **5′** — compensación por
-  abrir en frío; su exposición dura igual
+- **8′** de presentación + **3′** de preguntas (2, dirigidas a usted) = 11′, iguales para las 9
+- Sin coevaluación: el proyecto es individual
 - Envían la presentación por el canal del curso hasta las **20:00 del
   jueves 26-nov** (víspera) + respaldo en USB propio
-- Instrumento/objeto **funcionando**; informe (≤6 págs.) se entrega al
-  inicio de s15
+- Instrumento/objeto **funcionando**; informe individual (≤6 págs.) se
+  entrega al inicio de s15
 :::
 
 ## Síntesis y cierre

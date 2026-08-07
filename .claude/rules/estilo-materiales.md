@@ -30,6 +30,17 @@
   (`gen_sXX.py`), insertadas con `![**Figura N.** leyenda](ruta)` y
   numeradas por documento.
 
+## Calendario y contingencias (heredado de SyS, 2026-08-06)
+
+- El material genérico (`material/`) no nombra días de la semana ni
+  fechas: "la próxima sesión", "la semana pasada" — nunca "el viernes"
+  o "el 12 de septiembre". Todo lo fechado vive en `ediciones/<ed>/`
+  (el calendario real cambia año a año).
+- Las notas de orador de las slides (`::: {.notes}`) declaran
+  contingencias y respaldos operativos: "sin internet: …", "si la demo
+  no suena: …", "respaldo local en …". La contingencia se anota donde
+  se va a necesitar, no en un documento aparte.
+
 ## Rigor
 - Toda afirmación cuantitativa (frecuencias, velocidades, rangos) debe ser
   verificable en las fuentes o marcada [POR VERIFICAR].

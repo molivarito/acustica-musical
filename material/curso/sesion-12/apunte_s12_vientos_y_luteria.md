@@ -110,7 +110,7 @@ para construir.
 ## ¿Por qué todos los tubos salieron bajos?
 
 El resultado más instructivo del taller fue un "error" colectivo: los
-cinco grupos cortaron su tubo al largo calculado, y las cinco notas
+tres grupos cortaron su tubo al largo calculado, y las tres notas
 midieron **bajas**, todas, en un orden parecido de decenas de cents. Un
 error aleatorio se reparte para ambos lados; uno sistemático apunta a
 que el modelo olvida algo.

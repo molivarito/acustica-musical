@@ -3,9 +3,9 @@
 **Objetivos**: OA4.2 (medir niveles e interpretar el decibel en
 contextos musicales; salud auditiva). **Formato 5** (estaciones de
 medición), debut en el curso.
-**Grupo**: 4 integrantes, roles **ejecuta / mide / registra / vocero**;
-los roles **rotan al cambiar de estación** (el registrador saliente
-pasa a ejecutar, etc.). El registrador de turno llena la **planilla del
+**Grupo**: 3 integrantes, roles **ejecuta / mide y registra / vocero**;
+los roles **rotan al cambiar de estación** (quien medía pasa a
+ejecutar, etc.). El que mide y registra llena la **planilla del
 grupo** (última página): es el insumo del mini-informe — sin planilla
 no hay informe. Al **dorso de la planilla** va impreso el formulario
 de 4 casillas del mini-informe (se llena en el cierre, desde el
@@ -14,13 +14,15 @@ minuto 60).
 si se puede), 1 celular emisor de tonos, esta guía, lápiz. E1 usa el
 equipo común (interfaz + micrófono + notebook).
 
-## Logística de rotación (5 grupos × 5 estaciones)
+## Logística de rotación (3 grupos × 5 estaciones)
 
 **7 minutos de trabajo + 1 de rotación** por estación; manda el
 cronómetro proyectado. Ruta: cada grupo parte en la estación de su
 número y avanza en orden (G1: E1→E2→E3→E4→E5 · G2: E2→E3→E4→E5→E1 ·
-G3: E3→E4→E5→E1→E2 · G4: E4→E5→E1→E2→E3 · G5: E5→E1→E2→E3→E4).
-Regla de convivencia: **E1 es zona silenciosa** — las estaciones
+G3: E3→E4→E5→E1→E2). Con 3 grupos y 5 estaciones, en cada ronda quedan
+**2 estaciones libres** — siempre hay una disponible, lo que descomprime
+el cuello del micrófono/interfaz en E1 (menos espera que con el curso
+completo). Regla de convivencia: **E1 es zona silenciosa** — las estaciones
 ruidosas (E2, E3) trabajan en el extremo opuesto de la sala.
 En cada estación: **prediga antes de medir** (casilla P), mida, anote
 el dato CON condiciones (app, celular, distancia). Si el tiempo no
