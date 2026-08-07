@@ -18,6 +18,17 @@
 
 set -u
 
+# --- consistencia del diseño (DATOS_CURSO.yml, 2026-08-07) -----------
+# El mapa de relaciones ejecutable: hechos del diseño afirmados donde
+# corresponde y sin términos de diseños anteriores. --rapido: sin
+# chequeos que requieran el render.
+if ! python3 verificar_consistencia.py --rapido >&2; then
+  echo >&2
+  echo "  ✗ El diseño quedó inconsistente (ver arriba)." >&2
+  echo "  Saltarse a conciencia:  git commit --no-verify" >&2
+  exit 1
+fi
+
 PDF="material/libro/LIBRO_CURSO.pdf"
 
 staged=$(git diff --cached --name-only --diff-filter=ACMR)

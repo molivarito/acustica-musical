@@ -147,6 +147,20 @@ conserva para ediciones futuras.
   evaluada es la defensa del proyecto en s15). El detalle vive en
   `METODOLOGIA.md` §§1–5 y §7.7.
 
+- **Consistencia del diseño (2026-08-07)**: los hechos del diseño
+  (matrícula, mesas, pesos, hitos, defensas, estímulo consagrado)
+  viven en **`DATOS_CURSO.yml`** — fuente única — junto con el mapa de
+  relaciones (qué archivo debe afirmar qué, qué términos quedaron
+  prohibidos tras cada rediseño). **Todo rediseño parte por actualizar
+  ese archivo y termina cuando `python3 verificar_consistencia.py`
+  pasa en limpio**; el verificador corre además en el pre-commit
+  (`--rapido`) y en el CI. Nada de barridos por memoria: si un
+  rediseño invalida una afirmación, se actualiza en DATOS_CURSO.yml y
+  en el documento, nunca solo en uno. Los agentes delegados **no
+  ejecutan `git stash`** (sobre Google Drive dejó archivos a medio
+  restaurar el 2026-08-07); ante dudas de estado, `git status`/`diff`
+  y avisar.
+
 ## Pendientes conocidos (no resueltos a propósito)
 
 Patrón heredado del CLAUDE.md de SyS: decisiones fechadas que se

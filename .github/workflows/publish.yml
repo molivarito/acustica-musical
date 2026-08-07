@@ -54,6 +54,9 @@ jobs:
       - name: Auditar fugas de material solo-profesor (patrón SyS)
         run: python3 canvas/auditar_sitio.py --sin-slides material/_render/site
 
+      - name: Verificar consistencia del diseño (DATOS_CURSO.yml)
+        run: pip install pyyaml -q && python3 verificar_consistencia.py
+
       - uses: actions/upload-pages-artifact@v3
         with:
           path: material/_render/site

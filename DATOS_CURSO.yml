@@ -1,0 +1,112 @@
+# DATOS_CURSO.yml — fuente única de los hechos del diseño (2026-08-07)
+#
+# REGLA DE PROCESO (CLAUDE.md): todo rediseño del curso parte por
+# actualizar ESTE archivo, y nada se da por propagado hasta que
+# `python3 verificar_consistencia.py` pase en limpio. El verificador
+# usa este archivo como referencia: los hechos de arriba y el mapa de
+# relaciones de abajo (qué archivo debe afirmar qué, qué términos
+# quedaron prohibidos tras cada rediseño).
+
+edicion: 2026-2
+matricula: 9            # estudiantes (todos de música esta edición)
+mesas: 3                # mesas de trabajo
+integrantes_por_mesa: 3
+tramos: ["s01-s05", "s06-s10", "s11-s15"]   # rearmes tras s05 y s10
+roles: ["ejecuta", "mide y registra", "vocero"]
+
+pesos:                  # % de la nota final (METODOLOGIA §4)
+  talleres: 35
+  proyecto: 35
+  pruebas: 20
+  escucha_escrita: 10
+
+proyecto:
+  tipo: individual      # decisión 2026-08-07; sin coevaluación
+  hitos:
+    - {n: 1, sesion: s05, pct: 10}
+    - {n: 2, sesion: s10, pct: 10}
+    - {n: 3, sesion: s15, pct: 15}
+  defensa: {presentacion_min: 8, preguntas_min: 3}   # 9 defensas de ~11′
+
+pruebas: {sesiones: [s07, s13], puntos: 48, pct_cada_una: 10}
+escucha_escrita: {eventos: 3, cuentan_mejores: 2}
+estimulo_linea_base:
+  archivo: material/estimulos/e01_linea_base.wav   # CONSAGRADO: s15 usa este mismo archivo
+  pasadas: 2
+
+# ---------------------------------------------------------------
+# Mapa de relaciones: cada archivo debe seguir afirmando estas
+# frases (si un rediseño las invalida, se actualizan AQUÍ y ALLÁ).
+afirmaciones:
+  - archivo: material/programa_curso.md
+    debe_contener:
+      - "mesas de 3"
+      - "Proyecto (individual) | 35"
+      - "Cuentan las mejores 2 de las 3"
+      - "Talleres | 35"
+  - archivo: METODOLOGIA.md
+    debe_contener:
+      - "3 mesas de trabajo de 3"
+      - "**Proyecto** (individual) | 35"
+      - "se rearman dos veces"
+      - "9 defensas de ~11 min"
+  - archivo: PLAN_SEMESTRE.md
+    debe_contener:
+      - "9 defensas individuales"
+      - "es **individual**"
+  - archivo: material/curso/sesion-01/slides_s01.qmd
+    debe_contener:
+      - "**Proyecto** (individual)"
+      - "mejores 2 de 3"
+      - "dos pasadas"
+      - "M1 · 25–40′"
+  - archivo: material/curso/sesion-03/slides_s03.qmd
+    debe_contener:
+      - "Proyecto individual"
+      - "Diseño con predicción | s05"
+  - archivo: material/curso/sesion-15/plan.md
+    debe_contener:
+      - "9 defensas"
+      - "8′"
+  - archivo: material/curso/sesion-14/actividades/pauta_hito3_presentacion_final.md
+    debe_contener:
+      - "individual"
+      - "8′"
+  - archivo: canvas/canvas.yml
+    debe_contener:
+      - "Acta de mesa (s01)"
+      - "Rúbrica de escucha argumentada"
+
+# Términos que los rediseños dejaron obsoletos. Una línea que los
+# contenga es falla, salvo que la línea (o la siguiente) traiga una
+# marca de contexto permitido, sea comentario (#) o el archivo esté
+# exento (registro histórico deliberado).
+prohibidos:
+  patrones:
+    - "5 grupos"
+    - "cinco grupos"
+    - "grupos de 4"
+    - "cuatro grupos"
+    - "4 integrantes"
+    - "20 estudiantes"
+    - "2 parejas por grupo"
+    - "escala pentatónica"
+    - "grupos estables"
+    - "coevalua"
+  permitir_si_contiene:
+    - "sin coevaluación"
+    - "ni coevaluación"
+    - "no aplica"
+    - "ya no"
+    - "obsoleta"
+    - "se retiró"
+    - "desaparec"
+    - "no hay"
+    - "no tiene"
+    - "que coevaluar"
+    - "histórico"
+    - "diseño original"
+    - "queda registrado"
+    - "cupo"
+  archivos_exentos:
+    - material/curso/sesion-15/actividades/hoja_coevaluacion_final.md

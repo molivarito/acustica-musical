@@ -383,7 +383,7 @@ const S = [
  {n:15, f:'27-nov', b:'D', tema:'Presentaciones finales del proyecto: explicar es la prueba',
   mod:'ambos módulos: 5 presentaciones × ~25′ + cierre del curso',
   oa:['OA5.3','OA3.2'],
-  ev:[['PRESENTACIÓN FINAL + INFORME (15%)','fuerte'],['Coevaluación final','suave'],['Hoja de escucha (escucha escrita 3)','suave'],['Devolución líneas base de s01','suave']],
+  ev:[['PRESENTACIÓN FINAL + INFORME (15%)','fuerte'],['Hoja de escucha (escucha escrita 3)','suave'],['Devolución líneas base de s01','suave']],
   acts:[['Hoja de escucha de presentaciones','curso/sesion-15/actividades/hoja_escucha_presentaciones.md'],
         ['Guion del profesor','curso/sesion-15/actividades/guion_profesor_s15.md']],
   demo:null,
