@@ -22,6 +22,7 @@ project:
     - "!curso/**/plan.md"
     - "!curso/**/*pauta*.md"
     - "!curso/**/guion_profesor*.md"
+    - "!curso/**/hoja_coevaluacion_final.md"
     - libro/*.md
     - apps_recomendadas.md
   resources:
@@ -166,7 +167,6 @@ website:
           - curso/sesion-15/apunte_s15_como_defender_un_proyecto_acustico.md
           - section: "Actividades"
             contents:
-              - curso/sesion-15/actividades/hoja_coevaluacion_final.md
               - curso/sesion-15/actividades/hoja_escucha_presentaciones.md
       - section: "Libro — Escuchar como científico"
         contents:

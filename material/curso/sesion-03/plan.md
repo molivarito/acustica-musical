@@ -70,8 +70,8 @@ se consume visiblemente en el bloque de 10–25′ del módulo 1 (principio 6).
 - **Capítulo (lectura previa)**: [`libro/cap03_modos_de_vibracion.md`](../../libro/cap03_modos_de_vibracion.md)
   (referirlo desde el cierre de cap02).
 - **Actividades**: guía PEE "la sartén y sus parientes" + **enunciado
-  completo del proyecto** (pauta con hitos, %, regla, bitácora,
-  coevaluación) — ambos en `actividades/`.
+  completo del proyecto** (pauta con hitos, %, regla, bitácora
+  individual) — ambos en `actividades/`.
 - **Material físico/logístico**: 3 kits de objetos metálicos (sartén u
   olla, tapa, taza, cuchara de palo — inventario del pendiente 3 de
   metodología §6); vaso de vidrio "oficial" + cuchara; guitarra o

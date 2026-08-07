@@ -69,7 +69,7 @@ $f_1 =$ ______ Hz (afinador).
 
 ## Cierre en aula
 
-UN grupo expone su mapa; el profesor reúne los hallazgos de los 5 grupos
+UN grupo expone su mapa; el profesor reúne los hallazgos de los 3 grupos
 en el pizarrón y hace la pregunta relámpago. Esta guía se entrega junto
 con la del módulo 2 ("estirar, acortar, engordar"); las dos juntas se
 evalúan con rúbrica rápida (logrado / parcial / incipiente) y cuentan

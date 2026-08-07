@@ -131,7 +131,7 @@ capítulo 15, que es también la mejor guía para preparar esta defensa.
   (formato, tiempos, rúbrica R1–R4, checklist).
 - `OBJETIVOS_APRENDIZAJE.md`, OA5.3 — la regla "la calidad
   de la explicación pesa más que el éxito sonoro".
-- `METODOLOGIA.md`, §4 — preguntas individuales y ajuste
-  ±0,5 por coevaluación.
+- `METODOLOGIA.md`, §4 — el proyecto individual y las
+  preguntas al autor en la defensa.
 - El semestre completo: capítulos 1–14 del curso — cada modelo que su
   defensa necesite está en alguno de ellos.

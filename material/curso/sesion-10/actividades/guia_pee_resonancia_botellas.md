@@ -71,7 +71,7 @@ $f_{golpe}$ = ______ Hz, $f_{frote}$ = ______ Hz.
 ## Cierre en aula
 
 UN grupo expone su tabla; el profesor superpone las direcciones de los
-5 grupos en el pizarrón (¿todos subieron al soplar y bajaron al
+3 grupos en el pizarrón (¿todos subieron al soplar y bajaron al
 golpear?). Entreguen la hoja al salir: rúbrica rápida
 (logrado/parcial/incipiente) sobre predicción previa firmada,
 mediciones tabuladas con condiciones, contraste honesto y explicación

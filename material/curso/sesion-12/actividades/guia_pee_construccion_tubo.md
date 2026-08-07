@@ -17,8 +17,8 @@ $f_1 = v/2L$ (tubo abierto) · $v = 343$ m/s a 20 °C · 1 semitono ≈
 6 % ≈ 100 cents.
 
 **Nota asignada al grupo** (la sortea el profesor):
-Sol4 = 392 Hz · La4 = 440 Hz · Si4 = 494 Hz · Re5 = 587 Hz ·
-Mi5 = 659 Hz → la nuestra: ________ = ________ Hz.
+Sol4 = 392 Hz · Si4 = 494 Hz · Re5 = 587 Hz
+→ la nuestra: ________ = ________ Hz.
 
 ## Fase 1 (módulo 1)
 
@@ -85,7 +85,7 @@ golpe de palma), midan: ________ Hz. Vuelvan a tapar.
 
 ### D. Contraste y explicación (8 min — ANTES del cierre plenario)
 
-- Miren la tabla del pizarrón: ¿los 5 grupos se desviaron para el mismo
+- Miren la tabla del pizarrón: ¿los 3 grupos se desviaron para el mismo
   lado en la fase 1? ¿En magnitudes parecidas (en % o cents)? ____
 - Escriban su explicación (pista: ¿dónde termina *exactamente* la
   columna de aire que vibra — en el borde del PVC o un poco más allá?
@@ -104,7 +104,8 @@ objeto, y qué medición queda comprometida para el hito 3?
 ## Cierre en aula
 
 UN grupo expone su tabla de afinación; el curso resuelve en plenario la
-desviación sistemática; los 5 tubos tocan la escala juntos. Se entrega
+desviación sistemática; los 3 tubos tocan juntos el acorde de Sol
+mayor. Se entrega
 esta hoja al salir (rúbrica rápida: predicciones ANTES con doble
 cálculo, protocolo de medición completo, iteraciones honestas,
 explicación de la fase D que use el modelo y no la mala suerte).

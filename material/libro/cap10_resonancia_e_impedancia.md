@@ -164,11 +164,11 @@ apenas siembra esa idea; las dos siguientes la cosechan.
 ## La clínica: su proyecto pasa al pizarrón
 
 La sesión 10 es también el **hito 2** de su proyecto (10 %): al inicio
-de la clase su grupo entrega el compilado (radiografía espectral de
+de la clase usted entrega su compilado (radiografía espectral de
 s08, mapa de escala de s09, bitácora al día, estado respecto de lo
-prometido en el hito 1) y cada integrante su coevaluación en sobre
-cerrado — la pauta publicada tiene el detalle. En el segundo módulo, su
-grupo presentará ese avance a otro grupo y recibirá su avance, con una
+prometido en el hito 1) — la pauta publicada tiene el detalle. En el
+segundo módulo presentará ese avance a otra mesa, y escuchará los
+avances de otros, con una
 pauta de retroalimentación estructurada: dos fortalezas, dos dudas, una
 sugerencia **medible**. Traiga el objeto: un proyecto que suena se
 discute mejor que un proyecto contado. Y llegue con esta pregunta ya

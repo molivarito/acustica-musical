@@ -38,8 +38,8 @@ medición que lo comprueba.
 El curso está dirigido a estudiantes de música, ingeniería y otras
 carreras, sin requisitos: la matemática empleada es aritmética y
 proporciones, y no se asume lectura musical fluida. A lo largo del
-semestre, cada grupo construye o modifica un instrumento musical (o
-instalación sonora) y explica acústicamente su comportamiento; la
+semestre, cada estudiante construye o modifica un instrumento musical
+(o instalación sonora) y explica acústicamente su comportamiento; la
 calidad de la explicación pesa más que el éxito sonoro.
 
 ## II. Objetivos de aprendizaje
@@ -113,23 +113,26 @@ Aprendizaje activo estructurado (detalle en `METODOLOGIA.md`):
   auditivo — usted lo escribe, lo discute con su grupo y el profesor
   pregunta a una o dos mesas. Se evalúa por escrito más adelante, no
   ahí (OA3).
-- **Trabajo en 5 grupos estables de 4** con roles rotativos, kits
-  caseros de experimentación, demos interactivas con audio, estaciones
-  de medición con celular y micrófono, una salida de medición de salas
+- **Trabajo en mesas de 3** con roles rotativos, kits caseros de
+  experimentación, demos interactivas con audio, estaciones de
+  medición con celular y micrófono, una salida de medición de salas
   UC y una sesión-taller de lutería (construcción de tubos sonoros).
+  Las mesas se rearman dos veces en el semestre, para que cada
+  estudiante trabaje con todo el curso.
 - **Lectura previa breve (≤1 h)**: capítulo del libro del curso antes
   de cada sesión; la clase la usa visiblemente en los primeros minutos.
-- **Proyecto semestral en grupos**: construir o modificar un
-  instrumento; los talleres de medición de la segunda mitad del
-  semestre se hacen sobre el objeto de cada grupo, de modo que el
-  avance del proyecto se construye dentro de las clases.
+- **Proyecto semestral individual**: cada estudiante construye o
+  modifica su propio objeto sonoro; los talleres de medición de la
+  segunda mitad del semestre se hacen sobre ese objeto, con la mesa
+  como equipo de apoyo, de modo que el avance del proyecto se
+  construye dentro de las clases.
 
 ## V. Evaluación
 
 | Instrumento | % | Detalle |
 |---|---|---|
-| Talleres | 35 | Cerrados y evaluados en clase, por grupo; cuentan las mejores 8 de ~10 guías. |
-| Proyecto | 35 | Hito 1: diseño con predicción (10 %, s05) · Hito 2: avance con evidencia (10 %, s10) · Presentación final + informe ≤6 págs (15 %, s15). Bitácora con roles firmados; coevaluación intra-grupo ajusta la nota individual hasta ±0,5; preguntas individuales en la defensa. La calidad de la explicación acústica pesa más que el éxito sonoro. |
+| Talleres | 35 | Cerrados y evaluados en clase, por mesa; cuentan las mejores 8 de ~10 guías. |
+| Proyecto (individual) | 35 | Hito 1: diseño con predicción (10 %, s05) · Hito 2: avance con evidencia (10 %, s10) · Defensa individual + informe ≤6 págs (15 %, s15). Bitácora individual del proyecto; preguntas al autor en la defensa. La calidad de la explicación acústica pesa más que el éxito sonoro. |
 | Pruebas (2) | 20 | Con audio y casos sonoros; s07 y s13 (10 % c/u, 48 puntos cada una). |
 | Escucha argumentada escrita (OA3) | 10 | Tres escuchas escritas con rúbrica pública: Parte A de la Prueba 1, Parte A de la Prueba 2 y la hoja de escucha de s15. **Cuentan las mejores 2 de las 3.** |
 
@@ -151,7 +154,7 @@ presencial en clase; los talleres toleran hasta ~2 ausencias
 
 | Semana | Fecha (vie) | Tema | Proyecto / evaluación |
 |---|---|---|---|
-| 1 | 07-ago | Escuchar como científico: del golpe al tono | Formación de grupos; línea base de escucha (sin nota) |
+| 1 | 07-ago | Escuchar como científico: del golpe al tono | Formación de mesas de trabajo; línea base de escucha (sin nota) |
 | 2 | 14-ago | Ondas: forma de onda, espectro y espectrograma | Parte la escucha del día (práctica semanal, sin nota) |
 | 3 | 21-ago | Modos de vibración (cuerdas, placas, membranas) | **Lanzamiento del proyecto** |
 | 4 | 28-ago | La receta del timbre: cuerda pulsada y síntesis aditiva | Traer instrumentos de cuerda pulsada |
@@ -165,7 +168,7 @@ presencial en clase; los talleres toleran hasta ~2 ausencias
 | 12 | 06-nov | Vientos y lutería (sesión-taller completa) | Construcción de tubos; cierre de mediciones del objeto |
 | 13 | 13-nov | **Prueba 2** + la voz cantada (audición liviana) | **Prueba 2 (10 %)** + escucha escrita 2 |
 | 14 | 20-nov | La sala como instrumento; salida de medición de T60 | Informe de salas (último taller); se publica pauta final |
-| 15 | 27-nov | Presentaciones finales | **Presentación + informe (15 %)**; hoja de escucha (escucha escrita 3); coevaluación; cierre |
+| 15 | 27-nov | Presentaciones finales | **Defensa individual + informe (15 %)**; hoja de escucha (escucha escrita 3); cierre del semestre |
 
 **Calendario 2026-2**: clases los **viernes, 14:50–16:00 y
 16:10–17:20** (10 min de descanso entre módulos), del 07-ago al 27-nov.

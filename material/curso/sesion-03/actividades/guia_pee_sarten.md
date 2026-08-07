@@ -59,6 +59,6 @@ luego prueben:
 ## Cierre en aula
 
 Un grupo expone su tabla de razones y su hallazgo del dedo; el profesor
-reúne las razones de los 5 grupos en el pizarrón: ¿algún objeto de la
+reúne las razones de los 3 grupos en el pizarrón: ¿algún objeto de la
 sala resultó armónico? Entrega al salir; se evalúa con rúbrica rápida
 (logrado / parcial / incipiente) — cuenta como taller de la semana.

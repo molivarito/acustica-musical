@@ -57,7 +57,7 @@ corrección concreta al dibujo.
 ## Cierre en aula
 
 UN grupo muestra su espectrograma más informativo; el profesor tabula
-los techos de frecuencia de los 5 grupos en el pizarrón (¿todas las
+los techos de frecuencia de los 3 grupos en el pizarrón (¿todas las
 apps llegan igual de arriba? ¿por qué justo ahí?). Entreguen la hoja al
 salir: rúbrica rápida (logrado / parcial / incipiente) — junto con
 "Retratos de sonido" forma el taller de la semana.

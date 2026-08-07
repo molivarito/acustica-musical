@@ -48,8 +48,7 @@ oficial de Dirección Académica, `fechas-importantes-2026-2.pdf`).
 
 Fechas derivadas: presentaciones de s15 se envían hasta las **20:00 del
 jue 26-nov** (regla de la pauta del hito 3); la nota del hito 2 se
-publica antes de s12 (**≤ 05-nov**); coevaluaciones del hito 2 se leen
-y las conversaciones por asimetría ocurren entre el 24-oct y el 05-nov.
+publica antes de s12 (**≤ 05-nov**).
 
 ## Verificación de evaluaciones contra ventanas prohibidas
 
