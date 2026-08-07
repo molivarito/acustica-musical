@@ -238,7 +238,7 @@ const S = [
   mod:'m1 audición (inaugural) · m2 experimental',
   oa:['OA3.1','OA1.1','OA2.1'],
   ev:[['Línea base de escucha (sin nota)','suave'],['Formación de 3 grupos','suave']],
-  acts:[['Acta de mesa + línea base','curso/sesion-01/actividades/acta_grupo_y_linea_base.md'],
+  acts:[['Acta de mesa','curso/sesion-01/actividades/acta_grupo_y_linea_base.md'],
         ['Rúbrica OA3 (hoja)','curso/sesion-01/actividades/rubrica_oa3_hoja.md'],
         ['PEE: la regla en la mesa','curso/sesion-01/actividades/guia_pee_regla.md'],
         ['PEE: zona gris ritmo–tono','curso/sesion-01/actividades/guia_pee_zona_gris.md']],

@@ -32,7 +32,7 @@ modulos:
       - titulo: "Del golpe al tono"
         url: "{sitio}/curso/sesion-01/apunte_s01_del_golpe_al_tono.html"
       - {tipo: subheader, titulo: "Actividades"}
-      - titulo: "Acta de mesa + pauta de línea base (s01)"
+      - titulo: "Acta de mesa (s01)"
         url: "{sitio}/curso/sesion-01/actividades/acta_grupo_y_linea_base.html"
         indent: 1
       - titulo: "Rúbrica de escucha argumentada (OA3) — hoja del estudiante"
