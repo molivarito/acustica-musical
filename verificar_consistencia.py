@@ -3,19 +3,25 @@
 
 Chequea que los HECHOS del diseño (DATOS_CURSO.yml) sigan afirmados en
 todos los documentos que los repiten, y que ningún documento conserve
-términos de diseños anteriores (2026-08: 20→9 estudiantes, proyecto
-grupal→individual, grupos estables→mesas por tramo).
+términos de diseños anteriores.
 
-Nació el 2026-08-07 tras una semana de rediseños en que los barridos
-manuales dejaron pasar inconsistencias semánticas. Regla de proceso
-(CLAUDE.md): todo rediseño parte por DATOS_CURSO.yml y termina cuando
-este verificador pasa en limpio.
+MOTOR GEMELO (regla publicar_canvas): este archivo es IDÉNTICO en AM y
+en SyS — al mejorarlo en un curso, copiarlo al otro. Todo lo específico
+de cada curso vive en su DATOS_CURSO.yml: cada chequeo se activa solo
+si su clave existe ahí (AM: estímulo consagrado, chips de slides;
+SyS: banco↔specs, fichas de ayudantes).
+
+Nació el 2026-08-07 en AM tras una semana de rediseños en que los
+barridos manuales dejaron pasar inconsistencias semánticas. Regla de
+proceso (CLAUDE.md de cada curso): todo rediseño parte por
+DATOS_CURSO.yml y termina cuando este verificador pasa en limpio.
 
 Uso:
   python3 verificar_consistencia.py            # todo
-  python3 verificar_consistencia.py --rapido   # sin chequeo de canvas/render
+  python3 verificar_consistencia.py --rapido   # sin chequeos que requieran render
 
-Corre además en el hook pre-commit (--rapido) y en el CI (completo).
+Corre además en el hook pre-commit (--rapido) y en el momento de
+publicación de cada curso (CI en AM; pre-flight de `liberar` en SyS).
 """
 
 import re
@@ -31,22 +37,23 @@ except ImportError:
 RAIZ = Path(__file__).resolve().parent
 DATOS = yaml.safe_load((RAIZ / "DATOS_CURSO.yml").read_text())
 
-# Dónde buscar términos prohibidos (fuentes vivas; _archivo/ y las
-# memorias quedan fuera: son registro histórico).
-AMBITO_PROHIBIDOS = [
-    "METODOLOGIA.md", "PLAN_SEMESTRE.md",
-    "material/programa_curso.md", "material/index.qmd",
-    "material/curso", "material/libro", "material/demos",
-    "material/profesor", "panel/agenda_reglas.yml",
-    "ediciones/2026-2",
-]
 EXT_TEXTO = {".md", ".qmd", ".yml"}
 
 fallas, avisos = [], []
 
 
-def archivos_ambito():
-    for base in AMBITO_PROHIBIDOS:
+# ------------------------------------------------------------------ util
+def frontmatter(texto):
+    """Frontmatter YAML de un .md, o {} si no tiene."""
+    m = re.match(r"\A---\n(.*?)\n---\n", texto, re.S)
+    try:
+        return yaml.safe_load(m.group(1)) if m else {}
+    except yaml.YAMLError:
+        return {}
+
+
+def archivos_ambito(bases):
+    for base in bases:
         p = RAIZ / base
         if p.is_file():
             yield p
@@ -56,12 +63,49 @@ def archivos_ambito():
                     yield f
 
 
+# -------------------------------------------------------------- chequeos
+def chequear_numeros():
+    if {"mesas", "integrantes_por_mesa", "matricula"} <= DATOS.keys():
+        if DATOS["mesas"] * DATOS["integrantes_por_mesa"] != DATOS["matricula"]:
+            fallas.append("DATOS_CURSO: mesas × integrantes ≠ matrícula")
+    if "pesos" in DATOS and sum(DATOS["pesos"].values()) != 100:
+        fallas.append("DATOS_CURSO: los pesos no suman 100")
+    if "proyecto" in DATOS and "hitos" in DATOS.get("proyecto", {}):
+        if (sum(h["pct"] for h in DATOS["proyecto"]["hitos"])
+                != DATOS["pesos"]["proyecto"]):
+            fallas.append("DATOS_CURSO: los hitos no suman el peso del proyecto")
+
+
+def chequear_estimulo():
+    if "estimulo_linea_base" not in DATOS:
+        return
+    e = RAIZ / DATOS["estimulo_linea_base"]["archivo"]
+    if not e.exists():
+        fallas.append(f"no existe el estímulo consagrado {e.relative_to(RAIZ)}")
+
+
+def chequear_afirmaciones():
+    for regla in DATOS.get("afirmaciones", []):
+        f = RAIZ / regla["archivo"]
+        if not f.exists():
+            fallas.append(f"afirmaciones: no existe {regla['archivo']}")
+            continue
+        texto = f.read_text()
+        for frase in regla["debe_contener"]:
+            if frase not in texto:
+                fallas.append(
+                    f"{regla['archivo']} ya no afirma «{frase}» "
+                    "(¿rediseño a medio propagar, o actualizar DATOS_CURSO.yml?)")
+
+
 def chequear_prohibidos():
-    cfg = DATOS["prohibidos"]
+    cfg = DATOS.get("prohibidos")
+    if not cfg:
+        return
     patrones = [p.lower() for p in cfg["patrones"]]
     marcas = [m.lower() for m in cfg["permitir_si_contiene"]]
     exentos = {str(RAIZ / e) for e in cfg.get("archivos_exentos", [])}
-    for f in archivos_ambito():
+    for f in archivos_ambito(cfg["ambito"]):
         if str(f) in exentos:
             continue
         try:
@@ -85,44 +129,16 @@ def chequear_prohibidos():
                             f"{f.relative_to(RAIZ)}:{i + 1}: {linea.strip()[:90]}")
 
 
-def chequear_afirmaciones():
-    for regla in DATOS["afirmaciones"]:
-        f = RAIZ / regla["archivo"]
-        if not f.exists():
-            fallas.append(f"afirmaciones: no existe {regla['archivo']}")
-            continue
-        texto = f.read_text()
-        for frase in regla["debe_contener"]:
-            if frase not in texto:
-                fallas.append(
-                    f"{regla['archivo']} ya no afirma «{frase}» "
-                    "(¿rediseño a medio propagar, o actualizar DATOS_CURSO.yml?)")
-
-
-def chequear_numeros():
-    if DATOS["mesas"] * DATOS["integrantes_por_mesa"] != DATOS["matricula"]:
-        fallas.append("DATOS_CURSO: mesas × integrantes ≠ matrícula")
-    if sum(DATOS["pesos"].values()) != 100:
-        fallas.append("DATOS_CURSO: los pesos no suman 100")
-    if sum(h["pct"] for h in DATOS["proyecto"]["hitos"]) != DATOS["pesos"]["proyecto"]:
-        fallas.append("DATOS_CURSO: los hitos no suman el peso del proyecto")
-
-
-def chequear_estimulo():
-    e = RAIZ / DATOS["estimulo_linea_base"]["archivo"]
-    if not e.exists():
-        fallas.append(f"no existe el estímulo consagrado {e.relative_to(RAIZ)} "
-                      "(s01 y s15 dependen de ESTE archivo)")
-
-
 def chequear_chips_slides():
     # si un mazo usa chips {.tiempo}, toda slide no-demo debe llevar uno
-    for f in sorted((RAIZ / "material/curso").glob("sesion-*/slides_*.qmd")):
+    cfg = DATOS.get("chips_slides")
+    if not cfg:
+        return
+    for f in sorted(RAIZ.glob(cfg["glob"])):
         texto = f.read_text()
         if "{.tiempo}" not in texto:
             continue
-        bloques = re.split(r"(?m)^(?=## )", texto)[1:]
-        for b in bloques:
+        for b in re.split(r"(?m)^(?=## )", texto)[1:]:
             titulo = b.split("\n", 1)[0]
             if "background-iframe" in titulo:
                 continue
@@ -131,22 +147,72 @@ def chequear_chips_slides():
                               f"tiempo: {titulo[:60]}")
 
 
+def chequear_banco_specs():
+    # specs de pruebas/CVs: cada ejercicio citado existe y está en el
+    # estado exigido; el formulario referido existe (SyS)
+    cfg = DATOS.get("banco")
+    if not cfg:
+        return
+    dir_ej = RAIZ / cfg["ejercicios"]
+    requerido = cfg["estado_requerido"]
+    for spec_f in sorted((RAIZ / cfg["specs"]).glob("*.yml")):
+        try:
+            spec = yaml.safe_load(spec_f.read_text()) or {}
+        except yaml.YAMLError as e:
+            fallas.append(f"spec ilegible {spec_f.name}: {e}")
+            continue
+        for sid in spec.get("seleccion") or []:
+            ej = dir_ej / f"{sid}.md"
+            if not ej.exists():
+                fallas.append(f"{spec_f.name}: ejercicio {sid} no existe en el banco")
+                continue
+            estado = frontmatter(ej.read_text()).get("estado")
+            if estado != requerido:
+                fallas.append(
+                    f"{spec_f.name}: {sid} está en estado «{estado}», "
+                    f"se exige «{requerido}»")
+        formulario = spec.get("formulario")
+        if formulario:
+            ff = RAIZ / cfg["formularios"] / f"{formulario}.qmd"
+            if not ff.exists():
+                fallas.append(f"{spec_f.name}: formulario «{formulario}» no "
+                              f"existe en {cfg['formularios']}/")
+
+
+def chequear_fichas_ayudantes():
+    # cada ficha exportada debe existir y no ser más vieja que su fuente
+    cfg = DATOS.get("fichas_ayudantes")
+    if not cfg:
+        return
+    destino = RAIZ / cfg["destino"]
+    for qmd in sorted(RAIZ.glob(cfg["fuentes_glob"])):
+        ficha = destino / (qmd.stem + "." + cfg.get("formato", "html"))
+        if not ficha.exists():
+            fallas.append(f"ficha de ayudantes sin exportar: {ficha.name} "
+                          f"(fuente {qmd.relative_to(RAIZ)})")
+        elif ficha.stat().st_mtime < qmd.stat().st_mtime:
+            fallas.append(f"ficha de ayudantes OBSOLETA: {ficha.name} es más "
+                          f"vieja que {qmd.relative_to(RAIZ)} — correr "
+                          "exportar_fichas.py")
+
+
 def chequear_canvas_urls():
-    render = RAIZ / "material/_render/site"
+    cfg = DATOS.get("canvas_urls")
+    if not cfg:
+        return
+    render = RAIZ / cfg["render"]
     if not render.is_dir():
         avisos.append("canvas: sin render local, chequeo de URLs omitido "
                       "(correr quarto render para habilitarlo)")
         return
-    cfg = yaml.safe_load((RAIZ / "canvas/canvas.yml").read_text())
-    for mod in cfg.get("modulos", []):
+    canvas = yaml.safe_load((RAIZ / "canvas/canvas.yml").read_text())
+    for mod in canvas.get("modulos", []):
         for item in mod.get("items", []):
             url = item.get("url", "")
             if "{sitio}" not in url:
                 continue
             ruta = url.split("{sitio}/", 1)[1]
-            # el sitio de canvas es un espejo del render con perfil canvas;
-            # basta que la página exista en el render normal
-            if ruta and not (render / ruta).exists() and ruta != "":
+            if ruta and not (render / ruta).exists():
                 fallas.append(f"canvas.yml apunta a página inexistente: "
                               f"{ruta} (ítem «{item.get('titulo')}»)")
 
@@ -158,6 +224,8 @@ def main():
     chequear_afirmaciones()
     chequear_prohibidos()
     chequear_chips_slides()
+    chequear_banco_specs()
+    chequear_fichas_ayudantes()
     if not rapido:
         chequear_canvas_urls()
 

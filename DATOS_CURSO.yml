@@ -34,6 +34,12 @@ estimulo_linea_base:
   archivo: material/estimulos/e01_linea_base.wav   # CONSAGRADO: s15 usa este mismo archivo
   pasadas: 2
 
+# Chequeos opcionales del motor gemelo (se activan por presencia de la clave)
+chips_slides:
+  glob: material/curso/sesion-*/slides_*.qmd
+canvas_urls:
+  render: material/_render/site
+
 # ---------------------------------------------------------------
 # Mapa de relaciones: cada archivo debe seguir afirmando estas
 # frases (si un rediseño las invalida, se actualizan AQUÍ y ALLÁ).
@@ -82,6 +88,17 @@ afirmaciones:
 # marca de contexto permitido, sea comentario (#) o el archivo esté
 # exento (registro histórico deliberado).
 prohibidos:
+  ambito:
+    - METODOLOGIA.md
+    - PLAN_SEMESTRE.md
+    - material/programa_curso.md
+    - material/index.qmd
+    - material/curso
+    - material/libro
+    - material/demos
+    - material/profesor
+    - panel/agenda_reglas.yml
+    - ediciones/2026-2
   patrones:
     - "5 grupos"
     - "cinco grupos"
