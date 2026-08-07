@@ -396,6 +396,8 @@ Escriban su predicción para la próxima sesión:
 
 [M2 · 60–70′]{.tiempo}
 
-- Traer **celular con app de espectrograma** instalada
+- Traer **celular con app de espectrograma** instalada:
+  - Android: **Spectroid** · iPhone: **SpectrumView**
+  - (o **phyphox**, en ambos; lista con detalles en el sitio y Canvas)
 - s02: convertimos el sonido en imagen — forma de onda, espectro,
   espectrograma
