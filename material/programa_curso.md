@@ -1,23 +1,21 @@
 # Programa del curso — Acústica Musical
 
-> Borrador generado el 2026-07-13 a partir del diseño aprobado
-> (`OBJETIVOS_APRENDIZAJE.md`, `METODOLOGIA.md`, `PLAN_SEMESTRE.md`). Sigue la estructura del programa 2019 (MUC860).
-> Los campos administrativos del semestre están marcados
-> **[COMPLETAR]**; el resto refleja decisiones ya tomadas y aprobadas.
+> Programa de la edición 2026-2, derivado del diseño aprobado del
+> curso (`OBJETIVOS_APRENDIZAJE.md`, `METODOLOGIA.md`,
+> `PLAN_SEMESTRE.md`). Sigue la estructura del programa 2019 (MUC860).
 
 ---
 
 ## Ficha
 
-- **Curso**: Acústica Musical — **Código**: MUC860 **[COMPLETAR sección]**
+- **Curso**: Acústica Musical — **Código**: MUC860 — **Sección**: 1
 - **Profesor**: Patricio de la Cuadra (Instituto de Música /
-  Departamento de Ingeniería Eléctrica) — **Ayudante**: **[COMPLETAR
-  si se confirma; el curso funciona sin ayudante]**
+  Departamento de Ingeniería Eléctrica) — **Ayudante**: no hay (el
+  curso está diseñado para funcionar sin ayudante)
 - **Carácter**: OPR — **Créditos**: 10 — **Requisitos**: Ninguno
 - **Duración**: un semestre, 15 sesiones — **Módulos**: 2 semanales de
   70 min — **Cupo**: 20 estudiantes
-- **Horario y sala**: **[COMPLETAR]** (se requiere sala reconfigurable
-  con proyector y audio)
+- **Horario y sala**: viernes, 14:50–16:00 y 16:10–17:20 · Sala LATEM
 
 ## I. Descripción
 
@@ -147,8 +145,9 @@ para pensar.
 Sin nota de participación (su función la cumplen la escucha del día y
 los talleres presenciales). Asistencia: la evaluación es mayoritariamente
 presencial en clase; los talleres toleran hasta ~2 ausencias
-(mejores 8 de ~10). Exigencia de asistencia mínima formal:
-**[COMPLETAR según normativa vigente; en 2019 era 85 %]**.
+(mejores 8 de ~10). No se fija un mínimo de asistencia formal
+adicional: la presencialidad ya está incorporada en el diseño de la
+evaluación.
 
 ## VI. Cronograma (15 sesiones)
 
