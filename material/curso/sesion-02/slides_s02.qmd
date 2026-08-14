@@ -160,6 +160,22 @@ esto: aquí solo se formaliza.
 
 Ninguna es "la verdadera": cada una responde lo que la otra esconde.
 
+## Un mismo sonido, tres retratos
+
+![](../../assets/figuras/s02_tres_retratos.svg){fig-alt="Una misma señal en sus tres representaciones: forma de onda, espectro y espectrograma" width="92%"}
+
+::: {.notes}
+**Apoyo:** Es la Figura 1 del apunte (la lectura ya la trae): una misma
+señal — un tono con cuatro parciales, como vocal cantada — en sus tres
+vistas. Úsela para cerrar la mini-lección señalando: en la forma de
+onda, el golpe inicial es la sacudida breve (la "mancha" del voto); en
+el espectro, la peineta de parciales; en el espectrograma, líneas
+horizontales y el golpe como columna vertical. La versión EN VIVO
+viene en la demo siguiente: golpe seco en la mesa frente al micrófono
+(forma de onda de un golpe real) y un silbido (peak angosto en el
+espectro) — modelar esos dos antes de repartir las guías.
+:::
+
 ## Antes de partir: el micrófono {.center}
 
 La demo que viene **usa el micrófono de la sala**.
