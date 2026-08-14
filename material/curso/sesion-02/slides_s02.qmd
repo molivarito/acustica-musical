@@ -319,6 +319,20 @@ su propia app antes de creer nada del espectrograma (plan,
 Verificación de aprendizaje).
 :::
 
+## La nota de la mañana, dibujada
+
+![](../../estimulos/e02_flauta_ataque_soploso_lamina.png){fig-alt="Forma de onda y espectrograma de la nota de flauta de la escucha del día" width="88%"}
+
+::: {.notes}
+**Apoyo:** Es la MISMA nota de flauta de la escucha del día (e02):
+arriba la forma de onda, abajo el espectrograma con los ejes
+rotulados — la verificación del voto recién hecho. El puente antes de
+soltar las apps: las **líneas horizontales parejas** son el tono que
+describieron en la mañana; la **neblina entre las líneas** es el
+soplo que llamaron "aire". Lo que diagnosticaron de oído, ahora lo
+VEN. Cierre: "ahora búsquenlo en su bolsillo".
+:::
+
 ## Taller — el microscopio en su bolsillo
 
 Con su celular y la app de espectrograma, en grupo:
