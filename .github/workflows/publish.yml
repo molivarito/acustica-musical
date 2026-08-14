@@ -46,6 +46,11 @@ jobs:
           # local del profesor), pero NO se publican en el sitio
           find material/_render/site -name 'slides_s*.html' -delete
           echo "slides restantes en material/_render/site: $(find material/_render/site -name 'slides_s*.html' | wc -l)"
+          # los estímulos (audios y láminas) entran al render como
+          # recursos de las slides (mazo autocontenido LOCAL del
+          # profesor), pero como las slides no se publican, en el sitio
+          # serían huérfanos solo-profesor: fuera del deploy
+          rm -rf material/_render/site/estimulos material/_render/site/canvas/estimulos
           # el índice del buscador se construye ANTES de este borrado y
           # arrastra el texto de las slides (y apuntaría a 404): podar
           # sus entradas de todo search.json del deploy

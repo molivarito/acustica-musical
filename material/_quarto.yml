@@ -30,8 +30,10 @@ project:
     - "assets/figuras/*.svg"
     - "assets/figuras/libros/*.png"
     - "libro/LIBRO_CURSO.pdf"
-    # Estímulos embebidos en slides (NUNCA un glob aquí: e01 es la
-    # línea base reservada para s15 y no debe llegar al sitio)
+    # Estímulos embebidos en slides — SOLO para el render local del
+    # profesor (mazo autocontenido): el CI los borra del deploy junto
+    # con las slides (publish.yml) y auditar_sitio.py vigila que no se
+    # filtren. NUNCA un glob aquí: e01 es la línea base reservada de s15.
     - "estimulos/e02_flauta_ataque_soploso.wav"
     - "estimulos/e03_trueno_retardo.wav"
 
