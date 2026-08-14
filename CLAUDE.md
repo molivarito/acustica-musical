@@ -88,8 +88,10 @@ conserva para ediciones futuras.
   SOLO material para estudiantes (apuntes, guías/hojas, demos, libro,
   programa, apps). Material solo-profesor — planes de sesión
   (`plan.md`), pautas (`*pauta*`), pruebas (`ediciones/*/pruebas/`),
-  `guion_profesor*`, `material/profesor/banco_estimulos.md`,
-  `material/profesor/planilla_rubrica_oa3.md` y los documentos raíz de
+  `guion_profesor*`, `material/profesor/` completo (banco de estímulos,
+  planilla OA3, `como_operar_el_curso.md` — la guía de operación del
+  profesor, 2026-08-13; la carpeta no está en los globs de `render:`,
+  así que lo nuevo ahí queda excluido por construcción) y los documentos raíz de
   diseño/bitácora (`OBJETIVOS_APRENDIZAJE.md`, `METODOLOGIA.md`,
   `PLAN_SEMESTRE.md`, `_archivo/`) — está excluido del `render:` de
   `material/_quarto.yml` y NO se enlaza con links Markdown desde páginas
@@ -171,12 +173,23 @@ posponen conscientemente, para no re-litigarlas ni olvidarlas.
   reduciría la doble fuente de verdad plan/apunte, pero implica
   refactorizar las 15 sesiones y el panel que parsea `plan.md`.
   Pospuesta para el receso o la edición 2027.
-- (2026-08-06) **Cabeceras con tiempos inconsistentes** (anteriores al
-  redimensionamiento a 9 estudiantes): `hoja_registro_isofonica.md`
-  (s06) y `guia_pee_afinar_por_batidos.md` (s09) declaran duraciones
-  que no calzan con el bloque del plan. Corregir al preparar esas
-  sesiones.
-- (2026-08-06) **s15, preguntas del grupo 1**: conserva 5′ (vs. 7′ del
-  resto) como compensación por presentar primero. Con 3 grupos y
-  módulo 2 holgado podría igualarse — decisión del profesor antes de
-  anunciar las reglas en s14.
+- (2026-08-06, ampliado 2026-08-13) **Cabeceras con tiempos
+  inconsistentes** (anteriores al redimensionamiento a 9 estudiantes):
+  la auditoría nocturna del 2026-08-13 encontró **8 guías** con el
+  patrón (s03, s04, s06, s08, s09, s10, s11 y s12 — la de s12 es la
+  prioritaria: subestima una fase con herramienta de corte). Tabla
+  completa y corrección propuesta en
+  `ediciones/2026-2/REVISION_MATERIAL_2026-08-13.md`; esperando el OK
+  del profesor para alinearlas con la aritmética declarada de cada plan.
+- (2026-08-14) **s15, re-escucha de la línea base**: en s01 los
+  estudiantes oyeron el golpe EN VIVO; `e01_linea_base.wav` es la
+  captura de ese golpe, no lo que sonó por parlantes. Decidir antes de
+  preparar s15: reproducir la captura (recomendado: repetible y no
+  depende de conservar el objeto) o repetir el golpe en vivo con el
+  mismo objeto. Si es la captura, revisar niveles en la sala con
+  anticipación.
+- (2026-08-06, CERRADO 2026-08-13) **s15, preguntas del grupo 1**:
+  describía el diseño por grupos anterior; el plan vigente de s15 tiene
+  9 defensas individuales de 11′ (8′ + 3′) iguales para todos, así que
+  la asimetría que había que decidir ya no existe. Verificado en la
+  auditoría del 2026-08-13.
