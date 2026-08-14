@@ -207,10 +207,15 @@ módulo 2 — se pierde el vivo del módulo 1, no el concepto.
 
 ::: {.notes}
 **Apoyo:** Operar `demo_forma_onda_espectro.html` con micrófono en
-vivo, proyectada. Aprovechar para provocar, de cara al taller que
-viene: "¿en cuál de las dos vistas se distingue mejor el silbido de la
-vocal?" Si el micrófono falla en el momento, conmutar a la fuente
-interna (oscilador) de la demo.
+vivo, proyectada. Modelar la lectura de las dos vistas con DOS sonidos
+que no arruinan el taller: un **golpe en la mesa** (su "línea o
+mancha" ya quedó revelada por el voto) y una **nota de la flauta**
+(no está entre los 4 del taller, conecta con la escucha de la mañana:
+peineta de parciales + neblina de soplo). NO modelar aaa, sss ni
+silbido — esos retratos quedan vírgenes para las mesas; el aaa/ooo de
+la slide anterior se afirma y se deja como intriga: la mesa que
+produzca la "aaa" lo comprueba en el taller. Si el micrófono falla,
+conmutar a la fuente interna (oscilador) de la demo.
 :::
 
 ## Taller PEE — retratos de sonido {.center}
