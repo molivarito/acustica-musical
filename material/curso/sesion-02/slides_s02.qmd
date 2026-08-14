@@ -35,8 +35,10 @@ Dos módulos, un hilo: **traducir** el sonido a imágenes que se puedan leer.
 
 > La rúbrica OA3 es guía para autoevaluarse, no calificación: se usa así todas las semanas; se evalúa por escrito en s07, s13 y s15.
 
+<audio controls preload="auto" src="../../estimulos/e02_flauta_ataque_soploso.wav" style="width: 70%; margin-top: 0.5em;"></audio>
+
 ::: {.notes}
-Estímulo: `e02_flauta_ataque_soploso.wav` (nota C4, ~5,5 s), dos pasadas.
+Estímulo: `e02_flauta_ataque_soploso.wav` (nota C4, ~5,5 s), dos pasadas — el reproductor está aquí mismo en la slide.
 
 **Si alguien dice "es una flauta, ¿qué más hay que decir?"**: nombrar la
 fuente es el comienzo de la *descripción*, no la meta. Redirigir a la
@@ -248,6 +250,8 @@ frecuencia muestra, y viceversa. Cerrar las guías con rúbrica rápida
 ## El trueno retrasado {.center}
 
 Escuchan: relámpago, y el trueno llega **después**.
+
+<audio controls preload="auto" src="../../estimulos/e03_trueno_retardo.wav" style="width: 70%; margin-top: 0.5em;"></audio>
 
 . . .
 

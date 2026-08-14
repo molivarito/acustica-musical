@@ -30,6 +30,10 @@ project:
     - "assets/figuras/*.svg"
     - "assets/figuras/libros/*.png"
     - "libro/LIBRO_CURSO.pdf"
+    # Estímulos embebidos en slides (NUNCA un glob aquí: e01 es la
+    # línea base reservada para s15 y no debe llegar al sitio)
+    - "estimulos/e02_flauta_ataque_soploso.wav"
+    - "estimulos/e03_trueno_retardo.wav"
 
 lang: es
 
