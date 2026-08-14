@@ -5,6 +5,11 @@ publicación (sitio Quarto + Canvas) y el ensamble de cada semestre. Este
 README es el mapa completo; la operación de Quarto/YAML vive en
 [`GUIA_QUARTO_YML.md`](GUIA_QUARTO_YML.md).
 
+> **Para operar el semestre, empezar aquí**:
+> `material/profesor/como_operar_el_curso.md` — el ciclo semanal, cómo
+> leer un plan y el diccionario del curso. Se abre también con el botón
+> **📖 operar** del panel (`python3 panel/panel.py`).
+
 ## Las dos reglas del repo
 
 > **1. El guion bajo significa "no lo edites".**

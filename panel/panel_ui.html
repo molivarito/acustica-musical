@@ -174,6 +174,8 @@ details.ag-extra>summary{cursor:pointer;color:var(--muted);font-size:12.5px}
       <button id="btn-avisos" title="Avisos de parseo"></button>
       <button id="btn-pub" title="Estado de publicación">…</button>
       <button id="btn-agenda" title="Agenda administrativa del semestre">…</button>
+      <button id="btn-operar"
+        title="Cómo operar el curso — guía del profesor">📖 operar</button>
       <button id="btn-abrir"
         title="Abrir plan.md en el editor para corregirlo — no para leerlo: el plan ya se ve completo en este panel">✎ editar</button>
     </div>
@@ -270,7 +272,7 @@ details.ag-extra>summary{cursor:pointer;color:var(--muted);font-size:12.5px}
      align-items:center;justify-content:center;z-index:20">
   <div style="background:var(--panel);border:1px solid var(--border);border-radius:11px;
        width:min(660px,92vw);max-height:86vh;overflow:auto;padding:1.1rem 1.3rem">
-    <h2 style="margin:.1rem 0 .7rem;font-size:17px">Publicación</h2>
+    <h2 id="modal-titulo" style="margin:.1rem 0 .7rem;font-size:17px">Publicación</h2>
     <div id="pub-cuerpo"></div>
     <div style="margin-top:1rem;display:flex;gap:.5rem;justify-content:flex-end">
       <button id="pub-cerrar">Cerrar</button>
@@ -897,8 +899,28 @@ $('#modal').onclick = e => { if (e.target.id === 'modal') cerrarModal(); };
 $('#btn-pub').onclick = async () => {
   await cargarPub();
   if (!PUB) return logear('no se pudo leer el estado de publicación');
+  $('#modal-titulo').textContent = 'Publicación';
   pintarPub();
   $('#modal').style.display = 'flex';
+};
+
+// ------------------------------------------------- cómo operar el curso
+// Reutiliza el modal de Publicación (mismo overlay, mismo cierre con Esc):
+// solo cambia el título y el cuerpo. El texto se convierte con /api/md, el
+// mismo mecanismo con que se leen las guías de actividades (pandoc, línea 608).
+const RUTA_OPERAR = 'material/profesor/como_operar_el_curso.md';
+$('#btn-operar').onclick = async () => {
+  $('#modal-titulo').textContent = 'Cómo operar el curso';
+  $('#pub-cuerpo').innerHTML = '<span style="color:var(--muted)">cargando…</span>';
+  $('#modal').style.display = 'flex';
+  try {
+    const r = await llamar('GET','/api/md?ruta=' + encodeURIComponent(RUTA_OPERAR));
+    $('#pub-cuerpo').innerHTML = r.html;
+    mates($('#pub-cuerpo'));
+  } catch(e){
+    $('#pub-cuerpo').innerHTML = '<div style="color:var(--err)">No se pudo cargar la guía '
+      + '(<code>' + esc(RUTA_OPERAR) + '</code>): ' + esc(e.message) + '</div>';
+  }
 };
 
 // ------------------------------------------------------------------ agenda

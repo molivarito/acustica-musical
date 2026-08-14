@@ -46,6 +46,14 @@ python3 panel/agenda.py --todo              # el semestre completo, incl. hechas
 python3 panel/agenda.py --marcar plan-01    # marca una tarea (ids en el listado)
 ```
 
+## Guía «cómo operar el curso»
+
+El botón **📖 operar** de la barra abre, en el mismo modal que usa Publicación, la
+guía `material/profesor/como_operar_el_curso.md` convertida con pandoc (el mismo
+mecanismo de `/api/md` que usan las guías de actividades). Es solo-profesor: no está
+en el sitio ni en Canvas. Si el archivo falta o pandoc falla, el modal lo dice —no
+se cae en silencio.
+
 ## Abrirlo sin terminal
 
 ```
@@ -63,9 +71,13 @@ Para detenerlo:
 python3 panel/panel.py --detener
 ```
 
-`--detener` compara contra la **ruta absoluta** de este `panel.py`, no contra el patrón
-`panel/panel.py`: el curso de Señales y Sistemas tiene un panel gemelo en la misma ruta
-relativa, y buscar por patrón detendría el del otro curso.
+`--detener` identifica el panel de dos maneras y detiene lo que calce con cualquiera:
+por la **ruta absoluta** de este `panel.py` (no por el patrón `panel/panel.py`: el curso
+de Señales y Sistemas tiene un panel gemelo en la misma ruta relativa) y, desde
+2026-08-13, también por **puerto**: cualquier proceso `panel.py` escuchando en
+8767–8776 (un arranque manual `python3 panel/panel.py` sale con ruta relativa en `ps`
+y el filtro por ruta absoluta no lo veía; el rango de puertos sí es inequívoco — SyS
+usa el 8766, fuera del rango).
 
 El marcador del navegador es `http://127.0.0.1:8767/`, pero por sí solo no arranca nada.
 Variantes del instalador: `--publicar` (la app arranca con `--permitir-publicar`) y

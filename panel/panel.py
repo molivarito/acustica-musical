@@ -543,13 +543,24 @@ def _detener():
     # -ww: que ps no trunque la línea de comando (la ruta es larga).
     r = subprocess.run(["/bin/ps", "-Awwo", "pid=,command="],
                        capture_output=True, text=True)
+    # Un panel arrancado a mano ("python3 panel/panel.py" desde la raíz)
+    # sale en ps con la ruta RELATIVA y el filtro por ruta absoluta no lo
+    # ve. El puerto sí es inequívoco (SyS usa el 8766, fuera del rango
+    # 8767–8776 de este panel): se acepta además cualquier proceso que
+    # escuche en nuestro rango y cuyo comando mencione panel.py.
+    l = subprocess.run(["/usr/sbin/lsof", "-nP", "-t",
+                        "-iTCP:8767-8776", "-sTCP:LISTEN"],
+                       capture_output=True, text=True)
+    escuchando = {int(p) for p in l.stdout.split() if p.isdigit()}
     pids = []
     for linea in r.stdout.splitlines():
         partes = linea.strip().split(None, 1)
         if len(partes) != 2 or not partes[0].isdigit():
             continue
         pid, cmd = int(partes[0]), partes[1]
-        if yo in cmd and pid != os.getpid():
+        if pid == os.getpid():
+            continue
+        if yo in cmd or (pid in escuchando and "panel.py" in cmd):
             pids.append(pid)
     if not pids:
         print("no hay ningún panel corriendo.")
