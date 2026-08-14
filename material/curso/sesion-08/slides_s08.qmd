@@ -34,6 +34,10 @@ format:
 
 Corte duro al minuto 10.
 
+::: {.notes}
+**Apoyo:** Errores más repetidos por parte, según la corrección real (ajustar a lo que muestre este año): mezclar describir con interpretar; leer ejes sin unidades; proporciones invertidas; vocabulario físico y perceptual cruzado. Regla anunciada: apelaciones por escrito o en horario de consulta, nunca en aula (precedente que funcionó en s06). Si la devolución se alarga, el corte es igual a los 10′ aunque queden manos alzadas.
+:::
+
 ## Escucha del día {.center}
 
 **Protocolo** (10′, sin nota):
@@ -47,6 +51,10 @@ Corte duro al minuto 10.
 
 > La rúbrica OA3 es guía para autoevaluarse, no calificación; la evidencia se recoge por escrito en s07, s13 y s15.
 
+::: {.notes}
+**Apoyo:** Se cobra el ticket de salida de s07 ("cuando la diferencia crece más allá de lo que batea, ¿qué se oye y dónde termina eso?"): lea 2 o 3 tickets recopilados y contrástelos con lo que el curso acaba de describir. Premie que las mesas distingan las etapas del recorrido (ondulación, aspereza, dos notas) y que propongan dónde medir el cambio. Todavía no dé nombres técnicos: la banda crítica se nombra recién en la mini-lección siguiente.
+:::
+
 ## Escuchen con atención {.center}
 
 Va a sonar algo que **cambia** en el tiempo.
@@ -54,6 +62,10 @@ Va a sonar algo que **cambia** en el tiempo.
 Diagnostiquen las etapas — no busquen nombres técnicos todavía.
 
 ## Demo: escucha del día {background-iframe="../../demos/demo_banda_critica.html" background-interactive=true}
+
+::: {.notes}
+**Apoyo:** Estímulo: dos tonos que parten al unísono y se separan muy lentamente hasta unos 40 Hz de diferencia, con los números ocultos; reproducir dos pasadas. Pregunte selectivamente a una o dos mesas en el plenario y cierre usted con su propia versión experta antes de pasar a la mini-lección.
+:::
 
 ## El mapa del choque
 
@@ -64,6 +76,10 @@ Al separar dos tonos desde el unísono, ¿qué le pasa al oído?
 2. **Aspereza fusionada** — la ondulación es demasiado rápida: una nota áspera
 3. **Dos notas, todavía ásperas** — el sonido se parte, pero roza
 4. **Dos notas lisas** — la aspereza desaparece
+:::
+
+::: {.notes}
+**Apoyo:** Estas etapas conectan con la membrana basilar vista en s05: mientras las dos zonas de excitación se superponen hay interferencia (batido o aspereza); al separarse lo suficiente, aparecen dos alturas. Dato para si preguntan: mientras se oye "una nota áspera", el espectrograma ya muestra dos líneas limpias — la rugosidad no está en el aire, está en el oído (apunte, sección "¿Por qué el oído fusiona lo que el aire mantiene separado?").
 :::
 
 ## ¿El batido termina porque el sonido cambia? {.center}
@@ -77,6 +93,10 @@ O porque el **oído deja de seguirlo**.
 En el aire: dos ondas superpuestas, siempre limpias.
 En el oído: dos zonas de la membrana basilar que dejan de pisarse.
 
+::: {.notes}
+**Apoyo:** Votación del plan: "¿el batido termina porque el sonido cambia o porque el oído no lo sigue?" — respuesta esperada: porque el oído deja de seguirlo. Si nadie contesta, apóyese en el dibujo de la membrana basilar de s05 (dos zonas que dejan de pisarse).
+:::
+
 ## La banda crítica
 
 > Ancho de separación a partir del cual dos tonos dejan de interferirse en la membrana basilar.
@@ -87,6 +107,10 @@ En el oído: dos zonas de la membrana basilar que dejan de pisarse.
 . . .
 
 Sus fronteras F1, F2, F3 son personales — ¿coinciden con las de su compañero?
+
+::: {.notes}
+**Apoyo:** Votación del plan: "a 440 Hz, ¿la zona áspera durará 1 Hz, 10 Hz o 100 Hz de ancho?" — respuesta: del orden de 100 Hz (una tercera menor). Sobre si la frontera es igual para el compañero: no, las fronteras son personales; se registran en el taller siguiente. Cifra de respaldo (apunte y capítulo, citan Roederer 1997 sec. 2.4): banda crítica en el rango medio, orden de magnitud ~1/3 de octava, ~100 Hz alrededor de 440 Hz. Fusible si el módulo se atrasa: comprimir fusionando esta votación con la de la frontera personal en una sola.
+:::
 
 ## Taller psicoacústico {.center}
 
@@ -101,11 +125,19 @@ Turnos individuales, con audífonos — **roles que rotan**.
 
 Registro individual — **sin nota**, evidencia de OA2.2.
 
+::: {.notes}
+**Apoyo:** Vigile que la predicción quede escrita antes de escuchar y que el registro sea individual: las fronteras no se negocian entre compañeros. Provoque, mesa por mesa: "¿su F3 coincide con la de sus compañeros?", "¿se cumplió F1 < F2 < F3?", "¿qué pasa con las fronteras en semitonos si baja f₁ a 220 Hz?" (grupos rápidos: repetir F3 con f₁ = 220). Plan B si faltan audífonos: medir con el parlante del notebook a volumen bajo; si faltan muchos, pasar a formato semi-plenario con barrido de audio de sala y marcación a mano alzada. Plan B si la demo no corre en los notebooks de grupo: que corra solo proyectada y las parejas pasen por turnos breves al notebook del profesor, o usar demo_batidos.html (ya validada en s07) para F1, con F2 y F3 por barrido plenario. Recuerde que la tira F3 del grupo debe quedar lista antes de la síntesis.
+:::
+
 ## Todo esto fue con tonos puros {.center}
 
 Después del descanso: música de verdad.
 
 **¿Por qué la quinta suena lisa?**
+
+::: {.notes}
+**Apoyo:** Antes de este cierre, el vocero de cada grupo pega solo la tira con los 3 F3 del grupo en la recta de semitonos del pizarrón (3 tiras, no 9 pegadas); lea las fronteras y contraste con el orden de magnitud anunciado (~1/3 de octava). Moraleja para dejar dicha: las fronteras son personales pero se agrupan; el batido o la aspereza no está "en el aire" (el micrófono ve dos líneas limpias) — está en el oído. Recoja las hojas de registro individual, sin nota, antes del descanso.
+:::
 
 ## Ranking a ciegas {.center}
 
@@ -113,7 +145,15 @@ Después del descanso: música de verdad.
 
 Voten su ranking del más liso al más áspero.
 
+::: {.notes}
+**Apoyo:** Los 4 intervalos son unísono, 8ª, 5ª y tritono, con tonos complejos, en orden revuelto y sin nombrarlos. El ranking del curso suele converger rápido — es la base de la pregunta siguiente sobre si es física, oído o costumbre.
+:::
+
 ## Demo: ranking de lisura {background-iframe="../../demos/demo_banda_critica.html" background-interactive=true}
+
+::: {.notes}
+**Apoyo:** Opere la demo en modo tonos complejos con los botones de intervalo, en el orden revuelto ya definido; pida votar a mano alzada antes de revelar los nombres de los intervalos.
+:::
 
 ## ¿Es física, es oído, o es costumbre? {.center}
 
@@ -123,13 +163,25 @@ El ranking convergió rápido — sus oídos ya lo sabían.
 
 El módulo lo responde por partes.
 
+::: {.notes}
+**Apoyo:** Pregunta deliberadamente incómoda y abierta: no la cierre acá; anuncie que el módulo la responde por partes en lo que sigue.
+:::
+
 ## Por qué la 5ª es lisa {.center}
 
 Cada nota aporta su familia de **parciales**.
 
 Vean qué pares **coinciden**, cuáles se **esquivan** y cuáles **rozan**.
 
+::: {.notes}
+**Apoyo:** Argumento (apunte, sección "¿Qué tiene que ver esto con que la quinta 'suene bien'?"): con tonos complejos chocan dos familias completas de parciales; si un par cae dentro de una misma banda crítica, roza; si coincide exacto o queda separado, no aporta aspereza. Ejemplo del apunte: en la quinta justa con 220 y 330 Hz, los parciales coinciden cada tres de la grave y dos de la aguda (660, 1320 Hz…) y el resto queda razonablemente esquivado.
+:::
+
 ## Demo: vista de parciales {background-iframe="../../demos/demo_banda_critica.html" background-interactive=true}
+
+::: {.notes}
+**Apoyo:** Use la vista de parciales con los pares en colisión marcados. Votación intermedia del plan: "5ª justa una octava más grave, ¿más lisa o más áspera?" — la respuesta se da más adelante, en la slide de la quinta grave.
+:::
 
 ## Coincidencia y esquive
 
@@ -143,6 +195,10 @@ Vean qué pares **coinciden**, cuáles se **esquivan** y cuáles **rozan**.
 
 Con **tonos puros**, el mismo tritono casi no roza: [la aspereza vive en los armónicos]{style="color:#0f766e"}.
 
+::: {.notes}
+**Apoyo:** Verificación audible del plan: repita la 5ª y el tritono con tonos puros — el tritono puro casi no roza, porque la aspereza vive en los parciales (armónicos), no en el intervalo "en sí". Cifra de respaldo (apunte, cita Roederer 1997 sec. 5.2 y Campbell & Greated 1987 cap. 4): la consonancia sensorial de un intervalo entre tonos complejos armónicos es la ausencia de rugosidad entre sus parciales; por eso las razones simples (2:1, 3:2, 4:3) producen los intervalos más lisos.
+:::
+
 ## La misma 5ª, una octava más grave {.center}
 
 ¿más lisa o más áspera?
@@ -150,6 +206,10 @@ Con **tonos puros**, el mismo tritono casi no roza: [la aspereza vive en los arm
 . . .
 
 **Más áspera** — las bandas críticas de esa zona son proporcionalmente más anchas: más pares caen dentro. Por eso los acordes cerrados graves suenan turbios.
+
+::: {.notes}
+**Apoyo:** Mecanismo de respaldo (apunte, recuadro opcional): el ancho de la banda crítica no es constante en Hz, crece con la frecuencia central; medido en intervalo musical es más parejo en el rango medio-agudo y proporcionalmente enorme en el registro grave — por eso el mismo intervalo suena más turbio abajo.
+:::
 
 ## Una curiosidad: los tonos que no están
 
@@ -161,6 +221,10 @@ Se oye un tercer tono grave — que **el micrófono no ve**.
 
 Lo fabrica la mecánica no lineal del propio oído.
 
+::: {.notes}
+**Apoyo:** Fuente: Benade (1990), sec. 14.1 — los llama componentes heterodinos; los fabrica la mecánica no lineal del propio oído, no están en el aire. Plan B si no se oyen en la sala: reasignar como exploración casera con audífonos (la demo queda publicada); es curiosidad, no contenido evaluable.
+:::
+
 ## Consonancia: dos capas distintas
 
 > **Sensorial**: cuánto roza un par de notas sostenidas, aislado de contexto.
@@ -170,6 +234,10 @@ Lo fabrica la mecánica no lineal del propio oído.
 . . .
 
 La 4ª justa es físicamente lisa y el contrapunto la trata como disonancia.
+
+::: {.notes}
+**Apoyo:** Cita de respaldo (apunte y capítulo, Roederer 1997 sec. 5.2): la consonancia musical depende del contexto, el estilo, la época y el entrenamiento; la física pone el piso, no dicta la gramática. El ejemplo de la 4ª justa (físicamente lisa, tratada como disonancia por el contrapunto en ciertos contextos) es el mismo que cierra el matiz sensorial frente a musical.
+:::
 
 ## Taller PEE: radiografía espectral {.center}
 
@@ -183,12 +251,20 @@ La 4ª justa es físicamente lisa y el contrapunto la trata como disonancia.
 - Condiciones anotadas: app, celular, distancia, gesto — debe ser **repetible en s10**
 :::
 
+::: {.notes}
+**Apoyo:** Es el único taller evaluado de la semana (rúbrica rápida logrado, parcial o incipiente). Provoque, mesa por mesa: "¿ese parcial es del objeto o de la sala?", "¿la razón 2,03 es armónica o no?", "¿qué le prometieron al hito 1 y qué les está diciendo la medición?". Exija las condiciones anotadas: la radiografía debe poder repetirse igual en s10, porque es la línea base del hito 2. Plan B si un estudiante llega sin objeto o el objeto aún no suena: radiografiar la grabación más reciente de su bitácora, o el objeto de respaldo del profesor (vaso y flauta, ya calibrados en s07); anota el compromiso de repetir sobre el objeto real en s09.
+:::
+
 ## Síntesis del día
 
 ::: {.incremental}
 - La aspereza vive en el oído; muere pasada la banda crítica
 - La consonancia sensorial es coincidencia o esquive de parciales
 - Su objeto ya tiene su primera radiografía espectral
+:::
+
+::: {.notes}
+**Apoyo:** Recoja tickets y guías del taller (rúbrica rápida al vuelo) y anuncie s09: afinar de oído con batidos, traer audífonos otra vez; la serie de mediciones del objeto continúa hasta el hito 2 en s10.
 :::
 
 ## Su ticket de salida {.center}
@@ -198,6 +274,10 @@ Si la quinta perfectamente lisa es la razón 3:2 exacta,
 **¿puede un piano tener TODAS sus quintas lisas a la vez?**
 
 ¿qué habría que sacrificar?
+
+::: {.notes}
+**Apoyo:** Este ticket alimenta el gancho de s09 (temperamentos): el apunte adelanta que "la aritmética va a decir que no" se pueden tener todas las quintas 3:2 y todas las octavas 2:1 exactas a la vez, y que la historia de la afinación es el catálogo de soluciones a ese "no" (apunte, sección "Hacia la sesión 09").
+:::
 
 ## Para la próxima {.center}
 

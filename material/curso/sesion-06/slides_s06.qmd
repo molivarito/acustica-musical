@@ -19,6 +19,10 @@ format:
 | **Módulo 1** | Escucha del día · El decibel · Mi curva isofónica |
 | **Módulo 2** | Gancho: ¿cuatro palmas? · **Estaciones de medición** (E1–E5) · Mini-informe SPL |
 
+::: {.notes}
+**Apoyo:** Antes de esta slide van la re-formación de mesas del tramo 2 (5′: nuevos roles ejecuta/mide y registra/vocero; recordar que el objeto y la bitácora del proyecto siguen siendo individuales, solo cambia el equipo de apoyo) y la devolución del hito 1 corregido (comentar en 1′ los 2 aciertos y las 2 debilidades más repetidas, sin nombrar a nadie; cada estudiante anota en su bitácora 1 línea de compromiso que se cobra en el hito 2 de s10). Si alguien quiere discutir su nota del hito 1: hoy solo se lee y se anota el compromiso, las apelaciones van por correo o consulta, no en aula (plan, riesgos y plan B).
+:::
+
 ## Escucha del día {.center}
 
 **Mismo fragmento, dos niveles.** Protocolo (10′, sin nota):
@@ -32,6 +36,10 @@ format:
 
 ¿Qué cambió *además* del volumen?
 
+::: {.notes}
+**Apoyo:** Respuesta que se busca (no se da todavía): a nivel bajo desaparecen el bajo y el brillo, aunque siguen estando en la señal — se resuelve recién al final del módulo 1 con las curvas isofónicas. Preguntar selectivamente a una o dos mesas, exigiendo separar lo obvio ("suena más despacio") del dato ("desaparecieron el bajo y el brillo"). Estímulo: fragmento de mezcla completa con bajo prominente (banco de estímulos #9). Si la sala no deja oír la pérdida del bajo: plan B, fragmento suave en el parlante del celular del profesor y fuerte en el equipo de sala.
+:::
+
 ## Una pregunta que quedó pendiente {.center}
 
 Del ticket de la sesión 5:
@@ -42,6 +50,10 @@ Del ticket de la sesión 5:
 . . .
 
 Hoy lo resolvemos — con números.
+
+::: {.notes}
+**Apoyo:** Este es el cobro del ticket de salida de s05, que traía dos preguntas. La primera (misma frecuencia, ¿distinto volumen?) es la fácil: sí, para eso existe el matiz del pianissimo al fortissimo — puede votarse a mano alzada y pasar rápido. La segunda es la que queda abierta en esta slide (grave y agudo con la misma energía física, ¿igual de fuerte?) y se resuelve recién con la mini-lección del decibel y la experiencia isofónica de esta sesión.
+:::
 
 ## Un rango descomunal
 
@@ -55,6 +67,10 @@ duele hay un factor de intensidad de:
 **Un millón de millones.** Ningún instrumento, y ningún oído, trabaja
 cómodo con eso en escala lineal.
 
+::: {.notes}
+**Apoyo:** Cifra clave (apunte, sección "Un rango de un millón de millones"): entre el umbral de audición y el umbral del dolor hay un factor de ~10¹² en intensidad. El umbral de audición corresponde a una presión de 20 µPa, que Benade (1990, sec. 13.1) describe como 1/3.530.000.000 de la presión atmosférica — cifra útil si se quiere impresionar a la sala.
+:::
+
 ## ¿Cómo se comprime un rango así?
 
 > El **decibel** no es una cantidad de sonido: es la forma de expresar
@@ -67,6 +83,10 @@ En vez de *sumar* energía, el oído (y el dB) **comparan multiplicando**.
 . . .
 
 **Multiplicar por 10.**
+
+::: {.notes}
+**Apoyo:** Es esperable que alguien responda "sumar un poco" por asociarlo a un porcentaje; la frase que ordena la idea (apunte, sección "El decibel: una escala para un oído que compara multiplicando"): el decibel no es una cantidad de sonido, es la razón entre dos sonidos — el oído, igual que el dB, compara multiplicando en vez de sumar.
+:::
 
 ## La gramática mínima del dB
 
@@ -84,6 +104,10 @@ En vez de *sumar* energía, el oído (y el dB) **comparan multiplicando**.
 
 **+3 dB.** (Volveremos sobre esto en las estaciones.)
 
+::: {.notes}
+**Apoyo:** Falta la tercera votación del plan, no impresa en la slide: "¿cuántas guitarras iguales hacen falta para oír el doble de fuerte?" — respuesta (apunte, sección "Dos guitarras no suenan el doble de fuerte"): unas **diez** fuentes iguales para el doble de sonoridad (+10 dB) y unas **cien** para el cuádruple (+20 dB), porque las presiones de fuentes independientes no se suman de frente sino que se combinan estadísticamente.
+:::
+
 ## Poniendo un cero a la escala
 
 > $L_p$ = **nivel de presión sonora**, en **dB SPL re 20 µPa**
@@ -97,6 +121,10 @@ En vez de *sumar* energía, el oído (y el dB) **comparan multiplicando**.
 | ~95–110 dB | orquesta o banda en fortissimo |
 | ~120 dB | umbral del dolor |
 
+::: {.notes}
+**Apoyo:** Los valores de la tabla son típicos y redondeados, no medidos en las salas del curso (apunte, figura 1 y su leyenda; ROS cap. 6) — aclarar que los valores reales de la sala se miden hoy en las estaciones. $L_p$ en dB SPL re 20 µPa es la notación fijada en `PLAN_SEMESTRE.md`.
+:::
+
 ## ¿Mi oído mide parejo en toda la escala musical? {.center}
 
 **Prediga por escrito, antes de tocar la demo:**
@@ -104,7 +132,15 @@ En vez de *sumar* energía, el oído (y el dB) **comparan multiplicando**.
 Para sonar **igual de fuerte** que un tono de 1000 Hz, uno de 125 Hz
 ¿va a necesitar más, igual o menos nivel?
 
+::: {.notes}
+**Apoyo:** Verificar al pasar por las mesas que la predicción quede escrita ANTES de tocar la demo. Respuesta que trae la sesión (no se revela aún): a 125 Hz hace falta MÁS nivel que a 1000 Hz para sonar igual de fuerte — el oído es más sordo a los graves. Es esperable que algunos marquen "igual" asumiendo que el oído es un medidor plano; no corregir todavía, la demo lo va a mostrar.
+:::
+
 ## Demo: dibuje su curva isofónica {background-iframe="../../demos/demo_decibel_sonoridad.html" background-interactive=true}
+
+::: {.notes}
+**Apoyo:** Formato 3, por turnos (~8′ por persona: 27′ de fase − 2′ de predicción = 25′ ÷ 3 integrantes). Mínimo irrenunciable ★: igualar 125, 1000 (referencia) y 4000 Hz; 250, 2000 y 8000 Hz son opcionales para quien alcance. Rotar por los grupos y provocar: "¿su curva es la de su compañero?", "¿a qué nivel de referencia está midiendo — y cambiaría con otro nivel?". Recordar la advertencia de la demo: sin calibración los dB son relativos, lo que vale es la FORMA de la curva. Si el nivel de referencia queda muy bajo o alto en algún notebook: la guía fija el ajuste inicial (referencia cómoda, ni susurro ni molestia) y, si sobra tiempo, un grupo rápido puede repetir 2 puntos con referencia más suave y reportarlo como dato adicional.
+:::
 
 ## Lo que dibujaron las curvas {.center}
 
@@ -119,6 +155,10 @@ Para sonar **igual de fuerte** que un tono de 1000 Hz, uno de 125 Hz
 Por eso la mezcla suave de la escucha del día **perdió el bajo**: su
 oído lo soltó primero.
 
+::: {.notes}
+**Apoyo:** Puesta en común: un vocero por grupo describe la forma de su curva (¿dónde pidió más nivel?); superponer las 3 formas en el pizarrón sobre ejes Hz/dB. Moraleja que debe quedar anotada: igual nivel físico no es igual sonoridad; el oído es más sordo a los graves (y a los muy agudos), y esa sordera se agrava a niveles bajos. Cerrar conectando con la escucha del día: por eso la mezcla suave "perdió" el bajo — el oído lo soltó primero, no la mezcla.
+:::
+
 ## Módulo 2 — ¿Cuatro palmas son cuatro veces más fuerte? {.center}
 
 Una persona aplaude sostenido. Después, cuatro a la vez, con la app SPL
@@ -128,6 +168,10 @@ proyectada.
 ~12 dB?
 
 Veámoslo.
+
+::: {.notes}
+**Apoyo:** Coordinar a 4 voluntarios para que aplaudan parejo; mostrar la lectura de la app SPL proyectada SIN comentarla — el número queda en suspenso hasta la estación E3, donde lo miden ellos con fuentes controladas. No dar la respuesta ahora: se cobra recién en la puesta en común de las estaciones (minuto 55-60), conectando con que duplicar la fuente sube ~+3 dB, no el doble.
+:::
 
 ## El mapa de las cinco estaciones
 
@@ -143,6 +187,10 @@ estación.
 | **E4** | aritmética de dB con papel y lápiz |
 | **E5** | la dosis del oído — salud auditiva |
 
+::: {.notes}
+**Apoyo:** Presentar la pregunta de la semana ("¿qué tan fuerte es nuestro mundo musical, y cómo se mide con juicio?") junto con esta lámina de las 5 estaciones. Explicar la regla 7′ de trabajo + 1′ de rotación con el cronómetro proyectado. Designar E1 como estación silenciosa: tiene el equipo delicado (interfaz + micrófono, el cuello logístico de la sesión) y el resto de las mesas no debe gritar al lado del micrófono. Resolver dudas de procedimiento ahora, no durante la rotación.
+:::
+
 ## Logística de la rotación
 
 > **7′ de trabajo + 1′ de rotación**, con cronómetro proyectado.
@@ -152,6 +200,10 @@ estación.
   no grita al lado del micrófono.
 - Prediga **antes** de medir en cada estación.
 - Si el tiempo aprieta, asegure el **mínimo irrenunciable** ★.
+:::
+
+::: {.notes}
+**Apoyo:** El profesor se ancla cerca de E1 (equipamiento delicado, cuello único) y desde ahí vigila el cronómetro y la rotación. Provocar en cada pasada por E3: "¿por qué NO da +6 dB?" — respuesta: las presiones de fuentes independientes no se suman de frente, se combinan estadísticamente, así que dos fuentes iguales dan solo ~+3 dB. Provocar en E5: "¿cuántos dB le baja un protector — y cuánto tiempo le compra?" — respuesta: un protector de músico atenúa del orden de 15–25 dB, y por la regla de los 3 dB eso compra muchas veces más tiempo admisible. Si un grupo se atrasa y tapona la rotación: manda el cronómetro, se cambia de estación al minuto con lo que haya — cada estación tiene marcado su mínimo irrenunciable (★, un dato anotado con condiciones) y el resto es opcional.
 :::
 
 ## El oído no tiene párpados {.center}
@@ -167,6 +219,10 @@ estación.
 Un protector de músico atenúa ~15–25 dB: por la misma regla, **compra
 mucho más tiempo**.
 
+::: {.notes}
+**Apoyo:** Cifras respaldadas en el apunte (sección "El oído no tiene párpados") y en la guía de estaciones, E5: criterio NIOSH y DS 594 (MINSAL, 1999, arts. 74-75) coinciden en 85 dB(A)/8 h y en la misma regla de intercambio de 3 dB. Punto para remarcar: el daño por exposición acumulada es indoloro mientras ocurre y no se recupera después — por eso vale medir el propio ensayo. La estación E5 es donde cada grupo calcula un caso real (ensayo, banda, audífonos) y anota una decisión práctica.
+:::
+
 ## Mini-informe SPL (cierre en aula)
 
 Formulario de **4 casillas**, sin prosa, al dorso de la planilla de
@@ -177,6 +233,10 @@ estaciones:
 2. **El dato**: valor con unidad y condiciones (app, celular, distancia)
 3. **Interpretación**: usando +10/+3 dB correctamente
 4. **Límite**: qué NO se puede afirmar con esta medición
+:::
+
+::: {.notes}
+**Apoyo:** El formulario se llena al dorso de la planilla que el registrador fue completando durante la rotación — sin planilla no hay informe. Rúbrica rápida (guía de estaciones, pauta del mini-informe): **logrado** = las 4 casillas completas, regla +10/+3 bien usada, condiciones completas; **parcial** = dato correcto pero interpretación o condiciones cojas; **incipiente** = número sin condiciones o regla mal aplicada. Recoger junto con las hojas isofónicas del módulo 1: las dos piezas juntas son el taller de la semana.
 :::
 
 ## Síntesis del día
@@ -191,6 +251,10 @@ estaciones:
 
 **Ticket hacia s07**: dos flautas tocan la MISMA nota y una queda
 apenas desafinada. ¿Qué se oye? ¿Y si la desafinación crece?
+
+::: {.notes}
+**Apoyo:** Cobrar el gancho de las cuatro palmas antes de cerrar: la sala debería converger a que duplicar fuentes sube ~+3 dB, y que se necesitan del orden de diez fuentes para el doble de sonoridad (+10 dB) — conectar con que duplicar una orquesta no duplica lo fuerte. El ticket hacia s07 se escribe MIENTRAS el profesor anuncia (actos compatibles): siembra los batidos que abren el módulo 2 de s07.
+:::
 
 ## Antes de irse {.center}
 

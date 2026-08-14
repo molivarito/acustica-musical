@@ -20,6 +20,13 @@ format:
 - **Taller** (serie del objeto) — ¿quién radia aquí?
 :::
 
+::: {.notes}
+**Apoyo:**
+
+- Antes de este resumen: los primeros 5′ son la re-formación de mesas del tramo 3 (s11–s15) — el último rearme del semestre. Proyecte la lista de mesas, asigne los roles nuevos (ejecuta / mide y registra / vocero) y recuerde que el objeto y la bitácora del proyecto siguen siendo individuales: solo cambia el equipo de apoyo (plan.md, bloque 0–5′ del módulo 1).
+- Hoy estrena además la modalidad de estación plenaria: con 1–2 instrumentos de cuerda frotada para todo el curso, ambos talleres se miden en conjunto — cada estudiante con su propio celular, el registro oficial es 1 por grupo (plan.md, Reglas aplicadas, punto 3).
+:::
+
 ## Escucha del día
 
 **Protocolo** (10′, sin nota):
@@ -31,6 +38,16 @@ format:
 - Plenario (**3′**): el profesor pregunta a una o dos mesas — responde el vocero por el grupo — y cierra con su propia versión
 :::
 
+::: {.notes}
+**Apoyo:**
+
+- Instrumento: el que trajo el o la estudiante (ensayado 2′ con usted antes de clase); plan B si nadie trae: guitarra del profesor con resina.
+- Dos pasadas en vivo sobre la MISMA cuerda: primero arco bien calibrado (nota larga, estable, rica); luego presión exagerada y arco lento (graznido crujiente sin altura estable), rematando con arco veloz y superficial (sonido "flautado", débil).
+- Pregunte selectivo a una o dos mesas: premie que separen altura estable / altura errática / sonoridad / rugosidad y que conecten con el ticket de s10 (alguien está organizando la entrega de energía en ciclos — y ese alguien es la cuerda).
+- Cierre: lea 2–3 tickets de s10 en voz alta y cierre con su propia versión, dejando la pregunta armada para la mini-lección (plan.md, bloque 5–15′).
+- Si el graznido no sale a demanda (el ejecutante es muy bueno): presión exagerada y arco lento junto al puente lo produce siempre; plan B: usted "sabotea" con la mano el arco del ejecutante (plan.md, Riesgos y plan B).
+:::
+
 ## El ticket que dejamos pendiente {.center}
 
 > Un golpe entrega energía **una vez** y el sonido decae. El arco entrega
@@ -40,6 +57,10 @@ format:
 
 **¿Por qué entonces la cuerda frotada no suena como un chirrido continuo,
 sino como una nota estable?**
+
+::: {.notes}
+**Apoyo:** es el mismo ticket de salida de s10, ahora servido de vuelta: la respuesta que arma el resto de la sesión es que la cuerda organiza la entrega de energía en ciclos (régimen de oscilación) — no la revele todavía, es el gancho hacia la mini-lección (plan.md, bloque 5–15′; apunte, sección "La cuerda pone el metrónomo").
+:::
 
 ## Dos fricciones, un ciclo
 
@@ -55,6 +76,13 @@ Esa asimetría produce un ciclo: **pegar → soltar → pegar…** — en inglé
 
 La resina del arco existe para exagerarlo: agarre feroz, deslizamiento fácil.
 
+::: {.notes}
+**Apoyo:**
+
+- Complemento: fricción de agarre (estática) más fuerte que la de deslizamiento (cinética); esa asimetría es el ciclo stick-slip. Benade (1990, cap. 23, secs. 23.1–23.2) es la fuente; la resina exagera la asimetría: agarre feroz, deslizamiento fácil (apunte, sección "La cuerda pone el metrónomo").
+- Conducción: puede anclar con el esquema puerta-que-chirría / copa frotada de s10 (fase C del taller de botellas) — toda superficie frotada chirría, pero solo la cuerda le impone un metrónomo al chirrido (plan.md, bloque 15–22′).
+:::
+
 ## ¿Quién fija la frecuencia del ciclo: el arco o la cuerda?
 
 ::: {.incremental}
@@ -68,6 +96,10 @@ La resina del arco existe para exagerarlo: agarre feroz, deslizamiento fácil.
 **[La cuerda]{style="color:#0f766e"}**. Esto es el *régimen de oscilación*
 (Benade, cap. 23): la fricción es tonta, pero el resonador le impone el calendario.
 
+::: {.notes}
+**Apoyo:** respuesta esperada: la cuerda — el soltar se sincroniza con su ida y vuelta (régimen de oscilación, Benade cap. 23). La fricción es tonta; el resonador le impone el calendario (plan.md, bloque 15–22′; apunte, sección "La cuerda pone el metrónomo").
+:::
+
 ## Si froto más fuerte, ¿sube la nota?
 
 . . .
@@ -76,6 +108,10 @@ La resina del arco existe para exagerarlo: agarre feroz, deslizamiento fácil.
 el **timbre** — y si se pasan de rango, rompen el régimen: graznido
 (presión excesiva) o silbido aflautado (arco veloz y liviano).
 
+::: {.notes}
+**Apoyo:** respuesta esperada: no. La afinación la fija la cuerda, no la presión del arco; la presión y la velocidad cambian el timbre y, si se salen de rango, rompen el régimen (graznido con presión excesiva y arco lento; silbido aflautado con arco veloz y liviano) (plan.md, bloque 15–22′; apunte, sección "La cuerda pone el metrónomo").
+:::
+
 ## ¿Por qué la frotada "no se apaga" y la pulsada sí?
 
 . . .
@@ -83,6 +119,10 @@ el **timbre** — y si se pasan de rango, rompen el régimen: graznido
 La fricción **repone energía en cada ciclo** (s04: el golpe la entrega
 una sola vez). Por eso el violín puede hacer *crescendo* en una nota larga
 y la guitarra no.
+
+::: {.notes}
+**Apoyo:** respuesta esperada: porque la fricción repone energía en cada ciclo, mientras que el golpe de la pulsada (s04) la entrega una sola vez y el sonido decae. Por eso el violín puede hacer crescendo en una nota larga y la guitarra no (apunte, sección "La cuerda pone el metrónomo"; plan.md, bloque 15–22′).
+:::
 
 ## Antes de ver la demo, prediga {.center}
 
@@ -97,7 +137,23 @@ y la guitarra no.
 Activamos 🔮 **Modo predicción** en la demo — paneles ocultos hasta
 "Revelar" — y miramos el contador **vueltas de la esquina = sueltas**.
 
+::: {.notes}
+**Apoyo:**
+
+- P1 — respuesta: no es una curva suave; es una esquina (dos segmentos rectos) que recorre el óvalo, descubierta por Helmholtz con un microscopio estroboscópico (apunte, sección "La esquina invisible").
+- P2 — respuesta: casi todo el ciclo va pegada al arco; el deslizamiento es breve (plan.md, bloque 22–32′).
+- P3 — respuesta: al acercar el arco al puente el reparto se acorta (más tiempo pegado, deslizamiento más breve); si $\beta$ es la fracción de la cuerda medida desde el puente, el punto frotado va pegado $1-\beta$ del período y desliza $\beta$ (apunte, recuadro opcional).
+:::
+
 ## Demo: la esquina de Helmholtz {background-iframe="../../demos/demo_helmholtz.html" background-interactive=true}
+
+::: {.notes}
+**Apoyo:**
+
+- Opere la demo proyectada CON audio (diente de sierra filtrado: el "espectro de fuerza sobre el puente", Benade 1990, sec. 23.5); subraye la síntesis: una vuelta de la esquina = un soltar — el viaje de la esquina cronometra a la fricción, eso ES el régimen de oscilación (plan.md, bloque 22–32′).
+- Anuncie el taller al cerrar: "esto es un dibujo idealizado; ahora lo van a buscar en la cuerda real, con espectrograma y cámara lenta".
+- Si la demo no corre en el equipo de la sala: dibuje la esquina por cuadros en el pizarrón (secuencia de 6 posiciones, en la lámina) y toque el diente de sierra desde su celular con un generador — se pierde la animación, no el argumento (plan.md, Riesgos y plan B).
+:::
 
 ## Taller evaluado: el punto de frotado
 
@@ -110,6 +166,14 @@ Activamos 🔮 **Modo predicción** en la demo — paneles ocultos hasta
 
 Registrador tabula $f_1$ y el comportamiento de los parciales altos.
 
+::: {.notes}
+**Apoyo:**
+
+- Conducción: coordine las pasadas y el silencio de medición; rote entre los 3 grupos durante las anotaciones (~1′ c/u por fase). Provoque: "¿cambió la afinación o el reparto de energía?", "¿por qué el ponticello exige más presión para no graznar?", "si la forma es dos rectas y una esquina, ¿por qué el espectrograma muestra TODOS los armónicos?" (plan.md, bloque 32–63′).
+- Es el taller EVALUADO de la semana (35 % de talleres): rúbrica rápida logrado/parcial/incipiente sobre 3 predicciones escritas antes de sonar, tabla con $f_1$ y comportamiento de los parciales altos en las 3 posiciones, contraste honesto y explicación que use el ciclo pegar-soltar (plan.md, Verificación de aprendizaje).
+- Fusible si se atrasa: la fase B (cámara lenta) se reduce a UNA filmación proyectada y el contraste se hace con 2 posiciones de arco en vez de 3 (plan.md, Reglas aplicadas, punto 7).
+:::
+
 ## Si la cámara del celular no resuelve
 
 Respaldo verificado (jul-2026) — cuerda frotada real en cámara lenta:
@@ -121,11 +185,22 @@ Respaldo verificado (jul-2026) — cuerda frotada real en cámara lenta:
 
 *Filmaciones reales, no animación — streaming directo, sin problema de licencia para uso en clase.*
 
+::: {.notes}
+**Apoyo:**
+
+- Esto se debía probar ANTES de clase (¿240 fps resuelve la esquina? — marcado POR VERIFICAR en el plan); si no alcanzó a probarse o la luz es pobre, use directamente uno de estos videos de respaldo.
+- Si aun así no hay forma de mostrarla: se omite la fase B (fusible del módulo 1) y la P3 se contrasta contra la demo — se pierde la verificación en la cuerda real, decláralo honestamente como límite del instrumental (plan.md, Riesgos y plan B).
+:::
+
 ## Moraleja del módulo 1 {.center}
 
 **La cuerda fija la afinación; el punto y la presión del arco esculpen
 el espectro.** La fricción repone energía en cada ciclo: por eso el
 espectro rico se sostiene.
+
+::: {.notes}
+**Apoyo:** cierre — superponga los resultados de los 3 grupos en el pizarrón (¿todos vieron más agudos hacia el puente y $f_1$ quieta?) — esa superposición es la verificación pública del taller. Recoja las guías y evalúe con la rúbrica rápida al vuelo (plan.md, bloque 63–70′).
+:::
 
 ## La pinza en el puente {.center}
 
@@ -139,6 +214,13 @@ Le pongo una pinza de ropa al puente del instrumento.
 
 Veámoslo.
 
+::: {.notes}
+**Apoyo:**
+
+- Predicción típica fallida: "va a sonar más despacio" — quedará corregida: suena la misma nota, sonoridad parecida, pero el timbre se vuelve opaco porque se apagan los parciales agudos (plan.md, Verificación de aprendizaje).
+- Complemento: la pinza agrega masa al puente, el "transformador" de s10 — el puente es el peaje obligado de TODA la energía que sale de la cuerda: un transformador con preferencias, no un cable neutro (plan.md, bloque 0–8′ del módulo 2; apunte, sección "La cuerda no mueve el aire: la cadena completa").
+:::
+
 ## El cuerpo también tiene modos
 
 > La tapa y el fondo no vibran enteros como un pistón: vibran **por
@@ -151,6 +233,13 @@ Veámoslo.
 . . .
 
 **Por zonas**, según el modo (holografías de C&G, cap. 6).
+
+::: {.notes}
+**Apoyo:**
+
+- Respuesta esperada: la tapa vibra por zonas, según el modo — no entera como un pistón (plan.md, bloque 8–22′).
+- Complemento: se apoya en las holografías de C&G cap. 6, pp. 203–232 (interferogramas de los seis primeros modos de la tapa de una guitarra, figura 4 del apunte); ancle con el vocabulario de s03 (líneas nodales, zonas en contrafase, como la sartén).
+:::
 
 ## Dos preguntas más sobre el cuerpo
 
@@ -169,6 +258,14 @@ Un parcial que cae cerca de un modo fuerte del cuerpo, ¿suena más o menos?
 
 **Más.** El cuerpo es un ecualizador fijo hecho de resonancias.
 
+::: {.notes}
+**Apoyo:**
+
+- Complemento sobre las efes: la resonancia del aire encerrado ayuda a radiar los graves que la tapa sola no puede — la botella de s10 vive dentro del violín.
+- Sobre el modo fuerte: el cuerpo es un ecualizador fijo hecho de resonancias (conecta con la curva de respuesta de s10).
+- Dato adicional para tener a mano, parte de la misma mini-lección aunque no aparezca en votación aquí: la radiación es direccional — los graves salen parejos en todas direcciones, los agudos salen en haces que dependen del modo que los radia (cualitativo); es lo que la fase C del taller "¿quién radia aquí?" pone a prueba (apunte, sección "La cuerda no mueve el aire: la cadena completa"; plan.md, bloque 8–22′).
+:::
+
 ## Taller (sin nota): ¿quién radia aquí?
 
 ::: {.incremental}
@@ -183,11 +280,23 @@ Fases A (tapar/destapar), B (apoyado/al aire), C (radiación en cruz) — 18′.
 
 **Bitácora**: cómo aplicarán este protocolo a su objeto de proyecto — compromiso antes de s12.
 
+::: {.notes}
+**Apoyo:**
+
+- Conducción: coordine pasadas y silencio; reparta los puntos de medición SPL (misma app y distancia, condición anotada) y rote por las mesas en las anotaciones. Provoque: "¿el tapado mató TODO o mató una zona del espectro?", "¿la mesa que amplifica gratis viola lo del elástico de s10?" — respuesta: no, es fuerte ↔ corto, la misma energía se gasta más rápido (plan.md, bloque 22–48′).
+- Este taller NO lleva nota: es avance del proyecto. Vigile que las 9 bitácoras individuales queden escritas — es el entregable de la serie esta semana (plan.md, bloque 22–48′ y Verificación de aprendizaje).
+- Fusible a los 48′: si el módulo se atrasa, se corta la fase C (radiación direccional) y se reemplaza por una demostración de usted girando el instrumento (2′); los anuncios de s12 y el ticket NO se sacrifican (plan.md, Reglas aplicadas, punto 7).
+:::
+
 ## Síntesis del día {.center}
 
 - La fricción es una válvula; la cuerda, su metrónomo.
 - Una vuelta de la esquina = un soltar.
 - La caja no regala energía: la transforma y la gasta radiando.
+
+::: {.notes}
+**Apoyo:** cierre — superponga los resultados de los 3 grupos del taller de acoplamiento. Explicite qué de hoy es evaluable en la Prueba 2 (mecanismo frotado, cadena de radiación) y qué es cultura general — por ejemplo la nota lobo o el ajuste de placas de Hutchins, que en el curso quedan como curiosidad, no como materia de prueba (plan.md, bloque 48–60′).
+:::
 
 ## Su ticket hacia s12 {.center}
 
@@ -196,10 +305,22 @@ Fases A (tapar/destapar), B (apoyado/al aire), C (radiación en cruz) — 18′.
 >
 > **¿Qué hace de válvula?**
 
+::: {.notes}
+**Apoyo:** recoja los tickets; esta pregunta es la semilla de s12 (la válvula sin nada que pegue ni suelte) — no la responda hoy, déjela abierta (plan.md, bloque 60–70′).
+:::
+
 ## Para la próxima sesión
 
 ::: {.incremental}
 - **s12**: taller completo de lutería — construimos y medimos flautas/tubos (materiales los pone el curso)
 - La **serie del objeto termina en s12**: bitácora al día con los dos compromisos (mapa de resonancias de s10 + acoplamiento de hoy)
 - Se publica esta semana la nota del **hito 2**
+:::
+
+::: {.notes}
+**Apoyo:**
+
+- s12 es sesión-taller completa de lutería (los 140′): se construyen y miden flautas/tubos; no hay que traer nada especial, los materiales los pone el curso.
+- La serie del objeto termina en s12: la bitácora debe quedar al día con los DOS compromisos (mapa de resonancias de s10 + protocolo de acoplamiento de hoy) — se revisan en s12.
+- Recuerde que la nota del hito 2 se publica esta semana (comprometida en s10) (plan.md, bloque 60–70′).
 :::

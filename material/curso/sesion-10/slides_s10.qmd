@@ -30,6 +30,10 @@ Dos módulos, un puente hacia los instrumentos.
 
 > La clínica del módulo 2 trabaja **sobre lo que acaban de entregar** — guarden una copia o foto de su compilado.
 
+::: {.notes}
+**Apoyo:** Reciba y verifique contra la lista: son 9 compilados individuales (plan, módulo 1, "Entrega del hito 2"). Anuncie que la clínica del módulo 2 trabaja sobre lo recién entregado — cada estudiante debe guardar copia o foto de su compilado.
+:::
+
 ## Escucha del día (10′, sin nota)
 
 **Protocolo**: describir → hipotetizar → verificar.
@@ -43,7 +47,16 @@ Dos módulos, un puente hacia los instrumentos.
 
 *Separen bien lo que sube parejo de lo que se infla — son cosas distintas.*
 
+::: {.notes}
+**Apoyo:** En el plenario, pregunte selectivamente buscando dos cosas: que separen la altura que sube pareja de la sonoridad que se infla, y que noten que el golpe cae EN la misma altura (D1); y que inviten una frecuencia propia del sistema, retomando el ticket de s09 (D2). Lea 2–3 tickets de s09 y conéctelos: eso que "prefiere" el sistema tiene nombre y hoy se mide (plan, módulo 1, "Escucha del día").
+:::
+
 ## Demo — modo presentación {background-iframe="../../demos/demo_resonancia.html" background-interactive=true}
+
+::: {.notes}
+**Apoyo:** Modo presentación (números ocultos). Pasada 1: amortiguamiento bajo → pico angosto, ping largo. Pasada 2: amortiguamiento alto → pico ancho, ping corto (plan, módulo 1, "Escucha del día"). Sin estímulo nuevo para el banco: se genera en vivo con la demo (plan, "Decisiones", punto 5).
+Si la demo no corre en el equipo de la sala: plan B con botella real + afinador proyectado (soplar dos botellas con distinta agua) — se pierde el barrido, no la resonancia; la curva de respuesta se dibuja a mano en el pizarrón desde la tabla de BEN 10.7, cualitativa (plan, "Riesgos y plan B").
+:::
 
 ## ¿Por qué el columpio solo acepta su ritmo? {.center}
 
@@ -60,6 +73,10 @@ Ustedes empujan; el columpio decide cuánto responder.
 > **Oscilación libre**: lo sueltan — vibra en su $f_0$ y decae.
 > **Oscilación forzada**: lo empujan a la frecuencia que ELLOS eligen.
 
+::: {.notes}
+**Apoyo:** El apunte retoma el columpio de plaza (Benade 1990, sec. 10.1): tiene una frecuencia propia $f_0$ — el vaivén con que oscila solo — y se le puede empujar al ritmo que uno elija. Conecte con s03: "desde s03 sabemos que cada objeto, dejado en paz, vibra en SUS frecuencias características y decae" (apunte, "¿Por qué el columpio solo acepta su ritmo?").
+:::
+
 ## Votación: casi al ritmo, pero no exacto {.center}
 
 **Si empujan el columpio casi al ritmo de $f_0$, pero no exacto, ¿qué pasa?**
@@ -71,6 +88,10 @@ Responde a medias y "forcejea": los empujones a veces ayudan, a veces se oponen.
 . . .
 
 > Solo cuando la excitación coincide con $f_0$, cada empujón suma en vez de cancelarse — eso es la [resonancia]{style="color:#0f766e"}.
+
+::: {.notes}
+**Apoyo:** El capítulo lo describe así: "la mitad de sus empujones llegan cuando el columpio viene de vuelta, lo frenan en lugar de ayudarlo, y el resultado neto es un bamboleo mediocre" (capítulo, "El empujón que llega a tiempo").
+:::
 
 ## El pico y su precio: el amortiguamiento {.center}
 
@@ -88,11 +109,19 @@ A menos: **pico angosto**. (Mucho roce → pico bajo y ancho.)
 
 Más — el transiente dura lo que dura su ping libre. Dos caras de la misma moneda.
 
+::: {.notes}
+**Apoyo:** Conduzca con la demo (barrido manual lento + slider de amortiguamiento): el pico angosto/ancho y el transiente largo/corto son LAS DOS CARAS del mismo amortiguamiento (BEN 10.2–10.3, 10.7) (plan, módulo 1, "Mini-lección"). El apunte trae la imagen de referencia: "ese objeto de la sala que zumba solo cuando la orquesta toca UNA nota concreta es un resonador de pico angosto al que esa nota le acierta" (apunte, "La curva de respuesta: el pico y su precio"; Benade 1990, sec. 10.7 — la bandeja de lata).
+:::
+
 ## Veamos la curva dibujarse al barrer {.center}
 
 Frecuencia de excitación subiendo lento y pareja — observen la curva.
 
 ## Demo — barrido {background-iframe="../../demos/demo_resonancia.html" background-interactive=true}
+
+::: {.notes}
+**Apoyo:** Conduzca con la demo: barrido manual lento + slider de amortiguamiento (plan, módulo 1, "Mini-lección").
+:::
 
 ## Ahora muevan el amortiguamiento {.center}
 
@@ -100,11 +129,19 @@ Un extremo, luego el otro. Repitan barrido y golpe en cada uno.
 
 ## Demo — amortiguamiento {background-iframe="../../demos/demo_resonancia.html" background-interactive=true}
 
+::: {.notes}
+**Apoyo:** Muevan el slider a un extremo y al otro, repitiendo barrido y golpe en cada uno: el mismo parámetro angosta/ensancha el pico Y alarga/acorta el transiente a la vez, porque no son dos fenómenos sino uno (apunte, "La curva de respuesta: el pico y su precio").
+:::
+
 ## El golpe: la oscilación libre pura {.center}
 
 Sin excitación externa que siga sonando — solo el ping en $f_0$.
 
 ## Demo — golpe {background-iframe="../../demos/demo_resonancia.html" background-interactive=true}
+
+::: {.notes}
+**Apoyo:** El golpe deja sonar la oscilación libre pura: un ping en $f_0$, sin excitación externa que la sostenga — contraste directo con las pasadas forzadas anteriores (plan, módulo 1, "Mini-lección"; apunte, "¿Por qué el columpio solo acepta su ritmo?").
+:::
 
 ## La botella: un resonador de aire con $f_0$ medible
 
@@ -113,6 +150,10 @@ Predigan por escrito, ANTES de soplar nada:
 ::: {.incremental}
 - **P1**: vacía vs. con agua hasta la mitad, soplando — ¿la nota sube o baja, y cuánto (semitonos, aprox.)?
 - **P2**: la misma botella, pero GOLPEADA con la cuchara — ¿el agua la sube o la baja?
+:::
+
+::: {.notes}
+**Apoyo:** Cierre la mini-lección anunciando el taller: "la botella es un resonador de aire con $f_0$ medible — y ustedes van a predecir qué le pasa a esa $f_0$ al cambiarle el volumen de aire" (plan, módulo 1, "Mini-lección"). Insista en que las predicciones se escriban ANTES de soplar nada.
 :::
 
 ## Taller: la botella que canta (27′)
@@ -124,6 +165,12 @@ Predigan por escrito, ANTES de soplar nada:
 | **Contraste** | ¿P1 y P2 dieron la MISMA dirección? ¿quién vibra en cada caso? |
 | **C (opcional)** | copa frotada vs. golpeada — ¿misma altura? |
 
+::: {.notes}
+**Apoyo:** Rote por los grupos (~8′ c/u); vigile que la predicción quede escrita ANTES del primer soplido, y las condiciones anotadas (app, gesto usado). Enseñe el truco del soplido rasante donde haga falta: labio inferior apoyado en el borde, chorro fino cruzando la boca, no hacia adentro (guía `guia_pee_resonancia_botellas.md`). Si no suena: plan B, palmada seca sobre la boca de la botella — el "tock" también se mide en el espectrograma (plan, "Riesgos y plan B"). Si el afinador no engancha por soplido ruidoso: medir con el espectrograma (el pico grave es nítido) y convertir a nota con la tabla de la guía de s09.
+Provoque en cada grupo: "¿quién vibra cuando sopla — el vidrio o el aire?", "al dejar la mitad del aire, ¿la nota subió una octava o menos? ¿cuánto predice la proporción?", "¿por qué golpear y soplar dan direcciones opuestas?" (plan, módulo 1, "Taller PEE").
+Respuesta de fondo (para orientar sin regalarla): al soplar, el agua no vibra — solo achica el volumen de aire y el resorte se pone más rígido, así que $f_0$ sube; al golpear, quien vibra es el vidrio con su contenido, y el agua es masa agregada que lo alenta (apunte, "La botella que canta: un resonador que se deja medir").
+:::
+
 ## Cierre M1: contraste {.center}
 
 Un grupo expone su tabla. Todos contrastan contra su propia predicción.
@@ -133,6 +180,10 @@ Un grupo expone su tabla. Todos contrastan contra su propia predicción.
 **Moraleja**: lo que suena depende de **a quién le entregan la energía**.
 
 *(el resonador que acaban de medir tiene nombre: Helmholtz — el detalle, en el apunte)*
+
+::: {.notes}
+**Apoyo:** Superponga en el pizarrón las direcciones de los 3 grupos: ¿todos vieron subir al soplar y bajar al golpear? Nombre el resonador de Helmholtz (botella = masa de aire del cuello + resorte de aire del cuerpo, ROS cap. 4) sin fórmula — la fórmula queda en el recuadro opcional del apunte (plan, módulo 1, "Cierre"). Anuncie el descanso y que el módulo 2 abre con "el experimento del elástico".
+:::
 
 ## M2 — El elástico, el puente y la trampa
 
@@ -146,12 +197,20 @@ Un grupo expone su tabla. Todos contrastan contra su propia predicción.
 
 Veámoslo.
 
+::: {.notes}
+**Apoyo:** Ejecute el experimento en vivo: elástico entre las manos, luego elástico sobre una caja de cartón, cerca del micrófono de la sala si hace falta (plan, módulo 2, "Gancho sonoro"). Respuestas esperadas: el elástico en el aire vibra visiblemente y casi no se oye; sobre la caja suena claramente más fuerte; y dura MENOS — la caja no agrega energía, la gasta más rápido (apunte, "¿Por qué la cuerda sola casi no suena?"). Deje la semilla del régimen de oscilación volviendo a soplar la botella del taller 5 s: nota estable que se sostiene sola mientras haya soplo.
+:::
+
 ## La cuerda es "dura de mover" para el aire {.center}
 
 > [Impedancia]{style="color:#0f766e"}: cuánta fuerza cuesta lograr cuánta velocidad.
 > [Acoplamiento]{style="color:#0f766e"}: qué tan bien fluye la energía entre sistemas.
 
 El puente (o la caja) es el **transformador** que conecta ambos mundos.
+
+::: {.notes}
+**Apoyo:** El apunte lo resume así: la cuerda es delgada, corta el aire en lugar de empujarlo, "como remar con un cuchillo"; el puente actúa como transformador, convirtiendo la vibración fuerte-y-chica de la cuerda en la vibración suave-y-grande que el aire sí acepta (apunte, "¿Por qué la cuerda sola casi no suena?"; C&G cap. 5, pp. 183–202).
+:::
 
 ## El mapa del bloque C
 
@@ -168,6 +227,10 @@ Cuatro maneras de entregarle energía a un resonador (OA1.3):
 
 La botella soplada ya adelantó algo raro: nadie la empuja periódicamente y, aun así, suena estable — una **oscilación auto-sostenida**.
 
+::: {.notes}
+**Apoyo:** La botella soplada ya adelantó algo raro: nadie la empuja periódicamente y, aun así, suena estable — el resonador organiza el flujo de aire para que lo alimente a SU ritmo, una oscilación auto-sostenida que Benade estudia como régimen de oscilación (Benade 1990, sec. 20.2). La sesión solo siembra la idea; s11 y s12 la desarrollan (apunte, "El mapa del bloque C: cuatro maneras de entregar energía").
+:::
+
 ## Clínica de proyecto entre pares (38′)
 
 ::: {.incremental}
@@ -181,6 +244,11 @@ La botella soplada ya adelantó algo raro: nadie la empuja periódicamente y, au
 
 Rotación A→B→C. Firman y copian cada pauta a la bitácora individual del estudiante presentado.
 
+::: {.notes}
+**Apoyo:** Asigne el orden del trío con criterio: presentar a la mesa de objetos más distintos (2′ de organización). Acompañe las 3 rondas (~12′ c/u) cuidando que cada uno de los 3 exponga SU propio proyecto — nadie habla por otro — y que la retroalimentación siga la disciplina de la pauta (dudas como preguntas, sugerencia con instrumento y resultado esperado) (plan, módulo 2, "Clínicas cruzadas").
+Riesgo: si la clínica se atrasa por presentar 9 en vez de 3, los 3′ por estudiante los cronometra el tercer grupo de la ronda con aviso a los 2′30″; si aun así se atrasa, el fusible es el plenario (puede bajar de 14′ a 10′) — la clínica NUNCA se recorta: es la única del semestre y cubre a los 9 (plan, "Riesgos y plan B").
+:::
+
 ## Plenario y compromisos {.center}
 
 Dos proyectos al pizarrón: objeto sonando + la medición más informativa + la duda más dura.
@@ -188,6 +256,11 @@ Dos proyectos al pizarrón: objeto sonando + la medición más informativa + la 
 . . .
 
 Cada estudiante escribe 1–2 **compromisos verificables** antes de s12 — incluido el obligatorio: **el mapa de resonancias de su propio objeto**.
+
+::: {.notes}
+**Apoyo:** Elija los 2 casos DURANTE la clínica (criterio: una medición ejemplar y un problema instructivo común, no necesariamente de mesas distintas). Modere con cronómetro y conecte cada caso con la mañana: ¿dónde están las resonancias de este objeto?, ¿quién es su "caja"?, ¿su mecanismo de excitación en qué casilla del mapa del bloque C cae? Cuide que la crítica sea a la evidencia, no al gusto (plan, módulo 2, "Plenario").
+Si el plenario se alarga: a los 60′ se corta la discusión del segundo proyecto y las preguntas pendientes se escriben y se entregan al estudiante (quedan en su bitácora); los compromisos NO se sacrifican — son el cierre verificable de la clínica (plan, "Riesgos y plan B").
+:::
 
 ## Síntesis del día
 
@@ -202,10 +275,18 @@ Cada estudiante escribe 1–2 **compromisos verificables** antes de s12 — incl
 > El arco entrega energía **todo el tiempo**, no un golpe.
 > ¿Por qué entonces la cuerda frotada no suena como un chirrido continuo, sino como una nota estable?
 
+::: {.notes}
+**Apoyo:** El capítulo cierra con la misma pregunta: el arco no golpea, alimenta a la cuerda sin pausa, y aun así elige una nota estable — Helmholtz lo vio antes de que nadie pudiera filmarlo (capítulo, "Hacia la sesión 11"). s11 y s12 desarrollan la respuesta que aquí solo se siembra.
+:::
+
 ## Para la próxima
 
 ::: {.incremental}
 - **s11 — instrumentos de estudiantes #2**: violín/viola/cello/guitarrón, quien tenga (coordinar HOY quién trae)
 - El objeto del proyecto descansa hasta s12 — sus compromisos corren por bitácora
 - La nota del Hito 2 llega antes de s12
+:::
+
+::: {.notes}
+**Apoyo:** Coordine AHORA quiénes traen instrumento a s11 (violín/viola/cello/guitarrón: 1–2 por curso bastan) y confirme por correo; anuncie el rearme de mesas para el tramo 3, s11–s15 (plan, módulo 2, "Compromisos y anuncios"). La nota del hito 2 llega antes de s12 (corrección ≈1,5 h, pico declarado, sin coevaluación).
 :::

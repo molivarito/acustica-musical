@@ -30,6 +30,15 @@ format:
 
 **Anoten en 3 líneas: ¿qué los diferencia, además de lo obvio?**
 
+::: {.notes}
+**Apoyo:** Ejecute los dos sonidos en vivo, sin explicar nada todavía:
+un golpe seco en la mesa o un objeto percutible, luego una nota larga
+con la flauta. Recoja las respuestas al vuelo en el pizarrón, sin
+cerrarlas ni corregirlas — van a servir de contraste cuando presente el
+mapa de las tres capas del curso (oído / mecanismo / medición) (plan,
+bloque "Apertura sonora: el curso en un golpe").
+:::
+
 ## Bienvenidos a [Acústica Musical]{style="color:#0f766e"}
 
 [M1 · 10–25′]{.tiempo}
@@ -229,6 +238,14 @@ semestre:
 3. **Proponer una verificación** — qué medirían para confirmarlo
 :::
 
+::: {.notes}
+**Apoyo:** El estudiante no debe saber de antemano qué va a escuchar:
+la consigna de describir/hipotetizar/verificar va en esta slide, pero
+nada impreso puede revelar el estímulo (plan, bloque "Línea base de
+escucha"). Antes de la sesión, pruebe `e01_linea_base.wav` en el
+equipo de sonido de la sala.
+:::
+
 ## Mecánica de la línea base
 
 [M1 · 25–40′]{.tiempo}
@@ -243,6 +260,17 @@ Van a escuchar un estímulo de ~30 s, **dos pasadas**.
 
 *No hay nota — ni hoy ni en las escuchas del día del resto del
 semestre. Esta hoja es para que en noviembre vean cuánto cambiaron.*
+
+::: {.notes}
+**Apoyo:** Cada estudiante escribe su diagnóstico en una media hoja
+rotulada con su nombre y "s01 – línea base"; se guardan las 9 hojas —
+en la sesión 15 se repite el mismo archivo y cada estudiante recibe
+sus dos hojas juntas para comparar (plan, bloque "Línea base de
+escucha"). Si nadie quiere leer en voz alta, pida solo voluntarios y
+complete con lectura anónima de dos hojas escritas: lo importante es
+archivar las 9 hojas, no que todos hablen (plan, sección "Riesgos y
+plan B").
+:::
 
 ## La rúbrica del curso (OA3)
 
@@ -285,6 +313,13 @@ Mesas de 3, mezclando instrumentos y afinidades (ninguna homogénea).
 Anunciar la rotación de mesas HOY, como parte del diseño ("conocer
 cómo trabaja todo el curso"), no como amenaza. El proyecto es
 individual, así que rearmar mesas no rompe nada.
+
+**Apoyo:** Si el censo de instrumentos queda confuso o muy parejo
+entre familias, arme los grupos por conteo 1-2-3 con la restricción de
+que ninguna mesa quede con una sola familia de instrumento y que haya
+al menos una persona cómoda con espectrograma o DAW por mesa; si igual
+queda desbalanceada, ajuste en la sesión 2 (plan, sección "Riesgos y
+plan B").
 :::
 
 ## PEE relámpago: la regla en la mesa
@@ -300,6 +335,16 @@ Una regla firme, apoyada en el borde de la mesa, vibrando.
 **Prediga por escrito**: si acorto la parte libre de la regla, ¿qué le
 pasa al sonido?
 
+::: {.notes}
+**Apoyo:** Modele el ciclo con el primer grupo — prediga con ellos,
+haga el experimento, explique la diferencia — y luego solo observe al
+resto (plan, bloque "Primer PEE relámpago: la regla en la mesa"). Al
+cierre, sortee un grupo para exponer su tabla. Si sobra tiempo porque
+los grupos terminan rápido, hay un segundo PEE relámpago de respaldo:
+frecuencia versus nivel de agua, con vaso y cuchara (plan, sección
+"Riesgos y plan B").
+:::
+
 ## Del golpe al tono {.center}
 
 [M2 · 0–10′]{.tiempo}
@@ -313,6 +358,15 @@ Un golpe. Luego, muchos golpes por segundo.
 Voten a mano alzada.
 
 ## Demo: tasa de repetición {background-iframe="../../demos/demo_tren_pulsos.html" background-interactive="true"}
+
+::: {.notes}
+**Apoyo:** Opere la demo y registre a mano alzada en qué tasa el curso
+empieza a votar "nota" (plan, bloque "Gancho sonoro: el tarareo de la
+red"). No revele todavía el valor de referencia: "no le adelantamos el
+número — sería arruinarle el experimento" (capítulo 1, sección
+"Muchos golpes"). Los grupos lo van a medir ellos mismos en el taller
+de este mismo módulo.
+:::
 
 ## ¿El mismo dato, dos caras?
 
@@ -328,6 +382,14 @@ $$T = \frac{1}{f}$$
 Razonarán en **proporciones** todo el semestre: el doble, la mitad, tres
 veces.
 
+::: {.notes}
+**Apoyo:** Dos ejemplos numéricos para calcular en el momento: si algo
+se repite 100 veces por segundo, cada repetición dura un centésimo de
+segundo ($T = 1/100$ s); si una cuerda vibra al doble de rápido, cada
+vaivén dura la mitad (apunte, sección "Contar sin contar: frecuencia y
+período").
+:::
+
 ## Votación: ¿duplicar $f$ duplica la altura?
 
 [M2 · 10–25′]{.tiempo}
@@ -338,6 +400,13 @@ veces.
 
 Lo físico (frecuencia) no es lo percibido (altura): primera advertencia
 del curso.
+
+::: {.notes}
+**Apoyo:** La respuesta ya está en la slide. Complemento: duplicar la
+frecuencia no duplica la altura, la sube una octava, que es otra cosa
+— este curso lo va a medir en las sesiones 5 y 6 (apunte, sección "Lo
+físico no es lo percibido (primera advertencia)").
+:::
 
 ## Dos números para calibrar
 
@@ -353,6 +422,14 @@ del curso.
 ¿Casualidad que el límite inferior coincida con donde el ritmo empieza a
 sonar a nota?
 
+::: {.notes}
+**Apoyo:** No es casualidad: por debajo de unos 20 eventos por segundo
+el oído todavía puede seguirlos como sucesos individuales, que es
+justo donde el peine y la regla dejan de sonar a ritmo y empiezan a
+sonar a nota (apunte, sección "Contar sin contar: frecuencia y
+período"; capítulo 1, sección "Dos números para la repetición").
+:::
+
 ## Taller: la zona gris ritmo–tono
 
 [M2 · 25–60′]{.tiempo}
@@ -364,6 +441,15 @@ sonar a nota?
 - Contraste con Benade cap. 2 (~20 Hz)
 :::
 
+::: {.notes}
+**Apoyo:** Rote por los grupos, unos 6 minutos con cada uno, y provoque
+con la pregunta "¿el umbral es del sonido o del oyente?" (plan, bloque
+"Taller PEE: la zona gris ritmo–tono"). Recuérdeles medir el umbral
+subiendo Y bajando la tasa — suelen no coincidir — y repetir con los
+dos timbres de pulso, seco y blando (guía PEE "la zona gris
+ritmo–tono").
+:::
+
 ## Antes de medir {.center}
 
 [M2 · 25–60′]{.tiempo}
@@ -372,7 +458,24 @@ sonar a nota?
 
 Predigan en grupo antes de tocar la demo.
 
+::: {.notes}
+**Apoyo:** No lo resuelva usted: dos personas del mismo grupo suelen
+encontrar umbrales distintos con el mismo sonido, y eso no es un error
+de medición — es la primera aparición del tema que atraviesa el curso,
+la frecuencia es del sonido y la altura es de quien escucha (apunte,
+sección "Lo físico no es lo percibido (primera advertencia)"). Que lo
+descubran midiendo.
+:::
+
 ## Demo: midan su umbral {background-iframe="../../demos/demo_tren_pulsos.html" background-interactive="true"}
+
+::: {.notes}
+**Apoyo:** Si la demo falla en algún notebook, córrala en el proyector
+y ese grupo mide con el audio de sala — pierden autonomía, no el
+fenómeno (plan, sección "Riesgos y plan B"). Materiales: audífonos
+personales para la fase individual; primero con pulso seco, después
+con pulso blando (guía PEE "la zona gris ritmo–tono").
+:::
 
 ## Síntesis del día
 
@@ -391,6 +494,13 @@ Predigan en grupo antes de tocar la demo.
 Escriban su predicción para la próxima sesión:
 
 > **¿Cómo se vería este pulso, si pudiéramos dibujarlo?**
+
+::: {.notes}
+**Apoyo:** Esta pregunta es la puerta de entrada a la sesión 2:
+convertir el sonido en imagen (forma de onda, espectro, espectrograma)
+es exactamente lo que responde la próxima clase (apunte, sección
+"Hacia la sesión 02").
+:::
 
 ## Para la próxima sesión
 

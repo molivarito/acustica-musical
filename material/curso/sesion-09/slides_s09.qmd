@@ -33,6 +33,10 @@ Hoy, además, se cobra su **ticket de salida de s08**.
 
 ## Escuchemos {background-iframe="../../demos/demo_temperamentos.html" background-interactive=true}
 
+::: {.notes}
+**Apoyo:** Demo en modo presentación (números ocultos), dos pasadas (~2′): primero la misma quinta con tonos complejos, lisa y luego "casi igual pero que respira" (~1 ondulación/s); después la misma tercera mayor en dos versiones (una dulce, otra que muele rápido). Pregunte selectivamente a una o dos mesas: premie que describan la ondulación LENTA de la 5ª frente al batido RÁPIDO de la 3ª y que invoquen la coincidencia de parciales de s08. Lea 2–3 tickets de s08 y adelante la respuesta sin desarrollarla: NO, un piano no puede tener todas sus quintas lisas a la vez — la mini-lección que sigue explica por qué. Cierre con su propia versión experta de la descripción.
+:::
+
 ## Intervalos son razones — ¿y si las apilamos doce veces?
 
 ::: {.incremental}
@@ -47,6 +51,10 @@ Hoy, además, se cobra su **ticket de salida de s08**.
 **¿Puede un piano tener TODAS sus quintas lisas a la vez?**
 
 (el ticket que dejó s08)
+
+::: {.notes}
+**Apoyo:** El ticket de s08 se cobra aquí. Respuesta (que la mini-lección siguiente desarrolla con números): NO — es aritméticamente imposible que las 12 quintas sean justas y las 7 octavas también; la diferencia es la coma pitagórica (apunte, sección "La cuenta que no cierra"). Si preguntan por qué esas razones (2:1, 3:2, 4:3, 5:4) y no otras: son las que hacen coincidir parciales sin batido, heredado de la sesión anterior (s08).
+:::
 
 ## Una regla para sumar en vez de multiplicar
 
@@ -83,6 +91,10 @@ la **coma pitagórica**.
 ![Dos escaleras que no cierran: doce quintas justas versus siete
 octavas.](../../assets/figuras/s09_coma_pitagorica.svg)
 
+::: {.notes}
+**Apoyo:** Respuesta esperada a la votación: un cuarto de semitono (23,5 cents exactos). Si nadie arriesga, ayude con las preguntas del plan: "¿dónde esconderían el error: todo en una quinta o repartido entre las 12?" y, si reparten, "¿de cuánto es el 'impuesto' por quinta?" — respuesta: 2 cents (23,5/12).
+:::
+
 ## Afinar es elegir un compromiso
 
 ::: {.incremental}
@@ -97,7 +109,15 @@ octavas.](../../assets/figuras/s09_coma_pitagorica.svg)
 2 cents no se "oyen"… pero se **cuentan**: la quinta de Do4 late ~1 vez
 por segundo. Van a afinar de oído, como un afinador de pianos.
 
+::: {.notes}
+**Apoyo:** Complemento (apunte, sección "Afinar con un cronómetro en el oído"): en la quinta Do4–Sol4, el tercer armónico de Do4 (785 Hz) casi coincide con el segundo de Sol4 (784 Hz); la quinta temperada late ~0,9 veces por segundo — cifra fina detrás del "~1 vez por segundo" de la slide. Anuncie el taller citando el oficio del afinador de pianos (Benade 1990, sec. 16.2, según el apunte).
+:::
+
 ## Afinemos, de oído {background-iframe="../../demos/demo_temperamentos.html" background-interactive=true}
+
+::: {.notes}
+**Apoyo:** Esta es la slide de trabajo del taller: proyecte la demo en modo afinar (cents ocultos) en cada notebook. Roles del grupo: afinador (con audífonos), operador (maneja la demo: desafina al azar, oculta y revela los cents), integrante en espera (resuelve los ítems de papel de la guía). Roten al terminar cada turno. Rote usted por los grupos (~12′ c/u).
+:::
 
 ## El taller: contando batidos
 
@@ -111,6 +131,10 @@ En turnos individuales, con audífonos, cents ocultos:
 
 Predicción escrita ANTES de cada turno. Los roles rotan.
 
+::: {.notes}
+**Apoyo:** Verifique que la predicción quede escrita ANTES del primer turno y que los cents estén OCULTOS durante la afinación (se revelan recién al anotar). Provoque: "¿su 'sin batidos' cayó en 702 o en 700 — y cómo lo sabe su oído sin mirar?"; "¿por qué la 3ª es tan difícil de anular?"; "¿qué haría el afinador de un piano real, que no tiene pantalla?". La fase C es opcional, solo para grupos rápidos. Plan B — audífonos olvidados: la pareja afina con el parlante del notebook a volumen bajo (los batidos de la quinta sobreviven bien); si faltan muchos, la fase B se hace plenaria con la demo proyectada. Plan B — la demo no corre en los notebooks de grupo: queda solo proyectada; las parejas pasan por turnos breves al notebook del profesor para la fase A, y la fase B se hace plenaria contando en voz alta.
+:::
+
 ## Cierre: el mapa de cents (y la guitarra en vivo)
 
 Cada integrante aporta sus dos puntos a la recta del pizarrón.
@@ -120,13 +144,25 @@ Cada integrante aporta sus dos puntos a la recta del pizarrón.
 El profesor afina su guitarra por armónicos, anulando batidos — en
 vivo.
 
+::: {.notes}
+**Apoyo:** Superponga los ~9 pares de puntos del curso sobre la recta 690–710 cents del pizarrón y contraste con 702/700. Demuestre en la guitarra: armónico del 5.º traste de Mi grave contra el 7.º de La — batidos audibles que mueren al afinar (recuerde haber afinado la guitarra ANTES de clase dejando Mi–La levemente desafinada). Cierre con la frase puente hacia el módulo 2: "después del descanso, la pregunta incómoda: si nada puede ser perfecto, ¿qué versión del acorde ES la afinada?". Plan B si la guitarra no coopera (armónicos débiles en la sala): acerque el micrófono de la sala a la boca de la guitarra o, en último caso, reemplace por la demo (dos "cuerdas" sintéticas en 4:3 desafinadas 2 cents).
+:::
+
 ## ¿Cuál de los tres acordes está afinado? {.center}
 
 El mismo acorde mayor, **tres afinaciones**, orden al azar.
 
 Voten por escrito antes de que digamos nada.
 
+::: {.notes}
+**Apoyo:** Opere la demo en modo comparar, presentación. Pida el voto por escrito antes de decir nada; a mano alzada los votos suelen dividirse — esa es la gracia de la slide siguiente.
+:::
+
 ## Escuchen las tres versiones {background-iframe="../../demos/demo_temperamentos.html" background-interactive=true}
+
+::: {.notes}
+**Apoyo:** Reproduzca el mismo acorde mayor con tonos complejos en las tres afinaciones (justa, pitagórica, temperamento igual), en orden revuelto y sin nombres, antes de pasar a la revelación.
+:::
 
 ## ¿Afinado es un hecho físico, o una decisión?
 
@@ -134,6 +170,10 @@ Voten por escrito antes de que digamos nada.
 
 Las tres versiones **están afinadas** — cada una según su propia
 regla.
+
+::: {.notes}
+**Apoyo:** Revele la trampa: los TRES acordes están afinados, cada uno según su propia regla. Lance la pregunta puente — "¿entonces 'afinado' es un hecho físico o una decisión?" — y anuncie que el resto del módulo recorre las tres reglas y termina midiendo en qué regla vive el objeto de cada grupo.
+:::
 
 ## Tres maneras de repartir el error
 
@@ -146,6 +186,10 @@ regla.
 ![Qué sacrifica cada temperamento, en cents respecto del intervalo
 justo.](../../assets/figuras/s09_desviaciones.svg)
 
+::: {.notes}
+**Apoyo:** Votación: "¿la 3ª mayor del piano que conoce de toda la vida está afinada 'dulce' o 'ancha'?" — respuesta esperada: ancha, y a casi nadie le molesta porque el oído se acostumbra. Complemento (apunte, sección "El precio del compromiso: las terceras"): esa tercera late unas 10 veces por segundo en el registro central, frente a ~1 vez por segundo de la quinta. Enuncie el matiz sin relativismo barato: la física pone los batidos, la música decide cuánto tolerarlos y dónde (Roederer 1997, secs. 5.3–5.5, según el apunte).
+:::
+
 ## El color de las tonalidades — y el piano que se estira
 
 ::: {.incremental}
@@ -154,6 +198,10 @@ justo.](../../assets/figuras/s09_desviaciones.svg)
 - Las cuerdas reales tienen parciales agudos (s04): la **afinación
   estirada** ensancha las octavas del piano
 - **La4 = 440 Hz** es una convención histórica, no una constante física
+:::
+
+::: {.notes}
+**Apoyo:** Mencione los temperamentos históricos (Werckmeister) sin tablas: la coma se reparte DESIGUAL, y cada tonalidad queda con su color propio (apunte, sección "El precio del compromiso: las terceras"; Benade 1990, secs. 16.3–16.4). Presente la afinación estirada de forma cualitativa, sin curvas: los parciales de cuerdas reales son levemente agudos (s04), así que las octavas sin batidos del piano quedan más anchas que 2:1 (Benade 1990, sec. 16.5; Campbell & Greated 1987, cap. 7). Nombre La4 = 440 Hz como convención histórica, no constante física (Roederer 1997, sec. 5.4).
 :::
 
 ## ¿En qué escala vive su objeto?
@@ -168,6 +216,10 @@ justo.](../../assets/figuras/s09_desviaciones.svg)
 
 A la **bitácora** — insumo del **hito 2**.
 
+::: {.notes}
+**Apoyo:** Rote por las mesas (~8′ c/u), atendiendo a los 3 objetos de cada mesa. Exija condiciones anotadas — misma app y gesto que en s08 — para que las mediciones sean comparables en el hito 2. Provoque: "¿esos −30 cents son del objeto o de su gesto al excitarlo?"; "¿la app duda de la nota? — ¿qué dice eso del espectro (s08)?"; "¿y qué cambiarían FÍSICAMENTE para subir esos 30 cents?". Plan B — objeto sin altura definida (espectro inarmónico, la app "duda"): que reporten la altura más plausible; la duda de la app ES el resultado y conecta con la radiografía de s08. Plan B — estudiante sin objeto: que mida la escala de la grabación más reciente de su bitácora o del objeto de respaldo del profesor, con el compromiso de repetir sobre el objeto real antes del hito 2.
+:::
+
 ## Síntesis del día — y el ticket hacia s10
 
 ::: {.incremental}
@@ -180,10 +232,18 @@ A la **bitácora** — insumo del **hito 2**.
 > Ticket: "Para afinar mi objeto tengo que cambiarlo físicamente —
 > ¿qué determina que un sistema 'prefiera' vibrar en SUS frecuencias?"
 
+::: {.notes}
+**Apoyo:** Recoja los tickets y las guías del taller de afinación (rúbrica rápida al vuelo). Anuncie s10: hito 2 del proyecto (avance individual 10 %: compilado de radiografía s08 + mapa de escala s09 + bitácora individual al día, sin coevaluación), clínica cruzada por mesas en el módulo 2, y traer el objeto de nuevo.
+:::
+
 ## Para la próxima sesión
 
 ::: {.incremental}
 - Traigan de nuevo el **objeto del proyecto**
 - **Hito 2**: radiografía (s08) + escala (s09) + bitácora al día
 - Clínica de proyecto en el módulo 2
+:::
+
+::: {.notes}
+**Apoyo:** El aviso de instrumentos de estudiantes es para s11, pero corresponde anunciarlo en s10 (según el orden de PLAN_SEMESTRE.md) — no lo confunda con esta sesión.
 :::

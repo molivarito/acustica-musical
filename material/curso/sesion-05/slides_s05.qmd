@@ -35,6 +35,17 @@ Dejen en la caja, al entrar:
 
 Se verifica contra checklist. [**No se corrige hoy**]{style="color:#0f766e"} — devolución en la sesión 06.
 
+::: {.notes}
+**Apoyo:** reciba contra checklist (documento + bitácora al día); NO corrija
+hoy, la devolución es en s06. Si falta la bitácora, anótelo para
+regularizar, no se resuelve en el momento (plan.md, módulo 1, "Recepción
+del hito 1"). Si la recepción se alarga: los estudiantes dejan la entrega
+en la caja al ENTRAR (regla anunciada al llegar) y usted verifica el
+checklist durante la escucha del día que sigue; las incidencias (sin
+bitácora) se resuelven por correo, no en aula (plan.md, "Riesgos y plan
+B").
+:::
+
 ## Escucha del día {.center}
 
 Protocolo (10′, sin nota):
@@ -49,6 +60,16 @@ Protocolo (10′, sin nota):
 . . .
 
 Usen el vocabulario de s03–s04: parcial, armónico, espectro.
+
+::: {.notes}
+**Apoyo:** reproduzca el fragmento primero en el parlante propio del
+celular (a la vista) y luego en el audio de sala (~2′); pregunte
+selectivamente en el plenario a una o dos mesas (plan.md, módulo 1,
+"Escucha del día"). NO resuelva el misterio todavía — se deja abierto
+para cobrarlo recién en la próxima slide, con la apuesta del ticket de
+s04. Exija que la discusión de mesa use vocabulario de s03–s04 (parcial,
+armónico, espectro).
+:::
 
 ## La apuesta que dejaron firmada
 
@@ -65,11 +86,35 @@ En su ticket de salida de s04 predijeron: si apago del todo el parcial 1
 
 Vote a mano alzada. Veámoslo.
 
+::: {.notes}
+**Apoyo:** la convergencia esperada de la sala, una vez vista la demo en
+vivo, es "la nota sigue igual (o casi)" — así cierra el suspenso
+sembrado en s04 (plan.md, "Verificación de aprendizaje"). Si la
+votación de ahora sale mayoritariamente "baja una octava" o
+"desaparece", no corrija todavía: es lo esperable antes de ver la demo;
+la respuesta se cobra recién al oír el efecto en vivo.
+:::
+
 ## Vamos a apagar $f_1$ en vivo
 
 Miren la forma de onda y el espectro. Predigan antes de que apague nada.
 
 ## Demo: apagar la fundamental {background-iframe="../../demos/demo_fundamental_ausente.html" background-interactive=true}
+
+::: {.notes}
+**Apoyo:** secuencia: apague $f_1$, luego $f_1+f_2$, con el espectro
+armónico completo sonando primero; devele que la altura no cambia (o
+casi) aunque la frecuencia física más grave desaparezca (plan.md,
+módulo 1, "Cobro del ticket de s04 + mini-lección"). Nombre el fenómeno
+explícitamente —fundamental ausente / altura virtual— y conecte de
+inmediato con el parlante chico de la escucha del día (radia los
+armónicos, el oído reconstruye el bajo). Riesgo: si la sala regenera el
+grave por distorsión o hay ruido de fondo, el efecto se percibe peor
+por parlante — para esta demostración proyectada, elija una región
+media (parciales 3–6, ~600–1200 Hz sobre un $f_1$ de 200 Hz), donde el
+efecto es más robusto; pruébela en audífonos antes de clase (plan.md,
+"Riesgos y plan B").
+:::
 
 ## Fundamental ausente / altura virtual
 
@@ -87,6 +132,19 @@ espectro.
 Por eso el parlante del celular "da" el bajo: radia los armónicos, y el
 oído repone la fundamental que falta.
 
+::: {.notes}
+**Apoyo:** si preguntan cómo lo hace el oído, hay dos familias de
+explicación y conviene no confundirlas con una sola: espectral/de
+patrón (un procesador busca el $f_1$ cuyos armónicos mejor calzan con
+lo presente) y temporal/de periodicidad (el oído mide directamente el
+período de la forma de onda compuesta); ambas predicen el mismo
+resultado y la discusión sigue abierta — para este curso basta la
+consecuencia robusta (apunte, "Recuadro opcional para quienes vienen de
+ingeniería"; cita Rossing et al. 2002, cap. 7; Roederer 1997, sec.
+2.9). Respaldo del fenómeno: Benade 1990, cap. 5, secs. 5.6–5.7;
+Roederer 1997, sec. 2.7.
+:::
+
 ## ¿Hasta dónde aguanta el patrón?
 
 Si seguimos apagando parciales de abajo hacia arriba —$f_1$, luego $f_2$,
@@ -100,12 +158,41 @@ luego $f_3\dots$— con un **filtro pasa-altos progresivo**:
 
 La respuesta es **personal** — por eso la vamos a registrar, uno por uno.
 
+::: {.notes}
+**Apoyo:** el umbral es individual y varía entre oyentes; no es un
+defecto del experimento, es la misma lección de s01 con más resolución
+(apunte, "Hasta dónde aguanta el patrón"). Dato de apoyo si preguntan
+dónde suele romperse: mientras sobrevivan armónicos vecinos de la
+región media (entre el tercero y el sexto), el patrón se mantiene
+legible; con solo parciales muy agudos y espaciados, el oído pierde el
+hilo (apunte, misma sección).
+:::
+
 ## Por turnos: predigan antes de subir el filtro
 
 En cada turno: uno manipula, uno escucha (y mide su umbral), uno dicta
 y cronometra. Los roles rotan: tres turnos, tres umbrales.
 
+::: {.notes}
+**Apoyo:** rote por los grupos y verifique al pasar que los turnos
+efectivamente rotaron (los 3 deben registrar su propio umbral) (plan.md,
+módulo 1, "Experiencia guiada I"). Provoque: "¿la altura se rompió
+cuando quitó el segundo o el tercer parcial? ¿por qué el patrón aguanta
+tanto?" Vigile que la predicción quede escrita ANTES de escuchar —
+regla de oro de la hoja de registro (`registro_el_bajo_que_no_esta.md`).
+:::
+
 ## Demo: suba el filtro pasa-altos {background-iframe="../../demos/demo_fundamental_ausente.html" background-interactive=true}
+
+::: {.notes}
+**Apoyo:** si el módulo 1 se atrasa y no alcanza la experiencia
+completa, reduzca la puesta en común a un solo grupo y traslade el
+filtro pasa-altos progresivo al inicio del módulo 2; el mínimo
+irrenunciable es que cada estudiante apague $f_1$ en vivo y registre
+una vez (plan.md, "Riesgos y plan B"). Si el grupo tiene un segundo
+dispositivo con audífonos, dos turnos pueden correr en paralelo y sobra
+tiempo para repetir un umbral dudoso (plan.md, módulo 1).
+:::
 
 ## Taller — "el bajo que no está" {.center}
 
@@ -118,6 +205,21 @@ y cronometra. Los roles rotan: tres turnos, tres umbrales.
 - Puesta en común del grupo (2′)
 :::
 
+::: {.notes}
+**Apoyo:** tres turnos de ~7′ (cada integrante escucha y registra su
+umbral una vez); si el grupo tiene un segundo dispositivo con
+audífonos, dos turnos corren en paralelo y sobra tiempo para repetir un
+umbral dudoso (plan.md, módulo 1). Rote por los grupos, verifique que
+los turnos rotaron, provoque con la pregunta de la slide anterior y
+vigile la predicción escrita antes de escuchar. Materiales: 3 notebooks
+con la demo (ideal un segundo dispositivo con audífonos por grupo),
+audífonos personales, hoja de registro "el bajo que no está" (1 por
+estudiante). Riesgo si el fenómeno "no le pasa" a algún estudiante:
+trátelo como dato, no como error — la hoja pide el umbral personal
+justamente porque varía; se discute en la puesta en común, conectando
+con la lección de s01 (plan.md, "Riesgos y plan B").
+:::
+
 ## Síntesis del módulo 1 {.center}
 
 **La misma altura puede oírse sin que exista la frecuencia que la nombra.**
@@ -126,6 +228,14 @@ y cronometra. Los roles rotan: tres turnos, tres umbrales.
 
 Por eso el parlante chico "da" el bajo — y por eso su umbral personal
 varía: no todos reconstruimos el patrón con la misma tozudez.
+
+::: {.notes}
+**Apoyo:** superponga en el pizarrón los umbrales de los 3 grupos;
+cierre con la idea de que la altura la pone el oído reconstruyendo el
+patrón armónico, no una frecuencia presente (plan.md, módulo 1,
+"Puesta en común y síntesis"). Anuncie que el módulo 2 abre la caja:
+¿con qué máquina hace el oído esto?
+:::
 
 ## Un tono y su doble
 
@@ -136,6 +246,15 @@ doble de frecuencia.
 
 Voten a mano alzada: ¿suena **el doble de agudo**, o **la misma nota, más
 arriba**?
+
+::: {.notes}
+**Apoyo:** reproduzca ambos tonos (demo reusada de s04 o
+generador/afinador de app); registre la votación a mano alzada y deje
+la paradoja abierta, no la resuelva aquí (plan.md, módulo 2, "Gancho
+sonoro: el tono y su doble"). La respuesta se formaliza más adelante en
+esta misma mini-lección: duplicar la frecuencia da una relación
+musical especial —la octava— que no es "el doble de altura".
+:::
 
 ## El oído en una pasada
 
@@ -155,6 +274,20 @@ Agudo → excita cerca de la entrada. Grave → excita el fondo. Un análisis
 Dos pistas para la altura: el **lugar** en la membrana, y el **ritmo** del
 patrón (la fundamental ausente de recién). No siempre coinciden.
 
+::: {.notes}
+**Apoyo:** votación 1 ("¿dónde se separan las frecuencias: en el
+tímpano o más adentro?"): la respuesta es en el oído interno,
+específicamente en la cóclea/membrana basilar — el tímpano y los
+huesecillos solo adaptan y transmiten, no separan frecuencias (apunte,
+"El oído en una pasada honesta"). Votación 2 ("¿un tono agudo y uno
+grave mueven el mismo lugar de la cóclea?"): no — la membrana basilar
+es un analizador de frecuencia por lugar: el agudo excita cerca de la
+entrada, el grave excita el fondo (apunte, misma sección; cap05, Figura
+1). Mantenga la mini-lección acotada a lo necesario para banda crítica
+(s08); mencione las dos pistas de la altura sin cerrar la discusión
+(plan.md, módulo 2).
+:::
+
 ## Duplicar $f$ no es "el doble de agudo"
 
 $$\text{octava} \;\Longleftrightarrow\; f \to 2f \quad (2{:}1)$$
@@ -163,6 +296,15 @@ $$\text{octava} \;\Longleftrightarrow\; f \to 2f \quad (2{:}1)$$
 
 110, 220, 440, 880, 1760 Hz: todos La, todos **equiespaciados** en un eje
 logarítmico. La altura se organiza por **razones**, no por diferencias.
+
+::: {.notes}
+**Apoyo:** cierre aquí la votación del gancho: lo esperable, y lo que
+confirma el ejemplo de 110/220/440/880/1760 Hz, es "la misma nota, más
+arriba" (apunte, "Por qué duplicar la frecuencia no es 'el doble de
+agudo'"). Formalice: la altura se organiza por razones de frecuencia,
+no por diferencias; esa idea funda las escalas y los temperamentos de
+s09.
+:::
 
 ## Taller — "el oído y la octava" {.center}
 
@@ -176,11 +318,32 @@ logarítmico. La altura se organiza por **razones**, no por diferencias.
 > Curiosidad honesta: las **octavas estiradas** no se resuelven hoy — se
 > retoman en s09. La regla operativa sigue siendo octava = $2{:}1$.
 
+::: {.notes}
+**Apoyo:** rote por los grupos; formalice en el pizarrón solo la
+proporción octava = duplicación de $f$ (2:1) (plan.md, módulo 2,
+"Experiencia guiada II"). Presente las octavas estiradas como
+curiosidad honesta: el piano se afina con octavas un poco más anchas
+que 2:1, y la propia octava percibida se estira algo — se retoma en s09
+(temperamentos); no es contenido evaluable hoy (plan.md; apunte, cierre
+del capítulo). Si esto confunde a alguien, aclare explícitamente que la
+regla operativa del curso sigue siendo octava = 2:1 (plan.md, "Riesgos
+y plan B").
+:::
+
 ## Síntesis del día {.center}
 
 Altura ≠ frecuencia línea a línea: el oído reconstruye un **patrón**
 (fundamental ausente) y mapea frecuencia a **lugar** — pero la octava
 muestra que ese mapa tiene pliegues.
+
+::: {.notes}
+**Apoyo:** cierre las dos ideas del día en el pizarrón; conecte: mañana
+el mismo par no lineal aparece en la sonoridad (s06: ¿por qué el
+volumen depende de la frecuencia?) (plan.md, módulo 2, "Cierre
+conceptual y síntesis"). Recoja las dos hojas de registro (fundamental
+ausente + octava): cuentan juntas como el taller de la semana, con
+rúbrica rápida logrado/parcial/incipiente.
+:::
 
 ## Punto de control metodológico
 
@@ -192,6 +355,20 @@ Encuesta relámpago, anónima, 30 segundos:
 3. ¿Las **mesas llegan con algo escrito** al plenario? sí / no
 :::
 
+::: {.notes}
+**Apoyo:** cuente en vivo y anote la decisión (plan.md, módulo 2,
+"Punto de control metodológico"). Balance de la escucha del día: si en
+s02–s05 las mesas llegan sistemáticamente sin nada escrito al
+plenario, active desde s07 la palanca de METODOLOGIA.md §7 riesgo 2
+(recoger la hoja del grupo en 2 sesiones al azar y contarla como una de
+las ~10 guías de taller, sin reintroducir nota individual por hablar);
+se documenta en ESTADO_LOOP.md. Lectura previa: si menos del 60 % la
+hizo, o menos de la mitad la halló útil, active el plan B (tareas de
+escucha ≤30 min en vez de lectura de capítulo) desde s06. Registre la
+decisión en el cuaderno de decisiones del curso — no se improvisa en el
+momento.
+:::
+
 ## Para la próxima sesión
 
 Ticket de salida: dos sonidos de la **misma frecuencia**, ¿pueden oírse a
@@ -201,3 +378,12 @@ distinto volumen? Un grave y un agudo con la **misma energía física**,
 . . .
 
 s06: **sonoridad**, decibel, curvas isofónicas — y devolución del hito 1.
+
+::: {.notes}
+**Apoyo:** recoja los tickets de salida; anuncie s06 (sonoridad,
+decibel, curvas isofónicas; medición de niveles con el celular) y que
+en s06 se devuelve el hito 1 corregido (plan.md, módulo 2, "Ticket de
+salida + anuncios"). No olvide anunciar el rearme de mesas: s05 cierra
+el tramo 1 (s01–s05); las nuevas mesas y roles se asignan al inicio de
+s06 (tramo 2, s06–s10) (plan.md, encabezado de la sesión).
+:::

@@ -19,6 +19,10 @@ format:
 
 Cada defensa: **8′ de presentación** (el objeto suena en vivo) + **3′ de preguntas** (2, dirigidas a usted). 9 defensas individuales — el proyecto es suyo desde s03.
 
+::: {.notes}
+**Apoyo:** antes de dar la palabra, confirmar 9/9 informes recibidos en la puerta y encender el cronómetro de sala en cero (plan, bloque de encuadre 0–3′). Frase de apertura del plan: "hoy no gana el instrumento más bonito: gana la mejor explicación". El orden de las 9 defensas fue sorteado en s14 y está proyectado en la lámina de entrada; si el sorteo no se hizo o falta alguien, re-sorteo de 2′ en el encuadre (plan, riesgos y plan B). El estudiante 1 fue citado 10′ antes para montar sin apuro (guion, checklist de la víspera).
+:::
+
 ## ¿Cómo corre el día?
 
 | | |
@@ -27,6 +31,10 @@ Cada defensa: **8′ de presentación** (el objeto suena en vivo) + **3′ de pr
 | **Tiempos** | 8′ presentación + 3′ preguntas = 11′, iguales para las 9 |
 | **Corte** | cronómetro visible — corte duro, igual para las 9 |
 | **Transición** | quien sigue pre-monta mientras el anterior responde |
+
+::: {.notes}
+**Apoyo:** aviso de tiempo a los 6′30″, corte duro a los 8′ (plan y guion, protocolo de cronometraje). La defensa 1 es la excepción: lleva 4′ de transición (no 1′) porque no hay Q&A previa de la que "robar" tiempo de montaje; desde la defensa 2 el bloque vuelve a 12′ (guion §2, nota sobre los 63′ de las defensas 1–5). Los cortes de defensa no se estiran por ningún motivo — es la equidad prometida en la pauta (plan, riesgos y plan B).
+:::
 
 ## Mientras otro compañero defiende, ¿qué hace usted?
 
@@ -40,11 +48,19 @@ Cada defensa: **8′ de presentación** (el objeto suena en vivo) + **3′ de pr
 - Al pasar hacia el cierre, marque ★ su **mejor diagnóstico** y entregue la hoja
 :::
 
+::: {.notes}
+**Apoyo:** cada estudiante ya recibió en la puerta su hoja pre-rotulada con sus 2 defensas asignadas (protocolo de puerta, guion §1). Cada bloque se escribe durante los 3′ de preguntas + 1′ de transición de esa defensa (~4′ hábiles, más lo que alcance mientras escucha); por eso el sorteo reparte las defensas a lo largo de ambos módulos, no todas seguidas (plan, aritmética de tiempos). Recordar: diagnostican el instrumento, no la presentación — calificar a los compañeros es tarea del profesor (hoja de escucha, mecánica). El bloque marcado ★ es la tercera escucha escrita del semestre y se corrige con la rúbrica OA3; cuentan las mejores 2 de las 3 escuchas escritas del curso (plan, verificación de aprendizaje).
+:::
+
 ## La regla que gobierna todo desde la sesión 3 {.center}
 
 > La calidad de la explicación pesa más que el éxito sonoro.
 
 [la regla del curso — hoy se aplica completa]{style="color:#0f766e"}
+
+::: {.notes}
+**Apoyo:** la regla está en `OBJETIVOS_APRENDIZAJE.md` (OA5.3) y gobierna la rúbrica del hito 3 desde el lanzamiento del proyecto en s03; hoy R1 (la dimensión de explicación acústica) desempata la nota (apunte, "¿Qué se evalúa cuando ya está todo construido?").
+:::
 
 ## ¿Por qué la explicación pesa más que el sonido?
 
@@ -54,11 +70,19 @@ Cada defensa: **8′ de presentación** (el objeto suena en vivo) + **3′ de pr
 - Por eso la dimensión que explica el sonido **desempata** la nota
 :::
 
+::: {.notes}
+**Apoyo:** un objeto que sonó exactamente como se predijo, sin mecanismo, demuestra suerte; uno que se desvió — y cuya desviación fue medida y explicada — demuestra aprendizaje (apunte, "¿Qué se evalúa cuando ya está todo construido?"). Si el plenario queda callado, recordar el error clásico de "esconder la desviación": la desviación explicada vale más que el éxito mudo, y la rúbrica lo dice por escrito — R1 y R3 premian la desviación cuantificada y explicada (apunte, "Los errores clásicos").
+:::
+
 ## Se acabaron las defensas {.center}
 
 Quedan ustedes con ustedes mismos.
 
 > Nota directa, sin coevaluación: el proyecto es individual desde s03. Entreguen su hoja de escucha (con el ★ marcado) en la caja, al pasar hacia aquí.
+
+::: {.notes}
+**Apoyo:** reciben la hoja de escucha (con el ★ ya marcado) en la caja de recepción, al pasar hacia este bloque (plan, módulo 2, bloque "Línea base, de nuevo"). Nota directa sin coevaluación: el proyecto es individual desde s03, no hay compañeros de proyecto que coevaluar (plan, regla aplicada 2).
+:::
 
 ## La línea base, otra vez {.center}
 
@@ -71,6 +95,10 @@ Van a escuchar, una vez más, **el mismo audio de la sesión 1**.
 . . .
 
 Y van a responder la misma consigna de entonces: qué oyen, qué lo produce, cómo lo comprobarían.
+
+::: {.notes}
+**Apoyo:** reproducir el estímulo #1 del banco (guitarra con batidos), el MISMO archivo de s01, dos pasadas; no adelantar nada (plan, módulo 2, bloque "Línea base, de nuevo"). Consigna idéntica a la de s01: qué oyen, qué lo produce, cómo lo comprobarían — se escribe en la media hoja "hoy" (plan; plantilla en el guion §5). Recibir antes las hojas de escucha en la caja (guion, cronograma 48–54′).
+:::
 
 ## Abran el sobre {.center}
 
@@ -86,6 +114,10 @@ Compárenla, en silencio, con lo que acaban de escribir.
 
 Ambas hojas son suyas: se las llevan.
 
+::: {.notes}
+**Apoyo:** repartir los sobres de línea base nominados (preparados de antemano); silencio deliberado, no comentar (plan, bloque "Devolución simbólica"). Ambas hojas (la de s01 y la de hoy) son del estudiante: se las lleva (plan, mismo bloque). Si la emoción se desborda o se enfría: las voces del bloque siguiente son voluntarias; si nadie quiere leer, el profesor lee (anónima) una línea base de s01 junto a una media hoja de hoy y deja la comparación en el aire (plan, riesgos y plan B).
+:::
+
 ## El arco completo, en un minuto (1/2)
 
 ::: {.incremental}
@@ -93,6 +125,10 @@ Ambas hojas son suyas: se las llevan.
 - Aprendimos a **ver** el sonido: forma de onda, espectro, espectrograma
 - Cada objeto vibra en sus **modos**: la receta de parciales es el timbre
 - El oído **no es un micrófono**: sonoridad, batidos, consonancia — percepción con reglas propias
+:::
+
+::: {.notes}
+**Apoyo:** síntesis tomada del capítulo 15, "El arco completo, mirado desde el final": el golpe que se vuelve altura por la repetición, los anteojos (forma de onda, espectro, espectrograma) que ya no se quitaron, los modos y la receta de parciales como timbre, y el oído que no es un micrófono (sonoridad, batidos, consonancia, escalas).
 :::
 
 ## El arco completo, en un minuto (2/2)
@@ -103,12 +139,20 @@ Ambas hojas son suyas: se las llevan.
 - Y al final, **la sala**: el instrumento que nadie elige tocar, pero que suena en todo lo que suena
 :::
 
+::: {.notes}
+**Apoyo:** continúa el capítulo 15: la resonancia como puente hacia los instrumentos sostenidos, las tres válvulas (fricción del arco, aire de la flauta, pliegues vocales) como una sola gramática, y la sala como el instrumento que nadie elige tocar pero que suena en todo lo que suena.
+:::
+
 ## El método que no cambió nunca
 
 > Lo que se oye. El mecanismo que lo produce. La medición que arbitra.
 
 - **Describir → hipotetizar → verificar**, desde la sesión 1 hasta la defensa de hoy
 - Hoy cada uno de ustedes recorrió esa cadena completa — con su propio instrumento, en vivo
+
+::: {.notes}
+**Apoyo:** las tres capas del curso son lo que se oye, el mecanismo que lo produce y la medición que arbitra — describir, hipotetizar, verificar, desde s01 hasta la defensa de hoy (capítulo 15, "El arco completo, mirado desde el final"). Cada defensa de hoy recorrió la cadena fenómeno → modelo → predicción → medición → desviación → explicación (apunte, "La columna vertebral de una buena explicación").
+:::
 
 ## Desde hoy, ustedes ya no pueden des-oír {.center}
 
@@ -117,6 +161,10 @@ Escuchar como científico no se olvida.
 . . .
 
 [Desde hoy, ustedes ya no pueden des-oír.]{style="color:#0f766e"}
+
+::: {.notes}
+**Apoyo:** cierre tomado del capítulo 15, "Lo que usted ya no puede des-oír": la escucha entrenada no tiene marcha atrás — la apuesta del curso era que escuchar como científico es una alteración permanente y feliz de la manera de estar en el mundo sonoro.
+:::
 
 ## Antes de irse
 
@@ -131,3 +179,7 @@ QR<br>encuesta
 :::
 
 Gracias por un semestre de escuchar como científicos.
+
+::: {.notes}
+**Apoyo:** proyectar el QR o enlace de la encuesta (institucional o propia, la define el profesor) y recordar que las notas del hito 3 y del semestre se publican por el canal del curso en el plazo que el profesor fije (plan, módulo 2, bloque "Evaluación del curso y despedida"). Si el cierre viene comprimido por atraso, este es uno de los fusibles: la encuesta puede migrar a formulario en línea a 48 h (plan, riesgos y plan B / regla de fusibles).
+:::

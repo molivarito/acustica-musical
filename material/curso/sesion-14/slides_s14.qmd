@@ -22,6 +22,17 @@ forma solamente.
 
 Al minuto 10, corte duro: a la mochila.
 
+::: {.notes}
+**Apoyo:** entregue el cuadernillo en la puerta (ahorra el reparto);
+proyecte la lámina de errores frecuentes y responda SOLO preguntas de
+forma — las consultas individuales van al horario declarado en la
+lámina (plan, m1 0–10′). Al minuto 10, cierre con la frase del plan:
+"la física de la prueba ya la vivieron; hoy toca el tercer socio", y
+que guarden el cuadernillo. Recuerde que hoy corresponde publicar la
+pauta del hito 3 (se entrega impresa al final del módulo 1) — es un
+compromiso heredado de s13.
+:::
+
 ## Hoy: la sala entra en escena
 
 ::: {.incremental}
@@ -48,6 +59,17 @@ sin nota:
 *(La próxima semana el estímulo son ustedes — y esa escucha sí se
 escribe y se califica.)*
 
+::: {.notes}
+**Apoyo:** reproduzca el estímulo #16 del banco (la misma frase de
+flauta, seca y luego reverberante) y pregunte selectivamente a una o
+dos mesas en el plenario (plan, m1 10–20′). Cierre con la síntesis del
+plan: "todo lo que ustedes describieron — cola, mezcla, 'baño' — hoy
+se llama, se explica y se mide." Es la última escucha del día del
+semestre y cobra el ticket de salida de s13 (ducha/sala/catedral); no
+aporta a la nota de OA3 — esa se construye con las escuchas escritas
+de s07, s13 y s15 (mejores 2 de 3).
+:::
+
 ## El ticket de la semana pasada {.center}
 
 > ¿Por qué la MISMA voz suena tan distinta en la ducha, en esta sala y
@@ -68,6 +90,19 @@ otra **se absorbe**.
 
 ¿Y 9 personas con ropa, comparadas con la sala vacía?
 
+::: {.notes}
+**Apoyo:** respuesta esperada de la primera votación — el hormigón (o
+el vidrio) devuelve casi todo lo que recibe; la cortina gruesa se
+traga una fracción grande de lo que le llega (apunte, sección "¿Qué
+hace una pared con el sonido que le llega?"; C&G cap. 14, pp.
+525–532). El caso límite es la ventana abierta, que "absorbe" todo —
+por definición se le asigna absorción 1 y contra ella se comparan los
+demás materiales. Segunda pregunta (9 personas con ropa vs. sala
+vacía): el público absorbe una fracción grande, igual que la cortina —
+de ahí sale el diagnóstico "sala viva / sala seca" que el oído
+detecta en una palmada (apunte, misma sección).
+:::
+
 ## ¿A quién le escucho: al instrumento o a la sala?
 
 > **Campo directo**: llega en línea recta, se debilita con la distancia.
@@ -81,6 +116,16 @@ la cancha?
 
 Lejos de la fuente, manda la sala — no la fuente.
 
+::: {.notes}
+**Apoyo:** respuesta esperada — NO cae igual: en la sala, lejos de la
+fuente domina el campo reverberante y el nivel casi no baja al
+alejarse (por eso en una iglesia el nivel casi no cae cuando uno se
+aleja del coro); en la cancha abierta domina el campo directo, que se
+debilita rápido con la distancia, y la misma distancia deja sin
+concierto (apunte, sección "¿A quién le escucho: al instrumento o a la
+sala?"; C&G cap. 14, pp. 532–539; ROE 4.7).
+:::
+
 ## ¿Cuánto dura una sala?
 
 > $T_{60}$: tiempo que tarda el nivel en caer **60 dB** desde que la
@@ -92,6 +137,16 @@ Lejos de la fuente, manda la sala — no la fuente.
 
 *(2′ de cultura: por qué no oímos cada rebote como un eco aparte — el
 **efecto precedencia**, BEN 12.2. No entra en evaluación.)*
+
+::: {.notes}
+**Apoyo:** complemento para los 2′ de efecto precedencia — el sistema
+auditivo le da prioridad al primer frente que llega (el directo) y
+funde las reflexiones tempranas con él, en vez de oírlas como ecos
+separados; sin él, cada sala sería una cámara de ecos inhabitable
+(apunte, sección "¿A quién le escucho: al instrumento o a la sala?";
+BEN 12.2). Declare explícitamente su estatus: cultura general, no
+entra en ninguna evaluación.
+:::
 
 ## Sabine, en proporciones
 
@@ -107,24 +162,75 @@ $$T_{60} \propto \frac{V}{A}$$
 Por eso el ensayo sin público "suena a otra sala" — *es* otra sala, con
 otra $A$.
 
+::: {.notes}
+**Apoyo:** si preguntan por cifras, el recuadro del apunte trae un
+ejemplo: sala de clases de 7×8×3 m (V≈170 m³) con A≈25 m² da
+T60≈1,1 s vacía, y bastante menos con estudiantes adentro; las salas
+de concierto célebres rondan los 2 s, una pieza amoblada unas décimas
+(apunte, recuadro "el número, para quien lo quiera"; constante
+0,161 s/m; C&G cap. 14; ROS cap. 23).
+:::
+
 ## Prediga, antes de mover nada {.center}
 
 Con la sala de clases dibujada y la curva **oculta**: si barro un tono
 de grave a agudo, ¿sonará parejo o habrá notas que "engordan"?
 
+::: {.notes}
+**Apoyo:** pida la predicción a mano alzada ANTES de mover el slider
+de la demo (plan, m1 35–49′, "Demo predictiva"); no revele la
+respuesta todavía — la trae la demo siguiente.
+:::
+
 ## Demo: la sala de clases {background-iframe="../../demos/demo_modos_sala.html" background-interactive="true"}
+
+::: {.notes}
+**Apoyo:** opere la demo con audio de sala; el barrido debe encontrar
+los modos — el tono se refuerza al pasar por $f = v\,n/2L$ de cada eje
+(plan, m1 35–49′). Use este primer paso para mostrar la sala de clases
+tal como está dibujada, antes de achicarla a ducha.
+:::
 
 ## Achicamos la sala a una ducha (2 m) {.center}
 
 ¿Qué le pasa a esas frecuencias favoritas?
 
+::: {.notes}
+**Apoyo:** respuesta esperada — los modos suben y se separan, y
+quedan justo donde canta una voz; por eso la ducha afina (plan, m1
+35–49′). Cifras del apunte si preguntan: primer modo ≈86 Hz, luego
+≈171 y ≈257 Hz para L=2 m — plena zona de la voz (apunte, sección
+"¿Por qué la ducha favorece ciertas notas? Los modos de sala").
+:::
+
 ## Demo: la ducha {background-iframe="../../demos/demo_modos_sala.html" background-interactive="true"}
+
+::: {.notes}
+**Apoyo:** muestre cómo los modos de la ducha (≈86, 171, 257 Hz)
+quedan pocos y bien separados, justo en la zona grave de la voz
+(apunte, misma sección; figura 2 del apunte).
+:::
 
 ## Ahora, una catedral {.center}
 
 ¿Todavía se distinguen protagonistas, o pasa otra cosa?
 
+::: {.notes}
+**Apoyo:** respuesta esperada — ya no se distinguen protagonistas: los
+modos se apilan tan densos que la respuesta se empareja, y lo que
+queda como firma de la sala es la mezcla (la cola), no notas
+favoritas (plan, m1 35–49′; apunte, sección "¿Por qué la ducha
+favorece ciertas notas?").
+:::
+
 ## Demo: la catedral {background-iframe="../../demos/demo_modos_sala.html" background-interactive="true"}
+
+::: {.notes}
+**Apoyo:** remate de los tres pasos de la demo: "la sala es un
+resonador de s10 hecho de aire y paredes: modos de s03, decaimiento de
+s10, medido con los dB de s06" (plan, m1 35–49′) — puede adelantarlo
+aquí o dejarlo para la síntesis de la slide siguiente.
+:::
 
 ## Un resonador hecho de aire y paredes
 
@@ -139,6 +245,12 @@ de grave a agudo, ¿sonará parejo o habrá notas que "engordan"?
 Sala chica → modos ralos y audibles. Sala grande → modos tan densos que
 ya no se distinguen.
 
+::: {.notes}
+**Apoyo:** frase de cierre sugerida por el plan: "la sala es un
+resonador de s10 hecho de aire y paredes: modos de s03, decaimiento de
+s10, medido con los dB de s06" (plan, m1 35–49′).
+:::
+
 ## El método, antes de salir
 
 Van a ver la medición completa, una vez, en esta misma sala:
@@ -148,6 +260,12 @@ Van a ver la medición completa, una vez, en esta misma sala:
 2. **Impulso** — globo reventado o palmada fuerte
 3. La **app** registra la caída de nivel
 4. Se **lee** el valor de $T_{60}$
+:::
+
+::: {.notes}
+**Apoyo:** ejecute la medición modelo dos veces — una con globo, una
+con palmada fuerte — y compare los resultados con el curso (plan, m1
+49–70′).
 :::
 
 ## Regla del oficio: nunca un solo dato
@@ -163,6 +281,16 @@ Van a ver la medición completa, una vez, en esta misma sala:
 *(Nunca comparar dos espacios medidos con impulsos distintos sin
 decirlo.)*
 
+::: {.notes}
+**Apoyo:** explique la regla de las 3 mediciones por espacio y la
+extrapolación si el fondo tapa la caída — se lee la caída inicial, no
+se espera el silencio absoluto (plan, m1 49–70′; apunte, sección
+"¿Cómo se mide esto con un celular?"). Si el fondo tapa la cola
+(pasillo con gente), se mide igual, se lee la caída inicial y se
+anota "extrapolado" — es un dato del informe, no un fracaso (plan,
+Riesgos y plan B).
+:::
+
 ## La salida: roles y materiales
 
 Grupo con roles que **rotan** en cada espacio:
@@ -172,6 +300,13 @@ Grupo con roles que **rotan** en cada espacio:
 . . .
 
 Por grupo: 2 celulares con las apps, 3–4 globos, guía impresa.
+
+::: {.notes}
+**Apoyo:** asigne una ruta por grupo, dé las reglas de convivencia
+(espacios en uso, volumen, permisos) y la hora de corte; entregue la
+pauta del hito 3 impresa recordando que se lee en casa y las consultas
+van por el canal declarado en la pauta (plan, m1 49–70′).
+:::
 
 ## Su ruta de hoy
 
@@ -183,6 +318,14 @@ Por grupo: 2 celulares con las apps, 3–4 globos, guía impresa.
 | **Hora de corte** | *[a completar]* |
 | **Punto de encuentro** | *[a completar]* |
 
+::: {.notes}
+**Apoyo:** complete la tabla con los espacios concretos de cada ruta
+antes de proyectar — los fija el profesor (plan, "Pendientes de
+producción"). Si llueve o un tramo queda impracticable, cada ruta
+trae un espacio alternativo bajo techo; si un espacio está ocupado o
+cerrado, se usa la alternativa de la ruta (plan, Riesgos y plan B).
+:::
+
 ## En cada espacio {.center}
 
 Primero suena, después se mide: **palmada diagnóstica** antes de
@@ -190,6 +333,13 @@ encender la app.
 
 Después: fondo → 3 impulsos → mediana → dimensiones → materiales →
 planilla compartida.
+
+::: {.notes}
+**Apoyo:** es el gancho sonoro del módulo — la palmada diagnóstica
+antes de encender la app, todos callados, con una línea de oído
+anotada antes de medir (plan, apertura del módulo 2: "primero suena,
+después se mide").
+:::
 
 ## Al volver: sorteo y reglas de s15
 
@@ -204,6 +354,15 @@ Sorteo **en vivo** del orden de las **9 defensas individuales**.
   entrega al inicio de s15
 :::
 
+::: {.notes}
+**Apoyo:** el sorteo es en vivo y con testigos; si genera algún
+reclamo, la pauta del hito 3 declara que el orden no afecta la
+rúbrica — corte duro e igual para los 9, sin compensación por abrir en
+frío (plan, Riesgos y plan B). Recuerde que la pauta del hito 3 ya
+está en sus manos desde el módulo 1 y que el plazo de las 20:00 está
+en la pauta (plan, m2 55–70′).
+:::
+
 ## Síntesis y cierre
 
 ::: {.incremental}
@@ -215,3 +374,10 @@ Sorteo **en vivo** del orden de las **9 defensas individuales**.
 . . .
 
 **La próxima semana, ustedes son el estímulo: el público escribe su escucha argumentada sobre las presentaciones.**
+
+::: {.notes}
+**Apoyo:** esta sesión no siembra ticket hacia s15 — no hay contenido
+nuevo que cosechar; su lugar lo ocupa la logística del hito 3 y el
+cierre del arco "ustedes son el estímulo" (plan, "Verificación de
+aprendizaje", Cadena de tickets).
+:::

@@ -29,6 +29,22 @@ format:
 - Plenario (**3′**): el profesor pregunta a una o dos mesas — responde el vocero por el grupo — y cierra con su propia versión
 :::
 
+::: {.notes}
+**Apoyo:** ejecute las dos pulsadas usted mismo primero de oído, sin
+pantalla — en el medio y luego pegado al puente (plan, módulo 1, bloque
+0–10′). Pregunte selectivamente a una o dos mesas, exigiendo vocabulario
+de s03 (parcial, armónico, espectro vs. timbre); la hipótesis natural es
+la que ya escribieron en el ticket de s03. Cierre con su propia versión
+experta y el suspenso: "¿cambió la nota o cambió el timbre? — lo
+dejaron escrito la semana pasada" (plan) — no revele el veredicto aún,
+llega con el espectrograma en el bloque siguiente. Aproveche este bloque
+para que los instrumentos se instalen: la instalación se hace durante la
+escucha del día, con los instrumentos ya fuera de sus fundas al entrar
+(plan, Riesgos y plan B — "el módulo 1 se atrasa por afinar/instalar
+instrumentos"). Materiales: guitarra (del profesor o de un grupo) +
+tickets de s03 recopilados.
+:::
+
 ## ¿Cambió la nota o cambió el timbre? {.center}
 
 Es la misma pregunta que dejaron escrita en su ticket de s03.
@@ -36,6 +52,14 @@ Es la misma pregunta que dejaron escrita en su ticket de s03.
 . . .
 
 Guárdense la hipótesis — en 15 minutos hay veredicto con espectrograma.
+
+::: {.notes}
+**Apoyo:** no resuelva la apuesta aquí — el plan indica que el veredicto
+se da recién con el espectrograma proyectado, contrastando con lo que
+cada mesa anotó en el ticket de s03 (plan, bloque 10–25′). Es la misma
+pregunta que cerraron por escrito en s03; recuérdelo para que sientan la
+continuidad.
+:::
 
 ## La receta de vibración
 
@@ -48,6 +72,17 @@ Guárdense la hipótesis — en 15 minutos hay veredicto con espectrograma.
 - La pulsación no inventa frecuencias: solo las **dosifica**
 :::
 
+::: {.notes}
+**Apoyo:** cita completa (apunte, sección "¿Cambió la nota o cambió el
+timbre?"): "esa lista de amplitudes, parcial por parcial, es lo que
+Benade (1990, cap. 7) llama la receta de vibración, y es la mejor
+definición operativa de timbre que el curso va a manejar: la nota es
+*qué* frecuencias; el timbre empieza en *cuánto* de cada una." Esta
+mini-lección consume la lectura previa (cap. 4 del libro): antes de las
+votaciones conviene verificar con una pregunta rápida que la leyeron —
+la regla del curso es que lo leído se usa visiblemente en clase.
+:::
+
 ## Votación 1
 
 ¿Pulsar donde el modo 2 tiene un **nodo** lo enciende o lo deja mudo?
@@ -56,6 +91,14 @@ Guárdense la hipótesis — en 15 minutos hay veredicto con espectrograma.
 
 **Mudo** — un modo no puede moverse donde tiene un nodo.
 
+::: {.notes}
+**Apoyo:** respaldo (apunte, sección "La regla de la receta"): "un modo
+que tiene un nodo en el punto de pulsación no puede moverse ahí por
+definición: la púa no tiene cómo entregarle energía y queda mudo." Es la
+primera de las dos preguntas de la mini-lección (plan, bloque 10–25′);
+vote a mano alzada antes de revelar.
+:::
+
 ## Votación 2
 
 El dedo de la tapa de olla (s03) y la púa de hoy: ¿leen el mismo mapa o el contrario?
@@ -63,6 +106,13 @@ El dedo de la tapa de olla (s03) y la púa de hoy: ¿leen el mismo mapa o el con
 . . .
 
 **El mismo mapa, con la palanca invertida.**
+
+::: {.notes}
+**Apoyo:** respaldo (apunte): "la púa y el dedo apagador leen
+exactamente el mismo mapa, con la palanca invertida: pulsar enciende lo
+que se mueve; tocar apaga lo que se mueve." Conecta directo con el dedo
+sobre la tapa de olla de s03 — recuérdelo si la sala no cae sola.
+:::
 
 ## La regla de la receta {.center}
 
@@ -73,6 +123,13 @@ El dedo de la tapa de olla (s03) y la púa de hoy: ¿leen el mismo mapa o el con
 
 Pulsar enciende lo que se mueve; tocar apaga lo que se mueve.
 
+::: {.notes}
+**Apoyo:** esta es la regla central de la sesión (apunte, cita textual:
+"pulsar en un punto enciende los modos que se *mueven* en ese punto y
+silencia los que tienen un *nodo* ahí"). Toda la sesión cabe en esa
+simetría (apunte): úsela como frase ancla antes de lanzar el taller.
+:::
+
 ## El mapa de la cuerda
 
 | Punto de pulsación | Modos encendidos | Timbre |
@@ -81,6 +138,15 @@ Pulsar enciende lo que se mueve; tocar apaga lo que se mueve.
 | $\sim L/10$ (cerca del puente) | casi todos, agudos incluidos | brillante, metálico |
 
 En general: pulsar a $1/n$ del largo silencia el modo $n$ y sus múltiplos.
+
+::: {.notes}
+**Apoyo:** respalda la tabla la Figura 1 del apunte: "arriba, pulsada en
+$L/2$: todos los parciales pares tienen un nodo ahí y nacen mudos —queda
+solo la serie impar, el sonido hueco—. Abajo, pulsada cerca del puente
+($L/10$): se enciende un poco de todos los modos, receta pareja y rica
+en agudos, sonido brillante." La regla general de la fila final es la
+que van a aplicar en el taller inmediatamente después.
+:::
 
 ## Taller: el mapa de la cuerda
 
@@ -95,6 +161,24 @@ En grupo, con SU instrumento: midan $L$, marquen $L/2$, $L/4$, $\sim L/10$ con c
 
 Registran su mapa punto→parciales en la guía PEE.
 
+::: {.notes}
+**Apoyo:** rote por los grupos (~6′ cada uno, plan). Provoque con la
+pregunta del plan: "¿la pulsada en $L/2$ tiene el parcial 2 o no lo
+tiene?"; a los grupos que lleguen a la fase 2 opcional: "¿el armónico
+del traste 12 y la pulsada al medio dejan sonar los MISMOS modos… o los
+contrarios?" Vigile que la predicción quede escrita ANTES de pulsar
+(criterio central de la rúbrica). Plan B — grupo sin instrumento: la
+guitarra del profesor + el monocordio de s03 rotan entre los grupos
+afectados; con mínimo 2 instrumentos en sala el taller es viable (dos
+grupos comparten uno y turnan las mediciones). Plan B — el
+espectrograma no resuelve los parciales (cuerdas de nylon graves, sala
+ruidosa): usar la cuerda más aguda con sonido claro, pulsar fuerte y
+capturar pantalla justo tras el ataque (mismo truco de s03); preferir
+cuerda metálica si hay. La fase 2 (armónicos naturales) es opcional y
+puede no salir en instrumentos de escala corta (ukelele, charango); si
+un grupo rápido la intenta, el del traste 12 sale siempre y basta.
+:::
+
 ## Cierre módulo 1
 
 Pregunta relámpago: pulsé exactamente donde el modo 3 tiene un nodo.
@@ -102,6 +186,15 @@ Pregunta relámpago: pulsé exactamente donde el modo 3 tiene un nodo.
 . . .
 
 **¿Suena el parcial 3?**
+
+::: {.notes}
+**Apoyo:** antes de la pregunta relámpago: un grupo expone su mapa
+(tabla de puntos de pulsación); usted sintetiza en el pizarrón el mapa
+de la cuerda con los hallazgos de los 3 grupos (plan, bloque 62–70′).
+Pregunta relámpago — respuesta esperada: la sala completa debe responder
+"no" sin dudar (Verificación de aprendizaje del plan). Recoja las guías:
+se cierran junto con la guía del módulo 2 (estirar, acortar, engordar).
+:::
 
 ## La nota al revés {.center}
 
@@ -111,6 +204,14 @@ Escuchen esta grabación: ¿qué instrumento creen que es?
 
 Ahora al derecho. Misma receta de parciales, otra envolvente.
 
+::: {.notes}
+**Apoyo:** reproduzca la grabación invertida (preparada esta semana) sin
+explicar nada; luego revele que era una nota de guitarra al derecho
+(plan, bloque 0–8′ del módulo 2). Deje la pregunta plantada sin
+responderla: "si el espectro es el mismo, ¿qué cambió?" — se resuelve
+más adelante, con la envolvente.
+:::
+
 ## Antes de escuchar, prediga
 
 ::: {.incremental}
@@ -119,7 +220,32 @@ Ahora al derecho. Misma receta de parciales, otra envolvente.
 - ¿Cuál de los dos se parece a lo que midieron en el taller?
 :::
 
+::: {.notes}
+**Apoyo:** respuestas esperadas (apunte y capítulo): sumar el parcial 2
+al seno no agrega una nota nueva, cambia el timbre — sigue siendo una
+sola nota en $f_1$, cambia el color. El preset "cerca del puente" suena
+más brillante (receta pareja, rica en agudos); el preset "al medio"
+suena hueco (solo impares) — coincide con la tabla de la mini-lección.
+La tercera pregunta conecta directo con lo que cada grupo midió en su
+taller: deben reconocer su propio mapa punto→parciales en los presets.
+:::
+
 ## Demo: cocinar el timbre desde cero {background-iframe="../../demos/demo_sintesis_aditiva.html" background-interactive=true}
+
+::: {.notes}
+**Apoyo:** secuencia de operación (plan, bloque 8–28′): parte de un seno
+puro (solo parcial 1), suma parciales de a uno, luego presets "pulsada
+al medio" / "pulsada cerca del puente" / "diente de sierra"; active la
+envolvente de pulsación AL FINAL — recién ahí la receta suena "a
+cuerda" y cierra el gancho de la nota al revés. Antes de cada paso, pida
+la predicción a mano alzada (preguntas de la slide anterior) y verifique
+oyendo y viendo forma de onda y espectro. Instale la idea de cierre del
+bloque: el espectro es la receta del timbre, y la envolvente es el
+resto de la receta. Plan B si la demo falla en el proyector: mostrar la
+síntesis aditiva con `demo_modos_cuerda.html` de s03 (suma de modos con
+amplitudes ajustables cubre el núcleo); la exploración fina queda de
+tarea con el enlace publicado.
+:::
 
 ## Espectro↔timbre: la relación no es unívoca
 
@@ -129,6 +255,16 @@ Ahora al derecho. Misma receta de parciales, otra envolvente.
 :::
 
 > El timbre es la [**receta + su envolvente**]{style="color:#0f766e"} — el espectro solo no basta.
+
+::: {.notes}
+**Apoyo:** respaldo (apunte, sección "Síntesis aditiva"): "sumar
+parciales armónicos no agrega notas: mientras las frecuencias guarden
+las razones enteras, el oído funde todo en *una* nota en $f_1$ y lo que
+cambia al mover los sliders es el *color* de esa nota." La envolvente ya
+quedó demostrada en la demo (sostenida = órgano; con envolvente de
+pulsación = cuerda): use esta slide para cerrar el bloque antes de pasar
+a las palancas de la nota.
+:::
 
 ## Estirar, acortar, engordar: las tres palancas de $f_1$
 
@@ -147,12 +283,37 @@ Ahora al derecho. Misma receta de parciales, otra envolvente.
 
 Sí, y **+12 %** — las dos raíces cuadradas en acción.
 
+::: {.notes}
+**Apoyo:** respuestas esperadas: el traste 12 divide la cuerda justo en
+dos y el afinador marca la octava exacta (apunte); subir un semitono con
+la clavija exige ~+12 % de tensión (no ~1 % ni ~100 %). Formalice en el
+pizarrón SOLO las proporciones: $f_1 \propto 1/L$, $f_1 \propto
+\sqrt{F_T}$, $f_1 \propto 1/\sqrt{\mu}$; la fórmula completa queda en el
+recuadro opcional del apunte, no hace falta deducirla en clase. Conecte
+con las tres palancas de afinar una guitarra: clavija (tensión), traste
+(largo), grosor/entorchado de la cuerda (masa) — por eso la sexta
+cuerda da un Mi dos octavas más grave que la primera con el mismo largo
+(apunte). Los grupos trabajan con SUS instrumentos y afinador (app);
+rote y revise que prediquen por proporciones antes de medir.
+:::
+
 ## Proyecto: de la idea a la predicción
 
 ::: {.incremental}
 - Reciben su media hoja de s03 comentada
 - Se publica la **pauta del hito 1** (entrega s05, 10 %)
 - En grupo: eligen su idea definitiva, nombran el parámetro, esbozan qué van a predecir
+:::
+
+::: {.notes}
+**Apoyo:** presente la pauta del hito 1: estructura de 1 página,
+rúbrica, bitácora individual, fecha de entrega — al inicio de s05 (plan,
+bloque 42–62′). Devuelva las 9 medias hojas individuales comentadas
+antes de que elijan su idea definitiva. Rote por las mesas empujando a
+cada estudiante hacia la predicción concreta: "¿qué número va a
+atreverse a escribir?" (plan) — la mesa opina, pero la decisión es
+individual, el proyecto es individual. Verificación mínima al rotar:
+cada estudiante debe poder decir en una frase qué va a predecir.
 :::
 
 ## Síntesis del día
@@ -163,6 +324,12 @@ Sí, y **+12 %** — las dos raíces cuadradas en acción.
 - El timbre es receta **+ envolvente**, no espectro solo
 :::
 
+::: {.notes}
+**Apoyo:** recapitulación rápida de los tres bloques del día — receta de
+vibración (mapa de la cuerda), síntesis aditiva (espectro↔timbre) y las
+tres palancas de la nota — sin abrir preguntas nuevas, es cierre.
+:::
+
 ## Ticket de salida {.center}
 
 En la demo (queda publicada), apaguen del todo el **parcial 1** — la fundamental.
@@ -171,10 +338,26 @@ En la demo (queda publicada), apaguen del todo el **parcial 1** — la fundament
 
 ¿La nota baja una octava, desaparece, o sigue igual? **Escriban su predicción.**
 
+::: {.notes}
+**Apoyo:** no revele la respuesta — es la apuesta que abre s05, "una de
+las sorpresas más grandes del semestre" (apunte, sección "Hacia la
+sesión 05"); límitese a asegurarse de que la predicción quede escrita.
+Recoja las dos guías del día (mapa de la cuerda + estirar/acortar/
+engordar) junto con el ticket; cuentan juntas como el taller de la
+semana con rúbrica rápida.
+:::
+
 ## Para la próxima sesión
 
 ::: {.incremental}
 - **Hito 1** se entrega al inicio de s05 (pauta ya en sus manos)
 - La demo queda publicada: explórenla en casa, sin borrar su predicción del ticket
 - s05 abre respondiendo el ticket de hoy
+:::
+
+::: {.notes}
+**Apoyo:** anuncie el hito 1 al inicio de s05 (pauta ya en sus manos);
+publique el enlace de la demo al terminar la sesión para que la
+exploren en casa sin borrar su predicción del ticket. s05 abre
+respondiendo el ticket de hoy — no adelante la respuesta ahora.
 :::

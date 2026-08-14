@@ -29,6 +29,10 @@ Esta semana no hay escucha del día: la escucha escrita de la prueba la reemplaz
 - No hace falta calculadora: solo proporciones y sumas de cents
 - Preguntas solo de forma, a mano alzada
 
+::: {.notes}
+**Apoyo:** Sugerencia de conducción (plan, Riesgos y plan B) — un estudiante que llega muy tarde (después del minuto 25) rinde con el tiempo restante y la pasada del minuto 40; si no alcanza la Parte A completa, procede el reglamento recuperativo de la unidad académica (regla anunciada al repartir, no se improvisa). Quien llega antes del minuto 25 alcanza todo: el repaso del minuto 40 le repone el Estímulo 1.
+:::
+
 ## Prueba 2 — calendario de audio
 
 | Minuto | Qué suena |
@@ -38,6 +42,10 @@ Esta semana no hay escucha del día: la escucha escrita de la prueba la reemplaz
 | 40 | Pasada de repaso (recupera el Estímulo 1) |
 
 Memorícelo: el calendario es intocable.
+
+::: {.notes}
+**Apoyo:** Riesgos y plan B (plan) — si falla el audio de sala, los 3 estímulos están también en el celular del profesor: se reproducen caminando por la sala. Si aun así falla, hay reemplazos en vivo: el Estímulo 1 con dos flautas (o dos tubos del taller de s12) al unísono, primero afinadas y luego una destemplada levemente; el Estímulo 3 con la flauta del profesor (salto de registro); el Estímulo 2 con la demo de banda crítica de s08 en el notebook. El calendario de momentos (10/25/40) se respeta igual.
+:::
 
 ## El ticket de s12, cobrado {.center}
 
@@ -49,6 +57,10 @@ Terminada la prueba: descansen — **el instrumento de hoy ya lo traen puesto**.
 
 Hoy lo averiguamos, **en vivo**.
 
+::: {.notes}
+**Apoyo:** Conducción (plan, gancho sonoro) — no hace falta cantar bonito: hace falta sostener la nota. Antes de la votación, lea 2–3 tickets de s12 anónimos. Cierre este momento con la respuesta armada pero no cerrada: "aquí hay dos perillas y parecen independientes — la sesión es averiguar qué es cada una". Puede anticipar la honestidad de la decisión de diseño: "la voz merece un curso; tiene 70 minutos". Plan B si nadie quiere cantar (Riesgos y plan B): canta el profesor solo — el diseño no depende de que canten los estudiantes.
+:::
+
 ## Escuchen y voten
 
 ::: {.incremental}
@@ -57,6 +69,10 @@ Hoy lo averiguamos, **en vivo**.
 :::
 
 Voten a mano alzada. Guarden su conclusión — se retoma más adelante.
+
+::: {.notes}
+**Apoyo:** Respuesta esperada — en la parte (a) la altura NO cambia entre /a/, /e/, /i/ cantadas en la misma nota; en la parte (b) la vocal NO cambia aunque la nota suba o baje. El apunte lo resume así: "la misma nota puede llevar cualquier vocal, y la misma vocal puede vivir en cualquier nota. Son dos perillas independientes" (apunte, "¿Qué afina usted cuando canta una vocal?").
+:::
 
 ## La voz al espectrograma
 
@@ -67,6 +83,10 @@ Voten a mano alzada. Guarden su conclusión — se retoma más adelante.
 ::: {.incremental}
 - Misma nota, cambio de vocal: ¿se mueven las líneas o las bandas?
 - Misma vocal, subo la nota: ¿y ahora?
+:::
+
+::: {.notes}
+**Apoyo:** Respuestas esperadas (plan, Experiencia guiada I) — al cambiar de vocal en la misma nota se mueven las bandas: las líneas quedan; al subir la nota con la misma vocal se mueven las líneas: las bandas quedan. Conducción: pida la predicción ANTES de cada paso, a mano alzada. Nombre lo visto sin teoría todavía: "esas bandas tienen nombre y son de ustedes: cada vocal es un patrón de bandas".
 :::
 
 ## La predicción estrella {.center}
@@ -80,6 +100,10 @@ Si **todo el curso susurra** /a-e-i-o-u/ — sin que vibren las cuerdas —
 . . .
 
 Susurremos todos juntos hacia el micrófono. Veámoslo.
+
+::: {.notes}
+**Apoyo:** Respuesta esperada — sí: la app ve algo y las vocales SÍ se distinguen. Aparecen bandas sin líneas, porque los pliegues no vibran (no hay $f_0$ ni armónicos) pero el filtro sigue coloreando el ruido turbulento del aire. El apunte lo llama "el filtro sin la fuente": "desapareció la altura... pero las vocales siguieron perfectamente reconocibles" (apunte, "El susurro: el filtro sin la fuente"). Conducción: susurrar en bloque es de bajo riesgo social — no es cantar.
+:::
 
 ## La tercera válvula: los pliegues vocales
 
@@ -95,6 +119,10 @@ Tras la fricción del arco (s11) y el chorro del bisel (s12)…
 
 [Los pliegues, solos]{style="color:#0f766e"} — con su tensión y su masa, como una cuerda.
 
+::: {.notes}
+**Apoyo:** Complemento — contraste explícito con s11–s12 (plan, Mini-lección): "en el violín y la flauta el resonador ESCLAVIZA a la válvula; en la voz la válvula se auto-gobierna y el resonador solo filtra — por eso usted puede cantar cualquier vocal en cualquier nota" (BEN 19.2–19.3). El apunte lo dice así: los pliegues fijan su frecuencia solos, "el músculo los afina como se afina una cuerda con la clavija" (apunte, "La sorpresa: esta válvula no obedece al resonador").
+:::
+
 ## El filtro: el tracto vocal y sus formantes
 
 > El **tracto vocal**: el tubo (≈17 cm) de la laringe a los labios — cambia de forma a voluntad.
@@ -103,6 +131,10 @@ Tras la fricción del arco (s11) y el chorro del bisel (s12)…
 - Como toda columna de aire, tiene resonancias
 - Sus resonancias se llaman **formantes** ($F_1$, $F_2$, …)
 - Refuerzan los armónicos cercanos; desatienden el resto
+:::
+
+::: {.notes}
+**Apoyo:** Complemento — el tracto vocal mide unos 17 cm en el adulto (valor estándar de la literatura fonética, cercano al promedio de la voz masculina adulta; la voz femenina adulta promedia unos 14–15 cm), según el apunte de la sesión. Como toda columna de aire (sesiones 10 y 12) tiene resonancias, pero a diferencia del PVC del taller este tubo cambia de forma a voluntad — por eso sus formantes son configurables.
 :::
 
 ## Fuente + filtro = dos perillas independientes {.center}
@@ -114,6 +146,10 @@ Tras la fricción del arco (s11) y el chorro del bisel (s12)…
 
 Por eso usted puede cantar **cualquier vocal en cualquier nota**.
 
+::: {.notes}
+**Apoyo:** Es la respuesta completa al ticket de s12 (plan, Mini-lección liviana). Notación mínima del pizarrón: $f_0$ = frecuencia de los pliegues (altura); F1, F2 = formantes (vocal).
+:::
+
 ## A comprobarlo: dos perillas en la demo
 
 Con $f_0$ fija, recorran las vocales /a/ /e/ /i/ /o/ /u/ — ¿se mueve la altura?
@@ -122,7 +158,15 @@ Con $f_0$ fija, recorran las vocales /a/ /e/ /i/ /o/ /u/ — ¿se mueve la altur
 
 Con la vocal fija, suban y bajen $f_0$ — ¿sobrevive la vocal?
 
+::: {.notes}
+**Apoyo:** Conducción (plan, Experiencia guiada II) — con f₀ fija, recorra los presets /a/ /e/ /i/ /o/ /u/: el curso confirma que la altura no se mueve mientras la vocal cambia; con la vocal fija, suba y baje f₀: la vocal sobrevive. Opere la demo con el audio de sala.
+:::
+
 ## Demo: altura vs. vocal {background-iframe="../../demos/demo_formantes_voz.html" background-interactive=true}
+
+::: {.notes}
+**Apoyo:** Al terminar de recorrer las vocales y f₀, pase al juego: fije F1/F2 en un valor oculto y pida al curso que vote la vocal (plan, Experiencia guiada II, 3–4 rondas).
+:::
 
 ## El juego: ¿qué vocal es?
 
@@ -130,7 +174,15 @@ $F_1$ y $F_2$ quedan **ocultos**. El curso vota por las bandas — sin ver los v
 
 En cada ronda: "¿qué banda lo delató?"
 
+::: {.notes}
+**Apoyo:** Plan: 3–4 rondas con F1/F2 ocultos. En cada ronda pida una razón concreta por el voto antes de revelar la vocal correcta.
+:::
+
 ## Demo: adivine la vocal (F1/F2 ocultos) {background-iframe="../../demos/demo_formantes_voz.html" background-interactive=true}
+
+::: {.notes}
+**Apoyo:** Tras 3–4 rondas del juego, pase a conmutar la fuente a "soplo" (susurro sintético): plan, Experiencia guiada II, paso 4.
+:::
 
 ## ¿Y sin cuerdas vibrando?
 
@@ -140,7 +192,15 @@ Cambiemos la fuente de **tono** a **soplo** — el susurro sintético.
 
 ¿Sigue reconociéndose la vocal sin ninguna altura?
 
+::: {.notes}
+**Apoyo:** Conducción (plan) — conecte este paso con el susurro real que el curso ya hizo en el bloque de espectrograma en vivo: es el mismo experimento, ahora visto "por dentro" con la demo.
+:::
+
 ## Demo: la fuente en modo soplo {background-iframe="../../demos/demo_formantes_voz.html" background-interactive=true}
+
+::: {.notes}
+**Apoyo:** Al terminar, suba f₀ a ~880 Hz (plan, paso 5) como puente a las curiosidades. No explique todavía: deje la pregunta abierta para el bloque siguiente.
+:::
 
 ## El salto de la soprano
 
@@ -150,7 +210,15 @@ Volvamos a tono glotal y saltemos a $f_0 \approx 880$ Hz.
 
 ¿Alguien distingue /e/ de /i/ ahí arriba?
 
+::: {.notes}
+**Apoyo:** Conducción (plan) — en este paso NO se explica el porqué: se deja la pregunta abierta; la respuesta llega en el bloque de curiosidades siguiente, apoyada en esta misma pantalla.
+:::
+
 ## Demo: f₀ ≈ 880 Hz — registro de soprano {background-iframe="../../demos/demo_formantes_voz.html" background-interactive=true}
+
+::: {.notes}
+**Apoyo:** Deje esta pantalla proyectada: el bloque de curiosidades siguiente se apoya en lo que el curso acaba de ver aquí (plan, Curiosidades del canto).
+:::
 
 ## Curiosidad 1: el formante del cantante
 
@@ -162,6 +230,10 @@ El truco: agrupar resonancias cerca de **2,5–3 kHz**, donde la orquesta ya dec
 
 *Cultura general — no entra en la prueba.*
 
+::: {.notes}
+**Apoyo:** Complemento — el cantante ajusta su tracto (bajando la laringe, entre otros gestos) para agrupar resonancias en una zona de ~2,5–3 kHz donde la energía de la orquesta ya decayó: el "formante del cantante" (Benade 1990, sec. 19.4; C&G cap. 12). Conducción: si hay cantantes líricos en el curso, cédales 1′ de testimonio (plan, Curiosidades del canto).
+:::
+
 ## Curiosidad 2: las vocales que se disuelven
 
 Con $f_0$ muy alta, los armónicos quedan demasiado separados para dibujar los formantes.
@@ -171,6 +243,10 @@ Con $f_0$ muy alta, los armónicos quedan demasiado separados para dibujar los f
 Ustedes ya lo vieron en la demo: arriba, las vocales **se confunden** — y las sopranos entrenadas llevan un formante justo sobre un armónico.
 
 *Cultura general — no entra en la prueba.*
+
+::: {.notes}
+**Apoyo:** Complemento — con f₀ = 880 Hz los armónicos quedan en 880, 1760, 2640 Hz…, demasiado espaciados para dibujar una envolvente cuyos rasgos distintivos (F1, F2) viven entre 300 y 2500 Hz: por eso las vocales se confunden en el registro agudo (apunte, "Las sopranos y las vocales que se disuelven"; Benade 1990, sec. 19.5). Cierre con la discusión relámpago (2′): "¿por qué los compositores ponen las palabras importantes en el registro medio de la soprano?" (plan, Curiosidades del canto).
+:::
 
 ## Síntesis y el próximo ticket
 
@@ -184,6 +260,10 @@ Ustedes ya lo vieron en la demo: arriba, las vocales **se confunden** — y las 
 
 > **Ticket hacia s14**: ya afinamos la fuente y moldeamos el filtro — queda el tercer socio. ¿Por qué la misma voz suena tan distinta en la ducha, en esta sala y en una catedral?
 
+::: {.notes}
+**Apoyo:** Conducción (plan, Síntesis) — anote la síntesis en el pizarrón y recoja los tickets de salida hacia s14 al cierre.
+:::
+
 ## Para la próxima sesión
 
 ::: {.incremental}
@@ -191,4 +271,8 @@ Ustedes ya lo vieron en la demo: arriba, las vocales **se confunden** — y las 
 - Traer el **celular cargado** con las apps del curso
 - Devolución de la **Prueba 2** en la puerta, al entrar
 - **s15**: presentaciones finales + informe — pauta se publica en s14
+:::
+
+::: {.notes}
+**Apoyo:** Detalle de logística (plan, Síntesis y anuncios) — en s14 el módulo 2 completo es fuera del aula, con ruta asignada por grupos; anuncie que la Prueba 2 se devuelve en la puerta al entrar a s14; para s15, la pauta de presentaciones finales + informe se publica en s14. Recomiende ir cerrando la bitácora del proyecto.
 :::
