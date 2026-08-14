@@ -121,4 +121,4 @@ orden de calendario (s03 primero, esta semana):
 |---|---|---|---|---|
 | s02 | (en caliente, 14-ago) | — | ✅ 14-ago | El molde del estándar |
 | s03 | ✅ 14-ago | pendientes (3) | — | Contradicción F1 ya corregida |
-| s04–s15 | ✅ 14-ago (12 dossiers en `barridos/`) | consolidadas en `ENTREVISTA_DECISIONES.md` | — | 58 indefinidos reales en total; producción de estímulos mapeada |
+| s04–s15 | ✅ 14-ago (12 dossiers en `barridos/`) | consolidadas en `ENTREVISTA_DECISIONES.md` | — | 60 indefinidos reales en total; producción de estímulos mapeada |
