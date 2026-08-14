@@ -61,4 +61,6 @@ luego prueben:
 Un grupo expone su tabla de razones y su hallazgo del dedo; el profesor
 reúne las razones de los 3 grupos en el pizarrón: ¿algún objeto de la
 sala resultó armónico? Entrega al salir; se evalúa con rúbrica rápida
-(logrado / parcial / incipiente) — cuenta como taller de la semana.
+(logrado / parcial / incipiente) — cuenta como taller de la semana,
+salvo que el calendario de la edición declare esta sesión con taller
+formativo (el profesor lo anuncia al repartir la guía).

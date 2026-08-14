@@ -48,7 +48,10 @@ se consume visiblemente en el bloque de 10–25′ del módulo 1 (principio 6).
 - **Escucha del día**: práctica no calificada; la evidencia de OA3 se
   recoge por escrito en s07, s13 y s15.
 - **Guía PEE "la sartén" cerrada en aula** con rúbrica rápida
-  (logrado/parcial/incipiente): cuenta como taller de la semana. Criterio
+  (logrado/parcial/incipiente): cuenta como taller de la semana — salvo
+  que el calendario de la edición declare esta sesión con taller
+  formativo (p. ej. si cae en semana sin evaluaciones): entonces la
+  guía se cierra igual pero NO se registra en el 35 %. Criterio
   central: predicción escrita antes de golpear + razones de frecuencia
   calculadas + explicación del efecto del dedo.
 - **Chequeo de la distinción parcial/armónico** (mínimo de OA1.1): al

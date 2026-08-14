@@ -71,6 +71,13 @@ afirmaciones:
     debe_contener:
       - "Proyecto individual"
       - "Diseño con predicción | s05"
+  - archivo: material/curso/sesion-03/plan.md
+    debe_contener:
+      - "declare esta sesión con taller"
+      - "NO se registra en el 35"
+  - archivo: material/curso/sesion-03/actividades/guia_pee_sarten.md
+    debe_contener:
+      - "salvo que el calendario de la edición"
   - archivo: material/curso/sesion-15/plan.md
     debe_contener:
       - "9 defensas"
