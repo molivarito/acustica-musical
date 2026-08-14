@@ -121,14 +121,16 @@ def _tiene_taller(n, sesion):
     """¿La sesión N lleva taller evaluado que registrar en Canvas?
 
     s01 es formativa por diseño (línea base sin nota) y las sesiones de
-    prueba o presentaciones no tienen taller. El caso F1 (s03 en semana
-    universitaria) NO se excluye aquí: mientras el profesor no decida, la
-    tarea recuerda que ese registro está en cuestión — y el hito `f1-decidir`
-    es quien pide decidirlo.
+    prueba o presentaciones no tienen taller. Un hito que declare
+    "formativo" (p. ej. F1 2026-2: taller de s03 sin nota por semana
+    universitaria, resuelto 2026-08-13) tampoco registra: la exclusión
+    se lee del calendario, no se codifica por número de sesión.
     """
     if n == 1:
         return False
     hito = idx._sin_tildes(sesion.get("hito") or "").lower()
+    if "formativo" in hito:
+        return False
     return not re.match(r"^(prueba\s*\d|presentaciones)", hito)
 
 

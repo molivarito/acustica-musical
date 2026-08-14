@@ -1,2 +1,6 @@
 # agenda_estado.yml — qué tareas de la agenda están hechas (lo escribe panel/agenda.py).
-hecho: {}
+hecho:
+  f1-decidir: '2026-08-13'
+  imprimir-01: '2026-08-13'
+  plan-01: '2026-08-13'
+  pre-s01: '2026-08-13'

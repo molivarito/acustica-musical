@@ -30,6 +30,7 @@ proyecto:
 
 pruebas: {sesiones: [s07, s13], puntos: 48, pct_cada_una: 10}
 escucha_escrita: {eventos: 3, cuentan_mejores: 2}
+talleres: {con_nota: 9, cuentan_mejores: 8}  # F1 (2026-08-13): taller de s03 formativo (semana universitaria) → "mejores 8 de 9" esta edición; el material genérico conserva "mejores 8 de ~10"
 estimulo_linea_base:
   archivo: material/estimulos/e01_linea_base.wav   # CONSAGRADO: s15 usa este mismo archivo
   pasadas: 2
@@ -82,6 +83,10 @@ afirmaciones:
     debe_contener:
       - "Acta de mesa (s01)"
       - "Rúbrica de escucha argumentada"
+  - archivo: ediciones/2026-2/CALENDARIO_2026-2.md
+    debe_contener:
+      - "mejores 8 de 9"
+      - "RESUELTO"
 
 # Términos que los rediseños dejaron obsoletos. Una línea que los
 # contenga es falla, salvo que la línea (o la siguiente) traiga una

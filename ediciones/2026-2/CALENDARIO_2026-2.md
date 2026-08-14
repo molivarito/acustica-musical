@@ -30,7 +30,7 @@ oficial de Dirección Académica, `fechas-importantes-2026-2.pdf`).
 |---|---|---|
 | s01 | vie 07-ago | Grupos + línea base (sin nota, por diseño) |
 | s02 | vie 14-ago | Parte la escucha del día (práctica sin nota) |
-| s03 | vie 21-ago | Lanzamiento del proyecto · **F1: semana universitaria — sin evaluaciones ese día** |
+| s03 | vie 21-ago | Lanzamiento del proyecto · **F1 (resuelto): semana universitaria — taller formativo, sin nota** |
 | s04 | vie 28-ago | Instrumentos de cuerda pulsada #1 |
 | s05 | vie 04-sep | **Hito 1 del proyecto (10 %)** |
 | s06 | vie 11-sep | Estaciones de niveles; mini-informe SPL. Última clase antes del receso |
@@ -65,17 +65,16 @@ La escucha del día (s02–s14) no es evaluación — no lleva nota ninguna
 semana — por lo que esta verificación no le aplica: corre igual en s03
 pese a la semana universitaria.
 
-### F1 — s03 (21-ago) en semana universitaria: decisión pendiente del profesor
+### F1 — s03 (21-ago) en semana universitaria: RESUELTO (2026-08-13)
 
-La sesión corre normal (la ventana solo prohíbe evaluaciones), pero el
-**taller evaluado** ("la sartén y sus parientes") no puede llevar nota
-ese día. **Recomendación**: corre formativo en s03 (mismo formato, sin
-registro en el 35 % de talleres) — hay precedente de diseño (s01 es
-formativa) y el lanzamiento del proyecto, que es lo estructural de s03,
-no es evaluación. Consecuencia: los talleres evaluados quedan 9 → la
-regla "mejores 8 de ~10" pasa a **"mejores 8 de 9"**. Si prefieres otra
-salida (p. ej. correr la nota del taller de s03 a la guía de s04),
-decidirlo antes de s02 para anunciarlo con las reglas del curso.
+Decisión del profesor: el taller de s03 ("la sartén y sus parientes")
+corre **formativo** — mismo formato, sin registro en el 35 % de
+talleres (precedente de diseño: s01 es formativa; el lanzamiento del
+proyecto, que es lo estructural de s03, no es evaluación).
+Consecuencia: los talleres evaluados de la edición quedan 9 y la regla
+es **"mejores 8 de 9"** (el material genérico conserva "mejores 8 de
+~10"). **Anunciarlo en s02 (14-ago)** junto con las reglas del curso.
+Hecho registrado en `DATOS_CURSO.yml` (clave `talleres`).
 
 ## Consecuencias de calendario a tener presentes
 
