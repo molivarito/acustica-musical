@@ -1,4 +1,4 @@
-# Guía PEE — La botella que canta (s10, módulo 1, 27 min) — EVALUADA
+# Guía PEE — La botella que canta (s10, módulo 1, 32 min) — EVALUADA
 
 **Objetivos**: OA1.2 (predecir el efecto de un parámetro sobre la
 afinación y contrastarlo), OA4.1 (afinador y espectrograma bien
@@ -29,7 +29,7 @@ espectrograma lo captura igual.
   _______________________________________________.
 - ¿P1 y P2 tienen la misma dirección? **sí / no**
 
-## 2. Experimento (16 min)
+## 2. Experimento (22 min)
 
 **Condiciones** (anótenlas: la medición debe ser repetible): app de
 afinador ____________, app de espectrograma ____________, ¿soplido o
@@ -55,7 +55,7 @@ palmada? ____________.
 cuchara vs. frotada con el dedo mojado en el borde. ¿Misma altura?
 $f_{golpe}$ = ______ Hz, $f_{frote}$ = ______ Hz.
 
-## 3. Contraste y explicación (6 min)
+## 3. Contraste y explicación (7 min)
 
 - P1: predicción **cumplida / fallida**. P2: **cumplida / fallida**.
 - La razón de frecuencias vacía → 1/2 al soplar:

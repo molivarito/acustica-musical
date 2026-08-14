@@ -1,4 +1,4 @@
-# Guía PEE — La sartén y sus parientes (s03, módulo 1, 30 min)
+# Guía PEE — La sartén y sus parientes (s03, módulo 1, 35 min)
 
 **Objetivos**: OA1.1 (los parciales del espectro son los modos del
 objeto), OA1.2 (predecir el efecto del punto de golpe y del punto de
@@ -22,7 +22,7 @@ Para cada objeto, el grupo anota sin probar nada:
 | ¿Estarán igualmente espaciadas (como 1, 2, 3…)? sí/no | | |
 | ¿Cuál durará más: la línea más grave o la más aguda? | | |
 
-## 2. Experimento (15 min)
+## 2. Experimento (20 min)
 
 **Fase 1 — el catálogo.** Golpeen el objeto A cerca del borde, con la
 app grabando; congelen o capturen la pantalla justo tras el golpe.

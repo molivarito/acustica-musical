@@ -190,11 +190,20 @@ Flujo:
 
    ```bash
    find material/_render/site -name 'slides_s*.html' -delete
+   # + poda de las entradas de slides en search.json (2026-08-14): el
+   #   índice del buscador se construye ANTES del borrado y arrastraba
+   #   el texto de las slides apuntando a 404
    ```
 
+   Desde 2026-08-14 hay una segunda capa para las **notas de orador**
+   (`::: {.notes}`, apoyo pedagógico del profesor): el filtro Lua
+   `material/filtros/quitar_notas_en_ci.lua` (cableado en `filters:` de
+   `material/_quarto.yml`) las elimina de TODO render cuando `CI=true`,
+   así ni siquiera entran al `search.json` que luego se poda.
+
    Esto significa que en tu `_render/site/` local (tras un `quarto render`
-   normal) las slides SÍ están presentes — solo se eliminan en el paso de
-   deploy del CI. Si algún día ese paso desaparece del workflow (se edita
+   normal) las slides SÍ están presentes, con notas — solo se eliminan en
+   el paso de deploy del CI. Si algún día ese paso desaparece del workflow (se edita
    mal, se borra, se reemplaza), **las slides quedan públicas en el
    próximo push sin que nada avise** — es la pieza más frágil del pipeline
    de privacidad. Verificar tras cualquier cambio al workflow:

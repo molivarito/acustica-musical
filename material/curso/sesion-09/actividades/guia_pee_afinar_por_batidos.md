@@ -1,4 +1,4 @@
-# Guía PEE — Afinar de oído contando batidos (s09, módulo 1, 32 min)
+# Guía PEE — Afinar de oído contando batidos (s09, módulo 1, 37 min)
 
 **Objetivos**: OA2.3 (demostrar audiblemente afinaciones y
 temperamentos: es SU evaluación declarada), OA2.2 (batidos como
@@ -27,7 +27,7 @@ Grupo: ______ · Integrantes: ______________________ / ______________________ / 
 - Anular el batido de la **3ª mayor** será MÁS FÁCIL / MÁS DIFÍCIL que
   el de la quinta, porque ________________________________________
 
-## 2. Experimento (por turnos; ~6 min de oído por afinador)
+## 2. Experimento (por turnos; ~7 min de oído por afinador)
 
 **Fase A — la quinta justa.** El operador aprieta "desafinar al azar"
 (cents ocultos). El afinador mueve el deslizador SOLO con el oído

@@ -96,11 +96,19 @@ conserva para ediciones futuras.
   `PLAN_SEMESTRE.md`, `_archivo/`) — está excluido del `render:` de
   `material/_quarto.yml` y NO se enlaza con links Markdown desde páginas
   públicas (Quarto copiaría el `.md` crudo a `material/_render/site`):
-  solo backticks. Las **notas de orador** de las slides (`::: {.notes}`,
-  con apoyo pedagógico desde 2026-08-14) también son solo-profesor: el
-  filtro `material/filtros/quitar_notas_en_ci.lua` las elimina del
-  render del CI (el sitio público va sin notas y sin su rastro en
-  `search.json`); los renders locales las conservan (tecla S). Al crear material nuevo, revisar 4 lugares: `render:`
+  solo backticks. **Las slides tampoco se publican**: `render:` las
+  genera (para el render local del profesor y el panel), pero el paso
+  "Filtrar material solo-profesor" de `.github/workflows/publish.yml`
+  borra las `slides_s*.html` del deploy, poda sus entradas de
+  `search.json` (2026-08-14; el índice se construye antes del borrado
+  y arrastraría su texto) y `canvas/auditar_sitio.py --sin-slides`
+  audita la ausencia. Las **notas de orador** (`::: {.notes}`, con
+  apoyo pedagógico desde 2026-08-14) son solo-profesor por partida
+  doble: además del borrado anterior, el filtro
+  `material/filtros/quitar_notas_en_ci.lua` las elimina de todo render
+  del CI; los renders locales las conservan (tecla S). **Antes de
+  afirmar qué es público, leer `publish.yml` completo**: la verdad del
+  deploy vive ahí, no en `_quarto.yml` ni en `_render/` local. Al crear material nuevo, revisar 4 lugares: `render:`
   de `material/_quarto.yml`, sidebar, mapa de `material/index.qmd`,
   `canvas/canvas.yml`.
 - Para agregar una sesión/capítulo/documento nuevo PARA ALUMNOS: crear
@@ -153,6 +161,20 @@ conserva para ediciones futuras.
   evaluada es la defensa del proyecto en s15). El detalle vive en
   `METODOLOGIA.md` §§1–5 y §7.7.
 
+- **Semestre 2026-2 en curso (2026-08-14)**: s01 y s02 dictadas
+  (calendario real en `ediciones/2026-2/CALENDARIO_2026-2.md`; la
+  agenda del panel gobierna el ciclo semanal). Novedades operativas de
+  la primera quincena: guía del profesor
+  `material/profesor/como_operar_el_curso.md` (botón 📖 del panel),
+  generador de paquetes de impresión
+  (`ediciones/2026-2/generar_impresiones.py`), estímulos e02
+  (flauta C4, CC-BY) y e03 (trueno, CC-BY-SA) instalados con
+  atribuciones en `material/estimulos/ATRIBUCIONES.md`, **notas de
+  orador con apoyo pedagógico en las 15 sesiones** (respuestas
+  esperadas, conducción y complementos citados; solo en renders
+  locales — ver regla de visibilidad), F1 resuelto (taller s03
+  formativo, "mejores 8 de 9") y auditoría de coherencia completa
+  (`ediciones/2026-2/REVISION_MATERIAL_2026-08-13.md`).
 - **Consistencia del diseño (2026-08-07)**: los hechos del diseño
   (matrícula, mesas, pesos, hitos, defensas, estímulo consagrado)
   viven en **`DATOS_CURSO.yml`** — fuente única — junto con el mapa de
@@ -177,14 +199,13 @@ posponen conscientemente, para no re-litigarlas ni olvidarlas.
   reduciría la doble fuente de verdad plan/apunte, pero implica
   refactorizar las 15 sesiones y el panel que parsea `plan.md`.
   Pospuesta para el receso o la edición 2027.
-- (2026-08-06, ampliado 2026-08-13) **Cabeceras con tiempos
-  inconsistentes** (anteriores al redimensionamiento a 9 estudiantes):
-  la auditoría nocturna del 2026-08-13 encontró **8 guías** con el
-  patrón (s03, s04, s06, s08, s09, s10, s11 y s12 — la de s12 es la
-  prioritaria: subestima una fase con herramienta de corte). Tabla
-  completa y corrección propuesta en
-  `ediciones/2026-2/REVISION_MATERIAL_2026-08-13.md`; esperando el OK
-  del profesor para alinearlas con la aritmética declarada de cada plan.
+- (2026-08-06, CERRADO 2026-08-14) **Cabeceras con tiempos
+  inconsistentes**: la auditoría del 2026-08-13 encontró 8 guías con
+  tiempos pre-ajuste; el 2026-08-14, con OK del profesor, se alinearon
+  todas con la aritmética declarada de su plan (+ los títulos de
+  `canvas/canvas.yml` y una contradicción interna del plan de s12).
+  Detalle y dos decisiones de criterio (s03, s04) en
+  `ediciones/2026-2/REVISION_MATERIAL_2026-08-13.md`.
 - (2026-08-14) **s15, re-escucha de la línea base**: en s01 los
   estudiantes oyeron el golpe EN VIVO; `e01_linea_base.wav` es la
   captura de ese golpe, no lo que sonó por parlantes. Decidir antes de

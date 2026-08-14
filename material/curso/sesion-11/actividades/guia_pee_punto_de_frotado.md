@@ -1,4 +1,4 @@
-# Guía PEE — El punto de frotado (s11, módulo 1, 26 min) · TALLER EVALUADO
+# Guía PEE — El punto de frotado (s11, módulo 1, 31 min) · TALLER EVALUADO
 
 **Objetivos**: OA1.2 (predecir el efecto del punto de frotado y
 contrastar), OA1.3 (régimen de oscilación: qué fija la cuerda y qué fija
@@ -27,7 +27,7 @@ anota en los 30″ posteriores.
 
 ## 2. Experimento
 
-**Fase A — tres puntos de frotado (8 min).** El ejecutante toca la misma
+**Fase A — tres puntos de frotado (9 min).** El ejecutante toca la misma
 nota larga en 3 posiciones (normal / ponticello / tasto), 2 pasadas de
 ~20″ cada una. Todos capturan el espectrograma; el mide-oficial dicta y
 el registra tabula:
@@ -41,13 +41,13 @@ el registra tabula:
 Condiciones (app, cuerda, nota nominal, distancia al instrumento):
 __________________________________________________________________
 
-**Fase B — la cámara lenta (6 min).** Un celular filma la cuerda de
+**Fase B — la cámara lenta (7 min).** Un celular filma la cuerda de
 cerca (cámara lenta, fondo claro) mientras el ejecutante frota. Miren la
 reproducción: ¿qué forma tiene la cuerda? ¿Coincide con su P3?
 Anoten qué alcanzaron a ver (y qué no — eso también es un dato):
 __________________________________________________________________
 
-## 3. Explicación y contraste (6 min)
+## 3. Explicación y contraste (9 min)
 
 - ¿P1 y P2 acertaron? ¿Qué cambió con el punto de frotado y qué se quedó
   quieto? __________________________________________________________

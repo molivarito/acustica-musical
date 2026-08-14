@@ -46,6 +46,17 @@ jobs:
           # local del profesor), pero NO se publican en el sitio
           find material/_render/site -name 'slides_s*.html' -delete
           echo "slides restantes en material/_render/site: $(find material/_render/site -name 'slides_s*.html' | wc -l)"
+          # el índice del buscador se construye ANTES de este borrado y
+          # arrastra el texto de las slides (y apuntaría a 404): podar
+          # sus entradas de todo search.json del deploy
+          python3 - <<'EOF'
+          import json, pathlib
+          for p in pathlib.Path('material/_render/site').rglob('search.json'):
+              datos = json.loads(p.read_text())
+              filtrado = [e for e in datos if 'slides_s' not in e.get('href', '')]
+              p.write_text(json.dumps(filtrado, ensure_ascii=False))
+              print(f"{p}: {len(datos) - len(filtrado)} entradas de slides podadas")
+          EOF
           # fotos de archivo con personas identificables: SOLO para
           # proyectar en clase, jamás al sitio público
           rm -rf material/_render/site/assets/proyectos_antiguos

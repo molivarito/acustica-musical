@@ -48,17 +48,24 @@ incluye corte y lijado de tubo con herramienta — apurarla por un número
 mal rotulado es el único hallazgo con potencial de problema real,
 no solo de molestia.
 
-## Corrección propuesta (esperando tu OK)
+## Corrección APLICADA (2026-08-14, con OK del profesor)
 
-Alinear cabeceras y números de fase internos de las 8 guías con la
-aritmética declarada de su plan (ediciones de una línea por número; el
-contenido pedagógico no se toca), y regenerar los paquetes de
-impresión (`python3 ediciones/2026-2/generar_impresiones.py --todas`)
-para que lo impreso quede correcto. Basta con que digas
-**"corrige las cabeceras"**.
+Las 8 guías quedaron alineadas con la aritmética declarada de su plan
+(solo números; prosa intacta), los títulos con minutaje de
+`canvas/canvas.yml` actualizados, y los paquetes de impresión
+regenerados. Dos decisiones de criterio, documentadas para revisión
+del profesor al preparar esas sesiones:
+- **s03**: el plan no desglosa los 35′; los 5′ extra fueron al
+  Experimento (15→20′), la fase más comprimida.
+- **s04**: sin aritmética declarada; Fase 1 quedó en ~21′ por
+  descarte (3+5+21+8 = 37′).
 
-Ninguna es urgente para mañana (s02 no está afectada); la primera que
-importa es la de s03 (guía de la sartén), que se imprime el jueves 20.
+Hallazgo adicional en la pasada: **el plan de s12 se contradecía a sí
+mismo** — su celda de tabla decía predicción 6′ / corte 8′ / medición
+6′ / registro 6′ (suma 29′, no llena el bloque de 34′) mientras su
+"aritmética declarada" dice 7′/9′/7′/8′ (= 34′ exactos). Se corrigió
+la celda para calzar con la aritmética, y la predicción de la guía
+(6→7′).
 
 ## Además, un pendiente de CLAUDE.md quedó obsoleto
 

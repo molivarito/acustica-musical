@@ -1,4 +1,4 @@
-# Guía PEE — El mapa de la cuerda (s04, módulo 1, 32 min)
+# Guía PEE — El mapa de la cuerda (s04, módulo 1, 37 min)
 
 **Objetivos**: OA1.1 (la receta: qué modos enciende cada punto de
 pulsación), OA1.2 (predecir qué parciales suenan y cuáles quedan mudos),
@@ -29,7 +29,7 @@ en el punto; deja mudos los que tienen *nodo* ahí), anoten sin probar:
 
 ## 2. Experimento
 
-**Fase 1 — el punto de pulsación (~24 min: es la fase central, tómense
+**Fase 1 — el punto de pulsación (~21 min: es la fase central, tómense
 el tiempo).** Pulsen firme en cada punto marcado, con el espectrograma
 grabando; capturen la pantalla justo tras el ataque y repitan las
 pulsadas dudosas. Anoten $f_1$ y el estado de los primeros parciales

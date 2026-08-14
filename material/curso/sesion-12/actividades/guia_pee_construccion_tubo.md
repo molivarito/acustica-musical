@@ -22,7 +22,7 @@ Sol4 = 392 Hz · Si4 = 494 Hz · Re5 = 587 Hz
 
 ## Fase 1 (módulo 1)
 
-### 1. Predicción (ANTES de marcar el tubo — 6 min)
+### 1. Predicción (ANTES de marcar el tubo — 7 min)
 
 **Dos** integrantes calculan por separado el largo del tubo **tapado**
 para la nota asignada, $L = v/(4f_1)$, y comparan antes de marcar:
@@ -35,7 +35,7 @@ para la nota asignada, $L = v/(4f_1)$, y comparan antes de marcar:
 
 *El profesor verifica esta casilla antes de autorizar el corte.*
 
-### 2. Corte y primera medición (14 min)
+### 2. Corte y primera medición (24 min)
 
 Medir desde el extremo abierto, marcar, cortar con el cortatubo,
 **lijar el borde** (rebaba = labio cortado y nota sucia) y calzar la

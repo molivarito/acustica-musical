@@ -110,6 +110,21 @@ funciona:
 Nota del taller a Canvas, tickets guardados, tareas marcadas en la
 agenda. Nada más: la semana siguiente parte de nuevo en el paso 1.
 
+## Qué es público y qué no (la verdad del deploy vive en `publish.yml`)
+
+| Material | ¿Público? | Mecanismo |
+|---|---|---|
+| Apuntes, guías/hojas, demos, libro, programa, apps | **Sí** — sitio y Canvas | `render:` de `material/_quarto.yml` + sidebar + `canvas/canvas.yml` |
+| **Slides** | **No** | Se renderizan localmente (para proyectar y para el panel), pero el CI las **borra del deploy** y poda sus entradas del buscador (`publish.yml`, paso "Filtrar material solo-profesor") |
+| **Notas de orador** (tecla S) | **No** | Doble seguro: van dentro de las slides borradas, y además `material/filtros/quitar_notas_en_ci.lua` las elimina de todo render del CI |
+| Planes, pautas, pruebas, banco de estímulos, esta guía | **No** | Excluidos del `render:`; jamás enlazarlos con links Markdown desde páginas públicas (solo backticks) |
+| Fotos de proyectos antiguos (personas identificables) | **No** | El CI borra `assets/proyectos_antiguos` del deploy |
+
+`canvas/auditar_sitio.py` audita fugas en cada deploy. Consecuencia
+práctica: **las slides que proyectas son siempre tu render local**
+(`material/_render/site/...`), nunca el sitio online — y por eso la
+tecla S con tus notas funciona en clase sin exponerlas.
+
 ## Si algo se ve raro
 
 - Render viejo en el panel → semáforo en rojo; el botón ⟳ lo regenera.

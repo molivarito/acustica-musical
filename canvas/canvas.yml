@@ -67,7 +67,7 @@ modulos:
       - titulo: "Proyecto del curso — Construir y explicar"
         url: "{sitio}/curso/sesion-03/actividades/enunciado_proyecto.html"
         indent: 1
-      - titulo: "Guía PEE — La sartén y sus parientes (s03, módulo 1, 30 min)"
+      - titulo: "Guía PEE — La sartén y sus parientes (s03, módulo 1, 35 min)"
         url: "{sitio}/curso/sesion-03/actividades/guia_pee_sarten.html"
         indent: 1
       - titulo: "Demo — modos de una cuerda"
@@ -80,7 +80,7 @@ modulos:
       - titulo: "Media guía PEE — Estirar, acortar, engordar (s04, módulo 2, 14 min)"
         url: "{sitio}/curso/sesion-04/actividades/guia_pee_estirar_acortar.html"
         indent: 1
-      - titulo: "Guía PEE — El mapa de la cuerda (s04, módulo 1, 32 min)"
+      - titulo: "Guía PEE — El mapa de la cuerda (s04, módulo 1, 37 min)"
         url: "{sitio}/curso/sesion-04/actividades/guia_pee_mapa_cuerda.html"
         indent: 1
       - titulo: "Demo — síntesis aditiva"
@@ -106,7 +106,7 @@ modulos:
       - titulo: "Guía de estaciones — Medir lo fuerte (s06, módulo 2, 40 min + cierre)"
         url: "{sitio}/curso/sesion-06/actividades/guia_estaciones_niveles.html"
         indent: 1
-      - titulo: "Hoja de registro — Mi curva isofónica (s06, módulo 1, 22 min)"
+      - titulo: "Hoja de registro — Mi curva isofónica (s06, módulo 1, 27 min)"
         url: "{sitio}/curso/sesion-06/actividades/hoja_registro_isofonica.html"
         indent: 1
       - titulo: "Demo — decibel y sonoridad"
@@ -125,7 +125,7 @@ modulos:
       - titulo: "Guía PEE — Radiografía espectral del objeto (s08, módulo 2, 27 min)"
         url: "{sitio}/curso/sesion-08/actividades/guia_pee_radiografia_espectral.html"
         indent: 1
-      - titulo: "Hoja de registro individual — El mapa del choque (s08, módulo 1, 22 min)"
+      - titulo: "Hoja de registro individual — El mapa del choque (s08, módulo 1, 27 min)"
         url: "{sitio}/curso/sesion-08/actividades/registro_mapa_del_choque.html"
         indent: 1
       - titulo: "Demo — banda crítica"
@@ -138,7 +138,7 @@ modulos:
       - titulo: "Guía de medición — ¿En qué escala vive mi objeto? (s09, módulo 2, 25 min)"
         url: "{sitio}/curso/sesion-09/actividades/guia_medicion_escala_objeto.html"
         indent: 1
-      - titulo: "Guía PEE — Afinar de oído contando batidos (s09, módulo 1, 32 min)"
+      - titulo: "Guía PEE — Afinar de oído contando batidos (s09, módulo 1, 37 min)"
         url: "{sitio}/curso/sesion-09/actividades/guia_pee_afinar_por_batidos.html"
         indent: 1
       - titulo: "Demo — temperamentos"
@@ -148,7 +148,7 @@ modulos:
       - titulo: "Resonancia, impedancia y acoplamiento"
         url: "{sitio}/curso/sesion-10/apunte_s10_resonancia_e_impedancia.html"
       - {tipo: subheader, titulo: "Actividades"}
-      - titulo: "Guía PEE — La botella que canta (s10, módulo 1, 27 min) — EVALUADA"
+      - titulo: "Guía PEE — La botella que canta (s10, módulo 1, 32 min) — EVALUADA"
         url: "{sitio}/curso/sesion-10/actividades/guia_pee_resonancia_botellas.html"
         indent: 1
       - titulo: "Demo — resonancia"
@@ -161,7 +161,7 @@ modulos:
       - titulo: "Guía — ¿Quién radia aquí? (s11, módulo 2, 26 min) · SIN NOTA — serie del objeto (s08–s12)"
         url: "{sitio}/curso/sesion-11/actividades/guia_acoplamiento_objeto.html"
         indent: 1
-      - titulo: "Guía PEE — El punto de frotado (s11, módulo 1, 26 min) · TALLER EVALUADO"
+      - titulo: "Guía PEE — El punto de frotado (s11, módulo 1, 31 min) · TALLER EVALUADO"
         url: "{sitio}/curso/sesion-11/actividades/guia_pee_punto_de_frotado.html"
         indent: 1
       - titulo: "Demo — movimiento de Helmholtz"

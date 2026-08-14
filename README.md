@@ -39,7 +39,9 @@ AM/
 │   ├── demos/                 ← 14 demos HTML con audio (casa canónica única)
 │   ├── libro/                 ← "Escuchar como científico" (sub-proyecto book) + PDF
 │   ├── assets/figuras/        ← SVG generados por gen_sXX.py (+ estilo_figuras.py)
-│   ├── profesor/              ← transversales solo-profesor: banco de estímulos, rúbrica OA3
+│   ├── estimulos/             ← audios de la escucha (e01…, con ATRIBUCIONES.md y láminas)
+│   ├── filtros/               ← filtros Lua de Quarto (quitar notas de orador en el CI)
+│   ├── profesor/              ← transversales solo-profesor: guía "cómo operar el curso", banco de estímulos, rúbrica OA3
 │   ├── programa_curso.md, apps_recomendadas.md  ← páginas transversales de alumnos
 │   └── _render/                ← TODO lo generado: site/ y canvas/
 │
@@ -52,6 +54,9 @@ AM/
 ├── ediciones/2026-2/          ← lo fechado de ESTE semestre
 │   ├── CALENDARIO_2026-2.md   ← fechas reales
 │   ├── agenda_estado.yml      ← qué tareas de la agenda están hechas
+│   ├── generar_impresiones.py ← regenera impresiones_sNN/ (paquete imprimible por sesión)
+│   ├── impresiones_sNN/       ← guías + hoja de escucha listas para Cmd+P
+│   ├── estimulos_candidatos/  ← audios evaluados y no consagrados (con README de validación)
 │   └── pruebas/               ← prueba1/prueba2 + pautas (generadas, solo-profesor)
 │
 └── _archivo/                  ← pasado del curso (solo lectura; nada nuevo nace aquí)

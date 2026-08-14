@@ -1,4 +1,4 @@
-# Hoja de registro individual — El mapa del choque (s08, módulo 1, 22 min)
+# Hoja de registro individual — El mapa del choque (s08, módulo 1, 27 min)
 
 **Objetivos**: OA2.2 (medir las zonas batido/rugosidad/separación en el
 propio oído). **Esta hoja se entrega al salir del módulo y NO lleva

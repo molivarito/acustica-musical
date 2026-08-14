@@ -1,4 +1,4 @@
-# Hoja de registro — Mi curva isofónica (s06, módulo 1, 22 min)
+# Hoja de registro — Mi curva isofónica (s06, módulo 1, 27 min)
 
 **Objetivos**: OA2.1 (igual nivel físico ≠ igual sonoridad), OA4.2
 (leer y producir una curva de sonoridad). **Individual** (una hoja por
