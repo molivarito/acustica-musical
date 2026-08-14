@@ -33,6 +33,11 @@ project:
 
 lang: es
 
+# Las notas de orador son solo-profesor: este filtro las quita del
+# render del CI (el sitio público); localmente no hace nada.
+filters:
+  - filtros/quitar_notas_en_ci.lua
+
 website:
   title: "Acústica Musical · UC"
   page-navigation: true

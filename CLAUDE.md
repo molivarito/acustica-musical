@@ -96,7 +96,11 @@ conserva para ediciones futuras.
   `PLAN_SEMESTRE.md`, `_archivo/`) — está excluido del `render:` de
   `material/_quarto.yml` y NO se enlaza con links Markdown desde páginas
   públicas (Quarto copiaría el `.md` crudo a `material/_render/site`):
-  solo backticks. Al crear material nuevo, revisar 4 lugares: `render:`
+  solo backticks. Las **notas de orador** de las slides (`::: {.notes}`,
+  con apoyo pedagógico desde 2026-08-14) también son solo-profesor: el
+  filtro `material/filtros/quitar_notas_en_ci.lua` las elimina del
+  render del CI (el sitio público va sin notas y sin su rastro en
+  `search.json`); los renders locales las conservan (tecla S). Al crear material nuevo, revisar 4 lugares: `render:`
   de `material/_quarto.yml`, sidebar, mapa de `material/index.qmd`,
   `canvas/canvas.yml`.
 - Para agregar una sesión/capítulo/documento nuevo PARA ALUMNOS: crear
