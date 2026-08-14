@@ -136,6 +136,19 @@ vaivén. Ahí el ojo no llega.
 En vez de "¿qué pasa en cada instante?", pregunta: **¿de qué
 frecuencias está hecho este sonido?**
 
+::: {.notes}
+**Apoyo:** Esta slide es TODO lo que el taller que viene necesita del
+espectro — enseñarlo aquí, en 3 minutos, con dos ejemplos polares:
+un **silbido** ≈ un solo peak angosto (una frecuencia domina); una
+**"sss"** ≈ meseta ancha sin peaks (muchas frecuencias a la vez, sin
+altura). Con esos dos extremos, la vocal y el golpe del taller se
+extrapolan. Tranquilidad PEE: las predicciones del taller PUEDEN
+salir toscas o erradas — el aprendizaje está en el contraste
+dibujo-vs-pantalla, y la rúbrica premia predecir por escrito y
+corregir, no acertar. La lectura previa (cap. 2) ya les presentó
+esto: aquí solo se formaliza.
+:::
+
 ## Dos preguntas, un mismo sonido
 
 | | Pregunta | Eje horizontal |
