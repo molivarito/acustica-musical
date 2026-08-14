@@ -15,3 +15,12 @@ material/libro/index.log
 material/libro/*.tex
 /material/libro/index_files/
 __pycache__/
+
+# Salidas de Quarto que a veces quedan junto a las fuentes (render de
+# archivo suelto): jamás versionarlas — lo generado vive en _render/
+/material/site_libs/
+/material/index.html
+/material/programa_curso.html
+/material/apps_recomendadas.html
+/material/curso/**/*.html
+/material/libro/*.html
