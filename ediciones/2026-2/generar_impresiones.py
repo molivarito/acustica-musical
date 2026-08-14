@@ -32,7 +32,11 @@ def generar(nn):
     destino.mkdir(exist_ok=True)
     # Fuentes: las actividades de la sesión, la rúbrica del profesor y los
     # .md locales del propio paquete (p. ej. el guion relámpago de s01).
-    fuentes = sorted(origen.glob("*.md")) + [RUBRICA] + sorted(destino.glob("*.md"))
+    # Se excluyen los archivos históricos que el diseño conserva como
+    # registro pero que no se imprimen (hallazgo del barrido de s15).
+    HISTORICOS = {"hoja_coevaluacion_final.md"}
+    fuentes = [f for f in sorted(origen.glob("*.md")) if f.name not in HISTORICOS] \
+        + [RUBRICA] + sorted(destino.glob("*.md"))
     for f in fuentes:
         salida = destino / (("rubrica_oa3_hoja" if f == RUBRICA else f.stem) + ".html")
         subprocess.run(["pandoc", "-s", "--mathml", str(f), "-o", str(salida),
