@@ -117,7 +117,8 @@ def chequear_prohibidos():
             if baja.lstrip().startswith("#"):
                 continue                      # comentario (yml) deliberado
             for pat in patrones:
-                if pat in baja:
+                # borde de palabra al final: «exprés» no debe cazar «exprésela»
+                if re.search(re.escape(pat) + r"\b", baja):
                     # ventana de contexto: línea anterior + actual +
                     # siguiente (la prosa a 72 columnas corta frases)
                     ventana = " ".join(
@@ -179,6 +180,144 @@ def chequear_banco_specs():
                               f"existe en {cfg['formularios']}/")
 
 
+def chequear_prerrequisitos_sesiones():
+    # cada sesión de práctica (ayudantía) asume materia hasta cierta
+    # clase; esa clase debe ocurrir ANTES en el calendario real del año.
+    # Nació el 2026-08-15: Ay2 practicó la delta de Dirac tres días
+    # antes de que C4 la introdujera (semana 1 sin lunes ⇒ Ay2–Ay4
+    # caen entre las dos clases de su semana plantilla).
+    cfg = DATOS.get("prerrequisitos_sesiones")
+    if not cfg:
+        return
+    plan = RAIZ / cfg["plan"]
+    if not plan.exists():
+        fallas.append(f"prerrequisitos: no existe el plan {cfg['plan']}")
+        return
+    meses = {"ene": 1, "feb": 2, "mar": 3, "abr": 4, "may": 5, "jun": 6,
+             "jul": 7, "ago": 8, "sep": 9, "oct": 10, "nov": 11, "dic": 12}
+    pat = re.compile(r"^\|\s*\*{0,2}(C\d+|Ay\d+)[^|]*\|\s*\*{0,2}\w{3}\s+"
+                     r"(\d{1,2})-([a-z]{3})-(\d{4})", re.M)
+    fechas = {}
+    for m in pat.finditer(plan.read_text()):
+        sid, d, mes, a = m.group(1), int(m.group(2)), m.group(3), int(m.group(4))
+        fechas.setdefault(sid, (a, meses[mes], d))
+    import datetime
+    hoy = datetime.date.today()
+    for sesion, requiere in cfg["materia_hasta"].items():
+        if sesion not in fechas or requiere not in fechas:
+            fallas.append(f"prerrequisitos: {sesion} o {requiere} sin fecha "
+                          f"en {cfg['plan']} (¿cambió el formato de la tabla?)")
+            continue
+        if fechas[requiere] >= fechas[sesion]:
+            msj = (f"DESFASE: {sesion} ({fechas[sesion][2]:02d}-"
+                   f"{fechas[sesion][1]:02d}) asume materia de {requiere}, que "
+                   f"recién se dicta el {fechas[requiere][2]:02d}-"
+                   f"{fechas[requiere][1]:02d} — ajustar contenido de la "
+                   f"sesión o el mapeo materia_hasta")
+            if datetime.date(*fechas[sesion]) < hoy:
+                avisos.append(msj + " (sesión ya realizada: solo se puede "
+                              "documentar y corregir para la próxima edición)")
+            else:
+                fallas.append(msj)
+
+
+def chequear_autocontencion():
+    # material escrito que el estudiante lee solo (listas, Reader): los
+    # enunciados no pueden apoyarse en algo efímero de la sala ("el tramo
+    # graficado en clase") — quien faltó no puede resolverlo y al año
+    # siguiente la referencia apunta al vacío. Nació el 17-ago-2026 con
+    # L2.1. Los bloques ocultos (respuestas para ayudantes) sí pueden.
+    cfg = DATOS.get("autocontencion")
+    if not cfg:
+        return
+    patrones = [p.lower() for p in cfg["patrones"]]
+    for glob in cfg["globs"]:
+        for f in sorted(RAIZ.glob(glob)):
+            oculto_en, prof = None, 0
+            for i, linea in enumerate(f.read_text().splitlines()):
+                s = linea.strip()
+                if s.startswith(":::"):
+                    if "{" in s:                       # apertura de bloque
+                        prof += 1
+                        if "content-hidden" in s and oculto_en is None:
+                            oculto_en = prof
+                    else:                              # cierre
+                        if oculto_en == prof:
+                            oculto_en = None
+                        prof = max(0, prof - 1)
+                    continue
+                if oculto_en is not None:
+                    continue
+                baja = linea.lower()
+                for pat in patrones:
+                    # borde de palabra al final (gemelo con SyS)
+                    if re.search(re.escape(pat) + r"\b", baja):
+                        fallas.append(
+                            f"{f.relative_to(RAIZ)}:{i + 1}: enunciado se apoya "
+                            f"en algo efímero («{pat}») — escribir el dato "
+                            "explícito o citar material escrito "
+                            "(ver GUIA_ESTILO_SESIONES.md §Listas)")
+
+
+def chequear_estilo_decks():
+    # decks reveal.js: (1) sin `$…$` dentro de bloques .notes (KaTeX
+    # duplica la fórmula en la vista de presentador); (2) toda imagen
+    # con .nostretch (sin él, auto-stretch colapsa la lámina a altura
+    # 0); (3) aviso si una clase próxima sigue sin notas o sin figuras
+    # (recordatorio de tanda — ver AUDITORIA_NOTAS_FIGURAS.md).
+    cfg = DATOS.get("estilo_decks")
+    if not cfg:
+        return
+    import datetime
+    meses = {"ene": 1, "feb": 2, "mar": 3, "abr": 4, "may": 5, "jun": 6,
+             "jul": 7, "ago": 8, "sep": 9, "oct": 10, "nov": 11, "dic": 12}
+    fechas = {}
+    plan = RAIZ / cfg.get("plan", "")
+    if plan.is_file():
+        pat = re.compile(r"^\|\s*\*{0,2}(C\d+)[^|]*\|\s*\*{0,2}\w{3}\s+"
+                         r"(\d{1,2})-([a-z]{3})-(\d{4})", re.M)
+        for m in pat.finditer(plan.read_text()):
+            fechas.setdefault(m.group(1), datetime.date(
+                int(m.group(4)), meses[m.group(3)], int(m.group(2))))
+    hoy = datetime.date.today()
+    horizonte = datetime.timedelta(days=cfg.get("aviso_dias", 10))
+    for f in sorted(RAIZ.glob(cfg["glob"])):
+        texto = f.read_text()
+        lineas = texto.splitlines()
+        en_notas, con_notas = False, 0
+        for i, linea in enumerate(lineas):
+            if re.match(r"^:::+\s*\{\.notes\}", linea.strip()):
+                en_notas = True
+                con_notas += 1
+            elif en_notas and linea.strip().startswith(":::"):
+                en_notas = False
+            elif en_notas and "$" in linea:
+                fallas.append(f"{f.relative_to(RAIZ)}:{i + 1}: LaTeX `$…$` "
+                              "dentro de .notes (KaTeX lo duplica en la vista "
+                              "de presentador — escribirlo en texto plano)")
+            if not en_notas:
+                for img in re.finditer(r"!\[[^\]]*\]\([^)]+\)(\{[^}]*\})?",
+                                       linea):
+                    attrs = img.group(1) or ""
+                    if ".nostretch" not in attrs:
+                        fallas.append(
+                            f"{f.relative_to(RAIZ)}:{i + 1}: imagen sin "
+                            "{.nostretch} — auto-stretch colapsa la lámina "
+                            "a altura 0")
+        m = re.match(r"c(\d+)-slides", f.stem)
+        fecha = fechas.get(f"C{int(m.group(1))}") if m else None
+        if fecha and hoy <= fecha <= hoy + horizonte:
+            n_img = len(re.findall(r"!\[[^\]]*\]\(", texto))
+            if con_notas == 0 or n_img == 0:
+                falta = " y ".join(p for p, v in
+                                   (("notas", con_notas), ("figuras", n_img))
+                                   if v == 0)
+                avisos.append(
+                    f"tanda pendiente: {f.stem} se dicta el "
+                    f"{fecha:%d-%m} y aún no tiene {falta} "
+                    "(ver ediciones/2026/AUDITORIA_NOTAS_FIGURAS.md)")
+
+
 def chequear_fichas_ayudantes():
     # cada ficha exportada debe existir y no ser más vieja que su fuente
     cfg = DATOS.get("fichas_ayudantes")
@@ -225,6 +364,9 @@ def main():
     chequear_prohibidos()
     chequear_chips_slides()
     chequear_banco_specs()
+    chequear_prerrequisitos_sesiones()
+    chequear_estilo_decks()
+    chequear_autocontencion()
     chequear_fichas_ayudantes()
     if not rapido:
         chequear_canvas_urls()
