@@ -84,6 +84,59 @@ frecuencias características.
 - Deje instalada la palabra **parcial** para "línea del espectro"; anuncie que **armónico** se gana en el módulo 2 (plan, columna "Rol del profesor").
 :::
 
+## Dos masas, dos coreografías {.smaller}
+
+<iframe width="1000" height="510" data-src="https://www.falstad.com/coupled/" title="Coupled Oscillations — Paul Falstad" style="border:0"></iframe>
+
+Simulación de Paul Falstad (falstad.com), usada en línea
+
+::: {.notes}
+**Apoyo:** Es la demostración exacta del fragmento anterior: dos masas
+acopladas tienen **dos** maneras de oscilar — juntas (en fase) y en
+oposición —, y cada una tiene su propia frecuencia. Muestre las dos y
+deje que la sala vea que no son la misma nota: **ahí nace la idea de
+"repertorio fijo de frecuencias"** que se usará todo el semestre.
+
+**Controles (probados)**: abre con **5 masas** — baje el deslizador
+**"Number of Loads" a 2** para el punto de las dos coreografías (o use
+el menú "Setup"). "Mouse: Pull string" permite tirar una masa y soltar.
+Los dos paneles de abajo son **"Normal Modes"**: ahí se ve que cada
+coreografía tiene su propia frecuencia.
+
+Provocación útil: "si dos masas dan dos frecuencias, ¿cuántas dará una
+sartén?" — y de ahí al taller. Con 1–2 minutos basta; la siguiente
+slide generaliza a N masas.
+
+**Necesita internet.** Carga en ~10 s la primera vez: pase por estas cuatro slides antes de que entren los estudiantes, así quedan listas. Sin conexión: las dos coreografías se dibujan en
+el pizarrón (dos masas y flechas: juntas / opuestas).
+:::
+
+## De una masa a muchas: la cadena {.smaller}
+
+<iframe width="1000" height="510" data-src="https://www.falstad.com/loadedstring/" title="Loaded String — Paul Falstad" style="border:0"></iframe>
+
+Simulación de Paul Falstad (falstad.com), usada en línea
+
+::: {.notes}
+**Apoyo:** Esta simulación reemplaza la "figura de cadena de masas" que
+pedía el plan y no existía: aquí se ve VIVA. Con el selector de número
+de masas: **1 masa = 1 sola manera de oscilar; 2 masas = 2; N masas =
+N frecuencias características**. Ese es exactamente el argumento de la
+slide anterior, y el puente hacia la cuerda (infinitas masas → serie de
+modos) y hacia la sartén (2D → muchos modos, y desordenados).
+
+**Controles (probados)**: "Number of Loads" sube de unas pocas masas a
+casi un continuo (la cuerda); los paneles de abajo pasan a llamarse
+**"Harmonics"** — la serie 1, 2, 3… que se gana en el módulo 2. Marque
+**"Sound"** para oírla, y "Center Pluck" para pulsar al medio: eso
+mismo se retoma en s04 (punto de pulsación) junto con "Tension".
+
+**Necesita internet.** Sin conexión: dibujar en el pizarrón dos masas
+unidas por resortes y las dos coreografías (juntas / en oposición) —
+es lo que hace la simulación, y el capítulo 3 lo describe en prosa.
+No hace falta más de 1–2 minutos aquí.
+:::
+
 ## Cada modo tiene lugares que no se mueven
 
 > **Nodo**: no se mueve. **Antinodo**: máximo movimiento.
@@ -241,9 +294,64 @@ cuerda hace un rato. Pregunta útil: "¿por qué la arena dibuja las
 zonas quietas y no las que vibran?"
 :::
 
+## Membrana rectangular: elija un modo {.smaller}
+
+<iframe width="1000" height="510" data-src="https://www.falstad.com/membrane/" title="Rectangular Membrane — Paul Falstad" style="border:0"></iframe>
+
+Simulación de Paul Falstad (falstad.com), usada en línea
+
+::: {.notes}
+**Apoyo:** El paso de la cuerda (1D) a la membrana (2D) se ve aquí de
+una: los puntos quietos se vuelven **líneas** quietas. Seleccione un
+par de modos distintos y deje que la sala vea cómo cambia el dibujo de
+las líneas nodales — es la misma familia de patrones del grabado de
+Chladni de la slide anterior, pero moviéndose.
+
+**Controles (probados)**: la **grilla de abajo a la izquierda es el
+selector de modos** — cada casilla es un modo; haga clic en dos o tres
+y compare las formas. "Show Frequencies" ya viene marcado (las
+frecuencias aparecen en pantalla), y **"Mouse = Poke membrane"** deja
+golpear la membrana: un golpe enciende VARIOS modos a la vez, justo lo
+que pasa con la sartén. Marque "Sound" si quiere oírlo.
+
+Pregunta para provocar: "¿cuántas maneras distintas de vibrar tiene
+esta membrana?" (muchas, y el applet las lista). Enlaza con la sartén
+del taller: por eso un objeto 2D suena a "ruido con altura difusa" y
+no a nota.
+
+**Necesita internet.** Sin conexión: las imágenes de Chladni de la
+slide anterior cubren la idea.
+:::
+
+## Membrana circular: el caso del timbal {.smaller}
+
+<iframe width="1000" height="510" data-src="https://www.falstad.com/circosc/" title="Circular Membrane — Paul Falstad" style="border:0"></iframe>
+
+Simulación de Paul Falstad (falstad.com), usada en línea
+
+::: {.notes}
+**Apoyo:** Es el parche del timbal y del tom. Muestre dos o tres modos:
+las líneas nodales son **círculos y diámetros**, no las rectas de la
+membrana rectangular. Aquí cierra el argumento del bloque: las
+frecuencias de estos modos NO caen en razones de números enteros — por
+eso la percusión de membrana no entrega una altura clara —, y el
+timbal es la excepción lograda (caldero de aire + tensión afinable +
+golpe cerca del borde acomodan algunos parciales hacia razones casi
+enteras).
+
+**Controles (probados)**: misma grilla selectora de modos que la
+rectangular, y "Show Frequencies" marcado: **lea las frecuencias en
+pantalla y compárelas con la serie 1, 2, 3… de la cuerda** — el
+contraste parcial/armónico del módulo 2, verificable en vivo y sin
+tener que creerle a nadie.
+
+**Necesita internet.** Sin conexión: las imágenes de Chladni y el
+argumento del apunte bastan.
+:::
+
 ## Chladni en movimiento {.smaller}
 
-<iframe width="800" height="450" src="https://www.youtube.com/embed/lRFysSAxWxI?rel=0" title="Chladni Plates — Harvard Natural Sciences Lecture Demonstrations" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe width="800" height="450" data-src="https://www.youtube.com/embed/lRFysSAxWxI?rel=0" title="Chladni Plates — Harvard Natural Sciences Lecture Demonstrations" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 ::: {.notes}
 **Apoyo:** Video: "Chladni Plates", Harvard Natural Sciences Lecture
