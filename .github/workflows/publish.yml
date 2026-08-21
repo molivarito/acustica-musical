@@ -50,7 +50,12 @@ jobs:
           # recursos de las slides (mazo autocontenido LOCAL del
           # profesor), pero como las slides no se publican, en el sitio
           # serían huérfanos solo-profesor: fuera del deploy
-          rm -rf material/_render/site/estimulos material/_render/site/canvas/estimulos
+          # árboles _render anidados que el perfil canvas arrastra al
+          # copiarse dentro del sitio (duplicados, nunca se enlazan)
+          find material/_render/site -mindepth 1 -type d -name '_render' -prune -exec rm -rf {} +
+          # cualquier carpeta de estímulos, a la profundidad que sea
+          find material/_render/site -type d -name 'estimulos' -prune -exec rm -rf {} +
+          echo "estimulos restantes en el deploy: $(find material/_render/site -type d -name 'estimulos' | wc -l)"
           # el índice del buscador se construye ANTES de este borrado y
           # arrastra el texto de las slides (y apuntaría a 404): podar
           # sus entradas de todo search.json del deploy
