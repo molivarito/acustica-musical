@@ -222,6 +222,50 @@ aparece altura.
 - Al cerrar este bloque, chequeo relámpago a mano alzada: "el tercer parcial de la sartén ¿es un armónico?" — debe responderla la sala completa sin dudar; la respuesta es no, porque las razones de la sartén no caen en números enteros (plan, "Verificación de aprendizaje").
 :::
 
+## Las líneas nodales se ven: figuras de Chladni {.smaller}
+
+![](../../assets/figuras/chladni_grabado_1787_tab9.jpg){height=370} ![](../../assets/figuras/chladni_placa_arena.jpg){height=370}
+
+Grabado de Chladni (1787, Tab. IX) · foto de placa con arena: Revisorius,
+CC BY-SA 4.0, vía Wikimedia Commons
+
+::: {.notes}
+**Apoyo:** Estas dos imágenes son el respaldo que SIEMPRE funciona (no
+dependen de internet). Izquierda: el grabado original de Chladni de
+1787 — él descubrió los patrones frotando placas con un arco de violín
+y espolvoreando arena. Derecha: una placa real con arena hoy. La idea
+para la sala: la arena huye de donde la placa vibra y se acumula donde
+NO se mueve — o sea, **el dibujo que ven ES el mapa de las líneas
+nodales**, la versión en 2D de los puntos quietos que vieron en la
+cuerda hace un rato. Pregunta útil: "¿por qué la arena dibuja las
+zonas quietas y no las que vibran?"
+:::
+
+## Chladni en movimiento {.smaller}
+
+<iframe width="800" height="450" src="https://www.youtube.com/embed/lRFysSAxWxI?rel=0" title="Chladni Plates — Harvard Natural Sciences Lecture Demonstrations" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+::: {.notes}
+**Apoyo:** Video: "Chladni Plates", Harvard Natural Sciences Lecture
+Demonstrations (3:36) — cuatro placas de bronce excitadas **con arco de
+violín** (no con generador electrónico), arena para revelar nodos y
+antinodos. Elegido por eso: la excitación es musical y engancha con las
+cuerdas frotadas de s11.
+
+**Sin internet (contingencia): el iframe sale en blanco — volver a la
+slide anterior, que tiene las imágenes locales.** El enlace directo,
+por si hay que abrirlo aparte: youtu.be/lRFysSAxWxI
+
+Alternativas verificadas, si prefiere otra estética: barrido de
+frecuencias con generador (se ve cambiar el patrón al subir la
+frecuencia), SMU Physics, "Sand Vibration Patterns - Chladni Plate"
+(3:51): youtu.be/YedgubRZva8 · versión divulgativa moderna con cuscús,
+Steve Mould (3:50): youtu.be/CR_XL192wXw
+
+No hace falta mostrarlo entero: con ~40 s de un par de patrones basta
+para el bloque.
+:::
+
 ## El proyecto del curso queda lanzado {.center}
 
 **Individual**: construir o modificar un objeto que suene — o estudiar
