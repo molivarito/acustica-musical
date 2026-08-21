@@ -11,7 +11,7 @@ format:
     transition: fade
 ---
 
-## Hoy: del golpe al lanzamiento del proyecto {.center}
+## Hoy: del golpe al lanzamiento del proyecto {.center .smaller}
 
 > Semana universitaria: las actividades de hoy van **sin nota** (se
 > hacen y se registran igual, no se califican).
@@ -252,7 +252,7 @@ proyectar en clase; excluidas del sitio público por el CI.
 
 ## Y más {.center}
 
-![](../../assets/proyectos_antiguos/p5.jpg){height=300} ![](../../assets/proyectos_antiguos/p6.jpg){height=300} ![](../../assets/proyectos_antiguos/p7.jpg){height=300} ![](../../assets/proyectos_antiguos/p8.jpg){height=300}
+![](../../assets/proyectos_antiguos/p5.jpg){height=215} ![](../../assets/proyectos_antiguos/p6.jpg){height=215} ![](../../assets/proyectos_antiguos/p7.jpg){height=215} ![](../../assets/proyectos_antiguos/p8.jpg){height=215}
 
 Monocordio con contrapesos · cordófonos artesanales · salterio
 
@@ -260,7 +260,7 @@ Monocordio con contrapesos · cordófonos artesanales · salterio
 
 **Todos empezaron igual: un objeto, una pregunta, un celular.**
 
-## Tres hitos, todo el semestre
+## Tres hitos, todo el semestre {.smaller}
 
 | Hito | Sesión | Entrega | % |
 |---|---|---|---|
