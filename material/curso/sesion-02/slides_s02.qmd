@@ -216,6 +216,11 @@ silbido — esos retratos quedan vírgenes para las mesas; el aaa/ooo de
 la slide anterior se afirma y se deja como intriga: la mesa que
 produzca la "aaa" lo comprueba en el taller. Si el micrófono falla,
 conmutar a la fuente interna (oscilador) de la demo.
+**Para el golpe usar «🔴 Capturar golpe»** (no "Congelar" a mano, que
+nunca llega a tiempo): pulsar, golpear, y a los 5 s la demo congela
+sola la forma de onda completa (ataque y extinción, eje en segundos) y
+el espectro de máximos del golpe. «Descongelar» vuelve al vivo. Lo
+mismo en el taller cuando le toque el golpe a una mesa.
 :::
 
 ## Taller PEE — retratos de sonido {.center}
