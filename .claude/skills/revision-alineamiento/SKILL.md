@@ -57,6 +57,13 @@ pasar el defecto de s04 por cuatro auditorías (2026-08-28).
      está" repetía el ticket de s04). Sobra la de la guía, no la del
      ticket: reapuntar esa predicción a la pregunta que sí sigue
      abierta.
+   - **El apunte de la sesión N filtra la sesión N+1**: el apunte es
+     consolidación de SU sesión, pero es material público que se lee
+     ENTRE clases — para la siguiente funciona como lectura previa. Si
+     resuelve por escrito lo que la sesión siguiente debe descubrir, la
+     filtración es real (s07 nombraba "aspereza → dos notas", que s08
+     está diseñada para que descubran). Exige un cruce extra: apunte de
+     N contra los compromisos de N+1.
    **Cuál es la lectura previa**: el **capítulo del libro**
    (`material/libro/capNN_*.md`, encabezado "*Lectura previa a la sesión
    NN*"), NO el apunte de la sesión — el apunte está narrado en pasado y

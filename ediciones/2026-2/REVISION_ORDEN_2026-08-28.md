@@ -37,7 +37,7 @@ defecto de esta familia es un lugar donde el ver llega antes del
 predecir.** La convención quedó escrita en
 `.claude/rules/estilo-materiales.md` §"Orden de la sesión".
 
-### Cinco patrones
+### Seis patrones
 
 1. **Lámina spoiler** — una tabla, figura o simulación previa entrega el
    resultado que la actividad debía producir.
@@ -52,18 +52,27 @@ predecir.** La convención quedó escrita en
    siguiente vuelve a pedirla, después de que la respuesta ya se reveló.
    La predicción duplicada es la que sobra, no la del ticket
    (descubierto en s05).
+6. **El apunte de la sesión N filtra la sesión N+1** — el apunte es
+   consolidación posterior *de su propia sesión*, pero es material
+   PÚBLICO (sitio y Canvas) que los estudiantes leen **entre** clases:
+   para la sesión siguiente funciona como lectura previa. Si resuelve
+   por escrito lo que la sesión siguiente está diseñada para que
+   descubran, la filtración es igual de real que una lámina spoiler
+   (descubierto en s07 → s08). Este patrón obliga a un cruce que los
+   otros cinco no piden: **apunte de N contra los compromisos de N+1**.
 
-**Cuál es la lectura previa** (corregido 2026-08-28, al auditar s06): la
-lectura previa es el **capítulo del libro** (`material/libro/capNN_*.md`,
-que se encabeza "*Lectura previa a la sesión NN*"), NO el apunte de la
-sesión. El apunte está narrado en pasado ("esta sesión repitió la
-jugada", "usted lo comprobó") — es consolidación POSTERIOR. Auditar el
-apunte como si fuera previo produce falsos positivos: lo que el apunte
-revela, el estudiante lo lee cuando ya hizo la actividad.
+**Los tres documentos y a quién le filtran** (afinado 2026-08-28 al
+auditar s06 y s07):
 
-El capítulo sí está legítimamente en manos del estudiante y no cuenta
-como filtración; pero hay que señalar cuando una actividad finge
-descubrimiento de algo que el capítulo ya trae explícito.
+| Documento | Cuándo se lee | ¿Filtra? |
+|---|---|---|
+| `material/libro/capNN_*.md` — la **lectura previa** ("*Lectura previa a la sesión NN*") | antes de la sesión N | No para N: está legítimamente en sus manos. Pero señalar si una actividad finge descubrimiento de algo que el capítulo ya trae explícito. |
+| `material/curso/sesion-NN/apunte_*.md` — **consolidación** (narrado en pasado: "usted lo comprobó") | después de la sesión N, y antes de la N+1 | **No para N, pero SÍ para N+1**: es público y se lee entre clases. Ver patrón 6. |
+| `plan.md`, `slides_*.qmd`, `actividades/*.md` | en la sesión N | Sí, es el objeto principal de la auditoría. |
+
+El error inverso también cuenta: auditar el apunte como si fuera lectura
+previa de su propia sesión produce falsos positivos (pasó en la primera
+auditoría de s05).
 
 ## Método por sesión (cinco pasos, en este orden)
 
@@ -75,6 +84,9 @@ descubrimiento de algo que el capítulo ya trae explícito.
 3. De las **láminas**: la línea de tiempo de revelaciones, lámina por
    lámina, notas de orador incluidas.
 4. **Cruzar**: para cada compromiso, ¿algo anterior lo responde?
+   4b. **Cruce entre sesiones**: leer el apunte de la sesión ANTERIOR
+   contra los compromisos de esta (patrón 6). Es el único paso que sale
+   de la carpeta de la sesión.
 5. Reportar: patrón, gravedad, ubicación exacta, cita de lo que se
    filtra, cita de lo que el estudiante debía producir, y el movimiento
    propuesto.
@@ -393,3 +405,95 @@ Opcional: cortar esa frase y dejar solo el dato normativo.
 - **"El mapa de las cinco estaciones"** solo lista preguntas, sin
   adelantar ningún dato.
 - La escucha del día no lleva nada visual.
+
+---
+
+## s07 — Prueba 1 + batidos · AUDITADA 2026-08-28, arreglos pendientes
+
+### Hallazgo 1 (alta) — patrón 6: el apunte de s07 regala el descubrimiento de s08
+
+`apunte_s07_batidos.md` es **público** (sitio y Canvas) y se lee entre
+s07 y s08. Dice, textual:
+
+> "en algún punto los batidos se vuelven demasiado rápidos para
+> contarlos, la ondulación se convierte en una **aspereza**, y más allá,
+> en algún momento, aparecen por fin ***dos notas*** distinguibles."
+
+y lo repite en la síntesis ("aspereza, y luego dos notas").
+
+s08 está diseñada exactamente para que eso lo descubran ellos: su
+escucha del día premia "que distingan las etapas (ondulación → aspereza
+→ dos notas)" y ordena al profesor **"NO da nombres técnicos todavía"**;
+el taller les hace medir sus tres fronteras personales.
+
+**Lo revelador**: el capítulo 7 —la lectura previa— protege el mismo
+contenido con disciplina ejemplar:
+
+> "¿Qué se oirá entonces? **No lo busque todavía**: lo va a oír en la
+> sala, y lo que su oído le diga ahí es el punto de partida de la
+> sesión 08."
+
+O sea: el curso sabe redactar esto sin filtrar. El apunte simplemente no
+siguió la misma disciplina.
+
+**Arreglo**: reescribir los dos pasajes del apunte sin nombrar la
+secuencia, replicando la fórmula del capítulo. No se toca s08.
+
+### Hallazgo 2 (baja) — el plan y las láminas mandan frecuencias distintas
+
+El plan manda contar con **f₂ = 442, 444 y 437 Hz** ("repite para 2, 4 y
+3 Hz de diferencia"); las láminas y el apunte usan **443, 442 y 437**
+("tres por segundo… con 442, dos; con 437, tres otra vez"). Si el
+profesor sigue el plan y demuestra con 444, la lámina que revela el
+resultado no calza con lo que se oyó.
+
+**Arreglo**: unificar en **443/442/437**, que es lo que ya dicen dos de
+las tres fuentes y además es mejor demostración — 443 y 437 son
+simétricos respecto de 440 y ambos dan tres batidos, que es justo el
+punto de "da lo mismo hacia qué lado".
+
+### Lo que está bien
+
+- El módulo 2 cuenta los batidos ANTES de mostrar el número; la regla
+  llega después de contar.
+- "El borde del fenómeno" se recoge sin explicar, con instrucción
+  explícita al profesor de no adelantarlo.
+- Sin contaminación cruzada con la Prueba 1 (verificado: "batido" no
+  aparece en el enunciado ni en la pauta).
+- El capítulo 7 es ejemplar protegiendo su propia sesión y la siguiente.
+
+---
+
+## s08 — Psicoacústica de la superposición · AUDITADA 2026-08-28
+
+Sesión mayormente limpia: **un solo hallazgo**, de gravedad media y con
+arreglo de una línea.
+
+### Hallazgo 1 (media) — la predicción de F3 pide un número que se acaba de proyectar
+
+La mini-lección vota y proyecta el orden de magnitud de la banda crítica
+("~1/3 de octava; alrededor de 440 Hz, del orden de 100 Hz"). Dos
+bloques después, `registro_mapa_del_choque.md` pide: *"Creo que la
+aspereza desaparecerá del todo alrededor de Δf ≈ ___ semitonos"* — la
+misma cantidad, en las mismas unidades, recién anotada en la pantalla.
+Lo más probable es que devuelvan el número, no una predicción propia.
+
+Lo que el plan quiere dejar abierto es la **variación personal**, no el
+orden de magnitud (que el capítulo ya adelanta legítimamente).
+
+**Arreglo**: convertir ese ítem de predicción absoluta a comparativa —
+*"El curso dijo ~100 Hz, una tercera menor. ¿Su umbral será más ancho,
+más angosto o igual? ¿Por qué?"*. Una línea en la hoja; no se tocan la
+mini-lección ni la lámina. F1 y F2 no están contaminados.
+
+### Lo que está bien y no hay que romper
+
+- **La cadena s07→s08 está bien resuelta**: se verificó específicamente
+  el patrón 5 y no aplica. El ticket de s07 se cobra una sola vez, en la
+  escucha del día, y el profesor no da nombres técnicos hasta después.
+- El taller de radiografía espectral predice contra el hito 1 del propio
+  estudiante: imposible de filtrar desde clase.
+- El gancho del módulo 2 vota antes de cualquier explicación; dos
+  láminas retienen la respuesta con `. . .`.
+- La devolución de la Prueba 1 está aislada de la escucha del día.
+- El arranque de la serie del objeto (s08–s12) no adelanta resultados.
