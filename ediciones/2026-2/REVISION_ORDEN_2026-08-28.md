@@ -24,6 +24,10 @@ se actualiza a medida que avanzan las tandas.
 | 7 | s09 | Reapuntar el ítem 2 de la predicción a la variación personal ("¿su oído distinguirá 2 cents?") en vez de preguntar algo que la mini-lección ya contestó | `actividades/guia_pee_afinar_por_batidos.md` | bajo |
 | 8 | s11 | Reformular P3 como contraste contra la demo ("¿la cuerda real mostrará la esquina tan nítida?"), que es lo que el propio plan ya declara en Riesgos | `actividades/guia_pee_punto_de_frotado.md` | bajo |
 | 9 | s11 | Sacar de la mini-lección la conclusión "las efes radian los graves" (es la P1 del taller) y moverla a la síntesis del cierre | `slides_s11.qmd` | bajo |
+| 10 | s13 | (opcional) Cambiar "respuesta sorpresa" por "¿se lo esperaban después de leer el capítulo?" — el plan declara que ese contenido se consume, no se protege | `slides_s13.qmd` | nulo |
+| 11 | s14 | Imprimir la hoja de ruta **sin** la columna "Tipo esperado" (seco/vivo/muy seco): es la respuesta del ranking que el grupo debe predecir | `actividades/rutas_salida_medicion.md` | bajo |
+| 12 | s14 | Mover el ítem del T60 de la sala de clases ANTES de la demostración del globo, o eliminarlo: hoy pide "estimar" lo que se acaba de medir delante de ellos | `actividades/guia_salida_medicion_t60.md` | bajo |
+| 13 | s12 | En la mini-lección y en la tabla "Dos tubos, dos registros", resolver solo el tubo ABIERTO y dejar el tapado como pregunta: el capítulo pidió expresamente guardar ese secreto | `slides_s12.qmd` + `plan.md` | bajo |
 
 ### Ya aplicado sin esperar (fuera de `material/curso/`)
 
@@ -31,6 +35,10 @@ se actualiza a medida que avanzan las tandas.
   los cents objetivo (702 y 700) en la misma pantalla donde los
   estudiantes afinan de oído, anulando el ocultamiento que la propia
   demo implementa. Reescrito sin números. Revertible con `git revert`.
+- **s14, demo de modos de sala**: cargaba con la curva REVELADA
+  (`checked`), mientras la lámina que la precede dice "con la curva
+  oculta". Quitado el `checked`; ahora el estado inicial coincide con lo
+  que la lámina asume.
 
 ### Decisiones de criterio (no las tomo yo)
 
@@ -666,3 +674,149 @@ cierre, después del taller.
 - El rearme de mesas aclara que objeto y bitácora siguen individuales.
 - El gancho de la pinza en el puente vota antes de revelar.
 - La P2 de ambos talleres queda genuinamente abierta.
+
+---
+
+## s13 — Prueba 2 + la voz cantada · AUDITADA 2026-08-28 · prácticamente limpia
+
+Sin actividades escritas en el módulo 2 (es plenario por diseño), así
+que el patrón 5 no aplica: no hay nada que duplicar.
+
+### Hallazgo único (baja, con atenuantes)
+
+`cap13` afirma como hecho narrado que "los pliegues fijan su frecuencia
+solos… y el tracto se limita a filtrar". La lámina monta después una
+votación sobre exactamente eso —"¿quién le pone el metrónomo a la
+válvula?"— y la resuelve como **"respuesta sorpresa"**, como si fuera
+hallazgo nuevo.
+
+**Atenuantes reales**, por los que NO se trata como los hallazgos altos:
+el plan declara explícitamente que esa mitad del capítulo está para
+**consumirse** en la mini-lección, no para protegerse (a diferencia de
+cap05, cap07 y cap10); no hay registro escrito que la votación
+contradiga; y es una votación informal, sin nota.
+
+**Arreglo propuesto (opcional)**: cambiar "respuesta sorpresa" por
+"¿se lo esperaban después de leer el capítulo?" — convierte la votación
+en verificación de lectura en vez de fingir descubrimiento.
+
+### Lo que está bien
+
+- El bloque "¿Qué observar?" de `demo_formantes_voz.html` es
+  **enteramente preguntas abiertas**, sin un solo número ni respuesta —
+  verificado viñeta por viñeta. Es el contraejemplo exacto del defecto
+  de s09.
+- El ocultamiento de F1/F2 en el juego está bien implementado en el
+  código.
+- `cap13` protege el susurro y las sopranos: cierra con "Preguntas que
+  la sesión va a responder", sin resolverlas.
+- Patrón 6 limpio en ambos sentidos: el apunte de s12 plantea el ticket
+  hacia s13 sin responderlo, y el de s13 hace lo mismo hacia s14.
+- Sin contaminación cruzada con la Prueba 2 (grep: cero coincidencias de
+  vocabulario de voz en el enunciado y la pauta).
+- Las votaciones dejan la respuesta solo en notas de orador.
+
+---
+
+## s14 — La sala como instrumento · AUDITADA 2026-08-28
+
+### Hallazgo 1 (alta) — la hoja de ruta trae impresa la respuesta del ranking
+
+`actividades/rutas_salida_medicion.md` tiene, en la tabla de cada ruta,
+una columna **"Tipo esperado"** que rotula cada espacio: *seco*, *vivo*,
+*muy seco*. Y la guía declara en sus materiales por grupo: "…lápiz, **la
+ruta asignada**". O sea, el grupo tiene esa hoja en la mano cuando la
+guía le pide:
+
+> "Ranking esperado de los espacios de nuestra ruta, de MÁS a MENOS
+> reverberante: 1.º ___ 2.º ___ 3.º ___ · ¿Por qué?"
+
+La columna es literalmente esa respuesta, ya impresa.
+
+**Arreglo propuesto**: imprimir para los estudiantes una versión de la
+hoja de ruta **sin** la columna "Tipo esperado", y conservarla solo en
+la plantilla de planificación del profesor.
+
+### Hallazgo 2 (alta) — se pide "estimar" algo que se acaba de medir delante de ellos
+
+El plan hace que el profesor demuestre completo en la sala de clases
+—globo, caída, **lectura del valor**— y recién después el grupo escribe.
+La guía pide:
+
+> "$T_{60}$ estimado de la SALA DE CLASES (**la acabamos de oír con el
+> globo del profesor**): ___ s"
+
+El propio texto admite que el valor ya se mostró: eso no es predicción,
+es memoria.
+
+**Arreglo propuesto**: mover ese ítem ANTES de la demostración modelo
+(que escriban su estimación y después el profesor mida), o eliminarlo y
+dejar solo el ranking de la ruta, que sí es genuino.
+
+### Hallazgo 3 (baja, técnico) — **ARREGLADO 2026-08-28**
+
+`demo_modos_sala.html` cargaba con `<input … id="chkRevelar" checked>`,
+es decir **con la curva revelada**, mientras la lámina "Prediga, antes
+de mover nada" dice explícitamente "con la curva **oculta**". Si el
+profesor proyectaba sin acordarse de desmarcar, la demo se spoileaba
+sola al abrir.
+
+**Arreglado** (fuera de `material/curso/`): se quitó `checked`, de modo
+que el estado inicial coincide con lo que la lámina asume.
+
+### Lo que está bien
+
+- El bloque "¿Qué observar?" de la demo está bien construido: predecir,
+  barrer, revelar recién al final.
+- `cap14` es ejemplar: declara que no revela espacios ni valores porque
+  "eso arruinaría la mejor parte".
+- Las votaciones "¿hormigón o cortina?" y "¿cae igual en la sala que en
+  la cancha?" retienen la respuesta con `. . .`.
+- Patrón 6 limpio: el apunte de s13 plantea la pregunta hacia s14 sin
+  resolverla.
+- No se siembra ticket hacia s15: decisión explícita y correcta.
+- La pauta del hito 3 referencia contenidos que s08–s12 sí entregaron.
+
+---
+
+## s12 — Vientos y lutería · AUDITADA 2026-08-28
+
+### Hallazgo único (alta) — la lámina revienta el secreto que el capítulo pidió guardar
+
+La lectura previa, `cap12`, protege el salto de registro del tubo tapado
+con la disciplina más explícita de todo el curso:
+
+> "¿Y en un tubo tapado, donde los modos pares no existen? … **No se lo
+> vamos a decir**: dedúzcalo de la serie impar, escríbalo, y en el
+> taller lo va a soplar usted mismo (los clarinetistas del curso ya lo
+> saben; **que guarden el secreto** y verifiquen)."
+
+Y la lámina "Dos tubos, dos registros" (contenido visible, no notas),
+antes del taller, proyecta la tabla:
+
+> "Al soplar más fuerte, salta a… | la **octava** (flauta) | la
+> **docena** (clarinete, tubo tapado) |"
+
+La mini-lección del plan repite la misma frase. Eso contesta la Fase B
+de la guía —*"la nota saltará al intervalo ___, porque los modos
+disponibles son ___"*— y también la Fase C.
+
+**Arreglo propuesto**: en la mini-lección y en la tabla, resolver solo
+el caso **abierto** (que es lo necesario para cerrar la escucha del día
+con la flauta) y dejar el caso **tapado** como pregunta abierta, tal
+como ya hace el capítulo 12.
+
+### Lo que está bien
+
+- La escucha del día es íntegramente auditiva, con flauta en vivo y sin
+  pantalla.
+- El "¿Qué observar?" de `demo_tubo_agujeros.html` está fraseado como
+  pregunta ("¿octava o docena?"), sin dar la respuesta: el riesgo nuevo
+  de las demos no se materializa aquí.
+- La Fase D (por qué los tubos salieron sistemáticamente bajos) está
+  protegida: el profesor "NO explica todavía" y el plenario que la
+  resuelve va después de que cada grupo la redactó.
+- Patrón 6 limpio: el apunte de s11 deja "¿qué hace de válvula?"
+  abierto.
+- `pauta_revision_bitacoras.md` no exige nada que no se haya anunciado
+  en s10 y s11.
