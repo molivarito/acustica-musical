@@ -36,6 +36,8 @@ project:
     # filtren. NUNCA un glob aquí: e01 es la línea base reservada de s15.
     - "estimulos/e02_flauta_ataque_soploso.wav"
     - "estimulos/e03_trueno_retardo.wav"
+    - "estimulos/e04_guitarra_pulsada.wav"
+    - "estimulos/e04_guitarra_pulsada_invertida.wav"
 
 lang: es
 

@@ -22,6 +22,21 @@ la licencia de su fuente). Búsqueda y validación: 2026-08-13/14, ver
   licencia **CC-BY-SA 4.0** (el derivado queda CC-BY-SA 4.0).
   Modificaciones: conversión a WAV mono 44,1 kHz, normalización a
   −1 dBFS. Atribución: "Jud McCranie, Wikimedia Commons, CC-BY-SA 4.0".
+- **`e04_guitarra_pulsada.wav`** y
+  **`e04_guitarra_pulsada_invertida.wav`** — el par del gancho "la nota
+  al revés" (s04, módulo 2). Derivadas de la muestra
+  `MartinGM2_052__E3_1.wav` (nota E3 de una Martin HD28 Vintage Series)
+  de **Jeff Learman** para el *Discord SFZ GM Bank*,
+  <https://github.com/sfzinstruments/Discord-SFZ-GM-Bank>, licencia
+  **CC0** (dominio público), declarada en el encabezado de
+  `026-Acoustic Guitar (steel).sfz` y en la política del README del
+  proyecto ("Only CC0, CC-BY, and equivalent licences are allowed").
+  Modificaciones: WAV mono 44,1 kHz, desvanecidos de 8 ms en los
+  extremos (sin clics), normalización a −1 dBFS y, en la segunda,
+  inversión temporal. **Las dos quedan al MISMO nivel a propósito**
+  (pico −1,0 dBFS, RMS −21,1 dBFS): en clase el contraste debe oírse
+  como cambio de ENVOLVENTE, no de volumen. CC0 no exige atribución;
+  por buena práctica: "Jeff Learman, Discord SFZ GM Bank, CC0".
 
 Los `*_lamina.png` son las fichas de validación (forma de onda +
 espectrograma) generadas con

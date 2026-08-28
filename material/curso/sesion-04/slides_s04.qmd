@@ -51,14 +51,28 @@ Es la misma pregunta que dejaron escrita en su ticket de s03.
 
 . . .
 
-Guárdense la hipótesis — en 15 minutos hay veredicto con espectrograma.
+Guárdense la hipótesis — en 15 minutos hay veredicto.
 
 ::: {.notes}
-**Apoyo:** no resuelva la apuesta aquí — el plan indica que el veredicto
-se da recién con el espectrograma proyectado, contrastando con lo que
-cada mesa anotó en el ticket de s03 (plan, bloque 10–25′). Es la misma
-pregunta que cerraron por escrito en s03; recuérdelo para que sientan la
-continuidad.
+**Apoyo:** no resuelva la apuesta aquí — el veredicto se da con el
+espectrograma proyectado, contrastando con lo que cada mesa anotó en el
+ticket de s03. Es la misma pregunta que cerraron por escrito en s03;
+recuérdelo para que sientan la continuidad.
+
+**El veredicto va SIN espectrograma (cambio del 2026-08-28).** El ticket
+de s03 preguntó algo binario: ¿nota o timbre? Eso se responde sin
+pantalla — el timbre **se oye**, y que la nota no cambió lo dice el
+**afinador** (o cántela usted). Pulse las dos veces en vivo, deje que lo
+oigan, verifique la nota con el afinador y cierre: "misma nota, otro
+timbre: cambió el REPARTO entre los mismos parciales".
+
+**No proyecte el espectrograma en este bloque.** La escucha del día, el
+ticket de s03 y el taller usan los mismos dos puntos ($L/2$ y cerca del
+puente): si aparecen resueltos en pantalla ahora, la predicción escrita
+del taller queda sin objeto. Deje el veredicto como pregunta de
+lanzamiento —"la receta cambió… ¿cuáles parciales, exactamente?"— y
+anuncie que el espectrograma pasa a las manos de ellos, en su propio
+instrumento.
 :::
 
 ## La receta de vibración
@@ -130,25 +144,7 @@ silencia los que tienen un *nodo* ahí"). Toda la sesión cabe en esa
 simetría (apunte): úsela como frase ancla antes de lanzar el taller.
 :::
 
-## El mapa de la cuerda
-
-| Punto de pulsación | Modos encendidos | Timbre |
-|---|---|---|
-| $L/2$ (medio) | solo impares (2, 4, 6… mudos) | hueco, redondo |
-| $\sim L/10$ (cerca del puente) | casi todos, agudos incluidos | brillante, metálico |
-
-En general: pulsar a $1/n$ del largo silencia el modo $n$ y sus múltiplos.
-
-::: {.notes}
-**Apoyo:** respalda la tabla la Figura 1 del apunte: "arriba, pulsada en
-$L/2$: todos los parciales pares tienen un nodo ahí y nacen mudos —queda
-solo la serie impar, el sonido hueco—. Abajo, pulsada cerca del puente
-($L/10$): se enciende un poco de todos los modos, receta pareja y rica
-en agudos, sonido brillante." La regla general de la fila final es la
-que van a aplicar en el taller inmediatamente después.
-:::
-
-## Taller: el mapa de la cuerda
+## Taller: el mapa de la cuerda {.smaller}
 
 En grupo, con SU instrumento: midan $L$, marquen $L/2$, $L/4$, $\sim L/10$ con cinta.
 
@@ -156,8 +152,8 @@ En grupo, con SU instrumento: midan $L$, marquen $L/2$, $L/4$, $\sim L/10$ con c
 
 | Fase | Qué hacen | Tiempo |
 |---|---|---|
-| 1 (obligatoria) | Predecir qué parciales dominan en cada punto; pulsar y verificar con el espectrograma | ~25′ |
-| 2 (opcional, grupos rápidos) | Armónicos naturales: dedo suave en traste 12 ($L/2$), luego 7 ($L/3$), 5 ($L/4$); verificar con afinador | resto |
+| 1 (obligatoria) | Predecir los parciales de cada punto → pulsar → verificar en el espectrograma | ~25′ |
+| 2 (opcional) | Armónicos naturales: dedo suave en el traste 12 ($L/2$), luego 7 y 5; verificar con afinador | resto |
 
 Registran su mapa punto→parciales en la guía PEE.
 
@@ -179,6 +175,63 @@ puede no salir en instrumentos de escala corta (ukelele, charango); si
 un grupo rápido la intenta, el del traste 12 sale siempre y basta.
 :::
 
+## El mapa de la cuerda
+
+| Punto de pulsación | Modos encendidos | Timbre |
+|---|---|---|
+| $L/2$ (medio) | solo impares (2, 4, 6… mudos) | hueco, redondo |
+| $\sim L/10$ (cerca del puente) | casi todos, agudos incluidos | brillante, metálico |
+
+En general: pulsar a $1/n$ del largo silencia el modo $n$ y sus múltiplos.
+
+::: {.notes}
+**Apoyo — es la SÍNTESIS del taller: va DESPUÉS, nunca antes.** (Estuvo
+mal ubicada hasta el 2026-08-28: adelantaba celda por celda la tabla de
+predicción de la guía, incluida la columna "cómo sonará en una
+palabra".) Proyéctela recién cuando el mapa ya esté en el pizarrón con
+lo que midieron los 3 grupos: sirve para confirmar y ordenar, no para
+adelantar. Contraste con lo que ellos anotaron y detenga la clase donde
+NO coincida — ahí está la conversación que vale.
+
+Respalda la tabla la Figura 1 del apunte: "arriba, pulsada en $L/2$:
+todos los parciales pares tienen un nodo ahí y nacen mudos —queda solo
+la serie impar, el sonido hueco—. Abajo, pulsada cerca del puente
+($L/10$): se enciende un poco de todos los modos, receta pareja y rica
+en agudos, sonido brillante." La fila general ($1/n$ silencia el modo
+$n$ y sus múltiplos) es la generalización de lo que ya aplicaron en el
+$L/4$, que la figura del apunte no trae.
+:::
+
+## El punto de pulsación, en vivo {.smaller}
+
+<iframe width="1000" height="510" data-src="https://www.falstad.com/loadedstring/" title="Loaded String — Paul Falstad" style="border:0"></iframe>
+
+Simulación de Paul Falstad (falstad.com), usada en línea
+
+::: {.notes}
+**Apoyo — OPCIONAL y SOLO después del taller.** Es el mismo applet de
+s03 (la cadena de masas). No la use antes del taller: muestra en vivo,
+punto por punto, exactamente lo que ellos tienen que producir. (Estuvo
+mal ubicada hasta el 2026-08-28.)
+
+**Aquí sirve para generalizar (~2′):** ellos midieron TRES puntos en un
+instrumento; esto recorre todos los puntos y además deja cambiar la
+cuerda. Con el selector en `Mouse = Pluck string`, pulse haciendo clic
+donde ningún grupo midió — entre $L/4$ y $L/10$, o pegadísimo al
+extremo — y pregunte a la sala qué barras van a crecer en el panel
+**"Harmonics: Magnitudes"** ANTES de soltar el clic: ahora tienen su
+propio mapa para apostar. Marque **"Sound"** para que se OIGA el cambio
+de timbre sin que cambie la nota. Suba "Number of Loads" al máximo para
+pasar de la cadena a la cuerda. El deslizador **"Tension"** queda a la
+vista para el módulo 2 (las tres palancas de $f_1$): súbalo y la nota
+sube, sin tocar el largo.
+
+**Necesita internet y es LENTA:** tarda ~25 s en cargar la primera vez
+(medido). Ábrala antes de que entren los estudiantes, junto con las de
+s03. Sin conexión, o si el cierre va justo: sáltela sin culpa — es
+material de generalización, no del núcleo de la sesión.
+:::
+
 ## Cierre módulo 1
 
 Pregunta relámpago: pulsé exactamente donde el modo 3 tiene un nodo.
@@ -188,9 +241,11 @@ Pregunta relámpago: pulsé exactamente donde el modo 3 tiene un nodo.
 **¿Suena el parcial 3?**
 
 ::: {.notes}
-**Apoyo:** antes de la pregunta relámpago: un grupo expone su mapa
-(tabla de puntos de pulsación); usted sintetiza en el pizarrón el mapa
-de la cuerda con los hallazgos de los 3 grupos (plan, bloque 62–70′).
+**Apoyo:** el orden del cierre es: un grupo expone su mapa (tabla de
+puntos de pulsación) → usted sintetiza en el pizarrón el mapa con los
+hallazgos de los 3 grupos → recién ahí proyecta la lámina "El mapa de la
+cuerda" para confirmarlo (y, si sobra tiempo, la simulación) → pregunta
+relámpago.
 Pregunta relámpago — respuesta esperada: la sala completa debe responder
 "no" sin dudar (Verificación de aprendizaje del plan). Recoja las guías:
 se cierran junto con la guía del módulo 2 (estirar, acortar, engordar).
@@ -247,6 +302,35 @@ amplitudes ajustables cubre el núcleo); la exploración fina queda de
 tarea con el enlace publicado.
 :::
 
+## Reto opcional: el juego de ondas {.smaller}
+
+<iframe width="1000" height="510" data-src="https://phet.colorado.edu/sims/html/fourier-making-waves/latest/fourier-making-waves_es.html" title="Fourier: Creando Ondas — PhET, University of Colorado" style="border:0"></iframe>
+
+Simulación PhET (U. de Colorado), CC BY 4.0 — usada en línea
+
+::: {.notes}
+**Apoyo — slide de RESERVA, no está en el presupuesto de tiempo del
+plan:** el bloque de 8–28′ se cumple completo con
+`demo_sintesis_aditiva.html`; esta simulación solo agrega el
+formato de desafío. Sáltela sin culpa si el bloque va justo — el plan
+de módulo 2 no tiene holgura.
+
+**Si la usa (~3′):** entre a **"Juego de Ondas"**: la simulación muestra
+una onda objetivo y hay que reproducirla moviendo las amplitudes de los
+armónicos. Proyéctela y que las mesas canten qué armónico subir; es la
+síntesis aditiva de la demo anterior, pero al revés (del sonido a la
+receta) — la misma inversión que practicarán en el ticket de salida. La
+pantalla **"Discreto"** sirve si prefiere seguir sumando parciales de a
+uno.
+
+**Alternativa natural:** publicarla junto al enlace de la demo para
+explorar en casa (anuncio del cierre), sin ocupar tiempo de aula.
+
+**Necesita internet y tarda ~30 s en cargar** (medido); está en
+español. Sin conexión: no hay plan B ni hace falta — es material
+opcional.
+:::
+
 ## Espectro↔timbre: la relación no es unívoca
 
 ::: {.incremental}
@@ -266,7 +350,7 @@ pulsación = cuerda): use esta slide para cerrar el bloque antes de pasar
 a las palancas de la nota.
 :::
 
-## Estirar, acortar, engordar: las tres palancas de $f_1$
+## Estirar, acortar, engordar: las tres palancas de $f_1$ {.smaller}
 
 | Palanca | Qué mueven | Proporción |
 |---|---|---|
