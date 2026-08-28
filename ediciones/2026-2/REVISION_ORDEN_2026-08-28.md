@@ -28,6 +28,12 @@ se actualiza a medida que avanzan las tandas.
 | 11 | s14 | Imprimir la hoja de ruta **sin** la columna "Tipo esperado" (seco/vivo/muy seco): es la respuesta del ranking que el grupo debe predecir | `actividades/rutas_salida_medicion.md` | bajo |
 | 12 | s14 | Mover el ítem del T60 de la sala de clases ANTES de la demostración del globo, o eliminarlo: hoy pide "estimar" lo que se acaba de medir delante de ellos | `actividades/guia_salida_medicion_t60.md` | bajo |
 | 13 | s12 | En la mini-lección y en la tabla "Dos tubos, dos registros", resolver solo el tubo ABIERTO y dejar el tapado como pregunta: el capítulo pidió expresamente guardar ese secreto | `slides_s12.qmd` + `plan.md` | bajo |
+| 14 | s14 | Corregir "25 minutos por grupo" → "9 defensas individuales de ~11′": residuo del diseño grupal, en material PÚBLICO, sobre el formato de su propia defensa | `apunte_s14_la_sala_como_instrumento.md` | nulo |
+| 15 | — | Junto con el #14 (y solo después de él): agregar `"minutos por grupo"` a los patrones prohibidos, para que el verificador atrape este residuo | `DATOS_CURSO.yml` | nulo |
+| 16 | s02 | *(2027)* Marcar el golpe seco como el ejemplo ya trabajado, en vez de listarlo entre los cuatro a predecir a ciegas — el diseño ya lo sacrifica a propósito | `guia_pee_retratos_de_sonido.md` | bajo |
+| 17 | s01 | *(2027)* Reapuntar la §3 de la guía a lo que la votación no contesta | `guia_pee_zona_gris.md` | bajo |
+| 18 | s03 | *(2027)* Mover la regla "un dedo en un antinodo apaga ese modo" a la síntesis posterior al taller | `slides_s03.qmd` | bajo |
+| 19 | s03 | *(2027)* Nota de reservar "Center Pluck" para s04 | `slides_s03.qmd` (notas) | nulo |
 
 ### Ya aplicado sin esperar (fuera de `material/curso/`)
 
@@ -820,3 +826,224 @@ como ya hace el capítulo 12.
   abierto.
 - `pauta_revision_bitacoras.md` no exige nada que no se haya anunciado
   en s10 y s11.
+
+---
+
+## s15 — Presentaciones finales · AUDITADA 2026-08-28 · **LIMPIA en orden**
+
+Como se anticipaba, el molde de "predecir antes de ver" aplica poco a un
+formato de defensas. Los seis patrones se revisaron uno por uno y
+ninguno aplica:
+
+- No hay demo (única sesión sin ella), así que no hay "¿Qué observar?"
+  que revisar.
+- No hay demostración del profesor: cada defensa es del propio objeto.
+- La síntesis del semestre ocurre una sola vez, al cierre.
+- La re-escucha de la línea base retiene bien: "Sin abrir el sobre
+  todavía…" con `. . .`, y las hojas de escucha se recogen ANTES de
+  abrir los sobres (verificado en el guion del profesor).
+- s15 no siembra ticket, y el arreglo de s14 ya cortó la cadena.
+- La **pauta del hito 3 coincide** con lo que se exige en clase: la
+  rúbrica R1–R4 del guion es idéntica a la de la pauta.
+- El **orden de las 9 defensas no da ventaja**: todo se entrega cerrado
+  hasta las 20:00 de la víspera, el orden se sortea en s14, la pauta
+  declara que no afecta la rúbrica, y las preguntas son individuales
+  sobre el informe propio.
+
+### Hallazgo colateral (media) — un error de hecho en material público
+
+No es de orden, pero apareció en el cruce y conviene arreglarlo. El
+apunte de s14 —**público**, en el sitio y en Canvas— dice:
+
+> "presentaciones finales del proyecto en ambos módulos, **25 minutos
+> por grupo**, con el instrumento funcionando…"
+
+Es un residuo del diseño grupal anterior al 2026-08-07. El diseño
+vigente es **9 defensas individuales de ~11′** (8′ + 3′), como dicen el
+plan, las láminas y la pauta del hito 3. Es la única ocurrencia de "25
+minutos" en todo `material/curso/`.
+
+Importa porque es **lo último que el estudiante lee sobre el formato de
+su propia defensa** antes de prepararla, y contradice la pauta que ya
+recibió impresa. Riesgo práctico bajo (la pauta manda y es más
+reciente), pero real para quien repase el apunte la víspera.
+
+**Arreglo propuesto**: reemplazar por "9 defensas individuales de ~11′
+cada una", o mejor, remitir a la pauta sin repetir el número, para no
+duplicar la fuente de verdad.
+
+### Hueco descubierto en el verificador de consistencia
+
+`verificar_consistencia.py` debería haber atrapado esto y no lo hace:
+sus patrones prohibidos cubren los términos del diseño grupal anterior
+—cantidad de grupos, integrantes por grupo, evaluación entre pares—
+pero ninguno cubre una **duración por grupo**, que es exactamente la
+forma en que este residuo sobrevivió al rediseño.
+
+**Propuesta**: agregar `"minutos por grupo"` a `prohibidos.patrones` en
+`DATOS_CURSO.yml`. **No lo hice ahora a propósito**: el verificador
+corre en el pre-commit, así que agregar el patrón antes de arreglar el
+apunte dejaría el repo sin poder commitear. Los dos cambios van juntos,
+en este orden: primero el apunte, después el patrón.
+
+---
+
+## s01 y s02 — AUDITADAS 2026-08-28 · ya dictadas, hallazgos para 2027
+
+Confirman lo más importante del barrido: **el defecto estuvo desde el
+origen**. No es de las sesiones tardías del loop de generación.
+
+### s01 — Hallazgo (media-alta): la votación contesta la pregunta de proyección
+
+La lámina "¿duplicar $f$ duplica la altura?" vota y revela de inmediato
+*"No. Duplicar la frecuencia sube una octava — que es otra cosa"*. La
+guía `guia_pee_zona_gris.md` §3, que se completa 20–30 minutos después,
+pregunta: *"sobre la zona gris, al duplicar la tasa, ¿qué relación
+musical aparece entre las dos notas?"*. Misma respuesta, pedida como si
+siguiera abierta.
+
+**Contraste interno**: el "¿Qué observar?" de `demo_tren_pulsos.html`
+hace la misma pregunta pero explícitamente dice "guarde la respuesta
+para la sesión 5", sin resolverla. La demo tiene la disciplina; la
+lámina no.
+
+**Arreglo (2027)**: reapuntar §3 a lo que la revelación no contesta
+—"¿le sorprendió que fuera una octava y no 'el doble de agudo'?"— o
+mover el reveal al cierre.
+
+### s02 — Hallazgo (alta): el golpe seco llega spoileado por dos vías
+
+1. `cap02` describe la forma de onda del golpe *y confirma la
+   predicción*: "Si en su predicción de la sesión 1 usted dibujó algo
+   que *se apaga*, **iba bien encaminado**".
+2. La lámina "¿Línea o mancha?" vota y revela antes del taller: "Una
+   **sacudida breve que se apaga**".
+3. La guía pide dibujar el golpe entre los cuatro sonidos "vírgenes", y
+   luego "¿le achuntaron a la forma general?".
+
+**Contradicción interna del capítulo**: el mismo `cap02` protege las
+predicciones de espectro con "**no le arruinamos la apuesta**" y regala
+la de forma de onda del golpe. Es el **único capítulo del curso** que se
+sale de la disciplina — los demás (cap05, cap07, cap10, cap12, cap13,
+cap14) la sostienen.
+
+**Matiz que corrige a la auditoría — el diseño YA sacrifica el golpe a
+propósito.** Las notas de la lámina de la demo dicen: modelar con "un
+**golpe en la mesa** (su 'línea o mancha' ya quedó revelada por el
+voto)" y "**NO modelar aaa, sss ni silbido** — esos retratos quedan
+vírgenes para las mesas". O sea: el golpe es el caso demostrado
+deliberadamente, para no gastar los otros tres.
+
+**Por eso el arreglo NO es quitar la votación ni tocar el capítulo**
+(las dos cosas que proponía la auditoría), sino **la guía**: marcar el
+golpe como el ejemplo ya trabajado —predicho en s01, revelado en el
+voto— en vez de listarlo entre los cuatro a predecir a ciegas. Así se
+respeta el sacrificio deliberado y los otros tres siguen genuinos.
+
+### Lo que está bien
+
+- La línea base de escucha de s01 no tiene contaminación visual.
+- El bloque "Antes de medir" de s01 predice correctamente antes de abrir
+  la demo.
+- El "¿Qué observar?" de `demo_forma_onda_espectro.html` es enteramente
+  preguntas abiertas, con mecanismo de velo ("clic para revelar"):
+  contraejemplo limpio, como el de s13.
+- Las predicciones de **espectro** de s02 están genuinamente protegidas
+  en el capítulo.
+- El taller del módulo 2 de s02 y el gancho del trueno no tienen
+  reveals previos.
+
+---
+
+## s03 — Modos de vibración · AUDITADA 2026-08-28 · ya dictada
+
+### Hallazgo 1 (alta) — la lámina entrega la regla que el taller debe descubrir
+
+`cap03` protege la pregunta con disciplina: *"Pregunta para llevar a la
+sesión (**y no es retórica: la va a responder con una tapa de olla en la
+mano**): si un modo tiene un lugar quieto y usted apoya ahí un dedo,
+¿ese modo se apaga o sobrevive?"*
+
+La lámina de la mini-lección, antes del taller, la contesta en el cuerpo
+visible: *"Un dedo en un **antinodo** apaga ese modo · Un dedo en un
+**nodo** deja sobrevivir ese modo"*. Y la Fase 2 de la guía pide después:
+*"Un dedo apoyado suavemente en el centro mientras suena: ¿se apaga
+todo, o solo algunos parciales? ¿Cuáles?"*
+
+**Arreglo (2027)**: mover el enunciado de la regla a la síntesis
+posterior al taller; antes dejar solo las definiciones de nodo y
+antinodo, sin la consecuencia.
+
+### Hallazgo 2 (baja, con matiz) — "Center Pluck" y la demo de cuerda
+
+Las notas de la simulación Falstad de s03 sugieren usar **"Center
+Pluck"** y dicen "eso mismo se retoma en s04 (punto de pulsación)". Si
+el profesor lo demuestra en vivo en s03, muestra el mecanismo que el
+ticket de salida de esa misma sesión va a preguntar y que s04 —ya
+reordenada— protege.
+
+**Matiz que corrige a la auditoría**: el segundo riesgo que reportó —que
+`demo_modos_cuerda.html` haga predecir "dedo en la mitad → ¿cuáles modos
+sobreviven?", cuyo resultado coincide con el $L/2$ de s04— **no es
+filtración**: es el puente que el curso construye a propósito. La
+Votación 2 de s04 pregunta explícitamente "¿el dedo de la tapa de s03 y
+la púa hacen lo mismo o lo contrario?", y el mecanismo es el inverso
+(amortiguar vs. pulsar). Coincidencia numérica buscada, no fuga.
+
+**Arreglo (2027)**: nota en s03 de reservar "Center Pluck" para s04.
+
+### Lo que está bien
+
+- El ticket de salida es binario y sin pantalla: consistente con el
+  arreglo ya aplicado en s04.
+- Patrón 6 limpio en ambos sentidos (apunte de s02 → s03 y de s03 → s04).
+- Las simulaciones de Falstad "coupled" y "loadedstring" tratan el
+  concepto general de N masas: no revelan las razones de la sartén.
+- El lanzamiento del proyecto pide las mismas categorías que evaluará el
+  hito 1, pero no hay respuesta correcta que adelantar: es andamiaje de
+  la misma tarea, sin nota. No es filtración.
+
+---
+
+# BALANCE DEL BARRIDO COMPLETO — 15 de 15 sesiones
+
+| Sesión | Estado | Hallazgos |
+|---|---|---|
+| s01 | ya dictada | 1 media-alta |
+| s02 | ya dictada | 1 alta (doble vía) |
+| s03 | ya dictada | 1 alta + 1 baja |
+| **s04** | **RESUELTA** | 3 (2 altas), arregladas |
+| s05 | propuesta | 1 alta + 1 media |
+| s06 | propuesta | 1 alta + 2 de criterio |
+| s07 | propuesta | 1 alta (patrón 6) + 1 baja |
+| s08 | propuesta | 1 media |
+| s09 | 1 arreglada | 1 alta (arreglada) + 1 media |
+| s10 | **LIMPIA** | — |
+| s11 | propuesta | 2 altas |
+| s12 | propuesta | 1 alta |
+| s13 | casi limpia | 1 baja con atenuantes |
+| s14 | 1 arreglada | 2 altas + 1 baja (arreglada) |
+| s15 | **LIMPIA en orden** | 1 media (error de hecho) |
+
+**12 de 15 sesiones tenían al menos un defecto de orden.** Solo s10 salió
+enteramente limpia; s13 y s15 casi.
+
+## Los tres hallazgos estructurales del barrido
+
+1. **El defecto estuvo desde el origen.** s01, s02 y s03 lo tienen igual
+   que s11 o s14: es una falla sistemática del loop de generación del
+   2026-07-13, no una degradación tardía.
+
+2. **Los capítulos del libro son la parte sana del curso.** cap03,
+   cap05, cap07, cap10, cap12, cap13 y cap14 retienen sus respuestas a
+   propósito, a veces de forma militante ("no se lo vamos a decir… que
+   los clarinetistas guarden el secreto"). La única excepción es cap02,
+   que se contradice a sí mismo. **Las filtraciones viven en las
+   láminas, los planes, las guías y los apuntes** — nunca en el libro.
+   Quien escribió el libro tenía la regla clarísima.
+
+3. **La forma dominante es siempre la misma**: la mini-lección o una
+   lámina contesta, minutos antes, exactamente lo que la guía pide
+   predecir después. Ocurre en s01, s02, s03, s04, s06, s08, s09, s11,
+   s12 y s14. Cuando el material se salva, es casi siempre porque el
+   capítulo previo impuso su disciplina.
