@@ -21,6 +21,11 @@ sesion:
     titulo: "Revisar el plan de la s{ses} y su lista de materiales para la sala"
     detalle: "Los dos módulos, tiempos y kits; el panel muestra la lista de chequeo"
     ruta: "material/curso/sesion-{ses}/plan.md"
+  - id: "orden-{ses}"
+    dias: -3
+    titulo: "Revisar que ninguna lámina de la s{ses} adelante la respuesta del taller"
+    detalle: "Predecir antes de ver: recorra las láminas en orden contra la guía; la síntesis va DESPUÉS de la actividad, y la demostración del profesor no usa el mismo caso que el taller (defecto de s04, 2026-08-28)"
+    ruta: "material/curso/sesion-{ses}/slides_s{ses}.qmd"
   - id: "imprimir-{ses}"
     dias: -1
     titulo: "Imprimir guías y hoja de escucha de la s{ses}; probar demos y audio"

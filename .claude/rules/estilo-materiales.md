@@ -41,6 +41,31 @@
   no suena: …", "respaldo local en …". La contingencia se anota donde
   se va a necesitar, no en un documento aparte.
 
+## Orden de la sesión: predecir antes de ver (2026-08-28)
+
+El curso se juega en que el estudiante se compromete —predice por
+escrito, dibuja o vota— ANTES de que se le muestre la respuesta. De ahí
+salen tres reglas para las láminas y los planes:
+
+- **La síntesis va después de la actividad que la produce, nunca antes.**
+  Una tabla o figura que resume "qué pasa en cada caso" es material de
+  cierre. Si aparece antes del taller, la predicción escrita queda sin
+  objeto.
+- **La demostración del profesor no usa el mismo caso que el taller.**
+  Si el taller pide predecir sobre los puntos A, B y C, la demostración
+  previa no los resuelve en pantalla: usa otro caso, o responde solo la
+  pregunta anterior (la que quedó abierta la semana pasada) y deja el
+  instrumento de medición en manos de los estudiantes.
+- **Cada instrumento resuelve su propia pregunta.** Antes de proyectar
+  una medición, preguntarse qué pregunta contesta: si contesta la del
+  taller, no va todavía.
+
+Precedente: en s04 la tabla "El mapa de la cuerda" y la demostración con
+espectrograma adelantaban la tabla de predicción de la guía; se
+reordenaron el 2026-08-28. La verificación 6 de la skill
+`revision-alineamiento` audita esto, y la agenda del panel lo recuerda a
+−3 días de cada sesión.
+
 ## Rigor
 - Toda afirmación cuantitativa (frecuencias, velocidades, rangos) debe ser
   verificable en las fuentes o marcada [POR VERIFICAR].
