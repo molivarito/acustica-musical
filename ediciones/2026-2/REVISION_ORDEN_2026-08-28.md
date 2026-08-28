@@ -5,6 +5,41 @@ respuesta que una actividad posterior debe producir. Nace del defecto
 encontrado en s04 el 2026-08-28 (ver §s04), que sobrevivió a las cuatro
 revisiones de alineamiento de julio.
 
+## DECISIONES PENDIENTES DEL PROFESOR
+
+Todo lo de abajo está auditado y verificado, pero **nada se ha aplicado**
+en s05–s15: tocar `material/curso/` requiere su visto bueno. Esta lista
+se actualiza a medida que avanzan las tandas.
+
+### Arreglos propuestos (un "sí" y se aplican)
+
+| # | Sesión | Qué | Dónde | Riesgo |
+|---|---|---|---|---|
+| 1 | s05 | Reapuntar la §1 de la hoja: en vez de repredecir si la altura cambia (ya resuelto), predecir **su umbral personal** — que es lo que el capítulo 5 ya deja abierto | `actividades/registro_el_bajo_que_no_esta.md` | bajo |
+| 2 | s05 | Mover "las octavas estiradas" de la lámina de instrucciones a la síntesis | `slides_s05.qmd` | nulo |
+| 3 | s06 | Borrar de la fila 18–36′ la frase que resuelve la escucha del día ("con ellas resuelve la escucha del día…"): contradice a la fila 8–18′ y revienta la curva isofónica | `plan.md` | nulo |
+| 4 | s07 | Reescribir dos pasajes del apunte para que no nombren "aspereza → dos notas" (lo que s08 debe descubrir), copiando la fórmula del capítulo 7 | `apunte_s07_batidos.md` | bajo |
+| 5 | s07 | Unificar las frecuencias de la demo en **443/442/437** (el plan dice 442/444/437 y no calza con la lámina) | `plan.md` | nulo |
+| 6 | s08 | Volver comparativa la predicción de F3: "¿su umbral será más ancho, más angosto o igual?" en vez de pedir un número recién proyectado | `actividades/registro_mapa_del_choque.md` | bajo |
+| 7 | s09 | Reapuntar el ítem 2 de la predicción a la variación personal ("¿su oído distinguirá 2 cents?") en vez de preguntar algo que la mini-lección ya contestó | `actividades/guia_pee_afinar_por_batidos.md` | bajo |
+| 8 | s11 | Reformular P3 como contraste contra la demo ("¿la cuerda real mostrará la esquina tan nítida?"), que es lo que el propio plan ya declara en Riesgos | `actividades/guia_pee_punto_de_frotado.md` | bajo |
+| 9 | s11 | Sacar de la mini-lección la conclusión "las efes radian los graves" (es la P1 del taller) y moverla a la síntesis del cierre | `slides_s11.qmd` | bajo |
+
+### Ya aplicado sin esperar (fuera de `material/curso/`)
+
+- **s09, demo de temperamentos**: el bloque "¿Qué observar?" entregaba
+  los cents objetivo (702 y 700) en la misma pantalla donde los
+  estudiantes afinan de oído, anulando el ocultamiento que la propia
+  demo implementa. Reescrito sin números. Revertible con `git revert`.
+
+### Decisiones de criterio (no las tomo yo)
+
+| # | Asunto | Las opciones |
+|---|---|---|
+| A | **s06, el gancho de las cuatro palmas** | Hoy el texto dice "el número queda en suspenso" y a la vez lo proyecta. O no se proyecta el número, o se proyecta y se borra esa frase. |
+| B | **s06, la tabla del DS 594** | La lámina adelanta que el protector "compra mucho más tiempo", que es lo que E5 calcula. Gravedad baja (la tabla ya está en la guía impresa). ¿Podar la frase o dejarla? |
+| C | **Las pautas de encargo** | `*pauta*` está excluido del sitio, así que los encargos de los hitos 1, 2 y 3 (10 %, 10 %, 15 %) llegan solo en papel. Propuesta: renombrarlos `encargo_*.md` y sumarlos a sidebar y Canvas. Cambia la regla de visibilidad: decisión suya. |
+
 ## Origen del defecto
 
 Las 15 sesiones se generaron en el loop autónomo del 2026-07-13
@@ -40,7 +75,11 @@ predecir.** La convención quedó escrita en
 ### Seis patrones
 
 1. **Lámina spoiler** — una tabla, figura o simulación previa entrega el
-   resultado que la actividad debía producir.
+   resultado que la actividad debía producir. **Incluye el texto de las
+   propias demos**: el bloque "¿Qué observar?" de una demo está a la
+   vista en el notebook del grupo mientras trabajan, así que cuenta como
+   pantalla (descubierto en s09, donde la demo ocultaba los cents y su
+   propio texto daba los dos números objetivo).
 2. **Demostración con el mismo caso** — el profesor demuestra con el
    mismo caso o medición que el taller pide predecir.
 3. **Síntesis duplicada o descolocada** — la misma síntesis ocurre dos
@@ -497,3 +536,133 @@ mini-lección ni la lámina. F1 y F2 no están contaminados.
   láminas retienen la respuesta con `. . .`.
 - La devolución de la Prueba 1 está aislada de la escucha del día.
 - El arranque de la serie del objeto (s08–s12) no adelanta resultados.
+
+---
+
+## s10 — Resonancia, impedancia y acoplamiento · AUDITADA 2026-08-28 · **LIMPIA**
+
+Sin hallazgos. Los seis patrones se revisaron uno por uno y los tres
+riesgos que se sospechaban a priori quedaron descartados con evidencia:
+
+- La **demo de resonancia** es un oscilador forzado genérico (440 Hz,
+  sin botella ni agua ni Helmholtz — verificado con grep sobre el
+  archivo: la única coincidencia de "agua" es el nombre de la paleta en
+  un comentario de CSS). Enseña pico, amortiguamiento y transiente: no
+  la dirección en que cambia $f_0$ con el volumen de agua, que es lo que
+  el taller pide predecir.
+- La lámina que precede al taller plantea P1 y P2 como preguntas
+  abiertas —"Predigan por escrito, ANTES de soplar nada"— sin revelar
+  sube/baja. Verificado.
+- La **lectura previa** (cap10) sí revela *quién* vibra al soplar (el
+  aire) y al golpear (el vidrio), pero eso solo se pide en la §3 del
+  taller, que es la síntesis POSTERIOR a medir. La dirección —lo único
+  que se predice por escrito— queda deliberadamente sin responder ("No
+  conteste rápido"), con la misma disciplina ejemplar de cap05 y cap07.
+- **Patrón 6 en ambos sentidos**: el apunte de s09 nombra "resonancia"
+  sin explicar el mecanismo (no contamina s10); el de s10 insinúa
+  Helmholtz sin explicar stick-slip (no contamina s11).
+- La **pauta de la clínica de pares** define "sugerencia medible" con un
+  ejemplo dentro de la propia pauta: no exige un criterio que nadie
+  entregó, ni lo da masticado.
+- El **hito 2** pide compilar la radiografía espectral de s08 y el mapa
+  de escala de s09, ambos declarados explícitamente como su insumo.
+
+### Zona de riesgo (no es hallazgo)
+
+Las notas de orador de la lámina del taller traen la respuesta "para
+orientar sin regalarla" (al soplar $f_0$ sube; al golpear baja). Es
+material solo-profesor —el CI borra las notas del deploy— y es el mismo
+recurso que ya usa s03. Queda anotado solo como recordatorio de que esa
+frase es para orientar preguntas, no para decirla en voz alta.
+
+---
+
+## s09 — Escalas y temperamentos · AUDITADA 2026-08-28
+
+### Hallazgo 1 (alta) — **ARREGLADO 2026-08-28**: la demo se saboteaba a sí misma
+
+`material/demos/demo_temperamentos.html`, bloque "¿Qué observar?"
+—siempre visible, sin conmutador por modo— decía:
+
+> "En modo afinar de oído (cents ocultos): … ¿Cayó cerca de **702**
+> (justa)? En la Fase B … ¿ahora cae cerca de **700** (temperada)?"
+
+La demo implementa correctamente el ocultamiento de los cents para que
+las parejas afinen de oído y solo después vean dónde cayeron — y su
+propio texto, en la misma pantalla del mismo notebook que usan durante
+el turno, les entrega los dos números objetivo.
+
+**Arreglado** (está fuera de `material/curso/`): el ítem ahora pide
+anotar lo que marcaron y en qué dirección se movieron, sin números; se
+agrega "los dos números salen al pizarrón recién en el cierre", que es
+lo que el plan ya hace correctamente.
+
+### Hallazgo 2 (media) — la mini-lección contesta el ítem 2 de la predicción
+
+La mini-lección (10–25′) afirma "cada quinta se estrecha ~2 cents —
+ninguna lisa, todas usables". La guía (25–62′) pide: *"El punto 'sin
+batidos', ¿coincidirá con la quinta correcta (700 cents)? SÍ / NO,
+porque ___"*. Ya está contestado.
+
+**Arreglo propuesto**: reapuntar el ítem a la variación personal
+—"¿su oído logrará distinguir la diferencia de 2 cents, o le sonarán
+iguales?"— igual que el arreglo de s05 y s08. Los ítems 1 y 3 de esa
+predicción quedan genuinamente abiertos y no se tocan.
+
+### Lo que está bien
+
+- El ocultamiento de cents está bien implementado en el código.
+- El gancho del módulo 2 vota por escrito, escucha sin nombres y recién
+  después revela.
+- El apunte de s08 anuncia que "la aritmética va a decir que no" **sin
+  dar** la coma ni 702 ni 700: patrón 6 limpio.
+- El taller del objeto da la vara de medida sin adelantar el resultado
+  de ningún objeto.
+
+---
+
+## s11 — Cuerdas frotadas y el cuerpo · AUDITADA 2026-08-28
+
+### Hallazgo 1 (alta) — la P3 del taller pide predecir lo que la demo ya mostró
+
+La lámina "Antes de ver la demo, prediga" y la demo de Helmholtz
+(22–32′) muestran la forma de la cuerda frotada. Diez minutos después la
+guía pide: *"Filmada en cámara lenta, la cuerda sonando se verá como:
+□ curva suave que ondula · □ otra forma (dibújenla)"*, y luego
+"¿Coincide con su P3?" como si siguiera abierta.
+
+**Lo revelador**: el propio plan, en Riesgos, ya dice que "P3 se
+contrasta contra la demo" — o sea, el diseño quería contraste y la guía
+lo redactó como predicción ciega.
+
+**Arreglo propuesto**: reformular P3 como contraste, no como adivinanza:
+*"¿la cuerda real mostrará la esquina tan nítida como la demo
+idealizada, o se verá borrosa? ¿por qué?"*.
+
+### Hallazgo 2 (alta, con matiz) — la mini-lección contesta la P1 del taller
+
+Verificado en pantalla: la mini-lección (8–22′) muestra, como contenido
+visible, *"La resonancia del aire encerrado ayuda a radiar **los graves**
+que la tapa, sola, no puede"*. El taller (22–48′) pide predecir:
+*"Si tapamos las efes… □ se hunden sobre todo los **graves** · □ … los
+agudos · □ no cambia nada"*. La alternativa correcta está en pantalla.
+
+**Matiz que corrige a la auditoría**: la radiación direccional (la P3 de
+ese taller) NO está en la lámina visible, sino solo en las notas de
+orador, que el CI borra del deploy. Ahí el riesgo es que el profesor lo
+diga en voz alta —la nota misma advierte que "es lo que la fase C pone a
+prueba"—, no una filtración en pantalla. Mismo caso que la zona de
+riesgo de s10.
+
+**Arreglo propuesto**: sacar de la lámina la conclusión sobre las efes
+(dejar solo la pregunta "¿para qué son?") y moverla a la síntesis del
+cierre, después del taller.
+
+### Lo que está bien
+
+- `cap11` retiene la forma de Helmholtz ("No le vamos a dibujar aquí lo
+  que Helmholtz vio"): otro capítulo disciplinado.
+- El apunte de s10 no filtra s11 (patrón 6 limpio).
+- El rearme de mesas aclara que objeto y bitácora siguen individuales.
+- El gancho de la pinza en el puente vota antes de revelar.
+- La P2 de ambos talleres queda genuinamente abierta.
