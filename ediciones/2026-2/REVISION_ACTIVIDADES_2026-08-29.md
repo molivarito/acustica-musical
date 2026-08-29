@@ -90,4 +90,109 @@ cita textual que lo prueba · cuánto tiempo de clase ocupa · y una
 
 ## Hallazgos
 
-*(pendiente: la revisión se corre tras cerrar la fase 1)*
+### s05 — La altura percibida
+
+| Actividad | Min | Veredicto |
+|---|---|---|
+| "El bajo que no está" | 27 | **sólida** |
+| "El oído y la octava" | 23 | **mejorable** (§3) |
+
+**"El bajo que no está" — sólida.** La predicción tiene riesgo real: la
+mayoría cree que al apagar $f_1$ la nota baja una octava o desaparece, y
+se equivoca. El umbral personal del filtro produce un dato irrepetible
+por persona, y el cierre explota la variabilidad entre oídos en vez de
+esconderla. Es el estándar del curso; no tocar.
+
+**"El oído y la octava" — §1 y §2 bien, §3 floja.** El emparejamiento de
+octava de oído (§2) arroja un número propio y no es trivial ni para un
+oído entrenado. Pero la §3 ocupa **8 minutos** para pedir un binario:
+
+> "La octava aguda del piano, comparada con el $2:1$ exacto, ¿suena
+> afinada, o un poquito **ancha**? ☐ igual ☐ un poco ancha"
+
+Y la propia hoja la rebaja: *"Esto es una **curiosidad**, no materia
+evaluable hoy"*. Ocho minutos de clase para una casilla que el
+estudiante no se lleva a la bitácora.
+
+**La disyuntiva es del profesor** (no la resuelvo yo):
+
+- **O gana el tiempo**: que midan con el afinador —que el contrato ya
+  pone en la mesa— cuántos cents está estirada la octava, y anoten el
+  número. Ojo: se escucha de una **grabación** de piano por parlante, no
+  de un piano en la sala, así que medir cents ahí es más difícil de lo
+  que suena; conviene probarlo antes.
+- **O gana los minutos**: dejarla en ~3′ como lo que dice ser (una
+  curiosidad que se siembra para s09) y devolver 5′ al taller del "bajo
+  que no está", que es la actividad fuerte de la sesión.
+
+### s08 — Psicoacústica de la superposición
+
+| Actividad | Min | Veredicto |
+|---|---|---|
+| Registro del mapa del choque (F1/F2/F3) | 27 | **sólida** |
+| Radiografía espectral del objeto | 27 | **sólida**, con un flanco |
+
+**Mapa del choque — sólida.** La respuesta es literalmente incognoscible
+de antemano: nadie, ni el profesor, sabe a qué Δf exacto un oído deja de
+contar batidos. Predicción escrita, medición con audífonos propios, dato
+individual y comparable.
+
+**Radiografía espectral — sólida, vigilar un flanco.** Lo que la salva
+es la exigencia cuantitativa: no "¿suena afinado?" (eso un músico lo
+oye) sino "¿la razón 2,03 es armónica o no?". Y valora explícitamente
+el desacierto: *"La discrepancia vale tanto como el acierto"*.
+
+El flanco: leer parciales con el cursor y tabular es mecánico. Hoy queda
+redimido porque va envuelto en predicción y veredicto argumentado. **No
+requiere arreglo**, pero si en clase ves que tabulan sin pensar, el
+ajuste es pedir el veredicto con solo 2–3 parciales leídos, para que la
+tabla completa sea confirmación y no el único momento de pensar.
+
+
+### s06 — Sonoridad y decibel
+
+Formato de cinco estaciones. **Cuatro de cinco se sostienen; E4 es el
+gemelo exacto del caso de referencia de s04.**
+
+| Actividad | Min | Veredicto |
+|---|---|---|
+| Hoja "mi curva isofónica" | 27 | **sólida** |
+| E1 — la referencia fina | 8 | **sólida** |
+| E2 — el mapa de la sala | 8 | mejorable |
+| E3 — ¿dos fuentes = el doble? | 8 | **sólida** |
+| **E4 — aritmética del decibel** | 8 | **FLOJA** |
+| E5 — la dosis del oído | 8 | mejorable |
+| Mini-informe SPL | cierre | correcto (es síntesis, no descubrimiento) |
+
+**E4 — la primera candidata a rehacerse.** Verificado en el archivo:
+
+- Se titula literalmente **"(papel)"** y son cuatro problemas de libro.
+- En la tabla de rotación, donde las demás estaciones tienen casilla de
+  predicción, E4 tiene un guion: `| E4 | (respuestas 1–4 al margen) | | — |`.
+  Es la **única estación sin nada que predecir ni medir** → síntoma 3.
+- Su ítem 2 —*"Un parlante solo produce 60 dB SPL. ¿Qué nivel producen
+  dos idénticos?"*— es **exactamente lo que E3 les hace medir con
+  parlantes reales**, en la misma rotación → síntoma 5.
+
+O sea: en la misma sesión, el grupo mide el resultado en E3 y después lo
+calcula en papel en E4. Ocho minutos de ejercicio de pizarrón
+disfrazados de estación.
+
+**Dirección de arreglo**: reemplazar los números de libro por **los datos
+que el propio grupo midió en E1–E3**, de modo que la aritmética corra
+sobre SU tabla. Deja de ser deber y pasa a ser interpretación de lo
+propio — y de paso E4 se convierte en el puente natural al mini-informe.
+
+**E2 (mejorable)**: la predicción principal —"¿en qué punto de la sala
+habrá más nivel?"— es casi obvia (gana el punto más cercano). El interés
+está en **cuántos dB** de diferencia, que hoy es una casilla secundaria.
+Arreglo: pedir que predigan la diferencia en dB, no la ubicación.
+
+**E5 (mejorable)**: la predicción es personal y con riesgo real (¿su
+actividad musical semanal cabe en la tabla de dosis?), pero la medición
+queda opcional —*"mídanlo con la app **si se puede reproducir aquí**"*—
+así que muchos la llenarán de memoria. Arreglo: exigir al menos **un
+valor medido en vivo**.
+
+**Lo que NO hay que tocar**: la hoja isofónica (la curva es individual y
+ni el profesor la sabe de antemano), E1 y E3.
