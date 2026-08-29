@@ -21,6 +21,26 @@ previa [`libro/cap08_banda_critica_y_consonancia.md`](../../libro/cap08_banda_cr
 **Compromisos heredados que esta sesión absorbe**: devolución de la
 **Prueba 1** corregida (entregada EN la puerta al entrar; ~10′ de
 revisión contra la lámina, errores más repetidos por parte).
+
+**Contrato de la semana**: **TRAEN** — audífonos personales; el objeto
+de su proyecto (o su avance construible más reciente); celular con app
+de espectrograma; leída la lectura previa
+[`libro/cap08_banda_critica_y_consonancia.md`](../../libro/cap08_banda_critica_y_consonancia.md).
+· **SE REPARTE** — la Prueba 1 corregida (9, devuelta en la puerta al
+entrar, con la pauta proyectada 10′); hoja de registro
+`registro_mapa_del_choque.md` (1 por estudiante); guía
+`guia_pee_radiografia_espectral.md` (1 por estudiante); 3 tiras de papel
+para la frontera F3 (1 por grupo). · **SE RECOGE** — al cierre del
+módulo 1, las hojas `registro_mapa_del_choque.md`; al cierre del
+módulo 2, la guía `guia_pee_radiografia_espectral.md` y el ticket de
+salida hacia s09. · **SE REVISA** — solo la radiografía espectral
+(`guia_pee_radiografia_espectral.md`) es el taller evaluado de la
+semana (rúbrica rápida logrado/parcial/incipiente; cuenta en el 35 % de
+talleres y alimenta el hito 2); el registro psicoacústico
+(`registro_mapa_del_choque.md`) se recoge SIN nota, como evidencia de
+OA2.2; la Prueba 1 ya viene corregida — no se re-corrige en aula,
+apelaciones por escrito.
+
 **Posición en la progresión**: tercera estación del bloque B (el sonido
 percibido). s07 dejó el batido contado; s08 recorre qué pasa cuando la
 diferencia crece (batido → aspereza → dos notas) y con eso funda la

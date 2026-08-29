@@ -22,6 +22,26 @@ del hito 2** (anunciado en s09), (b)
 el objeto del proyecto (se usa en la clínica), (c) celular con afinador
 y espectrograma (desde s02), (d) leída la lectura previa
 [`libro/cap10_resonancia_e_impedancia.md`](../../libro/cap10_resonancia_e_impedancia.md).
+
+**Contrato de la semana**: **TRAEN** — su compilado individual del
+hito 2 (radiografía s08 + mapa de escala s09 + bitácora individual al
+día + estado vs. hito 1); el objeto de su proyecto (se usa en la
+clínica); celular con afinador y espectrograma; leída la lectura previa
+[`libro/cap10_resonancia_e_impedancia.md`](../../libro/cap10_resonancia_e_impedancia.md).
+· **SE REPARTE** — guía `guia_pee_resonancia_botellas.md` (1 por
+grupo, taller evaluado); pauta `pauta_clinica_pares.md` (1 por
+estudiante que presenta, 9 en total, para la clínica cruzada). ·
+**SE RECOGE** — el compilado del hito 2 se recibe al INICIO contra
+checklist (9 compilados individuales); al cierre del módulo 1, la guía
+`guia_pee_resonancia_botellas.md`; al cierre del módulo 2, las 9 hojas
+`pauta_clinica_pares.md` firmadas (copiadas a la bitácora individual de
+cada estudiante) y el ticket de salida hacia s11. · **SE REVISA** — el
+taller de botellas es el evaluado de la semana (35 % talleres, rúbrica
+rápida logrado/parcial/incipiente); el hito 2 se corrige aparte con
+`pauta_hito2_avance.md` (10 %, sin coevaluación, pico declarado ≈1,5 h)
+y su nota se publica antes de s12; la clínica no lleva nota directa
+(OA5.2 + OA3.2) — su calidad se cobra en el hito 3 de s15.
+
 **Posición en la progresión**: abre el bloque C (los instrumentos como
 sistemas). s03 dejó las frecuencias características del objeto libre;
 s10 pregunta qué pasa cuando alguien lo FUERZA desde afuera

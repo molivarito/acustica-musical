@@ -25,6 +25,27 @@ a su objeto propio — anunciado en s11), y leída la lectura previa
 materiales los pone el curso** (anunciado en s11). El profesor trae sus
 flautas (caso de estudio) y el kit de lutería (compra única, ver
 pendientes).
+
+**Contrato de la semana**: **TRAEN** — celular con afinador (desde s09)
+y espectrograma (desde s02); su bitácora individual al día con los dos
+compromisos (mapa de resonancias de s10 + protocolo de acoplamiento de
+s11 aplicados a su objeto propio); leída la lectura previa
+[`libro/cap12_vientos_y_luteria.md`](../../libro/cap12_vientos_y_luteria.md).
+**No traen instrumentos: los materiales los pone el curso** (anunciado
+en s11). · **SE REPARTE** — 3 kits de lutería (tubo PVC en bruto
+Ø 20 mm × 30 cm, cortatubo, lija, tapa/cinta, huincha, marcador; 1 por
+grupo); guía `guia_pee_construccion_tubo.md` (1 por grupo, única
+evaluada de la sesión). · **SE RECOGE** — al cierre del m2, la guía
+`guia_pee_construccion_tubo.md` y el ticket de salida hacia s13; las
+bitácoras individuales NO se recogen — se hojean en aula (~1′ c/u,
+`pauta_revision_bitacoras.md`) y quedan en poder de cada estudiante,
+selladas. · **SE REVISA** — la guía de construcción de tubo es el
+único taller evaluado de la semana (rúbrica rápida
+logrado/parcial/incipiente; cuenta en el 35 % de talleres); las 9
+bitácoras selladas cierran la serie del objeto s08–s12 (los dos
+compromisos verificados) y alimentan el hito 3, sin nota de taller; la
+escucha del día es práctica sin nota.
+
 **Posición en la progresión**: segunda familia del bloque C y única
 **sesión-taller completa de lutería del curso (formato 9, metodología
 §2: los dos módulos son taller, ≈125′ de taller efectivo tras escucha

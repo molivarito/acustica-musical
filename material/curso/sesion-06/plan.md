@@ -19,6 +19,27 @@ medición SPL instalada** (lista en [`material/apps_recomendadas.md`](../../apps
 anunciada en s05); (c) leída la **lectura previa**
 [`libro/cap06_sonoridad_y_decibel.md`](../../libro/cap06_sonoridad_y_decibel.md) (o la tarea de escucha ≤30 min si
 el punto de control de s05 activó el plan B).
+
+**Contrato de la semana**: **TRAEN** — audífonos personales; celular con
+app de medición SPL instalada (lista en
+[`material/apps_recomendadas.md`](../../apps_recomendadas.md), anunciada
+en s05); y leída la lectura previa
+[`libro/cap06_sonoridad_y_decibel.md`](../../libro/cap06_sonoridad_y_decibel.md)
+(o la tarea de escucha ≤30 min si el punto de control de s05 activó el
+plan B). · **SE REPARTE** — hoja de registro "mi curva isofónica" (1 por
+estudiante); guía de estaciones de medición de niveles, con el
+formulario de 4 casillas del mini-informe SPL al dorso de la planilla (1
+por grupo); 9 entregas corregidas del hito 1 con pauta marcada
+(devolución). · **SE RECOGE** — al cierre, la hoja "mi curva isofónica"
+junto con el mini-informe SPL (formulario al dorso de la planilla, por
+grupo) y el ticket de salida hacia s07; el hito 1 ya viene corregido y
+no se recoge hoy: la línea de compromiso se cobra en el hito 2 (s10). ·
+**SE REVISA** — la hoja isofónica y el mini-informe cuentan juntos como
+el taller de la semana (35 %; rúbrica rápida logrado/parcial/incipiente:
+dato con unidad, condiciones anotadas, interpretación correcta de
++10/+3 dB, y un límite de la medición declarado); la escucha del día es
+práctica sin nota.
+
 **Posición en la progresión**: segunda estación del bloque B (el sonido
 percibido). s05 mostró que la altura no copia la frecuencia; s06 muestra
 que la sonoridad no copia la intensidad — y agrega la tercera pata del

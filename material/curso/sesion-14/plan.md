@@ -18,6 +18,31 @@ EN LA PUERTA al entrar** (lámina de errores frecuentes, corte duro —
 así se anunció) y **publicación HOY de la pauta del hito 3**
 (presentación final + informe, s15). Los estudiantes traen celular
 CARGADO con las apps del curso (anunciado en s13).
+
+**Contrato de la semana**: **TRAEN** — celular cargado con las apps de
+SPL y de $T_{60}$ (instaladas desde s02/s06, anunciado en s13); leída
+la lectura previa
+[`libro/cap14_la_sala_como_instrumento.md`](../../libro/cap14_la_sala_como_instrumento.md).
+· **SE REPARTE** — la Prueba 2 corregida (9, devuelta en la puerta al
+entrar, con la lámina de errores frecuentes proyectada 10′); la guía
+`guia_salida_medicion_t60.md` (1 por grupo, con la tabla de registro y
+el informe-formulario al dorso); la hoja de rutas
+`rutas_salida_medicion.md` con la ruta asignada (1 por grupo; ver
+arreglo propuesto 11: versión sin la columna "Tipo esperado"); globos
+para el impulso (3–4 por grupo + 1 de repuesto); la pauta del hito 3
+`pauta_hito3_presentacion_final.md` impresa (9, se publica hoy,
+entregada al final del m1). · **SE RECOGE** — al cierre de la salida
+(m2), la guía `guia_salida_medicion_t60.md` completa (tabla de
+registro + informe-formulario del dorso): es el taller evaluado de la
+semana y la última nota de taller del semestre; no se recoge ticket de
+salida hacia s15 (decisión declarada: s15 no tiene contenido nuevo que
+cosechar). · **SE REVISA** — el informe comparativo del dorso de la
+guía (rúbrica rápida logrado/parcial/incipiente; con él cierran las
+"mejores 8 de ~10" de talleres); la escucha del día NO lleva nota (es
+la última del semestre); al cierre de la salida se sortea en vivo el
+orden de las 9 defensas de s15 (transparencia, sin efecto en la
+rúbrica del hito 3).
+
 **Posición en la progresión**: abre y cierra el bloque D de contenido
 (la sala) en una sola sesión: s15 son las presentaciones finales. Es la
 última sesión con contenido nuevo y la última escucha del día del

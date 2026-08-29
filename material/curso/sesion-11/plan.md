@@ -22,6 +22,25 @@ y SPL (desde s02/s06), leída la lectura previa
 instrumento de cuerda frotada** (coordinado en s10 y confirmado por
 correo — sesión con instrumentos de estudiantes #2). El profesor trae
 guitarra (comparación pulsada/frotada) y resina.
+
+**Contrato de la semana**: **TRAEN** — celular con espectrograma y SPL
+(desde s02/s06); leída la lectura previa
+[`libro/cap11_cuerdas_frotadas_y_cuerpo.md`](../../libro/cap11_cuerdas_frotadas_y_cuerpo.md);
+1–2 estudiantes traen su instrumento de cuerda frotada (coordinado en
+s10 y confirmado por correo — sesión con instrumentos de estudiantes
+#2). · **SE REPARTE** — guía `guia_pee_punto_de_frotado.md` (1 por
+grupo); guía `guia_acoplamiento_objeto.md` (1 por estudiante). ·
+**SE RECOGE** — al cierre del módulo 1, la guía
+`guia_pee_punto_de_frotado.md`; al cierre del módulo 2, los tickets de
+salida hacia s12; la guía `guia_acoplamiento_objeto.md` NO se recoge
+hoy — su compromiso de bitácora se revisa en s12. · **SE REVISA** —
+solo el taller del punto de frotado (`guia_pee_punto_de_frotado.md`,
+m1) es el taller EVALUADO de la semana (rúbrica rápida
+logrado/parcial/incipiente; cuenta en el 35 % de talleres); el taller
+"¿quién radia aquí?" (`guia_acoplamiento_objeto.md`, m2) es SIN nota —
+avance del proyecto, se cobra en s12 (revisión de las 9 bitácoras
+individuales) y en el hito 3; la escucha del día es práctica sin nota.
+
 **Posición en la progresión**: primera familia del bloque C desarrollada
 a fondo. s10 dejó el lenguaje (resonancia, impedancia, acoplamiento) y
 la semilla de la oscilación auto-sostenida; s11 la encarna en la cuerda

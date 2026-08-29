@@ -9,6 +9,23 @@ ritmo→tono). Los estudiantes traen: (a) su ticket de salida de s01 con la
 predicción "¿cómo se vería este pulso dibujado?" — el profesor las trae
 recopiladas —, (b) el celular con la app de espectrograma instalada, y
 (c) leída la **lectura previa**: [`libro/cap02_ondas_y_espectrograma.md`](../../libro/cap02_ondas_y_espectrograma.md).
+
+**Contrato de la semana**: **TRAEN** — el celular con la app de
+espectrograma instalada (anunciada al cierre de s01); leída la lectura
+previa [`libro/cap02_ondas_y_espectrograma.md`](../../libro/cap02_ondas_y_espectrograma.md)
+(lista de apps en [`material/apps_recomendadas.md`](../../apps_recomendadas.md)).
+· **SE REPARTE** — los tickets de salida de s01, recopilados por el
+profesor (se devuelven en el bloque 10–25′ del módulo 1); guía PEE
+"retratos de sonido" (1 por grupo); guía PEE "microscopio" (1 por grupo:
+la llena el rol «mide y registra»). · **SE RECOGE** — al cierre
+del módulo 1, la guía PEE "retratos de sonido"; al cierre del módulo 2,
+la guía PEE "microscopio" y el ticket de salida hacia s03 (línea(s) en
+el espectrograma de un vaso golpeado). · **SE REVISA** — las dos guías
+PEE juntas cuentan como el taller de la semana, rúbrica rápida
+logrado/parcial/incipiente (mejores 8 de ~10); la escucha del día es
+práctica **sin nota** (primera del semestre; la evidencia escrita de
+OA3 recién se recoge en s07).
+
 **Posición en la progresión**: segunda sesión del bloque A. Instala las
 tres representaciones que el curso usará como "anteojos" hasta s15, la
 relación $v = \lambda f$ (notación de `PLAN_SEMESTRE.md`) y el primer uso de apps

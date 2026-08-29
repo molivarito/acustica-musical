@@ -11,6 +11,23 @@ estudiantes traen: (a) su ticket de salida de s02 con la predicción "el
 vaso golpeado: ¿una línea o varias en el espectrograma?" — el profesor las
 trae recopiladas —, (b) el celular con la app de espectrograma, y
 (c) leída la **lectura previa**: [`libro/cap03_modos_de_vibracion.md`](../../libro/cap03_modos_de_vibracion.md).
+
+**Contrato de la semana**: **TRAEN** — el celular con la app de
+espectrograma (instalada desde s02); leída la lectura previa
+[`libro/cap03_modos_de_vibracion.md`](../../libro/cap03_modos_de_vibracion.md).
+· **SE REPARTE** — guía PEE "la sartén y sus parientes" (1 por grupo);
+enunciado completo del proyecto individual, impreso (1 por estudiante);
+media hoja para las 2 ideas candidatas de proyecto (1 por estudiante). ·
+**SE RECOGE** — al cierre, la guía PEE cerrada; la media hoja individual
+de ideas de proyecto (sin nota: el profesor la devuelve comentada en
+s04); el ticket de salida hacia s04 (punto de pulsación: ¿nota o
+timbre?). · **SE REVISA** — el taller de la sartén corre **FORMATIVO,
+sin nota** en esta edición (decisión F1: s03 cae en semana
+universitaria, sin evaluaciones; por eso los talleres evaluados de la
+edición quedan en 9, regla "mejores 8 de 9" — ver
+`ediciones/2026-2/CALENDARIO_2026-2.md`); la media hoja de ideas de
+proyecto tampoco lleva nota.
+
 **Posición en la progresión**: tercera y última sesión "con menos
 contenido" del bloque A. Instala el concepto que estructura todo el curso
 (modo de vibración), la distinción obligatoria **parcial vs. armónico**

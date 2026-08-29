@@ -18,6 +18,19 @@ digital; (b) audífonos personales; (c) el celular; (d) leída la
 **lectura previa**
 [`libro/cap05_la_altura_percibida.md`](../../libro/cap05_la_altura_percibida.md); (e) haber podido explorar en casa la
 [`demo_sintesis_aditiva.html`](../../demos/demo_sintesis_aditiva.html) de s04 (enlace publicado en s04).
+**Contrato de la semana**: **TRAEN** — su entrega del hito 1 (1 página
+individual + bitácora al día, impresa o digital); audífonos personales;
+el celular con afinador/generador de tonos (app); leída la lectura previa
+[`libro/cap05_la_altura_percibida.md`](../../libro/cap05_la_altura_percibida.md);
+y explorada en casa la [`demo_sintesis_aditiva.html`](../../demos/demo_sintesis_aditiva.html)
+de s04. · **SE REPARTE** — hoja de registro "el bajo que no está" (1 por
+estudiante); hoja "el oído y la octava" (1 por estudiante); hoja de
+escucha (rúbrica OA3). · **SE RECOGE** — al cierre, las dos hojas de
+registro y el ticket de salida; el hito 1 se recibe al INICIO, contra
+checklist. · **SE REVISA** — las dos hojas juntas cuentan como el taller
+de la semana (rúbrica rápida: logrado / parcial / incipiente); el hito 1
+NO se corrige hoy: la devolución es en s06, comprometida en s04.
+
 **Posición en la progresión**: abre el bloque B (el sonido percibido).
 Convierte el espectro-receta de s04 en su consecuencia perceptual: la
 altura no se lee del espectro componente a componente, sino que el oído

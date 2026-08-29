@@ -22,6 +22,25 @@ consume estudiando y EN la prueba misma), mitad fuente y filtro (se
 consume en la mini-lección del módulo 2, principio 6). Los estudiantes
 no traen nada especial (anunciado en s12): solo lápiz; celulares y
 audífonos guardados durante la prueba.
+
+**Contrato de la semana**: **TRAEN** — leída la lectura previa
+[`libro/cap13_la_voz.md`](../../libro/cap13_la_voz.md) (mitad mapa de
+estudio para la Prueba 2, mitad fuente y filtro); lápiz — no traen nada
+especial (anunciado en s12); durante la prueba NO se permiten celular,
+audífonos ni apuntes (se guardan en la mochila); no se necesita
+calculadora. · **SE REPARTE** — el cuadernillo de la Prueba 2 (1 por
+estudiante, de 9 impresos + 2 de reserva) y, aparte, la hoja de figuras
+(Figuras 1–2, 1 por estudiante). · **SE RECOGE** — al cierre del módulo
+1, el cuadernillo Y la hoja de figuras (se cuentan al recibir); al
+cierre del módulo 2, el ticket de salida hacia s14. · **SE REVISA** —
+las partes B–D de la Prueba 2 (48 puntos, 10 % del curso) con la pauta
+cerrada de `ediciones/2026-2/pruebas/prueba2_pauta.md`, ~13–15 min por
+estudiante; la Parte A (escucha escrita 2) se califica aparte con la
+rúbrica OA3 (10 % del curso junto con s07 y s15, cuentan las mejores 2
+de 3) y no entra en los 48 puntos; las notas se publican en Canvas
+dentro de los 5 días siguientes (lo agenda el panel solo); el módulo 2
+no lleva nota (verificación informal).
+
 **Posición en la progresión**: cierra el bloque C (los instrumentos como
 sistemas) cosechando s08–s12 en la Prueba 2 y completando el mapa de
 mecanismos con la voz — el instrumento que no hubo que traer porque

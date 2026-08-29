@@ -14,6 +14,23 @@ cuatro… — aviso hecho en s03), (b) el celular con app de espectrograma y
 afinador, (c) leída la **lectura previa**: [`libro/cap04_la_receta_del_timbre.md`](../../libro/cap04_la_receta_del_timbre.md),
 y (d) su ticket de salida de s03 respondido ("¿nota o timbre?") — el
 profesor los trae recopilados.
+
+**Contrato de la semana**: **TRAEN** — 1–2 instrumentos de cuerda
+pulsada por grupo (guitarra, ukelele, charango, cuatro…); el celular con
+app de espectrograma y afinador; leída la lectura previa
+[`libro/cap04_la_receta_del_timbre.md`](../../libro/cap04_la_receta_del_timbre.md).
+· **SE REPARTE** — guía PEE `guia_pee_mapa_cuerda.md` (1 por grupo,
+taller del módulo 1); media guía PEE `guia_pee_estirar_acortar.md` (1
+por grupo, módulo 2); pauta `pauta_hito1_diseno.md` impresa (1 por
+estudiante) + proyectada; medias hojas individuales de ideas de
+proyecto comentadas (9, devueltas). · **SE RECOGE** — al cierre del
+módulo 2, las dos guías PEE del día (`guia_pee_mapa_cuerda.md` +
+`guia_pee_estirar_acortar.md`) y el ticket de salida hacia s05. ·
+**SE REVISA** — las dos guías cuentan juntas como el taller de la
+semana (rúbrica rápida logrado/parcial/incipiente); la pauta del hito 1
+se publica hoy sin corrección — el hito se entrega y se corrige a
+partir de s05.
+
 **Posición en la progresión**: cierra el bloque A (el sonido como objeto
 físico). Es la **primera sesión con instrumentos de estudiantes** (#1 de
 2–3) y la primera SIN la regla de "menos contenido". Convierte los modos

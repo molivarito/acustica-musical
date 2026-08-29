@@ -18,6 +18,24 @@ módulo 2. Lectura previa: [`libro/cap07_batidos.md`](../../libro/cap07_batidos.
 estudio para la prueba (se consume estudiando y EN la prueba misma),
 mitad física elemental de los batidos (se consume en la mini-lección
 del módulo 2, principio 6).
+
+**Contrato de la semana**: **TRAEN** — leída la lectura previa
+[`libro/cap07_batidos.md`](../../libro/cap07_batidos.md) (mitad mapa de
+estudio para la prueba, mitad física de los batidos); durante la prueba
+NO se permiten celular, audífonos ni apuntes (se guardan en la
+mochila); no se necesita calculadora; solo lápiz (mismo criterio que s13).
+· **SE REPARTE** — el cuadernillo de la Prueba 1 (1 por estudiante:
+9 + 2 de reserva = los 11 que declara «Impresión») y, aparte, la hoja de figuras (Figuras 1–3,
+1 por estudiante). · **SE RECOGE** — al cierre del módulo 1, el
+cuadernillo Y la hoja de figuras (se cuentan al recibir); al cierre del
+módulo 2, el ticket de salida hacia s08. · **SE REVISA** — las partes
+B–D de la Prueba 1 (48 puntos, 10 % del curso) con la pauta cerrada de
+`ediciones/2026-2/pruebas/prueba1_pauta.md`, ~15 min por estudiante; la
+Parte A (escucha escrita 1) se califica aparte con la rúbrica OA3
+(10 % del curso junto con s13 y s15, cuentan las mejores 2 de 3) y no
+entra en los 48 puntos; las notas se publican en Canvas dentro de los 5 días siguientes (lo agenda el panel solo); el
+módulo 2 no lleva nota (verificación informal).
+
 **Posición en la progresión**: mitad del bloque B (el sonido
 percibido). Cierra la primera mitad del curso con la Prueba 1 y abre la
 segunda con el fenómeno que gobierna s08 (banda crítica, rugosidad,

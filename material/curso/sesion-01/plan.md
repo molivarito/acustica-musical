@@ -4,6 +4,25 @@
 OA1.1 (introducción: vibración, frecuencia), OA2.1 (introducción:
 frecuencia vs. altura, primera no-linealidad perceptual).
 **Requisitos previos**: ninguno (sesión inaugural; no hay lectura previa).
+
+**Contrato de la semana**: **TRAEN** — audífonos personales (para el
+taller "la zona gris ritmo–tono" del módulo 2); nada más preparado de
+antemano — sesión inaugural, sin lectura previa ni entrega que exigir.
+· **SE REPARTE** — rúbrica OA3 impresa (3 copias por mesa, + proyectada);
+media hoja en blanco para la línea base (1 por estudiante, rotulada con
+su nombre y "s01 – línea base"); acta de mesa (1 por mesa); guía PEE "la
+regla en la mesa" (1 por grupo); guía PEE "la zona gris ritmo–tono" (1
+por grupo). · **SE RECOGE** — al cierre, las medias hojas de línea base
+rotuladas (9, archivadas para comparar en s15); las dos guías PEE
+cerradas; el acta de mesa firmada; el ticket de salida hacia s02
+(predicción de cómo se vería el pulso dibujado). · **SE REVISA** — las
+dos guías PEE cuentan como el taller de la semana, con rúbrica rápida
+(logrado / parcial / incipiente), pero SIN NOTA esta semana (calibración,
+sesión 1); la línea base de escucha es **SIN NOTA por diseño** — sirve de
+autoevaluación con la rúbrica OA3 recién presentada, se archiva y se
+repite con el MISMO estímulo en el cierre de s15. Para s02, el profesor
+anuncia traer el celular con app de espectrograma instalada.
+
 **Posición en la progresión**: abre el bloque A (sonido como objeto
 físico). Deja instalados: el ciclo PEE, la rúbrica OA3, las 3 mesas de
 trabajo del tramo 1 (s01–s05; se rearman tras s05 y tras s10), el

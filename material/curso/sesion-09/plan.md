@@ -21,6 +21,26 @@ Los estudiantes traen: (a) **audífonos** (anunciado en s08), (b) **el
 objeto de su proyecto** (la serie s08–s12 sigue; anunciado en s08),
 (c) celular con afinador y espectrograma (apps del curso desde s02),
 (d) leída la lectura previa [`libro/cap09_escalas_y_temperamentos.md`](../../libro/cap09_escalas_y_temperamentos.md).
+
+**Contrato de la semana**: **TRAEN** — audífonos personales (anunciado
+en s08); el objeto de su proyecto o su avance construible más reciente
+(serie s08–s12, anunciado en s08); celular con afinador y
+espectrograma; leída la lectura previa
+[`libro/cap09_escalas_y_temperamentos.md`](../../libro/cap09_escalas_y_temperamentos.md).
+· **SE REPARTE** — guía `guia_pee_afinar_por_batidos.md` (1 por
+grupo); guía `guia_medicion_escala_objeto.md` (1 por estudiante, con
+tabla de frecuencias del temperamento igual). · **SE RECOGE** — al
+cierre del módulo 1, la guía `guia_pee_afinar_por_batidos.md`
+(evaluada al vuelo); al cierre del módulo 2, el ticket de salida hacia
+s10; la guía `guia_medicion_escala_objeto.md` NO se recoge — queda con
+el estudiante como insumo de su bitácora individual y del hito 2 de
+s10. · **SE REVISA** — solo el taller de afinación por batidos
+(`guia_pee_afinar_por_batidos.md`) es el taller evaluado de la semana
+(rúbrica rápida logrado/parcial/incipiente; cuenta en el 35 % de
+talleres); el taller del objeto (escala) se registra en la bitácora
+SIN nota directa y cuenta vía el hito 2 de s10 (compilado de
+radiografía de s08 + mapa de escala de s09).
+
 **Posición en la progresión**: cierra el bloque B (el sonido
 percibido). s08 fundó la consonancia sensorial; s09 la convierte en
 escalas, muestra que el sistema de 12 notas no cierra (coma) y que

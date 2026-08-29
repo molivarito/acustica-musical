@@ -18,6 +18,33 @@ Lectura previa:
 misma de las defensas (cada estudiante la usó para prepararse) y en la
 calidad de las hojas de escucha del público (el arsenal de preguntas
 del capítulo), principio 6.
+
+**Contrato de la semana**: **TRAEN** — su informe individual (≤6
+páginas, impreso o PDF), a entregar AL INICIO de s15 antes de la
+primera defensa; su bitácora individual del proyecto al día (anexo del
+informe); el objeto/instrumento de su proyecto FUNCIONANDO — debe
+sonar en vivo durante su defensa; respaldo en USB propio de su
+archivo de presentación (el archivo mismo se envía por el canal del
+curso hasta las 20:00 de la víspera de s15, corre desde el notebook
+único de sala); leída la lectura previa
+[`libro/cap15_explicar_es_la_prueba.md`](../../libro/cap15_explicar_es_la_prueba.md).
+· **SE REPARTE** — en la puerta, a cada estudiante, su hoja de escucha
+pre-rotulada (2 bloques, con sus 2 defensas asignadas por sorteo
+previo, nunca la propia); en el módulo 2, la media hoja "hoy" para la
+re-escucha de la línea base y, después, el sobre nominado con su hoja
+de línea base de s01. · **SE RECOGE** — informe + bitácora, en la
+puerta, contra el checklist del guion del profesor; la hoja de escucha
+con su bloque ★ ya marcado, al pasar hacia el bloque de línea base (se
+entrega en la caja); la encuesta del curso, al cierre [instrumento:
+QR/enlace o papel, por definir por el profesor]. Los sobres de línea
+base (s01 + "hoy") NO se recogen: son del estudiante, se los lleva. ·
+**SE REVISA** — la rúbrica R1–R4 del hito 3
+(`material/curso/sesion-14/actividades/pauta_hito3_presentacion_final.md`)
+se registra en vivo durante cada defensa (planilla del guion); el
+informe se corrige contra la misma rúbrica en la semana (pico final);
+el bloque ★ de la hoja de escucha se corrige con la rúbrica OA3
+(escucha escrita 3, mejores 2 de 3).
+
 **Posición en la progresión**: cierre del curso. No hay contenido
 nuevo, no hay demo, no hay ticket de salida: ambos módulos son
 defensas individuales (9 en total, ~11′ cada una) y el tramo final del
