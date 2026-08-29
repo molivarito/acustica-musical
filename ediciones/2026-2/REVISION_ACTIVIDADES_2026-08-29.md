@@ -196,3 +196,175 @@ valor medido en vivo**.
 
 **Lo que NO hay que tocar**: la hoja isofónica (la curva es individual y
 ni el profesor la sabe de antemano), E1 y E3.
+
+
+### s09 — Escalas y temperamentos
+
+| Actividad | Min | Veredicto |
+|---|---|---|
+| Afinar de oído contando batidos | 37 | **sólida**, con un flanco |
+| ¿En qué escala vive mi objeto? | 25 | **sólida** |
+
+**Afinar por batidos — el núcleo no se toca.** Anular batidos de oído es
+difícil de verdad incluso para músicos, nadie sabe dónde caerá su oído,
+y el dato es individual.
+
+**El flanco, verificado:** el ítem 1 de la §3 de papel pide *"12 quintas
+= ___ cents; 7 octavas = ___ cents; sobran ___"*. El plan hace que el
+profesor escriba en el pizarrón, 15 minutos antes, *"12 × 702 = 8424 ≠
+8400 = 7 × 1200 → sobran ~24 cents"*. Es **la misma cuenta**, copiada
+del pizarrón (síntomas 1 y 5). El ítem 3 además regala su propio
+razonamiento en la pista: *"(pista: los batidos viven en los parciales,
+y todos los parciales bajan a la mitad)"* (síntoma 4).
+
+**Arreglo**: borrar el ítem 1 (el ítem 2 ya cruza la coma con **su
+propio** dato de las fases A/B, que es lo valioso) y quitar la pista del
+ítem 3.
+
+### s10 — Resonancia e impedancia
+
+| Actividad | Min | Veredicto |
+|---|---|---|
+| La botella que canta | 32 | **sólida**, con un flanco |
+| Clínica de pares | 38 | **sólida** |
+
+**Botellas — el hallazgo real es el contraste, no P1.** Que soplando
+suba al bajar el aire lo intuye cualquiera que toque un viento
+(síntoma 4 en ese sub-ítem). Pero **P2 —golpeando— va en dirección
+contraria** y casi nadie lo anticipa, y la guía obliga a contrastar
+ambas: *"¿P1 y P2 tienen la misma dirección? sí/no"*. Ahí está el premio.
+**Arreglo menor**: en P1 pedir solo la magnitud (¿un tono? ¿una quinta?
+¿una octava?), no la dirección ya sabida.
+
+**Clínica — sólida.** Exige una sugerencia **medible**, con instrumento
+y resultado esperado, y la pauta prohíbe explícitamente lo genérico
+(*"'la tabla trae condiciones', no 'está bonito'"*).
+
+### s11 — Cuerdas frotadas
+
+| Actividad | Min | Veredicto |
+|---|---|---|
+| El punto de frotado (evaluado) | 31 | mejorable |
+| ¿Quién radia aquí? (sin nota) | 26 | mejorable |
+
+**Punto de frotado.** La Fase A pide *"Parciales altos (más / igual /
+menos que normal)"*: un violinista ya sabe que sul ponticello suena más
+áspero (síntoma 1). **Lo que la salva es la Fase B**: la forma real de
+la cuerda —la esquina de Helmholtz recorriendo el óvalo— es desconocida
+incluso para un cuerdista.
+**Arreglo**: en la Fase A pedir una cantidad (hasta qué número de
+armónico se ve claro en cada posición) en vez de una dirección.
+
+**¿Quién radia aquí?** Las fases A y B miden de verdad (banda grave del
+espectrograma, SPL a 1 m). La **Fase C** —caminar alrededor del
+instrumento— pide solo *"compara brillo y nivel"*, sin instrumento: una
+impresión que no queda en la bitácora (síntomas 2 y 3).
+**Arreglo**: exigir SPL medido en los cuatro puntos cardinales, para que
+la vuelta produzca una tabla y no una sensación.
+
+### s12 — Vientos y lutería · **los 140 minutos están justificados**
+
+Era el mayor riesgo de la revisión y salió bien parado.
+
+| Fase | Min | Veredicto |
+|---|---|---|
+| A — predecir, cortar y afinar | 48 | **sólida** |
+| B — salto de registro | 8 | **sólida** |
+| C — destapar | 8 | mejorable |
+| D — contraste y explicación | 8 | **sólida** |
+
+Lo que justifica el tiempo: hay un **descubrimiento físico genuino** —los
+tres grupos quedan sistemáticamente bajos, y la corrección de extremo no
+la conoce ningún estudiante de música—, riesgo real en dos de cuatro
+fases, y un cierre musical colectivo (acorde con los tubos propios) que
+ninguna otra actividad del curso iguala.
+
+**La fase C es la floja**: la fórmula $v/2L$ vs. $v/4L$ acaba de
+escribirse en el pizarrón, así que predecir "una octava arriba" es
+aplicar la regla recién dada (síntoma 4). **Arreglo**: pedir la
+predicción en Hz o cents exactos, dejando espacio a que la corrección de
+extremo —distinta entre abierto y tapado— produzca una desviación que sí
+sorprenda.
+
+
+### s14 — La sala como instrumento
+
+**Salida de medición de T60** · 70′ fuera de sala + ~21′ de método ·
+**sólida, con un flanco**. El costo logístico corresponde al objetivo:
+medir salas reales no se puede resolver desde el aula. El informe del
+dorso **no es transcripción** — pide mecanismo con proporciones,
+evidencia ("qué fila de la tabla lo respalda") y el **límite de la
+medición**.
+
+El flanco es el ya registrado en el otro documento (la columna "Tipo
+esperado" de la hoja de ruta entrega el ranking). **Si se aplica ese
+arreglo, la actividad queda sin reparos.**
+
+### s15 — Presentaciones finales
+
+| Actividad | Min | Veredicto |
+|---|---|---|
+| Hoja de escucha argumentada (E3) | ~8 | **sólida** |
+| Re-escucha de la línea base + devolución | 10 | **mejorable — y es el cierre del curso** |
+
+**Hoja de escucha (E3) — sólida y la más exigente de las tres.** El
+estímulo es irrepetible, ajeno y en vivo: hay que describir con
+vocabulario técnico algo que se oye UNA vez, hipotetizar el mecanismo y
+contrastarlo contra la medición que el compañero acaba de mostrar.
+
+**La re-escucha de la línea base — el mejor momento del curso, hoy sin
+rematar.** La idea es potente y barata: mismo estímulo y misma consigna
+que en s01, o sea una comparación A/B del propio oído a lo largo de un
+semestre. Pero **nada obliga a articular la comparación**:
+
+- La devolución es *"abre su sobre y lee, **en silencio**, su hoja de
+  s01 al lado de lo que acaba de escribir… **silencio deliberado; no
+  comenta**"*.
+- El único momento donde eso se pondría en palabras es el bloque
+  **"Voces (fusible recortable a 0)"** — y el plan lo nombra como el
+  **primer** fusible: *"voces 5′→0"*. Con nueve defensas ocupando el
+  79 % de la sesión, se va a cortar.
+
+Resultado: el estudiante reescribe tres líneas, junta dos hojas y se va.
+Síntoma 3 en el clímax del semestre.
+
+**Arreglo (una línea, alto retorno)**: agregar a la devolución misma una
+consigna escrita — *"¿qué cambió entre su yo de s01 y su yo de hoy?"* —
+en vez de dejar la articulación condicionada a que sobre tiempo.
+
+---
+
+# BALANCE DE LA FASE 2 — 19 actividades en 10 sesiones
+
+**Ninguna sesión está podrida y solo una actividad es francamente
+mala.** El curso tiene mejor pulso del que sugería la impresión inicial:
+el problema no es el diseño de actividades, es que **nadie las corrió**.
+
+| Veredicto | Cuántas |
+|---|---|
+| **Sólidas** (no tocar) | 12 |
+| Mejorables (arreglo de una o dos líneas) | 6 |
+| **Flojas** (rehacer) | 1 — s06/E4 |
+
+## Prioridad de arreglo, por cuándo se dicta
+
+| # | Sesión | Qué | Cuánto recupera |
+|---|---|---|---|
+| 1 | **s05** (próxima) | §3 de la octava: decidir entre medir cents o recortar a 3′ | 5′ · **decisión tuya** |
+| 2 | **s06** | **E4**: usar los datos que el grupo midió en E1–E3 en vez de números de libro | 8′ · el peor caso |
+| 3 | s06 | E2 pedir diferencia en dB, no ubicación; E5 exigir un valor medido | menor |
+| 4 | s09 | Borrar el ítem 1 de la §3 (copia el pizarrón) y la pista del ítem 3 | menor |
+| 5 | s10 | P1: pedir magnitud, no dirección | menor |
+| 6 | s11 | Fase A: pedir hasta qué armónico se ve; Fase C: exigir SPL en 4 puntos | menor |
+| 7 | s12 | Fase C: predecir en Hz o cents, no "una octava" | menor |
+| 8 | **s15** | Consigna escrita en la devolución: "¿qué cambió?" | **alto retorno, una línea** |
+
+## El patrón que unifica los siete arreglos menores
+
+Todos son la misma operación: **pedir una cantidad donde hoy se pide una
+dirección o una impresión**. "¿Sube o baja?" → "¿cuánto?". "¿Más o menos
+áspero?" → "¿hasta qué armónico?". "¿Se oye distinto?" → "¿cuántos dB?".
+
+Para nueve músicos, la dirección casi siempre la saben con el cuerpo; el
+número, nunca. Ese es el ajuste de calibración que el material nunca
+tuvo, porque se diseñó para una audiencia mixta.
