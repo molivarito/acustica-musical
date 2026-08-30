@@ -49,8 +49,17 @@ fuerza): instrumento al aire vs. apoyado plano contra la mesa.
 | Contra la mesa | | |
 
 **Fase C — la vuelta al instrumento (4 min).** Nota sostenida; la cruz
-de 4 oyentes (adelante / atrás / lados) compara brillo y nivel mientras
-el ejecutante gira lentamente. ¿Dónde se pierden primero los agudos?
+de 4 oyentes (adelante / atrás / lados) mide con la app de SPL en los
+cuatro puntos cardinales alrededor del instrumento:
+
+| Punto | SPL (dB, app) |
+|---|---|
+| Frente | |
+| Atrás | |
+| Costado 1 | |
+| Costado 2 | |
+
+Con esos números a la vista: ¿dónde se pierden primero los agudos?
 __________________________________________________________________
 
 ## 3. Contraste (dentro de la fase de cierre en aula)

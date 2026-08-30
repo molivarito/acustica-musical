@@ -83,6 +83,9 @@ modulos:
       - titulo: "Guía PEE — El mapa de la cuerda (s04, módulo 1, 37 min)"
         url: "{sitio}/curso/sesion-04/actividades/guia_pee_mapa_cuerda.html"
         indent: 1
+      - titulo: "Encargo del Hito 1 — Diseño con predicción (entrega s05, 10 %)"
+        url: "{sitio}/curso/sesion-04/actividades/encargo_hito1_diseno.html"
+        indent: 1
       - titulo: "Demo — síntesis aditiva"
         url: "{sitio}/demos/demo_sintesis_aditiva.html"
   - nombre: "Sesión 05 — La altura percibida"
@@ -151,6 +154,9 @@ modulos:
       - titulo: "Guía PEE — La botella que canta (s10, módulo 1, 32 min) — EVALUADA"
         url: "{sitio}/curso/sesion-10/actividades/guia_pee_resonancia_botellas.html"
         indent: 1
+      - titulo: "Encargo del Hito 2 — Avance con evidencia sonora y medida (10 %)"
+        url: "{sitio}/curso/sesion-10/actividades/encargo_hito2_avance.html"
+        indent: 1
       - titulo: "Demo — resonancia"
         url: "{sitio}/demos/demo_resonancia.html"
   - nombre: "Sesión 11 — Cuerdas frotadas y el cuerpo"
@@ -192,6 +198,9 @@ modulos:
         indent: 1
       - titulo: "Rutas de la salida de medición — PLANTILLA EDITABLE (s14, módulo 2)"
         url: "{sitio}/curso/sesion-14/actividades/rutas_salida_medicion.html"
+        indent: 1
+      - titulo: "Encargo del Hito 3 — Presentación final + informe (15 %)"
+        url: "{sitio}/curso/sesion-14/actividades/encargo_hito3_presentacion_final.html"
         indent: 1
       - titulo: "Demo — modos de sala"
         url: "{sitio}/demos/demo_modos_sala.html"

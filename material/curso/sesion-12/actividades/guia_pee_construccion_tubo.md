@@ -79,9 +79,10 @@ flauta (abierta) de la escucha del día? ¿Por qué no tenía que coincidir?
 ### C. Destapar (8 min)
 
 Predicción escrita ANTES: "Sin la tapa, el tubo quedará
-abierto-abierto y la nota será ________ respecto del tubo tapado,
-porque $v/2L$ vs. $v/4L$ implica ________." Destapen, suenen (soplo o
-golpe de palma), midan: ________ Hz. Vuelvan a tapar.
+abierto-abierto y la nota será ________ Hz (o ________ cents respecto
+del tubo tapado), porque $v/2L$ vs. $v/4L$ implica ________." Destapen,
+suenen (soplo o golpe de palma), midan: ________ Hz. Diferencia
+respecto de lo predicho: ________ cents. Vuelvan a tapar.
 
 ### D. Contraste y explicación (8 min — ANTES del cierre plenario)
 

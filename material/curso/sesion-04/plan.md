@@ -21,7 +21,7 @@ app de espectrograma y afinador; leída la lectura previa
 [`libro/cap04_la_receta_del_timbre.md`](../../libro/cap04_la_receta_del_timbre.md).
 · **SE REPARTE** — guía PEE `guia_pee_mapa_cuerda.md` (1 por grupo,
 taller del módulo 1); media guía PEE `guia_pee_estirar_acortar.md` (1
-por grupo, módulo 2); pauta `pauta_hito1_diseno.md` impresa (1 por
+por grupo, módulo 2); pauta `encargo_hito1_diseno.md` impresa (1 por
 estudiante) + proyectada; medias hojas individuales de ideas de
 proyecto comentadas (9, devueltas). · **SE RECOGE** — al cierre del
 módulo 2, las dos guías PEE del día (`guia_pee_mapa_cuerda.md` +

@@ -34,9 +34,9 @@ nota larga en 3 posiciones (normal / ponticello / tasto), 2 pasadas de
 ~20″ cada una. Todos capturan el espectrograma; el mide-oficial dicta y
 el registra tabula:
 
-| Posición del arco | $f_1$ (Hz) | Parciales altos (más / igual / menos que normal) | Observación de oído (1 frase) |
+| Posición del arco | $f_1$ (Hz) | Armónico más alto claramente distinguible en el espectrograma (n°) | Observación de oído (1 frase) |
 |---|---|---|---|
-| Normal | | — | |
+| Normal | | | |
 | Sul ponticello | | | |
 | Sul tasto | | | |
 

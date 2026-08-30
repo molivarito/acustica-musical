@@ -93,6 +93,7 @@ website:
             contents:
               - curso/sesion-04/actividades/guia_pee_estirar_acortar.md
               - curso/sesion-04/actividades/guia_pee_mapa_cuerda.md
+              - curso/sesion-04/actividades/encargo_hito1_diseno.md
           - text: "Demo — síntesis aditiva"
             href: demos/demo_sintesis_aditiva.html
       - section: "Sesión 05 — La altura percibida"
@@ -142,6 +143,7 @@ website:
           - section: "Actividades"
             contents:
               - curso/sesion-10/actividades/guia_pee_resonancia_botellas.md
+              - curso/sesion-10/actividades/encargo_hito2_avance.md
           - text: "Demo — resonancia"
             href: demos/demo_resonancia.html
       - section: "Sesión 11 — Cuerdas frotadas y el cuerpo"
@@ -173,6 +175,7 @@ website:
             contents:
               - curso/sesion-14/actividades/guia_salida_medicion_t60.md
               - curso/sesion-14/actividades/rutas_salida_medicion.md
+              - curso/sesion-14/actividades/encargo_hito3_presentacion_final.md
           - text: "Demo — modos de sala"
             href: demos/demo_modos_sala.html
       - section: "Sesión 15 — Presentaciones finales"

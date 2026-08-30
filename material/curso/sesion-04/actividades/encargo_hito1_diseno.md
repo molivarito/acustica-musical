@@ -1,4 +1,4 @@
-# Pauta del Hito 1 — Diseño con predicción
+# Encargo del Hito 1 — Diseño con predicción
 
 **Proyecto del curso** · Se publica en la sesión 04 · **Entrega: al
 inicio de la sesión 05** · Vale **10 %** de la nota final.

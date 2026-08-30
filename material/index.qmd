@@ -272,8 +272,8 @@ const S = [
   ev:[['Instrumentos de estudiantes #1 (pulsadas)','suave'],['Se publica pauta hito 1','suave']],
   acts:[['PEE: mapa de la cuerda','curso/sesion-04/actividades/guia_pee_mapa_cuerda.md'],
         ['PEE: estirar, acortar, engordar','curso/sesion-04/actividades/guia_pee_estirar_acortar.md'],
-        ['Pauta hito 1 (diseño)','curso/sesion-04/actividades/pauta_hito1_diseno.md'],
-        ['Pauta feedback ideas','curso/sesion-04/actividades/pauta_feedback_ideas_proyecto.md']],
+        ['Encargo hito 1 (diseño)','curso/sesion-04/actividades/encargo_hito1_diseno.md'],
+        ['Pauta feedback ideas', null]],
   demo:['demo_sintesis_aditiva','demos/demo_sintesis_aditiva.html'],
   ap:'curso/sesion-04/apunte_s04_la_receta_del_timbre.md',
   cap:['cap. 4 — La receta del timbre','libro/cap04_la_receta_del_timbre.md']},
@@ -333,8 +333,8 @@ const S = [
   oa:['OA1.2','OA1.3','OA5.2','OA3.2'],
   ev:[['HITO 2: avance del proyecto (10%)','fuerte'],['Clínicas de proyecto entre pares','suave'],['Aviso instrumentos frotados (s11)','suave']],
   acts:[['PEE: resonancia con botellas','curso/sesion-10/actividades/guia_pee_resonancia_botellas.md'],
-        ['Pauta de clínica entre pares','curso/sesion-10/actividades/pauta_clinica_pares.md'],
-        ['Pauta hito 2 (avance)','curso/sesion-10/actividades/pauta_hito2_avance.md']],
+        ['Pauta de clínica entre pares', null],
+        ['Encargo hito 2 (avance)','curso/sesion-10/actividades/encargo_hito2_avance.md']],
   demo:['demo_resonancia','demos/demo_resonancia.html'],
   ap:'curso/sesion-10/apunte_s10_resonancia_e_impedancia.md',
   cap:['cap. 10 — Resonancia e impedancia','libro/cap10_resonancia_e_impedancia.md']},
@@ -354,7 +354,7 @@ const S = [
   oa:['OA1.2','OA1.3','OA5.2'],
   ev:[['Construcción de tubos PVC (taller evaluado)','suave'],['Cierre serie del objeto + bitácoras','suave'],['Se anuncia prueba 2','suave']],
   acts:[['PEE: construcción del tubo','curso/sesion-12/actividades/guia_pee_construccion_tubo.md'],
-        ['Pauta revisión de bitácoras','curso/sesion-12/actividades/pauta_revision_bitacoras.md']],
+        ['Pauta revisión de bitácoras', null]],
   demo:['demo_tubo_agujeros','demos/demo_tubo_agujeros.html'],
   ap:'curso/sesion-12/apunte_s12_vientos_y_luteria.md',
   cap:['cap. 12 — Vientos y lutería','libro/cap12_vientos_y_luteria.md']},
@@ -375,7 +375,7 @@ const S = [
   ev:[['Salida de medición T60 en salas UC','fuerte'],['Informe comparativo (último taller)','suave'],['Se publica pauta hito 3','suave'],['Devolución prueba 2','suave']],
   acts:[['Guía salida de medición T60','curso/sesion-14/actividades/guia_salida_medicion_t60.md'],
         ['Rutas de medición (plantilla)','curso/sesion-14/actividades/rutas_salida_medicion.md'],
-        ['Pauta hito 3 (presentación final)','curso/sesion-14/actividades/pauta_hito3_presentacion_final.md']],
+        ['Encargo hito 3 (presentación final)','curso/sesion-14/actividades/encargo_hito3_presentacion_final.md']],
   demo:['demo_modos_sala','demos/demo_modos_sala.html'],
   ap:'curso/sesion-14/apunte_s14_la_sala_como_instrumento.md',
   cap:['cap. 14 — La sala como instrumento','libro/cap14_la_sala_como_instrumento.md']},
@@ -385,7 +385,7 @@ const S = [
   oa:['OA5.3','OA3.2'],
   ev:[['PRESENTACIÓN FINAL + INFORME (15%)','fuerte'],['Hoja de escucha (escucha escrita 3)','suave'],['Devolución líneas base de s01','suave']],
   acts:[['Hoja de escucha de presentaciones','curso/sesion-15/actividades/hoja_escucha_presentaciones.md'],
-        ['Guion del profesor','curso/sesion-15/actividades/guion_profesor_s15.md']],
+        ['Guion del profesor', null]],
   demo:null,
   ap:'curso/sesion-15/apunte_s15_como_defender_un_proyecto_acustico.md',
   cap:['cap. 15 — Explicar es la prueba','libro/cap15_explicar_es_la_prueba.md']},
@@ -449,8 +449,12 @@ S.forEach(s => {
   const evHTML = s.ev.map(e =>
       `<span class="insignia ${e[1]==='suave'?'suave':''}">${e[0]}</span>`).join(' ');
 
+  // Una entrada SIN ruta es material solo-profesor: se lista pero no se
+  // enlaza (el render lo excluye, así que el enlace daría 404).
   const actsHTML = '<ul class="acts">' + s.acts.map(a =>
-      `<li><a href="${H(a[1])}">${a[0]}</a></li>`).join('') + '</ul>';
+      a[1] ? `<li><a href="${H(a[1])}">${a[0]}</a></li>`
+           : `<li class="sin">${a[0]} <span style="font-size:.75rem">(solo profesor)</span></li>`
+    ).join('') + '</ul>';
 
   tr.innerHTML = `
     <td class="num" style="background:${COLOR_BLOQUE[s.b]}">

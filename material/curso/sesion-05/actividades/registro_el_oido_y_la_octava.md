@@ -37,15 +37,13 @@ Lea en el afinador/generador la frecuencia a la que se detuvo.
 - La proporción del curso: **octava = duplicación de $f$**, razón $2:1$.
   Anótela: $f \to 2f$.
 
-## 3. Curiosidad: las octavas estiradas (8 min)
+## 3. Curiosidad: las octavas estiradas (3 min)
 
 Escuche dos octavas del piano: una grave y una aguda. Compare cada una con
 la octava "matemáticamente exacta" ($2:1$) del generador.
 
 - La octava aguda del piano, comparada con el $2:1$ exacto, ¿suena
   afinada, o un poquito **ancha** (estirada)?  ☐ igual  ☐ un poco ancha
-- Anote lo que oyó, en sus palabras: __________________________________
-  ______________________________________________________________________
 
 Esto es una **curiosidad**, no materia evaluable hoy: los pianos se afinan
 con octavas levemente más anchas que $2:1$, y hasta la octava que el oído

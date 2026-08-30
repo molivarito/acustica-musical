@@ -5,7 +5,7 @@ cronograma con horas absolutas para completar, el protocolo de
 preguntas individuales (2 por defensa), la planilla de rúbrica en vivo
 (por estudiante) y las plantillas del cierre. La rúbrica de referencia
 es la de la pauta del hito 3
-(`material/curso/sesion-14/actividades/pauta_hito3_presentacion_final.md`);
+(`material/curso/sesion-14/actividades/encargo_hito3_presentacion_final.md`);
 este guion no la repite: la operacionaliza. OA de la sesión: OA5.3,
 OA3.2 (+OA3.1 en la hoja del público y el cierre).
 **Decisión de diseño (2026-08-07)**: con 9 defensas individuales de 11′
@@ -164,7 +164,9 @@ si el reglamento lo permite.
 > 3. ¿Cómo lo comprobaría? __________
 >
 > *(Cuando el profesor lo indique, abra el sobre y compare con su hoja
-> de la semana 1. Ambas hojas son suyas.)*
+> de la semana 1. Antes de guardar las dos hojas, escriba una frase:
+> ¿qué cambió entre su yo de s01 y su yo de hoy? __________
+> Ambas hojas son suyas.)*
 
 ## 6. Al terminar (qué sale de la sala con el profesor)
 

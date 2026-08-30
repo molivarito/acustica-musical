@@ -116,9 +116,9 @@ caché). Las tres se cometieron durante este barrido.
 
 | # | Asunto | Las opciones |
 |---|---|---|
-| A | **s06, el gancho de las cuatro palmas** | Hoy el texto dice "el número queda en suspenso" y a la vez lo proyecta. O no se proyecta el número, o se proyecta y se borra esa frase. |
-| B | **s06, la tabla del DS 594** | La lámina adelanta que el protector "compra mucho más tiempo", que es lo que E5 calcula. Gravedad baja (la tabla ya está en la guía impresa). ¿Podar la frase o dejarla? |
-| C | **Las pautas de encargo** | `*pauta*` está excluido del sitio, así que los encargos de los hitos 1, 2 y 3 (10 %, 10 %, 15 %) llegan solo en papel. Propuesta: renombrarlos `encargo_*.md` y sumarlos a sidebar y Canvas. Cambia la regla de visibilidad: decisión suya. |
+| A | **s06, el gancho de las cuatro palmas** | **RESUELTO 2026-08-29**: no se proyecta el número. El profesor mide en privado, pregunta "¿subió mucho o poco?" y el dato se revela recién al volver de E3. |
+| B | **s06, la tabla del DS 594** | **RESUELTO 2026-08-29**: podada la frase sobre el protector. La lámina deja solo el dato normativo; el "cuánto compra" sale del cálculo de E5. |
+| C | **Las pautas de encargo** | **RESUELTO 2026-08-29**: renombrados a `encargo_hito{1,2,3}_*.md`, agregados a la sidebar y a `canvas.yml`; ya se publican. Al hacerlo apareció un defecto extra: el mapa de `material/index.qmd` generaba enlaces a las SIETE pautas, todas excluidas del render — siete 404 en el sitio público. Las cuatro que sí son solo-profesor ahora se listan sin enlace, marcadas "(solo profesor)". Verificado con `auditar_sitio.py`: sin fugas. |
 
 ## Origen del defecto
 
@@ -296,9 +296,9 @@ pasará con el hito 2 (10 %) y el hito 3 (15 %).
 
 | Archivo | Qué es | ¿Estudiante? |
 |---|---|---|
-| `pauta_hito1_diseno` (s04) | encargo, 10 % | sí |
-| `pauta_hito2_avance` (s10) | encargo, 10 % | sí |
-| `pauta_hito3_presentacion_final` (s14) | encargo, 15 % | sí |
+| `encargo_hito1_diseno` (s04) | encargo, 10 % | sí |
+| `encargo_hito2_avance` (s10) | encargo, 10 % | sí |
+| `encargo_hito3_presentacion_final` (s14) | encargo, 15 % | sí |
 | `pauta_clinica_pares` (s10) | instrucciones de la clínica | probablemente sí |
 | `pauta_feedback_ideas_proyecto` (s04) | guion del profesor | no |
 | `pauta_revision_bitacoras` (s12) | guion del profesor | no |

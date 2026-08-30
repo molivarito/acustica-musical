@@ -45,7 +45,8 @@ alcanza, asegure el **mínimo irrenunciable** marcado con ★.
 
 *¿Dónde se ensaya más protegido en esta sala?*
 
-- P: ¿en qué punto de la sala habrá más nivel con la fuente fija? ______
+- P: ¿cuántos dB de diferencia habrá entre el punto más y el menos
+  ruidoso de la sala? ______ dB
 - Fuente: el celular emisor con un tono (o música) fijo, SIEMPRE en el
   mismo lugar y volumen. ★ Midan el nivel (dB(A), misma app y mismo
   celular) en los **4 puntos marcados** de la sala; anoten el mapa.
@@ -63,20 +64,27 @@ alcanza, asegure el **mínimo irrenunciable** marcado con ★.
 - ¿Cuántos dB subió respecto de uno solo? ¿Le achuntó? ¿Cuántos
   celulares harían falta para que sonara *el doble* de fuerte?
 
-## E4 — Aritmética del decibel (papel)
+## E4 — Aritmética del decibel, con SUS datos (papel)
 
-*Las reglas +10 dB = ×10 y +3 dB = ×2, en uso.* (Consume la lectura
-previa; respuestas en proporciones, sin logaritmos.)
+*Las reglas +10 dB = ×10 y +3 dB = ×2, aplicadas a lo que su propio
+grupo ya midió en E1–E3.* (Consume la lectura previa; respuestas en
+proporciones, sin logaritmos.)
 
-1. ★ Un pasaje del ensayo marca 70 dB SPL; el tutti lo repite y marca
-   80 dB SPL. ¿Cuántas veces más intensidad? ¿Cómo se oye el cambio:
-   apenas, notorio o "el doble de fuerte"?
-2. Un parlante solo produce 60 dB SPL en su asiento. ¿Qué nivel
-   producen dos idénticos? ¿Y diez?
-3. Junto al atril del trompetista la app marca 91 dB(A); tres metros
-   atrás, 85 dB(A). ¿Cuántas veces menos intensidad llega atrás?
-4. El director pide "la mitad de fuerte". ¿Aproximadamente cuántos dB
-   hay que bajar — y cuántas veces menos energía es eso?
+- P: antes de calcular, ¿cuántas veces más intensidad creen que hubo
+  entre el punto más y el menos ruidoso de su sala (E2)? ______ veces
+
+1. ★ Con la diferencia en dB que midieron en **E2** entre el punto MÁS
+   y el MENOS ruidoso de la sala: ¿a cuántas veces más intensidad
+   equivale? ¿Le achuntó a su predicción de arriba?
+2. Con el salto en dB que midieron en **E3** al sumar el celular B al
+   A (A+B sonando juntos vs. A solo): ¿cuántas veces más intensidad es
+   ese salto? ¿Se parece a lo esperado (+3 dB ≈ ×2)?
+3. Con la discrepancia en dB que midieron en **E1** entre la app y el
+   micrófono de referencia (a 30 cm): ¿a cuántas veces de diferencia
+   en intensidad equivale esa discrepancia?
+4. *(sin dato propio)* El director pide "la mitad de fuerte".
+   ¿Aproximadamente cuántos dB hay que bajar — y cuántas veces menos
+   energía es eso?
 
 ## E5 — La dosis del oído (papel + app)
 
@@ -94,8 +102,9 @@ regla de 3 dB y da esta misma tabla, valor por valor):
 - P: ¿su actividad musical semanal cabe en la tabla? ☐ sobrada ☐ justa
   ☐ no cabe
 - ★ Elijan un caso real del grupo (ensayo, banda, audífonos al ir en
-  micro — mídanlo con la app si se puede reproducir aquí) y calculen
-  su tiempo admisible con la tabla.
+  micro) y midan CON LA APP, en vivo en la sala, AL MENOS UN valor de
+  ese caso (reprodúzcanlo o simúlenlo aquí); calculen su tiempo
+  admisible con la tabla a partir de ese dato medido.
 - Un protector auditivo de músico atenúa del orden de 15–25 dB (valores
   típicos de fabricante para protectores de atenuación plana, p. ej.
   ER-15/ER-20). Con la regla de los 3 dB: ¿por cuánto multiplica el
@@ -109,7 +118,7 @@ regla de 3 dB y da esta misma tabla, valor por valor):
 | E1 | | | |
 | E2 | | | |
 | E3 | | | |
-| E4 | (respuestas 1–4 al margen) | | — |
+| E4 | | (respuestas 1–4 al margen) | — |
 | E5 | | | |
 
 ## Pauta del mini-informe SPL (formulario en aula, desde el minuto 60)

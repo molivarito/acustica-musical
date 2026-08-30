@@ -1,6 +1,6 @@
 **OBSOLETA (2026-08-07)**: el proyecto pasó a individual; esta ficha no
 se usa en 2026-2. El hito 3 ya no tiene coevaluación (pauta
-`sesion-14/actividades/pauta_hito3_presentacion_final.md`, §5): la nota
+`sesion-14/actividades/encargo_hito3_presentacion_final.md`, §5): la nota
 es directa, con la bitácora individual como respaldo. Se conserva este
 archivo como registro histórico del diseño grupal.
 

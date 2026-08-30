@@ -30,7 +30,7 @@ el informe-formulario al dorso); la hoja de rutas
 `rutas_salida_medicion.md` con la ruta asignada (1 por grupo; ver
 arreglo propuesto 11: versión sin la columna "Tipo esperado"); globos
 para el impulso (3–4 por grupo + 1 de repuesto); la pauta del hito 3
-`pauta_hito3_presentacion_final.md` impresa (9, se publica hoy,
+`encargo_hito3_presentacion_final.md` impresa (9, se publica hoy,
 entregada al final del m1). · **SE RECOGE** — al cierre de la salida
 (m2), la guía `guia_salida_medicion_t60.md` completa (tabla de
 registro + informe-formulario del dorso): es el taller evaluado de la
@@ -175,7 +175,7 @@ línea de oído ANTES de encender la app. Primero suena, después se mide.
   `actividades/rutas_salida_medicion.md` (plantilla editable de 5
   rutas — 3 activas este semestre, 2 de reserva; espacios concretos
   los fija el profesor) ·
-  `actividades/pauta_hito3_presentacion_final.md` (pauta y rúbrica del
+  `actividades/encargo_hito3_presentacion_final.md` (pauta y rúbrica del
   hito 3: presentación + informe, 15 %; se publica HOY).
 - **Apuntes**: `apunte_s14_la_sala_como_instrumento.md`.
 - **Capítulo (lectura previa)**: [`libro/cap14_la_sala_como_instrumento.md`](../../libro/cap14_la_sala_como_instrumento.md).

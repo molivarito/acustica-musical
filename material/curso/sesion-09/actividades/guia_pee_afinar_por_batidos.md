@@ -57,17 +57,12 @@ __________________________________________________________________
 
 ## 3. Ítems de papel (el integrante en espera; por escrito)
 
-1. **La coma con sumas**: la quinta justa mide ~702 cents y la octava
-   1200. Calculen: 12 quintas = ______ cents; 7 octavas = ______
-   cents; sobran ______ cents. ¿Qué fracción de un semitono (100
-   cents) es eso? ______
-2. **El impuesto por quinta**: si la coma se reparte en partes iguales
+1. **El impuesto por quinta**: si la coma se reparte en partes iguales
    entre las 12 quintas, a cada una le tocan ______ cents. ¿Coincide
    con la distancia entre sus fases A y B? ______
-3. **Proyección**: la quinta temperada de Do4 late ~0,9 veces/s. Una
+2. **Proyección**: la quinta temperada de Do4 late ~0,9 veces/s. Una
    octava MÁS ABAJO (Do3), la misma quinta temperada ¿latirá más
-   rápido, más lento o igual? ______ ¿Por qué? (pista: los batidos
-   viven en los parciales, y todos los parciales bajan a la mitad)
+   rápido, más lento o igual? ______ ¿Por qué?
    ________________________________________________________________
 
 ## 4. Explicación y contraste (al cerrar los turnos — por escrito)

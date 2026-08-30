@@ -39,7 +39,7 @@ entrega en la caja); la encuesta del curso, al cierre [instrumento:
 QR/enlace o papel, por definir por el profesor]. Los sobres de línea
 base (s01 + "hoy") NO se recogen: son del estudiante, se los lleva. ·
 **SE REVISA** — la rúbrica R1–R4 del hito 3
-(`material/curso/sesion-14/actividades/pauta_hito3_presentacion_final.md`)
+(`material/curso/sesion-14/actividades/encargo_hito3_presentacion_final.md`)
 se registra en vivo durante cada defensa (planilla del guion); el
 informe se corrige contra la misma rúbrica en la semana (pico final);
 el bloque ★ de la hoja de escucha se corrige con la rúbrica OA3
@@ -121,7 +121,7 @@ la devolución de sobres. Recuperación máxima: ~10′.
 | 24–36′ | **Defensa 8** (OA5.3 + OA3.2): 8′ + 3′ + 1′ transición | Ídem | Ídem | Ídem |
 | 36–48′ | **Defensa 9** (OA5.3 + OA3.2): 8′ + 3′ + 1′ transición | Ídem; al corte, las nueve defensas del semestre están completas | Ídem; al cerrar anuncia: "las nueve defensas están hechas; ahora entregan su hoja de escucha al pasar y cerramos el semestre" | Ídem |
 | 48–54′ | **Línea base, de nuevo (OA3.1, sin nota — cierre del arco)** | Al pasar hacia este bloque, entrega su hoja de escucha (con su ★ ya marcada) en la caja; SIN abrir ningún sobre: escucha de nuevo, en vivo en la sala, el MISMO estímulo de la semana 1 (guitarra con batidos, estímulo #1 del banco; dos pasadas) y escribe en la media hoja "hoy" su diagnóstico en 3 líneas: qué oye, qué lo produce, cómo lo comprobaría — exactamente la consigna de s01 | Recibe las hojas de escucha en la caja; reproduce el estímulo #1 dos veces; no adelanta nada | Caja de recepción; estímulo #1 en el equipo de sala; medias hojas "hoy" |
-| 54–58′ | **Devolución simbólica (OA3.1, sin nota)** | Abre su sobre y lee, en silencio, su hoja de línea base de s01 al lado de lo que acaba de escribir: quién era en la semana 1, quién es hoy. Ambas hojas son suyas: se las lleva | Reparte los sobres de línea base nominados (preparados de antemano); silencio deliberado; no comenta | Sobres de línea base (9, nominados) |
+| 54–58′ | **Devolución simbólica (OA3.1, sin nota)** | Abre su sobre y lee, en silencio, su hoja de línea base de s01 al lado de lo que acaba de escribir: quién era en la semana 1, quién es hoy. Antes de guardar las dos hojas, escribe una frase respondiendo la consigna: "¿qué cambió entre su yo de s01 y su yo de hoy?". Ambas hojas son suyas: se las lleva | Reparte los sobres de línea base nominados (preparados de antemano); proyecta o lee la consigna de la frase final; silencio deliberado por lo demás; no comenta | Sobres de línea base (9, nominados) |
 | 58–63′ | **Voces (fusible recortable a 0)** | Voluntarios leen su "antes" y su "ahora" en voz alta; con 9 estudiantes alcanza para varios si el curso quiere (nadie obligado) | Modera sin corregir: el contraste habla solo | — |
 | 63–67′ | **Síntesis del semestre** | Escucha el arco completo: del golpe de s01 al tono; el espectro como anteojos; los modos; el oído que no copia la física; la resonancia como puente; las tres válvulas (fricción, aire, pliegues); la sala que también suena — y las tres capas (oído, mecanismo, medición) que hoy usaron completas en cada defensa | Sintetiza con la lámina final; cierra con la tesis del curso: "escuchar como científico no se olvida: desde hoy, ustedes ya no pueden des-oír" | Lámina de síntesis (1) |
 | 67–70′ | **Evaluación del curso y despedida** | Responde la encuesta del curso (QR/enlace en pantalla; papel para quien prefiera; puede quedarse en la sala terminándola) | Proyecta el QR; agradece; recuerda: notas del hito 3 y del semestre por el canal del curso en [plazo que fija el profesor] | Encuesta (QR + copias en papel) [instrumento: el que defina el profesor o el institucional] |
@@ -129,7 +129,7 @@ la devolución de sobres. Recuperación máxima: ~10′.
 ## Verificación de aprendizaje
 
 - **Hito 3 (OA5.3 + OA3.2, 15 %)**: rúbrica R1–R4 de la pauta
-  (`material/curso/sesion-14/actividades/pauta_hito3_presentacion_final.md`)
+  (`material/curso/sesion-14/actividades/encargo_hito3_presentacion_final.md`)
   registrada EN VIVO en la planilla del guion, estudiante por
   estudiante; R1 (explicación acústica) desempata, según la pauta. El
   informe ≤6 págs se corrige contra la misma rúbrica esta semana (pico

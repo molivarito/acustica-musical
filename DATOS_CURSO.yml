@@ -82,7 +82,7 @@ afirmaciones:
     debe_contener:
       - "9 defensas"
       - "8′"
-  - archivo: material/curso/sesion-14/actividades/pauta_hito3_presentacion_final.md
+  - archivo: material/curso/sesion-14/actividades/encargo_hito3_presentacion_final.md
     debe_contener:
       - "individual"
       - "8′"

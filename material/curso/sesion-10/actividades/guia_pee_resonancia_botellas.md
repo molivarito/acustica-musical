@@ -21,9 +21,9 @@ espectrograma lo captura igual.
 ## 1. Predicción (ANTES de que suene nada — 3 min, todos firman)
 
 - **P1 (soplando)**: si soplamos la botella vacía y luego con agua
-  hasta la mitad, la nota va a **subir / bajar** (encierren una)
-  porque _______________________________________________.
-  ¿Cuánto, a ojo? **un tono / una quinta / una octava / más**.
+  hasta la mitad, ¿cuánto creen que cambia la nota, a ojo? **un tono /
+  una tercera / una quinta / una octava / más** (encierren una) porque
+  _______________________________________________.
 - **P2 (golpeando)**: si golpeamos la botella con la cuchara, el agua
   hasta la mitad va a **subir / bajar** la nota porque
   _______________________________________________.
