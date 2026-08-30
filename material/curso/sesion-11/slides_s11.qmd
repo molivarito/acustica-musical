@@ -155,7 +155,7 @@ Activamos 🔮 **Modo predicción** en la demo — paneles ocultos hasta
 - Si la demo no corre en el equipo de la sala: dibuje la esquina por cuadros en el pizarrón (secuencia de 6 posiciones, en la lámina) y toque el diente de sierra desde su celular con un generador — se pierde la animación, no el argumento (plan.md, Riesgos y plan B).
 :::
 
-## Taller evaluado: el punto de frotado
+## Taller evaluado: el punto de frotado {.smaller}
 
 | Fase | Qué hacen | Tiempo |
 |---|---|---|
@@ -247,11 +247,6 @@ Veámoslo.
 
 . . .
 
-La resonancia del aire encerrado ayuda a radiar los graves que la tapa,
-sola, no puede — la botella de s10 vive dentro del violín.
-
-. . .
-
 Un parcial que cae cerca de un modo fuerte del cuerpo, ¿suena más o menos?
 
 . . .
@@ -261,12 +256,12 @@ Un parcial que cae cerca de un modo fuerte del cuerpo, ¿suena más o menos?
 ::: {.notes}
 **Apoyo:**
 
-- Complemento sobre las efes: la resonancia del aire encerrado ayuda a radiar los graves que la tapa sola no puede — la botella de s10 vive dentro del violín.
+- **NO responda lo de las efes aquí** (2026-08-29): es la P1 del taller que viene — deje la pregunta abierta y que la midan. La respuesta (la resonancia del aire encerrado ayuda a radiar los graves que la tapa sola no puede — la botella de s10 vive dentro del violín) está en la lámina de síntesis del cierre, que es donde va.
 - Sobre el modo fuerte: el cuerpo es un ecualizador fijo hecho de resonancias (conecta con la curva de respuesta de s10).
-- Dato adicional para tener a mano, parte de la misma mini-lección aunque no aparezca en votación aquí: la radiación es direccional — los graves salen parejos en todas direcciones, los agudos salen en haces que dependen del modo que los radia (cualitativo); es lo que la fase C del taller "¿quién radia aquí?" pone a prueba (apunte, sección "La cuerda no mueve el aire: la cadena completa"; plan.md, bloque 8–22′).
+- Dato para SU orientación, **no para decir en voz alta**: es lo que la fase C del taller pone a prueba. La radiación es direccional — los graves salen parejos en todas direcciones, los agudos salen en haces que dependen del modo que los radia (cualitativo); es lo que la fase C del taller "¿quién radia aquí?" pone a prueba (apunte, sección "La cuerda no mueve el aire: la cadena completa"; plan.md, bloque 8–22′).
 :::
 
-## Taller (sin nota): ¿quién radia aquí?
+## Taller (sin nota): ¿quién radia aquí? {.smaller}
 
 ::: {.incremental}
 - **P1** — ¿tapar las efes / la boca cambia la sonoridad pareja, los graves o los agudos?
@@ -293,6 +288,9 @@ Fases A (tapar/destapar), B (apoyado/al aire), C (radiación en cruz) — 18′.
 - La fricción es una válvula; la cuerda, su metrónomo.
 - Una vuelta de la esquina = un soltar.
 - La caja no regala energía: la transforma y la gasta radiando.
+- Las efes: la resonancia del aire encerrado ayuda a radiar los graves
+  que la tapa, sola, no puede — la botella de s10 vive dentro del
+  violín.
 
 ::: {.notes}
 **Apoyo:** cierre — superponga los resultados de los 3 grupos del taller de acoplamiento. Explicite qué de hoy es evaluable en la Prueba 2 (mecanismo frotado, cadena de radiación) y qué es cultura general — por ejemplo la nota lobo o el ajuste de placas de Hutchins, que en el curso quedan como curiosidad, no como materia de prueba (plan.md, bloque 48–60′).

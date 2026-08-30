@@ -21,9 +21,10 @@ Grupo: ______ · Integrantes: ______________________ / ______________________ / 
 
 - Al dejar la quinta **sin batidos**, creo que quedaré a ______ cents
   del punto justo (¿clavado?, ¿±1?, ¿±5?, ¿±20?).
-- El punto "sin batidos", ¿coincidirá con lo que un afinador
-  electrónico llama quinta correcta (700 cents)? SÍ / NO, porque
-  ________________________________________________________________
+- ¿Cree que su oído logrará **distinguir** la diferencia de ~2 cents
+  entre la quinta justa y la temperada, o le sonarán prácticamente
+  iguales? ☐ la distingo ☐ me suenan iguales — ¿por qué?
+  ______________
 - Anular el batido de la **3ª mayor** será MÁS FÁCIL / MÁS DIFÍCIL que
   el de la quinta, porque ________________________________________
 

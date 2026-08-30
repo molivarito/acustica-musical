@@ -315,9 +315,6 @@ s09.
 - Anote qué le sorprendió
 :::
 
-> Curiosidad honesta: las **octavas estiradas** no se resuelven hoy — se
-> retoman en s09. La regla operativa sigue siendo octava = $2{:}1$.
-
 ::: {.notes}
 **Apoyo:** rote por los grupos; formalice en el pizarrón solo la
 proporción octava = duplicación de $f$ (2:1) (plan.md, módulo 2,
@@ -335,6 +332,9 @@ y plan B").
 Altura ≠ frecuencia línea a línea: el oído reconstruye un **patrón**
 (fundamental ausente) y mapea frecuencia a **lugar** — pero la octava
 muestra que ese mapa tiene pliegues.
+
+> Curiosidad honesta: las **octavas estiradas** no se resuelven hoy — se
+> retoman en s09. La regla operativa sigue siendo octava = $2{:}1$.
 
 ::: {.notes}
 **Apoyo:** cierre las dos ideas del día en el pizarrón; conecte: mañana

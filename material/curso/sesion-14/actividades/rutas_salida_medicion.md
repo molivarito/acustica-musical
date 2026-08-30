@@ -36,30 +36,30 @@ del informe se llena en el trayecto). **Punto de encuentro**:
 
 ## Ruta 1 — [nombre]
 
-| Orden | Espacio | Tipo esperado | Notas |
-|---|---|---|---|
-| A ★ | [sala de clases pequeña — puede ser la propia] | seco | |
-| B ★ | [hall / pasillo de hormigón del edificio X] | vivo | fondo alto probable: extrapolar |
-| C (opcional) | [sala de práctica / estudio] | muy seco | |
-| Alternativa | [espacio cercano] | | usar si A/B/C ocupado |
+| Orden | Espacio | Notas |
+|---|---|---|
+| A ★ | [sala de clases pequeña — puede ser la propia] | |
+| B ★ | [hall / pasillo de hormigón del edificio X] | fondo alto probable: extrapolar |
+| C (opcional) | [sala de práctica / estudio] | |
+| Alternativa | [espacio cercano] | usar si A/B/C ocupado |
 
 ## Ruta 2 — [nombre]
 
-| Orden | Espacio | Tipo esperado | Notas |
-|---|---|---|---|
-| A ★ | [sala de práctica / estudio de música] | muy seco | reservar franja |
-| B ★ | [caja de escala del edificio X] | vivo | globo lejos de oficinas |
-| C (opcional) | [pasillo ancho / hall chico] | medio | |
-| Alternativa | [espacio cercano] | | |
+| Orden | Espacio | Notas |
+|---|---|---|
+| A ★ | [sala de práctica / estudio de música] | reservar franja |
+| B ★ | [caja de escala del edificio X] | globo lejos de oficinas |
+| C (opcional) | [pasillo ancho / hall chico] | |
+| Alternativa | [espacio cercano] | |
 
 ## Ruta 3 — [nombre]
 
-| Orden | Espacio | Tipo esperado | Notas |
-|---|---|---|---|
-| A ★ | [capilla / auditorio — requiere permiso] | muy vivo | palmada si hay gente; permiso [POR VERIFICAR] |
-| B ★ | [sala de clases mediana] | seco | |
-| C (opcional) | [hall de acceso] | vivo | pensada como ancla compartida con ruta 5, pero esa ruta es reserva este semestre: sin par cruzado esta ronda |
-| Alternativa | [espacio cercano] | | |
+| Orden | Espacio | Notas |
+|---|---|---|
+| A ★ | [capilla / auditorio — requiere permiso] | palmada si hay gente; permiso [POR VERIFICAR] |
+| B ★ | [sala de clases mediana] | |
+| C (opcional) | [hall de acceso] | pensada como ancla compartida con ruta 5, pero esa ruta es reserva este semestre: sin par cruzado esta ronda |
+| Alternativa | [espacio cercano] | |
 
 ## Ruta 4 — [nombre] (reserva, no asignada este semestre)
 
@@ -97,3 +97,19 @@ del informe se llena en el trayecto). **Punto de encuentro**:
       los grupos ANTES de salir (inflar en la calle quita tiempo).
 - [ ] Imprimir 3 guías + 3 rutas (rutas activas 1–3); escribir hora de
       corte y punto de encuentro en ambas.
+
+## Solo para el profesor: tipo esperado por espacio
+
+| Ruta | Espacio | Tipo esperado |
+|---|---|---|
+| 1 | A ★ [sala de clases pequeña — puede ser la propia] | seco |
+| 1 | B ★ [hall / pasillo de hormigón del edificio X] | vivo |
+| 1 | C (opcional) [sala de práctica / estudio] | muy seco |
+| 2 | A ★ [sala de práctica / estudio de música] | muy seco |
+| 2 | B ★ [caja de escala del edificio X] | vivo |
+| 2 | C (opcional) [pasillo ancho / hall chico] | medio |
+| 3 | A ★ [capilla / auditorio — requiere permiso] | muy vivo |
+| 3 | B ★ [sala de clases mediana] | seco |
+| 3 | C (opcional) [hall de acceso] | vivo |
+
+*Nota: esta sección no se imprime para los estudiantes.*

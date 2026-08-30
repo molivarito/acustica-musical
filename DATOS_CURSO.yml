@@ -119,6 +119,7 @@ prohibidos:
     - "4 integrantes"
     - "20 estudiantes"
     - "2 parejas por grupo"
+    - "minutos por grupo"   # residuo del diseño grupal: las defensas son individuales
     - "escala pentatónica"
     - "grupos estables"
     - "coevalua"

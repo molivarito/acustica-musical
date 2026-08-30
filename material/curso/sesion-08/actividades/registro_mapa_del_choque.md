@@ -18,8 +18,10 @@ Nombre: ____________________ Grupo: ____________________
 ## 1. Predicción individual (ANTES de su turno de oyente)
 
 - "Creo que dejaré de poder contar batidos alrededor de Δf ≈ ____ Hz."
-- "Creo que la aspereza desaparecerá del todo alrededor de
-  Δf ≈ ____ semitonos."
+- El curso acaba de decir que el orden de magnitud es ~1/3 de octava
+  (una tercera menor). ¿Cree que SU frontera personal será **más
+  ancha**, **más angosta** o **igual**? ☐ más ancha ☐ más angosta
+  ☐ igual — ¿por qué? ______________
 
 ## 2. Medición (su turno de oyente, ~6 min)
 

@@ -27,11 +27,11 @@ El grupo carga la demo con los 8 parciales encendidos (un tono armónico
 completo). Sin apagar nada todavía, **cada uno** predice y marca en su
 hoja:
 
-- Si apago **solo la fundamental** $f_1$ (dejo $2f_1, 3f_1, \dots$), la
-  altura de la nota:
-  ☐ baja una octava  ☐ desaparece  ☐ sigue **igual**  ☐ otra: ______
-- Escriba en una frase POR QUÉ predice eso: ____________________________
-  _______________________________________________________________________
+- El capítulo 5 dejó una pregunta abierta: si lo que importa es el patrón,
+  ¿**cuántos parciales** cree que se podrán quitar —de abajo hacia arriba—
+  antes de que su oído pierda el hilo y la altura se rompa? ______ parciales
+- ¿Su umbral será **igual** al de sus compañeros de mesa o distinto?
+  ☐ igual ☐ distinto — ¿por qué? ______________________________________
 
 ## 2. Experimento: apagar la fundamental (en su turno: ~3 min)
 
@@ -71,7 +71,8 @@ sección 3, rotan los tres roles y parte el turno siguiente.**
 ## 4. Explicación y contraste (individual, 3 min; luego 2 min de puesta
 en común del grupo)
 
-- ¿Su predicción del punto 1 le achuntó?   ☐ sí  ☐ no. Si no, ¿para qué
+- ¿Su predicción de parciales del punto 1 le achuntó al umbral que midió
+  en la sección 3?   ☐ sí  ☐ no. Si no, ¿para qué
   lado se equivocó y por qué cree que fue? ______________________________
 - Complete la frase (será la moraleja del día):
   "El parlante chico del celular igual da el bajo porque _______________

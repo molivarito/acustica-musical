@@ -22,8 +22,10 @@ anota en los 30″ posteriores.
   tasto*)? □ gana · □ pierde · □ no cambia.
 - **P2.** La altura de la nota ($f_1$) al cambiar el punto de frotado:
   □ sube hacia el puente · □ baja hacia el puente · □ no cambia.
-- **P3.** Filmada en cámara lenta, la cuerda sonando se verá como:
-  □ curva suave que ondula · □ otra forma (dibújenla): ______________
+- **P3.** Ya vieron la forma idealizada en la demo (la esquina que
+  recorre el óvalo). Filmada en cámara lenta, ¿la cuerda REAL mostrará
+  esa esquina igual de nítida, o se verá distinta/borrosa? □ igual de
+  nítida · □ distinta — ¿por qué lo cree? ______________
 
 ## 2. Experimento
 
@@ -43,7 +45,8 @@ __________________________________________________________________
 
 **Fase B — la cámara lenta (7 min).** Un celular filma la cuerda de
 cerca (cámara lenta, fondo claro) mientras el ejecutante frota. Miren la
-reproducción: ¿qué forma tiene la cuerda? ¿Coincide con su P3?
+reproducción: ¿la esquina se ve tan nítida como en la demo, o
+distinta/borrosa? ¿Coincide con su P3?
 Anoten qué alcanzaron a ver (y qué no — eso también es un dato):
 __________________________________________________________________
 

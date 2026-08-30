@@ -145,7 +145,7 @@ explicado.
 |---|---|---|
 | Fórmula | $f_1 = v/2L$ | $f_1 = v/4L$ |
 | Armónicos | todos | solo impares |
-| Al soplar más fuerte, salta a… | la **octava** (flauta) | la **docena** (clarinete, tubo tapado) |
+| Al soplar más fuerte, salta a… | la **octava** (flauta) | ¿…? — lo miden ustedes en la Fase B |
 
 ::: {.notes}
 **Apoyo:** Complemento (apunte, sección "La docena del clarinete y la
@@ -159,7 +159,7 @@ vientos multiplican sus notas — la misma digitación vale para dos
 registros.
 :::
 
-## Un agujero abierto "corta" el tubo sin cortarlo
+## Un agujero abierto "corta" el tubo sin cortarlo {.smaller}
 
 > Un agujero lateral abierto es una fuga de presión: para la onda, el
 > tubo "termina" donde está el primer agujero destapado.
@@ -246,7 +246,7 @@ fila).
 
 Al final, los 3 tubos tocan juntos el acorde de Sol mayor.
 
-## Taller, fase 1: predecir y cortar
+## Taller, fase 1: predecir y cortar {.smaller}
 
 | Fase | Qué hacen | Tiempo |
 |---|---|---|
@@ -303,7 +303,7 @@ vientos se afinan calientes y la orquesta afina después de que los
 bronces soplaron un rato.
 :::
 
-## Taller, fase 2: afinar, saltar de registro, destapar
+## Taller, fase 2: afinar, saltar de registro, destapar {.smaller}
 
 | Fase | Qué hacen | Tiempo |
 |---|---|---|

@@ -26,7 +26,7 @@ los ejes: forma de onda = presión vs. **tiempo**; espectro = nivel vs.
 | Vocal "aaa" cantada, nota fija | | | |
 | Silbido, nota fija | | | |
 | "Sssss" sostenido | | | |
-| Golpe seco en la mesa | | | |
+| Golpe seco en la mesa (ejemplo ya trabajado en clase: complete con lo que vio, no es predicción) | | | |
 
 Apuesta rápida (marquen una): ¿en cuál vista se distinguirán mejor la
 vocal y el silbido? ☐ forma de onda ☐ espectro ☐ en ambas igual
@@ -39,7 +39,9 @@ asignados** al micrófono (~2′ por sonido; su grupo está al micrófono
 sonidos completan la tabla de ustedes. Para cada uno de los 4 sonidos
 (los propios y los de los demás), **mide y registra** anota al lado del dibujo:
 
-- ¿Le achuntaron a la *forma general*? (sí / a medias / no)
+- ¿Le achuntaron a la *forma general*? (sí / a medias / no) — para el
+  golpe seco, en cambio, anoten si lo dibujado coincide con lo ya visto
+  en clase, no si "achuntaron" (no era predicción).
 - Una diferencia concreta entre lo dibujado y lo visto:
   ______________________________________________________________
 

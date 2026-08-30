@@ -117,7 +117,7 @@ Tras la fricción del arco (s11) y el chorro del bisel (s12)…
 
 . . .
 
-[Los pliegues, solos]{style="color:#0f766e"} — con su tensión y su masa, como una cuerda.
+[Los pliegues, solos]{style="color:#0f766e"} — ¿se lo esperaban después de leer el capítulo? Con su tensión y su masa, como una cuerda.
 
 ::: {.notes}
 **Apoyo:** Complemento — contraste explícito con s11–s12 (plan, Mini-lección): "en el violín y la flauta el resonador ESCLAVIZA a la válvula; en la voz la válvula se auto-gobierna y el resonador solo filtra — por eso usted puede cantar cualquier vocal en cualquier nota" (BEN 19.2–19.3). El apunte lo dice así: los pliegues fijan su frecuencia solos, "el músculo los afina como se afina una cuerda con la clavija" (apunte, "La sorpresa: esta válvula no obedece al resonador").

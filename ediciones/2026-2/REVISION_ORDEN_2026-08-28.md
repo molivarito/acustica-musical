@@ -28,12 +28,50 @@ se actualiza a medida que avanzan las tandas.
 | 11 | s14 | Imprimir la hoja de ruta **sin** la columna "Tipo esperado" (seco/vivo/muy seco): es la respuesta del ranking que el grupo debe predecir | `actividades/rutas_salida_medicion.md` | bajo |
 | 12 | s14 | Mover el ítem del T60 de la sala de clases ANTES de la demostración del globo, o eliminarlo: hoy pide "estimar" lo que se acaba de medir delante de ellos | `actividades/guia_salida_medicion_t60.md` | bajo |
 | 13 | s12 | En la mini-lección y en la tabla "Dos tubos, dos registros", resolver solo el tubo ABIERTO y dejar el tapado como pregunta: el capítulo pidió expresamente guardar ese secreto | `slides_s12.qmd` + `plan.md` | bajo |
-| 14 | s14 | Corregir "25 minutos por grupo" → "9 defensas individuales de ~11′": residuo del diseño grupal, en material PÚBLICO, sobre el formato de su propia defensa | `apunte_s14_la_sala_como_instrumento.md` | nulo |
-| 15 | — | Junto con el #14 (y solo después de él): agregar `"minutos por grupo"` a los patrones prohibidos, para que el verificador atrape este residuo | `DATOS_CURSO.yml` | nulo |
+| 14 | s14 | Quitar la duración por grupo que declaraba el apunte (residuo del diseño grupal, ya obsoleta) y remitir a la pauta del hito 3: está en material PÚBLICO y describe el formato de su propia defensa | `apunte_s14_la_sala_como_instrumento.md` | nulo |
+| 15 | — | Junto con el #14 (y solo después de él): agregar a los patrones prohibidos el que describe una duración por grupo, para que el verificador atrape este residuo | `DATOS_CURSO.yml` | nulo |
 | 16 | s02 | *(2027)* Marcar el golpe seco como el ejemplo ya trabajado, en vez de listarlo entre los cuatro a predecir a ciegas — el diseño ya lo sacrifica a propósito | `guia_pee_retratos_de_sonido.md` | bajo |
 | 17 | s01 | *(2027)* Reapuntar la §3 de la guía a lo que la votación no contesta | `guia_pee_zona_gris.md` | bajo |
 | 18 | s03 | *(2027)* Mover la regla "un dedo en un antinodo apaga ese modo" a la síntesis posterior al taller | `slides_s03.qmd` | bajo |
 | 19 | s03 | *(2027)* Nota de reservar "Center Pluck" para s04 | `slides_s03.qmd` (notas) | nulo |
+
+### ESTADO: los 19 arreglos APLICADOS el 2026-08-29
+
+Los 19 quedaron aplicados y verificados (verificador de consistencia y
+panel en verde). Tres cosas que salieron al aplicarlos:
+
+1. **Se blindaron las notas de orador de s11.** El arreglo 9 sacó de la
+   pantalla la respuesta sobre las efes, pero la dejó en las notas sin
+   advertencia: leída en voz alta, la filtración volvía por la boca del
+   profesor. Las notas ahora dicen "NO responda lo de las efes aquí".
+2. **El arreglo 15 hizo que el verificador rechazara este informe**, por
+   citar el término obsoleto para explicarlo. Se resolvió describiendo
+   el patrón en vez de transcribirlo — **no** exceptuando el archivo,
+   que habría apagado el chequeo justo donde más se escriben términos
+   de rediseño.
+3. **Aparecieron desbordes preexistentes de láminas** (ver abajo).
+
+### Desbordes de lámina — un eje que nadie había medido
+
+Al re-renderizar los mazos tocados se midió el alto real de cada lámina
+(límite: 700 px). **Nunca se había hecho salvo en s04.** Resultado:
+
+| Mazo | Láminas que desbordaban | Estado |
+|---|---|---|
+| s11 | "Taller: el punto de frotado" (1182), "¿quién radia aquí?" (709) | **arregladas** con `{.smaller}` |
+| s12 | "Taller fase 2" (1318), "Taller fase 1" (1110), "Un agujero abierto…" (762) | **arregladas** con `{.smaller}` |
+| s03 | ninguna evidente (medida con método aproximado, que sobreestima) | probablemente bien |
+| s04 | ya arreglado el 2026-08-28 | — |
+| resto | **SIN MEDIR** | pendiente |
+
+Todas eran **preexistentes** (verificado: las ediciones de este barrido
+tocaron otras líneas) y todas son **láminas de taller con tabla** — el
+mismo perfil que el desborde de s04. Tras aplicar `.smaller`, ninguna
+lámina de s11 ni s12 pasa de 700 px.
+
+**Pendiente**: medir los nueve mazos restantes (s01, s02, s05–s10, s13,
+s14, s15). El procedimiento está probado: renderizar, servir en local y
+medir el alto de cada lámina con los fragmentos revelados.
 
 ### Ya aplicado sin esperar (fuera de `material/curso/`)
 
@@ -880,11 +918,18 @@ sus patrones prohibidos cubren los términos del diseño grupal anterior
 pero ninguno cubre una **duración por grupo**, que es exactamente la
 forma en que este residuo sobrevivió al rediseño.
 
-**Propuesta**: agregar `"minutos por grupo"` a `prohibidos.patrones` en
-`DATOS_CURSO.yml`. **No lo hice ahora a propósito**: el verificador
+**Propuesta**: agregar a `prohibidos.patrones` de `DATOS_CURSO.yml` el
+patrón que describe una duración por grupo (ver el archivo: quedó
+declarado ahí). **No se hizo de inmediato a propósito**: el verificador
 corre en el pre-commit, así que agregar el patrón antes de arreglar el
 apunte dejaría el repo sin poder commitear. Los dos cambios van juntos,
 en este orden: primero el apunte, después el patrón.
+
+**Aplicado el 2026-08-29**, en ese orden. Nota de método: al escribir
+este informe el propio verificador lo rechazó dos veces, porque citar un
+término obsoleto para explicarlo cuenta como usarlo. Se resolvió
+describiendo el patrón en vez de transcribirlo — nunca exceptuando el
+archivo, que habría debilitado el chequeo para siempre.
 
 ---
 

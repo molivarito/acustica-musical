@@ -45,9 +45,10 @@ Repitan la medición (solo subiendo) con pulso **blando**:
 - Escriban una frase que empiece con "El umbral ritmo–tono no es una
   propiedad del sonido solamente, porque observamos que...":
   __________________________________________________________________
-- Pregunta de proyección (discutan, anoten en una frase): sobre la zona
-  gris, al duplicar la tasa, ¿qué relación musical aparece entre las dos
-  notas? _____________________________________________________________
+- Pregunta de proyección (discutan, anoten en una frase): ya vieron que
+  duplicar la frecuencia da una octava, no "el doble de agudo". ¿Por qué
+  cree que el oído NO la oye como el doble?
+  _____________________________________________________________
 
 ## Cierre en aula
 

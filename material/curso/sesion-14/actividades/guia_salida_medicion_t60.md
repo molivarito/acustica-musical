@@ -25,8 +25,10 @@ Sin discutir con otros grupos, el grupo acuerda y anota:
   reverberante: 1.º ________ 2.º ________ 3.º ________
 - ¿Por qué? (una línea con mecanismo: volumen / materiales):
   ________________________________________________________________
-- $T_{60}$ estimado de la SALA DE CLASES (la acabamos de oír con el
-  globo del profesor): ________ s
+- Anoten el $T_{60}$ de la sala de clases que acaba de medir el
+  profesor: ________ s. Úsenlo como vara: su PRIMER espacio de la
+  ruta, ¿será más o menos reverberante que esta sala — y
+  aproximadamente cuántas veces? ________
 
 ## 2. Protocolo en CADA espacio (~15′ + tránsito; el C es opcional)
 

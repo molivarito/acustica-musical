@@ -80,13 +80,12 @@ funde en una sola sensación — y la "pelea" entre ambas se percibe como
 esa fluctuación de sonoridad.
 
 ¿Y qué pasa cuando la diferencia crece? En el cierre de la sesión lo
-escuchamos sin explicarlo: en algún punto los batidos se vuelven
-demasiado rápidos para contarlos, la ondulación se convierte en una
-aspereza, y más allá, en algún momento, aparecen por fin *dos notas*
-distinguibles. Dónde están esas fronteras, por qué existen y qué
-tienen que ver con la consonancia y con la construcción de acordes es
-exactamente el tema de la sesión 08. Por ahora, guarde la observación
-de su propio oído (quedó en su ticket de salida).
+escuchamos sin explicarlo, y lo que su oído registró ahí es exactamente
+el punto de partida de la sesión 08: dónde están las fronteras, por qué
+existen y qué tienen que ver con la consonancia y con la construcción de
+acordes. No se lo adelantamos aquí — lo va a medir usted mismo. Por
+ahora, guarde la observación de su propio oído (quedó en su ticket de
+salida).
 
 ## ¿Cómo se convierte el batido en una herramienta de afinación?
 
@@ -120,8 +119,8 @@ cap. 16, lo describe paso a paso; lo probaremos).
   entran y salen de paso, alternando refuerzo y cancelación.
 - El batido detenido es el detector de unísono más fino disponible sin
   instrumentos: la base de la afinación de oído (s09).
-- Lo que aparece cuando la diferencia crece — aspereza, y luego dos
-  notas — quedó oído pero no explicado: es el punto de partida de s08.
+- Lo que aparece cuando la diferencia crece quedó oído pero no
+  explicado: es el punto de partida de s08.
 
 ## Hacia la sesión 08
 

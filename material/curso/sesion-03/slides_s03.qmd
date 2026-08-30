@@ -128,8 +128,10 @@ modos) y hacia la sartén (2D → muchos modos, y desordenados).
 **Controles (probados)**: "Number of Loads" sube de unas pocas masas a
 casi un continuo (la cuerda); los paneles de abajo pasan a llamarse
 **"Harmonics"** — la serie 1, 2, 3… que se gana en el módulo 2. Marque
-**"Sound"** para oírla, y "Center Pluck" para pulsar al medio: eso
-mismo se retoma en s04 (punto de pulsación) junto con "Tension".
+**"Sound"** para oírla — pero NO demuestre "Center Pluck" en vivo en
+s03: el punto de pulsación es justo lo que pregunta el ticket de salida
+de s03 y lo que el taller de s04 debe producir; resérvelo para s04
+(punto de pulsación, junto con "Tension").
 
 **Necesita internet.** Sin conexión: dibujar en el pizarrón dos masas
 unidas por resortes y las dos coreografías (juntas / en oposición) —
@@ -141,11 +143,6 @@ No hace falta más de 1–2 minutos aquí.
 
 > **Nodo**: no se mueve. **Antinodo**: máximo movimiento.
 
-::: {.incremental}
-- Un dedo en un **antinodo** apaga ese modo
-- Un dedo en un **nodo** deja sobrevivir ese modo
-:::
-
 . . .
 
 [Tocar un objeto en distintos puntos es editar su espectro, modo por
@@ -154,7 +151,7 @@ modo.]{style="color:#0f766e"}
 ::: {.notes}
 **Apoyo:**
 - Antes de responder, lance la pregunta del capítulo: si un modo tiene un lugar quieto y usted apoya ahí un dedo, ¿ese modo se apaga o sobrevive? ¿y si lo apoya donde el modo se mueve al máximo? (capítulo 3, "Dos detalles de la coreografía: nodos y decaimiento").
-- Respuesta esperada: un dedo en un antinodo apaga ese modo; un dedo en un nodo lo deja sobrevivir — pídala primero a la sala antes de revelarla en la slide.
+- NO adelante la consecuencia (qué apaga y qué deja sobrevivir): es lo que la Fase 2 del taller debe producir.
 - Conecte con el taller que viene: en la fase 2, el dedo en el centro de la tapa mata unos parciales y perdona otros (apunte, "¿Qué es exactamente 'una manera de vibrar'?").
 :::
 
@@ -467,6 +464,8 @@ Si pulsa la MISMA cuerda en el medio, o muy cerca del puente...
 - Todo objeto tiene un repertorio fijo de **modos**; el golpe no crea
   frecuencias, las **enciende**
 - Dónde se golpea o se toca decide qué modos suenan
+- Un dedo en un **antinodo** apaga ese modo
+- Un dedo en un **nodo** deja sobrevivir ese modo
 - Cuerda: $f_n = n f_1$ → armónicos. Membranas y placas: inarmónicos
 - **El proyecto del curso queda lanzado**
 :::

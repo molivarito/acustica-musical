@@ -170,9 +170,9 @@ La figura 3 muestra la medición completa, con su trampa incluida.
 
 No queda contenido nuevo: queda el cierre. La próxima semana ustedes
 son el estímulo de la escucha del día — presentaciones finales del
-proyecto en ambos módulos, 25 minutos por grupo, con el instrumento
-funcionando y el informe entregado al inicio. La pauta del hito 3,
-publicada hoy, dice exactamente qué se evalúa; recuerde la regla que
+proyecto en ambos módulos, con el instrumento funcionando y el informe
+entregado al inicio (formato en la pauta del hito 3, publicada hoy,
+que dice exactamente qué se evalúa); recuerde la regla que
 gobierna todo el proyecto desde s03: la calidad de la explicación pesa
 más que el éxito sonoro.
 
