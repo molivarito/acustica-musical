@@ -22,8 +22,7 @@ format:
 
 Dos módulos, un hilo: **traducir** el sonido a imágenes que se puedan leer.
 
-## Escucha del día — la práctica de cada semana
-
+## Escucha del día — la práctica de cada semana {.smaller}
 **Protocolo** (10′, sin nota):
 
 ::: {.incremental}

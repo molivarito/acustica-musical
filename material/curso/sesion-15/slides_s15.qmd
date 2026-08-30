@@ -23,8 +23,7 @@ Cada defensa: **8′ de presentación** (el objeto suena en vivo) + **3′ de pr
 **Apoyo:** antes de dar la palabra, confirmar 9/9 informes recibidos en la puerta y encender el cronómetro de sala en cero (plan, bloque de encuadre 0–3′). Frase de apertura del plan: "hoy no gana el instrumento más bonito: gana la mejor explicación". El orden de las 9 defensas fue sorteado en s14 y está proyectado en la lámina de entrada; si el sorteo no se hizo o falta alguien, re-sorteo de 2′ en el encuadre (plan, riesgos y plan B). El estudiante 1 fue citado 10′ antes para montar sin apuro (guion, checklist de la víspera).
 :::
 
-## ¿Cómo corre el día?
-
+## ¿Cómo corre el día? {.smaller}
 | | |
 |---|---|
 | **Orden** | sorteado en s14 (9 nombres), proyectado a la entrada |
@@ -36,8 +35,7 @@ Cada defensa: **8′ de presentación** (el objeto suena en vivo) + **3′ de pr
 **Apoyo:** aviso de tiempo a los 6′30″, corte duro a los 8′ (plan y guion, protocolo de cronometraje). La defensa 1 es la excepción: lleva 4′ de transición (no 1′) porque no hay Q&A previa de la que "robar" tiempo de montaje; desde la defensa 2 el bloque vuelve a 12′ (guion §2, nota sobre los 63′ de las defensas 1–5). Los cortes de defensa no se estiran por ningún motivo — es la equidad prometida en la pauta (plan, riesgos y plan B).
 :::
 
-## Mientras otro compañero defiende, ¿qué hace usted?
-
+## Mientras otro compañero defiende, ¿qué hace usted? {.smaller}
 > Por sorteo previo, tiene **2 defensas asignadas** para diagnosticar (nunca la propia) — no las 9
 
 ::: {.incremental}

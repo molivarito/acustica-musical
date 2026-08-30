@@ -89,8 +89,7 @@ espectrograma/DAW: cada grupo necesita al menos uno (bloque de
 formación de grupos, 40–55′).
 :::
 
-## El mapa del semestre
-
+## El mapa del semestre {.smaller}
 [M1 · 10–25′]{.tiempo}
 
 | Bloque | Sesiones | Pregunta |
@@ -111,8 +110,7 @@ solo números de sesión. Si preguntan por feriados/recesos: "está todo
 en Canvas, hoy quédense con la forma del semestre".
 :::
 
-## Cómo es cada sesión
-
+## Cómo es cada sesión {.smaller}
 [M1 · 10–25′]{.tiempo}
 
 Dos módulos de 70′. Y siempre:
@@ -272,8 +270,7 @@ archivar las 9 hojas, no que todos hablen (plan, sección "Riesgos y
 plan B").
 :::
 
-## La rúbrica del curso (OA3)
-
+## La rúbrica del curso (OA3) {.smaller}
 [M1 · 25–40′]{.tiempo}
 
 | Dimensión | La pregunta que responde |

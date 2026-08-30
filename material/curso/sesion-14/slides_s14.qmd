@@ -44,8 +44,7 @@ compromiso heredado de s13.
 
 El único taller del semestre que ocupa un módulo completo **fuera del aula**.
 
-## Escucha del día — la última del semestre {.center}
-
+## Escucha del día — la última del semestre {.center .smaller}
 *(la misma frase de flauta: primero seca, después reverberante)* — 10′,
 sin nota:
 

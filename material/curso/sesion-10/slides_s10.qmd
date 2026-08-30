@@ -156,8 +156,7 @@ Predigan por escrito, ANTES de soplar nada:
 **Apoyo:** Cierre la mini-lección anunciando el taller: "la botella es un resonador de aire con $f_0$ medible — y ustedes van a predecir qué le pasa a esa $f_0$ al cambiarle el volumen de aire" (plan, módulo 1, "Mini-lección"). Insista en que las predicciones se escriban ANTES de soplar nada.
 :::
 
-## Taller: la botella que canta (27′)
-
+## Taller: la botella que canta (27′) {.smaller}
 | Fase | Qué hacen |
 |---|---|
 | **A — soplar** | cada integrante sopla un nivel de agua distinto; miden $f$ con afinador/espectrograma |
@@ -212,8 +211,7 @@ El puente (o la caja) es el **transformador** que conecta ambos mundos.
 **Apoyo:** El apunte lo resume así: la cuerda es delgada, corta el aire en lugar de empujarlo, "como remar con un cuchillo"; el puente actúa como transformador, convirtiendo la vibración fuerte-y-chica de la cuerda en la vibración suave-y-grande que el aire sí acepta (apunte, "¿Por qué la cuerda sola casi no suena?"; C&G cap. 5, pp. 183–202).
 :::
 
-## El mapa del bloque C
-
+## El mapa del bloque C {.smaller}
 Cuatro maneras de entregarle energía a un resonador (OA1.3):
 
 | Mecanismo | Sesión | Energía |

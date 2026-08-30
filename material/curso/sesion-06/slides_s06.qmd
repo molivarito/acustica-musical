@@ -23,8 +23,7 @@ format:
 **Apoyo:** Antes de esta slide van la re-formación de mesas del tramo 2 (5′: nuevos roles ejecuta/mide y registra/vocero; recordar que el objeto y la bitácora del proyecto siguen siendo individuales, solo cambia el equipo de apoyo) y la devolución del hito 1 corregido (comentar en 1′ los 2 aciertos y las 2 debilidades más repetidas, sin nombrar a nadie; cada estudiante anota en su bitácora 1 línea de compromiso que se cobra en el hito 2 de s10). Si alguien quiere discutir su nota del hito 1: hoy solo se lee y se anota el compromiso, las apelaciones van por correo o consulta, no en aula (plan, riesgos y plan B).
 :::
 
-## Escucha del día {.center}
-
+## Escucha del día {.center .smaller}
 **Mismo fragmento, dos niveles.** Protocolo (10′, sin nota):
 
 ::: {.incremental}
@@ -173,8 +172,7 @@ Veámoslo.
 **Apoyo:** Coordinar a 4 voluntarios para que aplaudan parejo; mostrar la lectura de la app SPL proyectada SIN comentarla — el número queda en suspenso hasta la estación E3, donde lo miden ellos con fuentes controladas. No dar la respuesta ahora: se cobra recién en la puesta en común de las estaciones (minuto 55-60), conectando con que duplicar la fuente sube ~+3 dB, no el doble.
 :::
 
-## El mapa de las cinco estaciones
-
+## El mapa de las cinco estaciones {.smaller}
 **Formato 5 — debut de hoy.** 3 grupos, 5 estaciones, roles
 *ejecuta / mide y registra / vocero* que **rotan** al cambiar de
 estación.

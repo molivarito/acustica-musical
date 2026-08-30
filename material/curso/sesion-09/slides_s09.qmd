@@ -18,8 +18,7 @@ format:
 - **Módulo 2** — el compromiso, los colores y la escala del objeto
   - Gancho sonoro · mini-lección · taller del objeto (hito 2)
 
-## Escucha del día
-
+## Escucha del día {.smaller}
 Protocolo (10′, sin nota): **describir → hipotetizar → verificar**
 
 ::: {.incremental}

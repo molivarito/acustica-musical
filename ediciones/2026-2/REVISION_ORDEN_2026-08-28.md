@@ -69,9 +69,37 @@ tocaron otras líneas) y todas son **láminas de taller con tabla** — el
 mismo perfil que el desborde de s04. Tras aplicar `.smaller`, ninguna
 lámina de s11 ni s12 pasa de 700 px.
 
-**Pendiente**: medir los nueve mazos restantes (s01, s02, s05–s10, s13,
-s14, s15). El procedimiento está probado: renderizar, servir en local y
-medir el alto de cada lámina con los fragmentos revelados.
+**COMPLETADO el 2026-08-29: los 15 mazos, 334 láminas.**
+
+| Mazo | Láminas cortadas | Peor caso |
+|---|---|---|
+| s01 | 3 | "El mapa del semestre" (860) |
+| s02 | 1 | "Escucha del día" (**1035**, medida por navegación) |
+| s05 | 1 | "El oído en una pasada" (803) |
+| s06 | 2 | "El mapa de las cinco estaciones" (1033) |
+| s08 | 1 | "Escucha del día" (873) |
+| s09 | 1 | "Escucha del día" (777) |
+| s10 | 2 | "La botella que canta" (806) |
+| s11 | 2 | "El punto de frotado" (1182) |
+| s12 | 3 | "Taller, fase 2" (**1318**) |
+| s14 | 1 | "Escucha del día" (777) |
+| s15 | 2 | "Mientras otro compañero defiende" (901) |
+| s04 | 2 | ya arreglado el 2026-08-28 |
+| s03, s07, s13 | 0 | limpios |
+
+**19 láminas cortadas en 11 de los 15 mazos.** Todas arregladas con
+`{.smaller}` y re-verificadas: tras el arreglo, el máximo de todo el
+curso es 713 px (las "Escucha del día" de s11 y s12, que medidas por
+navegación dan 693 — caben con 7 px de margen).
+
+La más grave para el día a día no era la más alta: **la lámina que abre
+la escucha del día en s02 se cortaba 335 px**, y esa rutina se repite
+todas las semanas desde s02.
+
+**Herramienta**: `ediciones/2026-2/medir_desborde_laminas.html`, con las
+instrucciones y las tres trampas del método documentadas en su cabecera
+(no navegar con `Reveal.slide()`, dividir por la escala, romper la
+caché). Las tres se cometieron durante este barrido.
 
 ### Ya aplicado sin esperar (fuera de `material/curso/`)
 

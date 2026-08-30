@@ -256,8 +256,7 @@ esta misma mini-lección: duplicar la frecuencia da una relación
 musical especial —la octava— que no es "el doble de altura".
 :::
 
-## El oído en una pasada
-
+## El oído en una pasada {.smaller}
 | Parte | Qué hace |
 |---|---|
 | **Externo** (pabellón, canal) | Capta y colorea |

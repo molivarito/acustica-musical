@@ -38,8 +38,7 @@ Corte duro al minuto 10.
 **Apoyo:** Errores más repetidos por parte, según la corrección real (ajustar a lo que muestre este año): mezclar describir con interpretar; leer ejes sin unidades; proporciones invertidas; vocabulario físico y perceptual cruzado. Regla anunciada: apelaciones por escrito o en horario de consulta, nunca en aula (precedente que funcionó en s06). Si la devolución se alarga, el corte es igual a los 10′ aunque queden manos alzadas.
 :::
 
-## Escucha del día {.center}
-
+## Escucha del día {.center .smaller}
 **Protocolo** (10′, sin nota):
 
 ::: {.incremental}
