@@ -89,3 +89,17 @@ Hecho registrado en `DATOS_CURSO.yml` (clave `talleres`).
   gana una semana de margen para los grupos.
 - La sesión de grabación pre-s01 y todo el checklist "antes de s01"
   (ver `../../_archivo/bitacora/RESUMEN_PARA_PATO_2026-07.md`) tienen fecha tope real: **vie 07-ago**.
+
+### F2 — Hito 1 (04-sep): la bitácora no puntúa (2026-09-03)
+
+La víspera de la entrega un estudiante consultó por la bitácora que
+exige la rúbrica del hito 1 y pidió postergar una semana. Decisión del
+profesor: la fecha se mantiene; en el hito 1 la bitácora se comenta
+pero no puntúa (C5 formativo; nota sobre C1–C4 con la fórmula
+reescalada 1 + 0,75 × (puntaje − 4)). Quien no la tenga escrita
+entrega media página que reconstruya la trayectoria de su idea. Desde
+el hito 2 la bitácora vuelve a ser condición de recepción, como dice
+el enunciado. Se ajustó `encargo_hito1_diseno.md` y se anunció al
+curso por Canvas. Al revisar Canvas se descubrió que los tres encargos
+de hito (s04, s10, s14) estaban en `canvas.yml` pero nunca se
+sincronizaron; se corrió `sync` ese día (quedan sin publicar).

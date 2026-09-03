@@ -12,9 +12,17 @@ sonoro esperado). Complementa el enunciado general del proyecto
 ## Qué se entrega
 
 Un documento de **1 página máximo** (letra 11+; los bocetos y tablas
-cuentan dentro de la página) **+ su bitácora individual al día**. Sin
-bitácora al día, el hito no se recibe (regla del enunciado). Impreso o
+cuentan dentro de la página) **+ su bitácora individual**. Impreso o
 digital, al inicio de s05.
+
+**Sobre la bitácora en este hito (ajuste del 2026-09-03).** La
+bitácora es el registro individual de cómo ha ido evolucionando su
+idea: las dos candidatas de s03, los comentarios recibidos en s04 y las
+conversaciones en clase sobre su objeto. Si no la tiene escrita, basta
+con media página que reconstruya esa trayectoria (qué pensó primero,
+qué cambió y por qué). En este hito la bitácora **se comenta pero no
+puntúa**: la nota se calcula solo con C1–C4. A partir del hito 2 la
+bitácora vuelve a ser condición de recepción, como dice el enunciado.
 
 ## Estructura obligatoria (las 4 secciones, en este orden)
 
@@ -57,10 +65,11 @@ digital, al inicio de s05.
 | **C2. Modelo** | Modelo del curso correcto, con el porqué (qué vibra, qué fija las frecuencias) y fuente citada | Modelo nombrado pero conexión superficial con el objeto | Sin modelo, o modelo que no corresponde al objeto |
 | **C3. Predicción** | Explícita, previa y con números/proporciones; cubre fundamental, carácter del espectro y efecto del parámetro | Predicción direccional ("sube/baja") sin magnitudes, o incompleta | Predicción vaga, infalsable o ausente |
 | **C4. Plan de verificación** | Mediciones concretas, factibles con los medios del curso, con resultado esperado que podría refutar | Mediciones pertinentes pero sin resultado esperado | "Lo mediremos" genérico, o infactible |
-| **C5. Bitácora** | Bitácora individual al día, con fechas y decisiones | Al día pero genérica | Atrasada (ojo: puede impedir la recepción) |
+| **C5. Bitácora** (formativo, no puntúa en el hito 1) | Bitácora individual al día, con fechas y decisiones | Al día pero genérica | Atrasada o reconstruida a posteriori |
 
-**Puntaje** = suma de C1–C5 (5 a 15). **Nota = 1 + 0,6 × (puntaje − 5)**
-(15 → 7,0 · 10 → 4,0 · 5 → 1,0). La nota es **directa e individual**:
+**Puntaje** = suma de C1–C4 (4 a 12). **Nota = 1 + 0,75 × (puntaje − 4)**
+(12 → 7,0 · 8 → 4,0 · 4 → 1,0). C5 se devuelve con comentario, sin
+puntaje. La nota es **directa e individual**:
 sin coevaluación (decisión 2026-08-07) — el proyecto no tiene
 compañeros de proyecto que coevaluar.
 
