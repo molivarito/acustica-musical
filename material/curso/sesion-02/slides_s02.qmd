@@ -285,10 +285,10 @@ mide en vez de regalarse — predicción→experimento→explicación en
 miniatura, hasta en el gancho.
 
 **Apoyo:** Respuesta esperada (apunte, "¿Qué es lo que viaja (y a qué
-velocidad)?"): con $v \approx 343$ m/s, 3 segundos de retraso
+velocidad)?"): con v ≈ 343 m/s, 3 segundos de retraso
 equivalen a cerca de 1 kilómetro de distancia (con 3,5 s medidos:
 ~1,2 km). Tras la puesta en
-común, instalar $v \approx 343$ m/s a 20 °C como dato del curso y
+común, instalar v ≈ 343 m/s a 20 °C como dato del curso y
 lanzar la pregunta puente: "si el sonido viaja, ¿qué es lo que viaja?"
 :::
 
@@ -311,7 +311,7 @@ La distancia entre dos crestas sucesivas de una onda periódica es la
 $$v = \lambda f$$
 
 ::: {.notes}
-**Apoyo:** Este valor ($v \approx 343$ m/s a 20 °C) se instala como
+**Apoyo:** Este valor (v ≈ 343 m/s a 20 °C) se instala como
 dato del curso y se reutiliza el resto del semestre. Complemento
 (apunte, "¿Qué es lo que viaja?"): lo que viaja es el empujón, no el
 material, como la ola del estadio recorre la galería sin que nadie
@@ -386,9 +386,9 @@ Con su celular y la app de espectrograma, en grupo:
 apps dispares. Provocar: "¿la app miente o solo tiene límites?";
 introducir, donde surja, la noción mínima de muestreo — el techo
 cerca de 22 000 Hz no es del sonido, es de la herramienta (apunte,
-"¿Por qué su app no muestra nada sobre 22 000 Hz?": con $f_s$
+"¿Por qué su app no muestra nada sobre 22 000 Hz?": con fₛ
 muestras por segundo solo se representa fielmente lo que está bajo
-$f_s/2$; con 44 100 muestras/s, nada sobre 22 050 Hz). Si las apps son
+fₛ/2; con 44 100 muestras/s, nada sobre 22 050 Hz). Si las apps son
 muy dispares entre celulares, la disparidad se convierte en dato
 (plan, Riesgos y plan B): mínimo operativo, 2 celulares funcionando
 por grupo.
@@ -400,7 +400,7 @@ por grupo.
 
 ::: {.notes}
 **Apoyo:** (Reubicada al cierre tras la s02 de 2026: entre la teoría
-de $v=\lambda f$ y el taller quedaba fuera de contexto.) Después de la
+de v = λf y el taller quedaba fuera de contexto.) Después de la
 puesta en común de los grupos, cerrar releyendo la MISMA nota de
 flauta de la escucha de la mañana, ahora que saben mirar: las
 **líneas horizontales parejas** son el tono que describieron; la

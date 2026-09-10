@@ -190,7 +190,7 @@ Ninguna sartén, tapa o taza dio razones $1:2:3$.
 
 ::: {.notes}
 **Apoyo:**
-- Sintetice en el pizarrón las razones $f_2/f_1$ y $f_3/f_1$ de los 3 grupos: ninguna da 1 : 2 : 3 — son objetos inarmónicos (plan, módulo 1, 60–70′).
+- Sintetice en el pizarrón las razones f₂/f₁ y f₃/f₁ de los 3 grupos: ninguna da 1 : 2 : 3 — son objetos inarmónicos (plan, módulo 1, 60–70′).
 - Plante la pregunta puente antes de que la sala responda: "¿qué objeto tendría parciales en razones enteras?" (plan, columna "Rol del profesor").
 :::
 
@@ -228,7 +228,7 @@ uno.
 
 ::: {.notes}
 **Apoyo:**
-- Opere la demo mostrando la forma espacial de los primeros modos, la frecuencia de cada uno ($f_n = n f_1$) y el sonido de cada modo solo y de la suma (plan, módulo 2, 10–25′).
+- Opere la demo mostrando la forma espacial de los primeros modos, la frecuencia de cada uno (fₙ = n·f₁) y el sonido de cada modo solo y de la suma (plan, módulo 2, 10–25′).
 - Con esta demo instale la distinción obligatoria: **parcial** es cualquier línea del espectro; **armónico** es un parcial en razón entera con la fundamental — la cuerda es el objeto armónico por excelencia, la sartén no (plan, columna "Rol del profesor").
 :::
 

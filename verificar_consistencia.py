@@ -295,7 +295,9 @@ def chequear_estilo_decks():
                 fallas.append(f"{f.relative_to(RAIZ)}:{i + 1}: LaTeX `$…$` "
                               "dentro de .notes (KaTeX lo duplica en la vista "
                               "de presentador — escribirlo en texto plano)")
-            if not en_notas:
+            # `nostretch: false` apaga (2): AM mide el colapso real con
+            # revisar_laminas.py y sus imágenes se diseñaron con auto-stretch.
+            if not en_notas and cfg.get("nostretch", True):
                 for img in re.finditer(r"!\[[^\]]*\]\([^)]+\)(\{[^}]*\})?",
                                        linea):
                     attrs = img.group(1) or ""

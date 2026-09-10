@@ -112,7 +112,7 @@ $$f_1 = \frac{v}{2L}$$
 ::: {.notes}
 **Apoyo:** Votación a mano alzada (plan, fila "Mini-lección"): "si
 duplico el largo del tubo, ¿la nota…?" Respuesta esperada: baja una
-octava, $f_1 = v/2L$, con todos los armónicos. Conducción: anclar en
+octava, f₁ = v/2L, con todos los armónicos. Conducción: anclar en
 s03 — la columna de aire es un sistema con modos, igual que la cuerda.
 :::
 
@@ -128,12 +128,12 @@ $$f_1 = \frac{v}{4L}$$
 
 ::: {.notes}
 **Apoyo:** Votación a mano alzada (plan, misma fila): "¿y si tapo un
-extremo?" Respuesta esperada: baja OTRA octava ($f_1 = v/4L$) y el
+extremo?" Respuesta esperada: baja OTRA octava (f₁ = v/4L) y el
 timbre "se vacía": quedan solo los armónicos impares. Complemento
 (apunte, sección "¿Por qué un tubo tiene nota, y cómo se calcula?"):
 el extremo abierto exige que la presión no se acumule (el aire
 escapa), el extremo cerrado la exige máxima (el aire rebota); entre
-puerta y pared cabe solo un cuarto de onda, de ahí el $4L$. Conexión
+puerta y pared cabe solo un cuarto de onda, de ahí el 4L. Conexión
 con la escucha del día: por eso la flauta (abierta) salta la octava y
 el clarinete (cerrado) salta la docena — el salto que ya escucharon,
 explicado.
@@ -151,8 +151,8 @@ explicado.
 **Apoyo:** Complemento (apunte, sección "La docena del clarinete y la
 octava de la flauta"): al soplar más fuerte, el chorro engancha el
 siguiente modo disponible de la columna; en la flauta (abierta) el
-siguiente es $2f_1$ (octava); en el tubo tapado / clarinete el
-siguiente no es $2f_1$ (no existe, es par) sino $3f_1$: el salto es
+siguiente es 2·f₁ (octava); en el tubo tapado / clarinete el
+siguiente no es 2·f₁ (no existe, es par) sino 3·f₁: el salto es
 una octava más una quinta, la docena. Si preguntan por qué importa: el
 salto de registro no es un defecto, es el mecanismo con que los
 vientos multiplican sus notas — la misma digitación vale para dos
@@ -267,7 +267,7 @@ llena, cerrar el módulo señalándola: "tres grupos, tres tubos, y todos
 quedaron bajos. Todos. ¿Casualidad? Piénsenlo en el descanso" (plan,
 misma fila). Riesgo principal del día — el soplo no engancha: plan B
 es golpear el extremo abierto contra la palma (pop percusivo con
-altura clara, el afinador lo lee, mismo $v/4L$); plan C: el profesor
+altura clara, el afinador lo lee, mismo v/4L); plan C: el profesor
 sopla los tubos de los grupos que no lo logren (plan, "Riesgos y plan
 B"). Si un grupo corta de más y queda alto (no se puede alargar):
 reasignar al tubo de repuesto — cortar de nuevo es parte honesta de la
@@ -291,11 +291,11 @@ temperatura, y con ella $f_1 = v/4L$.
 **Apoyo:** Votación 1 (mano alzada, ANTES de escuchar): ¿sube, baja o
 queda igual? Respuesta esperada tras calentar: sube. Votación 2 (por
 qué): esperable que digan "el metal dilatado debería bajarla" — es la
-falsa pista; resolver que lo que vibra es el aire, no el metal: $v$
-crece con la temperatura y con ella $f_1 = v/4L$ (plan, fila "Gancho
-sonoro"). Complemento (apunte, recuadro "$v$ depende de la
-temperatura"): $v \approx 331 + 0{,}6\,T$ m/s (T en °C); a 20 °C,
-≈343 m/s; cada grado suma ≈0,6 m/s, es decir ≈0,17 % en $f_1$ — unos
+falsa pista; resolver que lo que vibra es el aire, no el metal: v
+crece con la temperatura y con ella f₁ = v/4L (plan, fila "Gancho
+sonoro"). Complemento (apunte, recuadro "v depende de la
+temperatura"): v ≈ 331 + 0,6·T m/s (T en °C); a 20 °C,
+≈343 m/s; cada grado suma ≈0,6 m/s, es decir ≈0,17 % en f₁ — unos
 3 cents por °C; el aliento puede subir la columna varios grados
 (decenas de cents). La dilatación del metal existe pero es un efecto
 cientos de veces más chico (apunte, misma sección); por eso los
@@ -318,7 +318,7 @@ bronces soplaron un rato.
 ::: {.notes}
 **Apoyo:** Conducción (plan, fila "Taller PEE de lutería, fase 2"): en
 las fases B–C provocar "¿docena u octava? ¿quién decide: el soplo o el
-tubo?", "el destapado, ¿confirma $v/4L$ vs. $v/2L$ mejor que cualquier
+tubo?", "el destapado, ¿confirma v/4L vs. v/2L mejor que cualquier
 lámina?"; relevar en el soplo a los grupos donde nadie engancha la
 embocadura (plan B: golpe de palma). En paralelo, el profesor hojea
 las 9 bitácoras individuales con la pauta de revisión (~1′ por
@@ -331,7 +331,7 @@ anuncio de la Prueba 2 y el ticket no se sacrifican (plan, "Riesgos y
 plan B"). Respuesta esperada fase B: el tubo tapado es cerrado-abierto,
 salta a la docena (como el clarinete), no a la octava de la flauta
 abierta de la escucha del día. Respuesta esperada fase C: destapado,
-la nota sube una octava respecto del tubo tapado ($v/2L$ vs. $v/4L$).
+la nota sube una octava respecto del tubo tapado (v/2L vs. v/4L).
 :::
 
 ## Cierre plenario: la lutería como física experimental {.center}

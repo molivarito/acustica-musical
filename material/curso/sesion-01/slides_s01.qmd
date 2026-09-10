@@ -382,7 +382,7 @@ veces.
 ::: {.notes}
 **Apoyo:** Dos ejemplos numéricos para calcular en el momento: si algo
 se repite 100 veces por segundo, cada repetición dura un centésimo de
-segundo ($T = 1/100$ s); si una cuerda vibra al doble de rápido, cada
+segundo (T = 1/100 s); si una cuerda vibra al doble de rápido, cada
 vaivén dura la mitad (apunte, sección "Contar sin contar: frecuencia y
 período").
 :::

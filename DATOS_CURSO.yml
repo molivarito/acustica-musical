@@ -39,11 +39,14 @@ estimulo_linea_base:
 chips_slides:
   glob: material/curso/sesion-*/slides_*.qmd
 estilo_decks:
-  # Gemelo con SyS (2026-09-10). Las reglas (1) sin `$…$` en .notes y
-  # (2) imágenes con .nostretch se activan declarando `glob`; quedan
-  # APAGADAS hasta reescribir en texto plano las 13 notas con LaTeX de
-  # s12–s14 (pendiente del profesor, 2026-09-10):
-  # glob: material/curso/sesion-*/slides_s*.qmd
+  # Gemelo con SyS (2026-09-10). (1) sin `$…$` en .notes (KaTeX duplica la
+  # fórmula en la vista de presentador; escribirla en texto plano: f₁,
+  # v/4L) — FALLA. (2) imágenes con .nostretch: APAGADA en AM (los decks
+  # se diseñaron con auto-stretch y revisar_laminas mide el colapso real).
+  # (3) el aviso de "tanda pendiente" usa `plan` con filas C\d+; AM no
+  # tiene ese formato.
+  glob: material/curso/sesion-*/slides_s*.qmd
+  nostretch: false
   # (4) ¿cabe cada lámina en su marco? Chrome sin ventana mide desbordes e
   # imágenes colapsadas sobre el deck renderizado. Chequeo completo y
   # pre-commit (solo los decks del commit). Quitar la clave para desactivarlo.

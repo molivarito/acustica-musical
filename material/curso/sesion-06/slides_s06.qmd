@@ -121,7 +121,7 @@ En vez de *sumar* energía, el oído (y el dB) **comparan multiplicando**.
 | ~120 dB | umbral del dolor |
 
 ::: {.notes}
-**Apoyo:** Los valores de la tabla son típicos y redondeados, no medidos en las salas del curso (apunte, figura 1 y su leyenda; ROS cap. 6) — aclarar que los valores reales de la sala se miden hoy en las estaciones. $L_p$ en dB SPL re 20 µPa es la notación fijada en `PLAN_SEMESTRE.md`.
+**Apoyo:** Los valores de la tabla son típicos y redondeados, no medidos en las salas del curso (apunte, figura 1 y su leyenda; ROS cap. 6) — aclarar que los valores reales de la sala se miden hoy en las estaciones. Lₚ en dB SPL re 20 µPa es la notación fijada en `PLAN_SEMESTRE.md`.
 :::
 
 ## ¿Mi oído mide parejo en toda la escala musical? {.center}

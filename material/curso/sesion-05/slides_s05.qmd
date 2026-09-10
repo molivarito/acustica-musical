@@ -55,20 +55,15 @@ checklist durante la escucha del día que sigue.
 
 # Módulo 1 — El bajo que no está {.center}
 
-## Escucha del día {.center}
-
-Protocolo (10′, sin nota):
+## Escucha del día (10′, sin nota) {.center}
 
 ::: {.incremental}
 - El bajo suena en el parlante del celular y luego en el de sala (~2′)
 - **2′** para escribir: describir → hipotetizar → proponer cómo verificar
 - **3′** de discusión en la mesa: el vocero anota el diagnóstico del grupo
 - Plenario (**3′**): pregunta a una o dos mesas, responde el vocero
+- Vocabulario de s03–s04: parcial, armónico, espectro
 :::
-
-. . .
-
-Usen el vocabulario de s03–s04: parcial, armónico, espectro.
 
 ::: {.notes}
 **Apoyo:** el estímulo es `material/estimulos/e05_bajo_parlante_chico.wav`
@@ -112,11 +107,11 @@ escrita antes de mostrar: no encienda la demo hasta contar.
 ## Demo: apagar la fundamental {background-iframe="../../demos/demo_fundamental_ausente.html" background-interactive=true}
 
 ::: {.notes}
-**Apoyo:** con espectro armónico completo sonando, apague $f_1$; luego
-$f_1+f_2$. La altura no cambia (o casi); el timbre se adelgaza. Nombre
+**Apoyo:** con espectro armónico completo sonando, apague f₁; luego
+f₁+f₂. La altura no cambia (o casi); el timbre se adelgaza. Nombre
 el fenómeno: **fundamental ausente / altura virtual**. Conecte con el
 parlante chico: radia los armónicos, el oído reconstruye el bajo.
-Región robusta en sala: $f_1$ = 200 Hz, quitando hasta el parcial 3
+Región robusta en sala: f₁ = 200 Hz, quitando hasta el parcial 3
 (600 Hz). Si la sala regenera el grave por distorsión o hay ruido, el
 efecto se ve mejor con audífonos en la fase por turnos; la evidencia del
 celular ya la tienen todos. Si la demo no suena: pulse el botón de
@@ -169,7 +164,7 @@ con audífonos, corren dos turnos en paralelo.
 solo para mostrar el control "silencia hasta n·f₁" antes de soltarlos.
 :::
 
-## Un instrumento que hace esto solo: la campana
+## Un instrumento que hace esto solo: la campana {.smaller}
 
 Escuchen y canten la nota. Luego miren el espectro.
 
@@ -262,7 +257,7 @@ Escuchen 220 Hz y luego 440 Hz. Voten:
 ::: {.notes}
 **Apoyo:** `e05_tonos_220_440.wav` (3 s + 1 s + 3 s) y, si quiere repetir
 más arriba, `e05_tonos_440_880.wav`. Registre la votación y deje la
-paradoja abierta: duplicar $f$ da una relación musical especial —la
+paradoja abierta: duplicar f da una relación musical especial —la
 **octava**— que no es "el doble de altura". Se cierra con Stevens al
 final del módulo.
 :::

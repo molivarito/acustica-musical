@@ -74,7 +74,7 @@ Ustedes empujan; el columpio decide cuánto responder.
 > **Oscilación forzada**: lo empujan a la frecuencia que ELLOS eligen.
 
 ::: {.notes}
-**Apoyo:** El apunte retoma el columpio de plaza (Benade 1990, sec. 10.1): tiene una frecuencia propia $f_0$ — el vaivén con que oscila solo — y se le puede empujar al ritmo que uno elija. Conecte con s03: "desde s03 sabemos que cada objeto, dejado en paz, vibra en SUS frecuencias características y decae" (apunte, "¿Por qué el columpio solo acepta su ritmo?").
+**Apoyo:** El apunte retoma el columpio de plaza (Benade 1990, sec. 10.1): tiene una frecuencia propia f₀ — el vaivén con que oscila solo — y se le puede empujar al ritmo que uno elija. Conecte con s03: "desde s03 sabemos que cada objeto, dejado en paz, vibra en SUS frecuencias características y decae" (apunte, "¿Por qué el columpio solo acepta su ritmo?").
 :::
 
 ## Votación: casi al ritmo, pero no exacto {.center}
@@ -140,7 +140,7 @@ Sin excitación externa que siga sonando — solo el ping en $f_0$.
 ## Demo — golpe {background-iframe="../../demos/demo_resonancia.html" background-interactive=true}
 
 ::: {.notes}
-**Apoyo:** El golpe deja sonar la oscilación libre pura: un ping en $f_0$, sin excitación externa que la sostenga — contraste directo con las pasadas forzadas anteriores (plan, módulo 1, "Mini-lección"; apunte, "¿Por qué el columpio solo acepta su ritmo?").
+**Apoyo:** El golpe deja sonar la oscilación libre pura: un ping en f₀, sin excitación externa que la sostenga — contraste directo con las pasadas forzadas anteriores (plan, módulo 1, "Mini-lección"; apunte, "¿Por qué el columpio solo acepta su ritmo?").
 :::
 
 ## La botella: un resonador de aire con $f_0$ medible
@@ -153,7 +153,7 @@ Predigan por escrito, ANTES de soplar nada:
 :::
 
 ::: {.notes}
-**Apoyo:** Cierre la mini-lección anunciando el taller: "la botella es un resonador de aire con $f_0$ medible — y ustedes van a predecir qué le pasa a esa $f_0$ al cambiarle el volumen de aire" (plan, módulo 1, "Mini-lección"). Insista en que las predicciones se escriban ANTES de soplar nada.
+**Apoyo:** Cierre la mini-lección anunciando el taller: "la botella es un resonador de aire con f₀ medible — y ustedes van a predecir qué le pasa a esa f₀ al cambiarle el volumen de aire" (plan, módulo 1, "Mini-lección"). Insista en que las predicciones se escriban ANTES de soplar nada.
 :::
 
 ## Taller: la botella que canta (27′) {.smaller}
@@ -167,7 +167,7 @@ Predigan por escrito, ANTES de soplar nada:
 ::: {.notes}
 **Apoyo:** Rote por los grupos (~8′ c/u); vigile que la predicción quede escrita ANTES del primer soplido, y las condiciones anotadas (app, gesto usado). Enseñe el truco del soplido rasante donde haga falta: labio inferior apoyado en el borde, chorro fino cruzando la boca, no hacia adentro (guía `guia_pee_resonancia_botellas.md`). Si no suena: plan B, palmada seca sobre la boca de la botella — el "tock" también se mide en el espectrograma (plan, "Riesgos y plan B"). Si el afinador no engancha por soplido ruidoso: medir con el espectrograma (el pico grave es nítido) y convertir a nota con la tabla de la guía de s09.
 Provoque en cada grupo: "¿quién vibra cuando sopla — el vidrio o el aire?", "al dejar la mitad del aire, ¿la nota subió una octava o menos? ¿cuánto predice la proporción?", "¿por qué golpear y soplar dan direcciones opuestas?" (plan, módulo 1, "Taller PEE").
-Respuesta de fondo (para orientar sin regalarla): al soplar, el agua no vibra — solo achica el volumen de aire y el resorte se pone más rígido, así que $f_0$ sube; al golpear, quien vibra es el vidrio con su contenido, y el agua es masa agregada que lo alenta (apunte, "La botella que canta: un resonador que se deja medir").
+Respuesta de fondo (para orientar sin regalarla): al soplar, el agua no vibra — solo achica el volumen de aire y el resorte se pone más rígido, así que f₀ sube; al golpear, quien vibra es el vidrio con su contenido, y el agua es masa agregada que lo alenta (apunte, "La botella que canta: un resonador que se deja medir").
 :::
 
 ## Cierre M1: contraste {.center}

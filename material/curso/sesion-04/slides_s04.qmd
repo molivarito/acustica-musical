@@ -67,7 +67,7 @@ oigan, verifique la nota con el afinador y cierre: "misma nota, otro
 timbre: cambió el REPARTO entre los mismos parciales".
 
 **No proyecte el espectrograma en este bloque.** La escucha del día, el
-ticket de s03 y el taller usan los mismos dos puntos ($L/2$ y cerca del
+ticket de s03 y el taller usan los mismos dos puntos (L/2 y cerca del
 puente): si aparecen resueltos en pantalla ahora, la predicción escrita
 del taller queda sin objeto. Deje el veredicto como pregunta de
 lanzamiento —"la receta cambió… ¿cuáles parciales, exactamente?"— y
@@ -159,7 +159,7 @@ Registran su mapa punto→parciales en la guía PEE.
 
 ::: {.notes}
 **Apoyo:** rote por los grupos (~6′ cada uno, plan). Provoque con la
-pregunta del plan: "¿la pulsada en $L/2$ tiene el parcial 2 o no lo
+pregunta del plan: "¿la pulsada en L/2 tiene el parcial 2 o no lo
 tiene?"; a los grupos que lleguen a la fase 2 opcional: "¿el armónico
 del traste 12 y la pulsada al medio dejan sonar los MISMOS modos… o los
 contrarios?" Vigile que la predicción quede escrita ANTES de pulsar
@@ -193,13 +193,13 @@ lo que midieron los 3 grupos: sirve para confirmar y ordenar, no para
 adelantar. Contraste con lo que ellos anotaron y detenga la clase donde
 NO coincida — ahí está la conversación que vale.
 
-Respalda la tabla la Figura 1 del apunte: "arriba, pulsada en $L/2$:
+Respalda la tabla la Figura 1 del apunte: "arriba, pulsada en L/2:
 todos los parciales pares tienen un nodo ahí y nacen mudos —queda solo
 la serie impar, el sonido hueco—. Abajo, pulsada cerca del puente
-($L/10$): se enciende un poco de todos los modos, receta pareja y rica
-en agudos, sonido brillante." La fila general ($1/n$ silencia el modo
-$n$ y sus múltiplos) es la generalización de lo que ya aplicaron en el
-$L/4$, que la figura del apunte no trae.
+(L/10): se enciende un poco de todos los modos, receta pareja y rica
+en agudos, sonido brillante." La fila general (1/n silencia el modo
+n y sus múltiplos) es la generalización de lo que ya aplicaron en el
+L/4, que la figura del apunte no trae.
 :::
 
 ## El punto de pulsación, en vivo {.smaller}
@@ -217,13 +217,13 @@ mal ubicada hasta el 2026-08-28.)
 **Aquí sirve para generalizar (~2′):** ellos midieron TRES puntos en un
 instrumento; esto recorre todos los puntos y además deja cambiar la
 cuerda. Con el selector en `Mouse = Pluck string`, pulse haciendo clic
-donde ningún grupo midió — entre $L/4$ y $L/10$, o pegadísimo al
+donde ningún grupo midió — entre L/4 y L/10, o pegadísimo al
 extremo — y pregunte a la sala qué barras van a crecer en el panel
 **"Harmonics: Magnitudes"** ANTES de soltar el clic: ahora tienen su
 propio mapa para apostar. Marque **"Sound"** para que se OIGA el cambio
 de timbre sin que cambie la nota. Suba "Number of Loads" al máximo para
 pasar de la cadena a la cuerda. El deslizador **"Tension"** queda a la
-vista para el módulo 2 (las tres palancas de $f_1$): súbalo y la nota
+vista para el módulo 2 (las tres palancas de f₁): súbalo y la nota
 sube, sin tocar el largo.
 
 **Necesita internet y es LENTA:** tarda ~25 s en cargar la primera vez
@@ -278,7 +278,7 @@ más adelante, con la envolvente.
 ::: {.notes}
 **Apoyo:** respuestas esperadas (apunte y capítulo): sumar el parcial 2
 al seno no agrega una nota nueva, cambia el timbre — sigue siendo una
-sola nota en $f_1$, cambia el color. El preset "cerca del puente" suena
+sola nota en f₁, cambia el color. El preset "cerca del puente" suena
 más brillante (receta pareja, rica en agudos); el preset "al medio"
 suena hueco (solo impares) — coincide con la tabla de la mini-lección.
 La tercera pregunta conecta directo con lo que cada grupo midió en su
@@ -343,7 +343,7 @@ opcional.
 ::: {.notes}
 **Apoyo:** respaldo (apunte, sección "Síntesis aditiva"): "sumar
 parciales armónicos no agrega notas: mientras las frecuencias guarden
-las razones enteras, el oído funde todo en *una* nota en $f_1$ y lo que
+las razones enteras, el oído funde todo en *una* nota en f₁ y lo que
 cambia al mover los sliders es el *color* de esa nota." La envolvente ya
 quedó demostrada en la demo (sostenida = órgano; con envolvente de
 pulsación = cuerda): use esta slide para cerrar el bloque antes de pasar
@@ -371,8 +371,8 @@ Sí, y **+12 %** — las dos raíces cuadradas en acción.
 **Apoyo:** respuestas esperadas: el traste 12 divide la cuerda justo en
 dos y el afinador marca la octava exacta (apunte); subir un semitono con
 la clavija exige ~+12 % de tensión (no ~1 % ni ~100 %). Formalice en el
-pizarrón SOLO las proporciones: $f_1 \propto 1/L$, $f_1 \propto
-\sqrt{F_T}$, $f_1 \propto 1/\sqrt{\mu}$; la fórmula completa queda en el
+pizarrón SOLO las proporciones: f₁ ∝ 1/L, f₁ ∝
+√(F_T), f₁ ∝ 1/√μ; la fórmula completa queda en el
 recuadro opcional del apunte, no hace falta deducirla en clase. Conecte
 con las tres palancas de afinar una guitarra: clavija (tensión), traste
 (largo), grosor/entorchado de la cuerda (masa) — por eso la sexta

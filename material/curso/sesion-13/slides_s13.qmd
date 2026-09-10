@@ -102,7 +102,7 @@ Si **todo el curso susurra** /a-e-i-o-u/ — sin que vibren las cuerdas —
 Susurremos todos juntos hacia el micrófono. Veámoslo.
 
 ::: {.notes}
-**Apoyo:** Respuesta esperada — sí: la app ve algo y las vocales SÍ se distinguen. Aparecen bandas sin líneas, porque los pliegues no vibran (no hay $f_0$ ni armónicos) pero el filtro sigue coloreando el ruido turbulento del aire. El apunte lo llama "el filtro sin la fuente": "desapareció la altura... pero las vocales siguieron perfectamente reconocibles" (apunte, "El susurro: el filtro sin la fuente"). Conducción: susurrar en bloque es de bajo riesgo social — no es cantar.
+**Apoyo:** Respuesta esperada — sí: la app ve algo y las vocales SÍ se distinguen. Aparecen bandas sin líneas, porque los pliegues no vibran (no hay f₀ ni armónicos) pero el filtro sigue coloreando el ruido turbulento del aire. El apunte lo llama "el filtro sin la fuente": "desapareció la altura... pero las vocales siguieron perfectamente reconocibles" (apunte, "El susurro: el filtro sin la fuente"). Conducción: susurrar en bloque es de bajo riesgo social — no es cantar.
 :::
 
 ## La tercera válvula: los pliegues vocales
@@ -147,7 +147,7 @@ Tras la fricción del arco (s11) y el chorro del bisel (s12)…
 Por eso usted puede cantar **cualquier vocal en cualquier nota**.
 
 ::: {.notes}
-**Apoyo:** Es la respuesta completa al ticket de s12 (plan, Mini-lección liviana). Notación mínima del pizarrón: $f_0$ = frecuencia de los pliegues (altura); F1, F2 = formantes (vocal).
+**Apoyo:** Es la respuesta completa al ticket de s12 (plan, Mini-lección liviana). Notación mínima del pizarrón: f₀ = frecuencia de los pliegues (altura); F1, F2 = formantes (vocal).
 :::
 
 ## A comprobarlo: dos perillas en la demo

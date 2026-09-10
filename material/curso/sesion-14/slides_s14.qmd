@@ -185,7 +185,7 @@ respuesta todavía — la trae la demo siguiente.
 
 ::: {.notes}
 **Apoyo:** opere la demo con audio de sala; el barrido debe encontrar
-los modos — el tono se refuerza al pasar por $f = v\,n/2L$ de cada eje
+los modos — el tono se refuerza al pasar por f = v·n/2L de cada eje
 (plan, m1 35–49′). Use este primer paso para mostrar la sala de clases
 tal como está dibujada, antes de achicarla a ducha.
 :::
