@@ -250,7 +250,7 @@ def chequear_autocontencion():
                     continue
                 baja = linea.lower()
                 for pat in patrones:
-                    # borde de palabra al final (gemelo con SyS)
+                    # borde de palabra al final (gemelo con SyS/AM)
                     if re.search(re.escape(pat) + r"\b", baja):
                         fallas.append(
                             f"{f.relative_to(RAIZ)}:{i + 1}: enunciado se apoya "
@@ -318,6 +318,30 @@ def chequear_estilo_decks():
                     "(ver ediciones/2026/AUDITORIA_NOTAS_FIGURAS.md)")
 
 
+def chequear_laminas():
+    # ¿Cabe cada lámina en su marco? Lo mide una herramienta aparte
+    # (Chrome sin ventana sobre el deck renderizado; ver estilo_decks.
+    # revisar_laminas en DATOS_CURSO.yml). Solo en chequeo completo:
+    # tarda ~3 s por deck. Render viejo o ausente → aviso; desborde o
+    # imagen colapsada → falla.
+    cfg = DATOS.get("estilo_decks", {}) or {}
+    herramienta = cfg.get("revisar_laminas")
+    if not herramienta or not (RAIZ / herramienta).is_file():
+        return
+    import subprocess
+    r = subprocess.run([sys.executable, str(RAIZ / herramienta), "--todas",
+                        "--sin-render"], capture_output=True, text=True, cwd=RAIZ)
+    for linea in (r.stdout + r.stderr).splitlines():
+        linea = linea.strip()
+        if not linea.startswith("✗"):
+            continue
+        msg = linea[1:].strip()
+        if "render " in msg and ("viejo" in msg or "ausente" in msg):
+            avisos.append(f"láminas: {msg}")
+        else:
+            fallas.append(f"láminas: {msg}")
+
+
 def chequear_fichas_ayudantes():
     # cada ficha exportada debe existir y no ser más vieja que su fuente
     cfg = DATOS.get("fichas_ayudantes")
@@ -370,6 +394,7 @@ def main():
     chequear_fichas_ayudantes()
     if not rapido:
         chequear_canvas_urls()
+        chequear_laminas()
 
     for a in avisos:
         print(f"  aviso · {a}")

@@ -1,0 +1,190 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//pdelac//cursos 2026-2//ES
+X-WR-CALNAME:AM MUC860 2026-2
+X-WR-TIMEZONE:America/Santiago
+BEGIN:VTIMEZONE
+TZID:America/Santiago
+BEGIN:STANDARD
+DTSTART:19700405T000000
+TZOFFSETFROM:-0300
+TZOFFSETTO:-0400
+RRULE:FREQ=YEARLY;BYMONTH=4;BYDAY=1SU
+END:STANDARD
+BEGIN:DAYLIGHT
+DTSTART:19700906T000000
+TZOFFSETFROM:-0400
+TZOFFSETTO:-0300
+RRULE:FREQ=YEARLY;BYMONTH=9;BYDAY=1SU
+END:DAYLIGHT
+END:VTIMEZONE
+BEGIN:VEVENT
+UID:am-s01@muc860-2026-2
+DTSTAMP:20260908T120000Z
+DTSTART;TZID=America/Santiago:20260807T145000
+DTEND;TZID=America/Santiago:20260807T172000
+SUMMARY:AM s01 · Escuchar como científico: del golpe al tono (sonido im
+ pulsivo\, repetición\, frecuencia y altura)
+DESCRIPTION:Formación de mesas\; línea base sin nota.\nDos módulos: 14
+ :50–16:00 y 16:10–17:20.
+END:VEVENT
+BEGIN:VEVENT
+UID:am-s02@muc860-2026-2
+DTSTAMP:20260908T120000Z
+DTSTART;TZID=America/Santiago:20260814T145000
+DTEND;TZID=America/Santiago:20260814T172000
+SUMMARY:AM s02 · Ondas y representación: forma de onda\, espectro y esp
+ ectrograma\; propagación y velocidad del sonido
+DESCRIPTION:Parte la escucha del día (sin nota). Anunciar reglas del cur
+ so y 'mejores 8 de 9' talleres.\nDos módulos: 14:50–16:00 y 16:10–1
+ 7:20.
+END:VEVENT
+BEGIN:VEVENT
+UID:am-s03@muc860-2026-2
+DTSTAMP:20260908T120000Z
+DTSTART;TZID=America/Santiago:20260821T145000
+DTEND;TZID=America/Santiago:20260821T172000
+SUMMARY:AM s03 · Modos de vibración: por qué cada objeto suena como su
+ ena
+DESCRIPTION:Lanzamiento del proyecto. Semana universitaria: taller format
+ ivo\, sin nota.\nDos módulos: 14:50–16:00 y 16:10–17:20.
+END:VEVENT
+BEGIN:VEVENT
+UID:am-s04@muc860-2026-2
+DTSTAMP:20260908T120000Z
+DTSTART;TZID=America/Santiago:20260828T145000
+DTEND;TZID=America/Santiago:20260828T172000
+SUMMARY:AM s04 · La receta del timbre: cuerda pulsada\, punto de excitac
+ ión\, síntesis aditiva
+DESCRIPTION:Instrumentos de estudiantes #1 (cuerdas pulsadas).\nDos módu
+ los: 14:50–16:00 y 16:10–17:20.
+END:VEVENT
+BEGIN:VEVENT
+UID:am-s05@muc860-2026-2
+DTSTAMP:20260908T120000Z
+DTSTART;TZID=America/Santiago:20260904T145000
+DTEND;TZID=America/Santiago:20260904T172000
+SUMMARY:AM ⚑ s05 · La altura percibida: fundamental ausente\, reconoci
+ miento de patrones
+DESCRIPTION:HITO 1 del proyecto (10 %). La bitácora se comenta pero no p
+ untúa (decisión 03-sep).\nEVALUACIÓN\nDos módulos: 14:50–16:00 y 1
+ 6:10–17:20.
+END:VEVENT
+BEGIN:VEVENT
+UID:am-s06@muc860-2026-2
+DTSTAMP:20260908T120000Z
+DTSTART;TZID=America/Santiago:20260911T145000
+DTEND;TZID=America/Santiago:20260911T172000
+SUMMARY:AM s06 · Sonoridad y decibel: intensidad\, niveles\, isofónicas
+DESCRIPTION:Estaciones de medición de niveles\; mini-informe SPL. Últim
+ a clase antes del receso.\nDos módulos: 14:50–16:00 y 16:10–17:20.
+END:VEVENT
+BEGIN:VEVENT
+UID:am-s07@muc860-2026-2
+DTSTAMP:20260908T120000Z
+DTSTART;TZID=America/Santiago:20260925T145000
+DTEND;TZID=America/Santiago:20260925T172000
+SUMMARY:AM ⚑ s07 · PRUEBA 1 (módulo 1) + batidos\, primera escucha (m
+ ódulo 2)
+DESCRIPTION:Prueba 1 (10 %) + escucha escrita E1. Evalúa s01–s06.\nEVA
+ LUACIÓN\nDos módulos: 14:50–16:00 y 16:10–17:20.
+END:VEVENT
+BEGIN:VEVENT
+UID:am-s08@muc860-2026-2
+DTSTAMP:20260908T120000Z
+DTSTART;TZID=America/Santiago:20261009T145000
+DTEND;TZID=America/Santiago:20261009T172000
+SUMMARY:AM s08 · Psicoacústica de la superposición: batidos\, banda cr
+ ítica\, rugosidad y consonancia
+DESCRIPTION:Comienzan talleres de medición sobre el objeto (s08–s12). 
+ Devolución de la Prueba 1.\nDos módulos: 14:50–16:00 y 16:10–17:20
+ .
+END:VEVENT
+BEGIN:VEVENT
+UID:am-s09@muc860-2026-2
+DTSTAMP:20260908T120000Z
+DTSTART;TZID=America/Santiago:20261016T145000
+DTEND;TZID=America/Santiago:20261016T172000
+SUMMARY:AM s09 · Escalas y temperamentos: afinar de oído
+DESCRIPTION:Afinación por conteo de batidos\; escala del objeto.\nDos m
+ ódulos: 14:50–16:00 y 16:10–17:20.
+END:VEVENT
+BEGIN:VEVENT
+UID:am-s10@muc860-2026-2
+DTSTAMP:20260908T120000Z
+DTSTART;TZID=America/Santiago:20261023T145000
+DTEND;TZID=America/Santiago:20261023T172000
+SUMMARY:AM ⚑ s10 · Resonancia\, impedancia y acoplamiento: el puente h
+ acia los instrumentos
+DESCRIPTION:HITO 2 del proyecto (10 %) + clínicas.\nEVALUACIÓN\nDos mó
+ dulos: 14:50–16:00 y 16:10–17:20.
+END:VEVENT
+BEGIN:VEVENT
+UID:am-s11@muc860-2026-2
+DTSTAMP:20260908T120000Z
+DTSTART;TZID=America/Santiago:20261030T145000
+DTEND;TZID=America/Santiago:20261030T172000
+SUMMARY:AM s11 · Cuerdas frotadas y el cuerpo del instrumento: stick-sli
+ p\, Helmholtz\, puente\, caja y radiación
+DESCRIPTION:Instrumentos de estudiantes #2 (cuerda frotada). Nota del hit
+ o 2 se publica antes de s12 (≤ 05-nov).\nDos módulos: 14:50–16:00 y
+  16:10–17:20.
+END:VEVENT
+BEGIN:VEVENT
+UID:am-s12@muc860-2026-2
+DTSTAMP:20260908T120000Z
+DTSTART;TZID=America/Santiago:20261106T145000
+DTEND;TZID=America/Santiago:20261106T172000
+SUMMARY:AM s12 · Vientos y lutería: columnas de aire\, agujeros\, regí
+ menes
+DESCRIPTION:Sesión-taller completa de lutería\; cierre de la serie del 
+ objeto.\nDos módulos: 14:50–16:00 y 16:10–17:20.
+END:VEVENT
+BEGIN:VEVENT
+UID:am-s13@muc860-2026-2
+DTSTAMP:20260908T120000Z
+DTSTART;TZID=America/Santiago:20261113T145000
+DTEND;TZID=America/Santiago:20261113T172000
+SUMMARY:AM ⚑ s13 · PRUEBA 2 (módulo 1) + la voz cantada: fuente-filtr
+ o y formantes (módulo 2)
+DESCRIPTION:Prueba 2 (10 %) + escucha escrita E2. Evalúa s08–s12.\nEVA
+ LUACIÓN\nDos módulos: 14:50–16:00 y 16:10–17:20.
+END:VEVENT
+BEGIN:VEVENT
+UID:am-s14@muc860-2026-2
+DTSTAMP:20260908T120000Z
+DTSTART;TZID=America/Santiago:20261120T145000
+DTEND;TZID=America/Santiago:20261120T172000
+SUMMARY:AM s14 · La sala como instrumento: reflexión\, absorción\, rev
+ erberación\, modos de sala
+DESCRIPTION:Salida de medición de T60. Se publica la pauta del hito 3.\n
+ Dos módulos: 14:50–16:00 y 16:10–17:20.
+END:VEVENT
+BEGIN:VEVENT
+UID:am-s15@muc860-2026-2
+DTSTAMP:20260908T120000Z
+DTSTART;TZID=America/Santiago:20261127T145000
+DTEND;TZID=America/Santiago:20261127T172000
+SUMMARY:AM ⚑ s15 · Presentaciones finales del proyecto: explicar es la
+  prueba
+DESCRIPTION:Defensas individuales + informe (15 %) + escucha escrita E3.\
+ nEVALUACIÓN\nDos módulos: 14:50–16:00 y 16:10–17:20.
+END:VEVENT
+BEGIN:VEVENT
+UID:am-sin-clase-02oct@muc860-2026-2
+DTSTAMP:20260908T120000Z
+DTSTART;VALUE=DATE:20261002
+DTEND;VALUE=DATE:20261003
+SUMMARY:AM · SIN CLASE (actividades suspendidas desde 13:30)
+DESCRIPTION:Separa s07 de s08.
+END:VEVENT
+BEGIN:VEVENT
+UID:am-entrega-hito3@muc860-2026-2
+DTSTAMP:20260908T120000Z
+DTSTART;TZID=America/Santiago:20261126T200000
+DTEND;TZID=America/Santiago:20261126T203000
+SUMMARY:AM ⚑ Tope de entrega de presentaciones (hito 3)
+DESCRIPTION:Regla de la pauta del hito 3: hasta las 20:00 del jueves prev
+ io a s15.\nEVALUACIÓN
+END:VEVENT
+END:VCALENDAR
