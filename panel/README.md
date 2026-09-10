@@ -247,6 +247,26 @@ cuando hay alguno). Es paliativo: Drive los puede volver a desalojar. La soluci�
 fondo es en el Finder, carpeta `cursos/AM` → clic derecho → *Acceso sin conexión* →
 *Disponible sin conexión*, y liberar espacio en el disco.
 
+## ¿Cabe cada lámina en su marco? (`revisar_laminas.py`, 2026-09-10)
+
+Gemelo de `SyS/panel/revisar_laminas.py` (solo cambian el glob de los decks
+y la invocación de quarto vía conda). Abre cada `slides_sNN.html` renderizado
+en Chrome sin ventana, fuerza los fragmentos a visibles y mide, en el marco
+de 1050×700 de Quarto, qué se sale por abajo o por la derecha y qué imagen
+quedó colapsada a altura 0 (auto-stretch sin `.nostretch`). Reemplaza al
+barrido manual del 2026-08-28 (`ediciones/2026-2/medir_desborde_laminas.html`).
+
+```bash
+python3 panel/revisar_laminas.py --todas --sin-render      # 15 decks, ~50 s
+python3 panel/revisar_laminas.py material/curso/sesion-05/slides_s05.qmd
+```
+
+Lo llaman el pre-commit (solo para los decks del commit; renderiza el que
+esté viejo) y `verificar_consistencia.py` en modo completo, vía la clave
+`estilo_decks.revisar_laminas` de `DATOS_CURSO.yml`. En el CI no hay Chrome
+en esa ruta, así que ahí el chequeo no mide nada: la verdad está en el
+pre-commit local.
+
 ## Atajos
 
 `←` `→` sesión anterior/siguiente · `1`…`6` encienden o apagan cada panel ·

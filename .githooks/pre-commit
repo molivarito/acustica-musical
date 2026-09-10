@@ -29,6 +29,22 @@ if ! python3 verificar_consistencia.py --rapido >&2; then
   exit 1
 fi
 
+# --- láminas que no caben (gemelo con SyS, 2026-09-10) ---------------
+# Solo los decks del commit, contra su HTML renderizado (renderiza el
+# que esté viejo: ~30 s por deck). Detecta desbordes e imágenes colapsadas.
+decks=$(git diff --cached --name-only --diff-filter=AM \
+        | grep -E '^material/curso/sesion-[0-9]+/slides_s[0-9]+\.qmd$' || true)
+if [ -n "$decks" ] && [ -f panel/revisar_laminas.py ]; then
+  echo "  láminas: revisando $(echo "$decks" | wc -l | tr -d ' ') deck(s)..." >&2
+  # shellcheck disable=SC2086
+  if ! python3 panel/revisar_laminas.py $decks >&2; then
+    echo >&2
+    echo "  ✗ Hay láminas que no caben en su marco (ver arriba)." >&2
+    echo "  Saltarse a conciencia:  git commit --no-verify" >&2
+    exit 1
+  fi
+fi
+
 PDF="material/libro/LIBRO_CURSO.pdf"
 
 staged=$(git diff --cached --name-only --diff-filter=ACMR)

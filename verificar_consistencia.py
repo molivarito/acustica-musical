@@ -266,7 +266,7 @@ def chequear_estilo_decks():
     # 0); (3) aviso si una clase próxima sigue sin notas o sin figuras
     # (recordatorio de tanda — ver AUDITORIA_NOTAS_FIGURAS.md).
     cfg = DATOS.get("estilo_decks")
-    if not cfg:
+    if not cfg or not cfg.get("glob"):   # sin `glob`, solo revisar_laminas
         return
     import datetime
     meses = {"ene": 1, "feb": 2, "mar": 3, "abr": 4, "may": 5, "jun": 6,
