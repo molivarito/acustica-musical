@@ -781,8 +781,48 @@ def frescura(indice):
             if e in ("viejo", "falta"):
                 viejos += 1
         out[s["id"]] = est
+    desh = deshidratados()
     return {"sesiones": out, "viejos": viejos, "total": total,
-            "libro": frescura_libro()}
+            "libro": frescura_libro(),
+            "deshidratados": len(desh), "deshidratados_ej": desh[:8]}
+
+
+# Google Drive en modo "streaming" desaloja copias locales cuando el disco se
+# llena y deja marcadores sin contenido (bandera SF_DATALESS de macOS,
+# `ls -lO` los muestra como `dataless`). stat() no los descarga; el primer
+# open() sí, y tarda 10–30 s por archivo: así el panel "no carga" (las slides
+# esperan a cada plugin de reveal.js) y, en clase sin internet, un estímulo
+# deshidratado NO suena. El panel los cuenta aquí y los hidrata al arrancar.
+SF_DATALESS = 0x40000000
+RAICES_HIDRATAR = ("material", "panel", "ediciones", ".git")
+_DESH = {"t": 0.0, "lista": None}
+
+
+def deshidratados(raices=RAICES_HIDRATAR, ttl=60):
+    """Rutas (relativas al repo) de archivos sin contenido local.
+
+    Cacheado `ttl` segundos: el panel lo consulta cada 20 s y recorrer
+    ~4000 archivos sobre DriveFS no es gratis.
+    """
+    import time
+    if _DESH["lista"] is not None and time.time() - _DESH["t"] < ttl:
+        return _DESH["lista"]
+    out = []
+    for raiz in raices:
+        for d, _, fs in os.walk(os.path.join(REPO, raiz)):
+            for f in fs:
+                p = os.path.join(d, f)
+                try:
+                    if os.lstat(p).st_flags & SF_DATALESS:
+                        out.append(os.path.relpath(p, REPO))
+                except (OSError, AttributeError):   # AttributeError: no macOS
+                    pass
+    _DESH.update(t=time.time(), lista=out)
+    return out
+
+
+def invalidar_deshidratados():
+    _DESH["lista"] = None
 
 
 PDF_LIBRO = "material/libro/LIBRO_CURSO.pdf"
@@ -863,6 +903,11 @@ def _verificar(indice):
     print(f"  PDF del libro: {lib['estado']}"
           + (f" (más nuevo: {lib['archivo']})" if lib["estado"] == "viejo" else ""))
     print(f"  hook pre-commit activo: {'sí' if hook_activo() else 'NO'}")
+    if fr["deshidratados"]:
+        print(f"  ⚠ archivos deshidratados por Google Drive: {fr['deshidratados']} "
+              f"(p. ej. {fr['deshidratados_ej'][0]}) — el panel los descarga al "
+              f"arrancar; para que no vuelva a pasar, marca la carpeta del curso "
+              f"como «Disponible sin conexión» en Drive y libera disco")
     print(f"  objetivos: {len(indice['objetivos'])} · "
           f"familias: {len(indice['familias'])}")
     return problemas

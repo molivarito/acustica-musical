@@ -170,6 +170,8 @@ details.ag-extra>summary{cursor:pointer;color:var(--muted);font-size:12.5px}
       <input id="ir" list="ses-lista" placeholder="ir a s…" size="7">
       <datalist id="ses-lista"></datalist>
       <button id="btn-frescura" title="Estado de los renders">…</button>
+      <button id="btn-drive" hidden
+        title="Archivos que Google Drive dejó sin contenido local">…</button>
       <button id="btn-libro" title="Estado del PDF del libro">…</button>
       <button id="btn-avisos" title="Avisos de parseo"></button>
       <button id="btn-pub" title="Estado de publicación">…</button>
@@ -385,6 +387,7 @@ const PRESETS = {
   'Contenido': ['riel','grande','slides'],
 };
 let IND = null, FRESC = null, PUB = null, N = 1;
+let HIDR_ACTIVO = false;   // hidratación de Drive en curso (ver btn-drive)
 let vistas = {}, pestana = 'apunte', modulo = 'ambos', extra = false;
 let marcados = {};          // materiales tildados, por sesión
 
@@ -732,6 +735,10 @@ async function arrancar(){
   if (N > IND.sesiones.length) N = 1;
   pintarControles(); aplicarVistas();
   try { FRESC = await llamar('GET','/api/frescura'); } catch(e){}
+  try {
+    HIDR_ACTIVO = !!(await llamar('GET','/api/hidratar-estado')).activo;
+    if (HIDR_ACTIVO) sondearHidratacion();
+  } catch(e){}
   irA(N);
   pintarFrescuraBoton();
   await cargarPub();
@@ -750,6 +757,21 @@ function pintarFrescuraBoton(){
   b.textContent = FRESC.viejos ? ('⚠ ' + FRESC.viejos + '/' + FRESC.total + ' sin renderizar')
                                : '✓ renders al día';
   b.style.color = FRESC.viejos ? 'var(--err)' : 'var(--ok)';
+  // Archivos deshidratados por Google Drive (disco lleno → Drive desaloja
+  // copias locales): cada uno tarda 10–30 s en abrirse y sin red no abre.
+  const bd = $('#btn-drive'), nd = FRESC.deshidratados || 0;
+  bd.hidden = !nd && !HIDR_ACTIVO;
+  if (nd || HIDR_ACTIVO) {
+    bd.textContent = HIDR_ACTIVO ? ('☁ descargando… ' + nd + ' pendientes')
+                                 : ('☁ ' + nd + ' sin descargar');
+    bd.style.color = 'var(--err)';
+    bd.title = nd + ' archivos del curso están deshidratados por Google Drive '
+      + '(sin contenido local): las slides tardan medio minuto y los estímulos '
+      + 'no suenan sin internet.\n\nPúlsalo para descargarlos ahora. Para que '
+      + 'no se repita: carpeta del curso → «Disponible sin conexión» en Drive, '
+      + 'y liberar espacio en disco.\n\np. ej.: '
+      + (FRESC.deshidratados_ej || []).join('\n');
+  }
   // Semáforo propio de AM: el CI no reconstruye el PDF del libro, así que
   // puede quedarse atrás en silencio al editar un capítulo.
   const L = FRESC.libro || {}, bl = $('#btn-libro');
@@ -797,6 +819,28 @@ $('#sl-vista').onclick = () => { const R=reveal(); if(R) R.toggleOverview(); };
 $('#sl-abrir').onclick = () => { const s=srcDe('slides'); if(s) window.open(s,'_blank'); };
 $('#gr-abrir').onclick = () => { const s=srcDe(pestana); if(s) window.open(s,'_blank'); };
 $('#btn-frescura').onclick = () => lanzarRender({todo:true});
+// Sondea la hidratación (la que arrancó sola con el panel o la del botón)
+// hasta que termine; al final frescura vuelve a contar.
+let SONDA_HIDR = null;
+function sondearHidratacion(){
+  if (SONDA_HIDR) return;
+  SONDA_HIDR = setInterval(async () => {
+    try {
+      const e = await llamar('GET','/api/hidratar-estado');
+      HIDR_ACTIVO = !!e.activo;
+      if (!e.activo) { clearInterval(SONDA_HIDR); SONDA_HIDR = null; await refrescarFrescura(); }
+      else pintarFrescuraBoton();
+    } catch(err) { clearInterval(SONDA_HIDR); SONDA_HIDR = null; }
+  }, 5000);
+}
+$('#btn-drive').onclick = async () => {
+  try {
+    const est = await llamar('POST','/api/hidratar',{});
+    HIDR_ACTIVO = !!est.activo;
+    pintarFrescuraBoton();
+    if (HIDR_ACTIVO) sondearHidratacion();
+  } catch(e) {}
+};
 $('#gr-render').onclick = () => lanzarRender({sesion: N});
 $('#btn-libro').onclick = () => lanzarRender({libro:true});
 

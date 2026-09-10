@@ -175,6 +175,56 @@ def _git(*args, timeout=8):
         return None
 
 
+_HIDR = {"activo": False, "total": 0, "hechos": 0, "error": None}
+
+
+def hidratar(en_hilo=True):
+    """Lee (y con eso descarga) todos los archivos deshidratados por Drive.
+
+    Idempotente: si ya hay una hidratación en curso no lanza otra. Corre en
+    un hilo daemon porque puede tardar minutos con muchos estímulos; el
+    progreso se consulta por /api/frescura (que vuelve a contar) y por
+    /api/hidratar-estado.
+    """
+    with _LOCK:
+        if _HIDR["activo"]:
+            return dict(_HIDR)
+        lista = idx.deshidratados(ttl=0)
+        _HIDR.update(activo=bool(lista), total=len(lista), hechos=0, error=None)
+    if not lista:
+        return dict(_HIDR)
+
+    def leer(rel):
+        try:
+            with open(os.path.join(REPO, rel), "rb") as fh:
+                while fh.read(1 << 20):
+                    pass
+        except OSError as e:
+            _HIDR["error"] = f"{rel}: {e}"
+        _HIDR["hechos"] += 1
+
+    def correr():
+        # Cada descarga es un viaje a la nube (~2 s de latencia, sea cual sea
+        # el tamaño): en serie, 2000 archivos son más de una hora; con 8
+        # hilos, unos minutos.
+        from concurrent.futures import ThreadPoolExecutor
+        try:
+            with ThreadPoolExecutor(max_workers=8) as pool:
+                list(pool.map(leer, lista))
+        finally:
+            _HIDR["activo"] = False
+            idx.invalidar_deshidratados()
+            print(f"  hidratación terminada: {_HIDR['hechos']}/{_HIDR['total']} "
+                  f"archivos descargados de Drive"
+                  + (f" (último error: {_HIDR['error']})" if _HIDR["error"] else ""))
+
+    if en_hilo:
+        threading.Thread(target=correr, daemon=True).start()
+    else:
+        correr()
+    return dict(_HIDR)
+
+
 def estado_publicacion():
     """Estado de publicación de AM, todo local y sin red.
 
@@ -337,6 +387,8 @@ class Handler(http.server.BaseHTTPRequestHandler):
                 return self._json(200, estado_publicacion())
             if ruta == "/api/agenda":
                 return self._json(200, agd.generar(edicion=_ESTADO["edicion"]))
+            if ruta == "/api/hidratar-estado":
+                return self._json(200, dict(_HIDR))
             if ruta.startswith("/r/"):
                 return self._estatico(ruta, q)
             return self._json(404, {"error": "ruta desconocida"})
@@ -405,6 +457,8 @@ class Handler(http.server.BaseHTTPRequestHandler):
                 return self._json(200, self.api_canvas_estado())
             if ruta == "/api/agenda":
                 return self._json(200, self.api_agenda(cuerpo))
+            if ruta == "/api/hidratar":
+                return self._json(200, hidratar())
             return self._json(404, {"error": "ruta desconocida"})
         except BrokenPipeError:
             pass
@@ -635,6 +689,14 @@ def main():
     if not idx.hook_activo():
         print("  ⚠ core.hooksPath no está configurado: "
               "git config core.hooksPath .githooks")
+    if fr["deshidratados"]:
+        # Sin esto las slides tardan medio minuto (cada plugin de reveal.js
+        # se baja de la nube al pedirlo) y los estímulos no suenan sin red.
+        print(f"  ⚠ {fr['deshidratados']} archivos deshidratados por Google Drive "
+              f"(p. ej. {fr['deshidratados_ej'][0]}): descargándolos en segundo "
+              f"plano. Para que no se repita: carpeta del curso → «Disponible "
+              f"sin conexión» en Drive, y liberar disco.")
+        hidratar()
     return _servir(args.puerto, not args.no_abrir)
 
 

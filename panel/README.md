@@ -231,6 +231,22 @@ solo lectura y van en botones aparte. La de Canvas exige además arrancar con
 Todas las llamadas a `git` llevan **timeout**: este repo vive en Google Drive y un
 `git log` que no vuelve dejaría el panel congelado justo cuando estás preparando clase.
 
+### Archivos deshidratados por Google Drive (2026-09-10)
+
+Con el disco casi lleno, Google Drive (modo *streaming*) desaloja las copias locales y
+deja marcadores sin contenido (`ls -lO` los muestra como `dataless`). Abrir uno lo
+descarga de la nube y tarda 10–30 s: el síntoma es que el panel "no carga" (las slides
+esperan a cada plugin de reveal.js, que se baja uno por uno) y, más grave, **en la sala
+sin internet un estímulo deshidratado no suena**. El 2026-09-10 estaban así los 23
+estímulos, la mitad de `_render/` y dos tercios de los objetos de `.git`.
+
+Qué hace el panel: `indice.py` los cuenta (`deshidratados()`, cacheado 60 s, aparece en
+`/api/frescura` y en `--verificar`); `panel.py` los descarga en un hilo al arrancar y
+expone `POST /api/hidratar` (botón `☁ N sin descargar` en la cabecera, solo visible
+cuando hay alguno). Es paliativo: Drive los puede volver a desalojar. La solución de
+fondo es en el Finder, carpeta `cursos/AM` → clic derecho → *Acceso sin conexión* →
+*Disponible sin conexión*, y liberar espacio en el disco.
+
 ## Atajos
 
 `←` `→` sesión anterior/siguiente · `1`…`6` encienden o apagan cada panel ·
