@@ -184,7 +184,10 @@ conserva para ediciones futuras.
   pasa en limpio**; el verificador corre además en el pre-commit
   (`--rapido`) y en el CI. Nada de barridos por memoria: si un
   rediseño invalida una afirmación, se actualiza en DATOS_CURSO.yml y
-  en el documento, nunca solo en uno. Los agentes delegados **no
+  en el documento, nunca solo en uno. Desde 2026-09-10 el pre-commit
+  también mide con Chrome sin ventana que las láminas de los decks del
+  commit quepan en su marco (`panel/revisar_laminas.py`, gemelo de SyS;
+  `--todas --sin-render` revisa los 15). Los agentes delegados **no
   ejecutan `git stash`** (sobre Google Drive dejó archivos a medio
   restaurar el 2026-08-07); ante dudas de estado, `git status`/`diff`
   y avisar.
