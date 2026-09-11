@@ -39,6 +39,39 @@ cada semana** y decide **qué se simplifica**.
 | D5 | Demos interactivas nuevas | **Ninguna nueva**; se usan las 14 que hay o las pistas AD | Cada demo nueva es una hora de prueba en sala |
 | D6 | Documentos de diseño (`OBJETIVOS`, `METODOLOGIA`, `PLAN_SEMESTRE`, `DATOS_CURSO`, verificadores) | **Congelados** hasta diciembre; solo se tocan si un cambio de la hoja de clase contradice una promesa hecha a los estudiantes (pesos, fechas) | La consistencia del diseño dejó de ser el problema |
 
+## Decisiones del profesor (entrevista del 11-sep, tarde)
+
+| # | Decisión | Resuelto |
+|---|---|---|
+| D1 | Serie del objeto s08–s12 | **Un solo formato, sin rotación**: cada estudiante mide su objeto en su mesa con la guía de la semana; el profesor pasa por las mesas |
+| D2 | T60 en s14 | **En el propio edificio con REW** (sala, pasillo, escalera); sin salida ni permisos |
+| D4/D5 | Escucha del día y demos | **Escucha solo si el estímulo existe el martes** del ensayo (si no: pista ASA o se omite); **ninguna demo nueva** |
+| D3 | Clínicas de s10 | Se resuelve en el ensayo de s10 (20-oct) bajo la regla de densidad |
+| D6 | Diseño congelado | Sí |
+| — | Mazos | **Mazo generado como base, con las láminas antiguas del profesor insertadas donde existan**; las pistas ASA reemplazan mini-lecciones |
+| — | Pistas ASA | Se extraen del Keynote de 2018 (automatización autorizada; el audio embebido se copia directo del paquete) |
+| — | Talleres | **Los 9 se mantienen como están anunciados** (mejores 8 de 9); rúbrica rápida cerrada EN clase |
+| — | Picos de corrección | **Se aceptan** (Prueba 1, Hito 2, Prueba 2, final) |
+| — | Comunicación | Anuncios en Canvas redactados por Claude (`ediciones/2026-2/anuncios/`), revisados y publicados por el profesor |
+
+**Dónde se fue el tiempo, según el profesor**: en las cuatro cosas —
+entender qué hacer, producir lo que faltaba, corregir y registrar, y dar
+una clase demasiado densa. **Presupuesto real: hasta 3 horas semanales
+fuera de la sala, sin ayudante.** De ahí salen dos reglas más:
+
+5. **Regla de densidad: una actividad grande por módulo, con holgura.**
+   Gancho breve + exposición + UNA actividad + cierre. Lo que no cabe se
+   corta en el ensayo del martes, nunca en la sala. (s07 ya va así en el
+   módulo 2: la medición compacta es parte de la exposición, la
+   isofónica es la actividad.)
+6. **Producción completa a cargo de Claude.** Del ensayo salen listos:
+   hoja de clase, paquete de impresión, estímulos sintetizados o
+   editados, figuras, Canvas sincronizado y el anuncio si hace falta. El
+   profesor solo graba lo que requiere un instrumento o un objeto real
+   (vaso, flauta, contrabajo) y prueba el audio en la sala. Las 3 horas
+   del profesor son: ensayo (≤ 90′), impresión y prueba de audio (30′),
+   rúbrica cerrada en clase y nota en Canvas (30′).
+
 ## Lo que no se toca (promesas ya hechas a los estudiantes)
 
 Pesos (talleres 35 · proyecto 35 · pruebas 20 · escucha escrita 10),
