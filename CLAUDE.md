@@ -161,6 +161,20 @@ conserva para ediciones futuras.
   evaluada es la defensa del proyecto en s15). El detalle vive en
   `METODOLOGIA.md` §§1–5 y §7.7.
 
+- **Plan de rescate (2026-09-11)**: el profesor encontró el curso
+  "imposible de llevar" (material generado sin ensayar, información de
+  cada sesión repartida en 5–6 documentos). Desde entonces: (1) el
+  documento con el que se da la clase es la **hoja de clase**,
+  `ediciones/2026-2/impresiones_sNN/hoja_clase_sNN.md` (plantilla
+  `HOJA_CLASE_PLANTILLA.md`), primer panel del panel de sesión; el
+  `plan.md` es fuente de diseño y no se lee para dar la clase; (2)
+  **ensayo fijo los martes** con Claude (tarea `ensayar-NN`), que
+  produce la hoja y el paquete de impresión; (3) las clases antiguas
+  de MUC859 mandan en la exposición; (4) diseño congelado (D6). Plan
+  completo y decisiones D1–D6 en
+  `ediciones/2026-2/PLAN_RESCATE_2026-09-11.md`. **No proponer
+  formatos ni demos nuevas**; al preparar una sesión, partir por su
+  hoja de clase.
 - **Semestre 2026-2 en curso (2026-08-14)**: s01 y s02 dictadas
   (calendario real en `ediciones/2026-2/CALENDARIO_2026-2.md`; la
   agenda del panel gobierna el ciclo semanal). Novedades operativas de

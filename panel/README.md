@@ -16,6 +16,18 @@ Sirve en `127.0.0.1:8767` (si está ocupado prueba hasta el 8776). Solo stdlib +
 El puerto no es casual: el panel de SyS usa el 8766 y el armador de su banco el 8765, así
 los tres conviven.
 
+## La hoja de clase es el primer panel (2026-09-11)
+
+Plan de rescate (`ediciones/2026-2/PLAN_RESCATE_2026-09-11.md`): el documento
+con el que se da la clase es la **hoja de clase** de la sesión,
+`ediciones/<ed>/impresiones_sNN/hoja_clase_sNN.md` (lámina por lámina, montaje,
+qué esperar, plan B; plantilla en `ediciones/<ed>/HOJA_CLASE_PLANTILLA.md`).
+La zona "Hoja de clase" la muestra convertida con `/api/md`, con botones para
+abrir la versión imprimible (el HTML que genera `generar_impresiones.py`) y
+para editarla; si no existe, dice cómo producirla. Presets: **Dictar** =
+riel + hoja + slides; **Preparar** = hoja + plan + materiales. El plan sigue
+disponible pero es fuente de diseño, no de operación.
+
 ## Agenda administrativa
 
 El botón **⚑ agenda** de la barra (rojo si hay atrasadas, ámbar si hay tareas esta
@@ -26,7 +38,9 @@ y botón para abrir el archivo asociado.
 Las tareas **se derivan, no se escriben a mano**: las fechas salen del CALENDARIO de
 la edición (`ediciones/<ed>/CALENDARIO_*.md`, el mismo que parsea `indice.py`) y las
 reglas de `panel/agenda_reglas.yml` (qué genera cada sesión, cada prueba, cada hito
-del proyecto y los hitos únicos, con sus días de anticipación). Las evaluaciones no
+del proyecto y los hitos únicos, con sus días de anticipación). Desde el
+2026-09-11 cada sesión genera **tres tareas**: `ensayar-NN` (martes, −3 d:
+produce la hoja de clase), `imprimir-NN` (−1 d) y `taller-NN` (0 d). Las evaluaciones no
 tienen tabla propia: se **detectan en la columna `Hito / nota`** del calendario
 ("Hito 1", "Prueba 2", "Presentaciones…"), ancladas a su comienzo — así "se publica
 pauta del hito 3" en la nota de s14 no inventa un hito. Si una sesión o evaluación
