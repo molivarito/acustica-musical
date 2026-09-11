@@ -4,29 +4,31 @@
 contextos musicales; salud auditiva). **Formato 5** (estaciones de
 medición), debut en el curso.
 **Grupo**: 3 integrantes, roles **ejecuta / mide y registra / vocero**;
-los roles **rotan al cambiar de estación** (quien medía pasa a
+los roles **rotan al cambiar de bloque** (quien medía pasa a
 ejecutar, etc.). El que mide y registra llena la **planilla del
 grupo** (última página): es el insumo del mini-informe — sin planilla
 no hay informe. Al **dorso de la planilla** va impreso el formulario
 de 4 casillas del mini-informe (se llena en el cierre, desde el
 minuto 60).
-**Materiales por grupo**: ≥2 celulares con app SPL (misma app en ambos
-si se puede), 1 celular emisor de tonos, esta guía, lápiz. E1 usa el
-equipo común (interfaz + micrófono + notebook).
+**Materiales**: el celular de cada integrante con la app SPL de la
+lista del curso, esta guía, lápiz. Las fuentes (celulares emisores) y el
+equipo de referencia de E1 (interfaz + micrófono + notebook) los pone el
+profesor.
 
-## Logística de rotación (3 grupos × 5 estaciones)
+## Logística: cinco bloques en serie, todos midiendo a la vez
 
-**7 minutos de trabajo + 1 de rotación** por estación; manda el
-cronómetro proyectado. Ruta: cada grupo parte en la estación de su
-número y avanza en orden (G1: E1→E2→E3→E4→E5 · G2: E2→E3→E4→E5→E1 ·
-G3: E3→E4→E5→E1→E2). Con 3 grupos y 5 estaciones, en cada ronda quedan
-**2 estaciones libres** — siempre hay una disponible, lo que descomprime
-el cuello del micrófono/interfaz en E1 (menos espera que con el curso
-completo). Regla de convivencia: **E1 es zona silenciosa** — las estaciones
-ruidosas (E2, E3) trabajan en el extremo opuesto de la sala.
-En cada estación: **prediga antes de medir** (casilla P), mida, anote
-el dato CON condiciones (app, celular, distancia). Si el tiempo no
-alcanza, asegure el **mínimo irrenunciable** marcado con ★.
+Las estaciones que **emiten y miden** (E1, E2, E3) no pueden correr en
+paralelo en una sala: la app integra todo lo que suena, y la voz de E1
+a 3 m está al mismo nivel que un celular de E3 a unos metros. Por eso
+las cinco estaciones se hacen **en serie, 8 minutos cada una**, con todo
+el curso midiendo el mismo evento a la vez; manda el cronómetro
+proyectado. Orden: **E1 → E3 → E2 → E5 → E4**. Regla de convivencia:
+durante E1, E3 y E2 **nadie emite** fuera de la fuente del bloque; E5 y
+E4 son de mesa. Con los 9 celulares midiendo el mismo evento, la
+dispersión entre apps aparece sola: es dato, no fracaso.
+En cada bloque: **prediga antes de medir** (casilla P), mida, anote el
+dato CON condiciones (app, celular, distancia). Si el tiempo no alcanza,
+asegure el **mínimo irrenunciable** marcado con ★.
 
 ## E1 — La referencia fina (micrófono + interfaz + notebook)
 
@@ -34,9 +36,11 @@ alcanza, asegure el **mínimo irrenunciable** marcado con ★.
 
 - P: ¿la app y el micrófono de referencia diferirán en 0–2, 3–5 o
   >5 dB? ______
-- Un integrante habla (voz sostenida, "aaah" mezzoforte) a **30 cm**
-  del micrófono; midan simultáneamente con el sistema de referencia y
-  con la app del celular puesta al lado. ★ Anoten ambas lecturas.
+- Un voluntario habla (voz sostenida, "aaah" mezzoforte) a **30 cm**
+  del micrófono de referencia; el profesor lee la referencia en voz
+  alta y cada integrante mide con su app, puesta en la fila junto al
+  micrófono. ★ Anoten la lectura de la referencia y la de cada celular
+  del grupo.
 - Repitan a **3 m**. ¿Cuántos dB cayó cada sistema? ¿Coinciden en la
   *diferencia* aunque discrepen en el valor absoluto?
 - NO cambien la ganancia de la interfaz (quedó fijada por el profesor).
@@ -47,9 +51,10 @@ alcanza, asegure el **mínimo irrenunciable** marcado con ★.
 
 - P: ¿cuántos dB de diferencia habrá entre el punto más y el menos
   ruidoso de la sala? ______ dB
-- Fuente: el celular emisor con un tono (o música) fijo, SIEMPRE en el
-  mismo lugar y volumen. ★ Midan el nivel (dB(A), misma app y mismo
-  celular) en los **4 puntos marcados** de la sala; anoten el mapa.
+- Fuente: el celular emisor del profesor, fijo al frente, el mismo para
+  los 3 grupos. ★ Recorran en silencio los **4 puntos marcados** de la
+  sala y midan el nivel (dB(A), misma app y mismo celular del grupo en
+  los 4); anoten el mapa.
 - ¿Cuántos dB separan el punto más ruidoso del más callado? Con la
   regla +3/+10: ¿cuántas veces más intensidad es eso?
 
@@ -58,9 +63,10 @@ alcanza, asegure el **mínimo irrenunciable** marcado con ★.
 *La pregunta del gancho, ahora con fuentes controladas.*
 
 - P (copie su voto del gancho): duplicar la fuente sube ~ ______ dB.
-- Dos celulares con el MISMO tono al MISMO volumen, juntos sobre la
-  mesa. Midan (siempre desde el mismo punto, ~1 m): celular A solo,
-  celular B solo (¿parejos?), y ★ **A+B sonando juntos**.
+- Dos celulares del profesor con el MISMO tono al MISMO volumen, juntos
+  sobre la mesa del frente. Cada integrante mide desde el anillo marcado
+  a ~1 m: celular A solo, celular B solo (¿parejos?), y ★ **A+B sonando
+  juntos**.
 - ¿Cuántos dB subió respecto de uno solo? ¿Le achuntó? ¿Cuántos
   celulares harían falta para que sonara *el doble* de fuerte?
 
@@ -101,10 +107,11 @@ regla de 3 dB y da esta misma tabla, valor por valor):
 
 - P: ¿su actividad musical semanal cabe en la tabla? ☐ sobrada ☐ justa
   ☐ no cabe
-- ★ Elijan un caso real del grupo (ensayo, banda, audífonos al ir en
-  micro) y midan CON LA APP, en vivo en la sala, AL MENOS UN valor de
-  ese caso (reprodúzcanlo o simúlenlo aquí); calculen su tiempo
-  admisible con la tabla a partir de ese dato medido.
+- ★ Dos casos se miden como curso: **"la banda"** (todos cantan una nota
+  sostenida 15 s; midan a ~1 m) y **"los audífonos en la micro"** (un
+  voluntario presta los suyos al volumen que usa; midan pegados al
+  auricular — es silencioso y se hace por mesa). Elijan uno de los dos
+  y calculen su tiempo admisible con la tabla a partir del dato medido.
 - Un protector auditivo de músico atenúa del orden de 15–25 dB (valores
   típicos de fabricante para protectores de atenuación plana, p. ej.
   ER-15/ER-20). Con la regla de los 3 dB: ¿por cuánto multiplica el

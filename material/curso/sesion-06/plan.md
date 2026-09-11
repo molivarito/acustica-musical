@@ -55,8 +55,12 @@ primer bloque del módulo 1; módulo 2 abre con gancho sonoro breve sin
 escucha del día; la lectura previa se consume visiblemente en la mini-lección del
 módulo 1 y en la estación E4 (principio 6); el mini-informe SPL se
 completa (formulario de 4 casillas) y entrega EN aula (principio 5). **Debutan las estaciones de
-medición formales** (formato 5): cuello logístico = 1 interfaz + 1
-micrófono; la rotación está dimensionada abajo.
+medición** (formato 5), pero **en serie** (decisión 2026-09-11): en una
+sala, las estaciones que emiten y miden se contaminan entre sí, así que
+los cinco bloques se corren uno tras otro con todo el curso midiendo el
+mismo evento; el formato rotativo queda para s08–s12, donde cada grupo
+mide su propio objeto de cerca. Cuello logístico = 1 interfaz + 1
+micrófono, resuelto poniendo E1 primero con la sala en silencio.
 
 ## Módulo 1 — ¿Cuánto es "el doble de fuerte"? (variante: audición)
 
@@ -74,8 +78,8 @@ micrófono; la rotación está dimensionada abajo.
 | Tiempo | Bloque | Actividad del estudiante | Rol del profesor | Materiales |
 |---|---|---|---|---|
 | 0–8′ | Gancho sonoro: ¿cuatro palmas son cuatro veces más fuerte? | Escucha 1 persona aplaudiendo sostenido y luego 4 a la vez, con la app SPL proyectada midiendo; vota ANTES a mano alzada: ¿el medidor subirá ~3, ~6 o ~12 dB?; anota su predicción | Coordina a 4 voluntarios aplaudiendo parejo; muestra la lectura sin comentarla ("el número queda en suspenso hasta la estación E3, donde lo van a medir ustedes con fuentes controladas") | Celular con app SPL proyectado (o lectura en voz alta); 4 voluntarios |
-| 8–15′ | Pregunta de medición + logística de estaciones (OA4.2) | Recibe la guía y su ruta de rotación (grupo 1 parte en E1, grupo 2 en E2, …); reparte los 3 roles (ejecuta / mide y registra / vocero), que **rotan al cambiar de estación**; pregunta dudas de procedimiento ahora (no durante la rotación) | Presenta la pregunta de la semana ("¿qué tan fuerte es nuestro mundo musical, y cómo se mide con juicio?") y las 5 estaciones en 1 lámina; explica la regla **7′ de trabajo + 1′ de rotación** con cronómetro proyectado; designa E1 como estación silenciosa (el resto no grita al lado del micrófono) | Guía de estaciones (1 por grupo); lámina con el mapa de estaciones; cronómetro proyectado |
-| 15–55′ | **Estaciones de medición de niveles (OA4.2) — 3 grupos × 5 estaciones × (7′+1′), con 2 estaciones libres en cada ronda** | **E1 (micrófono/interfaz + notebook)**: mide la voz hablada/cantada de un integrante a 30 cm y a 3 m; compara la lectura fina con la app del celular puesta al lado (¿cuánto difieren?). **E2 (celulares, mapa)**: levanta el mapa de niveles de 4 puntos de la sala con fuente fija (¿dónde se ensaya más protegido?). **E3 (celulares, suma)**: mide 1 celular sonando un tono, luego 2 idénticos juntos, y contrasta con su predicción del gancho (¿+3 dB?). **E4 (papel, cálculo)**: resuelve con las reglas +10/+3 los 4 ítems de aritmética de dB de la guía (estilo ROS cap. 6). **E5 (papel + app, dosis)**: estima con la tabla de la guía cuánto tiempo de ensayo "gasta" el oído a distintos niveles y qué hacer al respecto (salud auditiva del músico) | Ancla cerca de E1 (la estación con equipamiento delicado y cuello único) y desde ahí vigila el cronómetro y la rotación; en cada pasada provoca en E3 ("¿por qué NO da +6?") y en E5 ("¿cuántos dB le baja un protector — y cuánto tiempo le compra?") | E1: interfaz + micrófono + notebook con software de medición; E2–E3: ≥2 celulares con app SPL por grupo + 1 celular emisor de tono; E4–E5: guía impresa, calculadora del celular; planilla de datos por grupo |
+| 8–15′ | Pregunta de medición + logística de bloques (OA4.2) | Recibe la guía; reparte los 3 roles (ejecuta / mide y registra / vocero), que **rotan al cambiar de bloque**; pregunta dudas de procedimiento ahora (no durante los bloques) | Presenta la pregunta de la semana ("¿qué tan fuerte es nuestro mundo musical, y cómo se mide con juicio?") y las 5 estaciones en 1 lámina; explica la regla **8′ por bloque, en serie, todo el curso midiendo el mismo evento** (E1 → E3 → E2 → E5 → E4) con cronómetro proyectado; regla de silencio: durante E1, E3 y E2 nadie emite fuera de la fuente del bloque | Guía de estaciones (1 por grupo); lámina con el orden de bloques; cronómetro proyectado |
+| 15–55′ | **Estaciones de medición de niveles (OA4.2) — 5 bloques × 8′ en serie, los 9 celulares midiendo a la vez** | **E1 (micrófono/interfaz + notebook, 8′)**: un voluntario habla a 30 cm y a 3 m del micrófono de referencia; todos miden con su app en la fila junto al micrófono y anotan referencia y celular (¿cuánto difieren?, ¿coinciden en la caída?). **E3 (dos fuentes, 8′)**: dos celulares del profesor con el mismo tono al frente; todos miden desde el anillo de 1 m: A, B y A+B, y contrastan con su predicción del gancho (¿+3 dB?). **E2 (mapa, 8′)**: una fuente fija al frente; cada grupo recorre en silencio los 4 puntos marcados (¿dónde se ensaya más protegido?). **E5 (dosis, 8′)**: dos casos medidos como curso — todos cantan 15 s y miden a 1 m; un voluntario presta sus audífonos al volumen de la micro y cada mesa mide pegada al auricular — y la tabla NIOSH. **E4 (papel, 8′)**: resuelve con las reglas +10/+3 los 4 ítems de aritmética de dB con los datos propios (estilo ROS cap. 6) | Dirige cada bloque desde el frente con el cronómetro: en E1 lee la referencia de REW en voz alta y exige la predicción escrita antes de medir; en E3 provoca ("¿por qué NO da +6?"); en E2 vigila que la fuente no se mueva; en E5 provoca ("¿cuántos dB le baja un protector — y cuánto tiempo le compra?"); en E4 pasa por las mesas. Guion propio: `guion_profesor_estaciones.md` | E1: interfaz + micrófono + notebook con REW (SPL Meter); E2–E3: el celular de cada estudiante con la app SPL + 2 celulares emisores del profesor; E4–E5: guía impresa, calculadora del celular; planilla de datos por grupo |
 | 55–60′ | Puesta en común: los datos de todos (OA4.2) — comprimida a 5′ (el fusible que s08 usa) | El vocero de cada grupo aporta a la planilla proyectada su dato clave (E1: diferencia app↔micrófono; E3: cuánto dio la suma; E2: punto más ruidoso), sin comentario extendido | Tabula en la planilla proyectada; **cobra el gancho**: ¿dieron las palmas y los celulares ~+3 dB por duplicar la fuente? conecta con BEN 13: por eso duplicar la orquesta no duplica lo fuerte; remata: las comparaciones relativas con el mismo aparato son confiables, los absolutos sin calibrar no | Planilla proyectada; pizarrón |
 | 60–70′ | **Mini-informe SPL (cierre en aula, formulario) + ticket de salida + anuncios** | El grupo completa el **formulario de 4 casillas rotuladas** (pregunta / dato / interpretación / límite — los mismos 4 puntos de la pauta, sin prosa) impreso **al dorso de la planilla** que el registrador fue llenando en las estaciones; lo entrega al salir junto con las hojas isofónicas del m1; escribe su ticket hacia s07 **mientras el profesor anuncia** (actos compatibles, como en s09 y s10): "dos flautas tocan la MISMA nota y una queda apenas desafinada: ¿qué se oye? ¿y si la desafinación crece?" | Recoge planillas con el formulario al dorso (rúbrica rápida: es el taller de la semana) y tickets; **anuncia la PRUEBA 1 en s07** (módulo 1 completo; entra s01–s06, lo de s06 solo básico; con audio) y que el módulo 2 de s07 será audición liviana donde el ticket de hoy se responde con los oídos | Formulario de 4 casillas al dorso de la planilla (pauta al pie de la guía); tickets de salida |
 
@@ -109,16 +113,16 @@ micrófono; la rotación está dimensionada abajo.
   frecuencias obligatorias ≈ 1,5–2′ por igualación, ritmo de novato,
   + cambio de audífonos; 250, 2000 y 8000 Hz opcionales para
   rápidos) ✓ ≥2′.
-- **Estaciones (m2)**: 3 grupos × 5 estaciones × (7′+1′) = 40′ ✓ (con 3
-  grupos y 5 estaciones siempre quedan 2 libres en cada ronda, lo que
-  descomprime el cuello del micrófono/interfaz en E1); dentro de cada
-  estación, roles rotativos → cada integrante ejecuta o mide en ≥2
-  estaciones. E1 usa la única interfaz: por eso es estación fija con el
-  profesor anclado al lado.
+- **Estaciones (m2)**: 5 bloques × 8′ = 40′ ✓, en serie y con todo el
+  curso midiendo el mismo evento (9 celulares a la vez: la dispersión
+  entre apps es dato inmediato, y ninguna estación contamina a otra);
+  dentro de cada bloque, roles rotativos → cada integrante ejecuta o
+  mide en ≥2 bloques. E1 usa la única interfaz: por eso va primero, con
+  la sala en silencio.
 - **Mini-informe**: formulario de 4 casillas (sin prosa) al dorso de la
   planilla, en 10′ desde los 60′ (puesta en común comprimida de 8′ a 5′,
   el fusible que s08 usa); viable SOLO porque la planilla del registrador
-  se llenó durante la rotación (la pauta lo exige). El ticket se escribe
+  se llenó durante los bloques (la pauta lo exige). El ticket se escribe
   mientras el profesor anuncia (actos compatibles, como en s09 y s10).
 
 ## Pendientes de producción
@@ -164,11 +168,10 @@ micrófono; la rotación está dimensionada abajo.
   "app del celular del profesor como referencia común": se pierde la
   medición fina pero no la comparación app↔referencia; el cuello está
   aceptado en metodología §7 (riesgo 6).
-- **Estaciones desincronizadas** (un grupo se atrasa y tapona la
-  rotación) → el cronómetro proyectado manda: al minuto de rotación se
-  cambia con lo que haya; la guía marca en cada estación el "mínimo
-  irrenunciable" (1 dato anotado con condiciones) y el resto como
-  opcional.
+- **Un bloque se alarga** (un grupo no termina de anotar) → el
+  cronómetro proyectado manda: a los 8′ se pasa al siguiente con lo que
+  haya; la guía marca en cada estación el "mínimo irrenunciable" (1 dato
+  anotado con condiciones) y el resto como opcional.
 - **Apps SPL con lecturas absurdamente dispares** (±10 dB entre
   celulares) → es dato, no fracaso: la puesta en común lo tematiza
   (calibración, AGC, micrófonos distintos) y el mini-informe tiene el

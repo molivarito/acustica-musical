@@ -63,6 +63,11 @@ Con audífonos puestos y la ganancia de la demo en su valor por defecto:
   desaparecen primero porque cerca del umbral mi oído..."
   ____________________________________________________________________
 
+**Para la casa (opcional)**: repita la medición con muchas más
+frecuencias en la prueba de UNSW
+([newt.phys.unsw.edu.au/jw/hearing.html](https://newt.phys.unsw.edu.au/jw/hearing.html),
+en inglés, con audífonos cerrados) y compare la FORMA con la de hoy.
+
 ## Cierre en aula
 
 Un vocero por grupo describe la forma de la curva del grupo; el

@@ -202,6 +202,11 @@ oídos descansados.
 - Rossing, T. D., Moore, F. R. & Wheeler, P. A. (2002). *The Science of
   Sound*, 3.ª ed. — cap. 6 (dB, fones, sones: el banco de ejercicios de
   la prueba) y caps. 30–31 (niveles ambientales y efectos del ruido).
+- Wolfe, J. (UNSW, School of Physics). *Hearing test — equal loudness
+  curves*, [newt.phys.unsw.edu.au/jw/hearing.html](https://newt.phys.unsw.edu.au/jw/hearing.html):
+  prueba en línea (HTML5) para levantar la curva isofónica propia de
+  30 Hz a 16 kHz en pasos de 3 dB, con audífonos cerrados; en inglés.
+  Más completa que la demo del curso; ideal para repetir en casa.
 - Chile, Ministerio de Salud. Decreto Supremo N.º 594 (1999), *Reglamento
   sobre condiciones sanitarias y ambientales básicas en los lugares de
   trabajo*, arts. 74–75 (texto vigente, leychile.cl/BCN).

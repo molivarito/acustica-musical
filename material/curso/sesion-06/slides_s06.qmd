@@ -171,35 +171,33 @@ La lectura se revela al volver de las estaciones (E3).
 :::
 
 ## El mapa de las cinco estaciones {.smaller}
-**Formato 5 — debut de hoy.** 3 grupos, 5 estaciones, roles
-*ejecuta / mide y registra / vocero* que **rotan** al cambiar de
-estación.
+**En serie**: 5 bloques de 8′, todos midiendo el mismo evento; los roles rotan por bloque.
 
-| Estación | Pregunta |
-|---|---|
-| **E1** | app del celular vs. micrófono de referencia — ¿cuánto difieren? |
-| **E2** | mapa de niveles de la sala — ¿dónde se ensaya más protegido? |
-| **E3** | dos fuentes iguales — ¿la suma da el doble? |
-| **E4** | aritmética de dB con papel y lápiz |
-| **E5** | la dosis del oído — salud auditiva |
+| # | Bloque | Pregunta |
+|---|---|---|
+| 1 | **E1** | app vs. micrófono de referencia: ¿cuánto difieren? |
+| 2 | **E3** | dos fuentes iguales: ¿la suma da el doble? |
+| 3 | **E2** | mapa de la sala: ¿dónde se ensaya más protegido? |
+| 4 | **E5** | la dosis del oído |
+| 5 | **E4** | aritmética de dB en papel |
 
 ::: {.notes}
-**Apoyo:** Presentar la pregunta de la semana ("¿qué tan fuerte es nuestro mundo musical, y cómo se mide con juicio?") junto con esta lámina de las 5 estaciones. Explicar la regla 7′ de trabajo + 1′ de rotación con el cronómetro proyectado. Designar E1 como estación silenciosa: tiene el equipo delicado (interfaz + micrófono, el cuello logístico de la sesión) y el resto de las mesas no debe gritar al lado del micrófono. Resolver dudas de procedimiento ahora, no durante la rotación.
+**Apoyo:** Presentar la pregunta de la semana ("¿qué tan fuerte es nuestro mundo musical, y cómo se mide con juicio?") junto con esta lámina de las 5 estaciones. Explicar la regla: 8′ por bloque, en serie, con el cronómetro proyectado; todos miden el mismo evento con su app. Por qué en serie (decisión 2026-09-11): las estaciones que emiten y miden se contaminan entre sí en una sala. Regla de silencio en E1, E3 y E2: nadie emite fuera de la fuente del bloque. Resolver dudas de procedimiento ahora, no durante los bloques.
 :::
 
-## Logística de la rotación
+## Logística de los bloques
 
-> **7′ de trabajo + 1′ de rotación**, con cronómetro proyectado.
+> **8′ por bloque, en serie**, con cronómetro proyectado: E1 → E3 → E2 → E5 → E4.
 
 ::: {.incremental}
-- **E1 es zona silenciosa** (equipo delicado, cuello único): el resto
-  no grita al lado del micrófono.
-- Prediga **antes** de medir en cada estación.
+- **Silencio durante E1, E3 y E2**: solo suena la fuente del bloque;
+  las apps integran todo lo que suena.
+- Prediga **antes** de medir en cada bloque.
 - Si el tiempo aprieta, asegure el **mínimo irrenunciable** ★.
 :::
 
 ::: {.notes}
-**Apoyo:** El profesor se ancla cerca de E1 (equipamiento delicado, cuello único) y desde ahí vigila el cronómetro y la rotación. Provocar en cada pasada por E3: "¿por qué NO da +6 dB?" — respuesta: las presiones de fuentes independientes no se suman de frente, se combinan estadísticamente, así que dos fuentes iguales dan solo ~+3 dB. Provocar en E5: "¿cuántos dB le baja un protector — y cuánto tiempo le compra?" — respuesta: un protector de músico atenúa del orden de 15–25 dB, y por la regla de los 3 dB eso compra muchas veces más tiempo admisible. Si un grupo se atrasa y tapona la rotación: manda el cronómetro, se cambia de estación al minuto con lo que haya — cada estación tiene marcado su mínimo irrenunciable (★, un dato anotado con condiciones) y el resto es opcional.
+**Apoyo:** El profesor dirige cada bloque desde el frente con el cronómetro (guion propio: `guion_profesor_estaciones.md`). En E1 lee la referencia de REW en voz alta mientras los 9 celulares miden en fila junto al micrófono. Provocar en E3: "¿por qué NO da +6 dB?" — respuesta: las presiones de fuentes independientes no se suman de frente, se combinan estadísticamente, así que dos fuentes iguales dan solo ~+3 dB. Provocar en E5: "¿cuántos dB le baja un protector — y cuánto tiempo le compra?" — respuesta: un protector de músico atenúa del orden de 15–25 dB, y por la regla de los 3 dB eso compra muchas veces más tiempo admisible. Si un bloque se alarga: manda el cronómetro, a los 8′ se pasa al siguiente con lo que haya — cada estación tiene marcado su mínimo irrenunciable (★, un dato anotado con condiciones) y el resto es opcional.
 :::
 
 ## El oído no tiene párpados {.center}
@@ -229,7 +227,7 @@ estaciones:
 :::
 
 ::: {.notes}
-**Apoyo:** El formulario se llena al dorso de la planilla que el registrador fue completando durante la rotación — sin planilla no hay informe. Rúbrica rápida (guía de estaciones, pauta del mini-informe): **logrado** = las 4 casillas completas, regla +10/+3 bien usada, condiciones completas; **parcial** = dato correcto pero interpretación o condiciones cojas; **incipiente** = número sin condiciones o regla mal aplicada. Recoger junto con las hojas isofónicas del módulo 1: las dos piezas juntas son el taller de la semana.
+**Apoyo:** El formulario se llena al dorso de la planilla que el registrador fue completando durante los bloques — sin planilla no hay informe. Rúbrica rápida (guía de estaciones, pauta del mini-informe): **logrado** = las 4 casillas completas, regla +10/+3 bien usada, condiciones completas; **parcial** = dato correcto pero interpretación o condiciones cojas; **incipiente** = número sin condiciones o regla mal aplicada. Recoger junto con las hojas isofónicas del módulo 1: las dos piezas juntas son el taller de la semana.
 :::
 
 ## Síntesis del día
