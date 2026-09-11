@@ -24,3 +24,6 @@ __pycache__/
 /material/apps_recomendadas.html
 /material/curso/**/*.html
 /material/libro/*.html
+
+# Pistas ASA de las clases antiguas: derechos de terceros, solo en Drive
+_archivo/estimulos_AD/
