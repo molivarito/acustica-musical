@@ -70,10 +70,10 @@ está completa con presentaciones. (3) El **informe comparativo breve**
 (OA4.3, media página por grupo) es un formulario de casillas rotuladas
 al dorso de la hoja de registro — no prosa (precedente P1 de s06) — y
 se entrega al cierre de la salida: **es el único taller evaluado de la
-semana y la última nota de taller del semestre**. (4) Las **rutas** de
-la salida quedan como plantilla editable: los espacios concretos los
-fija el profesor [los espacios UC los decide el profesor según permisos
-y distancia]. (5) La escucha del día (sin nota, como todas las semanas) usa un
+semana y la última nota de taller del semestre**. (4) Los **tres espacios** (sala, pasillo,
+escalera) son fijos y los miden los 3 grupos en órdenes rotados
+(decisión D2, 2026-09-11: sin salida ni permisos); el tramo de pasillo y
+la escalera concretos los fija el profesor el jueves. (5) La escucha del día (sin nota, como todas las semanas) usa un
 estímulo grabado nuevo (**#16 del banco**: la misma frase de flauta seca
 y reverberante). (6)
 La **pauta del hito 3** se entrega impresa al final del m1 y se
@@ -180,9 +180,8 @@ línea de oído ANTES de encender la app. Primero suena, después se mide.
   preferidas como cualquier resonador. Única demo de la sesión.
 - **Actividades**: `actividades/guia_salida_medicion_t60.md` (guía PEE
   de la salida con registro + informe-formulario al dorso) ·
-  `actividades/rutas_salida_medicion.md` (plantilla editable de 5
-  rutas — 3 activas este semestre, 2 de reserva; espacios concretos
-  los fija el profesor) ·
+  `actividades/rutas_salida_medicion.md` (hoja de espacios: los tres
+  espacios del edificio y el orden de cada grupo) ·
   `actividades/encargo_hito3_presentacion_final.md` (pauta y rúbrica del
   hito 3: presentación + informe, 15 %; se publica HOY).
 - **Apuntes**: `apunte_s14_la_sala_como_instrumento.md`.
@@ -191,9 +190,9 @@ línea de oído ANTES de encender la app. Primero suena, después se mide.
   `material/profesor/banco_estimulos.md`): la misma frase de flauta seca y
   reverberante — grabar la semana previa (o convolución en editor).
 - **Trabajo físico del profesor**: lámina de errores frecuentes de la
-  Prueba 2 (sale de la corrección); fijar las 3 rutas activas (1–3)
-  con espacios UC reales y permisos (capilla/auditorio si se puede)
-  **[POR VERIFICAR: reserva/permiso de los espacios]**; elegir y
+  Prueba 2 (sale de la corrección); elegir el tramo de pasillo y la
+  escalera (a ≤2 min de la sala; sin permisos) y medir el $T_{60}$ de
+  la sala con REW como valor de control; elegir y
   probar la app de medición de $T_{60}$ (o el protocolo de
   grabación+espectrograma como plan B) — candidatas verificadas
   jul-2026: iOS **ClapIR** (Stephen Tarzia, gratis, respaldo académico
@@ -202,14 +201,14 @@ línea de oído ANTES de encender la app. Primero suena, después se mide.
   instalarla) — probar la elegida en un espacio real antes de s14;
   bolsa de globos; planilla
   compartida en línea con una fila por espacio; impresiones (3 guías,
-  3 rutas, 9 pautas hito 3); tener a mano el estímulo #16 del banco
+  3 hojas de espacios, 9 pautas hito 3); tener a mano el estímulo #16 del banco
   para la escucha del día.
 
 ## Riesgos y plan B
 
-- **Lluvia o rutas a la intemperie** → las rutas de la plantilla se
-  diseñan bajo techo o con tramos cubiertos; si un tramo queda
-  impracticable, cada ruta declara un espacio alternativo cercano.
+- **Un espacio en uso** (gente en la escalera, clase en el pasillo) →
+  esperar 1′ en silencio; si no se despeja, medir igual y anotar "fondo
+  alto / extrapolado"; todo es bajo techo, la lluvia no afecta.
 - **La app de $T_{60}$ no funciona o no existe en algún celular** →
   plan B metodológico enseñado en el m1: grabar el impulso con la app
   de grabadora/espectrograma del curso y medir en el archivo cuánto
@@ -218,10 +217,10 @@ línea de oído ANTES de encender la app. Primero suena, después se mide.
   declarada en la guía). La comparación entre espacios — que es lo que
   pide OA4.3 — sobrevive con cualquiera de los dos métodos si el grupo
   usa SIEMPRE el mismo.
-- **Espacio de la ruta ocupado o cerrado** → cada ruta trae un espacio
-  alternativo; si tampoco, el grupo hace espacio A y B más la
-  repetición, y lo anota como límite en el informe (es dato, no
-  fracaso).
+- **La escalera o el pasillo elegidos quedan cerrados** → el profesor
+  designa en el momento el sustituto más cercano (otro tramo, un baño
+  embaldosado, el hall); se anota en la hoja de espacios y en el
+  informe (es dato, no fracaso).
 - **Globos prohibidos o socialmente imposibles** (biblioteca, capilla
   en uso) → palmada fuerte o aplauso de tabla contra tabla: menos
   energía en graves pero suficiente para comparar; anotar qué impulso
@@ -230,10 +229,10 @@ línea de oído ANTES de encender la app. Primero suena, después se mide.
 - **Ruido de fondo alto tapa la cola** (hall en hora punta) → medir
   igual y anotar el límite: la diferencia fondo/caída ES contenido de
   OA4.3 (la guía trae la casilla); leer la caída inicial y extrapolar.
-- **Un grupo se pierde o se atrasa** → hora de corte y punto de
-  encuentro escritos en la guía y en el pizarrón desde el m1; el
-  profesor barre las rutas al final; un grupo con 2 espacios completos
-  tiene informe completo (el C es opcional por diseño).
+- **Un grupo se atrasa** → corte del minuto 50 escrito en la guía y en
+  el pizarrón desde el m1; el profesor barre los dos espacios externos
+  al final; un grupo con 2 espacios completos tiene informe completo
+  (el tercero se abrevia).
 - **La planilla compartida falla** (sin señal, sin cuenta) → los
   voceros dictan y el profesor llena la planilla en su notebook o en
   el pizarrón del punto de encuentro (5 filas × 4 datos caben en 2′
