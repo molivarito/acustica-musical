@@ -101,7 +101,7 @@ modulos:
         indent: 1
       - titulo: "Demo — fundamental ausente"
         url: "{sitio}/demos/demo_fundamental_ausente.html"
-  - nombre: "Sesión 06 — Sonoridad y decibel"
+  - nombre: "Sesión 06 — Sonoridad y decibel (suspendida el 11-sep: se dicta en s07 y s08)"
     items:
       - titulo: "Sonoridad y decibel: medir lo fuerte"
         url: "{sitio}/curso/sesion-06/apunte_s06_sonoridad_y_decibel.html"
@@ -114,14 +114,22 @@ modulos:
         indent: 1
       - titulo: "Demo — decibel y sonoridad"
         url: "{sitio}/demos/demo_decibel_sonoridad.html"
-  - nombre: "Sesión 07 — Prueba 1 + batidos"
+  - nombre: "Sesión 07 — Prueba 1 (s01–s05) + sonoridad y decibel"
     items:
-      - titulo: "Batidos: la ondulación que delata la desafinación"
+      - titulo: "Sonoridad y decibel: medir lo fuerte (lectura previa; material en Sesión 06)"
+        url: "{sitio}/curso/sesion-06/apunte_s06_sonoridad_y_decibel.html"
+      - {tipo: subheader, titulo: "Actividades"}
+      - titulo: "Hoja de registro — Mi curva isofónica (s07, módulo 2, 22 min) · taller de la semana"
+        url: "{sitio}/curso/sesion-06/actividades/hoja_registro_isofonica.html"
+        indent: 1
+      - titulo: "Demo — decibel y sonoridad"
+        url: "{sitio}/demos/demo_decibel_sonoridad.html"
+  - nombre: "Sesión 08 — Batidos y psicoacústica de la superposición"
+    items:
+      - titulo: "Batidos: la ondulación que delata la desafinación (lectura previa)"
         url: "{sitio}/curso/sesion-07/apunte_s07_batidos.html"
       - titulo: "Demo — batidos"
         url: "{sitio}/demos/demo_batidos.html"
-  - nombre: "Sesión 08 — Psicoacústica de la superposición"
-    items:
       - titulo: "Banda crítica y consonancia"
         url: "{sitio}/curso/sesion-08/apunte_s08_banda_critica_y_consonancia.html"
       - {tipo: subheader, titulo: "Actividades"}

@@ -42,15 +42,20 @@ lógica lineal por tramos que la versión anterior, reescalada a 48:
 | C.1c | OA1.2 | — | 2 | aplicación |
 | C.2a–b | OA1.2 | — | 4 | aplicación |
 | C.2c | OA2.2 | — | 2 | aplicación |
-| C.3a–d | OA4.2 | — | 8 | **básico** (contenido s06: solo leer un nivel, +10/+3, isofónica) |
+| C.3a | OA1.2 | OA2.1 | 2 | aplicación |
+| C.3b | OA2.2 | — | 2 | aplicación |
+| C.3c–d | OA2.1 | — | 4 | aplicación |
 | D.1 | OA2.1 | — | 3 | básico |
 | D.2 | OA4.1 | — | 3 | básico |
 | D.3 | OA2.1 | OA4.1 | 4 | aplicación |
 
-Cobertura: OA3.1 = 16 · OA1.1 ≈ 8 · OA1.2 = 10 · OA2.1 ≈ 7 ·
-OA2.2 = 8 (fundamental ausente, enseñada a fondo en s05: B.2 y C.2c) ·
-OA4.1 ≈ 9 · OA4.2 = 8. Lo de s06 (OA4.2) entra SOLO con ítems básicos,
-como exige la regla de dimensionamiento. (El mapeo no cambia respecto
+Cobertura: OA3.1 = 16 · OA1.1 ≈ 8 · OA1.2 = 12 · OA2.1 ≈ 11 ·
+OA2.2 = 10 (fundamental ausente, enseñada a fondo en s05: B.2, C.2c y
+C.3b) · OA4.1 ≈ 9. **OA4.2 no entra** (2026-09-11): la s06 se suspendió
+y su contenido (decibel, isofónicas, medición de niveles) se dicta en
+s07 m2 y s08 m1; se evalúa recién en la Prueba 2. C.3 pasó de "el coro
+en la sala" (s06) a "la altura tiene dos caras" (s05 reformulada:
+octava por razones, campana, Shepard, croma/altura tonal). (El mapeo no cambia respecto
 a la versión de respuesta abierta: los ítems evalúan lo mismo, solo
 cambió el formato de respuesta.)
 
@@ -75,11 +80,11 @@ cambió el formato de respuesta.)
 | C.2a | (b) | 2 |
 | C.2b | (d) | 2 |
 | C.2c | (a) | 2 |
-| C.3a | (c) 63 dB | 2 |
-| C.3b | (b) 70 dB | 2 |
-| C.3c | (d) | 2 |
+| C.3a | (b) | 2 |
+| C.3b | (a) | 2 |
+| C.3c | (a) | 2 |
 | C.3d | (a) | 2 |
-| D.1 | F·P·F·P·F·P (ver detalle) | 3 |
+| D.1 | F·P·F·P·F·P (frecuencia, altura, espectro, timbre, parcial, croma) | 3 |
 | D.2a | (b) 24 000 Hz | 1,5 |
 | D.2b | (c) | 1,5 |
 | D.3 (i) | (d) | 2 |
@@ -254,38 +259,39 @@ incapaz de radiar 82 Hz); (c) no da ningún mecanismo físico/perceptual,
 apela a "costumbre"; (d) confunde sumar sonoridad con reconstruir
 altura — son procesos distintos.
 
-**C.3a (2)**: **(c)** 63 dB SPL (dos fuentes iguales → **+3 dB**).
-Distractores: (a) 66 dB suma un incremento mayor al que corresponde a
-duplicar una fuente; (b) 60 dB asume que el nivel no cambia al sumar
-una fuente igual; (d) 120 dB suma los decibeles linealmente
-(60+60), el error típico más frecuente.
+**C.3a (2)**: **(b)**: una octava; la altura se organiza por razones
+de frecuencia (2:1), no por diferencias (apunte s05, "Por qué duplicar
+la frecuencia no es el doble de agudo"). Distractores: (a) "el doble de
+agudo" es la trampa del ítem — la altura no es proporcional a la
+frecuencia; (c) confunde la diferencia en Hz con un intervalo; (d)
+inventa que 220 y 440 Hz no son notas (son La3 y La4).
 
-**C.3b (2)**: **(b)** 70 dB SPL (diez fuentes → **+10 dB**).
-Distractores: (a) 600 dB multiplica linealmente (60×10), sin sentido
-físico; (c) 69 dB es un cálculo cercano pero no corresponde a la
-regla del curso; (d) 63 dB repite el resultado de C.3a, olvidando que
-ahora son diez cantantes y no dos.
+**C.3b (2)**: **(a)**: fundamental ausente / altura virtual: los
+parciales 2:3:4 comparten el período de la razón 1 y el oído repone
+esa fundamental (slides s05, "Un instrumento que hace esto solo: la
+campana"; Benade cap. 5). Distractores: (b) el *hum* está una octava
+abajo y NO es la nota que se canta; (c) la nota de golpe no es un
+parcial presente sino una construcción del patrón; (d) el oído no
+promedia frecuencias.
 
-**C.3c (2)**: **(d)**: aproximadamente **el doble de fuerte**; regla
-+10 dB (×10 en intensidad) ≈ doble de sonoridad. Distractores: (a)
-confunde directamente intensidad física ("diez veces más fuerte") con
-sonoridad percibida; (b) inventa un efecto de saturación que no está
-en el curso; (c) llega a la conclusión correcta (el doble) pero con
-una razón física incorrecta (no es presión sonora doblada, es la
-regla perceptual de +10 dB).
+**C.3c (2)**: **(a)**: construcción de Shepard (1964): componentes en
+todas las octavas con envolvente en campana; al subir, se apagan los
+agudos y entran graves; el oído sigue el croma y pierde la altura
+tonal (slides s05, "Una escala que sube para siempre"). Distractores:
+(b) la frecuencia no sube sin límite: la escala vuelve al punto de
+partida cada 12 notas; (c) no hay "bajada" que percibir, hay
+componentes que se renuevan; (d) la intensidad no cambia entre notas.
 
-**C.3d (2)**: **(a)**: el de 100 Hz se oye **más débil**; sobre la
-curva de 40 fones, en 100 Hz la curva está más arriba — a igual dB
-SPL, el tono grave necesita más nivel para igualar la sonoridad del de
-1000 Hz. Distractores: (b) ignora la curva isofónica y asume que igual
-dB SPL es igual sonoridad; (c) invierte cuál de los dos tonos se oye
-más débil; (d) invierte además el sentido del efecto (a igual nivel,
-los graves se oyen MENOS fuerte, no más).
+**C.3d (2)**: **(a)**: mismo croma (Do), distinta altura tonal
+(slides s05, "La altura tiene dos caras"). Distractores: (b) invierte
+las dos caras; (c) y (d) niegan una de las dos caras — la octava
+conserva el croma pero cambia la altura tonal.
 
 ## Parte D — Vocabulario y herramienta (10 pts)
 
-**D.1 (3, sin cambios)**: frecuencia F · altura P · espectro F ·
-timbre P · intensidad F · sonoridad P (0,5 c/u).
+**D.1 (3)**: frecuencia F · altura P · espectro F · timbre P ·
+parcial F · croma P (0,5 c/u). (Los pares intensidad/sonoridad
+salieron con la s06; parcial/croma son de s02–s05.)
 
 **D.2a (1,5)**: **(b)** 24 000 Hz (la mitad de la tasa de muestreo).
 Distractores: (a) 20 000 Hz confunde con el límite superior de

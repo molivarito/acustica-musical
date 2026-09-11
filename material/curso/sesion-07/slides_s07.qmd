@@ -15,19 +15,22 @@ format:
 
 **Módulo 1** — Prueba 1 (ocupa todo el módulo)
 
-**Módulo 2** — audición liviana: batidos (sin nota)
+**Módulo 2** — sonoridad y decibel (heredado de la s06 suspendida):
+escucha del día · el decibel · medir lo fuerte en 15′ · **mi curva
+isofónica** (taller de la semana)
 
 . . .
 
 Vuelvan del módulo 1 descansados: el 2 se escucha con los oídos.
 
 ::: {.notes}
-**Apoyo:** Esta semana se aplican dos reglas del diseño: en una
-sesión con prueba, la prueba ocupa todo el módulo 1 y el módulo 2 es
-de audición liviana; por eso esta semana no hay escucha del día (va
-dentro de la prueba, como escucha escrita) ni taller evaluado — la
-prueba es la evaluación de la semana. La escucha del día, práctica y
-sin nota, vuelve en s08 (plan, "Reglas aplicadas").
+**Apoyo:** La s06 (11-sep) se suspendió: su módulo 1 se dicta hoy
+en el módulo 2, con 15′ de medición compacta (lo esencial de las
+estaciones E1 y E3). La prueba ocupa todo el módulo 1 y evalúa
+s01–s05: el decibel NO entra hoy (recién en la Prueba 2). Excepción
+declarada: el módulo 2 lleva taller evaluado (la hoja isofónica) para
+no perder el taller de s06. Los batidos que este mazo tenía pasan a
+s08 (plan, "Nota de edición").
 :::
 
 ## Antes de empezar la prueba
@@ -72,224 +75,176 @@ la unidad académica: no se detiene la prueba ni se repite audio
 fuera de calendario (plan, módulo 1, fila 7–67′).
 :::
 
-## Se cobra el ticket de s06 {.center}
+## Escucha del día {.center .smaller}
+**Mismo fragmento, dos niveles.** Protocolo (10′, sin nota):
 
-> Dos flautas tocan la **misma nota**. Una queda apenas desafinada.
-
-**¿Qué es esa ondulación?**
-
-::: {.notes}
-**Apoyo:** Toque (o haga sonar) las dos flautas al unísono
-imperfecto, sostenido al menos 10 segundos, y lea 2–3 tickets de s06
-recopilados antes de preguntar; no explique todavía — la idea es
-dejar plantado que "eso que ondula tiene nombre y número, y hoy los
-vamos a encontrar" (plan, módulo 2, fila 0–8′). Respuesta esperada:
-no son dos notas ni una nota simplemente desafinada — es una sola
-nota cuya sonoridad ondula, un guau–guau–guau regular, como si
-alguien subiera y bajara el volumen varias veces por segundo
-(apunte, "¿Qué es esa ondulación?"). Si no hay flautas disponibles:
-demo en dos notebooks desincronizados (440 vs 442 Hz) o flauta real
-contra tono de la demo a 440 Hz — el fenómeno es idéntico (plan,
-"Riesgos y plan B").
+::: {.incremental}
+- Escuchan el fragmento, **dos pasadas** (nivel de sala realista y luego muy suave)
+- Anotan en 3 líneas: **describir → hipotetizar → verificar** (**2′**)
+- Discuten en la mesa (**3′**): el vocero anota el diagnóstico del grupo
+- Plenario (**3′**): el profesor pregunta a una o dos mesas — responde el vocero por el grupo — y cierra con su propia versión
 :::
 
-## Contemos juntos
-
-Antes de mirar cualquier número: **cuenten en voz alta** las
-ondulaciones por segundo.
+¿Qué cambió *además* del volumen?
 
 ::: {.notes}
-**Apoyo:** Pida que cuenten en voz alta antes de revelar cualquier
-número — es la predicción a mano alzada que pide el plan antes de
-cada cambio de f₂ (plan, módulo 2, fila 8–22′).
+**Apoyo:** Respuesta que se busca (no se da todavía): a nivel bajo desaparecen el bajo y el brillo, aunque siguen estando en la señal — se resuelve recién al final del módulo 1 con las curvas isofónicas. Preguntar selectivamente a una o dos mesas, exigiendo separar lo obvio ("suena más despacio") del dato ("desaparecieron el bajo y el brillo"). Estímulo: fragmento de mezcla completa con bajo prominente (banco de estímulos #9). Si la sala no deja oír la pérdida del bajo: plan B, fragmento suave en el parlante del celular del profesor y fuerte en el equipo de sala.
 :::
 
-## Demo: contar el batido {background-iframe="../../demos/demo_batidos.html" background-interactive=true}
+## Una pregunta que quedó pendiente {.center}
 
-::: {.notes}
-**Apoyo:** Opere la demo con el marcador de f_b oculto primero: el
-curso cuenta y luego se revela f_b = |f₂−f₁| en pantalla. El plan
-indica recorrer f₂ = 442, 444 y 437 Hz con f₁ = 440 Hz fija (plan,
-módulo 2, fila 8–22′). Pregunte "¿alguien oye DOS notas?" —
-respuesta esperada: no, una sola nota que ondula, no dos notas
-(apunte, "¿Por qué oímos una sola nota y no dos?").
-:::
+Del ticket de la sesión 5:
 
-## ¿Cuántas contaron?
-
-$f_1 = 440$ Hz fijo. $f_2 = 443$ Hz.
+> Un sonido grave y uno agudo, con **exactamente la misma energía
+> física**, ¿suenan igual de fuerte?
 
 . . .
 
-**Tres** por segundo. Con 442 Hz, dos. Con 437 Hz, tres otra vez —
-da lo mismo hacia qué lado está la desafinación.
+Hoy lo resolvemos — con números.
 
 ::: {.notes}
-**Apoyo:** Cifras del apunte: con f₁=440 Hz y f₂=443 Hz el curso
-contó tres ondulaciones por segundo; con 442 Hz, dos; con 437 Hz,
-tres de nuevo — da lo mismo hacia qué lado está la desafinación
-(apunte, "¿Qué es esa ondulación?").
+**Apoyo:** Este es el cobro del ticket de salida de s05, que traía dos preguntas. La primera (misma frecuencia, ¿distinto volumen?) es la fácil: sí, para eso existe el matiz del pianissimo al fortissimo — puede votarse a mano alzada y pasar rápido. La segunda es la que queda abierta en esta slide (grave y agudo con la misma energía física, ¿igual de fuerte?) y se resuelve recién con la mini-lección del decibel y la experiencia isofónica de esta sesión.
 :::
 
-## La regla {.center}
+## Un rango descomunal
 
-> $$f_b = |f_2 - f_1|$$
->
-> [Un batido por segundo por cada hertz de diferencia.]{style="color:#0f766e"}
+Entre el sonido más débil que un oído sano detecta y el nivel que ya
+duele hay un factor de intensidad de:
+
+::: {.center}
+[**10¹²**]{style="color:#0f766e"}
+:::
+
+**Un millón de millones.** Ningún instrumento, y ningún oído, trabaja
+cómodo con eso en escala lineal.
 
 ::: {.notes}
-**Apoyo:** Complemento del apunte: la regla f_b=|f₂−f₁| es una de
-las relaciones más limpias del curso — no es aproximada, no depende
-del instrumento ni del oyente, y se verifica contando con los dedos
-(apunte, "¿Qué es esa ondulación?").
+**Apoyo:** Cifra clave (apunte, sección "Un rango de un millón de millones"): entre el umbral de audición y el umbral del dolor hay un factor de ~10¹² en intensidad. El umbral de audición corresponde a una presión de 20 µPa, que Benade (1990, sec. 13.1) describe como 1/3.530.000.000 de la presión atmosférica — cifra útil si se quiere impresionar a la sala.
 :::
 
-## ¿Por qué late?
+## ¿Cómo se comprime un rango así?
 
-Dos trenes de empujones al aire, casi al mismo ritmo:
+> El **decibel** no es una cantidad de sonido: es la forma de expresar
+> la **razón** entre dos sonidos.
 
-::: {.incremental}
-- **En fase**: los empujones se suman → refuerzo
-- **En contrafase**: uno empuja, el otro succiona → silencio
-- Ese ciclo refuerzo–silencio se repite $|f_2-f_1|$ veces por segundo
-:::
+En vez de *sumar* energía, el oído (y el dB) **comparan multiplicando**.
 
-![Envolvente del batido: refuerzo y cancelación alternados.](../../assets/figuras/s07_fases_batido.svg)
-
-::: {.notes}
-**Apoyo:** El argumento sin trigonometría (apunte, "¿Por qué dos
-tonos casi iguales laten?"): dos trenes de empujones casi
-sincronizados se refuerzan cuando empujan a la vez (en fase) y se
-cancelan cuando uno empuja y el otro succiona (en contrafase); con
-1 Hz de diferencia ese ciclo de refuerzo–cancelación ocurre una vez
-por segundo, con 3 Hz ocurre tres veces. El nombre técnico es
-"batido de primer orden" (Roederer, 1997, cap. 2, sec. 2.4, citado
-en el apunte). Recuadro opcional del apunte para quien pida el
-detalle: la suma de dos sinusoides se puede escribir como una onda
-rápida a la frecuencia promedio multiplicada por una envolvente
-lenta, y como el oído no distingue el signo de la envolvente, se
-oyen dos máximos por ciclo — los batidos ocurren a |f₂−f₁| por
-segundo, no a la mitad (apunte, recuadro opcional).
-:::
-
-## Votación
-
-$f_1=440$, $f_2=443$. ¿Cuántos batidos por segundo predice la regla?
+**Votación**: ¿"+10 dB" es sumar un poco, o multiplicar por 10?
 
 . . .
 
-**3** — coincide con lo que ya contaron.
+**Multiplicar por 10.**
 
 ::: {.notes}
-**Apoyo:** Respuesta esperada: 3 batidos por segundo
-(f_b=|443−440|=3), coincide con lo ya contado con la demo (plan,
-módulo 2, fila 22–35′).
+**Apoyo:** Es esperable que alguien responda "sumar un poco" por asociarlo a un porcentaje; la frase que ordena la idea (apunte, sección "El decibel: una escala para un oído que compara multiplicando"): el decibel no es una cantidad de sonido, es la razón entre dos sonidos — el oído, igual que el dB, compara multiplicando en vez de sumar.
 :::
 
-## Ahora ustedes: afinar solo de oído
-
-Un voluntario lleva $f_2$ al unísono **sin mirar los números**.
-
-::: {.notes}
-**Apoyo:** Pida 3–4 voluntarios; modere el juego con tono relajado
-— es después de la prueba y sin nota (plan, módulo 2, fila 35–52′).
-Si hay una segunda flauta o dos cuerdas reales disponibles, un
-voluntario puede repetir el ejercicio afinando el instrumento real
-contra el otro.
-:::
-
-## Demo: modo afinación {background-iframe="../../demos/demo_batidos.html" background-interactive=true}
-
-::: {.notes}
-**Apoyo:** El curso arbitra en voz alta mientras el voluntario
-ajusta f₂ ("todavía bate… ahí quedó"). Al revelar los números,
-muestre cuán cerca quedó cada voluntario — ¿1 Hz? ¿0,5 Hz? (plan,
-módulo 2, fila 35–52′). El apunte señala que en este juego los
-voluntarios llegan rutinariamente a menos de 1 Hz de error solo
-escuchando; con paciencia, el método llega a fracciones de hertz
-(apunte, "¿Cómo se convierte el batido en una herramienta de
-afinación?").
-:::
-
-## La receta del afinador
+## La gramática mínima del dB
 
 ::: {.incremental}
-- Toque las dos fuentes juntas
-- El batido, cada vez **más lento**…
-- … hasta que **se detenga**
+- **+10 dB = ×10** en intensidad. +20 dB, ×100. +30 dB, ×1000.
+- **+3 dB = ×2** en intensidad — un cambio **chico** al oído.
+- Para sonar **el doble de fuerte** hacen falta unos
+  [**+10 dB**]{style="color:#0f766e"} — diez veces más energía.
 :::
 
-> [Batido detenido = unísono.]{style="color:#0f766e"}
+**Votación**: dos parlantes idénticos sonando juntos, ¿suben +3, +6 o
++10 dB?
 
-Así afinan los pianos desde hace dos siglos — en s09 lo hacemos en serio.
+. . .
+
+**+3 dB.** (Volveremos sobre esto en las estaciones.)
 
 ::: {.notes}
-**Apoyo:** Complemento de cierre (apunte, "¿Cómo se convierte el
-batido en una herramienta de afinación?"): el batido es un detector
-de desafinación más fino que el oído melódico — si dos cuerdas
-difieren en 1 Hz, ningún oído las distingue como dos alturas, pero
-cualquier oído cuenta un batido por segundo sin esfuerzo. En s09 la
-herramienta pasa de truco a oficio: no solo los unísonos, también
-los intervalos (octavas, quintas, terceras) producen batidos
-característicos cuando están desafinados, y contando batidos se
-afina un temperamento completo — el procedimiento histórico de los
-afinadores de piano (Benade, 1990, cap. 16, lo describe paso a
-paso).
+**Apoyo:** Falta la tercera votación del plan, no impresa en la slide: "¿cuántas guitarras iguales hacen falta para oír el doble de fuerte?" — respuesta (apunte, sección "Dos guitarras no suenan el doble de fuerte"): unas **diez** fuentes iguales para el doble de sonoridad (+10 dB) y unas **cien** para el cuádruple (+20 dB), porque las presiones de fuentes independientes no se suman de frente sino que se combinan estadísticamente.
 :::
 
-## El borde del fenómeno {.center}
+## Poniendo un cero a la escala
 
-¿Qué pasa si alejamos $f_2$ cada vez más?
+> $L_p$ = **nivel de presión sonora**, en **dB SPL re 20 µPa**
+> (la referencia: el umbral de audición a 1000 Hz)
 
-Anoten: ¿dónde dejan de poder contar? ¿qué oyen ahí?
+| Nivel | Referencia |
+|---|---|
+| 0 dB SPL | umbral de audición |
+| ~30 dB | un susurro |
+| ~60 dB | conversación |
+| ~95–110 dB | orquesta o banda en fortissimo |
+| ~120 dB | umbral del dolor |
 
 ::: {.notes}
-**Apoyo:** No explique todavía lo que va a aparecer — la rugosidad
-y la separación en dos notas son el corazón de s08 (plan, módulo 2,
-fila 52–62′); limítese a recoger las palabras del curso. Para su
-propia orientación (no lo diga en clase): el apunte adelanta que en
-algún punto los batidos se vuelven demasiado rápidos para
-contarlos, la ondulación se convierte en aspereza y, más allá,
-aparecen dos notas distinguibles — el desarrollo completo es el
-tema de s08 (apunte, "¿Por qué oímos una sola nota y no dos?").
+**Apoyo:** Los valores de la tabla son típicos y redondeados, no medidos en las salas del curso (apunte, figura 1 y su leyenda; ROS cap. 6) — aclarar que los valores reales de la sala se miden hoy en las estaciones. Lₚ en dB SPL re 20 µPa es la notación fijada en `PLAN_SEMESTRE.md`.
 :::
 
-## Demo: barriendo Δf hacia arriba {background-iframe="../../demos/demo_batidos.html" background-interactive=true}
+## Medir lo fuerte en 15 minutos {.smaller}
+
+Todo el curso mide a la vez, con su app en **dB(A)**. Prediga antes de cada medición.
+
+::: {.incremental}
+1. **Palmas**: una persona aplaude sostenido; luego cuatro. ¿Sube +3, +6 o +12 dB?
+2. **Dos fuentes**: celular A con ruido, B, y A+B — desde el anillo de 1 m.
+3. **Referencia**: voz a 30 cm y a 3 m; su app en fila junto al micrófono, contra REW.
+:::
 
 ::: {.notes}
-**Apoyo:** Recorra Δf lentamente hacia arriba — 5, 10, 15, 20, 30
-Hz, f₂ hasta 470 Hz — y anote en el pizarrón las palabras que use el
-curso ("áspero", "granulado", "se separó") sin explicarlas (plan,
-módulo 2, fila 52–62′). Si la demo no corre en el equipo de
-proyección: dos celulares con generador de tonos a 440/442 Hz sobre
-el micrófono del equipo (se pierde la envolvente visual, no el
-fenómeno) y dibuje la envolvente en el pizarrón (plan, "Riesgos y
-plan B").
+**Apoyo:** Lo esencial de las estaciones E1 y E3 de s06, en serie y con los 9 celulares midiendo el mismo evento (guion: `ediciones/2026-2/impresiones_s07/hoja_clase_s07.md`). Palmas: no revele la lectura hasta el final del bloque; cuatro fuentes ≈ +6 dB, la sala vota +12. Dos fuentes: RUIDO ROSA en ambos celulares, no tono puro (dos tonos iguales son coherentes y dan entre 0 y +6 según la posición); esperar A ≈ B ±1 dB y A+B ≈ +3. Referencia: REW SPL Meter A/Slow, Leq en voz alta, ganancia fija; 30 cm ≈ 70–75 dB(A), caída a 3 m ≈ 10–15 dB; los celulares discrepan en el absoluto (±5 dB) pero coinciden en la caída — el celular con caída mucho menor tiene control automático de ganancia: es el mejor dato. Remate: comparaciones con el mismo aparato son confiables; los absolutos sin calibrar, no. Fusible si el módulo va atrasado: solo palmas + dos fuentes (9′).
+:::
+
+## ¿Mi oído mide parejo en toda la escala musical? {.center}
+
+**Prediga por escrito, antes de tocar la demo:**
+
+Para sonar **igual de fuerte** que un tono de 1000 Hz, uno de 125 Hz
+¿va a necesitar más, igual o menos nivel?
+
+::: {.notes}
+**Apoyo:** Verificar al pasar por las mesas que la predicción quede escrita ANTES de tocar la demo. Respuesta que trae la sesión (no se revela aún): a 125 Hz hace falta MÁS nivel que a 1000 Hz para sonar igual de fuerte — el oído es más sordo a los graves. Es esperable que algunos marquen "igual" asumiendo que el oído es un medidor plano; no corregir todavía, la demo lo va a mostrar.
+:::
+
+## Demo: dibuje su curva isofónica {background-iframe="../../demos/demo_decibel_sonoridad.html" background-interactive=true}
+
+::: {.notes}
+**Apoyo:** Formato 3, por turnos (~8′ por persona: 27′ de fase − 2′ de predicción = 25′ ÷ 3 integrantes). Mínimo irrenunciable ★: igualar 125, 1000 (referencia) y 4000 Hz; 250, 2000 y 8000 Hz son opcionales para quien alcance. Rotar por los grupos y provocar: "¿su curva es la de su compañero?", "¿a qué nivel de referencia está midiendo — y cambiaría con otro nivel?". Recordar la advertencia de la demo: sin calibración los dB son relativos, lo que vale es la FORMA de la curva. Si el nivel de referencia queda muy bajo o alto en algún notebook: la guía fija el ajuste inicial (referencia cómoda, ni susurro ni molestia) y, si sobra tiempo, un grupo rápido puede repetir 2 puntos con referencia más suave y reportarlo como dato adicional.
+:::
+
+## Lo que dibujaron las curvas {.center}
+
+::: {.incremental}
+- **Igual nivel físico ≠ igual sonoridad.**
+- El oído es más sordo a los graves (y a los muy agudos).
+- Esa sordera **se agrava a niveles bajos**.
+:::
+
+. . .
+
+Por eso la mezcla suave de la escucha del día **perdió el bajo**: su
+oído lo soltó primero.
+
+::: {.notes}
+**Apoyo:** Puesta en común: un vocero por grupo describe la forma de su curva (¿dónde pidió más nivel?); superponer las 3 formas en el pizarrón sobre ejes Hz/dB. Moraleja que debe quedar anotada: igual nivel físico no es igual sonoridad; el oído es más sordo a los graves (y a los muy agudos), y esa sordera se agrava a niveles bajos. Cerrar conectando con la escucha del día: por eso la mezcla suave "perdió" el bajo — el oído lo soltó primero, no la mezcla.
 :::
 
 ## Síntesis del día
 
 ::: {.incremental}
-- Un batido por segundo por cada Hz de diferencia
-- El batido delata desafinaciones que el oído no distingue como dos alturas
-- Batido detenido = unísono
+- Intensidad es del sonido; **sonoridad** es del oyente.
+- El dB compara por factores: +10 dB ≈ el doble de fuerte; +3 dB, un
+  cambio chico.
+- Medir con juicio: comparaciones relativas confiables, dosis auditiva
+  vigilada.
 :::
 
-## Ticket de salida hacia s08 {.center}
-
-Cuando la diferencia crece más allá de lo que "batea"…
-
-**¿qué se oye, y dónde termina eso?**
+**Ticket hacia s08**: dos flautas tocan la MISMA nota y una queda
+apenas desafinada. ¿Qué se oye? ¿Y si la desafinación crece?
 
 ::: {.notes}
-**Apoyo:** Recoja los tickets al cierre; el plan los define como el
-eslabón hacia la escucha del día de s08 (banda crítica) (plan,
-"Cadena de tickets").
+**Apoyo:** El ticket se escribe MIENTRAS el profesor anuncia (actos compatibles): siembra los batidos que abren el módulo 1 de s08. Recoger hojas isofónicas (taller de la semana, rúbrica rápida) y tickets.
 :::
 
-## Para la próxima
+## Para la próxima {.center}
 
-- s08: taller psicoacústico — **traigan audífonos**
+- **s08 (9-oct)**: batidos en 15′ y banda crítica — **traigan audífonos**
 - Comienzan los talleres de medición sobre el objeto del proyecto
   (s08–s12): traigan su objeto o un avance medible
-- Vuelve la escucha del día (práctica, sin nota)
+- Lectura: capítulos 7 (batidos) y 8 (banda crítica)
+- El 2-oct no hay clase

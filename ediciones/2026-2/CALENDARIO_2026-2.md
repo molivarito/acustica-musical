@@ -33,11 +33,11 @@ oficial de Dirección Académica, `fechas-importantes-2026-2.pdf`).
 | s03 | vie 21-ago | Lanzamiento del proyecto · **F1 (resuelto): semana universitaria — taller formativo, sin nota** |
 | s04 | vie 28-ago | Instrumentos de cuerda pulsada #1 |
 | s05 | vie 04-sep | **Hito 1 del proyecto (10 %)** |
-| s06 | vie 11-sep | Estaciones de niveles; mini-informe SPL. Última clase antes del receso |
+| s06 | vie 11-sep | **SUSPENDIDA** (2026-09-11). Su módulo 1 (decibel, isofónica) se dicta en s07 m2; los batidos de s07 pasan a s08 m1; las estaciones E2/E4/E5 y el mini-informe se eliminan |
 | — | vie 18-sep | **RECESO (14–19 sep) — sin clase** |
-| s07 | vie 25-sep | **Prueba 1 (10 %) + escucha escrita E1** — dos semanas después de s06: colchón de estudio natural |
+| s07 | vie 25-sep | **Prueba 1 (10 %, s01–s05) + escucha escrita E1** · m2: sonoridad y decibel (de s06), hoja isofónica = taller de la semana |
 | — | vie 02-oct | **SIN CLASE — actividades suspendidas desde 13:30** |
-| s08 | vie 09-oct | Parten talleres de medición sobre el objeto (s08–s12) |
+| s08 | vie 09-oct | Batidos en 15′ + banda crítica; parten talleres de medición sobre el objeto (s08–s12) |
 | s09 | vie 16-oct | Afinar por batidos; escala del objeto |
 | s10 | vie 23-oct | **Hito 2 del proyecto (10 %)** + clínicas |
 | s11 | vie 30-oct | Instrumentos de cuerda frotada #2 |
@@ -77,6 +77,12 @@ es **"mejores 8 de 9"** (el material genérico conserva "mejores 8 de
 Hecho registrado en `DATOS_CURSO.yml` (clave `talleres`).
 
 ## Consecuencias de calendario a tener presentes
+
+- **s06 suspendida (11-sep)**, decisión del 2026-09-11: se mantiene el
+  calendario. La Prueba 1 evalúa s01–s05 (el decibel entra en la
+  Prueba 2); s07 m2 dicta el decibel y la isofónica con 15′ de medición
+  compacta; s08 m1 abre con los batidos en 15′. El taller de s06 (hoja
+  isofónica) se rinde en s07: siguen 9 talleres, mejores 8 de 9.
 
 - **El receso corta el semestre entre s06 y s07**: la Prueba 1 queda
   dos semanas después de cerrar su materia — regalo de estudio, pero

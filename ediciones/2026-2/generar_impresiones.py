@@ -26,16 +26,16 @@ RUBRICA = RAIZ / "material/curso/sesion-01/actividades/rubrica_oa3_hoja.md"
 def generar(nn):
     origen = RAIZ / f"material/curso/sesion-{nn}/actividades"
     destino = EDICION / f"impresiones_s{nn}"
-    if not origen.is_dir():
-        print(f"s{nn}: sin actividades/ (sesión de prueba) — nada que imprimir")
-        return
+    # Una sesión sin actividades/ (s07, s13: pruebas) igual tiene paquete:
+    # la rúbrica y los .md locales (hoja de clase, guiones).
     destino.mkdir(exist_ok=True)
     # Fuentes: las actividades de la sesión, la rúbrica del profesor y los
     # .md locales del propio paquete (p. ej. el guion relámpago de s01).
     # Se excluyen los archivos históricos que el diseño conserva como
     # registro pero que no se imprimen (hallazgo del barrido de s15).
     HISTORICOS = {"hoja_coevaluacion_final.md"}
-    fuentes = [f for f in sorted(origen.glob("*.md")) if f.name not in HISTORICOS] \
+    actividades = sorted(origen.glob("*.md")) if origen.is_dir() else []
+    fuentes = [f for f in actividades if f.name not in HISTORICOS] \
         + [RUBRICA] + sorted(destino.glob("*.md"))
     for f in fuentes:
         salida = destino / (("rubrica_oa3_hoja" if f == RUBRICA else f.stem) + ".html")

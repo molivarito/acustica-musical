@@ -1,8 +1,10 @@
 # Prueba 1 — Acústica Musical UC
 
 **Sesión 07, módulo 1.** Evalúa OA1.1, OA1.2, OA2.1, OA2.2
-(fundamental ausente: ítems B.2 y C.2c), OA4.1, OA4.2 y
-OA3.1 (escucha escrita), sobre el contenido de las sesiones 01–06.
+(fundamental ausente: ítems B.2, C.2c y C.3b) y OA4.1, más
+OA3.1 (escucha escrita), sobre el contenido de las sesiones 01–05
+(la s06 del 11-sep se suspendió; su contenido se dicta en s07 y s08 y
+entra recién en la Prueba 2).
 La Parte A (OA3.1) se aplica dentro de esta prueba pero se califica
 aparte, como uno de los tres eventos de la escucha argumentada escrita
 del curso (10 %); las Partes B, C y D son las que determinan la nota
@@ -26,7 +28,7 @@ los 48 puntos de la prueba.
 
 1. Responda en los espacios de este cuadernillo, con letra legible.
    Respuestas cortas y precisas valen más que respuestas largas.
-2. Recibirá además una **hoja de figuras** (Figuras 1, 2 y 3).
+2. Recibirá además una **hoja de figuras** (Figuras 1 y 2).
    Entréguela junto con el cuadernillo.
 3. La prueba **suena**: hay 3 estímulos de audio que se reproducen por
    el equipo de la sala según el calendario del pizarrón (minuto 10:
@@ -285,50 +287,60 @@ nota común en la música que escuchamos.
 (d) Los armónicos se oyen por separado y el cerebro los suma en
 volumen, no en altura, dando la sensación de un tono grave.
 
-### C.3 — El coro en la sala (8 puntos)
+### C.3 — La altura tiene dos caras (8 puntos)
 
-En un ensayo, **un** cantante produce un nivel de **60 dB SPL** en el
-punto donde está sentado el director.
+a) (2 pts) Suena un tono de **220 Hz** y luego uno de **440 Hz**. ¿Qué
+relación hay entre ambos, y qué se puede afirmar sobre "qué tan agudo"
+suena el segundo?
 
-a) (2 pts) Cantan **dos** cantantes iguales (misma potencia, misma
-distancia). ¿Qué nivel marca ahora un sonómetro en ese punto?
+(a) Suena "el doble de agudo", porque la frecuencia se duplicó.
+(b) Están a una octava; la altura se organiza por **razones** de
+frecuencia, no por diferencias: de 440 a 880 Hz hay también una
+octava aunque el salto cubra el doble de hertz.
+(c) Están a una quinta justa, porque 440 − 220 = 220 Hz.
+(d) El segundo suena más agudo, pero no forman un intervalo definido
+porque ninguno de los dos es una nota de la escala.
 
-(a) 66 dB
-(b) 60 dB
-(c) 63 dB
-(d) 120 dB
+b) (2 pts) En una campana, los parciales medidos respecto del *prime*
+son: *hum* 0,5 · *prime* 1 · *tierce* 1,2 · *quint* 1,5 · *nominal* 2
+· *superquint* 3 · *octave nominal* 4. La nota que el oído canta (la
+**nota de golpe**) coincide con el *prime*, pero el oído la construye
+a partir de *nominal*, *superquint* y *octave nominal* (2 : 3 : 4).
+¿Qué fenómeno visto en clase explica esa construcción?
 
-b) (2 pts) ¿Y con **diez** cantantes iguales?
+(a) La **fundamental ausente**: el patrón 2 : 3 : 4 tiene el período de
+la razón 1, y el oído "pone" esa fundamental aunque la nota se apoye
+en los parciales altos.
+(b) El *hum*, por ser el parcial más grave, fija la nota que se oye.
+(c) La nota de golpe es simplemente el parcial más intenso de la
+campana.
+(d) El oído promedia las frecuencias de todos los parciales y canta
+ese promedio.
 
-(a) 600 dB
-(b) 70 dB
-(c) 69 dB
-(d) 63 dB
+c) (2 pts) En clase escuchamos una escala que parecía **subir para
+siempre** sin llegar nunca más alto (escala de Shepard). ¿Por qué
+funciona la ilusión?
 
-c) (2 pts) Esos diez cantantes, ¿se oyen aproximadamente "el doble de
-fuerte" o "diez veces más fuerte" que uno solo? Justifique con la
-regla del curso.
+(a) Cada nota es una pila de componentes separados por octavas; al
+subir, los componentes agudos se apagan y aparecen graves nuevos: el
+oído sigue el **croma** (qué nota es) y pierde la **altura tonal**
+(qué tan alto).
+(b) Porque la frecuencia sube realmente sin límite, hasta el
+ultrasonido, y el oído deja de oírla y "reinicia".
+(c) Porque el oído se acostumbra a la subida y no percibe la bajada
+que ocurre cada doce notas.
+(d) Porque cada nota es un poco más intensa que la anterior, y el
+oído confunde "más fuerte" con "más agudo".
 
-(a) Diez veces más fuerte, porque suenan diez cantantes en vez de uno.
-(b) Prácticamente igual de fuerte, porque el oído se satura por
-encima de 60 dB.
-(c) El doble de fuerte, porque diez cantantes producen el doble de
-presión sonora que uno solo.
-(d) El doble de fuerte, porque +10 dB (×10 en intensidad) equivale
-aproximadamente a duplicar la sonoridad percibida.
+d) (2 pts) Un tono de **261 Hz** (Do4) y uno de **523 Hz** (Do5). Según
+las **dos caras de la altura**, ¿en qué se parecen y en qué difieren?
 
-d) (2 pts) La **Figura 3** muestra curvas isofónicas. A nivel bajo
-(curva de 40 fones): un tono de **100 Hz** y uno de **1000 Hz** llegan
-al oído con el **mismo nivel en dB SPL**. ¿Se oyen igual de fuerte?
-
-(a) El de 100 Hz se oye más débil; en la curva de 40 fones, a 100 Hz
-la curva está más arriba, es decir necesita más dB SPL que el de
-1000 Hz para igual sonoridad.
-(b) Se oyen igual de fuerte, porque tienen el mismo nivel en dB SPL.
-(c) El de 1000 Hz se oye más débil, porque el oído es menos sensible
-a esa frecuencia.
-(d) El de 100 Hz se oye más fuerte, porque los graves se perciben con
-más energía a igual nivel.
+(a) Tienen el **mismo croma** (ambos son Do) y **distinta altura
+tonal** (el segundo suena más alto).
+(b) Tienen distinto croma y la misma altura tonal.
+(c) Son iguales en las dos caras, porque 523 es el doble de 261.
+(d) Son distintos en las dos caras: el segundo es otra nota y además
+más alta.
 
 ## Parte D — Vocabulario y herramienta (10 puntos, ~8 minutos)
 
@@ -339,7 +351,7 @@ Clasifique cada término según describa el **sonido físico** (F) o la
 (0,5 pts c/u):
 
 frecuencia ____ · altura ____ · espectro ____ · timbre ____ ·
-intensidad ____ · sonoridad ____
+parcial ____ · croma ____
 
 ### D.2 — El techo de la app (3 puntos)
 
@@ -428,10 +440,3 @@ en escala de grises legible).
   la mitad del largo → picos pares (440, 880, 1320 Hz) claramente
   hundidos (≥15 dB bajo sus vecinos). Rotular el eje de frecuencia
   cada 220 Hz para que los parciales sean contables.
-- **Figura 3 — Curvas isofónicas simplificadas** (redibujar a mano o
-  con software propio, NO fotocopiar de un libro): ejes frecuencia
-  20–10 000 Hz (log) vs nivel 0–100 dB SPL; tres curvas rotuladas 20,
-  40 y 80 fones, con la forma estándar (suben hacia los graves, y más
-  cuanto más baja la curva; valle suave en 3–4 kHz). Debe poder
-  leerse que, sobre la curva de 40 fones, 100 Hz exige del orden de
-  10–20 dB más que 1000 Hz para igual sonoridad.

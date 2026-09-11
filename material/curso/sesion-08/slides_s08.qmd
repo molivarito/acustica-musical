@@ -16,7 +16,7 @@ format:
 | Módulo 1 | Módulo 2 |
 |---|---|
 | Devolución Prueba 1 | Ranking a ciegas: ¿qué intervalo es más liso? |
-| Escucha del día (sin nota) | Por qué la 5ª es lisa y el tritono roza |
+| Batidos en 15′: oír, contar, regla, borde | Por qué la 5ª es lisa y el tritono roza |
 | El mapa del choque: batido → dos notas | Taller PEE: **radiografía espectral** del objeto |
 | Taller psicoacústico (registro, sin nota) | *(evaluado, 35 %)* |
 
@@ -38,32 +38,154 @@ Corte duro al minuto 10.
 **Apoyo:** Errores más repetidos por parte, según la corrección real (ajustar a lo que muestre este año): mezclar describir con interpretar; leer ejes sin unidades; proporciones invertidas; vocabulario físico y perceptual cruzado. Regla anunciada: apelaciones por escrito o en horario de consulta, nunca en aula (precedente que funcionó en s06). Si la devolución se alarga, el corte es igual a los 10′ aunque queden manos alzadas.
 :::
 
-## Escucha del día {.center .smaller}
-**Protocolo** (10′, sin nota):
+## Batidos en 15 minutos {.center}
+
+Lo que iba a ser el módulo 2 de s07, compactado: **oír, contar, la regla, y el borde**.
+
+::: {.notes}
+**Apoyo:** La s06 se suspendió y s07 usó su módulo 2 para el decibel; los batidos se presentan aquí en 15′ (plan s08, fila 10–25′) y hacen de escucha del día: al final, el barrido de Δf se describe por etapas sin nombres técnicos. El juego de afinar de oído queda para s09.
+:::
+
+## Se cobra el ticket de s07 {.center}
+
+> Dos flautas tocan la **misma nota**. Una queda apenas desafinada.
+
+**¿Qué es esa ondulación?**
+
+::: {.notes}
+**Apoyo:** Toque (o haga sonar) las dos flautas al unísono
+imperfecto, sostenido al menos 10 segundos, y lea 2–3 tickets de s07
+recopilados antes de preguntar; no explique todavía — la idea es
+dejar plantado que "eso que ondula tiene nombre y número, y hoy los
+vamos a encontrar" (plan s08, módulo 1, fila 10–25′). Respuesta esperada:
+no son dos notas ni una nota simplemente desafinada — es una sola
+nota cuya sonoridad ondula, un guau–guau–guau regular, como si
+alguien subiera y bajara el volumen varias veces por segundo
+(apunte, "¿Qué es esa ondulación?"). Si no hay flautas disponibles:
+demo en dos notebooks desincronizados (440 vs 442 Hz) o flauta real
+contra tono de la demo a 440 Hz — el fenómeno es idéntico (plan,
+"Riesgos y plan B").
+:::
+
+## Contemos juntos
+
+Antes de mirar cualquier número: **cuenten en voz alta** las
+ondulaciones por segundo.
+
+::: {.notes}
+**Apoyo:** Pida que cuenten en voz alta antes de revelar cualquier
+número — es la predicción a mano alzada que pide el plan antes de
+cada cambio de f₂ (plan s08, fila 10–25′).
+:::
+
+## Demo: contar el batido {background-iframe="../../demos/demo_batidos.html" background-interactive=true}
+
+::: {.notes}
+**Apoyo:** Opere la demo con el marcador de f_b oculto primero: el
+curso cuenta y luego se revela f_b = |f₂−f₁| en pantalla. El plan
+indica recorrer f₂ = 442, 444 y 437 Hz con f₁ = 440 Hz fija (plan,
+módulo 2, fila 8–22′). Pregunte "¿alguien oye DOS notas?" —
+respuesta esperada: no, una sola nota que ondula, no dos notas
+(apunte, "¿Por qué oímos una sola nota y no dos?").
+:::
+
+## ¿Cuántas contaron?
+
+$f_1 = 440$ Hz fijo. $f_2 = 443$ Hz.
+
+. . .
+
+**Tres** por segundo. Con 442 Hz, dos. Con 437 Hz, tres otra vez —
+da lo mismo hacia qué lado está la desafinación.
+
+::: {.notes}
+**Apoyo:** Cifras del apunte: con f₁=440 Hz y f₂=443 Hz el curso
+contó tres ondulaciones por segundo; con 442 Hz, dos; con 437 Hz,
+tres de nuevo — da lo mismo hacia qué lado está la desafinación
+(apunte, "¿Qué es esa ondulación?").
+:::
+
+## La regla {.center}
+
+> $$f_b = |f_2 - f_1|$$
+>
+> [Un batido por segundo por cada hertz de diferencia.]{style="color:#0f766e"}
+
+::: {.notes}
+**Apoyo:** Complemento del apunte: la regla f_b=|f₂−f₁| es una de
+las relaciones más limpias del curso — no es aproximada, no depende
+del instrumento ni del oyente, y se verifica contando con los dedos
+(apunte, "¿Qué es esa ondulación?").
+:::
+
+## ¿Por qué late?
+
+Dos trenes de empujones al aire, casi al mismo ritmo:
 
 ::: {.incremental}
-- Escuchan el estímulo, **dos pasadas**
-- Anotan en 3 líneas: **describir → hipotetizar → verificar** (**2′**)
-- Discuten en la mesa (**3′**): el vocero anota el diagnóstico del grupo
-- Plenario (**3′**): el profesor pregunta a una o dos mesas — responde el vocero por el grupo — y cierra con su propia versión
+- **En fase**: los empujones se suman → refuerzo
+- **En contrafase**: uno empuja, el otro succiona → silencio
+- Ese ciclo refuerzo–silencio se repite $|f_2-f_1|$ veces por segundo
 :::
 
-> La rúbrica OA3 es guía para autoevaluarse, no calificación; la evidencia se recoge por escrito en s07, s13 y s15.
+![Envolvente del batido: refuerzo y cancelación alternados.](../../assets/figuras/s07_fases_batido.svg)
 
 ::: {.notes}
-**Apoyo:** Se cobra el ticket de salida de s07 ("cuando la diferencia crece más allá de lo que batea, ¿qué se oye y dónde termina eso?"): lea 2 o 3 tickets recopilados y contrástelos con lo que el curso acaba de describir. Premie que las mesas distingan las etapas del recorrido (ondulación, aspereza, dos notas) y que propongan dónde medir el cambio. Todavía no dé nombres técnicos: la banda crítica se nombra recién en la mini-lección siguiente.
+**Apoyo:** El argumento sin trigonometría (apunte, "¿Por qué dos
+tonos casi iguales laten?"): dos trenes de empujones casi
+sincronizados se refuerzan cuando empujan a la vez (en fase) y se
+cancelan cuando uno empuja y el otro succiona (en contrafase); con
+1 Hz de diferencia ese ciclo de refuerzo–cancelación ocurre una vez
+por segundo, con 3 Hz ocurre tres veces. El nombre técnico es
+"batido de primer orden" (Roederer, 1997, cap. 2, sec. 2.4, citado
+en el apunte). Recuadro opcional del apunte para quien pida el
+detalle: la suma de dos sinusoides se puede escribir como una onda
+rápida a la frecuencia promedio multiplicada por una envolvente
+lenta, y como el oído no distingue el signo de la envolvente, se
+oyen dos máximos por ciclo — los batidos ocurren a |f₂−f₁| por
+segundo, no a la mitad (apunte, recuadro opcional).
 :::
 
-## Escuchen con atención {.center}
+## Votación
 
-Va a sonar algo que **cambia** en el tiempo.
+$f_1=440$, $f_2=443$. ¿Cuántos batidos por segundo predice la regla?
 
-Diagnostiquen las etapas — no busquen nombres técnicos todavía.
+. . .
 
-## Demo: escucha del día {background-iframe="../../demos/demo_banda_critica.html" background-interactive=true}
+**3** — coincide con lo que ya contaron.
 
 ::: {.notes}
-**Apoyo:** Estímulo: dos tonos que parten al unísono y se separan muy lentamente hasta unos 40 Hz de diferencia, con los números ocultos; reproducir dos pasadas. Pregunte selectivamente a una o dos mesas en el plenario y cierre usted con su propia versión experta antes de pasar a la mini-lección.
+**Apoyo:** Respuesta esperada: 3 batidos por segundo
+(f_b=|443−440|=3), coincide con lo ya contado con la demo (plan,
+módulo 2, fila 22–35′).
+:::
+
+## El borde del fenómeno {.center}
+
+¿Qué pasa si alejamos $f_2$ cada vez más?
+
+Anoten: ¿dónde dejan de poder contar? ¿qué oyen ahí?
+
+::: {.notes}
+**Apoyo:** No explique todavía lo que va a aparecer — la rugosidad
+y la separación en dos notas son el tema de la mini-lección que viene (plan s08, fila 10–25′); limítese a recoger las palabras del curso. Para su
+propia orientación (no lo diga en clase): el apunte adelanta que en
+algún punto los batidos se vuelven demasiado rápidos para
+contarlos, la ondulación se convierte en aspereza y, más allá,
+aparecen dos notas distinguibles — el desarrollo completo viene ahora (apunte, "¿Por qué oímos una sola nota y no dos?").
+:::
+
+## Demo: barriendo Δf hacia arriba {background-iframe="../../demos/demo_batidos.html" background-interactive=true}
+
+::: {.notes}
+**Apoyo:** Recorra Δf lentamente hacia arriba — 5, 10, 15, 20, 30
+Hz, f₂ hasta 470 Hz — y anote en el pizarrón las palabras que use el
+curso ("áspero", "granulado", "se separó") sin explicarlas (plan,
+módulo 2, fila 52–62′). Si la demo no corre en el equipo de
+proyección: dos celulares con generador de tonos a 440/442 Hz sobre
+el micrófono del equipo (se pierde la envolvente visual, no el
+fenómeno) y dibuje la envolvente en el pizarrón (plan, "Riesgos y
+plan B").
 :::
 
 ## El mapa del choque

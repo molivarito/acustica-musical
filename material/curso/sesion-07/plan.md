@@ -1,52 +1,70 @@
-# Sesión 07 — Prueba 1 (módulo 1) + audición liviana: batidos (módulo 2)
+# Sesión 07 — Prueba 1 (módulo 1) + sonoridad y decibel (módulo 2, heredado de la s06 suspendida)
+
+**Nota de edición (2026-09-11)**: la s06 (11-sep) se suspendió. Su
+módulo 1 (escucha del día "la mezcla que pierde el bajo", decibel, curva
+isofónica) se dicta HOY en el módulo 2, con 15′ de medición compacta con
+todo el curso (lo esencial de las estaciones E1 y E3 de s06); los batidos
+que este módulo tenía pasan compactados al módulo 1 de s08. La Prueba 1
+evalúa s01–s05: el decibel entra recién en la Prueba 2. Las estaciones
+E2, E4 y E5 y el mini-informe SPL de s06 se eliminan (plan de rescate
+`ediciones/2026-2/PLAN_RESCATE_2026-09-11.md`).
 
 **Objetivos que cubre**: la **Prueba 1** evalúa OA1.1, OA1.2, OA2.1,
-OA2.2 (fundamental ausente, enseñada a fondo en s05 — ítems B.2 y
-C.2c: explicar por escrito el fenómeno ya vivido ES evaluable como
-OA2.2), OA4.1 y OA4.2 (contenido de s01–s06; lo de s06 solo con ítems
-básicos,
-regla de dimensionamiento de metodología §4 e instrucciones 6b) e
-incluye la **escucha escrita 1** (Parte A), evaluada aparte con la
-rúbrica OA3 y que **no entra en los 48 puntos de la prueba** (metodología
-§4). El módulo 2 **siembra
-OA2.2** (batidos de primer orden, primera experiencia auditiva) y
-ejercita OA2.1 sin nota.
-**Requisitos previos**: todo s01–s06. El **ticket de salida de s06**
-("dos flautas tocan la MISMA nota y una queda apenas desafinada: ¿qué
-se oye? ¿y si la desafinación crece?") se cobra con los oídos en el
-módulo 2. Lectura previa: [`libro/cap07_batidos.md`](../../libro/cap07_batidos.md) — mitad mapa de
-estudio para la prueba (se consume estudiando y EN la prueba misma),
-mitad física elemental de los batidos (se consume en la mini-lección
-del módulo 2, principio 6).
+OA2.2 (fundamental ausente, enseñada a fondo en s05 — ítems B.2, C.2c y
+C.3b: explicar por escrito el fenómeno ya vivido ES evaluable como
+OA2.2) y OA4.1 (contenido de s01–s05) e incluye la **escucha escrita 1**
+(Parte A), evaluada aparte con la rúbrica OA3 y que **no entra en los
+48 puntos de la prueba** (metodología §4). El módulo 2 cubre OA2.1
+(igual nivel físico ≠ igual sonoridad) y OA4.2 (el decibel, leer un
+nivel, +10/+3, salud auditiva), con la **hoja de registro isofónica**
+como taller evaluado de la semana (decisión 2026-09-11: mantiene los 9
+talleres, "mejores 8 de 9").
+**Requisitos previos**: s01–s05 para la prueba; s02 (ondas, presión) y
+s05 (primera no-linealidad percepción↔física: la altura) para el módulo
+2, con el **ticket de salida de s05** ("dos sonidos de la misma
+frecuencia, ¿pueden oírse a distinto volumen?; un grave y un agudo con
+la misma energía física, ¿suenan igual de fuertes?") que el profesor
+trae recopilado. Lectura previa: [`libro/cap06_sonoridad_y_decibel.md`](../../libro/cap06_sonoridad_y_decibel.md)
+(se consume en la mini-lección del módulo 2); el capítulo 7 (batidos)
+pasa a lectura de s08.
 
 **Contrato de la semana**: **TRAEN** — leída la lectura previa
-[`libro/cap07_batidos.md`](../../libro/cap07_batidos.md) (mitad mapa de
-estudio para la prueba, mitad física de los batidos); durante la prueba
-NO se permiten celular, audífonos ni apuntes (se guardan en la
-mochila); no se necesita calculadora; solo lápiz (mismo criterio que s13).
-· **SE REPARTE** — el cuadernillo de la Prueba 1 (1 por estudiante:
-9 + 2 de reserva = los 11 que declara «Impresión») y, aparte, la hoja de figuras (Figuras 1–3,
-1 por estudiante). · **SE RECOGE** — al cierre del módulo 1, el
+[`libro/cap06_sonoridad_y_decibel.md`](../../libro/cap06_sonoridad_y_decibel.md);
+**audífonos personales** y celular con **app de medición SPL** instalada
+(lista en [`material/apps_recomendadas.md`](../../apps_recomendadas.md))
+para el módulo 2; durante la prueba NO se permiten celular, audífonos
+ni apuntes (se guardan en la mochila); no se necesita calculadora; solo
+lápiz (mismo criterio que s13). · **SE REPARTE** — el cuadernillo de la
+Prueba 1 (1 por estudiante: 9 + 2 de reserva = los 11 que declara
+«Impresión») y, aparte, la hoja de figuras (Figuras 1–2, 1 por
+estudiante); en el módulo 2, la hoja de registro "mi curva isofónica"
+(1 por estudiante). · **SE RECOGE** — al cierre del módulo 1, el
 cuadernillo Y la hoja de figuras (se cuentan al recibir); al cierre del
-módulo 2, el ticket de salida hacia s08. · **SE REVISA** — las partes
-B–D de la Prueba 1 (48 puntos, 10 % del curso) con la pauta cerrada de
-`ediciones/2026-2/pruebas/prueba1_pauta.md`, ~15 min por estudiante; la
-Parte A (escucha escrita 1) se califica aparte con la rúbrica OA3
-(10 % del curso junto con s13 y s15, cuentan las mejores 2 de 3) y no
-entra en los 48 puntos; las notas se publican en Canvas dentro de los 5 días siguientes (lo agenda el panel solo); el
-módulo 2 no lleva nota (verificación informal).
+módulo 2, la hoja isofónica y el ticket de salida hacia s08. · **SE
+REVISA** — las partes B–D de la Prueba 1 (48 puntos, 10 % del curso)
+con la pauta cerrada de `ediciones/2026-2/pruebas/prueba1_pauta.md`,
+~15 min por estudiante; la Parte A (escucha escrita 1) se califica
+aparte con la rúbrica OA3 (10 % del curso junto con s13 y s15, cuentan
+las mejores 2 de 3) y no entra en los 48 puntos; las notas se publican
+en Canvas dentro de los 5 días siguientes (lo agenda el panel solo); la
+**hoja isofónica** es el taller de la semana (rúbrica rápida
+logrado/parcial/incipiente: predicción escrita antes de escuchar, los 3
+puntos ★ igualados y curva copiada, ítem de proyección respondido).
 
 **Posición en la progresión**: mitad del bloque B (el sonido
-percibido). Cierra la primera mitad del curso con la Prueba 1 y abre la
-segunda con el fenómeno que gobierna s08 (banda crítica, rugosidad,
-consonancia) y s09 (afinar por batidos). La demo de hoy
-([`demo_batidos.html`](../../demos/demo_batidos.html)) se **reutiliza en s08**.
+percibido). Cierra la primera mitad del curso con la Prueba 1 y, en el
+módulo 2, muestra que la sonoridad no copia la intensidad — y agrega la
+tercera pata del curso: **medirlo** (OA4). Los batidos, que abrían la
+segunda mitad, se presentan en s08 en 15′ y desembocan directamente en
+la banda crítica.
 **Reglas aplicadas**: sesión con prueba → la prueba ocupa TODO el
-módulo 1 y el módulo 2 es de **audición liviana** (metodología §3);
-**esta semana NO hay escucha del día** (la prueba incluye la escucha
-escrita 1, calificada aparte con la rúbrica OA3) **ni taller evaluado**
-(la prueba es la evaluación de la semana); la escucha del día (práctica,
-sin nota) se retoma en s08.
+módulo 1 (metodología §3); **la escucha escrita 1 va dentro de la
+prueba**, y además el módulo 2 abre con la escucha del día heredada de
+s06 (práctica, sin nota: es la que introduce el tema); el módulo 2
+lleva taller evaluado (excepción declarada a la regla "semana de prueba
+sin taller", para no perder el taller de la s06 suspendida); la lectura
+previa se consume visiblemente en la mini-lección del módulo 2
+(principio 6).
 
 ## Módulo 1 — Prueba 1: "escuchar, leer, predecir" (formato: evaluación; sin variante de anatomía)
 
@@ -65,16 +83,15 @@ archivos en el equipo de la sala antes de la clase (regla del banco de
 estímulos). Duración diseñada ≤60′ dentro de 70′: 7′ de instalación +
 60′ de desarrollo + 3′ de entrega.
 
-## Módulo 2 — Dos flautas casi afinadas: batidos (variante: audición, aligerada — sin ronda, sin taller evaluado)
+## Módulo 2 — ¿Cuánto es "el doble de fuerte"? (variante: audición + medición compacta — heredado de s06 m1)
 
 | Tiempo | Bloque | Actividad del estudiante | Rol del profesor | Materiales |
 |---|---|---|---|---|
-| 0–8′ | Gancho sonoro: **se cobra el ticket de s06** (OA2.2 siembra, OA3 informal) | Escucha dos flautas tocando la MISMA nota, una apenas desafinada; compara con lo que escribió en su ticket de s06 (el profesor lee 2–3 tickets anónimos); describe a mano alzada: ¿qué es esa ondulación? ¿es una tercera nota, un vibrato, un temblor? | Toca (o hace sonar) las dos flautas al unísono imperfecto, sostenido ≥10 s; lee tickets de s06 recopilados; NO explica: "eso que ondula tiene nombre y número, y hoy los vamos a encontrar" | 2 flautas del profesor (plan B abajo); tickets de s06 recopilados |
-| 8–22′ | Experiencia guiada I: contar el batido (OA2.2, OA2.1) | Con la demo proyectada: antes de cada cambio de f₂ **predice a mano alzada** si la ondulación irá más rápida o más lenta; luego **cuenta en voz baja los batidos por segundo** para f₂ = 443, 442 y 437 Hz (f₁ = 440 Hz fija) y compara su conteo con la diferencia de los números en pantalla | Opera [`demo_batidos.html`](../../demos/demo_batidos.html) con el marcador de f_b **oculto** primero: el curso cuenta, luego revela f_b = \|f₂−f₁\| en pantalla; repite para 3, 2 y 3 Hz de diferencia; pregunta: "¿alguien oye DOS notas?" (no: una nota que ondula) | [`demo_batidos.html`](../../demos/demo_batidos.html) proyectada con audio de sala |
-| 22–35′ | Mini-lección liviana: por qué bate (OA2.2) — consume la lectura previa (mitad batidos de cap07) | Sigue el argumento con el dibujo de la demo: dos ondas casi iguales entran y salen de paso (en fase → refuerzo; en contrafase → silencio); verifica en la envolvente de la demo que el ciclo refuerzo–silencio ocurre \|f₂−f₁\| veces por segundo; responde votación: "f₁=440, f₂=443: ¿cuántos batidos por segundo?" | Presenta la regla del curso: **f_b = \|f₂ − f₁\|** (los batidos por segundo son la diferencia de frecuencias); la justifica con el dibujo de la envolvente (sin trigonometría: dos trenes que se desfasan); nombra "batido de primer orden" (ROE 2.4) y deja plantado: "esta ondulación es también un instrumento de medición" | Demo (vista de envolvente); pizarrón |
-| 35–52′ | Experiencia guiada II: afinar de oído (OA2.2, anticipo de s09) | Voluntarios (3–4) pasan al notebook proyectado: con el **modo afinación** de la demo (números ocultos), llevan f₂ al unísono SOLO escuchando: batido cada vez más lento hasta detenerse; el curso arbitra ("todavía bate… ahí quedó"); si hay segunda flauta o 2 cuerdas reales, un voluntario repite el juego afinando el instrumento real contra el otro | Modera el juego (relajado: es post-prueba, sin nota); muestra al revelar los números cuán cerca quedó cada voluntario (¿1 Hz? ¿0,5 Hz?); remata: "así afinan los afinadores de piano desde hace dos siglos — en s09 lo haremos en serio" | Demo en modo afinación, proyectada; 2 flautas o 2 cuerdas (opcional); audio de sala |
-| 52–62′ | El borde del fenómeno (siembra explícita de s08) | Escucha qué pasa cuando el profesor aleja f₂ más y más (Δf = 5, 10, 15, 20, 30 Hz): anota en una línea en su cuaderno dónde dejó de poder contar y qué oye ahora (¿ondulación → aspereza → dos notas?); compara impresiones con su vecino (1′) | Barre Δf lentamente hacia arriba con la demo; NO explica lo que aparece (la rugosidad y la separación en dos notas son el corazón de s08); solo recoge las palabras del curso en el pizarrón ("áspero", "granulado", "se separó") | Demo (f₂ hasta 470 Hz); pizarrón |
-| 62–70′ | Cierre, ticket hacia s08 y anuncios | Anota la síntesis (3 líneas: un batido por segundo por cada Hz de diferencia; el batido delata desafinaciones que el oído no distingue como dos alturas; el batido detenido = unísono); escribe su **ticket de salida hacia s08**: "cuando la diferencia crece más allá de lo que batea, ¿qué se oye y dónde termina eso?" | Sintetiza; recoge tickets; **anuncia s08**: taller psicoacústico con registro individual (traer audífonos) y **comienzan los talleres de medición sobre el objeto del proyecto** (s08–s12): cada grupo trae su objeto o un avance medible; recuerda que la escucha del día (práctica, sin nota) vuelve en s08 | Tickets; pizarrón |
+| 0–10′ | **Escucha del día (OA3.1, práctica sin nota)**: la mezcla que pierde el bajo | Todos anotan su diagnóstico en 3 líneas (describir → hipotetizar → verificar) (2′): ¿qué cambió *además* del volumen?; discuten en la mesa y el vocero anota el diagnóstico del grupo (3′); en el plenario, el vocero de una o dos mesas responde por el grupo (3′) | Reproduce el mismo fragmento musical, **dos pasadas** (a nivel de sala realista y luego muy suave) (~2′); pregunta selectivamente a una o dos mesas exigiendo separar "suena más despacio" (obvio) de "desaparecieron el bajo y el brillo" (el dato); NO explica todavía — anuncia que el módulo termina de resolverlo | Fragmento de mezcla completa con bajo prominente (banco de estímulos #9; si no existe, un track del profesor con bajo marcado, probado en la sala a dos niveles); audio de sala |
+| 10–25′ | **Cobro del ticket de s05 + mini-lección: el decibel con aritmética mínima (OA2.1, OA4.2)** — consume lectura previa | Vota a mano alzada su ticket de s05 (misma frecuencia ↔ distinto volumen: sí; misma energía grave/agudo ↔ igual de fuerte: se resuelve hoy); sigue la construcción del dB; responde votaciones: "¿+10 dB es sumar poco o multiplicar por 10?", "dos parlantes iguales, ¿+3, +6 o +10 dB?", "¿cuántas guitarras iguales para oír *el doble* de fuerte?" | Instala con proporciones (estilo BEN 13): la intensidad útil al oído abarca un factor ~10¹²; el dB comprime ese rango; **+10 dB = ×10 en intensidad ≈ el doble de sonoridad; +3 dB = ×2 en intensidad, un cambio chico**; define $L_p$ en dB SPL re 20 µPa; nombra la **ponderación A** ("la curva que las apps imitan") sin teoría de filtros; 3′ de salud auditiva: 85 dB(A) por 8 h y la regla de los 3 dB (DS 594) | Pizarrón; [`demo_decibel_sonoridad.html`](../../demos/demo_decibel_sonoridad.html) como apoyo visual; tickets de s05 recopilados |
+| 25–40′ | **Medición compacta con todo el curso (OA4.2)** — lo esencial de las estaciones E1 y E3 de s06, en serie | (1) Gancho: vota ANTES (¿+3, +6 o +12 dB?) cuánto sube el medidor cuando aplauden 4 personas en vez de 1; (2) con su app SPL en dB(A), mide dos celulares del profesor con ruido rosa: A solo, B solo, A+B, desde un anillo a ~1 m, y anota los tres valores; (3) mide la voz de un voluntario a 30 cm y a 3 m con su app en fila junto al micrófono de referencia, y anota su lectura y la de la referencia (REW proyectado) | Dirige desde el frente con cronómetro: 4′ gancho (la lectura de las palmas se revela al final del bloque), 5′ dos fuentes (con RUIDO, no tono puro: dos tonos iguales interfieren y dan entre 0 y +6 dB según la posición), 6′ referencia (ganancia fija, Leq en voz alta); cobra el gancho: duplicar fuentes ≈ +3 dB, cuatro ≈ +6, el doble de fuerte pide ≈ +10; remate: las comparaciones con el mismo aparato son confiables, los absolutos sin calibrar no; las lecturas dispares entre celulares son dato, no fracaso | Celular del profesor con app SPL; 2 celulares emisores con ruido rosa; interfaz + micrófono + notebook con REW (SPL Meter A/Slow, calibrado contra la app NIOSH del iPhone); cinta a 30 cm y 3 m; anillo a 1 m |
+| 40–62′ | **Experiencia guiada: mi curva isofónica (OA2.1, OA4.2) — formato 3, TALLER EVALUADO** | PREDICE por escrito en su hoja (2′, antes de tocar la demo): "para sonar igual de fuerte que 1000 Hz, el tono de 125 Hz necesitará ¿más, igual o menos nivel?"; luego, por turnos con audífonos, cada integrante iguala la sonoridad contra la referencia de 1000 Hz en la demo — **mínimo irrenunciable ★: 125, 1000 (referencia) y 4000 Hz; 250, 2000 y 8000 Hz opcionales** — y **copia SU curva** a su hoja de registro. Aritmética: 22′ − 2′ de predicción = 20′ ÷ 3 integrantes = **~6,5′ por persona** (≥2′: cumple); mientras uno mide, otro registra la puesta en común del grupo y el otro resuelve el ítem de proyección de la hoja | Rota por los grupos (~6′ c/u); verifica al pasar que la predicción esté escrita antes de escuchar; provoca: "¿su curva es la de su compañero?, ¿a qué nivel de referencia está midiendo — y cambiaría con otro nivel?"; recuerda la advertencia de la demo: sin calibración los dB son relativos, lo que vale es la FORMA | 3 notebooks con [`demo_decibel_sonoridad.html`](../../demos/demo_decibel_sonoridad.html); audífonos personales; hoja de registro "mi curva isofónica" (1 por estudiante, `../sesion-06/actividades/hoja_registro_isofonica.md`) |
+| 62–70′ | Puesta en común, síntesis, ticket hacia s08 y anuncios (OA2.1) | Un vocero por grupo describe la forma de la curva del grupo (¿dónde pidió más nivel?); todos anotan la moraleja: **igual nivel físico ≠ igual sonoridad; el oído es más sordo a los graves, y más cuanto más bajo el nivel**; escribe su ticket hacia s08 **mientras el profesor anuncia**: "dos flautas tocan la MISMA nota y una queda apenas desafinada: ¿qué se oye? ¿y si la desafinación crece?" | Superpone las formas de los 3 grupos en el pizarrón sobre ejes Hz/dB; cierra conectando con la escucha del día (por eso la mezcla suave "perdió" el bajo); **anuncia s08**: batidos en 15′ + banda crítica (traer audífonos) y **comienzan los talleres de medición sobre el objeto del proyecto** (s08–s12): cada uno trae su objeto o un avance medible; recoge hojas isofónicas y tickets | Pizarrón; hojas de registro; tickets |
 
 ## Verificación de aprendizaje
 
@@ -86,43 +103,54 @@ estímulos). Duración diseñada ≤60′ dentro de 70′: 7′ de instalación 
   (10 % del curso junto con s13 y s15, cuentan las mejores 2 de 3) — no
   entra en los 48 puntos; alimenta el seguimiento de OA3 comparable con
   la línea base de s01.
-- **Módulo 2 (sin nota, por diseño)**: verificación informal — el curso
-  cuenta batidos que coinciden con \|f₂−f₁\| (bloque 8–22′); los
-  voluntarios logran detener el batido en el juego de afinación (35–52′);
-  los tickets hacia s08 registran la observación del borde del fenómeno.
-- **Cadena de tickets**: ticket s06 cobrado en el gancho del módulo 2;
-  ticket s07 → escucha del día de s08 (banda crítica).
+- **Hoja de registro "mi curva isofónica"** (individual, módulo 2,
+  **taller de la semana**): predicción escrita antes de escuchar; los
+  puntos ★ obligatorios igualados y curva copiada; el ítem de proyección
+  respondido. Rúbrica rápida logrado/parcial/incipiente.
+- **Medición compacta** (sin nota): el curso converge a "duplicar
+  fuentes ≈ +3 dB, cuatro ≈ +6, el doble de fuerte ≈ +10 dB"; anota la
+  dispersión entre celulares como límite de la medición.
+- **Cadena de tickets**: ticket s05 cobrado en la mini-lección; ticket
+  s07 (dos flautas) → gancho de batidos de s08.
 
 ## Aritmética de tiempos declarada (regla 6b)
 
 - **Módulo 1**: 7′ + 60′ + 3′ = 70′ ✓. La prueba está diseñada para
   ≤60′ (presupuesto interno del cuadernillo: A 10′ + B 15′ + C 20′ +
   D 8′ + 7′ de revisión/holgura).
-- **Módulo 2**: 8+14+13+17+10+8 = 70′ ✓. Sin fases individuales con
-  material limitado (todo es plenario con demo proyectada): no aplica el
-  cálculo por persona; los voluntarios de la fase 35–52′ son 3–4 × ~3′
-  c/u + arbitraje del curso.
+- **Módulo 2**: 10 + 15 + 15 + 22 + 8 = 70′ ✓. Escucha del día: ~2′
+  (estímulo, dos pasadas) + 2′ + 3′ + 3′ = 10′ ✓. Medición compacta: 4′
+  + 5′ + 6′ = 15′, plenaria (todos miden a la vez: no aplica el cálculo
+  por persona). Isofónica: 22′ = 2′ predicción + 20′ medición; 1
+  notebook/grupo ÷ 3 = ~6,5′/persona con el protocolo ★ de 3
+  frecuencias (≈1,5–2′ por igualación) ✓ ≥2′.
 
 ## Pendientes de producción
 
 - **Figuras impresas de la prueba** (hoja de figuras): espectrograma
-  del par vaso/flauta (Fig. 1), espectros de la misma nota de guitarra
-  pulsada en dos puntos (Fig. 2), curvas isofónicas simplificadas
-  (Fig. 3). El profesor las genera esta semana desde las grabaciones
-  del banco (#10–#12, **ya producidas en la sesión de grabación
-  pre-s01** — revisión de alineamiento 2026-07-12, P4) con el software
-  del curso y las imprime en la hoja aparte (1 por estudiante): ~1 h
-  con los archivos ya hechos. [Detalle en `ediciones/2026-2/pruebas/prueba1.md`.]
-- **Estímulos de audio de la prueba**: los ítems #10, #11 y #12 del
-  banco (`material/profesor/banco_estimulos.md`, filas agregadas por esta
-  sesión) **se graban/sintetizan en la sesión pre-s01** (no dependen
-  de nada del semestre; P4 de la revisión 2026-07-12); esta semana
-  solo PROBARLOS en el equipo de la sala.
-- **Impresión**: 11 cuadernillos + 11 hojas de figuras.
+  del par vaso/flauta (Fig. 1) y espectros de la misma nota de guitarra
+  pulsada en dos puntos (Fig. 2). La Figura 3 (isofónicas) salió con
+  la s06. El profesor las genera desde las grabaciones del banco
+  (#10–#12) e imprime la hoja aparte (1 por estudiante).
+  [Detalle en `ediciones/2026-2/pruebas/prueba1.md`.]
+- **Estímulos de audio de la prueba**: ítems #10, #11 y #12 del banco
+  (`material/profesor/banco_estimulos.md`): al 2026-09-11 siguen **por
+  grabar/sintetizar** — tope: martes 22-sep, y PROBARLOS en el equipo
+  de la sala el jueves 24.
+- **Estímulo de la escucha del día** (banco #9, mezcla con bajo
+  prominente): por conseguir; plan B: track del profesor con bajo
+  marcado, probado en la sala a dos niveles.
+- **Equipo de medición** (módulo 2): interfaz + micrófono + notebook
+  con REW (SPL Meter) calibrado contra la app NIOSH del iPhone; 2
+  celulares emisores con ruido rosa; app SPL en el celular del
+  profesor (la misma de la lista de apps).
+- **Impresión**: 11 cuadernillos + 11 hojas de figuras + 9 hojas
+  isofónicas (paquete en `ediciones/2026-2/impresiones_s07/`).
 - **Corrección**: pico declarado ≈2,5 h esta semana (9 × ~15 min, más
-  la escucha escrita).
-- **Demo**: [`demo_batidos.html`](../../demos/demo_batidos.html) ya producida con esta sesión (se
-  reutiliza en s08 — no modificarla sin revisar el plan de s08).
+  la escucha escrita) + rúbrica rápida de las 9 hojas isofónicas.
+- **Demo**: [`demo_decibel_sonoridad.html`](../../demos/demo_decibel_sonoridad.html)
+  (de s06); [`demo_batidos.html`](../../demos/demo_batidos.html) pasa a
+  s08 — no modificarla sin revisar el plan de s08.
 
 ## Riesgos y plan B
 
@@ -137,16 +165,26 @@ estímulos). Duración diseñada ≤60′ dentro de 70′: 7′ de instalación 
   alcanza a oír la Parte A completa, se aplica el procedimiento de
   evaluación recuperativa de la unidad académica (regla anunciada al
   repartir, no se improvisa en caliente).
-- **No hay segunda flauta / no hay cuerdas en sala** (módulo 2) → el
-  gancho se hace con la demo en dos notebooks desincronizados (440 vs
-  442 Hz) o con flauta real contra tono de la demo a 440 Hz: el
-  fenómeno es idéntico y el ticket de s06 se cobra igual.
-- **El curso sale demasiado agotado de la prueba** (módulo 2 no
-  arranca) → la estructura ya es liviana; si aun así pesa, el bloque
-  52–62′ se acorta a 5′ (una sola barrida de Δf) y el juego de
-  afinación se extiende: es el bloque más lúdico.
-- **La demo no corre en el equipo de proyección** → plan B universal
-  del curso: dos celulares con generador de tonos (app del curso) a
-  440/442 Hz sobre el micrófono del equipo; se pierde la envolvente
-  visual, no el fenómeno; el dibujo de la envolvente se hace en
-  pizarrón.
+- **La escucha del día no "pierde" el bajo en la sala** (equipo con poca
+  excursión de nivel o fragmento mal elegido) → probar ANTES con el
+  espectrograma del celular; plan B: reproducir el fragmento suave en el
+  parlante del celular del profesor (ya validado en s05 que la sala lo
+  oye) y fuerte en el equipo de sala.
+- **La interfaz de referencia falla** (driver, cable, software) → el
+  micrófono del iPhone por Continuidad, calibrado con la app NIOSH del
+  mismo teléfono, como referencia común: se pierde el micrófono fino,
+  no la comparación app↔referencia.
+- **Las dos fuentes de la medición compacta dan resultados dispares
+  entre celulares (0 a +6 dB)** → están emitiendo tono puro y no ruido:
+  cambiar a ruido rosa y repetir (2′).
+- **Apps SPL con lecturas absurdamente dispares** (±10 dB entre
+  celulares) → es dato, no fracaso: la puesta en común lo tematiza
+  (calibración, AGC, micrófonos distintos).
+- **El nivel de referencia de la demo queda demasiado bajo o alto en
+  algún notebook** → la hoja fija el procedimiento de ajuste inicial
+  (referencia cómoda, ni susurro ni molestia) y recuerda que la curva es
+  RELATIVA: la forma no depende del volumen exacto del notebook.
+- **El módulo 2 se atrasa** (la prueba terminó tarde o la medición se
+  alargó) → fusible: la medición compacta se reduce a gancho + dos
+  fuentes (9′) y la isofónica conserva sus 22′; la síntesis se hace con
+  las curvas que haya.
