@@ -1,4 +1,12 @@
-# Sesión 14 — La sala como instrumento: reflexión, absorción, reverberación, modos; salida de medición de T60
+# Sesión 14 — La sala como instrumento: reflexión, absorción, reverberación, modos; medición de T60 en el edificio
+
+**Nota de edición (2026-09-11, decisión D2 del plan de rescate)**: la
+salida a espacios del campus con permisos se reemplaza por una **medición
+en el propio edificio**: la sala de clases, un pasillo y una escalera,
+todos a menos de dos minutos a pie, sin permisos. Los 3 grupos miden los
+TRES espacios en órdenes distintos, así que cada espacio queda medido
+tres veces (reproducibilidad entre celulares, oro para la puesta en
+común). El profesor mide la sala con REW como valor de control.
 
 **Objetivos que cubre**: OA1.4 (principal: comportamiento del sonido en
 salas — reflexión, absorción, reverberación, modos — y cómo la sala
@@ -26,10 +34,9 @@ la lectura previa
 · **SE REPARTE** — la Prueba 2 corregida (9, devuelta en la puerta al
 entrar, con la lámina de errores frecuentes proyectada 10′); la guía
 `guia_salida_medicion_t60.md` (1 por grupo, con la tabla de registro y
-el informe-formulario al dorso); la hoja de rutas
-`rutas_salida_medicion.md` con la ruta asignada (1 por grupo; ver
-arreglo propuesto 11: versión sin la columna "Tipo esperado"); globos
-para el impulso (3–4 por grupo + 1 de repuesto); la pauta del hito 3
+el informe-formulario al dorso); la hoja de espacios
+`rutas_salida_medicion.md` con el orden asignado a cada grupo (1 por
+grupo); globos para el impulso (3–4 por grupo + 1 de repuesto); la pauta del hito 3
 `encargo_hito3_presentacion_final.md` impresa (9, se publica hoy,
 entregada al final del m1). · **SE RECOGE** — al cierre de la salida
 (m2), la guía `guia_salida_medicion_t60.md` completa (tabla de
@@ -58,7 +65,7 @@ administrativo antepuesto a la escucha del día es la excepción ya
 registrada como aceptable (precedentes s06 y s10). (2) **Decisión D3 de
 `PLAN_SEMESTRE.md` aplicada**: la puesta en común de la salida va comprimida en
 los últimos 15′ DE LA PROPIA SALIDA (planilla compartida en línea que
-los grupos llenan durante la ruta + punto de encuentro), porque s15
+los grupos llenan durante la medición + regreso a la sala), porque s15
 está completa con presentaciones. (3) El **informe comparativo breve**
 (OA4.3, media página por grupo) es un formulario de casillas rotuladas
 al dorso de la hoja de registro — no prosa (precedente P1 de s06) — y
@@ -92,7 +99,7 @@ informe-formulario.
 | 35–49′ | Demo predictiva: la sala tiene notas favoritas (OA1.4; conexión s03/s10) | Con [`demo_modos_sala.html`](../../demos/demo_modos_sala.html) proyectada: (1) **predice a mano alzada**: si barro un tono grave por esta sala dibujada, ¿sonará parejo o habrá frecuencias que "engordan"?; (2) el barrido encuentra los **modos**: el tono se refuerza al pasar por $f = v\,n/2L$ de cada eje; (3) achicamos la sala a ducha (2 m): los modos suben y se separan — quedan DONDE canta una voz: por eso la ducha afina (respuesta física al ticket de s13); (4) sala grande: los modos se apilan tan densos que ya no se distinguen — la catedral no favorece notas, favorece la MEZCLA (la cola) | Opera la demo con audio de sala; en cada paso pide predicción antes de mover el slider; remata la conexión: "la sala es un resonador de s10 hecho de aire y paredes: modos de s03, decaimiento de s10, medido con los dB de s06" | [`demo_modos_sala.html`](../../demos/demo_modos_sala.html) proyectada, audio de sala |
 | 49–70′ | El método ANTES de salir: cómo se mide un $T_{60}$ con celular + logística de la salida (OA4.3) | Ve la demostración completa UNA vez en esta misma sala: silencio → globo reventado (o palmada fuerte) → la app registra la caída → lectura del valor; luego, en grupo, recibe guía + ruta y **escribe la predicción PEE** (ranking de los espacios de su ruta por $T_{60}$ esperado + un valor numérico estimado para esta sala de clases), con más tiempo de holgura para dudas de protocolo antes de salir; revisa el checklist de salida (2 celulares por grupo con apps, globos, guía, hora de corte) | Ejecuta la medición modelo (2 veces: una con globo, una con palmada — se comparan); explica la regla de las 3 mediciones por espacio y la extrapolación si el fondo tapa la caída (leer la caída inicial, no esperar el silencio absoluto); asigna rutas (1 por grupo); da las reglas de convivencia (espacios en uso, volumen, permisos) y la hora de corte; **entrega la pauta del hito 3 impresa** ("se lee en casa; consultas por el canal declarado en la pauta") | Globos; app de medición del curso; guía de salida (3) + hoja de rutas; pauta hito 3 impresa (9); pizarrón con hora de corte y punto de encuentro |
 
-## Módulo 2 — SALIDA DE MEDICIÓN (formato 8, metodología §2: módulo completo fuera del aula)
+## Módulo 2 — MEDICIÓN DE T60 EN EL EDIFICIO (formato 8 adaptado: tres espacios a ≤2 min, sin permisos)
 
 El gancho sonoro del módulo (regla §3, adaptada y declarada) es la
 **palmada diagnóstica**: lo primero que hace cada grupo al llegar a un
@@ -101,12 +108,12 @@ línea de oído ANTES de encender la app. Primero suena, después se mide.
 
 | Tiempo | Bloque | Actividad del estudiante | Rol del profesor | Materiales |
 |---|---|---|---|---|
-| 0–5′ | Despliegue | Sale del aula con su grupo directo al espacio A de su ruta; en el trayecto reparte roles de la guía (**ejecuta** el impulso / **mide y registra** con la app / **vocero**) — rotan en cada espacio | Despacha a los 3 grupos escalonados (30″ entre grupos, evita atochamiento); parte hacia su circuito de supervisión | Guías con rutas; celulares cargados |
-| 5–25′ | Espacio A (★ obligatorio): el protocolo completo | (1) palmada diagnóstica + 1 línea de oído (¿más seco o más vivo que la sala de clases?); (2) niveles de fondo: 30″ de app SPL en 2 posiciones, anota; (3) **3 mediciones de $T_{60}$** (globo o palmada fuerte, silencio antes de cada una), anota las 3 y la mediana; (4) dimensiones a pasos → $V$ estimado; (5) checklist de materiales de las superficies (duro/blando por pared, piso, techo); el registra sube los datos a la **planilla compartida** desde el celular | Rota por los espacios según su circuito (alcanza 2–3 grupos por bloque); destraba problemas (espacio ocupado → alternativa de la ruta); NO corrige mediciones: pregunta "¿la mediana les cuadra con lo que oyeron en la palmada?" | Por grupo: 2 celulares (app SPL + app/protocolo $T_{60}$), 3–4 globos, guía impresa, lápiz |
-| 25–45′ | Espacio B (★ obligatorio): protocolo completo en un espacio contrastante | Repite (1)–(5) con roles rotados; además responde en la guía la **pregunta de contraste**: ¿el orden A–B les está dando como predijeron?; si el fondo es alto (pasillo, hall), anota el límite en vez de esconderlo — es dato del informe | Segundo tramo del circuito; en cada visita pide UNA lectura en voz alta ("¿fondo?, ¿mediana?, ¿V?") para verificar que la planilla se está llenando | Ídem |
-| 45–50′ | Espacio C (opcional, si la ruta lo permite) o repetición | Grupos al día: protocolo abreviado en el espacio C (palmada + 3 impulsos + V; sin checklist fino); grupos atrasados: repiten la medición más dudosa del espacio A o B; **al minuto 50, corte duro**: todos caminando al punto de encuentro | Barre el final de las rutas arreando hacia el punto de encuentro | Ídem |
-| 50–55′ | **Traslado presupuestado al punto de encuentro** | Camina con su grupo; EN EL TRAYECTO (o al llegar) llena la última casilla del **informe-formulario** (la comparación central con mecanismo) — la tabla ya está completa desde la ruta; el registra verifica que la fila del grupo esté en la planilla compartida | Llega primero al punto de encuentro; proyecta la planilla y arranca la lectura del mapa con los grupos que ya están (la planilla compartida lo permite: se lee a medida que se llena) | Planilla compartida (proyector o celulares) |
-| 55–70′ | **Puesta en común comprimida (D3) + cierre del semestre de talleres** | En el punto de encuentro (el aula u otro fijado): (1) 2′ completar celdas de la planilla; (2) 6′ lectura del mapa: la planilla proyectada/compartida ordena los ~7 espacios medidos por $T_{60}$ — cada vocero defiende EN UNA FRASE su fila más llamativa contra su predicción; (3) 4′ el grupo revisa la casilla final del **informe-formulario** (llenada durante el traslado / al llegar) y ENTREGA guía + informe (única nota de taller de la semana, última del semestre); (4) 3′ cierre y logística de s15: orden de presentación SORTEADO en vivo (**9 nombres**, defensa **individual**), informe ≤6 págs individual se entrega AL INICIO de s15, cada defensa es **8′ de presentación con el objeto sonando + 3′ de preguntas (2 preguntas al autor), corte duro e igual para los 9**, **presentación enviada por el canal del curso hasta las 20:00 de la víspera de s15 (todas corren en el notebook único de sala) + respaldo en USB propio**, traer el instrumento/objeto FUNCIONANDO — sin coevaluación (el proyecto es individual) — "la próxima semana, ustedes son el estímulo: el público escribe su escucha argumentada sobre las presentaciones" | Proyecta o comparte la planilla; dirige la lectura del ranking (¿le ganó la capilla al hall?, ¿alguna predicción invertida?); recibe 3 informes; sortea el orden de las 9 defensas de s15 en vivo (transparencia); recuerda que la pauta del hito 3 ya está en sus manos desde el m1 y que el plazo de las 20:00 está en la pauta (§1 y §6) | Planilla compartida (proyector o celulares); informes-formulario; bombo/bolsa para el sorteo (9 nombres) |
+| 0–5′ | Despliegue | Cada grupo parte a su primer espacio según el orden asignado (G1: sala → pasillo → escalera · G2: pasillo → escalera → sala · G3: escalera → sala → pasillo); en el trayecto reparte roles (**ejecuta** el impulso / **mide y registra** / **vocero**), que rotan en cada espacio | Despacha a los 3 grupos; se queda en la sala midiendo el $T_{60}$ de control con REW (globo + grabación del decaimiento) mientras G1 mide a su lado | Guías; hoja de espacios; celulares cargados; globos inflados; notebook con REW |
+| 5–20′ | Espacio 1 (★): el protocolo completo | (1) palmada diagnóstica + 1 línea de oído; (2) nivel de fondo: 30″ de app SPL en 2 posiciones; (3) **3 mediciones de $T_{60}$** (globo o palmada fuerte, silencio antes de cada una), las 3 y la mediana; (4) dimensiones a pasos → $V$ estimado; (5) checklist de superficies; (6) la fila a la planilla compartida | Ronda: sala → pasillo → escalera (todo a ≤2 min); en cada visita pide UNA lectura en voz alta y pregunta "¿la mediana cuadra con la palmada?" | Ídem |
+| 20–35′ | Espacio 2 (★): protocolo completo en el espacio contrastante | Repite (1)–(6) con roles rotados; responde la **pregunta de contraste** de la guía: ¿el orden 1–2 va como predijeron? Si el fondo es alto (pasillo con gente), anota "extrapolado": es dato, no fracaso | Segunda ronda; ojo con la escalera: el globo se revienta lejos de los oídos y sin gente bajando | Ídem |
+| 35–50′ | Espacio 3 (★): el tercero, y **corte duro al minuto 50** | Repite el protocolo (abreviado si va atrasado: palmada + 3 impulsos + $V$); al minuto 50, todos de vuelta a la sala; en el trayecto llena la casilla de comparación del dorso | Barre los dos espacios externos arreando hacia la sala | Ídem |
+| 50–55′ | Regreso y planilla | Llega a la sala; el registrador verifica que las 3 filas del grupo estén en la planilla compartida | Proyecta la planilla: 3 espacios × 3 grupos = 9 filas | Planilla proyectada |
+| 55–70′ | **Puesta en común: el mismo espacio, tres celulares** + cierre del semestre de talleres | (1) 2′ completar celdas; (2) 6′ lectura del mapa: los 3 espacios ordenados por $T_{60}$ y, en cada uno, las 3 medianas de los 3 grupos (¿coinciden? ¿cuánto se dispersan entre celulares? ¿y contra el valor de REW en la sala?); cada vocero defiende EN UNA FRASE su fila más llamativa contra su predicción; (3) 4′ el grupo revisa la casilla final del dorso y **entrega la guía** (taller evaluado, la última nota de taller); (4) 3′ **sorteo en vivo del orden de las 9 defensas de s15** y reglas (8′ + 3′, envío hasta las 20:00 del jueves) | Ordena la planilla; cobra las predicciones; remata con la reproducibilidad (mismo espacio, distintos celulares: la dispersión entre apps es el "límite" del informe) y con el arco del curso (sensación → mecanismo → medición); sortea; recuerda que la pauta del hito 3 se entregó al final del m1 | Planilla; pizarrón; pauta del hito 3 |
 
 ## Verificación de aprendizaje
 
@@ -140,8 +147,9 @@ línea de oído ANTES de encender la app. Primero suena, después se mide.
   liberados respecto de la mecánica anterior se suman al bloque "el
   método antes de salir" (49–70′, antes 54–70′), el bloque de trabajo
   más largo del módulo (no hay taller PEE grupal en este módulo 1).
-- **Módulo 2**: 5 + 20 + 20 + 5 + 5 + 15 = 70′ ✓ (el tramo 50–55′ es
-  traslado presupuestado: los grupos llegan escalonados SIN comerse la
+- **Módulo 2**: 5 + 15 + 15 + 15 + 5 + 15 = 70′ ✓ (tres espacios a ≤2
+  min a pie: el tránsito cabe dentro de los 15′ de cada uno; el tramo 50–55′ es
+  regreso presupuestado: los grupos llegan escalonados SIN comerse la
   puesta en común, y la casilla final del informe se llena en ese
   tramo, no en los 15′ finales).
 - **Por grupo y por persona (salida)**: cada espacio ★ dispone de ~20′:
@@ -153,13 +161,13 @@ línea de oído ANTES de encender la app. Primero suena, después se mide.
   globos para todos los impulsos (3–4 por grupo + repuesto).
 - **Puesta en común**: 3 voceros × 1 frase ≈ 30″ c/u dentro de los 6′
   de lectura del mapa — cabe porque la planilla YA está llena (se
-  alimentó durante la ruta, no al final).
+  alimentó durante la medición, no al final).
 - **Carga del profesor en la semana**: la corrección de la Prueba 2
   (≈2,5 h) es la ya declarada en s13 — esta semana solo la lámina de
-  errores (~1 h, sale de la corrección misma); fijar rutas y permisos
+  errores (~1 h, sale de la corrección misma); fijar el tramo de pasillo y la escalera (sin permisos)
   de espacios (~1 h) [espacios concretos: los fija el profesor];
   comprar globos; preparar la planilla compartida (~30′); probar la
-  app de $T_{60}$ en 1 espacio (~30′); imprimir guías, rutas y pautas
+  app de $T_{60}$ en 1 espacio (~30′); imprimir guías, hojas de espacios y pautas
   del hito 3.
 
 ## Pendientes de producción

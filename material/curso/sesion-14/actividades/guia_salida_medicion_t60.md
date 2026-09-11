@@ -1,4 +1,4 @@
-# Guía de salida — Medir el $T_{60}$ de espacios UC (s14, módulo 2 completo, 70 min)
+# Guía de medición — Medir el $T_{60}$ de tres espacios del edificio (s14, módulo 2 completo, 70 min)
 
 **Objetivos**: OA4.3 (medir el tiempo de reverberación de salas reales
 y compararlas), OA1.4 (conectar materiales y volumen con lo medido),
@@ -10,8 +10,11 @@ apps) · **registra** (llena esta hoja Y la planilla compartida) ·
 por un rol activo.
 **Materiales por grupo**: 2 celulares cargados (app SPL + app o
 protocolo de $T_{60}$), 3–4 globos inflados + 1 de repuesto, esta hoja,
-lápiz, la ruta asignada. **Hora de corte y punto de encuentro: los
-escribe aquí antes de salir → corte: ____:____ · encuentro: ________**
+lápiz, la hoja con el ORDEN de espacios asignado a su grupo. **Los tres
+espacios son los mismos para todos** (la sala de clases, un pasillo y
+una escalera del edificio); cada grupo los recorre en un orden
+distinto, así cada espacio queda medido tres veces. **Corte: minuto 50,
+todos de vuelta a la sala.**
 
 **Regla de convivencia**: espacios en uso se respetan (se usa la
 alternativa de la ruta); el globo se revienta lejos de los oídos de
@@ -21,16 +24,16 @@ cualquiera; en biblioteca o capilla en uso, palmada en vez de globo.
 
 Sin discutir con otros grupos, el grupo acuerda y anota:
 
-- Ranking esperado de los espacios de nuestra ruta, de MÁS a MENOS
-  reverberante: 1.º ________ 2.º ________ 3.º ________
+- Ranking esperado de los tres espacios (sala, pasillo, escalera), de
+  MÁS a MENOS reverberante: 1.º ________ 2.º ________ 3.º ________
 - ¿Por qué? (una línea con mecanismo: volumen / materiales):
   ________________________________________________________________
 - Anoten el $T_{60}$ de la sala de clases que acaba de medir el
-  profesor: ________ s. Úsenlo como vara: su PRIMER espacio de la
-  ruta, ¿será más o menos reverberante que esta sala — y
-  aproximadamente cuántas veces? ________
+  profesor con REW: ________ s. Úsenlo como vara: la escalera, ¿será
+  más o menos reverberante que esta sala — y aproximadamente cuántas
+  veces? ________
 
-## 2. Protocolo en CADA espacio (~15′ + tránsito; el C es opcional)
+## 2. Protocolo en CADA espacio (~15′ incluido el tránsito; los tres son obligatorios)
 
 1. **Palmada diagnóstica** (antes de encender nada): una palmada,
    todos callados. Una línea de oído: ¿más seco o más vivo que la sala
@@ -56,9 +59,9 @@ sin decirlo.
 
 ## 3. Tabla de registro
 
-| | Espacio A (★) | Espacio B (★) | Espacio C (opcional) |
+| | Sala de clases (★) | Pasillo (★) | Escalera (★) |
 |---|---|---|---|
-| Nombre del espacio | | | |
+| Orden en que lo midió su grupo (1.º/2.º/3.º) | | | |
 | Oído (palmada): ¿seco/vivo? | | | |
 | Fondo, posición 1 (dB) | | | |
 | Fondo, posición 2 (dB) | | | |
@@ -75,9 +78,9 @@ sin decirlo.
 
 ## 4. Informe comparativo (dorso — ES la entrega evaluada; casillas, no prosa)
 
-Se completa durante la ruta; la última casilla pendiente se llena
-DURANTE el traslado al punto de encuentro (tras el corte) o al llegar,
-antes de la puesta en común. Media página total.
+Se completa durante la medición; la última casilla pendiente se llena
+al volver a la sala (tras el corte del minuto 50), antes de la puesta en
+común. Media página total.
 
 - **Comparación central** (una frase con números): "El espacio ____
   resultó ____ veces más reverberante que ____ ( ____ s vs. ____ s)."
@@ -86,17 +89,19 @@ antes de la puesta en común. Media página total.
 - **El dato que lo respalda** (¿qué fila de la tabla sostiene el
   mecanismo — fondo, mediana, V, superficies?): ___________________
 - **Límite de la medición** (qué NO puede afirmar con estos datos y
-  por qué — fondo, impulso, app sin calibrar): ____________________
+  por qué — fondo, impulso, app sin calibrar; compare su mediana con
+  la de los otros dos grupos en el MISMO espacio): _______________
 - **Contraste con la predicción** (¿el ranking del punto 1 sobrevivió?
   ¿qué los sorprendió?): __________________________________________
 
-## Cierre (últimos 15′ de la salida, en el punto de encuentro)
+## Cierre (últimos 15′, en la sala)
 
-A la hora de corte, TODOS caminando al punto de encuentro (el
-traslado está presupuestado: 5′); en el trayecto o al llegar, el grupo
-cierra la casilla de comparación del dorso. En el punto de encuentro,
-la planilla compartida —ya llena— ordena los ~7 espacios del curso
-por $T_{60}$; cada vocero defiende EN UNA FRASE su fila más llamativa
-contra su predicción. El grupo **entrega esta hoja completa (tabla +
-dorso)**: es el taller evaluado de la semana (rúbrica rápida
+Al minuto 50, TODOS de vuelta a la sala (está a menos de dos minutos);
+en el trayecto o al llegar, el grupo cierra la casilla de comparación
+del dorso. La planilla compartida —ya llena— muestra los tres espacios
+medidos por los tres grupos: ¿coinciden las medianas del mismo espacio
+entre celulares distintos?, ¿y con el valor de REW de la sala? Cada
+vocero defiende EN UNA FRASE su fila más llamativa contra su
+predicción. El grupo **entrega esta hoja completa (tabla + dorso)**: es
+el taller evaluado de la semana (rúbrica rápida
 logrado/parcial/incipiente) y la última nota de taller del semestre.

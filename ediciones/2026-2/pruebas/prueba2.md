@@ -3,8 +3,10 @@
 **Sesión 13, módulo 1.** Evalúa OA1.2 (resonancia, impedancia,
 acoplamiento, proporciones), OA1.3 (mecanismos de excitación y
 regímenes de oscilación), OA2.2 (batidos, banda crítica, rugosidad),
-OA2.3 (escalas, temperamentos y cents) y OA3.1 (escucha escrita),
-sobre el contenido de las sesiones 08–12. **Lo de s12 entra solo en
+OA2.3 (escalas, temperamentos y cents), OA4.2 (el decibel y las
+isofónicas, dictados en el módulo 2 de s07 tras la suspensión de la
+s06; solo ítems básicos) y OA3.1 (escucha escrita), sobre el contenido
+de s07 (módulo 2) y las sesiones 08–12. **Lo de s12 entra solo en
 versión básica** (tubo abierto/cerrado, $v/2L$–$v/4L$, registros),
 según lo anunciado en s12. La Parte A (OA3.1) se aplica dentro de esta
 prueba pero se califica aparte, como uno de los tres eventos de la
@@ -29,7 +31,7 @@ los 48 puntos de la prueba.
 
 1. Responda en los espacios de este cuadernillo, con letra legible.
    Respuestas cortas y precisas valen más que respuestas largas.
-2. Recibirá además una **hoja de figuras** (Figuras 1 y 2).
+2. Recibirá además una **hoja de figuras** (Figuras 1, 2 y 3).
    Entréguela junto con el cuadernillo.
 3. La prueba **suena**: hay 3 estímulos de audio que se reproducen por
    el equipo de la sala según el calendario del pizarrón (minuto 10:
@@ -254,42 +256,50 @@ b) La tercera mayor, porque mide más cents en total (400 contra 702), y "más c
 c) Ambas laten igual, porque el temperamento igual reparte el error de forma pareja entre todos los intervalos
 d) La tercera mayor, porque su error (14 cents) es mucho mayor que el de la quinta (2 cents): late más rápido y se oye más áspera
 
-### C.3 — La botella y la caja (8 puntos)
+### C.3 — El coro en la sala (8 puntos)
 
-**a) (2 pts)** Una botella **soplada** en el gollete da una nota. Se
-le agrega agua y se vuelve a soplar. ¿La nota sube o baja, y por qué?
+En un ensayo, **un** cantante produce un nivel de **60 dB SPL** en el
+punto donde está sentado el director.
 
-a) Baja: lo que vibra es el aire; más agua agrega masa vibrante y eso la hace más grave
-b) Sube: lo que vibra es el aire (resonador de Helmholtz); el agua achica el volumen de aire y un resorte de aire más corto es más rígido
-c) Sube: lo que vibra es el vidrio; el agua lo tensa como una membrana y sube la frecuencia
-d) Baja: lo que vibra es el aire; al haber más agua, el volumen de aire crece y un resorte más largo es más blando
+a) (2 pts) Cantan **dos** cantantes iguales (misma potencia, misma
+distancia). ¿Qué nivel marca ahora un sonómetro en ese punto?
 
-**b) (2 pts)** La misma botella, ahora **golpeada** con una cuchara,
-también da una nota. Con más agua, esa nota ¿sube o baja, y por qué
-puede ser distinto de (a)?
+(a) 66 dB
+(b) 60 dB
+(c) 63 dB
+(d) 120 dB
 
-a) Baja: golpeada, lo que vibra es el vidrio con su contenido; el agua agrega masa y la vibración se hace más lenta — la misma botella es dos resonadores distintos según a quién se le entrega la energía
-b) Sube: golpeada, lo que vibra es el aire igual que al soplar, y el mismo mecanismo de Helmholtz aplica
-c) Baja: golpeada, lo que vibra es el aire; más agua dentro dificulta que el aire resuene, y eso la hace más grave
-d) No cambia: el golpe excita el vidrio, que no se ve afectado por el agua
+b) (2 pts) ¿Y con **diez** cantantes iguales?
 
-**c) (2 pts)** Un elástico estirado y pulsado **en el aire** casi no
-se oye, aunque se ve vibrar. Apoyado sobre una **caja de cartón**,
-suena claramente. ¿Qué cambia (impedancia y acoplamiento)?
+(a) 600 dB
+(b) 70 dB
+(c) 69 dB
+(d) 63 dB
 
-a) La caja amplifica el sonido, funcionando como un megáfono que concentra las ondas del elástico
-b) El elástico no genera suficiente energía por sí solo, y la caja le agrega la energía que falta para sonar
-c) El elástico es delgado y corta el aire en vez de empujarlo (impedancia que no calza); la caja, grande y liviana, empuja mucho aire con poca fuerza y actúa de transformador entre el elástico y el aire
-d) La caja resuena exactamente a la frecuencia del elástico y por eso refuerza solo esa nota
+c) (2 pts) Esos diez cantantes, ¿se oyen aproximadamente "el doble de
+fuerte" o "diez veces más fuerte" que uno solo? Justifique con la
+regla del curso.
 
-**d) (2 pts)** Sobre la caja, el elástico suena **más fuerte**. ¿Su
-vibración dura más o menos tiempo que en el aire (argumento de
-energía)?
+(a) Diez veces más fuerte, porque suenan diez cantantes en vez de uno.
+(b) Prácticamente igual de fuerte, porque el oído se satura por
+encima de 60 dB.
+(c) El doble de fuerte, porque diez cantantes producen el doble de
+presión sonora que uno solo.
+(d) El doble de fuerte, porque +10 dB (×10 en intensidad) equivale
+aproximadamente a duplicar la sonoridad percibida.
 
-a) Dura más: la caja, al sonar más fuerte, tiene más energía disponible para sostener la vibración
-b) Dura menos: la caja no agrega energía, solo la convierte en sonido más intenso; fuerte y corto son la misma energía repartida distinto
-c) Dura lo mismo: el tiempo de vibración depende solo del material del elástico, no de la caja
-d) Dura menos: la caja absorbe parte de la energía del elástico y por eso decae antes
+d) (2 pts) La **Figura 3** muestra curvas isofónicas. A nivel bajo
+(curva de 40 fones): un tono de **100 Hz** y uno de **1000 Hz** llegan
+al oído con el **mismo nivel en dB SPL**. ¿Se oyen igual de fuerte?
+
+(a) El de 100 Hz se oye más débil; en la curva de 40 fones, a 100 Hz
+la curva está más arriba, es decir necesita más dB SPL que el de
+1000 Hz para igual sonoridad.
+(b) Se oyen igual de fuerte, porque tienen el mismo nivel en dB SPL.
+(c) El de 1000 Hz se oye más débil, porque el oído es menos sensible
+a esa frecuencia.
+(d) El de 100 Hz se oye más fuerte, porque los graves se perciben con
+más energía a igual nivel.
 
 ## Parte D — Mecanismos y vocabulario (10 puntos, ~8 minutos)
 
@@ -390,3 +400,11 @@ grandes y en escala de grises legible).
   Amplitudes decrecientes con la frecuencia en ambos. Los valores
   deben ser legibles contra la grilla de 250 Hz para que C.1c cierre
   con las respuestas calculadas en C.1a–b.
+- **Figura 3 — Curvas isofónicas simplificadas** (heredada de la
+  Prueba 1 al pasar el decibel a s07; redibujar a mano o con software
+  propio, NO fotocopiar de un libro): ejes frecuencia 20–10 000 Hz
+  (log) vs nivel 0–100 dB SPL; tres curvas rotuladas 20, 40 y 80
+  fones, con la forma estándar (suben hacia los graves, y más cuanto
+  más baja la curva; valle suave en 3–4 kHz). Debe poder leerse que,
+  sobre la curva de 40 fones, 100 Hz exige del orden de 10–20 dB más
+  que 1000 Hz para igual sonoridad.

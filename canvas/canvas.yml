@@ -201,10 +201,10 @@ modulos:
       - titulo: "La sala como instrumento"
         url: "{sitio}/curso/sesion-14/apunte_s14_la_sala_como_instrumento.html"
       - {tipo: subheader, titulo: "Actividades"}
-      - titulo: "Guía de salida — Medir el $T_{60}$ de espacios UC (s14, módulo 2 completo, 70 min)"
+      - titulo: "Guía de medición — Medir el $T_{60}$ de tres espacios del edificio (s14, módulo 2, 70 min)"
         url: "{sitio}/curso/sesion-14/actividades/guia_salida_medicion_t60.html"
         indent: 1
-      - titulo: "Rutas de la salida de medición — PLANTILLA EDITABLE (s14, módulo 2)"
+      - titulo: "Espacios de medición — sala, pasillo y escalera (s14, módulo 2)"
         url: "{sitio}/curso/sesion-14/actividades/rutas_salida_medicion.html"
         indent: 1
       - titulo: "Encargo del Hito 3 — Presentación final + informe (15 %)"

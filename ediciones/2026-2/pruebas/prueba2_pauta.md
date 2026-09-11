@@ -30,10 +30,10 @@ lógica lineal por tramos que la versión anterior, reescalada a 48:
 |---|---|---|---|---|---|
 | B.1a | c | 2 | C.2b | c | 2 |
 | B.1b | a | 2 | C.2c | d | 2 |
-| B.1c | d | 2 | C.3a | b | 2 |
-| B.1d | b | 2 | C.3b | a | 2 |
-| B.2a | a | 2 | C.3c | c | 2 |
-| B.2b | c | 2 | C.3d | b | 2 |
+| B.1c | d | 2 | C.3a | c | 2 |
+| B.1d | b | 2 | C.3b | b | 2 |
+| B.2a | a | 2 | C.3c | d | 2 |
+| B.2b | c | 2 | C.3d | a | 2 |
 | B.2c | b | 2 | D.1 | (tabla) | 4 |
 | B.3a | d | 2 | D.2a | d | 1 |
 | B.3b | c | 2 | D.2b | c | 1 |
@@ -71,15 +71,12 @@ acoplamiento/proporciones = **OA1.2**; mecanismos/regímenes/familias =
 | C.2a | OA2.3 | — | 2 | aplicación |
 | C.2b | OA2.3 | — | 2 | aplicación |
 | C.2c | OA2.3 | OA2.2 | 2 | aplicación |
-| C.3a | OA1.2 | — | 2 | aplicación |
-| C.3b | OA1.2 | — | 2 | aplicación |
-| C.3c | OA1.2 | — | 2 | aplicación |
-| C.3d | OA1.2 | — | 2 | aplicación |
+| C.3a–d | OA4.2 | — | 8 | **básico** (contenido de s07 m2, heredado de la s06 suspendida: leer un nivel, +10/+3, isofónica) |
 | D.1 | OA1.3 | — | 4 | básico |
 | D.2 | OA2.3 | — | 3 | básico |
 | D.3 | OA1.3 | — | 3 | aplicación |
 
-Cobertura: OA3.1 = 16 · OA1.2 = 20 (B.1 + C.1a–b + C.3) · OA1.3 = 13
+Cobertura: OA3.1 = 16 · OA1.2 = 12 (B.1 + C.1a–b) · OA4.2 = 8 (C.3, básico; el decibel pasó de la Prueba 1 a esta al suspenderse la s06) · OA1.3 = 13
 (B.3 + C.1c + D.1 + D.3) · OA2.2 = 6 (B.2; además capa secundaria de
 la Parte A — el estímulo es un batido; OA2.2 ya cosechó 8 pts escritos
 en la Prueba 1, ítems B.2 y C.2c) · OA2.3 = 9 (C.2 + D.2). Lo de s12
@@ -260,37 +257,36 @@ confunde el tamaño total del intervalo (400 o 702 cents) con el
 tamaño del error de afinación, que es lo que realmente determina el
 batido; (c) niega la diferencia entre ambos temperamentos.
 
-**C.3a (2) — b**. **Sube**: al soplar, lo que vibra es el **aire**
-(resonador de Helmholtz); el agua no participa — solo achica el
-volumen de aire, y un resorte de aire más corto es más rígido.
-Distractores: (a) identifica bien que vibra el aire pero invierte la
-dirección; (c) atribuye la vibración al vidrio, mecanismo de (b) y no
-de (a); (d) tiene el mecanismo del aire pero invierte el efecto del
-agua sobre el volumen.
+**C.3a (2) — c**. 63 dB SPL (dos fuentes iguales → **+3 dB**).
+Distractores: (a) 66 dB suma un incremento mayor al que corresponde a
+duplicar una fuente; (b) 60 dB asume que el nivel no cambia al sumar
+una fuente igual; (d) 120 dB suma los decibeles linealmente
+(60+60), el error típico más frecuente.
 
-**C.3b (2) — a**. **Baja**: golpeada, lo que vibra es el **vidrio con
-su contenido**; el agua es masa agregada que alenta la vibración. La
-clave que se premia: la misma botella es DOS resonadores distintos
-según a quién se le entrega la energía. Distractores: (b) confunde el
-mecanismo golpeado con el soplado (aire/Helmholtz); (c) tiene la
-dirección correcta pero el mecanismo del caso (a), no del (b); (d)
-niega que el agua tenga efecto.
+**C.3b (2) — b**. 70 dB SPL (diez fuentes → **+10 dB**). Distractores:
+(a) 600 dB multiplica linealmente (60×10), sin sentido físico; (c)
+69 dB es un cálculo cercano pero no corresponde a la regla del curso;
+(d) 63 dB repite el resultado de C.3a, olvidando que ahora son diez
+cantantes y no dos.
 
-**C.3c (2) — c**. El elástico solo es delgado y "duro de mover": corta
-el aire en vez de empujarlo — su impedancia no calza con la del aire;
-la caja, grande y liviana, empuja mucho aire con poca fuerza y actúa
-de **transformador/acoplador**. Distractor clave documentado (a): "la
-caja amplifica el sonido" sin mecanismo (¿con qué energía?);
-(b) confunde acoplamiento con aporte de energía extra; (d) inventa una
-resonancia exacta de la caja, que no es el mecanismo enseñado.
+**C.3c (2) — d**. Aproximadamente **el doble de fuerte**; regla +10 dB
+(×10 en intensidad) ≈ doble de sonoridad. Distractores: (a) confunde
+intensidad física ("diez veces más fuerte") con sonoridad percibida;
+(b) inventa un efecto de saturación que no está en el curso; (c) llega
+a la conclusión correcta (el doble) pero con una razón física
+incorrecta (no es presión sonora doblada, es la regla perceptual de
++10 dB).
 
-**C.3d (2) — b**. Dura **menos**: la caja **no agrega energía** — el
-pulso inicial puso toda la que habrá; si esa misma energía se
-convierte en sonido más intenso, se gasta antes (fuerte ↔ corto).
-Distractores: (a) invierte la conclusión asumiendo que "más fuerte"
-implica más energía disponible; (c) niega el efecto de la caja sobre
-la duración; (d) tiene la conclusión correcta pero el mecanismo
-opuesto al enseñado (la caja "absorbe" en vez de "no agregar").
+**C.3d (2) — a**. El de 100 Hz se oye **más débil**; sobre la curva de
+40 fones, en 100 Hz la curva está más arriba — a igual dB SPL, el tono
+grave necesita más nivel para igualar la sonoridad del de 1000 Hz.
+Distractores: (b) ignora la curva isofónica y asume que igual dB SPL
+es igual sonoridad; (c) invierte cuál de los dos tonos se oye más
+débil; (d) invierte además el sentido del efecto.
+
+(Los ítems anteriores de C.3, "la botella y la caja" — Helmholtz,
+vidrio vs. aire, acoplamiento e impedancia — quedan como banco de
+reserva en el historial de git, commit previo al 2026-09-11.)
 
 ## Parte D — Mecanismos y vocabulario (10 pts)
 

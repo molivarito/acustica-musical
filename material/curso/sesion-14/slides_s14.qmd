@@ -252,7 +252,8 @@ s10, medido con los dB de s06" (plan, m1 35–49′).
 
 ## El método, antes de salir
 
-Van a ver la medición completa, una vez, en esta misma sala:
+Van a ver la medición completa, una vez, en esta misma sala (y el
+profesor la repite con REW como valor de control):
 
 ::: {.incremental}
 1. **Silencio**
@@ -290,9 +291,10 @@ anota "extrapolado" — es un dato del informe, no un fracaso (plan,
 Riesgos y plan B).
 :::
 
-## La salida: roles y materiales
+## La medición: roles y materiales
 
-Grupo con roles que **rotan** en cada espacio:
+Tres espacios del edificio, los mismos para todos: **la sala, un
+pasillo y una escalera**. Grupo con roles que **rotan** en cada espacio:
 
 **ejecuta** el impulso · **mide y registra** con la app · **vocero**
 
@@ -301,28 +303,31 @@ Grupo con roles que **rotan** en cada espacio:
 Por grupo: 2 celulares con las apps, 3–4 globos, guía impresa.
 
 ::: {.notes}
-**Apoyo:** asigne una ruta por grupo, dé las reglas de convivencia
-(espacios en uso, volumen, permisos) y la hora de corte; entregue la
-pauta del hito 3 impresa recordando que se lee en casa y las consultas
-van por el canal declarado en la pauta (plan, m1 49–70′).
+**Apoyo:** decisión D2 (2026-09-11): sin salida al campus ni permisos;
+los tres espacios están a ≤2 min y cada uno queda medido por los 3
+grupos (reproducibilidad entre celulares). Dé las reglas de
+convivencia (espacios en uso, el globo lejos de los oídos, avisar en
+la escalera) y el corte del minuto 50; entregue la pauta del hito 3
+impresa recordando que se lee en casa (plan, m1 49–70′).
 :::
 
-## Su ruta de hoy
+## Su orden de hoy
 
-| | |
-|---|---|
-| **Espacio A** (★ obligatorio) | *[a completar]* |
-| **Espacio B** (★ obligatorio) | *[a completar]* |
-| **Espacio C** (opcional) | *[a completar]* |
-| **Hora de corte** | *[a completar]* |
-| **Punto de encuentro** | *[a completar]* |
+| Grupo | 5–20′ | 20–35′ | 35–50′ |
+|---|---|---|---|
+| **G1** | Sala | Pasillo | Escalera |
+| **G2** | Pasillo | Escalera | Sala |
+| **G3** | Escalera | Sala | Pasillo |
+
+**Corte: minuto 50**, todos de vuelta a la sala. Pasillo: *[tramo]* ·
+Escalera: *[cuál]*.
 
 ::: {.notes}
-**Apoyo:** complete la tabla con los espacios concretos de cada ruta
-antes de proyectar — los fija el profesor (plan, "Pendientes de
-producción"). Si llueve o un tramo queda impracticable, cada ruta
-trae un espacio alternativo bajo techo; si un espacio está ocupado o
-cerrado, se usa la alternativa de la ruta (plan, Riesgos y plan B).
+**Apoyo:** complete el tramo de pasillo y la escalera antes de
+proyectar (hoja de espacios, `actividades/rutas_salida_medicion.md`).
+Si un espacio está en uso, esperar 1′ en silencio; si no se despeja,
+medir igual y anotar "fondo alto / extrapolado". El valor de control
+de la sala lo mide usted con REW durante el despliegue (plan, m2 0–5′).
 :::
 
 ## En cada espacio {.center}
