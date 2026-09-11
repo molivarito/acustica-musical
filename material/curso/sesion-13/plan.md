@@ -30,7 +30,7 @@ especial (anunciado en s12); durante la prueba NO se permiten celular,
 audífonos ni apuntes (se guardan en la mochila); no se necesita
 calculadora. · **SE REPARTE** — el cuadernillo de la Prueba 2 (1 por
 estudiante, de 9 impresos + 2 de reserva) y, aparte, la hoja de figuras
-(Figuras 1–2, 1 por estudiante). · **SE RECOGE** — al cierre del módulo
+(Figuras 1–3, 1 por estudiante; la Figura 3, isofónicas, entró con el decibel el 2026-09-11). · **SE RECOGE** — al cierre del módulo
 1, el cuadernillo Y la hoja de figuras (se cuentan al recibir); al
 cierre del módulo 2, el ticket de salida hacia s14. · **SE REVISA** —
 las partes B–D de la Prueba 2 (48 puntos, 10 % del curso) con la pauta
@@ -56,7 +56,7 @@ semana); la escucha del día (práctica, sin nota) se retoma en s14.
 Decisiones: (1) el **módulo 2 es
 plenario y sin guía impresa ni registro recogido**: el curso sale
 agotado de la prueba; el material es la propia voz (profesor y curso) y
-la demo. (2) La Prueba 2 usa **3 estímulos de audio y solo 2 figuras**
+la demo. (2) La Prueba 2 usa **3 estímulos de audio y 3 figuras** (la tercera, isofónicas, desde que el decibel pasó a esta prueba)
 (la Prueba 1 usó 3): acota la producción de material en la semana pico
 de corrección; los 3 estímulos se sintetizan/graban sin depender de
 terceros (#13–#15 del banco). (3) Regla 6b cumplida ítem por ítem: lo
@@ -140,7 +140,7 @@ Presupuesto interno del cuadernillo: A 10′ + B 15′ + C 20′ + D 8′ =
   calendario + cantar/susurrar los ejemplos del m2 (su propia voz, sin
   ensayo con terceros) + operar app y demo. Fuera de aula esta semana:
   corrección de la Prueba 2 ≈2,5 h (pico declarado en metodología §4) +
-  generación de las 2 figuras (~1 h) + prueba de los 3 estímulos en el
+  generación de las 3 figuras (~1,5 h) + prueba de los 3 estímulos en el
   equipo de sala; los estímulos mismos pueden producirse en cualquier
   momento previo (no dependen de nada del semestre, ver banco #13–#15).
 
