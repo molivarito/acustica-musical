@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="es" xml:lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>s06 · Módulo 2 — Estaciones de medición en serie · guion de clase del profesor</title>
+  <style>
+    /* Default styles provided by pandoc.
+    ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+    */
+    html {
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    svg {
+      height: auto;
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      border: none;
+      border-top: 1px solid #1a1a1a;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+  </style>
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">s06 · Módulo 2 — Estaciones de medición en serie ·
+guion de clase del profesor</h1>
+<p class="subtitle">vie 11-sep-2026 · solo profesor · llevar impreso</p>
+</header>
+<h2 id="antes-de-que-entren-15-min-lista-de-chequeo">0. Antes de que
+entren (15 min) — lista de chequeo</h2>
+<p><strong>E1, referencia (al frente)</strong></p>
+<ul class="task-list">
+<li><label><input type="checkbox" />MOTU conectada, phantom 48 V
+encendido, AT3035 en pie a altura de boca, de frente a la sala. Filtro
+80 Hz ON, pad OFF.</label></li>
+<li><label><input type="checkbox" />REW abierto → Preferencias →
+Soundcard: entrada = MOTU, canal del micrófono, 48 kHz. Salida = equipo
+de la sala.</label></li>
+<li><label><input type="checkbox" />SPL Meter: ponderación
+<strong>A</strong>, respuesta <strong>Slow</strong>, pestaña
+<strong>Logger</strong> lista. Botón rojo para medir.</label></li>
+<li><label><input type="checkbox" />Calibración: Generator → ruido rosa
+por el equipo de la sala, volumen medio. iPhone con app NIOSH (dB(A))
+junto al micrófono a 1 m. SPL Meter → <strong>Calibrate</strong> →
+escribir la lectura del iPhone. Apagar el generador.</label></li>
+<li><label><input type="checkbox" />Prueba: “aaah” a 30 cm ≈ nivel de
+entrada −20 dBFS, sin rojo. <strong>Fijar la ganancia y no tocarla
+más.</strong> Anotar aquí: 30 cm = ______ dB(A) · 3 m = ______ dB(A) ·
+sala vacía = ______ dB(A).</label></li>
+<li><label><input type="checkbox" />Cinta en el suelo a <strong>30
+cm</strong> y a <strong>3 m</strong> frente al micrófono; mesita junto
+al micrófono para poner los 9 celulares en fila; pantalla de REW
+proyectada.</label></li>
+<li><label><input type="checkbox" />Plan B si la MOTU no aparece:
+entrada “iPhone de Patricio Microphone” (Continuidad), calibrada con
+NIOSH del mismo teléfono.</label></li>
+</ul>
+<p><strong>E3 y E2, fuentes (mesa del frente)</strong></p>
+<ul class="task-list">
+<li><label><input type="checkbox" />Dos celulares tuyos (o celular +
+notebook) con <strong>la misma señal de RUIDO ROSA</strong> (no un tono
+puro: dos tonos iguales son coherentes y en cada punto suman entre 0 y
++6 dB según la fase; con ruido la suma es incoherente y da +3 limpios;
+el tono puro además excita los modos de la sala y arruina el mapa de
+E2). Probar que A y B den parejos en la app (±1 dB).</label></li>
+<li><label><input type="checkbox" />Anillo de cinta a ~1 m alrededor de
+la mesa del frente (E3).</label></li>
+<li><label><input type="checkbox" />4 puntos de E2 marcados y numerados:
+① junto al equipo · ② centro · ③ rincón trasero · ④ junto a la
+puerta.</label></li>
+<li><label><input type="checkbox" /><strong>Anunciar en voz alta al
+presentar la logística</strong>: “las fuentes emiten ruido, no un tono;
+la guía dice tono, hoy usamos ruido”.</label></li>
+</ul>
+<p><strong>Común</strong></p>
+<ul class="task-list">
+<li><label><input type="checkbox" />Cronómetro de 8′ proyectado. Lámina
+del orden <strong>E1 → E3 → E2 → E5 → E4</strong> (está en el
+deck).</label></li>
+<li><label><input type="checkbox" />Tu celular con la app SPL de la
+lista, para el gancho de las palmas.</label></li>
+<li><label><input type="checkbox" />Voluntario de los audífonos avisado
+(E5). Voluntario para la voz de E1 elegido.</label></li>
+<li><label><input type="checkbox" />Guías impresas (1 por grupo, versión
+“en serie”), hojas isofónicas (1 por estudiante), 9 entregas corregidas
+del hito 1.</label></li>
+</ul>
+<h2 id="gancho-08-cuatro-palmas-son-cuatro-veces-más-fuerte">1. Gancho
+(0–8′): ¿cuatro palmas son cuatro veces más fuerte?</h2>
+<p>Un voluntario aplaude sostenido; tu app mide, <strong>no muestres el
+número</strong>. Votación a mano alzada ANTES de los cuatro: ¿+3, +6 o
++12 dB? Aplauden los cuatro. Guardas la lectura: “queda en suspenso
+hasta E3”. <em>Lo que debería dar</em>: cuatro fuentes incoherentes ≈
+<strong>+6 dB</strong>. La mayoría votará +12 (o “el cuádruple”).</p>
+<h2 id="logística-815">2. Logística (8–15′)</h2>
+<p>Pregunta de la semana: “¿qué tan fuerte es nuestro mundo musical, y
+cómo se mide con juicio?”. Lámina de los 5 bloques. Reglas: <strong>8′
+por bloque, en serie, todos miden el mismo evento con su app</strong>;
+roles (ejecuta / mide y registra / vocero) rotan por bloque;
+<strong>silencio absoluto durante E1, E3 y E2</strong>; predicción
+escrita ANTES de medir; el mínimo por bloque es el ítem ★. Dudas de
+procedimiento ahora. Recordatorio: apps en <strong>dB(A)</strong>.</p>
+<h2
+id="los-cinco-bloques-1555-qué-hacer-qué-esperar-qué-puede-fallar">3.
+Los cinco bloques (15–55′): qué hacer, qué esperar, qué puede
+fallar</h2>
+<h3 id="bloque-1-e1-la-referencia-fina-1523">Bloque 1 — E1 · La
+referencia fina (15–23′)</h3>
+<p><strong>Hacer</strong>: los 9 celulares en fila junto al AT3035, apps
+abiertas. Voluntario de frente al micrófono, “aaah” mezzoforte a 30 cm,
+5 s. Lees el <strong>Leq</strong> de REW en voz alta; cada uno anota
+referencia y su app. Repetir a 3 m, <strong>de frente</strong> (a 45°
+pierde dB por ángulo, no por distancia). Nadie toca la ganancia.</p>
+<p><strong>Esperar</strong>: 30 cm ≈ 70–75 dB(A). Caída a 3 m ≈
+<strong>10–15 dB</strong> (en campo libre serían 20; la reverberación de
+la sala aplana). Los celulares discrepan en el absoluto (±5 dB Android,
+±2 iPhone/NIOSH) pero <strong>coinciden en la caída</strong> dentro de
+2–3 dB.</p>
+<p><strong>Provocar</strong>: “¿difieren en el valor, pero coinciden en
+cuánto cayó?”. El celular que muestra una caída mucho menor tiene
+control automático de ganancia: <strong>es el mejor dato del
+bloque</strong>, no un error; nómbralo.</p>
+<p><strong>Honestidad</strong>: la referencia está calibrada contra un
+celular; lo “fino” es el micrófono, la ganancia fija y el promedio Leq,
+no el número absoluto.</p>
+<h3 id="bloque-2-e3-dos-fuentes-el-doble-2331">Bloque 2 — E3 · ¿Dos
+fuentes = el doble? (23–31′)</h3>
+<p><strong>Hacer</strong>: todos de pie en el anillo de 1 m. Enciendes A
+(ruido) solo → miden; B solo → miden (¿parejos?); A+B → miden. Cada uno
+anota los tres.</p>
+<p><strong>Esperar</strong>: A ≈ B dentro de 1 dB; <strong>A+B = +2,5 a
++3,5 dB</strong>. Si alguien obtiene +5 o más: estaba pegado a una de
+las fuentes o las fuentes no eran parejas. Si obtienes dispersión grande
+(0 a +6): las fuentes están emitiendo tono puro y no ruido → cambia a
+ruido y repite (2′).</p>
+<p><strong>Provocar</strong>: “¿por qué NO dio +6?”, “¿cuántos celulares
+harían falta para el doble de fuerte?” (respuesta: +10 dB ≈ diez
+celulares). <strong>No cobrar el gancho todavía.</strong></p>
+<h3 id="bloque-3-e2-el-mapa-de-la-sala-3139">Bloque 3 — E2 · El mapa de
+la sala (31–39′)</h3>
+<p><strong>Hacer</strong>: dejas A (ruido) sonando fijo al frente, sin
+mover ni cambiar volumen. Los 3 grupos recorren <strong>en
+silencio</strong> los puntos ① a ④, midiendo con el <strong>mismo
+celular del grupo</strong> en los 4. Anotan el mapa.</p>
+<p><strong>Esperar</strong>: el punto ① (junto al equipo) claramente más
+ruidoso; ②, ③ y ④ bastante parejos, 5–8 dB por debajo: pasado 1–2 m
+manda el campo reverberante y el nivel se aplana. Puede haber un rincón
+un poco más alto por los graves.</p>
+<p><strong>Provocar</strong>: “¿dónde ensayaría un violinista que quiere
+cuidarse el oído?” → lejos de la fuente; y después de cierta distancia
+da casi lo mismo dónde.</p>
+<h3 id="bloque-4-e5-la-dosis-del-oído-3947">Bloque 4 — E5 · La dosis del
+oído (39–47′)</h3>
+<p><strong>Hacer</strong>: caso 1, “la banda”: todos cantan una nota
+sostenida 15 s mientras el registrador de cada grupo mide a ~1 m de las
+bocas. Caso 2, “los audífonos en la micro”: el voluntario presta sus
+audífonos al volumen que usa; cada mesa mide pegada al auricular
+(silencioso, en paralelo). Luego tabla NIOSH en la mesa; una decisión
+práctica anotada.</p>
+<p><strong>Esperar</strong>: la banda ≈ <strong>80–85 dB(A)</strong> →
+en el límite de las 8 h admisibles. Los audífonos medidos desde afuera
+dan un número poco fiable y más bien bajo: <strong>eso es
+lección</strong> (el nivel en el tímpano no se mide así) y va a la
+casilla “límite”.</p>
+<p><strong>Provocar</strong>: “¿cuántos dB le baja un protector, y
+cuánto tiempo le compra?” → 15 dB = cinco pasos de 3 dB =
+<strong>×32</strong> el tiempo admisible.</p>
+<h3 id="bloque-5-e4-aritmética-del-decibel-4755">Bloque 5 — E4 ·
+Aritmética del decibel (47–55′)</h3>
+<p><strong>Hacer</strong>: papel, en las mesas, con sus propios datos.
+Pasas por las mesas.</p>
+<p><strong>Esperar</strong>: diferencia de E2 (6–8 dB) ≈ <strong>×4 a
+×6</strong> en intensidad; +3 de E3 = <strong>×2</strong>; discrepancia
+de E1 (p. ej. 5 dB) ≈ ×3; “la mitad de fuerte” = <strong>−10 dB = 1/10
+de la energía</strong>. Error típico: <strong>sumar en vez de
+multiplicar</strong>.</p>
+<p><strong>Provocar</strong>: “+3 dB es ×2 en intensidad: ¿y en qué tan
+fuerte se oye?” → apenas se nota.</p>
+<h2 id="puesta-en-común-5560">4. Puesta en común (55–60′)</h2>
+<p>Planilla proyectada, tres columnas; un dato por vocero, sin
+discurso:</p>
+<table>
+<colgroup>
+<col style="width: 25%" />
+<col style="width: 25%" />
+<col style="width: 25%" />
+<col style="width: 25%" />
+</colgroup>
+<thead>
+<tr>
+<th>Grupo</th>
+<th>E1: app − referencia (30 cm) y dispersión entre celulares</th>
+<th>E3: A+B − A</th>
+<th>E2: punto más ruidoso</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>G1</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>G2</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>G3</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Cobrar el gancho</strong>: las palmas dieron ______ dB (≈ +6
+por cuatro fuentes); los celulares ≈ +3 por duplicar.
+<strong>Moraleja</strong>: duplicar fuentes ≈ +3 dB; el doble de fuerte
+pide ≈ +10 dB, unas diez fuentes (por eso duplicar la orquesta no
+duplica lo fuerte, Benade cap. 13). <strong>Remate</strong>:
+comparaciones con el mismo aparato son confiables; los absolutos sin
+calibrar, no.</p>
+<h2 id="cierre-6070">5. Cierre (60–70′)</h2>
+<p>Formulario de 4 casillas al dorso de la planilla (pregunta / dato /
+interpretación / límite), sin prosa. Ticket hacia s07 mientras anuncias:
+<strong>Prueba 1 en s07</strong> (módulo 1 completo; entra s01–s06, lo
+de s06 solo básico; con audio); el módulo 2 de s07 será audición liviana
+donde el ticket de hoy se responde con los oídos. Recoges: planillas con
+formulario, hojas isofónicas del m1, tickets.</p>
+<p><strong>Después de clase</strong>: rúbrica rápida (logrado / parcial
+/ incipiente: dato con unidad, condiciones, regla +10/+3 bien usada, un
+límite declarado) y nota del taller en Canvas (tarea
+<code>taller-06</code> de la agenda).</p>
+<h2 id="plan-b-rápido">6. Plan B rápido</h2>
+<ul>
+<li><strong>MOTU no aparece</strong> → micrófono del iPhone por
+Continuidad + calibración NIOSH; se pierde el AT3035, no el bloque.</li>
+<li><strong>Estudiante sin app</strong> → comparte celular en la mesa;
+≥2 lecturas por evento igual.</li>
+<li><strong>Lecturas dispares (±10 dB)</strong> → es dato: a la casilla
+“límite” y a la puesta en común.</li>
+<li><strong>E3 con dispersión rara</strong> → las fuentes están en tono
+puro: cambiar a ruido.</li>
+<li><strong>Sala muy ruidosa a 3 m</strong> (voz apenas sobre el fondo)
+→ acortar a 2 m y decirlo; la caída sigue siendo el dato.</li>
+<li><strong>Un bloque se alarga</strong> → a los 8′ se pasa con lo que
+haya; el ★ basta.</li>
+</ul>
+</body>
+</html>
