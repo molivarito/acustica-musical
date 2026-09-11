@@ -1,0 +1,505 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="es" xml:lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>s15 · Presentaciones finales: explicar es la prueba — hoja de clase del profesor (lámina por lámina)</title>
+  <style>
+    /* Default styles provided by pandoc.
+    ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+    */
+    html {
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    svg {
+      height: auto;
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      border: none;
+      border-top: 1px solid #1a1a1a;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+  </style>
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">s15 · Presentaciones finales: explicar es la prueba —
+hoja de clase del profesor (lámina por lámina)</h1>
+<p class="subtitle">vie 27-nov-2026 · 2 módulos de 70′ · solo profesor ·
+versión 0 (11-sep), se retoca el jueves 26-nov</p>
+</header>
+<p>Cada bloque dice <strong>[lámina N]</strong> del mazo
+<code>slides_s15</code> (13 láminas). Lo que va entre 「」 es lo que
+dices o preguntas. Los tiempos son de cada módulo. Contexto:
+<strong>cierre del curso</strong>. No hay escucha del día, no hay
+mini-lección nueva, no hay demo (única sesión sin una) — el 79 % de los
+140′ son las 9 defensas individuales del hito 3 (8′ presentación + 3′
+preguntas = 11′, iguales para las 9). El módulo 2 termina con la
+re-escucha de la línea base de s01, la devolución de los sobres y la
+despedida del semestre.</p>
+<h2 id="antes-de-la-semana-lunes-a-jueves-26-lista-de-chequeo">Antes de
+la semana (lunes a jueves 26) — lista de chequeo</h2>
+<ul class="task-list">
+<li><label><input type="checkbox" /><strong>Recuperar del archivo físico
+las 9 hojas de línea base de s01</strong> y meterlas en sobres nominados
+(uno por estudiante, verificado contra la lista vigente de 9 inscritos).
+Es el único insumo de esta sesión que no vive en el repo. Ver
+<strong>decisión 1</strong>.</label></li>
+<li><label><input type="checkbox" />Sorteo de la hoja de escucha armado:
+9 estudiantes × 2 defensas asignadas cada uno (nunca la propia),
+distribuido para que cada proyecto reciba ~2 diagnósticos; impreso y
+pre-rotulado.</label></li>
+<li><label><input type="checkbox" />Recibir las 9 presentaciones por el
+canal (plazo 20:00 del jueves 26) y cargarlas en el <strong>notebook
+único de sala</strong>; copia en USB y en el notebook
+propio.</label></li>
+<li><label><input type="checkbox" />Releer los hitos 1 y 2 de cada
+estudiante (~45′, los informes llegan recién el viernes) y anotar 2
+preguntas candidatas por estudiante (una de mecanismo/evidencia, una de
+contraste) en la planilla del guion §3–4.</label></li>
+<li><label><input type="checkbox" />Citar al estudiante sorteado
+primero, 10′ antes de la hora, con acuse de recibo (monta sin apuro: su
+bloque no tiene Q&amp;A previa de la que robar tiempo de
+transición).</label></li>
+<li><label><input type="checkbox" />Confirmar que el orden de las 9
+defensas quedó sorteado en s14. Si no: re-sorteo de 2′ en el encuadre
+(se come el colchón).</label></li>
+<li><label><input type="checkbox" />Definir el instrumento de la
+encuesta del curso (QR institucional o propio). Ver <strong>decisión
+4</strong>.</label></li>
+</ul>
+<h2 id="antes-de-que-entren-15-min-lista-de-chequeo">Antes de que entren
+(15 min) — lista de chequeo</h2>
+<p><strong>Módulo 1</strong></p>
+<ul class="task-list">
+<li><label><input type="checkbox" />Estímulo <strong>#1 del
+banco</strong> (<code>material/estimulos/e01_linea_base.wav</code>, el
+MISMO archivo de s01 — CONSAGRADO, no editar ni reemplazar; existencia
+verificada) probado en el equipo de sala.</label></li>
+<li><label><input type="checkbox" />Cronómetro grande visible + reloj
+propio de respaldo.</label></li>
+<li><label><input type="checkbox" />Impresiones: 9 hojas de escucha
+pre-rotuladas (+repuestos) · <strong>cartel/lámina de entrada con los 9
+nombres y el orden sorteado</strong> (no está en el mazo — ver
+<strong>decisión 2</strong>) · este guion con la planilla de 9 filas y
+la tabla de orden de abajo llena a mano.</label></li>
+<li><label><input type="checkbox" />Notebook único de sala con las 9
+presentaciones cargadas y probadas (audio incluido); USB de
+respaldo.</label></li>
+<li><label><input type="checkbox" />Caja rotulada “hojas de escucha”
+para la recepción del módulo 2.</label></li>
+</ul>
+<p><strong>Módulo 2</strong></p>
+<ul class="task-list">
+<li><label><input type="checkbox" />9 sobres nominados con las hojas de
+línea base de s01, listos para repartir.</label></li>
+<li><label><input type="checkbox" />9 medias hojas “hoy” impresas
+(plantilla del guion §5).</label></li>
+<li><label><input type="checkbox" />QR o enlace de la encuesta del
+curso, proyectable.</label></li>
+</ul>
+<h2 id="tabla-de-orden-completar-el-jueves-26-ensayo">Tabla de orden —
+completar el jueves 26 (ensayo)</h2>
+<p>Horas de inicio calculadas desde el minuto 0 de cada módulo (8′
+presentación + 3′ preguntas; +4′ de transición solo en la defensa 1, +1′
+en las demás). Conviértelas a hora real de sala antes de imprimir.</p>
+<table style="width:100%;">
+<colgroup>
+<col style="width: 16%" />
+<col style="width: 16%" />
+<col style="width: 16%" />
+<col style="width: 16%" />
+<col style="width: 16%" />
+<col style="width: 16%" />
+</colgroup>
+<thead>
+<tr>
+<th>#</th>
+<th>Nombre</th>
+<th>Módulo · minuto inicio</th>
+<th>Hora real</th>
+<th>Pregunta 1 (autor)</th>
+<th>Pregunta 2 (autor)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td></td>
+<td>M1 · 3′</td>
+<td><strong>:</strong></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>2</td>
+<td></td>
+<td>M1 · 18′</td>
+<td><strong>:</strong></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>3</td>
+<td></td>
+<td>M1 · 30′</td>
+<td><strong>:</strong></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>4</td>
+<td></td>
+<td>M1 · 42′</td>
+<td><strong>:</strong></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>5</td>
+<td></td>
+<td>M1 · 54′</td>
+<td><strong>:</strong></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>6</td>
+<td></td>
+<td>M2 · 0′</td>
+<td><strong>:</strong></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>7</td>
+<td></td>
+<td>M2 · 12′</td>
+<td><strong>:</strong></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>8</td>
+<td></td>
+<td>M2 · 24′</td>
+<td><strong>:</strong></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>9</td>
+<td></td>
+<td>M2 · 36′</td>
+<td><strong>:</strong></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Si alguien no aparece</strong>: no se improvisa reemplazo ni
+se redistribuye su bloque de preguntas del público (no hay grupo que lo
+absorba); se resuelve fuera de aula (certificado, informe y bitácora
+como evidencia) y la defensa se reprograma si el reglamento lo permite —
+el bloque sigue en la tabla marcado “ausente” y el reloj de los
+siguientes NO se adelanta (deja el hueco de 11–15′ como colchón extra).
+<strong>Si alguien se pasa de los 8′</strong>: aviso a los 6′30″, corte
+duro a los 8′ igual para las 9 — nunca se estira (es la equidad
+prometida en la pauta). Lo no dicho se defiende en las preguntas.</p>
+<h2 id="módulo-1-cinco-defensas-70">Módulo 1 — Cinco defensas (70′)</h2>
+<p><strong>0–3′ · Encuadre</strong> ([láminas 1–5]: Hoy · ¿Cómo corre el
+día? · Mientras otro compañero defiende · La regla que gobierna todo ·
+¿Por qué la explicación pesa más que el sonido?). Confirmas 9/9 informes
+recibidos en la puerta (ya entregados al entrar junto con la hoja de
+escucha pre-rotulada); enciendes el cronómetro en cero. 「Hoy no gana el
+instrumento más bonito: gana la mejor explicación.」 Repasas: orden
+sorteado (cartel aparte con los 9 nombres), 8′+3′=11′ iguales para las
+9, cada quien diagnostica por escrito solo sus 2 defensas asignadas.
+<em>Esperar</em>: silencio atento; alguien pregunta por su hoja si no la
+recibió. <em>Si falla</em>: hojas de repuesto en la caja.
+<strong>Ojo</strong>: 5 láminas en 3′ es imposible dicho con calma — ver
+<strong>decisión 3</strong>; si no decidiste antes, proyecta solo la
+lámina 2 (orden y reglas) y di el resto de memoria en 3′.</p>
+<p><strong>3–18′ · Defensa 1</strong> (15′: 8′ presentación + 3′
+preguntas + 4′ transición — sin Q&amp;A previa de la que robar tiempo de
+montaje). El objeto suena en vivo; predicción del hito 1 proyectada tal
+cual se escribió; ≥1 medición propia. Cronometras (aviso 6′30″, corte
+8′); registras R1–R4 en la planilla del guion; 2 preguntas dirigidas
+desde su informe y bitácora (banco del guion §3); cortas a los 3′.
+<em>Esperar</em>: nervios altos en la primera, tiempos algo cortos de
+presentación. <em>Si falla el instrumento</em>: la pauta exige plan B
+propio (grabación de respaldo); R1–R3 evalúan igual la explicación, R4
+registra el incidente sin hundir al estudiante si la defensa es
+solvente.</p>
+<p><strong>18–30′ · Defensa 2</strong> (12′: 8′+3′+1′ transición — el
+estudiante 3 pre-montó durante la Q&amp;A de la 2). Ídem mecánica.</p>
+<p><strong>30–42′ · Defensa 3</strong> (12′). Ídem.</p>
+<p><strong>42–54′ · Defensa 4</strong> (12′). Ídem.</p>
+<p><strong>54–66′ · Defensa 5</strong> (12′). Ídem; al corte, el objeto
+del 5 queda montado hasta que lo retires.</p>
+<p><strong>66–70′ · Colchón (4′).</strong> Absorbe cortes que se pasaron
+o problemas de conexión. Si sobra: 「respiramos; el módulo 2 parte
+puntual con la defensa 6」. Si no alcanzó: este es el único margen del
+módulo 1 — no hay más.</p>
+<h2 id="módulo-2-cuatro-defensas-y-el-cierre-del-arco-70">Módulo 2 —
+Cuatro defensas y el cierre del arco (70′)</h2>
+<p><strong>0–12′ · Defensa 6</strong> (12′: 8′+3′+1′ transición — el 7
+pre-montó durante el colchón/transición). Ídem mecánica.</p>
+<p><strong>12–24′ · Defensa 7</strong> (12′). Ídem.</p>
+<p><strong>24–36′ · Defensa 8</strong> (12′). Ídem.</p>
+<p><strong>36–48′ · [lámina 6] Defensa 9 y “se acabaron las
+defensas”</strong> (12′ + anuncio). Al cerrar: 「las nueve defensas
+están hechas; ahora entregan su hoja de escucha al pasar y cerramos el
+semestre」. Proyectas [lámina 6]: recogen las 2 preguntas del público
+quedan cerradas, entregan la hoja de escucha (con su ★ ya marcado) en la
+caja <strong>al pasar hacia el bloque siguiente</strong>.
+<em>Esperar</em>: alivio audible en la sala. <em>Si a alguien le falta
+marcar el ★</em>: dale 30″ antes de que entregue, no se detiene la clase
+por eso.</p>
+<p><strong>48–54′ · [lámina 7] La línea base, otra vez</strong> (6′, sin
+nota — OA3.1). Recibes las hojas de escucha en la caja mientras se
+acomodan. Sin abrir ningún sobre todavía: reproduces el estímulo #1
+(<code>e01_linea_base.wav</code>, el mismo de s01), <strong>dos
+pasadas</strong>. 「Qué oyen, qué lo produce, cómo lo comprobarían」 —
+la consigna idéntica de s01. Escriben en la media hoja “hoy” (plantilla
+del guion §5). No adelantas nada. <em>Esperar</em>: vocabulario mucho
+más técnico que en s01 (parciales, batidos, espectro) sobre el mismo
+estímulo. <em>Si el audio no suena bien en la sala</em>: probado la
+víspera — si falla en el momento, repite una tercera pasada antes de
+seguir; no hay plan B sintetizado porque el archivo está CONSAGRADO (no
+se reemplaza).</p>
+<p><strong>54–58′ · [lámina 8] Abran el sobre</strong> (4′, sin nota).
+Reparte los 9 sobres nominados. Cada uno lee en silencio su hoja de s01
+al lado de lo que acaba de escribir. 「¿Quién era usted en la semana 1?
+¿Quién es hoy?」 Antes de guardar ambas hojas, escriben una frase de
+cierre. Silencio deliberado — no comentas. <em>Esperar</em>: gestos,
+alguna risa o sorpresa leyendo el propio error de s01. <em>Si la emoción
+se desborda o se enfría</em>: las “voces” que siguen son voluntarias; si
+nadie quiere leer, tú lees (anónima) una línea base de s01 junto a una
+media hoja de hoy y dejas la comparación en el aire.</p>
+<p><strong>58–63′ · Voces</strong> (5′, fusible recortable a 0, sin
+lámina). Voluntarios leen su “antes” y su “ahora” en voz alta. Moderas
+sin corregir — el contraste habla solo.</p>
+<p><strong>63–67′ · [láminas 9–11] Síntesis del semestre</strong> (4′:
+El arco completo 1/2 y 2/2 · El método que no cambió nunca). Recorre el
+arco: golpe → altura, los anteojos (forma de onda / espectro /
+espectrograma), modos y timbre, oído que no es micrófono, resonancia
+como puente, las tres válvulas (fricción, aire, pliegues), la sala que
+también suena. Cierra con las tres capas (oído / mecanismo / medición)
+que usaron hoy en cada defensa. <strong>Ojo</strong>: 3 láminas en 4′ es
+ajustado — ver <strong>decisión 5</strong>.</p>
+<p><strong>67–70′ · [láminas 12–13] Cierre y despedida</strong> (3′:
+Desde hoy, ustedes ya no pueden des-oír · Antes de irse). 「Desde hoy,
+ustedes ya no pueden des-oír.」 Proyectas el QR de la encuesta del curso
+(ver decisión 4). Agradeces. Recuerdas: notas del hito 3 y del semestre
+por el canal, en el plazo que anuncies hoy mismo.
+<strong>Recoges</strong>: informes + bitácoras (ya en la puerta) ·
+planilla de rúbrica llena (9 filas) · 9 hojas de escucha con su bloque ★
+· el checklist de puerta. Los sobres de línea base (s01 + “hoy”) NO se
+recogen: son del estudiante.</p>
+<h2 id="decisiones-para-el-profesor-responder-en-5-minutos">Decisiones
+para el profesor (responder en 5 minutos)</h2>
+<ol type="1">
+<li><strong>Línea base — captura o golpe en vivo</strong> (pendiente
+declarado en <code>CLAUDE.md</code>): (a) re-escuchar desde
+<code>e01_linea_base.wav</code>, la captura ya consagrada — repetible,
+no depende de conservar el objeto de s01; es lo que ya asume el mazo
+(lámina 7) y el guion, o (b) repetir el golpe EN VIVO con el mismo
+objeto (hay que conservarlo y revisar niveles de sala con anticipación).
+Recomendación: (a).</li>
+<li><strong>Cartel con los 9 nombres</strong>: el mazo (láminas 1–2) no
+tiene campo para nombres — el plan pide una “lámina de entrada (9
+nombres)” como pieza aparte (<code>plan.md:205</code>). (a) armas un
+cartel/lámina proyectable con el orden sorteado en s14, o (b) lo
+escribes a mano en la pizarra antes de que entren. Recomendación: (a),
+queda igual de visible toda la sesión.</li>
+<li><strong>Encuadre en 3′ con 5 láminas</strong>: el plan/guion
+presupuestan 3′ y UNA lámina para el encuadre
+(<code>plan.md:107</code>), pero el mazo trae 5 láminas de apertura
+(<code>slides_s15.qmd:14,26,38,53,63</code>) antes de la defensa 1.
+<ol type="a">
+<li>dejas las 5 y aceptas que el encuadre real tomará ~5–6′ (se
+descuenta del colchón de 4′ antes de empezar), o (b) proyectas solo la
+lámina 2 (orden y reglas) y dices el resto de memoria en 3′.
+Recomendación: (b) para no llegar a la defensa 1 ya sin colchón.</li>
+</ol></li>
+<li><strong>Instrumento de la encuesta del curso</strong>: sigue “por
+definir” desde s14 (<code>plan.md</code>, bloque final). (a) QR
+institucional, o (b) formulario propio armado por ti. Resolver esta
+semana — se anuncia hoy en [lámina 13].</li>
+<li><strong>Síntesis del semestre, 3 láminas en 4′</strong>: (a)
+mantienes las 3 (9–11) y usas el fusible general si falta tiempo
+(recortar “voces” en vez de la síntesis), o (b) fusionas las láminas
+9–10 en una sola intervención hablada y proyectas solo 11 y 12.
+Recomendación: (a) — es el cierre del curso, vale más que 5′ menos de
+“voces”.</li>
+</ol>
+<h2 id="después-del-semestre">Después del semestre</h2>
+<ul>
+<li><strong>Pico de corrección (≈3 h, esta semana)</strong>: 9 informes
+contra la rúbrica R1–R4 (~1,5 h) · 9 bloques ★ de la hoja de escucha con
+la rúbrica OA3 (~30′) · acta de notas del curso (~30′) — sin
+coevaluación que leer (el proyecto es individual desde s03).</li>
+<li><strong>E3</strong> (escucha escrita 3, OA3): junto con la Parte A
+de la Prueba 1 (E1) y de la Prueba 2 (E2), cuentan las <strong>mejores 2
+de 3</strong> para el 10 % de OA3.</li>
+<li><strong>Encuesta del curso</strong>: revisar respuestas; si migró a
+formulario en línea por fusible de tiempo, dar 48 h y cerrar.</li>
+<li><strong>Publicar en Canvas</strong>: nota del hito 3 (proyecto, 15
+%), nota de la escucha OA3 (10 %) y el acta consolidada del semestre, en
+el plazo anunciado en el cierre de hoy.</li>
+<li><strong>Archivar</strong>: guion con la planilla llena, checklist de
+puerta y las 9 hojas de escucha en <code>_archivo/bitacora/</code> —
+quedan como evidencia y cierre del ciclo 2026-2.</li>
+</ul>
+</body>
+</html>

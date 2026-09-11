@@ -20,7 +20,7 @@ todos de vuelta a la sala.**
 alternativa de la ruta); el globo se revienta lejos de los oídos de
 cualquiera; en biblioteca o capilla en uso, palmada en vez de globo.
 
-## 1. Predicción (se llena EN EL AULA, antes de salir — bloque 54–70′ del m1)
+## 1. Predicción (se llena EN EL AULA, antes de salir — bloque 49–70′ del m1)
 
 Sin discutir con otros grupos, el grupo acuerda y anota:
 

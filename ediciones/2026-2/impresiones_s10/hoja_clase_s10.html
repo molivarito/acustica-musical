@@ -1,0 +1,493 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="es" xml:lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>s10 · Resonancia, impedancia y acoplamiento: el puente hacia los instrumentos — hoja de clase del profesor (lámina por lámina)</title>
+  <style>
+    /* Default styles provided by pandoc.
+    ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+    */
+    html {
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    svg {
+      height: auto;
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      border: none;
+      border-top: 1px solid #1a1a1a;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+  </style>
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">s10 · Resonancia, impedancia y acoplamiento: el puente
+hacia los instrumentos — hoja de clase del profesor (lámina por
+lámina)</h1>
+<p class="subtitle">vie 23-oct-2026 · 2 módulos de 70′ · solo profesor ·
+versión 0 (11-sep), se retoca el jueves 22-oct</p>
+</header>
+<p>Cada bloque dice <strong>[lámina N]</strong> del mazo
+<code>slides_s10</code> (25 láminas). Lo que va entre 「」 es lo que
+dices o preguntas. Los tiempos son de cada módulo. Contexto: es el día
+del <strong>Hito 2</strong> (10 %, se recibe al entrar, sin
+coevaluación); el módulo 1 mide resonancia y amortiguamiento con una
+demo y cierra con el <strong>taller evaluado de la semana</strong>
+(botella soplada y golpeada); el módulo 2 es la <strong>única clínica de
+pares del semestre</strong>, y trabaja sobre el compilado que se acaba
+de entregar. Dos decisiones grandes están abiertas más abajo: el kit de
+botellas no existe todavía, y la clínica puede aplicarse reducida (regla
+D3 del plan de rescate).</p>
+<h2 id="antes-de-que-entren-15-min-lista-de-chequeo">Antes de que entren
+(15 min) — lista de chequeo</h2>
+<ul class="task-list">
+<li><label><input type="checkbox" /><strong>Caja/carpeta de
+entregas</strong> lista, con la lista de 9 nombres para marcar recepción
+del compilado del hito 2 contra checklist.</label></li>
+<li><label><input type="checkbox" /><strong>Proyector con
+<code>demo_resonancia.html</code></strong> probado. Trampa verificada en
+el ensayo (barrido del 14-ago): la casilla “modo presentación” viene
+<strong>DESMARCADA por defecto</strong> — hay que marcarla a mano antes
+de la escucha; el botón “Barrido automático” dura <strong>35 s
+fijos</strong> y, al terminar solo, <strong>no apaga el
+oscilador</strong> — si se pulsa “Golpe” sin antes pulsar “■ Detener”,
+el ping se superpone a un tono sostenido de fondo. Secuencia ensayada
+para la escucha (ver lámina 4 más abajo).</label>
+<ul>
+<li>Decisión pendiente sobre esto: ver “Decisiones para el profesor”
+punto 4.</li>
+</ul></li>
+<li><label><input type="checkbox" /><strong>Botellas</strong>: kit
+armado (si se compró esta semana) o anuncio ya hecho de “traigan su
+propia botella de vidrio” — ver decisión 1. Jarra con agua, embudo,
+cucharas, paños listos para 3 mesas. Celulares de prueba: afinador y
+espectrograma enganchan con una botella de ensayo.</label></li>
+<li><label><input type="checkbox" />Impresiones:
+<code>guia_pee_resonancia_botellas</code> (3, una por mesa);
+<code>pauta_clinica_pares</code> (9, una por estudiante que presenta)
+<strong>solo si se mantiene la clínica con pauta escrita</strong> — ver
+decisión 3.</label></li>
+<li><label><input type="checkbox" />Tickets de s09 recopilados (“¿qué
+determina que un sistema ‘prefiera’ vibrar en SUS
+frecuencias?”).</label></li>
+<li><label><input type="checkbox" />Elástico grueso + caja de
+cartón/taper para el gancho del módulo 2.</label></li>
+<li><label><input type="checkbox" />Orden del trío A→B→C decidido de
+antemano (criterio: presentar a la mesa de objetos más
+distintos).</label></li>
+<li><label><input type="checkbox" />Encargo
+<code>encargo_hito2_avance.md</code> a mano para resolver dudas de
+última hora sobre formato de entrega.</label></li>
+</ul>
+<h2
+id="módulo-1-el-sistema-que-dice-que-no-resonancia-medible-70">Módulo 1
+— El sistema que dice que no: resonancia medible (70′)</h2>
+<p><strong>0–5′ · [lámina 1] Hoy → [lámina 2] Antes de nada: entrega del
+Hito 2.</strong> Recibes y marcas contra la lista los <strong>9
+compilados individuales</strong> (radiografía s08 + mapa de escala s09 +
+bitácora + estado vs. hito 1). 「Guarden una copia o foto de su
+compilado: la clínica de la tarde trabaja sobre lo que acaban de
+entregar.」 <strong>Corte duro al minuto 5</strong> aunque falte alguien
+— se recibe hasta 48 h después con descuento. <em>Esperar</em>: 9
+compilados, formato ≤4 páginas + bitácora. <em>Si falta uno</em>: anota
+el nombre, aplica el descuento anunciado; presenta igual en la clínica
+con lo que tenga.</p>
+<p><strong>5–15′ · [lámina 3] Escucha del día → [lámina 4] Demo — modo
+presentación</strong> (10′, sin nota; cobra el ticket de s09). Secuencia
+exacta en la demo (ensayada, evita el tono que queda sonando de fondo):
+1) marcar “modo presentación” (recuerda: empieza desmarcada); 2)
+amortiguamiento al slider ≈5 (pico angosto); 3) Barrido automático (35 s
+fijos, esperar a que termine); 4) pulsar <strong>■ Detener</strong>; 5)
+pulsar <strong>Golpe</strong> (ping largo); 6) amortiguamiento a ≈95
+(pico ancho); 7) Barrido automático de nuevo; 8) <strong>■
+Detener</strong>; 9) Golpe (ping corto). Todos escriben diagnóstico en 3
+líneas (2′): describir → hipotetizar → verificar. Mesa (3′): el vocero
+anota el diagnóstico del grupo. Plenario (3′): 「¿qué sube parejo y qué
+se infla de golpe? ¿el golpe cae en la misma altura que el
+inflamiento?」 Lees 2–3 tickets de s09 y cierras: 「eso que el sistema
+‘prefiere’ tiene nombre — hoy se mide.」 <em>Esperar</em>: separan
+altura (sube pareja) de sonoridad (se infla); algunos ya nombran
+“frecuencia propia” por el ticket de s09. <em>Si la demo no corre</em>:
+botella real + afinador proyectado (soplar dos botellas con distinta
+agua) — se pierde el barrido dibujado, no la resonancia; curva a mano en
+el pizarrón desde BEN 10.7 (cualitativa).</p>
+<p><strong>15–30′ · Mini-lección: forzar un sistema que ya tiene
+opinión</strong> (láminas 5–15, 15′; consume la lectura previa). Por
+lámina, muy apretado — ver decisión 2 sobre fusionar las demos:</p>
+<ul>
+<li><strong>[lámina 5] ¿Por qué el columpio solo acepta su
+ritmo?</strong> 「Ustedes empujan; el columpio decide cuánto
+responder.」 Plantea la pregunta pendiente del ticket de s09.</li>
+<li><strong>[lámina 6] Libre vs. forzada.</strong> Oscilación libre (la
+sueltan: vibra en su
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>f</mi><mn>0</mn></msub><annotation encoding="application/x-tex">f_0</annotation></semantics></math>
+y decae) vs. forzada (la empujan a SU ritmo).</li>
+<li><strong>[lámina 7] Votación: casi al ritmo, pero no exacto.</strong>
+「Si empujan el columpio casi al ritmo de
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>f</mi><mn>0</mn></msub><annotation encoding="application/x-tex">f_0</annotation></semantics></math>
+pero no exacto, ¿qué pasa?」 → responde a medias y “forcejea”; solo
+cuando coincide, cada empujón suma — eso es resonancia.</li>
+<li><strong>[lámina 8] El pico y su precio: el amortiguamiento.</strong>
+Votación 1: 「un resonador con MUY poco roce, ¿responde a más o a menos
+frecuencias vecinas?」 → a menos, pico angosto. Votación 2: 「¿tarda más
+o menos en arrancar?」 → más — dos caras de la misma moneda.</li>
+<li><strong>[lámina 9] Veamos la curva dibujarse al barrer → [lámina 10]
+Demo — barrido.</strong> Barrido manual lento; observan la curva de
+respuesta dibujarse. <em>Nota técnica</em>: cada slide de demo arranca
+de cero (el iframe se reinicia) — la curva de esta slide NO sigue
+visible en la siguiente.</li>
+<li><strong>[lámina 11] Ahora muevan el amortiguamiento → [lámina 12]
+Demo — amortiguamiento.</strong> Slider a un extremo y al otro; repiten
+barrido y golpe en cada uno: el mismo parámetro angosta/ensancha el pico
+Y alarga/acorta el transiente a la vez.</li>
+<li><strong>[lámina 13] El golpe: la oscilación libre pura → [lámina 14]
+Demo — golpe.</strong> Sin excitación que siga sonando: solo el ping en
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>f</mi><mn>0</mn></msub><annotation encoding="application/x-tex">f_0</annotation></semantics></math>,
+contraste directo con las pasadas forzadas.</li>
+<li><strong>[lámina 15] La botella: un resonador de aire con
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>f</mi><mn>0</mn></msub><annotation encoding="application/x-tex">f_0</annotation></semantics></math>
+medible.</strong> Anuncia el taller. 「Predigan por escrito, ANTES de
+soplar nada」: P1 (soplada vacía vs. con agua, ¿sube o baja y cuánto?),
+P2 (golpeada con cuchara, ¿el agua la sube o la baja?).</li>
+</ul>
+<p><em>Esperar</em> (bloque completo): siguen las votaciones sin
+perderse; la mayoría asocia pico angosto ↔︎ transiente largo antes de que
+lo digas. <em>Si vas atrasado</em>: fusiona laminas 9–12 en una sola
+demostración continua (ver decisión 2) y salta directo a la 13.</p>
+<p><strong>30–62′ · [lámina 16] Taller: la botella que canta</strong>
+(32′, <strong>EVALUADO</strong> — guía
+<code>guia_pee_resonancia_botellas.md</code>, 1 por mesa). Instalación
+2′. Predicciones firmadas ANTES de sonar (3′): P1, P2, ¿misma dirección?
+<strong>Fase A — soplar</strong> (15′): cada integrante sopla un nivel
+de agua distinto (vacía, 1/3, 1/2, 2/3), mide
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>f</mi><annotation encoding="application/x-tex">f</annotation></semantics></math>
+con afinador/espectrograma, tabula. <strong>Fase B — golpear</strong>
+(5′): botella vacía y con 1/2 de agua, cuchara, mide. <strong>Contraste
+y explicación</strong> (7′, en la guía): ¿P1 y P2 dieron la misma
+dirección? ¿quién vibra en cada caso? Rotas por las mesas (~8–9′ c/u):
+「¿quién vibra cuando sopla, el vidrio o el aire?」 「al dejar la mitad
+del aire, ¿subió una octava o menos? ¿cuánto predice la
+proporción?」「¿por qué golpear y soplar dan direcciones opuestas?」
+Enseña el truco del soplido rasante donde haga falta (labio apoyado en
+el borde, chorro fino cruzando la boca). <em>Esperar</em>: al soplar
+sube (menos aire → más agudo); al golpear baja (más masa de agua → más
+grave); la mayoría predice mal P2. <em>Si no suena al soplido</em>:
+palmada seca sobre la boca — el “tock” se mide igual en el
+espectrograma. <em>Si el afinador no engancha</em> (soplido ruidoso):
+medir con espectrograma (pico grave nítido) y convertir con la tabla de
+la guía de s09. <em>Si no hay kit de botellas</em>: ver decisión 1.</p>
+<p><strong>62–70′ · [lámina 17] Cierre M1: contraste</strong> (8′). UN
+grupo expone su tabla; superpones en el pizarrón las direcciones de los
+3 grupos (¿todos subieron al soplar y bajaron al golpear?). Moraleja
+anotada: <strong>lo que suena depende de a quién le entregan la
+energía.</strong> Nombras el resonador de Helmholtz sin fórmula. Anuncia
+el descanso: 「después del descanso, el experimento del elástico.」
+Recoges la guía de botellas.</p>
+<h2 id="módulo-2-la-clínica-del-hito-2-70">Módulo 2 — La clínica del
+hito 2 (70′)</h2>
+<p><strong>0–8′ · [lámina 18] El elástico, el puente y la trampa →
+[lámina 19] La cuerda es “dura de mover” para el aire → [lámina 20] El
+mapa del bloque C.</strong> Predicen a mano alzada: elástico en el aire,
+¿se oirá? (casi nada); elástico sobre la caja, ¿más fuerte? (sí); la
+trampa: ¿dura más o menos si no se agregó energía? →
+<strong>menos</strong> — la caja gasta la energía más rápido, no la
+regala. Ejecutas en vivo (elástico entre las manos → sobre la caja,
+cerca del micrófono de sala). Nombras sin desarrollar:
+<strong>impedancia</strong> (cuánta fuerza cuesta lograr cuánta
+velocidad) y <strong>acoplamiento</strong> (el puente como
+transformador). Vuelves a soplar la botella del taller 5″: semilla de la
+oscilación auto-sostenida. Muestras el mapa del bloque C (golpear/pulsar
+ya visto, frotar en s11, soplar en s12, cantar en s13).
+<em>Esperar</em>: casi nadie predice bien la trampa del elástico (“va a
+durar más”); la corrección queda anotada como moraleja fuerte↔︎corto.</p>
+<p><strong>8–[ver decisión 3]′ · [lámina 21] Clínica de proyecto entre
+pares.</strong> El diseño del mazo y <code>pauta_clinica_pares.md</code>
+la arman como trío A→B→C con pauta escrita (38′, 2 fortalezas + 2 dudas
++ 1 sugerencia medible por proyecto, 9 hojas firmadas). La regla D3 del
+plan de rescate la reduce a <strong>conversación de 10′ por mesa,
+simultánea, sin pauta escrita</strong>. Ver decisión 3 para la versión
+que se ejecuta hoy; ambas versiones abajo:</p>
+<ul>
+<li><em>Versión completa (38′, trío rotativo)</em>: orden A→B→C asignado
+(2′). Por ronda (~12′): los 3 integrantes de la mesa presentan uno por
+uno (~3′ c/u, objeto en mano, sonando al menos una vez, SU radiografía y
+mapa de escala, la duda más dura); la mesa receptora devuelve 2
+fortalezas + 2 dudas + 1 sugerencia medible por escrito (~1′ c/u); la
+tercera mesa cronometra. Rotas por las 3 rondas. <em>Esperar</em>: cada
+estudiante presenta 1 vez, retroalimenta 6 proyectos ajenos. <em>Si se
+atrasa</em>: cronometra la mesa que no presenta, aviso a los 2′30″;
+fusible en el plenario (14′→10′) — la clínica nunca se recorta, es la
+única del semestre.</li>
+<li><em>Versión reducida (10′ por mesa, D3)</em>: cada mesa conversa
+internamente, sin rotación ni pauta escrita: los 3 presentan su objeto
+sonando y su compilado a sus propios compañeros de mesa; 「2 fortalezas,
+2 dudas, 1 sugerencia — de palabra, no en papel」; tú rotas por las 3
+mesas escuchando fragmentos. <em>Esperar</em>: conversa- ción más
+suelta, menos evidencia escrita para la bitácora — el compromiso
+verificable del cierre (mapa de resonancias) sigue siendo obligatorio
+igual. <em>Si falla</em>: no hay plan B propio, es ya el plan B de la
+versión completa.</li>
+</ul>
+<p><strong>Puesta en común (si versión completa) / [lámina 22] Plenario
+y compromisos</strong> (46–60′ en la versión completa, comprimido si D3
+libera tiempo). Dos proyectos al pizarrón: objeto sonando + la medición
+más informativa + la duda más dura. Eliges los 2 casos DURANTE la
+clínica. Conectas con la mañana: 「¿dónde están las resonancias de este
+objeto? ¿quién es su caja?」</p>
+<p><strong>[Últimos 10′] · [lámina 23] Síntesis del día → [lámina 24]
+Ticket de salida hacia s11 → [lámina 25] Para la próxima.</strong>
+Síntesis (3 líneas): forzado ≠ libre · el amortiguamiento decide ancho
+del pico y duración del transiente a la vez · sonar más fuerte por
+acoplamiento se paga durando menos. Cada estudiante escribe 1–2
+<strong>compromisos verificables</strong> antes de s12, incluido el
+obligatorio: <strong>el mapa de resonancias de su objeto</strong> (golpe
+en 2–3 puntos + barrido cantado/soplado, comparar con la radiografía de
+s08). Ticket: 「el arco entrega energía todo el tiempo, no un golpe —
+¿por qué la cuerda frotada no suena como chirrido continuo sino como
+nota estable?」 <strong>Anuncia HOY</strong>: s11 — instrumentos de
+estudiantes #2 (violín/viola/cello/guitarrón, quien tenga) — coordina y
+confirma por correo AHORA, con la mesa presente; rearme de mesas para el
+tramo 3 (s11–s15); nota del hito 2 antes de s12.
+<strong>Recoges</strong>: tickets, compromisos (foto de bitácora),
+pautas de clínica si se usó la versión con papel.</p>
+<p><strong>Después de clase</strong>: rúbrica rápida del taller de
+botellas y nota en Canvas (<code>taller-10</code>); corrección del hito
+2 (<code>encargo_hito2_avance.md</code>, ≈1,5 h, pico declarado, sin
+coevaluación) — nota antes de s12; si D3 se aplicó, registrar en
+<code>agenda_estado.yml</code>/bitácora que la clínica fue la versión
+reducida (para no repetir el debate el próximo hito).</p>
+<h2 id="plan-b-rápido">Plan B rápido</h2>
+<ul>
+<li>Demo no corre → botella real + afinador proyectado; curva a mano en
+el pizarrón (BEN 10.7).</li>
+<li>Botellas no suenan al soplido → palmada seca sobre la boca, el
+“tock” se mide igual.</li>
+<li>Afinador no engancha → espectrograma (pico grave nítido) + tabla de
+conversión de s09.</li>
+<li>Elástico no se oye bien en el aire → acercar más al micrófono de
+sala antes de la comparación con la caja.</li>
+<li>Clínica se desordena → el profesor toma el cronómetro él mismo (está
+presente en las 3 mesas/rondas de todos modos).</li>
+<li>Un estudiante no trae el hito 2 → recibir hasta 48 h después con
+descuento; presenta igual en la clínica con lo que tenga.</li>
+</ul>
+<h2 id="decisiones-para-el-profesor-responder-en-5-minutos">Decisiones
+para el profesor (responder en 5 minutos)</h2>
+<ol type="1">
+<li><strong>Kit de botellas</strong> (el crítico de la semana —
+<code>DICTADO_s09- s15_2026-09-11.md</code> lo marca sin evidencia de
+compra): (a) comprar esta semana 5 botellas de vidrio idénticas ~330 ml
+boca angosta + accesorios (recomendado si hay margen: quedan ~6 semanas,
+deja el contraste final entre las 3 mesas más limpio), o (b) plan B sin
+kit: anunciar HOY por Canvas que cada mesa traiga su propia botella de
+vidrio de casa (no necesariamente idéntica) + jarra/embudo caseros — el
+taller funciona igual por mesa, se pierde solo la comparación exacta
+entre mesas en el cierre (lámina 17).</li>
+<li><strong>Densidad del módulo 1</strong> (la aritmética del plan da
+5+10+15+32+8 = 70′ exactos, <strong>sin holgura declarada</strong>, y el
+taller de 32′ que sigue es el más largo del día): (a) mantener las 4
+slides de demo por separado (láminas 9–14) tal como están en el mazo, o
+(b) fusionar barrido + amortiguamiento + golpe en una sola demostración
+continua de ~4′ en vez de tres momentos separados, ganando 3–4′ de
+holgura antes del taller. Recomendación: (b).</li>
+<li><strong>Clínica de pares</strong> (regla D3 del plan de rescate, no
+aplicada todavía en <code>plan.md</code> ni en
+<code>pauta_clinica_pares.md</code>): (a) mantener la clínica completa
+de 38′ con trío rotativo A→B→C y pauta escrita (como está diseñada e
+impresa), o (b) aplicar D3: conversación de 10′ por mesa, simultánea,
+sin pauta escrita — libera bastante tiempo en un módulo ya apretado por
+el hito 2. Recomendación de <code>PLAN_RESCATE_2026-09-11.md</code>:
+(b), “el hito 2 ya carga esa semana”.</li>
+<li><strong>Mecánica de la demo de resonancia</strong> (hallazgo del
+barrido del 14-ago, <code>ediciones/2026-2/barridos/s10.md</code>): el
+botón de barrido automático no detiene el oscilador solo al terminar.
+(a) memorizar la secuencia de 9 pasos ya escrita en la lámina 4 de esta
+hoja y ensayarla el jueves, o (b) pedir que se modifique una línea de
+<code>demo_resonancia.html</code> para que el barrido se detenga solo al
+terminar (más robusto, pero es una modificación de código que excede
+esta hoja). Recomendación: (a) por ahora, dejar (b) para la próxima
+ronda de producción si la demo se reutiliza.</li>
+</ol>
+<h2 id="insumos-físicos-de-la-siguiente-sesión-s11-30-oct">Insumos
+físicos de la SIGUIENTE sesión (s11, 30-oct)</h2>
+<p>Desde <code>material/curso/sesion-11/plan.md</code> y el
+inventario:</p>
+<ul>
+<li><strong>Instrumento de cuerda frotada</strong>: 1–2 estudiantes lo
+traen (coordinar y confirmar por correo HOY, en el anuncio de la lámina
+<ol start="25" type="1">
+<li>— es la sesión “instrumentos de estudiantes #2”. Plan B si nadie
+trae: <strong>guitarra del profesor con resina</strong> (así lo dice
+<code>sesion-11/plan.md</code>, línea ~24 y fila de la escucha del día)
+— pero frotar una guitarra con arco es forzado; <strong>decisión abierta
+no resuelta por el plan de s11</strong>: si el profesor prefiere usar SU
+contrabajo (que sí sabe frotar) como plan B en vez de la guitarra con
+resina, es más limpio de ejecutar y vale la pena decidirlo antes del
+jueves de ensayo de s11, no en la sala.</li>
+</ol></li>
+<li><strong>Resina (colofonia)</strong> para el plan B con
+guitarra/contrabajo — comprar si no hay.</li>
+<li><strong>Cámara lenta del celular del curso</strong>: probar ANTES de
+s11 que resuelva la forma de la cuerda a la fase B del taller del punto
+de frotado (<code>sesion-11/plan.md</code> lo marca [POR VERIFICAR]; si
+falla, hay 2 videos candidatos ya verificados jul-2026 como plan
+B).</li>
+<li>Menores: pinza de ropa o sordina (gancho del módulo 2); cartón/paño
+para tapar efes o boca de guitarra; paño claro de fondo + cable/
+adaptador para proyectar el celular.</li>
+<li>Recordar en s10: <strong>el objeto del proyecto descansa hasta
+s12</strong> — no se pide traerlo a s11.</li>
+</ul>
+</body>
+</html>
