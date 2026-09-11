@@ -25,8 +25,8 @@ sesion:
     detalle: "5 minutos al final del ensayo de la sesión previa, con la lista del inventario de dictado (ediciones/{ed}/DICTADO_s09-s15_2026-09-11.md); lo que no se pueda conseguir en la semana va a plan B"
   - id: "ensayar-{ses}"
     dias: -1
-    titulo: "Ensayar la s{ses} (jueves, ≤90 min): hoja de clase lámina por lámina, plan B; luego imprimir"
-    detalle: "Prueba de dictado (¿existe todo lo que la hoja pide?); lo que no esté listo va a plan B. Plantilla: ediciones/{ed}/HOJA_CLASE_PLANTILLA.md → impresiones_s{ses}/hoja_clase_s{ses}.md; luego python3 ediciones/{ed}/generar_impresiones.py {ses}"
+    titulo: "Jueves: pedir a Claude «prepara la s{ses}», leer la hoja de clase de corrido (20 min) y responder sus 3–5 decisiones"
+    detalle: "El ensayo lo hace Claude solo (dictado, inconsistencias, hoja de clase, paquete de impresión). El profesor solo lee la hoja y decide: qué cortar, qué lámina antigua entra, qué cosa física consigue. Plantilla: ediciones/{ed}/HOJA_CLASE_PLANTILLA.md → impresiones_s{ses}/hoja_clase_s{ses}.md"
     ruta: "material/curso/sesion-{ses}/slides_s{ses}.qmd"
   - id: "imprimir-{ses}"
     dias: -1

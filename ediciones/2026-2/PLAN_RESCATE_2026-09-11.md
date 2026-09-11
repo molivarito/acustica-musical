@@ -14,15 +14,18 @@ cada semana** y decide **qué se simplifica**.
    `ediciones/2026-2/impresiones_sNN/hoja_clase_sNN.md` y se imprime. El
    profesor **no vuelve a abrir `plan.md`**: el plan es fuente de diseño,
    la hoja es fuente de operación. (Precedente: la de s06.)
-2. **Un ensayo semanal fijo, el jueves, ≤ 90 min, con Claude** (el
-   profesor solo dispone de jueves y viernes para este curso; lunes y
-   miércoles los consume el otro ramo). Se lee la sesión del día
-   siguiente como si se estuviera dando, lámina por lámina; se cazan los
-   defectos; se corrige el material; salen la hoja de clase y el paquete
-   de impresión, que se imprime ese mismo jueves. **Los últimos 5 minutos
-   del ensayo miran la sesión subsiguiente**: qué hay que grabar, comprar
-   o pedir a un estudiante, para tener una semana de margen (tarea
-   `insumos-NN`). Sin ensayo no hay clase nueva: se da con lo que hay.
+2. **El ensayo lo hace Claude solo; el profesor lee y decide** (ajuste
+   del 11-sep, tarde: el profesor dispone solo de jueves y viernes, y
+   revisar inconsistencias de material ajeno es lo que lo agotó). El
+   jueves el profesor lanza «prepara la sNN»; Claude lee mazo, plan y
+   guías, hace la prueba de dictado, corrige, escribe la hoja de clase y
+   genera el paquete. El profesor recibe la hoja (lectura de corrido,
+   20 min) y **3–5 decisiones** que solo él puede tomar (qué cortar, qué
+   lámina antigua entra, qué cosa física consigue); con sus respuestas
+   Claude cierra la hoja y el profesor imprime y prueba el audio. Una
+   hora en total. Entre las decisiones va siempre **la lista física de
+   la sesión subsiguiente** (tarea `insumos-NN`), para tener una semana
+   de margen. Sin hoja no hay clase nueva: se da con lo que hay.
 3. **Lo que no está listo 48 h antes va a plan B, no a heroísmo.** Cada
    hoja de clase trae el plan B escrito; el jueves solo se imprime y se
    prueba el audio en la sala.
