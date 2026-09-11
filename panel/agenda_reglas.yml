@@ -19,14 +19,18 @@ sesion:
   # Tres tareas por sesión (plan de rescate 2026-09-11): el ensayo del
   # martes absorbe la revisión del plan y del orden de las láminas, y
   # produce la hoja de clase que se lleva a la sala.
+  - id: "insumos-{ses}"
+    dias: -8
+    titulo: "Jueves anterior: revisar qué cosas físicas necesita la s{ses} (grabar, comprar, avisar a un estudiante)"
+    detalle: "5 minutos al final del ensayo de la sesión previa, con la lista del inventario de dictado (ediciones/{ed}/DICTADO_s09-s15_2026-09-11.md); lo que no se pueda conseguir en la semana va a plan B"
   - id: "ensayar-{ses}"
-    dias: -3
-    titulo: "Ensayar la s{ses} (martes, ≤90 min): hoja de clase lámina por lámina, plan B, impresiones"
+    dias: -1
+    titulo: "Ensayar la s{ses} (jueves, ≤90 min): hoja de clase lámina por lámina, plan B; luego imprimir"
     detalle: "Prueba de dictado (¿existe todo lo que la hoja pide?); lo que no esté listo va a plan B. Plantilla: ediciones/{ed}/HOJA_CLASE_PLANTILLA.md → impresiones_s{ses}/hoja_clase_s{ses}.md; luego python3 ediciones/{ed}/generar_impresiones.py {ses}"
     ruta: "material/curso/sesion-{ses}/slides_s{ses}.qmd"
   - id: "imprimir-{ses}"
     dias: -1
-    titulo: "Imprimir hoja de clase, guías y hoja de escucha de la s{ses}; probar demos y audio EN la sala"
+    titulo: "Jueves, después del ensayo: imprimir hoja de clase, guías y hoja de escucha de la s{ses}; probar demos y audio EN la sala"
     detalle: "El paquete está en ediciones/{ed}/impresiones_s{ses}/ (abrir cada HTML y Cmd+P); la escucha del día abre la sesión: el audio se prueba en la sala, no en la oficina"
     ruta: "ediciones/{ed}/impresiones_s{ses}"
   - id: "taller-{ses}"

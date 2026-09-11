@@ -33,14 +33,16 @@ El botón **⚑ agenda** del panel (o `python3 panel/agenda.py` en el
 terminal) muestra qué toca, con fechas que se derivan solas del
 calendario de la edición. El ciclo base de toda semana:
 
-1. **Martes** — **ensayar la sesión** con Claude, ≤ 90 min (tarea
-   `ensayar-NN`): se lee el mazo lámina por lámina como si se diera la
-   clase, se comprueba que exista todo lo que pide (estímulos, apps,
-   equipos), lo que falta va a plan B, y sale la **hoja de clase** desde
-   la plantilla `ediciones/2026-2/HOJA_CLASE_PLANTILLA.md`. El panel la
-   muestra como primer panel de la sesión.
-2. **Jueves** — imprimir la hoja de clase, las guías y la hoja de
-   escucha, y probar demos y audio EN la sala (`imprimir-NN`). El paquete
+1. **Jueves, primera hora** — **ensayar la sesión** con Claude, ≤ 90 min
+   (tarea `ensayar-NN`): se lee el mazo lámina por lámina como si se
+   diera la clase, se comprueba que exista todo lo que pide (estímulos,
+   apps, equipos), lo que falta va a plan B, y sale la **hoja de clase**
+   desde la plantilla `ediciones/2026-2/HOJA_CLASE_PLANTILLA.md`. El
+   panel la muestra como primer panel de la sesión. Los últimos 5
+   minutos miran la sesión subsiguiente: qué grabar, comprar o pedir
+   (tarea `insumos-NN`, una semana de margen).
+2. **Jueves, después** — imprimir la hoja de clase, las guías y la hoja
+   de escucha, y probar demos y audio EN la sala (`imprimir-NN`). El paquete
    se refresca con `python3 ediciones/2026-2/generar_impresiones.py NN` y
    queda en `ediciones/2026-2/impresiones_sNN/`: abrir cada HTML y Cmd+P
    (3 copias de cada guía — una por mesa — y la hoja de escucha).

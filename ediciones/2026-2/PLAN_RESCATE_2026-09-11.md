@@ -14,11 +14,15 @@ cada semana** y decide **qué se simplifica**.
    `ediciones/2026-2/impresiones_sNN/hoja_clase_sNN.md` y se imprime. El
    profesor **no vuelve a abrir `plan.md`**: el plan es fuente de diseño,
    la hoja es fuente de operación. (Precedente: la de s06.)
-2. **Un ensayo semanal fijo, el martes, ≤ 90 min, con Claude.** Se lee
-   la sesión siguiente como si se estuviera dando, lámina por lámina;
-   se cazan los defectos; se corrige el material; salen la hoja de
-   clase y el paquete de impresión. Sin ensayo no hay clase nueva: se
-   da con lo que hay.
+2. **Un ensayo semanal fijo, el jueves, ≤ 90 min, con Claude** (el
+   profesor solo dispone de jueves y viernes para este curso; lunes y
+   miércoles los consume el otro ramo). Se lee la sesión del día
+   siguiente como si se estuviera dando, lámina por lámina; se cazan los
+   defectos; se corrige el material; salen la hoja de clase y el paquete
+   de impresión, que se imprime ese mismo jueves. **Los últimos 5 minutos
+   del ensayo miran la sesión subsiguiente**: qué hay que grabar, comprar
+   o pedir a un estudiante, para tener una semana de margen (tarea
+   `insumos-NN`). Sin ensayo no hay clase nueva: se da con lo que hay.
 3. **Lo que no está listo 48 h antes va a plan B, no a heroísmo.** Cada
    hoja de clase trae el plan B escrito; el jueves solo se imprime y se
    prueba el audio en la sala.
@@ -82,19 +86,19 @@ individual con defensa en s15, y las guías ya publicadas en Canvas.
 
 Horas = estimación del tiempo del profesor (además del ensayo del martes).
 
-| Semana | Clase | Ensayo (mar) | Debe existir el jueves | Además esa semana | Horas |
+| Semana | Clase | Ensayo (jue, mismo día se imprime) | Debe existir el jueves | Además esa semana | Horas |
 |---|---|---|---|---|---|
-| 14–19 sep (receso) | — | **mar 15: s07 completa** (logística de la Prueba 1 + módulo 2 batidos) | — | Resolver la Prueba 1 de corrido (`prueba1_pauta.md`); **grabar/sintetizar los 3 estímulos de la prueba** (banco #10 vaso ×2, #11 tono sin fundamental, #12 vaso+flauta) y la Figura 1; **extraer las pistas AD** del Keynote de 2018 a `material/estimulos/AD/` (una vez, desbloquea s08, s09 y s13) | 5 |
+| 14–19 sep (receso) | — | **jue 17 (receso): s07 completa** (logística de la Prueba 1 + módulo 2 batidos) | — | Resolver la Prueba 1 de corrido (`prueba1_pauta.md`); **grabar/sintetizar los 3 estímulos de la prueba** (banco #10 vaso ×2, #11 tono sin fundamental, #12 vaso+flauta) y la Figura 1; **extraer las pistas AD** del Keynote de 2018 a `material/estimulos/AD/` (una vez, desbloquea s08, s09 y s13) | 5 |
 | 21–25 sep | **s07 · Prueba 1** | (hecho el 15) | hoja de clase s07, prueba impresa, audio probado en sala el jueves 24 | Recordatorio en Canvas el mié 17 (la prueba es al volver) | 2 + corregir |
-| 28 sep–2 oct (sin clase) | — | **mar 29: la serie del objeto entera (s08–s12) en una sola sesión de diseño**: aplicar D1, decidir el formato único, revisar las 5 guías de una vez | — | Publicar notas Prueba 1 (≤ 30-sep) | 3 |
-| 5–9 oct | s08 | mar 6: s08 | hoja + impresiones | anunciar hito 2 (encargo ya publicado en Canvas) | 2 |
-| 12–16 oct | s09 | mar 13: s09 | hoja + impresiones | recordar pauta hito 2 (−7 d) | 2 |
-| 19–23 oct | **s10 · Hito 2** | mar 20: s10 (D3) | hoja + impresiones + recepción del hito | corregir hito 2 (pico ≈ 3 h, ≤ 5-nov) | 2 + 3 |
-| 26–30 oct | s11 | mar 27: s11 | hoja + impresiones | publicar notas hito 2 | 2 |
-| 2–6 nov | s12 | mar 3: s12 | hoja + impresiones | **estímulos de la Prueba 2** (banco #13–#15) y resolverla de corrido | 2 + 3 |
-| 9–13 nov | **s13 · Prueba 2** | mar 10: s13 (m2 voz: usar `2018-04-Voz_humana.pptx`) | hoja, prueba impresa, audio probado el jueves 12 | — | 2 + corregir |
-| 16–20 nov | s14 | mar 17: s14 (D2) | hoja + guía de T60 en el edificio + **pauta del hito 3 publicada el 20** | publicar notas Prueba 2 | 3 |
-| 23–27 nov | **s15 · Presentaciones** | mar 24: orden de las 9 defensas y las 2 preguntas por autor | hoja + hoja de escucha E3 | recepción de presentaciones jue 26 a las 20:00 | 2 + corregir |
+| 28 sep–2 oct (sin clase) | — | **jue 1-oct: la serie del objeto entera (s08–s12) en una sola sesión de diseño**: aplicar D1, decidir el formato único, revisar las 5 guías de una vez | — | Publicar notas Prueba 1 (≤ 30-sep) | 3 |
+| 5–9 oct | s08 | jue 8: s08 | hoja + impresiones | anunciar hito 2 (encargo ya publicado en Canvas) | 2 |
+| 12–16 oct | s09 | jue 15: s09 | hoja + impresiones | recordar pauta hito 2 (−7 d) | 2 |
+| 19–23 oct | **s10 · Hito 2** | jue 22: s10 (D3) | hoja + impresiones + recepción del hito | corregir hito 2 (pico ≈ 3 h, ≤ 5-nov) | 2 + 3 |
+| 26–30 oct | s11 | jue 29: s11 | hoja + impresiones | publicar notas hito 2 | 2 |
+| 2–6 nov | s12 | jue 5: s12 | hoja + impresiones | **estímulos de la Prueba 2** (banco #13–#15) y resolverla de corrido | 2 + 3 |
+| 9–13 nov | **s13 · Prueba 2** | jue 12: s13 (m2 voz: usar `2018-04-Voz_humana.pptx`) | hoja, prueba impresa, audio probado el jueves 12 | — | 2 + corregir |
+| 16–20 nov | s14 | jue 19: s14 (D2) | hoja + guía de T60 en el edificio + **pauta del hito 3 publicada el 20** | publicar notas Prueba 2 | 3 |
+| 23–27 nov | **s15 · Presentaciones** | jue 26: orden de las 9 defensas y las 2 preguntas por autor | hoja + hoja de escucha E3 | recepción de presentaciones jue 26 a las 20:00 | 2 + corregir |
 
 Total estimado para el profesor: unas 35 horas en 11 semanas, además de
 las clases. Es menos de lo que ha costado cada viernes hasta ahora.
