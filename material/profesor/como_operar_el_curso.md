@@ -5,11 +5,15 @@ la semana de la s02, a partir de las preguntas reales de la primera
 semana. Si algo de aquí deja de calzar con el curso, esta página es la
 que está mal: avisar a Claude para corregirla.
 
-La idea que ordena todo: **el curso ya está construido** — las 15
-sesiones tienen plan, apuntes, capítulo, slides, guías y demos desde
-julio. El trabajo semanal no es crear material sino operarlo: revisar,
-imprimir, probar audio, dar la clase, registrar una nota. Esta página
-dice dónde está cada cosa y en qué orden mirarla.
+La idea que ordena todo (**revisada el 2026-09-11, plan de rescate en
+`ediciones/2026-2/PLAN_RESCATE_2026-09-11.md`**): el material existe, pero
+**nadie lo ensayó**, y leerlo el viernes es agotador. Por eso el documento
+con el que se da la clase es uno solo, la **hoja de clase** de la sesión
+(`ediciones/2026-2/impresiones_sNN/hoja_clase_sNN.md`: lámina por lámina,
+montaje, qué esperar, plan B), que se produce en un **ensayo fijo el
+martes** y se imprime el jueves. El `plan.md` es fuente de diseño: **no
+hace falta abrirlo para dar la clase**. Esta página dice dónde está cada
+cosa y en qué orden mirarla.
 
 ## El mapa del repo en cuatro líneas
 
@@ -29,11 +33,16 @@ El botón **⚑ agenda** del panel (o `python3 panel/agenda.py` en el
 terminal) muestra qué toca, con fechas que se derivan solas del
 calendario de la edición. El ciclo base de toda semana:
 
-1. **Lunes** — leer el plan de la sesión del viernes (tarea `plan-NN`).
-2. **Jueves** — imprimir guías y probar demos y audio, en la sala si se
-   puede (`imprimir-NN`). El paquete de impresión se refresca con
-   `python3 ediciones/2026-2/generar_impresiones.py NN` y queda en
-   `ediciones/2026-2/impresiones_sNN/`: abrir cada HTML y Cmd+P
+1. **Martes** — **ensayar la sesión** con Claude, ≤ 90 min (tarea
+   `ensayar-NN`): se lee el mazo lámina por lámina como si se diera la
+   clase, se comprueba que exista todo lo que pide (estímulos, apps,
+   equipos), lo que falta va a plan B, y sale la **hoja de clase** desde
+   la plantilla `ediciones/2026-2/HOJA_CLASE_PLANTILLA.md`. El panel la
+   muestra como primer panel de la sesión.
+2. **Jueves** — imprimir la hoja de clase, las guías y la hoja de
+   escucha, y probar demos y audio EN la sala (`imprimir-NN`). El paquete
+   se refresca con `python3 ediciones/2026-2/generar_impresiones.py NN` y
+   queda en `ediciones/2026-2/impresiones_sNN/`: abrir cada HTML y Cmd+P
    (3 copias de cada guía — una por mesa — y la hoja de escucha).
 3. **Viernes, al terminar** — registrar en Canvas la nota del taller
    (`taller-NN`) y guardar los tickets de salida para la próxima semana.

@@ -16,21 +16,19 @@
 # `cuando: taller` solo aplica a sesiones con taller evaluado (no s01, que es
 # formativa por diseño, ni las sesiones de prueba o de presentaciones).
 sesion:
-  - id: "plan-{ses}"
-    dias: -4
-    titulo: "Revisar el plan de la s{ses} y su lista de materiales para la sala"
-    detalle: "Los dos módulos, tiempos y kits; el panel muestra la lista de chequeo"
-    ruta: "material/curso/sesion-{ses}/plan.md"
-  - id: "orden-{ses}"
+  # Tres tareas por sesión (plan de rescate 2026-09-11): el ensayo del
+  # martes absorbe la revisión del plan y del orden de las láminas, y
+  # produce la hoja de clase que se lleva a la sala.
+  - id: "ensayar-{ses}"
     dias: -3
-    titulo: "Revisar que ninguna lámina de la s{ses} adelante la respuesta del taller"
-    detalle: "Predecir antes de ver: recorra las láminas en orden contra la guía; la síntesis va DESPUÉS de la actividad, y la demostración del profesor no usa el mismo caso que el taller (defecto de s04, 2026-08-28)"
+    titulo: "Ensayar la s{ses} (martes, ≤90 min): hoja de clase lámina por lámina, plan B, impresiones"
+    detalle: "Prueba de dictado (¿existe todo lo que la hoja pide?); lo que no esté listo va a plan B. Plantilla: ediciones/{ed}/HOJA_CLASE_PLANTILLA.md → impresiones_s{ses}/hoja_clase_s{ses}.md; luego python3 ediciones/{ed}/generar_impresiones.py {ses}"
     ruta: "material/curso/sesion-{ses}/slides_s{ses}.qmd"
   - id: "imprimir-{ses}"
     dias: -1
-    titulo: "Imprimir guías y hoja de escucha de la s{ses}; probar demos y audio"
-    detalle: "La escucha del día abre la sesión: el audio se prueba EN la sala, no en la oficina"
-    ruta: "material/curso/sesion-{ses}"
+    titulo: "Imprimir hoja de clase, guías y hoja de escucha de la s{ses}; probar demos y audio EN la sala"
+    detalle: "El paquete está en ediciones/{ed}/impresiones_s{ses}/ (abrir cada HTML y Cmd+P); la escucha del día abre la sesión: el audio se prueba en la sala, no en la oficina"
+    ruta: "ediciones/{ed}/impresiones_s{ses}"
   - id: "taller-{ses}"
     dias: 0
     cuando: taller

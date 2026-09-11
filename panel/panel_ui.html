@@ -51,7 +51,9 @@ a{color:var(--accent)}
 .cont{flex:1 1 auto;overflow:auto;padding:.6rem .75rem;min-height:0}
 .cont.sin-pad{padding:0}
 iframe{width:100%;height:100%;border:0;display:block;background:#fff}
-#z-plan{flex:1 1 62%} #z-materiales{flex:1 1 38%}
+#z-hoja{flex:1 1 55%} #z-plan{flex:1 1 27%} #z-materiales{flex:1 1 18%}
+#hoja h2{font-size:1.05rem;margin:.9rem 0 .4rem} #hoja h1{font-size:1.15rem}
+#hoja li.task-list-item{list-style:none}
 #z-slides{flex:1 1 44%} #z-grande{flex:1 1 56%}
 #z-abajo{flex:0 0 auto;max-height:28vh;margin:0 8px 8px}
 #abajo-cols{display:flex;gap:1.2rem;align-items:flex-start}
@@ -199,6 +201,19 @@ details.ag-extra>summary{cursor:pointer;color:var(--muted);font-size:12.5px}
          title="Arrastrar para ajustar · doble clic restaura"></div>
 
     <div id="col-centro">
+      <section class="zona" id="z-hoja">
+        <header>Hoja de clase
+          <span class="der">
+            <button class="mini" id="btn-hoja-imprimir"
+              title="Abrir la versión imprimible (HTML) en el navegador">imprimir</button>
+            <button class="mini" id="btn-hoja-editar"
+              title="Abrir la hoja en el editor">✎</button>
+          </span>
+        </header>
+        <div class="cont" id="hoja"></div>
+      </section>
+      <div class="split h" id="split-hoja" data-split="hoja"
+           title="Arrastrar para ajustar · doble clic restaura"></div>
       <section class="zona" id="z-plan">
         <header>Plan de sesión
           <span class="der">
@@ -377,13 +392,16 @@ const sinNegrita = s => String(s == null ? '' : s).replace(/\*/g,'');
 
 // ------------------------------------------------------------------- estado
 const ZONAS = [
-  ['riel','Riel'], ['plan','Plan'], ['materiales','Materiales'],
+  ['riel','Riel'], ['hoja','Hoja de clase'], ['plan','Plan'], ['materiales','Materiales'],
   ['slides','Slides'], ['grande','Contenido'], ['abajo','Actividades'],
 ];
+// La hoja de clase (ediciones/<ed>/impresiones_sNN/hoja_clase_sNN.md) es
+// el documento con el que se da la clase (plan de rescate 2026-09-11); el
+// plan queda como fuente de diseño, visible pero secundario.
 const PRESETS = {
-  'Todo':      ['riel','plan','materiales','slides','grande','abajo'],
-  'Preparar':  ['riel','plan','materiales'],
-  'Dictar':    ['riel','plan','slides'],
+  'Dictar':    ['riel','hoja','slides'],
+  'Preparar':  ['riel','hoja','plan','materiales'],
+  'Todo':      ['riel','hoja','plan','materiales','slides','grande','abajo'],
   'Contenido': ['riel','grande','slides'],
 };
 let IND = null, FRESC = null, PUB = null, N = 1;
@@ -415,7 +433,7 @@ function aplicarVistas(){
     const el = $('#z-'+k);
     if (el) el.style.display = vistas[k] ? '' : 'none';
   }
-  $('#col-centro').style.display = (vistas.plan || vistas.materiales) ? '' : 'none';
+  $('#col-centro').style.display = (vistas.hoja || vistas.plan || vistas.materiales) ? '' : 'none';
   $('#col-der').style.display    = (vistas.slides || vistas.grande) ? '' : 'none';
   document.querySelectorAll('#toggles button').forEach(b => {
     b.classList.toggle('on', !!vistas[b.dataset.z]);
@@ -502,6 +520,32 @@ function pintarBarra(){
 }
 
 // ------------------------------------------------------------------- plan
+// ------------------------------------------------------------ hoja de clase
+// Un documento por sesión, lámina por lámina, en la edición vigente. Si no
+// existe, el panel lo dice: la hoja se produce en el ensayo del martes.
+function rutaHoja(){
+  const nn = String(N).padStart(2,'0');
+  return 'ediciones/' + IND.meta.edicion + '/impresiones_s' + nn + '/hoja_clase_s' + nn + '.md';
+}
+async function pintarHoja(){
+  const c = $('#hoja'), ruta = rutaHoja();
+  c.innerHTML = '<span style="color:var(--muted)">cargando…</span>';
+  try {
+    const r = await llamar('GET','/api/md?ruta=' + encodeURIComponent(ruta));
+    c.innerHTML = r.html;
+    mates(c);
+  } catch(e){
+    c.innerHTML = '<div style="color:var(--muted);line-height:1.5">'
+      + 'Esta sesión aún no tiene <b>hoja de clase</b>. Se produce en el ensayo del martes '
+      + '(tarea <code>ensayar-' + String(N).padStart(2,'0') + '</code> de la agenda) a partir de '
+      + '<code>ediciones/' + esc(IND.meta.edicion) + '/HOJA_CLASE_PLANTILLA.md</code>, '
+      + 'y se guarda en <code>' + esc(ruta) + '</code>.</div>';
+  }
+}
+$('#btn-hoja-editar').onclick = () => llamar('POST','/api/abrir',{ruta: rutaHoja()}).catch(()=>{});
+$('#btn-hoja-imprimir').onclick = () =>
+  llamar('POST','/api/abrir',{ruta: rutaHoja().replace(/\.md$/, '.html')}).catch(()=>{});
+
 function pintarPlan(){
   const c = ses();
   $('#mods').innerHTML = ['ambos','1','2'].map(k =>
@@ -711,7 +755,7 @@ function actualizarPuntos(){
 function irA(n){
   if (!IND || n < 1 || n > IND.sesiones.length) return;
   N = n; guardar();
-  pintarBarra(); pintarPlan(); pintarMateriales(); pintarAbajo();
+  pintarBarra(); pintarHoja(); pintarPlan(); pintarMateriales(); pintarAbajo();
   pintarGrande(); cargarIframes(); pintarRiel();
 }
 
@@ -1095,6 +1139,7 @@ const SPLITS = {
   // px-izq / px-abajo: fija en píxeles el riel / la franja inferior
   riel:   {tipo:'px-izq',  min:140, max:440},
   cols:   {tipo:'frac', a:'col-centro', b:'col-der',      min:.18, max:.82},
+  hoja:   {tipo:'frac', a:'z-hoja',     b:'z-plan',       min:.15, max:.85},
   centro: {tipo:'frac', a:'z-plan',     b:'z-materiales', min:.15, max:.85},
   der:    {tipo:'frac', a:'z-slides',   b:'z-grande',     min:.15, max:.85},
   abajo:  {tipo:'px-abajo', min:70, max:.65},   // max: fracción de la ventana
@@ -1125,6 +1170,7 @@ function actualizarSplits(){
   const vis = id => { const el = $('#'+id); return el && el.style.display !== 'none'; };
   $('#split-riel').style.display   = (vistas.riel && (vis('col-centro') || vis('col-der'))) ? '' : 'none';
   $('#split-cols').style.display   = (vis('col-centro') && vis('col-der')) ? '' : 'none';
+  $('#split-hoja').style.display   = (vistas.hoja && (vistas.plan || vistas.materiales)) ? '' : 'none';
   $('#split-centro').style.display = (vistas.plan && vistas.materiales) ? '' : 'none';
   $('#split-der').style.display    = (vistas.slides && vistas.grande) ? '' : 'none';
   $('#split-abajo').style.display  = vistas.abajo ? '' : 'none';

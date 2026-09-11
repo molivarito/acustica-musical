@@ -1,5 +1,10 @@
 # agenda_estado.yml — qué tareas de la agenda están hechas (lo escribe panel/agenda.py).
 hecho:
+  ensayar-01: '2026-09-11'
+  ensayar-02: '2026-09-11'
+  ensayar-03: '2026-09-11'
+  ensayar-04: '2026-09-11'
+  ensayar-05: '2026-09-11'
   f1-decidir: '2026-08-13'
   hito1-pauta: '2026-09-10'
   hito1-recibir: '2026-09-10'
